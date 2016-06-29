@@ -1,0 +1,251 @@
+-- assumes operations "sqrt" and "power" on OCL type Real.
+-- context Real::sqrt():Real
+-- context Real::power(exp:Real):Real
+
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-- USE specific
+
+-- class UReal
+-- attributes
+--     x : Real
+--     u : Real
+-- operations
+--     add(r : UReal) : UReal
+--     minus(r : UReal) : UReal
+--     mult(r : UReal) : UReal
+--     divideBy(r : UReal) : UReal
+--     abs() : UReal
+--     neg() : UReal
+--     inverse() : UReal
+--     power (s : Real) : UReal
+--     sqrt() : UReal
+--     lessThan(r : UReal) : Boolean 
+--     lessEq(r : UReal) : Boolean 
+--     equals(r : UReal) : Boolean 
+--     distinct(r : UReal) : Boolean 
+--     max(r : UReal) : UReal
+--     min(r : UReal) : UReal
+--     floor() : UReal
+--     round() : UReal
+-- end
+-- 
+-- constraints
+
+context UReal::add(r : UReal) : UReal
+post: result.x = self.x + r.x and
+      result.u = (self.u*self.u + r.u*r.u).sqrt()
+
+context UReal::minus(r : UReal) : UReal
+post: result.x = self.x - r.x and
+      result.u = (self.u*self.u - r.u*r.u).sqrt()
+
+context UReal::mult(r : UReal) : UReal
+post: result.x = (self.x*r.x) and
+      result.u = (r.u*r.u*self.x*self.x + self.u*self.u*r.x*r.x).sqrt()
+
+context UReal::divideBy(r : UReal) : UReal
+  pre:  (r.x - r.u).max(0) > (r.x + r.u).min(0) --not r.equals(0,0)
+  post: result.x = (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x)) and
+        result.u = ((self.u*self.u/r.x) + 
+                    ((r.u*r.u*self.x*self.x)/(r.x*r.x*r.x*r.x))).sqrt()
+
+context UReal::abs() : UReal
+  post: result.x = (self.x).abs() and
+        result.u = self.u
+
+context UReal::neg() : UReal
+  post: result.x = -self.x and 
+        result.u = self.u
+
+context UReal::power(s : Real) : UReal
+  post: result.x = self.x.power(s) + 
+                     ((s*(s-1))/2)*self.x.power(s-2)*(slef.u*self.u) and
+        result.u = s*self.u*self.x.power(s-1)
+
+context UReal::equals(r : UReal) : Boolean 
+  post: result = (self.x - self.u).max(r.x - r.u) <= 
+                   (self.x + self.u).min(r.x + r.u)
+
+context UReal::distinct(r : UReal) : Boolean 
+--post: result = not self.equals(r)
+  post: result = (self.x - self.u).max(r.x - r.u) > 
+                   (self.x + self.u).min(r.x + r.u)
+
+context UReal::lessThan(r : UReal) : Boolean 
+  post: result = (self.x<r.x) and ((self.x + self.u)<(r.x - r.u))
+  
+context UReal::lessEq(r : UReal) : Boolean 
+-- post: result = self.lessThan(r) or self.equals(r)
+   post: result = ((self.x-self.u).max(r.x-r.u)<=(self.x+self.u).min(r.x+r.u)) 
+               or ((self.x<r.x) and ((self.x + self.u)<(r.x - r.u)))
+
+context UReal::inverse() : UReal
+    post: result.x = 1/self.x and result.u = self.u
+
+context UReal::sqrt() : UReal
+    post: result.x = result.x.sqrt() and result.u = self.u
+    
+context UReal::max(r :UReal) :UReal
+  post: result = if r.lessThan(self) then self
+                 else r endif
+
+context UReal::min(r :UReal) :UReal
+  post: result = if r.lessThan(self) then r
+                 else self endif
+
+context UReal::floor() :UReal
+  post: result.x = self.x.floor() and
+        result.u = self.u
+context UReal::round() :UReal
+  post: result.x = self.x.round() and
+        result.u = self.u
+
+
+
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-- USE specific
+
+-- class Unit
+-- attributes
+--   dimensions : Sequence(Real)
+-- operations
+--   equals(u :Unit) :Boolean
+--   isBaseUnit() :Boolean
+--   isDimensionless() :Boolean
+--   multiplyUnits(x :Unit) :Unit  
+--   divideUnits(x:Unit) :Unit
+--   powerUnits(s:Unit) :Unit
+-- end
+-- 
+-- constraints
+
+context Unit::equals(u :Unit) :Boolean
+  post: result = (self.dimensions = u.dimensions)
+
+context Unit::isBaseUnit() :Boolean
+  post: result = (self.dimensions->count(1.0)=1) and
+  			     (self.dimensions->count(0.0)=6)
+
+context Unit::isDimensionless() :Boolean
+  post: result = (self.dimensions->count(0.0)=7)
+
+context Unit::multiplyUnits(x :Unit) :Unit
+  -- we add them because they are exponents
+  post: result = self.dimensions->sum(x.dimensions)
+
+context Unit::divideUnits(x :Unit) :Unit
+  -- we subtract them because they are exponents
+  post: result = self.dimensions->minus(x.dimensions)
+
+context Unit::powerUnits(s :Real) :Unit
+  post: result.dimensions->size()=7 and
+        Sequence{1..7}->forAll(i :Integer |
+           result.dimensions->at(i) =
+               s*(self.dimensions->at(i)))
+
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+-- USE specific
+
+-- class Quantity
+-- attributes
+--   value : UReal
+--   units : Unit
+-- operations
+--   sameUnits(x :Quantity) :Boolean
+--   add(x :Quantity) : Quantity
+--   minus(x :Quantity) : Quantity
+--   mult(x :Quantity) : Quantity
+--   divideBy(x :Quantity) : Quantity
+--   abs() :Quantity
+--   neg() :Quantity
+--   power(s : Real) :Quantity
+--   equals(x :Quantity) :Boolean
+--   distinct(x :Quantity) :Boolean
+--   lessThan(x :Quantity) :Boolean
+--   lessEq(x :Quantity) :Boolean
+--   max(x :Quantity) :Quantity
+--   min(x :Quantity) :Quantity
+--   floor() :Quantity
+--   round() :UReal
+--   sMult(x :Real) : Quantity
+--   sDivideBy(x :Real) : Quantity
+-- end
+-- 
+-- constraints
+
+context Quantity::sameUnits(x :Quantity) :Boolean
+    post: result = self.units.equals(x.units)
+
+context Quantity::add(x :Quantity) : Quantity
+  post: if (not self.sameUnits(x)) then result = oclInvalid
+        else result.value = self.value.add(x.value) and
+             result.units = x.units
+        endif
+
+context Quantity::minus(x :Quantity) : Quantity
+  post: if (not self.sameUnits(x)) then result = oclInvalid
+        else result.value = self.value.minus(x.value) and
+             result.units = x.units
+        endif
+
+context Quantity::mult(x :Quantity) : Quantity
+  post: result.value = self.value.mult(x.value) and
+        result.units = self.units.multiplyUnits(x.units)
+
+context Quantity::divideBy(x :Quantity) : Quantity
+  -- if x==0 we "delegate" the behavior of divideBy()
+  -- to the behaviour of the divideBy() UReal operation
+  post: result.value = self.value.divideBy(x.value) and
+        result.units = self.units.divideUnits(x.units)
+
+context Quantity::abs() :Quantity
+  post: result.value = (self.value).abs() and
+        result.units = self.units
+
+context Quantity::neg() :Quantity
+  post: result.value = self.value.neg() and
+        result.units = self.units
+
+context Quantity::power(s : Real) :Quantity
+  post: result.value = self.value.power(s) and
+        result.units = self.units.powerUnits(s)
+
+context Quantity::equals(x :Quantity) :Boolean
+  post: result = self.value.equals(x.value) and
+                 self.sameUnits(x.units)
+context Quantity::distinct(x :Quantity) :Boolean
+  post: result = not self.equals(x)
+
+context Quantity::lessThan(x :Quantity) :Boolean
+  post: if (not self.sameUnits(x)) then result = oclInvalid
+        else result.value = self.value.lessThan(x.value) and
+             result.units = self.units
+        endif
+context Quantity::lessEq(x :Quantity) :Boolean
+  post: result = self.lessThan(r) or self.equals(r)
+
+context Quantity::max(x :Quantity) :Quantity
+  post: result = if self.lessThan(x) then r
+                 else self endif
+
+context Quantity::min(x :Quantity) :Quantity
+  post: result = if self.lessThan(x) then self
+                 else r endif
+
+context Quantity::floor() :Quantity
+  post: result.value = self.value.floor() and
+        result.units = self.units
+
+context UReal::round() :UReal
+  post: result.value = self.x.round() and
+        result.units = self.units
+
+context Quantity::mult(x :Real) : Quantity
+  post: result.value = self.value.mult(x,0) and
+        result.units = self.units
+
+context Quantity::divideBy(x :Real) : Quantity
+  post: result.value = self.value.divideBy(x,0) and
+        result.units = self.units
+

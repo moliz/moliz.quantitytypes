@@ -1,0 +1,618 @@
+
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-- This model provides types "UReal", "Unit" and "Quantity"
+-- and their corresponding operations.
+--
+-- The operations have been specified using SOIL 
+-- (Simple OCL-like Imperative Language) which is part of USE
+-- http://www.db.informatik.uni-bremen.de/publications/Buettner_2014_SCPSOIL.pdf
+--
+-- The OCL specifications of the operations using pre- and post-conditions
+-- can be found at the end of this file.
+--
+-- This module assumes operations "sqrt" and "power" on OCL type Real, 
+-- currently not supported because they are not included in the OCL standard.
+-- Similarly for the "sum", "minus" (sum and subtraction of arrays)
+-- and "mult" (multiplication by a scalar) operations on Sequence(Real)
+-- They have been included in the extensions to USE using its
+-- predefined extensions mechanisms (they need to be places in the USE 
+-- folder "oclExtensions")
+--
+-- 
+
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+model Quantities
+
+class UReal
+attributes
+    x : Real
+    u : Real
+
+operations
+
+add(r : UReal) : UReal
+    begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x + r.x;
+        aux.u := (self.u*self.u + r.u*r.u).sqrt();
+        result := aux;
+    end   
+
+minus(r : UReal) : UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x - r.x;
+        aux.u := (self.u*self.u + r.u*r.u).sqrt();
+        result := aux;
+    end   
+   
+mult(r : UReal) : UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x*r.x;
+        aux.u := (r.u*r.u*self.x*self.x + self.u*self.u*r.x*r.x).sqrt();
+        result := aux;
+     end   
+    
+divideBy(r : UReal) : UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x));
+        aux.u := ((self.u*self.u/r.x) + 
+                 ((r.u*r.u*self.x*self.x)/(r.x*r.x*r.x*r.x))).sqrt();
+        result := aux;
+    end   
+
+   
+abs() : UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := (self.x).abs();
+        aux.u := self.u;
+        result := aux;
+    end   
+    
+neg() : UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := -self.x;
+        aux.u := self.u;
+        result := aux;
+    end   
+    
+    
+inverse() : UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := 1.0;
+        aux.u := 0.0;
+        result := aux.divideBy(self);
+    end   
+    
+power (s : Real) : UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x.power(s) + ((s*(s-1))/2)*self.x.power(s-2)*(self.u*self.u);
+        aux.u := s*self.u*self.x.power(s-1);
+        result := aux;
+    end   
+    
+sqrt() : UReal 
+    begin
+        declare aux : UReal;
+        aux := self.power(0.5);
+        result := aux;
+    end
+   
+lessThan(r : UReal) : Boolean
+   = (self.x<r.x) and ((self.x + self.u)<(r.x - r.u)) 
+
+lessEq(r : UReal) : Boolean 
+   = self.lessThan(r) or self.equals(r)
+    
+equals(r : UReal) : Boolean 
+   = (self.x - self.u).max(r.x - r.u) <= 
+         (self.x + self.u).min(r.x + r.u)
+    
+distinct(r : UReal) : Boolean
+    = not self.equals(r) 
+    
+max(r : UReal) : UReal
+    = if r.lessThan(self) then self else r endif
+   
+min(r : UReal) : UReal
+    = if r.lessThan(self) then r else self endif
+  
+floor() : UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x.floor();
+        aux.u := self.u;
+        result := aux;
+    end   
+    
+round() : UReal
+    begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x.round();
+        aux.u := self.u;
+        result := aux;
+    end   
+
+end
+
+constraints
+
+context UReal::divideBy(r : UReal) : UReal
+pre:  (r.x - r.u).max(0) > (r.x + r.u).min(0) --not r.equals(0,0)
+
+context UReal::sqrt() : UReal
+pre:  (self.x + self.u)>=0.0 
+
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+class Unit
+attributes
+  dimensions : Sequence(Real)
+
+operations
+
+equals(u :Unit) :Boolean 
+  = (self.dimensions = u.dimensions)
+
+isBaseUnit() :Boolean
+  = self.dimensions->count(1.0)=1 and
+    self.dimensions->count(0.0)=6
+
+isDimensionless() :Boolean
+  = self.dimensions->count(0.0)=7
+
+multiplyUnits(x :Unit) :Unit  
+    begin
+        declare aux : Unit;
+        aux := new Unit;
+        aux.dimensions := self.dimensions->sum(x.dimensions);
+        result := aux;
+    end   
+  
+divideUnits(x:Unit) :Unit
+    begin
+        declare aux : Unit;
+        aux := new Unit;
+        aux.dimensions := self.dimensions->minus(x.dimensions);
+        result := aux;
+    end   
+  
+powerUnits(s:Real) :Unit
+    begin
+        declare aux : Unit;
+        aux := new Unit;
+        aux.dimensions := self.dimensions->mult(s);
+        result := aux;
+    end   
+end
+
+constraints
+
+context u : Unit inv sevenBaseDimensions:
+    u.dimensions->size()=7
+
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+class Quantity
+attributes
+  value : UReal
+  units : Unit
+
+operations
+
+sameUnits(x :Quantity) :Boolean = self.units.equals(x.units)
+
+add(x :Quantity) : Quantity
+    begin
+        declare aux : Quantity;
+        aux := new Quantity;
+        aux.value := self.value.add(x.value);
+        aux.units := self.units;
+        result := aux;
+    end   
+
+minus(x :Quantity) : Quantity
+    begin
+        declare aux : Quantity;
+        aux := new Quantity;
+        aux.value := self.value.minus(x.value);
+        aux.units := self.units;
+        result := aux;
+    end   
+
+mult(x :Quantity) : Quantity
+    begin
+        declare aux : Quantity;
+        aux := new Quantity;
+        aux.value := self.value.mult(x.value);
+        aux.units := self.units.multiplyUnits(x.units);
+        result := aux;
+    end   
+
+divideBy(x :Quantity) : Quantity
+    begin
+        declare aux : Quantity;
+        aux := new Quantity;
+        aux.value := self.value.divideBy(x.value);
+        aux.units := self.units.divideUnits(x.units);
+        result := aux;
+    end   
+
+abs() :Quantity
+    begin
+        declare aux : Quantity;
+        aux := new Quantity;
+        aux.value := self.value.abs();
+        aux.units := self.units;
+        result := aux;
+    end   
+
+neg() :Quantity
+    begin
+        declare aux : Quantity;
+        aux := new Quantity;
+        aux.value := self.value.neg();
+        aux.units := self.units;
+        result := aux;
+    end   
+
+power(s : Real) :Quantity
+    begin
+        declare aux : Quantity;
+        aux := new Quantity;
+        aux.value := self.value.power(s);
+        aux.units := self.units.powerUnits(s);
+        result := aux;
+    end   
+
+equals(x :Quantity) :Boolean = self.value.equals(x.value) and self.sameUnits(x)
+
+distinct(x :Quantity) :Boolean = not self.equals(x)
+
+lessThan(x :Quantity) :Boolean  = self.value.lessThan(x.value)
+
+lessEq(x :Quantity) :Boolean = self.lessThan(x) or self.equals(x)
+
+max(x :Quantity) :Quantity = if x.lessThan(self) then self else x endif
+
+min(x :Quantity) :Quantity = if self.lessThan(x) then self else x endif
+
+floor() :Quantity
+    begin
+        declare aux : Quantity;
+        aux := new Quantity;
+        aux.value := self.value.floor();
+        aux.units := self.units;
+        result := aux;
+    end   
+
+round() :Quantity
+    begin
+        declare aux : Quantity;
+        aux := new Quantity;
+        aux.value := self.value.round();
+        aux.units := self.units;
+        result := aux;
+    end   
+
+sMult(x :Real) : Quantity
+    begin
+        declare aux : Quantity, ur : UReal;
+        aux := new Quantity;
+        ur := new UReal;
+        ur.x := x;
+        ur.u := 0.0;       
+        aux.value := self.value.mult(ur);
+        aux.units := self.units;
+        result := aux;
+    end   
+
+sDivideBy(x :Real) : Quantity
+    begin
+        declare aux : Quantity, ur : UReal;
+        aux := new Quantity;
+        ur := new UReal;
+        ur.x := x;
+        ur.u := 0.0;       
+        aux.value := self.value.divideBy(ur);
+        aux.units := self.units;
+        result := aux;
+    end
+ 
+end
+
+constraints
+
+context Quantity::add(x :Quantity) :Quantity
+  pre: self.sameUnits(x)
+
+context Quantity::minus(x :Quantity) :Quantity
+  pre: self.sameUnits(x)
+
+context Quantity::lessThan(x :Quantity) :Boolean
+  pre: self.sameUnits(x)
+
+context Quantity::lessEq(x :Quantity) :Boolean
+  pre: self.sameUnits(x)
+  
+context Quantity::max(x :Quantity) :Quantity
+  pre: self.sameUnits(x)
+
+context Quantity::min(x :Quantity) :Quantity
+  pre: self.sameUnits(x)
+
+
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+---------------------------------------------------
+-- 
+-- OCL VERSION OF THE OPERATIONS OF TYPE UReal
+-- USING PRE and POST CONDITIONS
+--
+-- context UReal::add(r : UReal) : UReal
+-- post: result.x = self.x + r.x and
+--       result.u = (self.u*self.u + r.u*r.u).sqrt()
+-- 
+-- context UReal::minus(r : UReal) : UReal
+-- post: result.x = self.x - r.x and
+--       result.u = (self.u*self.u - r.u*r.u).sqrt()
+-- 
+-- context UReal::mult(r : UReal) : UReal
+-- post: result.x = (self.x*r.x) and
+--       result.u = (r.u*r.u*self.x*self.x + self.u*self.u*r.x*r.x).sqrt()
+-- 
+--   context UReal::divideBy(r : UReal) : UReal
+--   pre:  (r.x - r.u).max(0) > (r.x + r.u).min(0) --not r.equals(0,0)
+--   post: result.x = (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x)) and
+--         result.u = ((self.u*self.u/r.x) + 
+--                     ((r.u*r.u*self.x*self.x)/(r.x*r.x*r.x*r.x))).sqrt()
+-- 
+-- context UReal::abs() : UReal
+--   post: result.x = (self.x).abs() and
+--         result.u = self.u
+-- 
+-- context UReal::neg() : UReal
+--   post: result.x = -self.x and 
+--         result.u = self.u
+-- 
+-- context UReal::power(s : Real) : UReal
+--   post: result.x = self.x.power(s) + 
+--                      ((s*(s-1))/2)*self.x.power(s-2)*(self.u*self.u) and
+--         result.u = s*self.u*self.x.power(s-1)
+--
+-- context UReal::equals(r : UReal) : Boolean 
+--  post: result = (self.x - self.u).max(r.x - r.u) <= 
+--                   (self.x + self.u).min(r.x + r.u)
+--
+-- context UReal::distinct(r : UReal) : Boolean 
+-- post: result = not self.equals(r)
+--  post: result = (self.x - self.u).max(r.x - r.u) > 
+--                   (self.x + self.u).min(r.x + r.u)
+--
+-- context UReal::lessThan(r : UReal) : Boolean 
+--   post: result = (self.x<r.x) and ((self.x + self.u)<(r.x - r.u))
+--  
+-- context UReal::lessEq(r : UReal) : Boolean 
+-- post: result = self.lessThan(r) or self.equals(r)
+--   post: result = ((self.x-self.u).max(r.x-r.u)<=(self.x+self.u).min(r.x+r.u)) 
+--               or ((self.x<r.x) and ((self.x + self.u)<(r.x - r.u)))
+--
+-- context UReal::inverse() : UReal
+--     post: result.x = 1/self.x and result.u = self.u
+-- 
+-- context UReal::sqrt() : UReal
+--     post: result = self.power(0.5)
+--     
+-- context UReal::max(r :UReal) :UReal
+--   post: result = if r.lessThan(self) then self
+--                  else r endif
+-- 
+-- context UReal::min(r :UReal) :UReal
+--   post: result = if r.lessThan(self) then r
+--                  else self endif
+-- 
+-- context UReal::floor() :UReal
+--   post: result.x = self.x.floor() and
+--         result.u = self.u
+-- context UReal::round() :UReal
+--   post: result.x = self.x.round() and
+--         result.u = self.u
+--
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-- OCL VERSION OF THE OPERATIONS OF TYPE Unit
+-- USING PRE and POST CONDITIONS
+--
+-- context Unit::equals(u :Unit) :Boolean
+--   post: result = (self.dimensions = u.dimensions)
+-- 
+-- context Unit::isBaseUnit() :Boolean
+--   post: result = self.dimensions->count(1.0)=1 and
+--   			     self.dimensions->count(0.0)=6
+-- 
+-- context Unit::isDimensionless() :Boolean
+--   post: result = self.dimensions->count(0.0)=7
+--
+-- context Unit::multiplyUnits(x :Unit) :Unit
+--   -- we add them because they are exponents
+--   post: result.dimensions = self.dimensions->sum(x.dimensions)
+-- 
+-- context Unit::divideUnits(x :Unit) :Unit
+--   -- we subtract them because they are exponents
+--   post: result.dimensions = self.dimensions->minus(x.dimensions)
+-- 
+-- context Unit::powerUnits(s :Real) :Unit
+--   post: result.dimensions->size()=7 and
+--         Sequence{1..7}->forAll(i :Integer |
+--            result.dimensions->at(i) =
+--                s*(self.dimensions->at(i)))
+--
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-- OCL VERSION OF THE OPERATIONS OF TYPE QUANTITY
+-- USING PRE and POST CONDITIONS
+--
+-- context Quantity::sameUnits(x :Quantity) :Boolean
+--     post: result = self.units.equals(x.units)
+--
+-- context Quantity::add(x :Quantity) : Quantity
+--   post: if (not self.sameUnits(x)) then result = oclInvalid
+--         else result.value = self.value.add(x.value) and
+--              result.units = x.units
+--         endif
+-- 
+-- context Quantity::minus(x :Quantity) : Quantity
+--   post: if (not self.sameUnits(x)) then result = oclInvalid
+--         else result.value = self.value.minus(x.value) and
+--              result.units = x.units
+--         endif
+-- 
+-- context Quantity::mult(x :Quantity) : Quantity
+--   post: result.value = self.value.mult(x.value) and
+--         result.units = self.units.multiplyUnits(x.units)
+-- 
+-- context Quantity::divideBy(x :Quantity) : Quantity
+--   -- if x==0 we "delegate" the behavior of divideBy()
+--   -- to the behaviour of the divideBy() UReal operation
+--   post: result.value = self.value.divideBy(x.value) and
+--         result.units = self.units.divideUnits(x.units)
+-- 
+-- context Quantity::abs() :Quantity
+--   post: result.value = (self.value).abs() and
+--         result.units = self.units
+-- 
+-- context Quantity::neg() :Quantity
+--   post: result.value = self.value.neg() and
+--         result.units = self.units
+-- 
+-- context Quantity::power(s : Real) :Quantity
+--   post: result.value = self.value.power(s) and
+--         result.units = self.units.powerUnits(s)
+--
+-- context Quantity::equals(x :Quantity) :Boolean
+--   post: result = self.value.equals(x.value) and
+--                  self.sameUnits(x.units)
+--                  
+-- context Quantity::distinct(x :Quantity) :Boolean
+--   post: result = not self.equals(x)
+-- 
+-- context Quantity::lessThan(x :Quantity) :Boolean
+--   post: if (not self.sameUnits(x)) then result = oclInvalid
+--         else self.value.lessThan(x.value)
+--         endif
+-- context Quantity::lessEq(x :Quantity) :Boolean
+--   post: result = self.lessThan(x) or self.equals(x)
+--
+-- context Quantity::max(x :Quantity) :Quantity
+--   post: result = if self.lessThan(x) then x
+--                  else self endif
+-- 
+-- context Quantity::min(x :Quantity) :Quantity
+--   post: result = if self.lessThan(x) then self
+--                  else x endif
+-- 
+-- context Quantity::floor() :Quantity
+--   post: result.value = self.value.floor() and
+--         result.units = self.units
+-- 
+-- context Quantity::round() :Quantity
+--   post: result.value = self.value.round() and
+--         result.units = self.units
+-- 
+-- context Quantity::sMult(x :Real) : Quantity
+--   post: result.value = self.value.mult(x,0) and
+--         result.units = self.units
+-- 
+-- context Quantity::sDivideBy(x :Real) : Quantity
+--   post: result.value = self.value.divideBy(x,0) and
+--         result.units = self.units
+--
+-- context Quantity::sameUnits(x :Quantity) :Boolean
+--     post: result = self.units.equals(x.units)
+--
+-- context Quantity::add(x :Quantity) : Quantity
+--   post: if (not self.sameUnits(x)) then result = oclInvalid
+--         else result.value = self.value.add(x.value) and
+--              result.units = x.units
+--         endif
+-- 
+-- context Quantity::minus(x :Quantity) : Quantity
+--   post: if (not self.sameUnits(x)) then result = oclInvalid
+--         else result.value = self.value.minus(x.value) and
+--              result.units = x.units
+--         endif
+-- 
+-- context Quantity::mult(x :Quantity) : Quantity
+--   post: result.value = self.value.mult(x.value) and
+--         result.units = self.units.multiplyUnits(x.units)
+-- 
+-- context Quantity::divideBy(x :Quantity) : Quantity
+--   -- if x==0 we "delegate" the behavior of divideBy()
+--   -- to the behaviour of the divideBy() UReal operation
+--   post: result.value = self.value.divideBy(x.value) and
+--         result.units = self.units.divideUnits(x.units)
+-- 
+-- context Quantity::abs() :Quantity
+--   post: result.value = (self.value).abs() and
+--         result.units = self.units
+-- 
+-- context Quantity::neg() :Quantity
+--   post: result.value = self.value.neg() and
+--         result.units = self.units
+-- 
+-- context Quantity::power(s : Real) :Quantity
+--   post: result.value = self.value.power(s) and
+--         result.units = self.units.powerUnits(s)
+--
+-- context Quantity::equals(x :Quantity) :Boolean
+--   post: result = self.value.equals(x.value) and
+--                  self.sameUnits(x.units)
+--                  
+-- context Quantity::distinct(x :Quantity) :Boolean
+--   post: result = not self.equals(x)
+-- 
+-- context Quantity::lessThan(x :Quantity) :Boolean
+--   post: if (not self.sameUnits(x)) then result = oclInvalid
+--         else self.value.lessThan(x.value)
+--         endif
+-- context Quantity::lessEq(x :Quantity) :Boolean
+--   post: result = self.lessThan(x) or self.equals(x)
+--
+-- context Quantity::max(x :Quantity) :Quantity
+--   post: result = if self.lessThan(x) then x
+--                  else self endif
+-- 
+-- context Quantity::min(x :Quantity) :Quantity
+--   post: result = if self.lessThan(x) then self
+--                  else x endif
+-- 
+-- context Quantity::floor() :Quantity
+--   post: result.value = self.value.floor() and
+--         result.units = self.units
+-- 
+-- context Quantity::round() :Quantity
+--   post: result.value = self.value.round() and
+--         result.units = self.units
+-- 
+-- context Quantity::sMult(x :Real) : Quantity
+--   post: result.value = self.value.mult(x,0) and
+--         result.units = self.units
+-- 
+-- context Quantity::sDivideBy(x :Real) : Quantity
+--   post: result.value = self.value.divideBy(x,0) and
+--         result.units = self.units
+-- 

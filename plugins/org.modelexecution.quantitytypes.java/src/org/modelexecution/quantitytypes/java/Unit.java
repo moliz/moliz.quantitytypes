@@ -1,11 +1,9 @@
-package org.modelexecution.quantitytypes.java;
-
 import java.util.Arrays;
 
 public class Unit implements Cloneable {
 	protected double [] dimensions = new double [BaseUnits.values().length];  
 	// exponents for each dimension.  
-	// [Meter, Kilogram, Second, Ampere, Kelvin, Mole, Candela]
+	// [Radian, Meter, Kilogram, Second, Ampere, Kelvin, Mole, Candela]
 	
 	public Unit(){
 		Arrays.fill(dimensions, 0.0); //dimensionless

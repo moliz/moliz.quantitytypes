@@ -1,3 +1,8 @@
+/**
+ * @author mw
+ *
+ */
+
 package org.modelexecution.quantitytypes.java.test;
 
 import static org.junit.Assert.assertEquals;
@@ -13,12 +18,15 @@ public class ToyCarTest {
 
 	@Test
 	public void test() {
+		
+		// sensed values
 		Quantity initialPosition = new Quantity(0, 0.000, CommonUnits.M);
 		Quantity finalPosition = new Quantity(10, 0.000, CommonUnits.M);
 		Quantity duration = new Quantity(10, 0.002, new Unit(BaseUnits.Second));
 		Quantity initialVelocity = new Quantity(0, 0.000, new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 		Quantity finalVelocity = new Quantity(2, 0.02, new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 		
+		// computed values
 		Quantity distance = finalPosition.minus(initialPosition);
 		Quantity avgVelocity = distance.divideBy(duration);
 		Quantity avgAcceleration = (finalVelocity.minus(initialVelocity)).divideBy(duration);

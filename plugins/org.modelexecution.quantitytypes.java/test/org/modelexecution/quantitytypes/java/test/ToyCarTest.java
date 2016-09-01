@@ -14,6 +14,12 @@ import org.modelexecution.quantitytypes.java.CommonUnits;
 import org.modelexecution.quantitytypes.java.Quantity;
 import org.modelexecution.quantitytypes.java.Unit;
 
+
+/*
+ * This test implements the toy example from the SLE 2016 paper. 
+ * It assumes to have several sensed values which are used to compute other ones.
+ * The test is considering the correctness of the computed values as well as their attached units.
+ */
 public class ToyCarTest {
 
 	@Test

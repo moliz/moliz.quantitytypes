@@ -26,15 +26,15 @@ public class ToyCarTest {
 	public void test() {
 		
 		// sensed values
-		Quantity initialPosition = new Quantity(0, 0.000, CommonUnits.M);
-		Quantity finalPosition = new Quantity(10, 0.000, CommonUnits.M);
-		Quantity duration = new Quantity(10, 0.002, new Unit(BaseUnits.Second));
-		Quantity initialVelocity = new Quantity(0, 0.000, new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
-		Quantity finalVelocity = new Quantity(2, 0.02, new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
+		Quantity initialPosition = new Quantity( 0, 0.000, CommonUnits.M);
+		Quantity finalPosition	 = new Quantity(10, 0.001, CommonUnits.M);
+		Quantity duration        = new Quantity(10, 0.002, new Unit(BaseUnits.Second));
+		Quantity initialVelocity = new Quantity( 0, 0.000, new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
+		Quantity finalVelocity   = new Quantity( 2, 0.200, new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 		
 		// computed values
-		Quantity distance = finalPosition.minus(initialPosition);
-		Quantity avgVelocity = distance.divideBy(duration);
+		Quantity distance        = finalPosition.minus(initialPosition);
+		Quantity avgVelocity     = distance.divideBy(duration);
 		Quantity avgAcceleration = (finalVelocity.minus(initialVelocity)).divideBy(duration);
 		
 		// Testing the value results
@@ -44,6 +44,18 @@ public class ToyCarTest {
 				1, avgVelocity.getX(), 0.1);
 		assertEquals("avgAcc=(finalVel-initialVel)/distance must be ~0.2", 
 				0.2, avgAcceleration.getX(), 0.1);
+		
+		// Testing the uncertainty results
+		assertEquals("uncertainty of distance must be 0.001?", 
+				0.001, distance.getU(), 0.001);
+		
+//		assertEquals("uncertainty of avgVel must be ~0.0002?", 
+//				0.0002, avgVelocity.getU(), 0.0001);
+		System.out.println(avgVelocity.getU());
+		
+//		assertEquals("uncertainty of avgAcc must be ~0.02?", 
+//				0.02, avgAcceleration.getU(), 0.01);
+		System.out.println(avgAcceleration.getU());
 
 		// Testing the return types
 		Assert.assertArrayEquals("avgVel is in metre per second (m s-1)", 

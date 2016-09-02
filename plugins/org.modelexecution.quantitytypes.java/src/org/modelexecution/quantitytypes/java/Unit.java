@@ -1,5 +1,3 @@
-package org.modelexecution.quantitytypes.java;
-
 import java.util.Arrays;
 
 public class Unit extends SIUnit implements Cloneable {
@@ -60,11 +58,27 @@ public class Unit extends SIUnit implements Cloneable {
 		if (!this.checkOffset()) throw new RuntimeException("Invalid Offset when creating unit: "+this.symbol);
 	}
 
+	public Unit(String name, String symbol, double [] d, double [] c){
+		super(d);
+		this.name = name;
+		this.symbol = symbol;
+		this.conversionFactor = Arrays.copyOf(c, BaseUnits.values().length);
+		Arrays.fill(offset, 0.0); 
+	}
+
 	public Unit(double [] d){
 		super(d);
 		this.name = super.name();
 		this.symbol = super.symbol();
 		Arrays.fill(conversionFactor, 1.0); 
+		Arrays.fill(offset, 0.0); 
+	}
+
+	public Unit(double [] d, double [] c){
+		super(d);
+		this.name = super.name();
+		this.symbol = super.symbol();
+		this.conversionFactor = Arrays.copyOf(c, BaseUnits.values().length);
 		Arrays.fill(offset, 0.0); 
 	}
 

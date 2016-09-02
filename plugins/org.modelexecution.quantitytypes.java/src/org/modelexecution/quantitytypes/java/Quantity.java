@@ -1,4 +1,4 @@
-package org.modelexecution.quantitytypes.java;
+import java.util.Arrays;
 
 /**
  * @author av
@@ -204,17 +204,28 @@ public class Quantity implements Comparable<Quantity> {
 		return result;
 	}
 	
-	public Quantity minus(Quantity r) { //only works if compatible units
+	public Quantity minus(Quantity r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
 		Quantity result = null;
 
 //		assert this.compatibleUnits(r.unit);
 		if (!this.compatibleUnits(r.unit)) throw new RuntimeException("minus: Incompatible Units: "+this.unit+" and "+r.unit);
 
 //		assert r.unit.noOffset(): r.unit.symbol;
-		if (!r.unit.noOffset()) throw new RuntimeException("Minus: Invalid Offset in operand unit: "+r.unit.symbol);
+
+		if (!r.unit.noOffset() && this.unit.noOffset()) throw new RuntimeException("Minus: Invalid Offset in operand unit: "+r.unit.symbol);
+		if (r.unit.noOffset()) { // r is a Delta Unit, but "this" is not
+			Quantity other = r.convertTo(this.getUnits());
+			result = new Quantity(this.getUReal().minus(other.getUReal()),this.getUnits());
+		} else { // neither r nor this are Delta Units, but the result should be a Delta Unit...
+			//then we convert to the  Delta"This" unit, with no offset
+			Quantity other = r.convertTo(this.getUnits());
+			result = new Quantity(this.getUReal().minus(other.getUReal()),
+					              new Unit("Delta"+this.unit.name,
+					            		   "Delta"+this.unit.symbol,
+					            		   this.unit.dimensions(),
+					            		   this.unit.conversionFactor));		
+		}
 		
-		Quantity other = r.convertTo(this.getUnits());
-		result = new Quantity(this.getUReal().minus(other.getUReal()),this.getUnits());
 		return result;
 	}
 

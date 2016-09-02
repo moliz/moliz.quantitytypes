@@ -29,7 +29,7 @@ public class TemperatureTest {
 	}
 	
 	@Test
-	public void testMinusCelsius() {
+	public void testCelsiusMinusCelsius() {
 		assertEquals("10C-5C must be 5deltaC", 5, q1.minus(q2).getX(), 0.0);
 		
 		// Testing the return type to be delta type
@@ -37,17 +37,17 @@ public class TemperatureTest {
 	}
 
 	@Test(expected=RuntimeException.class)
-	public void testDivCelsius() {
+	public void testCelsiusDivCelsius() {
 		q1.divideBy(q2);
 	}
 	
 	@Test
-	public void testMinusKelvin() {
+	public void testKelvinMinusKelvin() {
 		assertEquals("10K-5K must be 5K", 5, q3.minus(q4).getX(), 0.0);
 	}
 	
 	@Test
-	public void testPlusDeltaCelsius() {
+	public void testCelsiusPlusDeltaCelsius() {
 		assertEquals("10C+5deltaC must be 15C", 15, q1.add(q5).getX(), 0.0);
 		
 		// Testing the return type to be delta type

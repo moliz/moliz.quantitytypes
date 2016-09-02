@@ -1,3 +1,5 @@
+package org.modelexecution.quantitytypes.java;
+
 
 public class CommonUnits {
 

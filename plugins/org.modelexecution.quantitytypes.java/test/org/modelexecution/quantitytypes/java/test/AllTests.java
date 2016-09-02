@@ -8,7 +8,9 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({
                 CircleTest.class,
                 TemperatureTest.class,
-                ToyCarTest.class})
+                ToyCarTest.class,
+                UnitCancellation.class,
+                PressureTest.class})
 
 public class AllTests {
 

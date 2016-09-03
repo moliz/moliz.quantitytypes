@@ -57,15 +57,15 @@ public class ToyCarTest {
 
 		// Testing the return types
 		Assert.assertArrayEquals("distance is in metre (m)", 
-				new double[]{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}, 
+				new double[]{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}, 
 				distance.getUnits().dimensions(), 0);
 		
 		Assert.assertArrayEquals("avgVel is in metre per second (m s-1)", 
-				new double[]{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0}, 
+				new double[]{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0}, 
 				avgVelocity.getUnits().dimensions(), 0);
 		
 		Assert.assertArrayEquals("avgAcc is in metre per second squared (m s-2)", 
-					new double[]{1.0,0.0,-2.0,0.0,0.0,0.0,0.0,0.0,0.0}, 
+					new double[]{1.0,0.0,-2.0,0.0,0.0,0.0,0.0,0.0}, 
 					avgAcceleration.getUnits().dimensions(), 0);
 	}
 
@@ -104,15 +104,15 @@ public class ToyCarTest {
 
 		// Testing the return types
 		Assert.assertArrayEquals("distance is in metre (m)", 
-				new double[]{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}, 
+				new double[]{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}, 
 				distance.getUnits().dimensions(), 0);
 		
 		Assert.assertArrayEquals("avgVel is in metre per second (m s-1)", 
-				new double[]{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0}, 
+				new double[]{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0}, 
 				avgVelocity.getUnits().dimensions(), 0);
 		
 		Assert.assertArrayEquals("avgAcc is in metre per second squared (m s-2)", 
-				new double[]{1.0,0.0,-2.0,0.0,0.0,0.0,0.0,0.0,0.0}, 
+				new double[]{1.0,0.0,-2.0,0.0,0.0,0.0,0.0,0.0}, 
 				avgAcceleration.getUnits().dimensions(), 0);
 		
 

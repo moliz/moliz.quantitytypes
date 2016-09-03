@@ -1,7 +1,5 @@
 package org.modelexecution.quantitytypes.java;
 
-import java.util.Arrays;
-
 /**
  * @author av
  *
@@ -16,7 +14,7 @@ public class Quantity implements Comparable<Quantity> {
      */
     public Quantity () {
         value = new UReal();
-        unit = new Unit(); //dimensionless 
+        unit = new Unit(); //unit-less 
     }
 
     public Quantity(UReal u, Unit unit){
@@ -24,14 +22,14 @@ public class Quantity implements Comparable<Quantity> {
     	this.unit = new Unit (unit);
     }
 
-	public Quantity(double x){ //"promotes" a real x to a dimensionless (x,0) 
+	public Quantity(double x){ //"promotes" a real x to a unit-less (x,0) 
 		value = new UReal(x,0.0);
-        unit = new Unit(); //dimensionless 
+        unit = new Unit(); //unit-less 
 	}
   
     public Quantity (double x, double u) {
     	value = new UReal(x,u);
-        unit = new Unit(); //dimensionless 
+        unit = new Unit(); //Unitless 
     }
     
     public Quantity(double x, Unit unit){
@@ -46,12 +44,12 @@ public class Quantity implements Comparable<Quantity> {
 
     public Quantity(String x) { //creates an Quantity from a string representing a real, with u=0.
     	value = new UReal(x);
-        unit = new Unit(); //dimensionless 
+        unit = new Unit(); //unit-less 
    }
     
     public Quantity(String x, String u) { //creates an Quantity from two strings representing (x,u).
     	value = new UReal(x,u);
-        unit = new Unit(); //dimensionless 
+        unit = new Unit(); //unit-less 
    }
    
     public Quantity(String x, String u, Unit unit) { //creates an Quantity from two strings representing (x,u).
@@ -65,7 +63,7 @@ public class Quantity implements Comparable<Quantity> {
     public UReal getUReal() {
  		return value; 
  	}
-     public void setUReal(UReal x) {
+    public void setUReal(UReal x) {
     	 value = new UReal(x.getX(),x.getU()); 
  	}
    public double getX() {
@@ -111,59 +109,63 @@ public class Quantity implements Comparable<Quantity> {
 		//assert this.compatibleUnits(u);
 		if (!this.compatibleUnits(u)) throw new RuntimeException("convertTo: Incompatible Units: "+this.unit+" and "+u);
 
-		Quantity result = null;
-		/** NEW VERSION */
-			UReal value = this.value.mult(new UReal(this.unit.factor()/u.factor(),0.0));
-			// Now we add the offset, only if there is one offset in the array. Otherwise we raise an exception
-			for (int i = 0; i<BaseUnits.values().length; i++) {
-				if ((this.unit.dimensions[i]>=0.0) && ((this.unit.offset[i])!=0.0||(u.offset[i]!=0.0))) {
-					value = value.add(new UReal((this.unit.offset[i]-u.offset[i])/u.factor()));
-				}
+		UReal value = this.value.mult(new UReal(this.unit.factor()/u.factor(),0.0));
+		// Now we add the offset, only if there is one offset in the array. Otherwise we raise an exception
+		for (int i = 0; i<BaseUnits.values().length; i++) {
+			if ((this.unit.dimensions[i]>=0.0) && ((this.unit.offset[i])!=0.0||(u.offset[i]!=0.0))) {
+				value = value.add(new UReal((this.unit.offset[i]-u.offset[i])/u.factor()));
 			}
-			if (!this.compatibleUnits(u)) throw new RuntimeException("convertTo: Incompatible Units: "+this.unit+" and "+u);
+		}
+		if (!this.compatibleUnits(u)) throw new RuntimeException("convertTo: Incompatible Units: "+this.unit+" and "+u);
 
-//			assert u.checkOffset() : u.offset;
-			if (!u.checkOffset()) throw new RuntimeException("Invalid Offset in unit: "+u.offset);
+//		assert u.checkOffset() : u.offset;
+		if (!u.checkOffset()) throw new RuntimeException("Invalid Offset in unit: "+u.offset);
 
-			result= new Quantity(value,u);
-
-		/*** OLD VERSION
-		 * 	result= new Quantity(new UReal(),u).convertFromSIUnits(this.convertToSIUnits().value);
-		 */
-		return result;
+		return new Quantity(value,u);
 	}
 	
 	public Quantity convertToSIUnits(){
 
-		UReal value = this.value.mult(new UReal(this.unit.factor(),0.0));
-		
-		// Now we add the offset, only if there is one offset in the array. Otherwise we raise an exception
+/** OLD VERSION, ACCUMMULATES UNCERTAINTY
+  		UReal value = this.value.mult(new UReal(this.unit.factor(),0.0));
+ 		// Now we add the offset, only if there is one offset in the array. Otherwise we raise an exception
 		for (int i = 0; i<BaseUnits.values().length; i++) {
 			if ((this.unit.dimensions[i]>=0.0) && (this.unit.offset[i]!=0.0)) {
 				value = value.add(new UReal(this.unit.offset[i]));
 			}
 		}
-		
 //		assert this.unit.checkOffset() : this.unit.offset;
 		if (!this.unit.checkOffset()) throw new RuntimeException("Invalid Offset in unit: "+this.unit.symbol);
 
 		return new Quantity(value,new Unit(unit.dimensions));
-		
-/** OLD VERSION
- * 		//OFFSET: Not sure if this works well in the general case... NEED TO CHECK....
- 
+*/
+  		double x = this.value.x*this.unit.factor();
+ 		// Now we add the offset, only if there is one offset in the array. Otherwise we raise an exception
 		for (int i = 0; i<BaseUnits.values().length; i++) {
 			if ((this.unit.dimensions[i]>=0.0) && (this.unit.offset[i]!=0.0)) {
-				value = value.add(new UReal(this.unit.offset[i]));
+				x+=this.unit.offset[i];
 			}
 		}
-		return new Quantity(value,new Unit(unit.dimensions));
-*/
+//		assert this.unit.checkOffset() : this.unit.offset;
+		if (!this.unit.checkOffset()) throw new RuntimeException("Invalid Offset in unit: "+this.unit.symbol);
+
+		return new Quantity(new UReal(x,this.value.u*this.unit.factor()),unit);		
 	}
 	
 	public Quantity convertFromSIUnits(UReal v){// v is the value of the quantity expressed in SIUnits
-		
 
+		double x = v.x/this.unit.factor();
+		for (int i = 0; i<BaseUnits.values().length; i++) {
+			if ((this.unit.dimensions[i]>=0.0) && (this.unit.offset[i]!=0.0)) {
+				x-=this.unit.offset[i]/this.unit.conversionFactor[i];
+			}
+		}
+
+		//	assert this.unit.checkOffset() : this.unit.offset;
+		if (!this.unit.checkOffset()) throw new RuntimeException("Invalid Offset in unit: "+this.unit.symbol);
+		return new Quantity(new UReal(x,v.u/this.unit.factor()),unit);
+
+		/*** OLD VERSION, ACCUMMULATES UNCERTAINTY
 		UReal value = v.mult(new UReal(1.0/this.unit.factor(),0.0));
 		// Now we substract the offset, only if there is one offset in the array. Otherwise we raise an exception
 		for (int i = 0; i<BaseUnits.values().length; i++) {
@@ -171,21 +173,12 @@ public class Quantity implements Comparable<Quantity> {
 				value = value.minus(new UReal(this.unit.offset[i]/this.unit.conversionFactor[i]));
 			}
 		}
-//		assert this.unit.checkOffset() : this.unit.offset;
+		// assert this.unit.checkOffset() : this.unit.offset;
 		if (!this.unit.checkOffset()) throw new RuntimeException("Invalid Offset in unit: "+this.unit.symbol);
 		return new Quantity(value,unit);
-		
-		/** OLD VERSION
-		//OFFSET: Not sure if this works well in the general case... NEED TO CHECK....
-		for (int i = 0; i<BaseUnits.values().length; i++) {
-			if ((this.unit.dimensions[i]>=0.0) && (this.unit.offset[i]!=0.0)) {
-				value = value.minus(new UReal(this.unit.offset[i]/this.unit.conversionFactor[i]));
-			}
-		}
-		return new Quantity(value,unit);
-		*/
+	 * 	
+	 */
 	}
-
 	
 	/*********
      * 
@@ -200,45 +193,53 @@ public class Quantity implements Comparable<Quantity> {
 
 //		assert r.unit.noOffset(): r.unit.symbol;
 		if (!r.unit.noOffset()) throw new RuntimeException("Add: Invalid Offset in operand unit: "+r.unit.symbol);
-
-		Quantity other = r.convertTo(this.getUnits());
-		result = new Quantity(this.getUReal().add(other.getUReal()),this.getUnits());
+		if (this.unit.noOffset()) { //both this and r are not delta
+			Quantity other = r.convertTo(this.getUnits());
+			result = new Quantity(this.getUReal().add(other.getUReal()),this.getUnits());
+		} else { //r is delta, this is not
+			Quantity one = this.convertToSIUnits();
+			Quantity other = r.convertToSIUnits();
+			return this.convertFromSIUnits(one.getUReal().add(other.getUReal()));
+//			Quantity other = r.convertTo(this.getUnits());
+//			result = new Quantity(this.getUReal().add(other.getUReal().add(new UReal(this.unit.sumOffset(),0.0))),this.getUnits());
+		}
 		return result;
 	}
 	
 	public Quantity minus(Quantity r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
-		Quantity result = null;
-
 //		assert this.compatibleUnits(r.unit);
 		if (!this.compatibleUnits(r.unit)) throw new RuntimeException("minus: Incompatible Units: "+this.unit+" and "+r.unit);
 
 //		assert r.unit.noOffset(): r.unit.symbol;
 
 		if (!r.unit.noOffset() && this.unit.noOffset()) throw new RuntimeException("Minus: Invalid Offset in operand unit: "+r.unit.symbol);
-		if (r.unit.noOffset()) { // r is a Delta Unit, but "this" is not
+		if (r.unit.noOffset() && this.unit.noOffset()) {
 			Quantity other = r.convertTo(this.getUnits());
-			result = new Quantity(this.getUReal().minus(other.getUReal()),this.getUnits());
-		} else { // neither r nor this are Delta Units, but the result should be a Delta Unit...
-			//then we convert to the  Delta"This" unit, with no offset
-			Quantity other = r.convertTo(this.getUnits());
-			result = new Quantity(this.getUReal().minus(other.getUReal()),
-					              new Unit("Delta"+this.unit.name,
-					            		   "Delta"+this.unit.symbol,
-					            		   this.unit.dimensions(),
-					            		   this.unit.conversionFactor));		
+			return new Quantity(this.getUReal().minus(other.getUReal()),this.getUnits());
 		}
-		
-		return result;
+		if (r.unit.noOffset()) { // r is a Delta Unit, but "this" is not
+			Quantity one = this.convertToSIUnits();
+			Quantity other = r.convertToSIUnits();
+			return this.convertFromSIUnits(one.getUReal().minus(other.getUReal()));
+//			Quantity other = r.convertTo(this.getUnits());
+//			return new Quantity(this.getUReal().minus(other.getUReal().add(new UReal(this.unit.sumOffset(),0.0))),this.getUnits());
+		} 
+		// else neither r nor this are Delta Units, but the result should be a Delta Unit...
+		// and then we convert to the  Delta"This" unit, with no offset
+		Quantity other = r.convertTo(this.getUnits());
+		return new Quantity(this.getUReal().minus(other.getUReal()),
+		  	                new Unit("Delta"+this.unit.name,
+					           		 "Delta"+this.unit.symbol,
+					            	 this.unit.dimensions(),
+					            	 this.unit.conversionFactor));		
 	}
 
 	public Quantity mult(Quantity r) { //both values and units are multiplied. No offsets allowed in any of the units
 
 //		assert this.unit.noOffset(): this.unit.symbol;
 //		assert r.unit.noOffset(): r.unit.symbol;
-
 		if (!this.unit.noOffset()) throw new RuntimeException("mult: Invalid Offset in this unit: "+this.unit.symbol);
 		if (!r.unit.noOffset()) throw new RuntimeException("mult: Invalid Offset in operand unit: "+r.unit.symbol);
-
 		
 		Quantity result = new Quantity();
 		Quantity one = this.convertToSIUnits();
@@ -254,8 +255,7 @@ public class Quantity implements Comparable<Quantity> {
 //		assert r.unit.noOffset(): r.unit.symbol;
 		if (!this.unit.noOffset()) throw new RuntimeException("divideBy: Invalid Offset in this unit: "+this.unit.symbol);
 		if (!r.unit.noOffset()) throw new RuntimeException("divideBy: Invalid Offset in operand unit: "+r.unit.symbol);
-
-		
+	
 		Quantity result = new Quantity();
 		Quantity one = this.convertToSIUnits();
 		Quantity other = r.convertToSIUnits();
@@ -263,7 +263,6 @@ public class Quantity implements Comparable<Quantity> {
     	result.setUnits(one.getUnits().divideUnits(other.getUnits()));
 		return result;
 	}
-	
 	
 	public Quantity abs() { //units are maintained
 		Quantity result = new Quantity();
@@ -366,7 +365,7 @@ public class Quantity implements Comparable<Quantity> {
 	}
 
 	/***
-	 * working with constants (note that add and minus will only work if "this" is dimensionless
+	 * working with constants (note that add and minus will only work if "this" is unit-less
 	 */
 
 	public Quantity sAdd(double r) {  

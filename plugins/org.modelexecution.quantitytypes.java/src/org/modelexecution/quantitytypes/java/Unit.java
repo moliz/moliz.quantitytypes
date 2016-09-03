@@ -1,5 +1,4 @@
 package org.modelexecution.quantitytypes.java;
-
 import java.util.Arrays;
 
 public class Unit extends SIUnit implements Cloneable {
@@ -40,9 +39,16 @@ public class Unit extends SIUnit implements Cloneable {
 			if (offset[i]!=0.0) return false;
 		return true;
 	}
+	
+	protected double sumOffset() {
+		double sum=0;
+		for (int i=0;i<BaseUnits.values().length;i++)
+			sum +=offset[i];
+		return sum;
+	}
 
 	
-	public Unit(){ //Dimensionless
+	public Unit(){ //Unitless
 		super();
 		this.name = ""; 
 		this.symbol = "";
@@ -76,7 +82,7 @@ public class Unit extends SIUnit implements Cloneable {
 		Arrays.fill(offset, 0.0); 
 	}
 
-	public Unit(double [] d, double [] c){
+	public Unit(double [] d, double [] c){ //no offset
 		super(d);
 		this.name = super.name();
 		this.symbol = super.symbol();

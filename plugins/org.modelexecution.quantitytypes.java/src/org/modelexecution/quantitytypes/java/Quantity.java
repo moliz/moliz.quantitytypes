@@ -109,7 +109,19 @@ public class Quantity implements Comparable<Quantity> {
 		//assert this.compatibleUnits(u);
 		if (!this.compatibleUnits(u)) throw new RuntimeException("convertTo: Incompatible Units: "+this.unit+" and "+u);
 
+/***
+ * 		System.out.println("CONVERTTO");
+ 
+		System.out.println("this: "+this);
+		System.out.println("this.value: "+this.value);
+		System.out.println("unit: "+u);
+		System.out.println("this.unit.factor: "+this.unit.factor());
+		System.out.println("u.factor: "+u.factor());
+*/		
 		UReal value = this.value.mult(new UReal(this.unit.factor()/u.factor(),0.0));
+
+//		System.out.println("new value: "+value);
+
 		// Now we add the offset, only if there is one offset in the array. Otherwise we raise an exception
 		for (int i = 0; i<BaseUnits.values().length; i++) {
 			if ((this.unit.dimensions[i]>=0.0) && ((this.unit.offset[i])!=0.0||(u.offset[i]!=0.0))) {
@@ -126,7 +138,7 @@ public class Quantity implements Comparable<Quantity> {
 	
 	public Quantity convertToSIUnits(){
 
-/** OLD VERSION, ACCUMMULATES UNCERTAINTY
+/** OLD VERSION, ACCUMMULATES UNCERTAINTY */
   		UReal value = this.value.mult(new UReal(this.unit.factor(),0.0));
  		// Now we add the offset, only if there is one offset in the array. Otherwise we raise an exception
 		for (int i = 0; i<BaseUnits.values().length; i++) {
@@ -138,7 +150,8 @@ public class Quantity implements Comparable<Quantity> {
 		if (!this.unit.checkOffset()) throw new RuntimeException("Invalid Offset in unit: "+this.unit.symbol);
 
 		return new Quantity(value,new Unit(unit.dimensions));
-*/
+
+/* NEW VERSION
   		double x = this.value.x*this.unit.factor();
  		// Now we add the offset, only if there is one offset in the array. Otherwise we raise an exception
 		for (int i = 0; i<BaseUnits.values().length; i++) {
@@ -150,22 +163,11 @@ public class Quantity implements Comparable<Quantity> {
 		if (!this.unit.checkOffset()) throw new RuntimeException("Invalid Offset in unit: "+this.unit.symbol);
 
 		return new Quantity(new UReal(x,this.value.u*this.unit.factor()),unit);		
+		*/
 	}
 	
 	public Quantity convertFromSIUnits(UReal v){// v is the value of the quantity expressed in SIUnits
 
-		double x = v.x/this.unit.factor();
-		for (int i = 0; i<BaseUnits.values().length; i++) {
-			if ((this.unit.dimensions[i]>=0.0) && (this.unit.offset[i]!=0.0)) {
-				x-=this.unit.offset[i]/this.unit.conversionFactor[i];
-			}
-		}
-
-		//	assert this.unit.checkOffset() : this.unit.offset;
-		if (!this.unit.checkOffset()) throw new RuntimeException("Invalid Offset in unit: "+this.unit.symbol);
-		return new Quantity(new UReal(x,v.u/this.unit.factor()),unit);
-
-		/*** OLD VERSION, ACCUMMULATES UNCERTAINTY
 		UReal value = v.mult(new UReal(1.0/this.unit.factor(),0.0));
 		// Now we substract the offset, only if there is one offset in the array. Otherwise we raise an exception
 		for (int i = 0; i<BaseUnits.values().length; i++) {
@@ -176,6 +178,18 @@ public class Quantity implements Comparable<Quantity> {
 		// assert this.unit.checkOffset() : this.unit.offset;
 		if (!this.unit.checkOffset()) throw new RuntimeException("Invalid Offset in unit: "+this.unit.symbol);
 		return new Quantity(value,unit);
+
+		/*** OLD VERSION, ACCUMMULATES UNCERTAINTY
+		double x = v.x/this.unit.factor();
+		for (int i = 0; i<BaseUnits.values().length; i++) {
+			if ((this.unit.dimensions[i]>=0.0) && (this.unit.offset[i]!=0.0)) {
+				x-=this.unit.offset[i]/this.unit.conversionFactor[i];
+			}
+		}
+
+		//	assert this.unit.checkOffset() : this.unit.offset;
+		if (!this.unit.checkOffset()) throw new RuntimeException("Invalid Offset in unit: "+this.unit.symbol);
+		return new Quantity(new UReal(x,v.u/this.unit.factor()),unit);
 	 * 	
 	 */
 	}
@@ -241,6 +255,7 @@ public class Quantity implements Comparable<Quantity> {
 		if (!this.unit.noOffset()) throw new RuntimeException("mult: Invalid Offset in this unit: "+this.unit.symbol);
 		if (!r.unit.noOffset()) throw new RuntimeException("mult: Invalid Offset in operand unit: "+r.unit.symbol);
 		
+//		if (r.unit.isDimensionless()) return new Quantity(this.value.mult(r.value),this.unit);
 		Quantity result = new Quantity();
 		Quantity one = this.convertToSIUnits();
 		Quantity other = r.convertToSIUnits();

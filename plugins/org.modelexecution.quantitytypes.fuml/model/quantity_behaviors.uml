@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_GfriwHNMEea8m7SzDfIMAA" name="QuantityBehaviors">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Jg5RAHNMEea8m7SzDfIMAA" name="QuantityFunctions">
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_RCFxkHNMEea8m7SzDfIMAA" name="QuantityMinus">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_exoqwHNMEea8m7SzDfIMAA" name="x">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nxRfQHNMEea8m7SzDfIMAA" name="y">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_oiA_sHNMEea8m7SzDfIMAA" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_NnhIIHNMEea8m7SzDfIMAA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NnhvMHNMEea8m7SzDfIMAA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VzlVMHNNEea8m7SzDfIMAA" name="LengthFunctions">
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_akQO4HNNEea8m7SzDfIMAA" name="LengthMinus">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_akQO4XNNEea8m7SzDfIMAA" name="x">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_akQO4nNNEea8m7SzDfIMAA" name="y">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_akQO43NNEea8m7SzDfIMAA" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_An6cIHNiEea8m7SzDfIMAA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_An7DMHNiEea8m7SzDfIMAA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+      </profileApplication>
+    </packagedElement>
+  </uml:Model>
+  <standard:ModelLibrary xmi:id="_OMIREHNMEea8m7SzDfIMAA" base_Package="_Jg5RAHNMEea8m7SzDfIMAA"/>
+  <standard:ModelLibrary xmi:id="_BK9e0HNiEea8m7SzDfIMAA" base_Package="_VzlVMHNNEea8m7SzDfIMAA"/>
+</xmi:XMI>

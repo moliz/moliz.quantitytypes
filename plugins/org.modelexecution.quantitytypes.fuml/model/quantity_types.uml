@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_2P5bEHNDEea8m7SzDfIMAA" name="QuantityTypes">
+    <packagedElement xmi:type="uml:Package" xmi:id="_cYoawHNGEea8m7SzDfIMAA" name="QuantityTypesLibrary" URI="http://www.modelexecution.org/fUML/QuantityTypesLibrary">
+      <packagedElement xmi:type="uml:DataType" xmi:id="__ZWS4HNDEea8m7SzDfIMAA" name="Quantity">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_5TVhcHNEEea8m7SzDfIMAA" name="value">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_zruGwHNGEea8m7SzDfIMAA" name="unit" type="_5U2ScHNGEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_DbfSoHNEEea8m7SzDfIMAA" name="SIUnit">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_L1JsQHNEEea8m7SzDfIMAA" name="dimensions">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Xahz8HNEEea8m7SzDfIMAA" name="dimensionsLowerBound" value="8"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ayxiIHNEEea8m7SzDfIMAA" name="dimensionsUpperBound" value="8"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5U2ScHNGEea8m7SzDfIMAA" name="Unit">
+        <generalization xmi:type="uml:Generalization" xmi:id="_76Ku4HNGEea8m7SzDfIMAA" general="_DbfSoHNEEea8m7SzDfIMAA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_C3u98HNHEea8m7SzDfIMAA" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_FDttUHNHEea8m7SzDfIMAA" name="symbol">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_HlaOAHNHEea8m7SzDfIMAA" name="conversionFactor">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QfaUkHNHEea8m7SzDfIMAA" name="conversionFactorLowerBound" value="8"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Siip8HNHEea8m7SzDfIMAA" name="conversionFactorUpperBound" value="8"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LVzWcHNHEea8m7SzDfIMAA" name="offset">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_IWCSUHNKEea8m7SzDfIMAA" name="Length">
+        <generalization xmi:type="uml:Generalization" xmi:id="_J8ItcHNKEea8m7SzDfIMAA" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w1ZZ4HNGEea8m7SzDfIMAA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w1aA8HNGEea8m7SzDfIMAA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+      </profileApplication>
+    </packagedElement>
+  </uml:Model>
+  <standard:ModelLibrary xmi:id="_xXGYwHNGEea8m7SzDfIMAA" base_Package="_cYoawHNGEea8m7SzDfIMAA"/>
+</xmi:XMI>

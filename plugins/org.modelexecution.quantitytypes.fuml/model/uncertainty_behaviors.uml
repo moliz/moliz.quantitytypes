@@ -13,6 +13,55 @@
           <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
         </ownedParameter>
       </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_a1QdcHRMEeaSi94PKFDvnw" name="URealPlus">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_a1QdcXRMEeaSi94PKFDvnw" name="x">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_a1QdcnRMEeaSi94PKFDvnw" name="y">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_a1Qdc3RMEeaSi94PKFDvnw" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_j99uYHRMEeaSi94PKFDvnw" name="URealDivide">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_j99uYXRMEeaSi94PKFDvnw" name="x">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_j99uYnRMEeaSi94PKFDvnw" name="y">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_j99uY3RMEeaSi94PKFDvnw" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_l_NNYHRMEeaSi94PKFDvnw" name="URealTimes">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_l_NNYXRMEeaSi94PKFDvnw" name="x">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_l_NNYnRMEeaSi94PKFDvnw" name="y">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_l_NNY3RMEeaSi94PKFDvnw" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_sCJnQHRMEeaSi94PKFDvnw" name="URealAbs">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sCJnQXRMEeaSi94PKFDvnw" name="x">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sCJnQ3RMEeaSi94PKFDvnw" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_3miQcHRMEeaSi94PKFDvnw" name="URealNegate">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3miQcXRMEeaSi94PKFDvnw" name="x">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3miQcnRMEeaSi94PKFDvnw" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8gKPcHQYEeaXEsucMy-yAQ">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8gKPcXQYEeaXEsucMy-yAQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>

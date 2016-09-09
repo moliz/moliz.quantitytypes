@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_BG388HNKEea8m7SzDfIMAA" name="ToyCar">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_BG388HNKEea8m7SzDfIMAA" name="ToyCar">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_KWOKsHZmEea8077kK0GvDQ" annotatedElement="_HjazQHZjEea8077kK0GvDQ">
+    <body>{@link #_TmJlUHZjEea8077kK0GvDQ} = self.am.avgVelocity->sum() / self.am->size()&#xD;
+{@link #_KzyX0HZjEea8077kK0GvDQ} = self.am.avgAcceleration->sum() / self.am->size()</body>
+  </ownedComment>
   <packagedElement xmi:type="uml:Class" xmi:id="_FOmnUHNKEea8m7SzDfIMAA" name="AccMeasure">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_Qqc-UHZlEea8077kK0GvDQ" annotatedElement="_FOmnUHNKEea8m7SzDfIMAA">
+      <body>{@link #_ux3MUHXtEeaN09DF3dFurg} = self.finalPosition.minus(self.initialPosition)&#xD;
+{@link #_z5UOUHXtEeaN09DF3dFurg} = self.distance.dividedBy(self.duration)&#xD;
+{@link #_6lLCUHXtEeaN09DF3dFurg} = self.finalVelocity.minus(self.initialVelocity)&#xD;
+                                                                          .dividedBy(self.duration)</body>
+    </ownedComment>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_QZcIEHNKEea8m7SzDfIMAA" name="initialPosition">
       <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_dcAmgHNKEea8m7SzDfIMAA" name="finalPosition">
       <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_iPJ5sHXtEeaN09DF3dFurg" name="duration">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#__8c54HRJEeaSi94PKFDvnw"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nMpHYHXtEeaN09DF3dFurg" name="initialVelocity">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_r7ElYHXtEeaN09DF3dFurg" name="finalVelocity">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ux3MUHXtEeaN09DF3dFurg" name="distance" isDerived="true">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_z5UOUHXtEeaN09DF3dFurg" name="avgVelocity" isDerived="true">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6lLCUHXtEeaN09DF3dFurg" name="avgAcceleration" isDerived="true">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_g_L_0HZfEeaDT4cTjY-Ddw"/>
     </ownedAttribute>
     <ownedBehavior xmi:type="uml:Activity" xmi:id="_3p7aAHNMEea8m7SzDfIMAA" name="computeDistance" specification="_iAIR8HNKEea8m7SzDfIMAA" node="_CqN3oHNNEea8m7SzDfIMAA _ixAN4HNNEea8m7SzDfIMAA _w44HgHNNEea8m7SzDfIMAA _8wKekHNNEea8m7SzDfIMAA _CxPQMHNOEea8m7SzDfIMAA _UTBr8HNOEea8m7SzDfIMAA">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_6E8D4HNMEea8m7SzDfIMAA" name="distance" direction="return">
@@ -51,11 +79,21 @@
         </result>
         <behavior xmi:type="uml:FunctionBehavior" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_behaviors.uml#_RCFxkHNMEea8m7SzDfIMAA"/>
       </node>
-      <node xmi:type="uml:ForkNode" xmi:id="_UTBr8HNOEea8m7SzDfIMAA" name="forkthis" incoming="_Z9CocHNOEea8m7SzDfIMAA" outgoing="_bXkFsHNOEea8m7SzDfIMAA _dARv8HNOEea8m7SzDfIMAA"/>
+      <node xmi:type="uml:ForkNode" xmi:id="_UTBr8HNOEea8m7SzDfIMAA" name="fork" incoming="_Z9CocHNOEea8m7SzDfIMAA" outgoing="_bXkFsHNOEea8m7SzDfIMAA _dARv8HNOEea8m7SzDfIMAA"/>
     </ownedBehavior>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_iAIR8HNKEea8m7SzDfIMAA" name="computeDistance" method="_3p7aAHNMEea8m7SzDfIMAA">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_nU6lUHNKEea8m7SzDfIMAA" name="distance" direction="return">
         <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5ZfEIHZiEea8077kK0GvDQ" name="computeAvgVelocity">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-MxM8HZiEea8077kK0GvDQ" name="result" direction="return">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__LuvkHZiEea8077kK0GvDQ" name="computeAvgAcceleration">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_D_96oHZjEea8077kK0GvDQ" name="result" direction="return">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_g_L_0HZfEeaDT4cTjY-Ddw"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
@@ -193,5 +231,33 @@
       <definingFeature xmi:type="uml:Property" href="pathmap://UML_UNCERTAINTY_LIBRARY/uncertainty_types.uml#_XMeNAHNIEea8m7SzDfIMAA"/>
       <value xmi:type="uml:LiteralReal" xmi:id="_OjFwxHQWEeaC3c6FRnSfEw" value="0.001"/>
     </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_HjazQHZjEea8077kK0GvDQ" name="Vehicle">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_KzyX0HZjEea8077kK0GvDQ" name="avgAcceleration" isDerived="true">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_g_L_0HZfEeaDT4cTjY-Ddw"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TmJlUHZjEea8077kK0GvDQ" name="avgVelocity" isDerived="true">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3e3NsHZmEea8077kK0GvDQ" name="am" type="_FOmnUHNKEea8m7SzDfIMAA" isOrdered="true" association="_3ey8QHZmEea8077kK0GvDQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_955-gHZmEea8077kK0GvDQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_95-P8HZmEea8077kK0GvDQ" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_bxLGAHZjEea8077kK0GvDQ" name="computeAvgVelocity">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_fQRDEHZjEea8077kK0GvDQ" name="result" direction="return">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_f2O24HZjEea8077kK0GvDQ" name="computeAvgAcceleration">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2kbYHZjEea8077kK0GvDQ" name="result" direction="return">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_g_L_0HZfEeaDT4cTjY-Ddw"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3ey8QHZmEea8077kK0GvDQ" memberEnd="_3e3NsHZmEea8077kK0GvDQ _3e30wHZmEea8077kK0GvDQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3e0xcHZmEea8077kK0GvDQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3e0xcXZmEea8077kK0GvDQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3e30wHZmEea8077kK0GvDQ" name="vehicle" type="_HjazQHZjEea8077kK0GvDQ" association="_3ey8QHZmEea8077kK0GvDQ"/>
   </packagedElement>
 </uml:Model>

@@ -35,6 +35,144 @@
       <packagedElement xmi:type="uml:DataType" xmi:id="_IWCSUHNKEea8m7SzDfIMAA" name="Length">
         <generalization xmi:type="uml:Generalization" xmi:id="_J8ItcHNKEea8m7SzDfIMAA" general="__ZWS4HNDEea8m7SzDfIMAA"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_7byyIHRJEeaSi94PKFDvnw" name="Mass">
+        <generalization xmi:type="uml:Generalization" xmi:id="_7byyIXRJEeaSi94PKFDvnw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="__8c54HRJEeaSi94PKFDvnw" name="Time">
+        <generalization xmi:type="uml:Generalization" xmi:id="_NpL6MHRLEeaSi94PKFDvnw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_CAWrUHRKEeaSi94PKFDvnw" name="ElectricCurrent">
+        <generalization xmi:type="uml:Generalization" xmi:id="_CAWrUXRKEeaSi94PKFDvnw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_IOir4HRKEeaSi94PKFDvnw" name="ThermodynamicTemperature">
+        <generalization xmi:type="uml:Generalization" xmi:id="_IOir4XRKEeaSi94PKFDvnw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_KwaLsHRKEeaSi94PKFDvnw" name="AmountOfSubstance">
+        <generalization xmi:type="uml:Generalization" xmi:id="_KwaLsXRKEeaSi94PKFDvnw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_MkQu8HRKEeaSi94PKFDvnw" name="LuminousIntensity">
+        <generalization xmi:type="uml:Generalization" xmi:id="_O5cBIHRLEeaSi94PKFDvnw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_PCJtsHRKEeaSi94PKFDvnw" name="Angle">
+        <generalization xmi:type="uml:Generalization" xmi:id="_PCJtsXRKEeaSi94PKFDvnw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_AIAt4HXwEeafjYHufAO0OQ" name="LinearVelocity">
+        <generalization xmi:type="uml:Generalization" xmi:id="_HveOgHXwEeafjYHufAO0OQ" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_g_L_0HZfEeaDT4cTjY-Ddw" name="LinearAcceleration">
+        <generalization xmi:type="uml:Generalization" xmi:id="_QsRqoHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_jGIeMHZfEeaDT4cTjY-Ddw" name="AbsorbedDose">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Df_PgHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_lt38gHZfEeaDT4cTjY-Ddw" name="AngularAcceleration">
+        <generalization xmi:type="uml:Generalization" xmi:id="_D_eA0HZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ngUKgHZfEeaDT4cTjY-Ddw" name="AngularMass">
+        <generalization xmi:type="uml:Generalization" xmi:id="_EgbY0HZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_tBoeAHZfEeaDT4cTjY-Ddw" name="AngularMomentum">
+        <generalization xmi:type="uml:Generalization" xmi:id="_E4-bsHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_t-GtUHZfEeaDT4cTjY-Ddw" name="AngularVelocity">
+        <generalization xmi:type="uml:Generalization" xmi:id="_FT4PAHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_vfdLUHZfEeaDT4cTjY-Ddw" name="Area">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Fx5AsHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_wRo2MHZfEeaDT4cTjY-Ddw" name="AreaAngle">
+        <generalization xmi:type="uml:Generalization" xmi:id="_GQQ-wHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_xiHmoHZfEeaDT4cTjY-Ddw" name="AreaTemperature">
+        <generalization xmi:type="uml:Generalization" xmi:id="_G60XoHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_yvYrAHZfEeaDT4cTjY-Ddw" name="AreaThermalExpansion">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Iqp9kHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_0hBnwHZfEeaDT4cTjY-Ddw" name="ElectricCharge">
+        <generalization xmi:type="uml:Generalization" xmi:id="_JFzBcHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3lFOoHZfEeaDT4cTjY-Ddw" name="ElectricChargeLineDensity">
+        <generalization xmi:type="uml:Generalization" xmi:id="_JfJ8oHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_6tuakHZfEeaDT4cTjY-Ddw" name="ElectricCurrentDensity">
+        <generalization xmi:type="uml:Generalization" xmi:id="_J8cVkHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_8TxLUHZfEeaDT4cTjY-Ddw" name="ElectricFluxDensity">
+        <generalization xmi:type="uml:Generalization" xmi:id="_KdAsAHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_9205gHZfEeaDT4cTjY-Ddw" name="EnergyAndWork">
+        <generalization xmi:type="uml:Generalization" xmi:id="_LTvfsHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="__DqgEHZfEeaDT4cTjY-Ddw" name="EnergyPerUnitArea">
+        <generalization xmi:type="uml:Generalization" xmi:id="_L-tvUHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_AjG5kHZgEeaDT4cTjY-Ddw" name="Force">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Mq0nYHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_BcDTwHZgEeaDT4cTjY-Ddw" name="Illuminance">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Nr5p4HZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_C__ywHZgEeaDT4cTjY-Ddw" name="KinematicViscosity">
+        <generalization xmi:type="uml:Generalization" xmi:id="_PG_u4HZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_IMIgcHZgEeaDT4cTjY-Ddw" name="LengthMass">
+        <generalization xmi:type="uml:Generalization" xmi:id="_PlnkkHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_JBpzMHZgEeaDT4cTjY-Ddw" name="LenghtTemperature">
+        <generalization xmi:type="uml:Generalization" xmi:id="_QEyM0HZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_LFNmYHZgEeaDT4cTjY-Ddw" name="LinearMomentum">
+        <generalization xmi:type="uml:Generalization" xmi:id="_RVFXEHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_MfWpIHZgEeaDT4cTjY-Ddw" name="LinearThermalExpansion">
+        <generalization xmi:type="uml:Generalization" xmi:id="_SY_EEHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_PBP-IHZgEeaDT4cTjY-Ddw" name="Luminance">
+        <generalization xmi:type="uml:Generalization" xmi:id="_S-u1cHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_QjInoHZgEeaDT4cTjY-Ddw" name="LuminousFlux">
+        <generalization xmi:type="uml:Generalization" xmi:id="_TeVikHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_TwAMQHZgEeaDT4cTjY-Ddw" name="MagneticDipoleMoment">
+        <generalization xmi:type="uml:Generalization" xmi:id="_T-6gEHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_VJBNoHZgEeaDT4cTjY-Ddw" name="MagneticFieldStrength">
+        <generalization xmi:type="uml:Generalization" xmi:id="_U9NUUHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Wa66YHZgEeaDT4cTjY-Ddw" name="MagneticFlux">
+        <generalization xmi:type="uml:Generalization" xmi:id="_VaZmoHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Xpke0HZgEeaDT4cTjY-Ddw" name="MagneticFluxDensity">
+        <generalization xmi:type="uml:Generalization" xmi:id="_V-fLIHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ZxB6kHZgEeaDT4cTjY-Ddw" name="MagnetomotiveForce">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Wif3IHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_bp3rgHZgEeaDT4cTjY-Ddw" name="MassPerUnitTime">
+        <generalization xmi:type="uml:Generalization" xmi:id="_XfBw0HZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_c-LMAHZgEeaDT4cTjY-Ddw" name="Power">
+        <generalization xmi:type="uml:Generalization" xmi:id="_X-iXUHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_elS60HZgEeaDT4cTjY-Ddw" name="PowerPerAngle">
+        <generalization xmi:type="uml:Generalization" xmi:id="_YYUJQHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_gYORAHZgEeaDT4cTjY-Ddw" name="PowerPerAreaAngle">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Yv6J4HZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_hpV6oHZgEeaDT4cTjY-Ddw" name="PowerPerUnitArea">
+        <generalization xmi:type="uml:Generalization" xmi:id="_ZMqXUHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_jF4KEHZgEeaDT4cTjY-Ddw" name="SolidAngle">
+        <generalization xmi:type="uml:Generalization" xmi:id="_ZjrwMHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_l1cusHZgEeaDT4cTjY-Ddw" name="TimeSquared">
+        <generalization xmi:type="uml:Generalization" xmi:id="_aay-YHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_nMPigHZgEeaDT4cTjY-Ddw" name="Volume">
+        <generalization xmi:type="uml:Generalization" xmi:id="_a2HocHZiEeaDT4cTjY-Ddw" general="__ZWS4HNDEea8m7SzDfIMAA"/>
+      </packagedElement>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_w1ZZ4HNGEea8m7SzDfIMAA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w1aA8HNGEea8m7SzDfIMAA" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>

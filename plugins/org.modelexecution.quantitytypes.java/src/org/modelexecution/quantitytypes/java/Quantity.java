@@ -383,14 +383,6 @@ public class Quantity implements Comparable<Quantity> {
 	 * working with constants (note that add and minus will only work if "this" is unit-less
 	 */
 
-	public Quantity sAdd(double r) {  
-		return this.add(new Quantity(r));
-	}
-	
-	public Quantity sMinus(double r) {  
-		return this.minus(new Quantity(r));
-	}
-	
 	public Quantity sMult(double r) {  
 		return new Quantity(this.value.mult(new UReal(r)),this.getUnits());
 	}

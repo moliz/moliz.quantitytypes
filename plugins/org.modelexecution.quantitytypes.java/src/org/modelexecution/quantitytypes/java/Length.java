@@ -1,8 +1,10 @@
 package org.modelexecution.quantitytypes.java;
 
+//READY
+
 /**
  * @author av
- *
+ * 
  */
 public class Length extends Quantity {
 	
@@ -162,17 +164,9 @@ public class Length extends Quantity {
 	}
 
 	/***
-	 * working with constants (note that add and minus will only work if "this" is unit-less
+	 * working with constants (note that add and minus do not work here
 	 */
 
-	public Length sAdd(double r) {  
-		return this.add(new Length(r));
-	}
-	
-	public Length sMinus(double r) {  
-		return this.minus(new Length(r));
-	}
-	
 	public Length sMult(double r) {  
 		return new Length(this.value.mult(new UReal(r)),this.getUnits());
 	}

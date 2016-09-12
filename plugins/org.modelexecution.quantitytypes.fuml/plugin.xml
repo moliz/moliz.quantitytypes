@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="pathmap://UML_UNCERTAINTY_LIBRARY/"
+            target="platform:/plugin/org.modelexecution.quantitytypes.fuml/model/">
+      </mapping>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="pathmap://UML_QUANTITY_LIBRARY/"
+            target="platform:/plugin/org.modelexecution.quantitytypes.fuml/model/">
+      </mapping>
+   </extension>
+   <extension
+         point="org.modelexecution.fuml.library">
+      <library
+            description="UML Uncertainty Type Library"
+            name="UML Uncertainty Type Library"
+            path="pathmap://UML_UNCERTAINTY_LIBRARY/uncertainty_types.uml"
+            provider="Business Informatics Group, TU Wien">
+      </library>
+   </extension>
+   <extension
+         point="org.modelexecution.fuml.library">
+      <library
+            description="UML Quantity Type Library"
+            name="UML Quantity Type Library"
+            path="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml"
+            provider="Business Informatics Group, TU Wien">
+      </library>
+   </extension>
+   <extension
+         point="org.modelexecution.fuml.library">
+      <library
+            description="UML Quantity Behaviors Library"
+            name="UML Quantity Behaviors Library"
+            path="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_behaviors.uml"
+            provider="Business Informatics Group, TU Wien">
+      </library>
+   </extension>
+   <extension
+         point="org.modelexecution.fuml.library">
+      <library
+            description="UML Uncertainty Behaviors Library"
+            name="UML Uncertainty Behaviors Library"
+            path="pathmap://UML_UNCERTAINTY_LIBRARY/uncertainty_behaviors.uml"
+            provider="Business Informatics Group, TU Wien">
+      </library>
+   </extension>
+   <extension
+         point="org.modelexecution.fuml.libraryregistry">
+      <libraryregistry
+            class="org.modelexecution.quantitytypes.fuml.libraryregistry.QuantityBehaviorsExecutionRegistry">
+      </libraryregistry>
+   </extension>
+
+</plugin>

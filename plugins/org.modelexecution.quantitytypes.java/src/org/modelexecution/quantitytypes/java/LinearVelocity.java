@@ -1,5 +1,7 @@
 package org.modelexecution.quantitytypes.java;
 
+//READY
+
 public class LinearVelocity extends Quantity {
 
 	static protected boolean checkUnit(Unit u) {
@@ -146,17 +148,9 @@ public class LinearVelocity extends Quantity {
 	}
 
 	/***
-	 * working with constants (note that add and minus will only work if "this" is unit-less
+	 * working with constants (note that add and minus do not work here
 	 */
 
-	public LinearVelocity sAdd(double r) {  
-		return this.add(new LinearVelocity(r));
-	}
-	
-	public LinearVelocity sMinus(double r) {  
-		return this.minus(new LinearVelocity(r));
-	}
-	
 	public LinearVelocity sMult(double r) {  
 		return new LinearVelocity(this.value.mult(new UReal(r)),this.getUnits());
 	}

@@ -1,0 +1,174 @@
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-- Definiton of class Length
+-- It inherits from Quantity
+-- The operations not specified here are taken from Quantity.
+
+context Quantity::isALength() :Boolean
+    post: result self.unit.dimensions=Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+
+context l:Length inv allUnitsTheSame:
+    l.unit.dimensions=Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+
+context Quantity::isALength() :Boolean
+    post: result self.unit.dimensions=Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+
+context Length::convertTo(u :Unit) :Quantity
+  pre: self.compatibleUnits(x.unit) 
+  post: result.value = self.value.mult(self.unit.factor()/u.factor()).add((self.unit.offset->sum()-u.offset->sum())/u.factor())
+        and result.unit = u
+
+context Length::convertToSIUnits() :Quantity
+  post: let auxUnit : Unit in
+          auxUnit.dimensions = self.unit.dimensions and
+          auxUnit.conversionFactor = Sequence{1,1,1,1,1,1,1,1} and
+          auxUnit.offset = Sequence{0,0,0,0,0,0,0,0} and
+          auxUnit.name = auxUnit.defaultName() and
+          auxUnit.symbol = auxUnit.defaultSymbol()
+
+context Length::convertFromSIUnits(val :UReal) :Quantity
+  post: let auxQ : Quantity in
+          auxQ.unit.dimensions = self.unit.dimensions and
+          auxQ.unit.conversionFactor = Sequence{1,1,1,1,1,1,1,1} and
+          auxQ.unit.offset = Sequence{0,0,0,0,0,0,0,0} and
+          auxQ.value = val and
+          result = auxQ.convertTo(self.unit)
+
+context Length::add(x :Length) : Quantity
+  pre: self.compatibleUnits(x.unit) and x.unit.noOffset() -- operand should have no offset
+  post: self.unit.noOffset() implies
+            (result.value = self.value.add(x.convertTo(self.unit).value) and result.unit =self.unit)
+        and not (self.unit.noOffset()) implies
+            (result = self.convertFromSIUnits(self.convertToSIUnits().value.add(x.convertToSIUnits())))
+
+context Length::minus(x :Length) : Quantity
+  pre: self.compatibleUnits(x.unit)
+       and (not x.unit.noOffset() implies not self.unit.noOffset())
+       -- You can subtract two units with offset (although the
+       -- result will be a "delta" unit, i.e., with no offset
+       -- But if x has offset, self should have it too.
+  post:
+      (x.unit.noOffset() and self.unit.noOffset()) implies -- non of the two units have offsets
+         (result.value = self.value.minus(x.convertTo(self.unit).value) and result.unit =self.unit)
+  and (x.unit.noOffset() and not self.unit.noOffset()) implies -- x has no offset Unit, but "self" has
+         (result = self.convertFromSIUnits(self.convertToSIUnits().value.minus(x.convertToSIUnits())))
+  and (not x.unit.noOffset() and not self.unit.noOffset()) implies
+          -- neither x nor self are Delta Units, but the result should be a Delta Unit...
+          -- and then we convert to the  Delta"self" unit, with no offset
+         (result.value = self.value.minus(x.convertTo(self.unit).value) and
+          result.unit.dimensions = self.unit.dimensions and
+          result.unit.conversionFactor = self.unit.conversionFactor and
+          result.unit.offset = Sequence{0,0,0,0,0,0,0,0} and
+          result.unit.name = self.unit.name.concat('delta') and
+          result.unit.symbol = self.unit.symbol.concat('delta'))
+
+context Area::mult(x :Length) : Quantity
+  pre:  self.compatibleUnits(x.unit)
+        and x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+  post: let one : Quantity = self.convertToSIUnits() in
+        let other : Quantity = x.convertToSIUnits() in
+         (result.value = one.value.mult(other.value) and
+          result.unit = one.unit.multiplyUnits(other.unit))
+
+context LengthMass::mult(x :Mass) : Quantity
+  pre:  self.compatibleUnits(x.unit)
+        and x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+  post: let one : Quantity = self.convertToSIUnits() in
+        let other : Quantity = x.convertToSIUnits() in
+         (result.value = one.value.mult(other.value) and
+          result.unit = one.unit.multiplyUnits(other.unit))
+
+context LengthTemperature::mult(x :ThermodynamicTemperature) : Quantity
+  pre:  self.compatibleUnits(x.unit)
+        and x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+  post: let one : Quantity = self.convertToSIUnits() in
+        let other : Quantity = x.convertToSIUnits() in
+         (result.value = one.value.mult(other.value) and
+          result.unit = one.unit.multiplyUnits(other.unit))
+
+	
+context VOlume::mult(x :Area) : Quantity
+  pre:  self.compatibleUnits(x.unit)
+        and x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+  post: let one : Quantity = self.convertToSIUnits() in
+        let other : Quantity = x.convertToSIUnits() in
+         (result.value = one.value.mult(other.value) and
+          result.unit = one.unit.multiplyUnits(other.unit))
+
+context LinearMomentum::mult(x :MassPerUnitTime) : Quantity
+  pre:  self.compatibleUnits(x.unit)
+        and x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+  post: let one : Quantity = self.convertToSIUnits() in
+        let other : Quantity = x.convertToSIUnits() in
+         (result.value = one.value.mult(other.value) and
+          result.unit = one.unit.multiplyUnits(other.unit))
+
+context LinearVelocity::divideBy(x :Time) : Quantity
+  pre: ((x.value.x - x.value.u).max(0) > (x.value.x + x.value.u).min(0)) --not x.value.equals(0,0)
+       and self.compatibleUnits(x.unit)
+       and x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+  post: let one : Quantity = self.convertToSIUnits() in
+        let other : Quantity = x.convertToSIUnits() in
+         (result.value = one.value.divideBy(other.value) and
+          result.unit = one.unit.divideUnits(other.unit))
+          
+context LinearThermalExpansion::divideBy(x :ThermodynamicTemperature) : Quantity
+  pre: ((x.value.x - x.value.u).max(0) > (x.value.x + x.value.u).min(0)) --not x.value.equals(0,0)
+       and self.compatibleUnits(x.unit)
+       and x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+  post: let one : Quantity = self.convertToSIUnits() in
+        let other : Quantity = x.convertToSIUnits() in
+         (result.value = one.value.divideBy(other.value) and
+          result.unit = one.unit.divideUnits(other.unit))
+
+context Length::abs() :Quantity
+  post: result.value = (self.value).abs() and
+        result.unit = self.unit
+
+context Length::neg() :Quantity
+  post: result.value = self.value.neg() and
+        result.unit = self.unit
+
+context Length::power(s : Real) :Quantity
+  pre: s<>0 implies self.unit.noOffset()
+  post: result.value = self.value.power(s) and
+        result.unit = self.unit.powerUnits(s)
+
+context Length::equals(x :Length) :Boolean
+  pre:  self.compatibleUnits(x.unit)
+  post: result = self.value.equals(x.convertTo(self.unit))
+
+context Length::distinct(x :Length) :Boolean
+  pre:  self.compatibleUnits(x.unit)
+  post: result = not self.equals(x)
+
+context Length::lessThan(x :Length) :Boolean
+  pre:  self.compatibleUnits(x.unit)
+  post: result = self.value.lessThan(x.convertTo(self.unit))
+
+context Length::lessEq(x :Length) :Boolean
+  pre:  self.compatibleUnits(x.unit)
+  post: result = self.lessThan(r) or self.equals(r)
+
+context Length::max(x :Length) :Quantity
+  pre:  self.compatibleUnits(x.unit)
+  post: result = if self.lessThan(x) then x
+                 else self endif
+
+context Length::min(x :Length) :Quantity
+  pre:  self.compatibleUnits(x.unit)
+  post: result = if self.lessThan(x) then self
+                 else x endif
+
+context Length::floor() :Length
+  post: result.value = self.value.floor() and
+        result.unit = self.unit
+
+context Length::round() :Length
+  post: result.value = self.x.round() and
+        result.unit = self.unit
+
+context Length::sMult(x :Real) : Length
+  post: result.value = self.value.sMult(x) and
+        result.unit = self.unit
+
+

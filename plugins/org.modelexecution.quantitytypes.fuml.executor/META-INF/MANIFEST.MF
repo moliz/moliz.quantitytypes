@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fUML Quantity Types Executor
+Bundle-SymbolicName: org.modelexecution.quantitytypes.fuml.executor
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.papyrus.uml.tools,
+ org.modelexecution.fuml.convert,
+ org.eclipse.papyrus.infra.core;bundle-version="1.1.0",
+ org.eclipse.uml2.uml,
+ org.modelexecution.quantitytypes.fuml;bundle-version="1.0.0";visibility:=reexport,
+ org.modelexecution.fumldebug.papyrus;bundle-version="1.0.0"
+Export-Package: org.modelexecution.quantitytypes.fuml.executor

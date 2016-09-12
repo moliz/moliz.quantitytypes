@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_BG388HNKEea8m7SzDfIMAA" name="ToyCar">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_KWOKsHZmEea8077kK0GvDQ" annotatedElement="_HjazQHZjEea8077kK0GvDQ">
+    <body>{@link #_TmJlUHZjEea8077kK0GvDQ} = self.am.avgVelocity->sum() / self.am->size()&#xD;
+{@link #_KzyX0HZjEea8077kK0GvDQ} = self.am.avgAcceleration->sum() / self.am->size()</body>
+  </ownedComment>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FOmnUHNKEea8m7SzDfIMAA" name="AccMeasure">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_Qqc-UHZlEea8077kK0GvDQ" annotatedElement="_FOmnUHNKEea8m7SzDfIMAA">
+      <body>{@link #_ux3MUHXtEeaN09DF3dFurg} = self.finalPosition.minus(self.initialPosition)&#xD;
+{@link #_z5UOUHXtEeaN09DF3dFurg} = self.distance.dividedBy(self.duration)&#xD;
+{@link #_6lLCUHXtEeaN09DF3dFurg} = self.finalVelocity.minus(self.initialVelocity)&#xD;
+                                                                          .dividedBy(self.duration)</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QZcIEHNKEea8m7SzDfIMAA" name="initialPosition">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_dcAmgHNKEea8m7SzDfIMAA" name="finalPosition">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_iPJ5sHXtEeaN09DF3dFurg" name="duration">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#__8c54HRJEeaSi94PKFDvnw"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nMpHYHXtEeaN09DF3dFurg" name="initialVelocity">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_r7ElYHXtEeaN09DF3dFurg" name="finalVelocity">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ux3MUHXtEeaN09DF3dFurg" name="distance" isDerived="true">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_z5UOUHXtEeaN09DF3dFurg" name="avgVelocity" isDerived="true">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6lLCUHXtEeaN09DF3dFurg" name="avgAcceleration" isDerived="true">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_g_L_0HZfEeaDT4cTjY-Ddw"/>
+    </ownedAttribute>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_3p7aAHNMEea8m7SzDfIMAA" name="computeDistance" specification="_iAIR8HNKEea8m7SzDfIMAA" node="_CqN3oHNNEea8m7SzDfIMAA _ixAN4HNNEea8m7SzDfIMAA _w44HgHNNEea8m7SzDfIMAA _8wKekHNNEea8m7SzDfIMAA _CxPQMHNOEea8m7SzDfIMAA _UTBr8HNOEea8m7SzDfIMAA">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_6E8D4HNMEea8m7SzDfIMAA" name="distance" direction="return">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+      </ownedParameter>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_Z9CocHNOEea8m7SzDfIMAA" name="e1" target="_UTBr8HNOEea8m7SzDfIMAA" source="_lNkW8HNNEea8m7SzDfIMAA"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_bXkFsHNOEea8m7SzDfIMAA" name="e2" target="_0c8rMHNNEea8m7SzDfIMAA" source="_UTBr8HNOEea8m7SzDfIMAA"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_dARv8HNOEea8m7SzDfIMAA" name="e3" target="_8wKekXNNEea8m7SzDfIMAA" source="_UTBr8HNOEea8m7SzDfIMAA"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_eSpWwHNOEea8m7SzDfIMAA" name="e4" target="_O8tukHNOEea8m7SzDfIMAA" source="_6S5K4HNNEea8m7SzDfIMAA"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_fkmt4HNOEea8m7SzDfIMAA" name="e5" target="_MgpUwHNOEea8m7SzDfIMAA" source="_8wKeknNNEea8m7SzDfIMAA"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_okCuEHNOEea8m7SzDfIMAA" name="e6" target="_CqN3oHNNEea8m7SzDfIMAA" source="_NnXsQHNOEea8m7SzDfIMAA"/>
+      <node xmi:type="uml:ActivityParameterNode" xmi:id="_CqN3oHNNEea8m7SzDfIMAA" name="distance" incoming="_okCuEHNOEea8m7SzDfIMAA" parameter="_6E8D4HNMEea8m7SzDfIMAA">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_CqPFwHNNEea8m7SzDfIMAA" value="1"/>
+      </node>
+      <node xmi:type="uml:ReadSelfAction" xmi:id="_ixAN4HNNEea8m7SzDfIMAA" name="this">
+        <result xmi:type="uml:OutputPin" xmi:id="_lNkW8HNNEea8m7SzDfIMAA" name="result" outgoing="_Z9CocHNOEea8m7SzDfIMAA" type="_FOmnUHNKEea8m7SzDfIMAA"/>
+      </node>
+      <node xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_w44HgHNNEea8m7SzDfIMAA" name="initialPosition" structuralFeature="_QZcIEHNKEea8m7SzDfIMAA">
+        <object xmi:type="uml:InputPin" xmi:id="_0c8rMHNNEea8m7SzDfIMAA" name="object" incoming="_bXkFsHNOEea8m7SzDfIMAA" type="_FOmnUHNKEea8m7SzDfIMAA"/>
+        <result xmi:type="uml:OutputPin" xmi:id="_6S5K4HNNEea8m7SzDfIMAA" name="result" outgoing="_eSpWwHNOEea8m7SzDfIMAA">
+          <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+        </result>
+      </node>
+      <node xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_8wKekHNNEea8m7SzDfIMAA" name="finalPosition" structuralFeature="_dcAmgHNKEea8m7SzDfIMAA">
+        <object xmi:type="uml:InputPin" xmi:id="_8wKekXNNEea8m7SzDfIMAA" name="object" incoming="_dARv8HNOEea8m7SzDfIMAA" type="_FOmnUHNKEea8m7SzDfIMAA"/>
+        <result xmi:type="uml:OutputPin" xmi:id="_8wKeknNNEea8m7SzDfIMAA" name="result" outgoing="_fkmt4HNOEea8m7SzDfIMAA">
+          <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+        </result>
+      </node>
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_CxPQMHNOEea8m7SzDfIMAA" name="QuantityMinus">
+        <argument xmi:type="uml:InputPin" xmi:id="_MgpUwHNOEea8m7SzDfIMAA" name="x" incoming="_fkmt4HNOEea8m7SzDfIMAA">
+          <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_MgpUwXNOEea8m7SzDfIMAA" value="1"/>
+        </argument>
+        <argument xmi:type="uml:InputPin" xmi:id="_O8tukHNOEea8m7SzDfIMAA" name="y" incoming="_eSpWwHNOEea8m7SzDfIMAA">
+          <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_O8tukXNOEea8m7SzDfIMAA" value="1"/>
+        </argument>
+        <result xmi:type="uml:OutputPin" xmi:id="_NnXsQHNOEea8m7SzDfIMAA" name="result" outgoing="_okCuEHNOEea8m7SzDfIMAA">
+          <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_NnY6YHNOEea8m7SzDfIMAA" value="1"/>
+        </result>
+        <behavior xmi:type="uml:FunctionBehavior" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_behaviors.uml#_RCFxkHNMEea8m7SzDfIMAA"/>
+      </node>
+      <node xmi:type="uml:ForkNode" xmi:id="_UTBr8HNOEea8m7SzDfIMAA" name="fork" incoming="_Z9CocHNOEea8m7SzDfIMAA" outgoing="_bXkFsHNOEea8m7SzDfIMAA _dARv8HNOEea8m7SzDfIMAA"/>
+    </ownedBehavior>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_iAIR8HNKEea8m7SzDfIMAA" name="computeDistance" method="_3p7aAHNMEea8m7SzDfIMAA">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_nU6lUHNKEea8m7SzDfIMAA" name="distance" direction="return">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5ZfEIHZiEea8077kK0GvDQ" name="computeAvgVelocity">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-MxM8HZiEea8077kK0GvDQ" name="result" direction="return">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__LuvkHZiEea8077kK0GvDQ" name="computeAvgAcceleration">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_D_96oHZjEea8077kK0GvDQ" name="result" direction="return">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_g_L_0HZfEeaDT4cTjY-Ddw"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_wRKx0HNOEea8m7SzDfIMAA" name="test1_NewAccMeasure" node="_OYa5QHNPEea8m7SzDfIMAA _SN0dgHNPEea8m7SzDfIMAA _le2CQHNPEea8m7SzDfIMAA _SCay4HNcEea8m7SzDfIMAA _leqwMHNcEea8m7SzDfIMAA _CTRHgHNeEea8m7SzDfIMAA">
+    <ownedParameter xmi:type="uml:Parameter" xmi:id="_KR8zIHNPEea8m7SzDfIMAA" name="distance" direction="return">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+    </ownedParameter>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_LWtd8HNeEea8m7SzDfIMAA" name="e1" target="_Zbbn0HNcEea8m7SzDfIMAA" source="_WgyHgHNPEea8m7SzDfIMAA"/>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_OEddoHNeEea8m7SzDfIMAA" name="e2" target="_d15A8HNcEea8m7SzDfIMAA" source="_PmCQAHNcEea8m7SzDfIMAA"/>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_7w5KMHNeEea8m7SzDfIMAA" name="e3" target="_leqwM3NcEea8m7SzDfIMAA" source="_JRRbcHNeEea8m7SzDfIMAA"/>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_9olroHNeEea8m7SzDfIMAA" name="e4" target="_leqwMXNcEea8m7SzDfIMAA" source="_WCkOkHNcEea8m7SzDfIMAA"/>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="__lEmcHNeEea8m7SzDfIMAA" name="e5" target="_OYa5QHNPEea8m7SzDfIMAA" source="_leqwMnNcEea8m7SzDfIMAA"/>
+    <node xmi:type="uml:ActivityParameterNode" xmi:id="_OYa5QHNPEea8m7SzDfIMAA" name="measure" incoming="__lEmcHNeEea8m7SzDfIMAA" type="_FOmnUHNKEea8m7SzDfIMAA" parameter="_KR8zIHNPEea8m7SzDfIMAA">
+      <upperBound xmi:type="uml:LiteralInteger" xmi:id="_OYa5QXNPEea8m7SzDfIMAA" value="1"/>
+    </node>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_SN0dgHNPEea8m7SzDfIMAA" name="new AccMeasure" classifier="_FOmnUHNKEea8m7SzDfIMAA">
+      <result xmi:type="uml:OutputPin" xmi:id="_WgyHgHNPEea8m7SzDfIMAA" name="object" outgoing="_LWtd8HNeEea8m7SzDfIMAA" type="_FOmnUHNKEea8m7SzDfIMAA"/>
+    </node>
+    <node xmi:type="uml:ValueSpecificationAction" xmi:id="_le2CQHNPEea8m7SzDfIMAA" name="new Length initialPosition">
+      <result xmi:type="uml:OutputPin" xmi:id="_PmCQAHNcEea8m7SzDfIMAA" name="result" outgoing="_OEddoHNeEea8m7SzDfIMAA">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+      </result>
+      <value xmi:type="uml:InstanceValue" xmi:id="_JUGOUHNQEea8m7SzDfIMAA" name="AccInitialPositionLengthValue" instance="_Rt50EHNfEea8m7SzDfIMAA">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+      </value>
+    </node>
+    <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_SCay4HNcEea8m7SzDfIMAA" name="set initialPosition" structuralFeature="_QZcIEHNKEea8m7SzDfIMAA">
+      <object xmi:type="uml:InputPin" xmi:id="_Zbbn0HNcEea8m7SzDfIMAA" name="object" incoming="_LWtd8HNeEea8m7SzDfIMAA" type="_FOmnUHNKEea8m7SzDfIMAA"/>
+      <result xmi:type="uml:OutputPin" xmi:id="_WCkOkHNcEea8m7SzDfIMAA" name="result" outgoing="_9olroHNeEea8m7SzDfIMAA" type="_FOmnUHNKEea8m7SzDfIMAA"/>
+      <value xmi:type="uml:InputPin" xmi:id="_d15A8HNcEea8m7SzDfIMAA" name="value" incoming="_OEddoHNeEea8m7SzDfIMAA">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+      </value>
+    </node>
+    <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_leqwMHNcEea8m7SzDfIMAA" name="finalPosition" structuralFeature="_dcAmgHNKEea8m7SzDfIMAA">
+      <object xmi:type="uml:InputPin" xmi:id="_leqwMXNcEea8m7SzDfIMAA" name="object" incoming="_9olroHNeEea8m7SzDfIMAA" type="_FOmnUHNKEea8m7SzDfIMAA"/>
+      <result xmi:type="uml:OutputPin" xmi:id="_leqwMnNcEea8m7SzDfIMAA" name="result" outgoing="__lEmcHNeEea8m7SzDfIMAA" type="_FOmnUHNKEea8m7SzDfIMAA"/>
+      <value xmi:type="uml:InputPin" xmi:id="_leqwM3NcEea8m7SzDfIMAA" name="value" incoming="_7w5KMHNeEea8m7SzDfIMAA">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+      </value>
+    </node>
+    <node xmi:type="uml:ValueSpecificationAction" xmi:id="_CTRHgHNeEea8m7SzDfIMAA" name="new Length finalPosition">
+      <result xmi:type="uml:OutputPin" xmi:id="_JRRbcHNeEea8m7SzDfIMAA" name="result" outgoing="_7w5KMHNeEea8m7SzDfIMAA">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+      </result>
+      <value xmi:type="uml:InstanceValue" xmi:id="_NRqSQHNfEea8m7SzDfIMAA" name="AccFinalPositionLengthValue" instance="_j-M-0HNjEea8m7SzDfIMAA">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+      </value>
+    </node>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_c2ckEHOGEeagKYVsYav49Q" name="test2_ComputeDistance" node="_3KITQHOGEeagKYVsYav49Q _-0U-0HOGEeagKYVsYav49Q _KXRdkHOHEeagKYVsYav49Q">
+    <ownedParameter xmi:type="uml:Parameter" xmi:id="_zYXR0HOGEeagKYVsYav49Q" name="distance" direction="return">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+    </ownedParameter>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_XqpYIHOHEeagKYVsYav49Q" name="e1" target="_O_0WAHOHEeagKYVsYav49Q" source="_FHe-8HOHEeagKYVsYav49Q"/>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_Y5GIQHOHEeagKYVsYav49Q" name="e2" target="_3KITQHOGEeagKYVsYav49Q" source="_RLUkQHOHEeagKYVsYav49Q"/>
+    <node xmi:type="uml:ActivityParameterNode" xmi:id="_3KITQHOGEeagKYVsYav49Q" name="distance" incoming="_Y5GIQHOHEeagKYVsYav49Q" parameter="_zYXR0HOGEeagKYVsYav49Q">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+      <upperBound xmi:type="uml:LiteralInteger" xmi:id="_3KKIcHOGEeagKYVsYav49Q" value="1"/>
+    </node>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_-0U-0HOGEeagKYVsYav49Q" name="test1_NewAccMeasure" behavior="_wRKx0HNOEea8m7SzDfIMAA">
+      <result xmi:type="uml:OutputPin" xmi:id="_FHe-8HOHEeagKYVsYav49Q" name="measure" outgoing="_XqpYIHOHEeagKYVsYav49Q" type="_FOmnUHNKEea8m7SzDfIMAA">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_FHfmAHOHEeagKYVsYav49Q" value="1"/>
+      </result>
+    </node>
+    <node xmi:type="uml:CallOperationAction" xmi:id="_KXRdkHOHEeagKYVsYav49Q" name="computeDistance" operation="_iAIR8HNKEea8m7SzDfIMAA">
+      <result xmi:type="uml:OutputPin" xmi:id="_RLUkQHOHEeagKYVsYav49Q" name="distance" outgoing="_Y5GIQHOHEeagKYVsYav49Q">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_RLVLUHOHEeagKYVsYav49Q" value="1"/>
+      </result>
+      <target xmi:type="uml:InputPin" xmi:id="_O_0WAHOHEeagKYVsYav49Q" name="target" incoming="_XqpYIHOHEeagKYVsYav49Q" type="_FOmnUHNKEea8m7SzDfIMAA"/>
+    </node>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_Rt50EHNfEea8m7SzDfIMAA" name="AccInitialPositionLengthInstanceSpec">
+    <classifier xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+    <slot xmi:type="uml:Slot" xmi:id="_dA-Y4HNhEea8m7SzDfIMAA">
+      <definingFeature xmi:type="uml:Property" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_5TVhcHNEEea8m7SzDfIMAA"/>
+      <value xmi:type="uml:InstanceValue" xmi:id="_PVNmsHQVEeaC3c6FRnSfEw" name="AccInitialPositionValue" instance="_24qi0HQVEeaC3c6FRnSfEw">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+      </value>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_K5uDIHNiEea8m7SzDfIMAA">
+      <definingFeature xmi:type="uml:Property" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_zruGwHNGEea8m7SzDfIMAA"/>
+      <value xmi:type="uml:InstanceValue" xmi:id="_VtwNcHNiEea8m7SzDfIMAA" name="UnitMeterValue" instance="_P9UDYHNjEea8m7SzDfIMAA">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+      </value>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_24qi0HQVEeaC3c6FRnSfEw" name="AccInitialPositionValueInstanceSpec">
+    <classifier xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+    <slot xmi:type="uml:Slot" xmi:id="_9rL_gHQVEeaC3c6FRnSfEw">
+      <definingFeature xmi:type="uml:Property" href="pathmap://UML_UNCERTAINTY_LIBRARY/uncertainty_types.uml#_TvM04HNIEea8m7SzDfIMAA"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_APZosHQWEeaC3c6FRnSfEw"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_BLdBQHQWEeaC3c6FRnSfEw">
+      <definingFeature xmi:type="uml:Property" href="pathmap://UML_UNCERTAINTY_LIBRARY/uncertainty_types.uml#_XMeNAHNIEea8m7SzDfIMAA"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_KY9SoHQWEeaC3c6FRnSfEw" value="0.001"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_P9UDYHNjEea8m7SzDfIMAA" name="UnitMeterInstanceSpec">
+    <classifier xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+    <slot xmi:type="uml:Slot" xmi:id="_Uoc80HNjEea8m7SzDfIMAA">
+      <definingFeature xmi:type="uml:Property" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_L1JsQHNEEea8m7SzDfIMAA"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_9Mc_oHQWEeaC3c6FRnSfEw" name="meter" value="1.0"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_NRPR4HQXEeaC3c6FRnSfEw" name="kilogram"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_PScUoHQXEeaC3c6FRnSfEw" name="second"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_Q4qEgHQXEeaC3c6FRnSfEw" name="ampere"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_SiUJ8HQXEeaC3c6FRnSfEw" name="kelvin"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_U1-1sHQXEeaC3c6FRnSfEw" name="mole"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_Wk2LQHQXEeaC3c6FRnSfEw" name="candela"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_YNAb4HQXEeaC3c6FRnSfEw" name="radian"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_j-M-0HNjEea8m7SzDfIMAA" name="AccFinalPositionLengthInstanceSpec">
+    <classifier xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_IWCSUHNKEea8m7SzDfIMAA"/>
+    <slot xmi:type="uml:Slot" xmi:id="_j-Nl4HNjEea8m7SzDfIMAA">
+      <definingFeature xmi:type="uml:Property" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_5TVhcHNEEea8m7SzDfIMAA"/>
+      <value xmi:type="uml:InstanceValue" xmi:id="_z-_nAHQVEeaC3c6FRnSfEw" name="AccFinalPositionValue" instance="_OjFwwHQWEeaC3c6FRnSfEw">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+      </value>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_j-Nl4nNjEea8m7SzDfIMAA">
+      <definingFeature xmi:type="uml:Property" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_zruGwHNGEea8m7SzDfIMAA"/>
+      <value xmi:type="uml:InstanceValue" xmi:id="_j-Nl43NjEea8m7SzDfIMAA" name="SIUnitMeterValue" instance="_P9UDYHNjEea8m7SzDfIMAA">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+      </value>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_OjFwwHQWEeaC3c6FRnSfEw" name="AccFinalPositionValueInstanceSpec">
+    <classifier xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+    <slot xmi:type="uml:Slot" xmi:id="_OjFwwXQWEeaC3c6FRnSfEw">
+      <definingFeature xmi:type="uml:Property" href="pathmap://UML_UNCERTAINTY_LIBRARY/uncertainty_types.uml#_TvM04HNIEea8m7SzDfIMAA"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_OjFwwnQWEeaC3c6FRnSfEw" value="10.0"/>
+    </slot>
+    <slot xmi:type="uml:Slot" xmi:id="_OjFww3QWEeaC3c6FRnSfEw">
+      <definingFeature xmi:type="uml:Property" href="pathmap://UML_UNCERTAINTY_LIBRARY/uncertainty_types.uml#_XMeNAHNIEea8m7SzDfIMAA"/>
+      <value xmi:type="uml:LiteralReal" xmi:id="_OjFwxHQWEeaC3c6FRnSfEw" value="0.001"/>
+    </slot>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_HjazQHZjEea8077kK0GvDQ" name="Vehicle">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_KzyX0HZjEea8077kK0GvDQ" name="avgAcceleration" isDerived="true">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_g_L_0HZfEeaDT4cTjY-Ddw"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TmJlUHZjEea8077kK0GvDQ" name="avgVelocity" isDerived="true">
+      <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3e3NsHZmEea8077kK0GvDQ" name="am" type="_FOmnUHNKEea8m7SzDfIMAA" isOrdered="true" association="_3ey8QHZmEea8077kK0GvDQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_955-gHZmEea8077kK0GvDQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_95-P8HZmEea8077kK0GvDQ" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_bxLGAHZjEea8077kK0GvDQ" name="computeAvgVelocity">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_fQRDEHZjEea8077kK0GvDQ" name="result" direction="return">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_AIAt4HXwEeafjYHufAO0OQ"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_f2O24HZjEea8077kK0GvDQ" name="computeAvgAcceleration">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_i2kbYHZjEea8077kK0GvDQ" name="result" direction="return">
+        <type xmi:type="uml:DataType" href="pathmap://UML_UNCERTAINTY_LIBRARY/quantity_types.uml#_g_L_0HZfEeaDT4cTjY-Ddw"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3ey8QHZmEea8077kK0GvDQ" memberEnd="_3e3NsHZmEea8077kK0GvDQ _3e30wHZmEea8077kK0GvDQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3e0xcHZmEea8077kK0GvDQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3e0xcXZmEea8077kK0GvDQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3e30wHZmEea8077kK0GvDQ" name="vehicle" type="_HjazQHZjEea8077kK0GvDQ" association="_3ey8QHZmEea8077kK0GvDQ"/>
+  </packagedElement>
+</uml:Model>

@@ -1,43 +1,74 @@
+model ToyCar
 
--- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
---
--- This model provides types "UReal", "Unit" and "Quantity"
--- and their corresponding operations, as defined in the paper
--- "Adding Tolerance and Units to Quantity Types in Software Models" 
--- by T. Mayerhofer, M. Wimmer and A. Vallecillo. In Proc. of SLE 2016.
--- The only difference is that class SIUnit has been incorporated into
--- class Unit, flattening the inheritance hierarchy between the two.
---
--- The operations in this file have been specified using SOIL 
--- (Simple OCL-like Imperative Language) which is part of USE
--- http://www.db.informatik.uni-bremen.de/publications/Buettner_2014_SCPSOIL.pdf
--- The benefits of this approach is that SOIL specification can be executed.
---
--- The OCL specifications of the operations using OCL pre- and post-conditions
--- can be found in the companion file "Quantities.ocl".
+class AccMeasure
 
--- This module assumes operations "sqrt" and "power" on OCL type Real, 
--- currently not supported because they are not included in the OCL standard.
--- Similarly for the "sum", "minus" (sum and subtraction of arrays)
--- and "mult" (multiplication by a scalar) operations on Sequence(Real)
--- 
--- These operations have been included in the extensions to USE using its
--- predefined extensions mechanisms (files "Real.xml" and "Sequence.xml" need 
--- to be placed in the USE folder "oclExtensions"). Warning: in case these files 
--- already exist in the oclExtensions folder, please make sure the contents of 
--- the new ones extend what is currently in the existing ones.
---
--- AUTHOR:  A. Vallecillo, Tanja Mayerhofer and Manuel Wimmer. 
--- CONTACT: av@lcc.uma.es
--- VERSION: 1.0
--- DATE: 8 Sep 2016
--- 
--- Thanks to Martin Gogolla for his help, comments and suggestions on 
--- previous versions of this OCL/USE specification.
+attributes
+  initialPosition : Quantity
+  finalPosition : Quantity
+  duration : Quantity
+  initialVelocity : Quantity
+  finalVelocity : Quantity
+operations
+  distance() : Quantity
+    begin 
+    result:=self.finalPosition.minus(self.initialPosition);
+    end
+  avrgVelocity () : Quantity
+    begin 
+    declare aux:Quantity;
+    aux:=self.distance();
+    result:=aux.divideBy(self.duration);
+    end
+  avrgAcceleration () : Quantity
+    begin
+        declare aux : Quantity;
+        aux := self.finalVelocity.minus(self.initialVelocity);
+        result := aux.divideBy(self.duration);
+    end   
+end
 
--- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+class Vehicle
+attributes
+  am : Sequence(AccMeasure)
+operations
+  avrgVelocity () : Quantity
+    begin
+        declare aux : Quantity, zero:Quantity, zv : UReal, zu:Unit;
+        zv:= new UReal; zv.x := 0.0; zv.u:=0.0;
+        zero.value:=zv;
+        zu:= new Unit; 
+        zu.dimensions := Sequence{1,0,0,0,0,0,0,0};
+        zu.conversionFactor := Sequence{1,1,1,1,1,1,1,1};
+        zu.offset := Sequence{0,0,0,0,0,0,0,0};
+        zu.name := zu.defaultName();
+        zu.symbol := zu.defaultSymbol();
+        zero.unit:=zu;
+        aux := if self.am->size=0 then zero 
+               else self.am->iterate(m : AccMeasure ; acc : Quantity = zero | acc.add(m.avrgVelocity())) endif;
+        result:=aux.sMult(1/self.am->size);
+    end   
+ 
+  avrgAcceleration () : Quantity
+    begin
+        declare aux : Quantity, zero:Quantity, zv : UReal, zu:Unit;
+        zv:= new UReal; zv.x := 0.0; zv.u:=0.0;
+        zero.value:=zv;
+        zu:= new Unit; 
+        zu.dimensions := Sequence{1,0,0,0,0,0,0,0};
+        zu.conversionFactor := Sequence{1,1,1,1,1,1,1,1};
+        zu.offset := Sequence{0,0,0,0,0,0,0,0};
+        zu.name := zu.defaultName();
+        zu.symbol := zu.defaultSymbol();
+        zero.unit:=zu;
+        aux := if self.am->size=0 then zero 
+               else self.am->iterate(m : AccMeasure ; acc : Quantity = zero | acc.add(m.avrgAcceleration())) endif;
+        result:=aux.sMult(1/self.am->size);
+    end   
+end
 
-model Quantities
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-- FROM QUANTITIES (USE does not allow importing classes from 
+-- other models so we have to copy here classes Unit, Quantity and UReal)
 
 class Unit
 
@@ -874,10 +905,12 @@ context Quantity::minus(x :Quantity) :Quantity
        -- But if x has offset, self should have it too.
 
 context Quantity::mult(x :Quantity) :Quantity
-  pre: x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+  pre: self.compatibleUnits(x.unit) 
+       and x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
 
 context Quantity::divideBy(x :Quantity) :Quantity
   pre: ((x.value.x - x.value.u).max(0) > (x.value.x + x.value.u).min(0)) --not x.value.equals(0,0)
+       and self.compatibleUnits(x.unit) 
        and x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
 
 context Quantity::power(s :Real) :Quantity

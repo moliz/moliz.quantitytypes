@@ -8,20 +8,11 @@
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_zruGwHNGEea8m7SzDfIMAA" name="unit" type="_5U2ScHNGEea8m7SzDfIMAA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_DbfSoHNEEea8m7SzDfIMAA" name="SIUnit">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_5U2ScHNGEea8m7SzDfIMAA" name="Unit">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_L1JsQHNEEea8m7SzDfIMAA" name="dimensions">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
           <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Xahz8HNEEea8m7SzDfIMAA" name="dimensionsLowerBound" value="8"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ayxiIHNEEea8m7SzDfIMAA" name="dimensionsUpperBound" value="8"/>
-        </ownedAttribute>
-      </packagedElement>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_5U2ScHNGEea8m7SzDfIMAA" name="Unit">
-        <generalization xmi:type="uml:Generalization" xmi:id="_76Ku4HNGEea8m7SzDfIMAA" general="_DbfSoHNEEea8m7SzDfIMAA"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_C3u98HNHEea8m7SzDfIMAA" name="name">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_FDttUHNHEea8m7SzDfIMAA" name="symbol">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_HlaOAHNHEea8m7SzDfIMAA" name="conversionFactor">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
@@ -30,6 +21,14 @@
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_LVzWcHNHEea8m7SzDfIMAA" name="offset">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fzBdIHkcEeacVK9Qs_9VAA" value="8"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ghiI8HkcEeacVK9Qs_9VAA" value="8"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_C3u98HNHEea8m7SzDfIMAA" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_FDttUHNHEea8m7SzDfIMAA" name="symbol">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:DataType" xmi:id="_IWCSUHNKEea8m7SzDfIMAA" name="Length">

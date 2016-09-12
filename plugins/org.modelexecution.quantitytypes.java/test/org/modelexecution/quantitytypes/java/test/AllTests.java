@@ -10,7 +10,8 @@ import org.junit.runners.Suite.SuiteClasses;
                 TemperatureTest.class,
                 ToyCarTest.class,
                 UnitCancellation.class,
-                PressureTest.class})
+                PressureTest.class
+                })
 
 public class AllTests {
 

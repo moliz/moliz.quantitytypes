@@ -25,12 +25,12 @@ public class ToyCarTest {
 	public void testAc1() {
 
 		// sensed values
-		Quantity initialPosition = new Quantity(0, 0.0, CommonUnits.M);
+		Quantity initialPosition = new Quantity(0, 0.001, CommonUnits.M);
 		Quantity finalPosition = new Quantity(10, 0.001, CommonUnits.M);
 		Quantity duration = new Quantity(10, 0.002, new Unit(BaseUnits.Second));
-		Quantity initialVelocity = new Quantity(0, 0.0,
+		Quantity initialVelocity = new Quantity(0, 0*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
-		Quantity finalVelocity = new Quantity(2, 0.200,
+		Quantity finalVelocity = new Quantity(2, 2*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 
 		// computed values
@@ -44,11 +44,11 @@ public class ToyCarTest {
 		assertEquals("avgAcc=(finalVel-initialVel)/distance must be ~0.2", 0.2, avgAcceleration.getX(), 0.1);
 
 		// Testing the uncertainty results
-		assertEquals("uncertainty of distance must be ~0.001?", 0.001, distance.getU(), 0.0001);
+		assertEquals("uncertainty of distance must be ~0.001?", 0.001, distance.getU(), 0.001);
 
-		assertEquals("uncertainty of avgVel must be ~0.0004?", 0.0003742, avgVelocity.getU(), 0.00001);
+		assertEquals("uncertainty of avgVel must be ~0.0004?", 0.0004, avgVelocity.getU(), 0.0001);
 
-		assertEquals("uncertainty of avgAcc must be ~0.06?", 0.0632, avgAcceleration.getU(), 0.0001);
+		assertEquals("uncertainty of avgAcc must be ~0.006?", 0.00632, avgAcceleration.getU(), 0.001);
 
 		// Testing the return types
 		Assert.assertArrayEquals("distance is in metre (m)", new double[] { 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 },
@@ -68,9 +68,9 @@ public class ToyCarTest {
 		Quantity initialPosition = new Quantity(10, 0.001, CommonUnits.M);
 		Quantity finalPosition = new Quantity(20, 0.001, CommonUnits.M);
 		Quantity duration = new Quantity(5, 0.002, new Unit(BaseUnits.Second));
-		Quantity initialVelocity = new Quantity(2, 0.200,
+		Quantity initialVelocity = new Quantity(2, 2*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
-		Quantity finalVelocity = new Quantity(2, 0.200,
+		Quantity finalVelocity = new Quantity(2, 2*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 
 		// computed values
@@ -88,7 +88,7 @@ public class ToyCarTest {
 
 		assertEquals("uncertainty of avgVel must be ~0.001?", 0.00102, avgVelocity.getU(), 0.00001);
 
-		assertEquals("uncertainty of avgAcc must be ~0.13?", 0.1265, avgAcceleration.getU(), 0.00001);
+		assertEquals("uncertainty of avgAcc must be ~0.013?", 0.01265, avgAcceleration.getU(), 0.00001);
 
 		// Testing the return types
 		Assert.assertArrayEquals("distance is in metre (m)", new double[] { 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 },
@@ -106,12 +106,12 @@ public class ToyCarTest {
 	public void testVehicle() {
 
 		// sensed values acc1
-		Quantity initialPositionAcc1 = new Quantity(0, 0.0, CommonUnits.M);
+		Quantity initialPositionAcc1 = new Quantity(0, 0.001, CommonUnits.M);
 		Quantity finalPositionAcc1 = new Quantity(10, 0.001, CommonUnits.M);
 		Quantity durationAcc1 = new Quantity(10, 0.002, new Unit(BaseUnits.Second));
-		Quantity initialVelocityAcc1 = new Quantity(0, 0.0,
+		Quantity initialVelocityAcc1 = new Quantity(0, 0*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
-		Quantity finalVelocityAcc1 = new Quantity(2, 0.200,
+		Quantity finalVelocityAcc1 = new Quantity(2, 2*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 
 		// computed values acc1
@@ -123,9 +123,9 @@ public class ToyCarTest {
 		Quantity initialPositionAcc2 = new Quantity(10, 0.001, CommonUnits.M);
 		Quantity finalPositionAcc2 = new Quantity(20, 0.001, CommonUnits.M);
 		Quantity durationAcc2 = new Quantity(5, 0.002, new Unit(BaseUnits.Second));
-		Quantity initialVelocityAcc2 = new Quantity(2, 0.200,
+		Quantity initialVelocityAcc2 = new Quantity(2, 2*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
-		Quantity finalVelocityAcc2 = new Quantity(2, 0.200,
+		Quantity finalVelocityAcc2 = new Quantity(2, 2*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 
 		// computed values acc2
@@ -138,12 +138,12 @@ public class ToyCarTest {
 		Quantity avgAcceleration = avgAccelerationAcc1.add(avgAccelerationAcc2).divideBy(new Quantity(2));
 
 		// Testing the value results
-		assertEquals("avgVelocity must be ~1.05", 1.05, avgVelocity.getX(), 0.001);
+		assertEquals("avgVelocity must be ~1.5", 1.5, avgVelocity.getX(), 0.001);
 		assertEquals("avgAcceleration must be ~0.1", 0.1, avgAcceleration.getX(), 0.01);
 
 		// Testing the uncertainty results
-		assertEquals("uncertainty of avgVelocity must be ~0.15?", 0.15, avgVelocity.getU(), 0.001);
-		assertEquals("uncertainty of avgAcceleration must be ~0.104?", 0.104, avgAcceleration.getU(), 0.0001);
+		assertEquals("uncertainty of avgVelocity must be ~0.0008?", 0.0008, avgVelocity.getU(), 0.0001);
+		assertEquals("uncertainty of avgAcceleration must be ~0.01?", 0.01, avgAcceleration.getU(), 0.01);
 
 	}
 

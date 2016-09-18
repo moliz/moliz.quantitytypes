@@ -613,14 +613,15 @@ context Unit::noOffset() : Boolean
 -- constraints for class Unit
 
 context u : Unit inv eightBaseDimensions:
-    u.dimensions->size()=8
+    u.dimensions->size() = 8
 
 context u : Unit inv threeArraysSameLength:
-    let n : Integer = u.dimensions->size in
-        (u.offset->size = n) and (u.conversionFactor->size = n)
+    let n : Integer = u.dimensions->size() in
+        (u.offset->size() = n) and 
+        (u.conversionFactor->size() = n)
         
 context u : Unit inv atMostOneOffset:
-    u.offset->select(x | x<>0.0 )->size <= 1
+    u.offset->select(x | x<>0.0 )->size() <= 1
 
 -- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 -- Definiton of class "Quantity" -- USE specific
@@ -754,7 +755,7 @@ context Quantity::lessThan(x :Quantity) :Boolean
         
 context Quantity::lessEq(x :Quantity) :Boolean
   pre:  self.compatibleUnits(x.unit)
-  post: result = self.lessThan(r) or self.equals(r)
+  post: result = self.lessThan(x) or self.equals(x)
 
 context Quantity::max(x :Quantity) :Quantity
   pre:  self.compatibleUnits(x.unit)

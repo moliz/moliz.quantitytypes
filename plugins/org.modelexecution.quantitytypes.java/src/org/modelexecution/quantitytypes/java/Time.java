@@ -146,11 +146,11 @@ public class Time extends Quantity {
 		 * working with constants (note that add and minus do not work here
 		 */
 
-		public Time sMult(double r) {  
+		public Time mult(double r) {  
 			return new Time(this.value.mult(new UReal(r)),this.getUnits());
 		}
 		
-		public Time sDivideBy(double r) {  
+		public Time divideBy(double r) {  
 			return new Time(this.value.divideBy(new UReal(r)),this.getUnits());
 		}
 

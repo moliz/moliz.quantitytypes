@@ -138,11 +138,11 @@ public class TimeSquared extends Quantity {
 		 * working with constants (note that add and minus do not work here
 		 */
 
-		public TimeSquared sMult(double r) {  
+		public TimeSquared mult(double r) {  
 			return new TimeSquared(this.value.mult(new UReal(r)),this.getUnits());
 		}
 		
-		public TimeSquared sDivideBy(double r) {  
+		public TimeSquared divideBy(double r) {  
 			return new TimeSquared(this.value.divideBy(new UReal(r)),this.getUnits());
 		}
 

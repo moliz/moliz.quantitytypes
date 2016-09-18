@@ -152,11 +152,11 @@ public class SolidAngle extends Quantity {
 	 * working with constants (note that add and minus do not work here
 	 */
 
-	public SolidAngle sMult(double r) {  
+	public SolidAngle mult(double r) {  
 		return new SolidAngle(this.value.mult(new UReal(r)),this.getUnits());
 	}
 	
-	public SolidAngle sDivideBy(double r) {  
+	public SolidAngle divideBy(double r) {  
 		return new SolidAngle(this.value.divideBy(new UReal(r)),this.getUnits());
 	}
 

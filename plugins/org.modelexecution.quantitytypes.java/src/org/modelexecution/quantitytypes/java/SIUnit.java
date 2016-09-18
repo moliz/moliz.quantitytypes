@@ -85,7 +85,6 @@ public class SIUnit implements Cloneable {
 			"JoulePerMoleKelvin",
 			"HenryPerMeter",
 			"FaradPerMeter",
-			"Radian",
 			"Watt",
 			"WattPerSteradian",
 			"WattPerSquareMeterSteradian",
@@ -118,12 +117,12 @@ public class SIUnit implements Cloneable {
 			"Bq",
 			"mol/m^3",
 			"mol/kg",
-			"1/s^2",
+			"rad/s^2",
 			"kg*m^2",
 			"J*s",
-			"1/s",
+			"rad/s",
 			"m^2",
-			"m^2",
+			"m^2*sr",
 			"m^2*K",
 			"m^2/K",
 			"F",
@@ -137,7 +136,7 @@ public class SIUnit implements Cloneable {
 			"C/m^3",
 			"C/mol",
 			"A/m^2",
-			"A",
+			"A/rad",
 			"C*m",
 			"V/m",
 			"C/m^2",
@@ -153,7 +152,7 @@ public class SIUnit implements Cloneable {
 			"Hz",
 			"m^3/(kg*s^2)",
 			"J/K",
-			"Lx",
+			"lx",
 			"H",
 			"1/mol",
 			"m/F",
@@ -164,7 +163,7 @@ public class SIUnit implements Cloneable {
 			"kg*m/s",
 			"m/K",
 			"m/s",
-			"cad/m^2",
+			"cd/m^2",
 			"lm",
 			"J/T",
 			"AT/m",
@@ -179,21 +178,20 @@ public class SIUnit implements Cloneable {
 			"J/(mol*K)",
 			"H/m",
 			"F/m",
-			"",
 			"W",
-			"W",
-			"W/m^2",
+			"W/sr",
+			"W/(m^2*sr)",
 			"W/m^2",
 			"Pa",
 			"Ohm",
-			"",
+			"sr",
 			"J/kg",
 			"J/(kg*K)",
 			"J/(kg*K*Pa)",
 			"J/(kg*K*m^3)",
 			"mol*K",
 			"W/(m*K)",
-			"m^2/W",
+			"K^2*m/W",
 			"K/W",
 			"m*K/W",
 			"N/kg",
@@ -202,7 +200,8 @@ public class SIUnit implements Cloneable {
 			"m^3",
 			"m^3/K",
 			"m^3/s",
-			"J/(m^3*K)"};
+			"J/(m^3*K)"
+		};
 
 	
 /************************
@@ -543,9 +542,6 @@ public class SIUnit implements Cloneable {
 		case FaradPerMeter:
 				fillDim(BaseUnits.Meter,-3.0,BaseUnits.Kilogram,-1.0,BaseUnits.Second,4.0,BaseUnits.Ampere,2.0); 
 				break;
-		case Radian:
-				fillDim(BaseUnits.Radian,1.0);
-				break;
 		case Watt:
 				fillDim(BaseUnits.Meter,2.0,BaseUnits.Kilogram,1.0,BaseUnits.Second,-3.0); 
 				break;
@@ -832,8 +828,6 @@ public class SIUnit implements Cloneable {
 			return DerivedUnits.HenryPerMeter;
 		if (new SIUnit(BaseUnits.Meter,-3.0,BaseUnits.Kilogram,-1.0,BaseUnits.Second,4.0,BaseUnits.Ampere,2.0).equals(this))
 			return DerivedUnits.FaradPerMeter;
-		if (new SIUnit(BaseUnits.Radian,1.0).equals(this)) //
-			return DerivedUnits.Radian;
 		if (new SIUnit(BaseUnits.Meter,2.0,BaseUnits.Kilogram,1.0,BaseUnits.Second,-3.0).equals(this))
 			return DerivedUnits.Watt;
 		if (new SIUnit(BaseUnits.Meter,2.0,BaseUnits.Kilogram,1.0,BaseUnits.Second,-3.0,BaseUnits.Radian,-2.0).equals(this))//
@@ -991,7 +985,7 @@ public class SIUnit implements Cloneable {
 	}
 
 	public String name() {
-    	if (this.isUnitless()) return "";
+    	if (this.isDimensionless()) return "";
     	if (this.isBaseUnit()) return BaseUnitNames[this.toBaseUnits().ordinal()];
     	if (this.isDerivedUnit()) return DerivedUnitNames[this.toDerivedUnits().ordinal()];
     	String s="";
@@ -1006,7 +1000,7 @@ public class SIUnit implements Cloneable {
     }
 
 	public String symbol() {
-    	if (this.isUnitless()) return "";
+    	if (this.isDimensionless()) return "";
     	if (this.isBaseUnit()) return BaseUnitSymbols[this.toBaseUnits().ordinal()];
     	if (this.isDerivedUnit()) return DerivedUnitSymbols[this.toDerivedUnits().ordinal()];
     	String s="";
@@ -1021,7 +1015,7 @@ public class SIUnit implements Cloneable {
     }
 
 	public static String name(SIUnit u) {
-    	if (u.isUnitless()) return "";
+    	if (u.isDimensionless()) return "";
     	if (u.isBaseUnit()) return BaseUnitNames[u.toBaseUnits().ordinal()];
     	if (u.isDerivedUnit()) return BaseUnitNames[u.toDerivedUnits().ordinal()];
     	String s="";

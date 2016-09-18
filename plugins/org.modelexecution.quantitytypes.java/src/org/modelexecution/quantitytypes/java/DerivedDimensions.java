@@ -72,7 +72,6 @@ public enum DerivedDimensions {
 	MolarHeatCapacity,
 	Permeability,
 	Permittivity,
-	PlaneAngle,
 	Power,
 	PowerPerAngle,
 	PowerPerAreaAngle,

@@ -72,7 +72,6 @@ public enum DerivedUnits {
 	JoulePerMoleKelvin,
 	HenryPerMeter,
 	FaradPerMeter,
-	Radian,
 	Watt,
 	WattPerSteradian,
 	WattPerSquareMeterSteradian,

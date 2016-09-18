@@ -296,7 +296,7 @@ public class Quantity implements Comparable<Quantity> {
 	public Quantity power(float s) { //unit are also powered. No offsets allowed
 
 //		assert this.unit.noOffset(): this.unit.symbol;
-		if (!this.unit.noOffset()) throw new RuntimeException("power: Invalid Offset in this unit: "+this.unit.symbol);
+		if ((s!=0.0) && (!this.unit.noOffset())) throw new RuntimeException("power: Invalid Offset in this unit: "+this.unit.symbol);
 
 		Quantity result = new Quantity();
 		result.setUReal(this.getUReal().power(s));
@@ -383,11 +383,11 @@ public class Quantity implements Comparable<Quantity> {
 	 * working with constants (note that add and minus will only work if "this" is unit-less
 	 */
 
-	public Quantity sMult(double r) {  
+	public Quantity mult(double r) {  
 		return new Quantity(this.value.mult(new UReal(r)),this.getUnits());
 	}
 	
-	public Quantity sDivideBy(double r) {  
+	public Quantity divideBy(double r) {  
 		return new Quantity(this.value.divideBy(new UReal(r)),this.getUnits());
 	}
 

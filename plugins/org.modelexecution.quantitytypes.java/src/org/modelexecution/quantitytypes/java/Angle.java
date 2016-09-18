@@ -44,7 +44,7 @@ public class Angle extends Quantity {
         unit = new Unit(BaseUnits.Radian);
    }
     
-    public Angle(double x, Unit unit){ //we only allow Length Units
+    public Angle(double x, Unit unit){ //we only allow this kind of Units
     	value = new UReal(x);
     	if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a Angle");
     	this.unit = new Unit (unit);
@@ -52,21 +52,21 @@ public class Angle extends Quantity {
 
     public Angle(double x, double u, Unit unit){
     	value = new UReal(x,u);
-    	if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a Length");
+    	if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating an Angle");
     	this.unit = new Unit (unit);
     }
 
-    public Angle(String x) { //creates an Length from a string representing a real, with u=0.
+    public Angle(String x) { //creates an Angle from a string representing a real, with u=0.
     	value = new UReal(x);
         unit = new Unit(BaseUnits.Radian);
    }
     
-    public Angle(String x, String u) { //creates an Length from two strings representing (x,u).
+    public Angle(String x, String u) { //creates an Angle from two strings representing (x,u).
     	value = new UReal(x,u);
         unit = new Unit(BaseUnits.Radian);
    }
    
-    public Angle(String x, String u, Unit unit) { //creates an Length from two strings representing (x,u).
+    public Angle(String x, String u, Unit unit) { //creates an Angle from two strings representing (x,u).
     	value = new UReal(x,u);
     	if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a Angle");
     	this.unit = new Unit (unit);
@@ -79,12 +79,10 @@ public class Angle extends Quantity {
      */
 
 	public Angle add(Angle r) {  //only works if compatible units && operand has no offset
-		
 		return new Angle(super.add(r));
 	}
 	
 	public Angle minus(Angle r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
-
 		return new Angle(super.minus(r));
 	}
 
@@ -156,11 +154,11 @@ public class Angle extends Quantity {
 	 * working with constants (note that add and minus do not work here
 	 */
 
-	public Angle sMult(double r) {  
+	public Angle mult(double r) {  
 		return new Angle(this.value.mult(new UReal(r)),this.getUnits());
 	}
 	
-	public Angle sDivideBy(double r) {  
+	public Angle divideBy(double r) {  
 		return new Angle(this.value.divideBy(new UReal(r)),this.getUnits());
 	}
 

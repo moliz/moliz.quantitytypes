@@ -200,11 +200,11 @@ public class Area extends Quantity {
 	 * working with constants (note that add and minus will only work if "this" is unit-less
 	 */
 
-	public Area sMult(double r) {  
+	public Area mult(double r) {  
 		return new Area(this.value.mult(new UReal(r)),this.getUnits());
 	}
 	
-	public Area sDivideBy(double r) {  
+	public Area divideBy(double r) {  
 		return new Area(this.value.divideBy(new UReal(r)),this.getUnits());
 	}
 

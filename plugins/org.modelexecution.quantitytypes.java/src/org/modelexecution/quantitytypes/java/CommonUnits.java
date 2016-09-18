@@ -290,7 +290,6 @@ public class CommonUnits {
 	public final static Unit JoulePerMoleKelvin = new Unit(DerivedUnits.JoulePerMoleKelvin);
 	public final static Unit HenryPerMeter = new Unit(DerivedUnits.HenryPerMeter);
 	public final static Unit FaradPerMeter = new Unit(DerivedUnits.FaradPerMeter);
-	public final static Unit Radian = new Unit(DerivedUnits.Radian);
 	public final static Unit Watt = new Unit(DerivedUnits.Watt);
 	public final static Unit WattPerSteradian = new Unit(DerivedUnits.WattPerSteradian);
 	public final static Unit WattPerSquareMeterSteradian = new Unit(DerivedUnits.WattPerSquareMeterSteradian);

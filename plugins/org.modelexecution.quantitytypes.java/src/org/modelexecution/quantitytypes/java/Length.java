@@ -96,7 +96,7 @@ public class Length extends Quantity {
 	}
 
 	public LengthMass mult(Mass r) { //both values and units are multiplied. No offsets allowed in any of the units
-		return new LengthMass(super.divideBy(r));
+		return new LengthMass(super.mult(r));
 	}
 	
 	public LengthTemperature mult(ThermodynamicTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
@@ -167,11 +167,11 @@ public class Length extends Quantity {
 	 * working with constants (note that add and minus do not work here
 	 */
 
-	public Length sMult(double r) {  
+	public Length mult(double r) {  
 		return new Length(this.value.mult(new UReal(r)),this.getUnits());
 	}
 	
-	public Length sDivideBy(double r) {  
+	public Length divideBy(double r) {  
 		return new Length(this.value.divideBy(new UReal(r)),this.getUnits());
 	}
 

@@ -85,13 +85,15 @@ public class LinearVelocity extends Quantity {
      */
 
 	public LinearVelocity add(LinearVelocity r) {  //only works if compatible units && operand has no offset
-		
 		return new LinearVelocity (super.add(r));
 	}
 	
 	public LinearVelocity minus(LinearVelocity r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
-
 		return new LinearVelocity(super.minus(r));
+	}
+
+	public AbsorbedDose mult(LinearVelocity r) { 
+		return new AbsorbedDose(super.mult(r));
 	}
 
 	public LinearAcceleration divideBy(Time r) { //both values and units are multiplied. No offsets allowed in any of the units
@@ -99,7 +101,7 @@ public class LinearVelocity extends Quantity {
 	}
 
 	public Force mult(MassPerUnitTime r) { //both values and units are multiplied. No offsets allowed in any of the units
-		return new Force (super.divideBy(r));
+		return new Force (super.mult(r));
 	}
 	
 	public LinearMomentum mult(Mass r) { //both values and units are multiplied. No offsets allowed in any of the units
@@ -151,11 +153,11 @@ public class LinearVelocity extends Quantity {
 	 * working with constants (note that add and minus do not work here
 	 */
 
-	public LinearVelocity sMult(double r) {  
+	public LinearVelocity mult(double r) {  
 		return new LinearVelocity(this.value.mult(new UReal(r)),this.getUnits());
 	}
 	
-	public LinearVelocity sDivideBy(double r) {  
+	public LinearVelocity divideBy(double r) {  
 		return new LinearVelocity(this.value.divideBy(new UReal(r)),this.getUnits());
 	}
 

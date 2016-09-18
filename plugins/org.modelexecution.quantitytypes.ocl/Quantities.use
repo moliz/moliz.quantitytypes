@@ -3,10 +3,8 @@
 --
 -- This model provides types "UReal", "Unit" and "Quantity"
 -- and their corresponding operations, as defined in the paper
--- "Adding Tolerance and Units to Quantity Types in Software Models" 
+-- "Adding Uncertainty and Units to Quantity Types in Software Models" 
 -- by T. Mayerhofer, M. Wimmer and A. Vallecillo. In Proc. of SLE 2016.
--- The only difference is that class SIUnit has been incorporated into
--- class Unit, flattening the inheritance hierarchy between the two.
 --
 -- The operations in this file have been specified using SOIL 
 -- (Simple OCL-like Imperative Language) which is part of USE

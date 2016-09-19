@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fUML Quantity Types Library
+Bundle-SymbolicName: org.modelexecution.quantitytypes.fuml;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.11.0",
+ org.eclipse.emf.ecore;bundle-version="2.11.2",
+ org.modelexecution.fumldebug;bundle-version="1.0.0",
+ org.modelexecution.fumldebug.uml
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: fUML.Semantics.Classes.Kernel,
+ fUML.Syntax.Classes.Kernel,
+ org.modelexecution.quantitytypes.fuml.library,
+ org.modelexecution.quantitytypes.fuml.library.quantityfunctions,
+ org.modelexecution.quantitytypes.fuml.library.realfunctions,
+ org.modelexecution.quantitytypes.fuml.library.urealfunctions,
+ org.modelexecution.quantitytypes.fuml.libraryregistry

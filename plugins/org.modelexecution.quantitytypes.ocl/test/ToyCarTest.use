@@ -32,7 +32,7 @@
 !new Unit('m')
 !m.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
 !m.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!m.offset := Sequence{0,0,0,0,0,0,0,0}
+!m.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
 !m.name:=m.defaultName();
 !m.symbol:=m.defaultSymbol();
 

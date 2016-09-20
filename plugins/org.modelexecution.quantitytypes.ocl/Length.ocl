@@ -39,9 +39,6 @@
 --
 -- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-context Quantity::isALength() :Boolean
-    post: result self.unit.dimensions=Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-
 context l:Length inv allUnitsTheSame:
     l.unit.dimensions=Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
 

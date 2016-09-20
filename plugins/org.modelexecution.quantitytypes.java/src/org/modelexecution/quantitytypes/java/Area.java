@@ -1,7 +1,7 @@
 package org.modelexecution.quantitytypes.java;
 
 //READY
-
+  
 public class Area extends Quantity {
 
 	static protected boolean checkUnit(Unit u) {

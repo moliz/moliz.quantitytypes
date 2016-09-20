@@ -1,5 +1,8 @@
 package org.modelexecution.quantitytypes.java;
 
+
+// READY
+
 public class AbsorbedDose extends Quantity {
 	static protected boolean checkUnit(Unit u) {
 		int l = BaseUnits.Meter.ordinal();
@@ -78,12 +81,10 @@ public class AbsorbedDose extends Quantity {
      */
 
 	public AbsorbedDose add(AbsorbedDose r) {  //only works if compatible units && operand has no offset
-		
 		return new AbsorbedDose(super.add(r));
 	}
 	
 	public AbsorbedDose minus(AbsorbedDose r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
-
 		return new AbsorbedDose(super.minus(r));
 	}
 

@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+
 public class KinematicViscosity extends Quantity {
 
 	static protected boolean checkUnit(Unit u) {

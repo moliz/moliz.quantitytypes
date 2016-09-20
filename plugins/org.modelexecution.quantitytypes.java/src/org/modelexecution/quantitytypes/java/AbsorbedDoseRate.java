@@ -1,5 +1,8 @@
 package org.modelexecution.quantitytypes.java;
 
+
+// READY
+
 public class AbsorbedDoseRate extends Quantity {
 	static protected boolean checkUnit(Unit u) {
 		int l = BaseUnits.Meter.ordinal();
@@ -87,6 +90,10 @@ public class AbsorbedDoseRate extends Quantity {
 
 	public AbsorbedDose mult(Time r) { //both values and units are multiplied. No offsets allowed in any of the units
 		return new AbsorbedDose(super.mult(r));
+	}
+	
+	public Frequency divideBy(AbsorbedDose r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new Frequency(super.divideBy(r));
 	}
 	
 	/** OTHER OPERATIONS

@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+
 //READY
 
 public class Time extends Quantity {
@@ -89,7 +90,27 @@ public class Time extends Quantity {
 			return new Time(super.minus(r));
 		}
 
-		
+
+		public Angle mult(AngularVelocity  r) { //both values and units are multiplied. No offsets allowed in any of the units
+			return new Angle(super.mult(r));
+		}
+
+		public  AngularVelocity mult(AngularAcceleration r) { //both values and units are multiplied. No offsets allowed in any of the units
+			return new AngularVelocity(super.mult(r));
+		}
+
+		public AngularMass mult(AngularMomentum r) { //both values and units are multiplied. No offsets allowed in any of the units
+			return new AngularMass(super.mult(r));
+		}
+
+/*		public Mole mult(CatalyticActivity r) { //both values and units are multiplied. No offsets allowed in any of the units
+			return new Mole(super.mult(r));
+		}
+
+		public KinematicViscosity mult(DoseEquivalent r) { //both values and units are multiplied. No offsets allowed in any of the units
+			return new KinematicViscosity(super.mult(r));
+		}
+*/		
 		public ElectricCharge mult(ElectricCurrent r) { //both values and units are multiplied. No offsets allowed in any of the units
 			return new ElectricCharge(super.mult(r));
 		}

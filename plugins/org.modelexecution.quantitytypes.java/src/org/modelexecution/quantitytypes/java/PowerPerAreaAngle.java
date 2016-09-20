@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+
 public class PowerPerAreaAngle extends Quantity {
 	static protected boolean checkUnit(Unit u) {
 		int r = BaseUnits.Radian.ordinal();

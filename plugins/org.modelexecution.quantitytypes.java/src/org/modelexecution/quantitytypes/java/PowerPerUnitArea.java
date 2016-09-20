@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+
 public class PowerPerUnitArea extends Quantity {
 	static protected boolean checkUnit(Unit u) {
 		int k = BaseUnits.Kilogram.ordinal();

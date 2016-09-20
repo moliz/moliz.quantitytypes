@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+
 public class LuminousIntensity extends Quantity {
 	static protected boolean checkUnit(Unit u) {
 		int k = BaseUnits.Candela.ordinal();

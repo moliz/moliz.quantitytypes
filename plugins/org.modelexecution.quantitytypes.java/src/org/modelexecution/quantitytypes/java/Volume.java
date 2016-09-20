@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+
 public class Volume extends Quantity {
 	static protected boolean checkUnit(Unit u) {
 		int l = BaseUnits.Meter.ordinal();
@@ -27,7 +28,7 @@ public class Volume extends Quantity {
 
     public Volume(UReal u, Unit unit){
     	value = u.clone();
-    	if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating an Volume");
+    	if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a Volume");
     	this.unit = new Unit (unit);
     }
 
@@ -43,13 +44,13 @@ public class Volume extends Quantity {
     
     public Volume(double x, Unit unit){ //we only allow the same Units
     	value = new UReal(x);
-    	if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating an Volume");
+    	if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a Volume");
     	this.unit = new Unit (unit);
    }
 
     public Volume(double x, double u, Unit unit){
     	value = new UReal(x,u);
-    	if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating an Volume");
+    	if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a Volume");
     	this.unit = new Unit (unit);
     }
 

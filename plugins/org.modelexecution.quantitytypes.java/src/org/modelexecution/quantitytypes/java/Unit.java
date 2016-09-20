@@ -1,4 +1,5 @@
 package org.modelexecution.quantitytypes.java;
+
 import java.util.Arrays;
 
 public class Unit extends SIUnit implements Cloneable {

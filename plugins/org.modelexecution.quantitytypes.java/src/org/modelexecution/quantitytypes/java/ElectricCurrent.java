@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+
 // IN PROGRESS
 
 public class ElectricCurrent extends Quantity {

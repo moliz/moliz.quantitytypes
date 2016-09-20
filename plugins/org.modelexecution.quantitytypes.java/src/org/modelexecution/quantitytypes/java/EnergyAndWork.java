@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+
 public class EnergyAndWork extends Quantity {
 	static protected boolean checkUnit(Unit u) {
 		int l = BaseUnits.Meter.ordinal();

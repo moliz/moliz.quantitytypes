@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+
 public class AngularAcceleration extends Quantity {
 	static protected boolean checkUnit(Unit u) {
 		int l = DerivedUnits.RadianPerSecondSquared.ordinal();

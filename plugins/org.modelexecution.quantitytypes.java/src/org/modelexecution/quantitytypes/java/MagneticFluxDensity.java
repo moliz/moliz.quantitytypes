@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+
 public class MagneticFluxDensity extends Quantity {
 	static protected boolean checkUnit(Unit u) {
 		int l = BaseUnits.Ampere.ordinal();

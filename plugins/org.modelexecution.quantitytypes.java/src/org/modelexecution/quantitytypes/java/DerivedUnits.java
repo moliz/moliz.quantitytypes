@@ -1,7 +1,5 @@
 package org.modelexecution.quantitytypes.java;
-// NOTE: This file should be in synch with DerivedDimensions.java. 
-// For every Unit here there should be one Dimension in that file, 
-// in the same position in the list of literals
+
 
 public enum DerivedUnits {
 	Gray,

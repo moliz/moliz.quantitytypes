@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+
 // READY
 
 public class TimeSquared extends Quantity {

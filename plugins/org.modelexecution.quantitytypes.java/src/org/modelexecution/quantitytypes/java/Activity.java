@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+//MISSING SOME CLASSES
 
 public class Activity extends Quantity {
 	static protected boolean checkUnit(Unit u) {
@@ -104,7 +105,44 @@ public class Activity extends Quantity {
 	public DoseEquivalent mult(KinematicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units
 		return new DoseEquivalent(super.mult(r));
 	}
+
+	public ThermalDiffusivity mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new ThermalDiffusivity(super.mult(r));
+	}
+	
+	public DoseEquivalent mult(ThermalDiffusivity r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new DoseEquivalent(super.mult(r));
+	}
+
+	public HeatflowRate mult(Torque r){
+		return new HeatFlowrate(super.mult(r));
+	}
+
+	public HeatFlowRatePerUnitArea mult(EnergyPerUnitArea r){
+		return new HeatFlowRatePerUnitArea(super.mult(r));
+	}
+	
+	public Torque mult(AngularMomentum r) {
+		return new Torque(super.mult(r));
+	}
+	
+	public Power mult(Torque r) {
+		return new Power(super.mult(r));
+	}
+	
+	public Pressure mult(DynamicViscosity r){
+		return new Pressure(super.mult(r));
+	}
+
+	public VolumePerUnitTime mult(Volume r) {
+		return new VolumePerUnitTime(super.mult(r));
+	}
+	
 */
+	public AbsorbedDoseRate mult(AbsorbedDose r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new AbsorbedDoseRate(super.mult(r));
+	}
+	
 	public ElectricCurrent mult(ElectricCharge r) { //both values and units are multiplied. No offsets allowed in any of the units
 		return new ElectricCurrent(super.mult(r));
 	}
@@ -117,6 +155,31 @@ public class Activity extends Quantity {
 		return new ElectricCurrentDensity(super.mult(r));
 	}
 	
+	public LinearVelocity mult(Length r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new LinearVelocity(super.mult(r));
+	}
+
+	public LinearAcceleration mult(LinearVelocity r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new LinearAcceleration(super.mult(r));
+	}
+
+	public MassPerUnitTime mult(Mass r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new MassPerUnitTime(super.mult(r));
+	}
+	
+	public EnergyPerUnitArea mult(MassPerUnitTime r) {
+		return new EnergyPerUnitArea(super.mult(r));
+	}
+	
+	public PowerPerUnitArea mult(EnergyPerUnitArea r) {
+		return new PowerPerUnitArea(super.mult(r));
+	}
+	
+	public Force mult(LinearMomentum r) {
+		return new Force(super.mult(r));
+	}
+	
+
 
 	
 	/** OTHER OPERATIONS

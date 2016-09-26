@@ -21,12 +21,12 @@ public class Frequency extends Quantity {
 
     public Frequency () {
         value = new UReal();
-        unit = new Unit(DerivedUnits.Hertz);
+        unit = new Unit(DerivedUnits.Becquerel);
     }
 
     public Frequency(UReal u){
     	value = u.clone();
-        unit = new Unit(DerivedUnits.Hertz);
+        unit = new Unit(DerivedUnits.Becquerel);
     }
 
     public Frequency(UReal u, Unit unit){
@@ -37,12 +37,12 @@ public class Frequency extends Quantity {
 
 	public Frequency(double x){ //"promotes" a real x 
 		value = new UReal(x,0.0);
-        unit = new Unit(DerivedUnits.Hertz);
+        unit = new Unit(DerivedUnits.Becquerel);
 	}
   
     public Frequency (double x, double u) {
     	value = new UReal(x,u);
-        unit = new Unit(DerivedUnits.Hertz);
+        unit = new Unit(DerivedUnits.Becquerel);
    }
     
     public Frequency(double x, Unit unit){ //we only allow this kind of Units
@@ -59,12 +59,12 @@ public class Frequency extends Quantity {
 
     public Frequency(String x) { //creates an Frequency from a string representing a real, with u=0.
     	value = new UReal(x);
-        unit = new Unit(DerivedUnits.Hertz);
+        unit = new Unit(DerivedUnits.Becquerel);
    }
     
     public Frequency(String x, String u) { //creates an Frequency from two strings representing (x,u).
     	value = new UReal(x,u);
-        unit = new Unit(DerivedUnits.Hertz);
+        unit = new Unit(DerivedUnits.Becquerel);
    }
    
     public Frequency(String x, String u, Unit unit) { //creates an Frequency from two strings representing (x,u).
@@ -91,6 +91,98 @@ public class Frequency extends Quantity {
 		return new AngularVelocity(super.mult(r));
 	}
 
+	public AngularAcceleration mult(AngularVelocity r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new AngularAcceleration(super.mult(r));
+	}
+
+	public AngularMomentum mult(AngularMass r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new AngularMomentum(super.mult(r));
+	}
+
+/*	public CatalyticActivity mult(Mole r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new CatalyticActivity(super.mult(r));
+	}
+
+	public DoseEquivalent mult(KinematicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new DoseEquivalent(super.mult(r));
+	}
+
+	public ThermalDiffusivity mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new ThermalDiffusivity(super.mult(r));
+	}
+	
+	public DoseEquivalent mult(ThermalDiffusivity r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new DoseEquivalent(super.mult(r));
+	}
+
+	public HeatflowRate mult(Torque r){
+		return new HeatFlowrate(super.mult(r));
+	}
+
+	public HeatFlowRatePerUnitArea mult(EnergyPerUnitArea r){
+		return new HeatFlowRatePerUnitArea(super.mult(r));
+	}
+	
+	public Torque mult(AngularMomentum r) {
+		return new Torque(super.mult(r));
+	}
+	
+	public Power mult(Torque r) {
+		return new Power(super.mult(r));
+	}
+	
+	public Pressure mult(DynamicViscosity r){
+		return new Pressure(super.mult(r));
+	}
+
+	public VolumePerUnitTime mult(Volume r) {
+		return new VolumePerUnitTime(super.mult(r));
+	}
+	
+*/
+	public AbsorbedDoseRate mult(AbsorbedDose r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new AbsorbedDoseRate(super.mult(r));
+	}
+	
+	public ElectricCurrent mult(ElectricCharge r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new ElectricCurrent(super.mult(r));
+	}
+	
+	public MagneticFieldStrength mult(ElectricChargeLineDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new MagneticFieldStrength(super.mult(r));
+	}
+	
+	public ElectricCurrentDensity mult(ElectricFluxDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new ElectricCurrentDensity(super.mult(r));
+	}
+	
+	public LinearVelocity mult(Length r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new LinearVelocity(super.mult(r));
+	}
+
+	public LinearAcceleration mult(LinearVelocity r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new LinearAcceleration(super.mult(r));
+	}
+
+	public MassPerUnitTime mult(Mass r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new MassPerUnitTime(super.mult(r));
+	}
+	
+	public EnergyPerUnitArea mult(MassPerUnitTime r) {
+		return new EnergyPerUnitArea(super.mult(r));
+	}
+	
+	public PowerPerUnitArea mult(EnergyPerUnitArea r) {
+		return new PowerPerUnitArea(super.mult(r));
+	}
+	
+	public Force mult(LinearMomentum r) {
+		return new Force(super.mult(r));
+	}
+	
+
+
+	
 	/** OTHER OPERATIONS
 	 * 
 	 */
@@ -154,6 +246,5 @@ public class Frequency extends Quantity {
  	public Frequency clone() {
 		return new Frequency(this.getUReal(),this.getUnits());
 	}
-
 
 }

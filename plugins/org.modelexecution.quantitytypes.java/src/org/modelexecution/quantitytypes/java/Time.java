@@ -103,8 +103,8 @@ public class Time extends Quantity {
 			return new AngularMass(super.mult(r));
 		}
 
-/*		public Mole mult(CatalyticActivity r) { //both values and units are multiplied. No offsets allowed in any of the units
-			return new Mole(super.mult(r));
+		public AmountOfSubstance mult(CatalyticActivity r) { //both values and units are multiplied. No offsets allowed in any of the units
+			return new AmountOfSubstance(super.mult(r));
 		}
 
 		public KinematicViscosity mult(DoseEquivalent r) { //both values and units are multiplied. No offsets allowed in any of the units
@@ -115,10 +115,6 @@ public class Time extends Quantity {
 			return new Area(super.mult(r));
 		}
 	
-		public ThermalDiffusivity mult( DoseEquivalent r) { //both values and units are multiplied. No offsets allowed in any of the units
-			return new ThermalDiffusivity(super.mult(r));
-		}
-
 		public Torque mult(HeatflowRate r){
 			return new Torque(super.mult(r));
 		}
@@ -142,10 +138,7 @@ public class Time extends Quantity {
 	public Volume mult(VolumePerUnitTime r) {
 		return new Volume(super.mult(r));
 	}
-	
-*/
-
-		
+			
 		public ElectricCharge mult(ElectricCurrent r) { //both values and units are multiplied. No offsets allowed in any of the units
 			return new ElectricCharge(super.mult(r));
 		}

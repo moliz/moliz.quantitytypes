@@ -98,7 +98,7 @@ public class Activity extends Quantity {
 		return new AngularMomentum(super.mult(r));
 	}
 
-/*	public CatalyticActivity mult(Mole r) { //both values and units are multiplied. No offsets allowed in any of the units
+	public CatalyticActivity mult(AmountOfSubstance r) { //both values and units are multiplied. No offsets allowed in any of the units
 		return new CatalyticActivity(super.mult(r));
 	}
 
@@ -114,14 +114,6 @@ public class Activity extends Quantity {
 		return new DoseEquivalent(super.mult(r));
 	}
 
-	public HeatflowRate mult(Torque r){
-		return new HeatFlowrate(super.mult(r));
-	}
-
-	public HeatFlowRatePerUnitArea mult(EnergyPerUnitArea r){
-		return new HeatFlowRatePerUnitArea(super.mult(r));
-	}
-	
 	public Torque mult(AngularMomentum r) {
 		return new Torque(super.mult(r));
 	}
@@ -138,7 +130,6 @@ public class Activity extends Quantity {
 		return new VolumePerUnitTime(super.mult(r));
 	}
 	
-*/
 	public AbsorbedDoseRate mult(AbsorbedDose r) { //both values and units are multiplied. No offsets allowed in any of the units
 		return new AbsorbedDoseRate(super.mult(r));
 	}

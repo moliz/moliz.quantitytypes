@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+//MISSING SPECIFIC OPERATIONS
 
 public class AngularMass extends Quantity {
 	static protected boolean checkUnit(Unit u) {

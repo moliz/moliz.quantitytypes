@@ -92,6 +92,10 @@ public class AbsorbedDose extends Quantity {
 		return new AbsorbedDoseRate(super.divideBy(r));
 	}
 	
+	public AbsorbedDoseRate mult(Frequency r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new AbsorbedDoseRate(super.mult(r));
+	}
+	
 	public LinearVelocity sqrt() { 
 		return new LinearVelocity(super.sqrt());
 	}
@@ -100,10 +104,7 @@ public class AbsorbedDose extends Quantity {
 		return new Area(super.mult(r));
 	}
 	
-	public TimeSquared divideBy(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
-		return new TimeSquared(super.divideBy(r));
-	}
-	
+
 	/** OTHER OPERATIONS
 	 * 
 	 */

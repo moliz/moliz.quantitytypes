@@ -1,6 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
-//MISSING SOME CLASSES
+//READY
 
 public class Activity extends Quantity {
 	static protected boolean checkUnit(Unit u) {

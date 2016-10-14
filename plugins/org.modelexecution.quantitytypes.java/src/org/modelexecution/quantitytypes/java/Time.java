@@ -193,8 +193,12 @@ public class Time extends Quantity {
 		public Time neg() { //units are maintained
 			return new Time(super.neg());
 		}
+		
+		public Frequency inverse(){
+			return new Frequency(super.inverse());
+		}
 
-	    // power(s), sqrt() and inverse() return Quantity
+	    // power(s), sqrt() return Quantity
 		// lessThan, LessEq, gt, ge all directly from Quantity
 
 		public boolean equals(Time r) {  

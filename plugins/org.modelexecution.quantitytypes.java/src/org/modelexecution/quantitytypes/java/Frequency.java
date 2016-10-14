@@ -172,8 +172,6 @@ public class Frequency extends Quantity {
 	}
 	
 
-
-	
 	/** OTHER OPERATIONS
 	 * 
 	 */
@@ -185,8 +183,13 @@ public class Frequency extends Quantity {
 	public Frequency neg() { //units are maintained
 		return new Frequency(super.neg());
 	}
+	
+	public Time inverse() { //
+		return new Time(super.inverse());
+	}
+	
 
-    // power(s), sqrt() and inverse() return Quantity
+    // power(s), sqrt() return Quantity
 	// lessThan, LessEq, gt, ge all directly from Quantity
 
 	public boolean equals(Frequency r) {  

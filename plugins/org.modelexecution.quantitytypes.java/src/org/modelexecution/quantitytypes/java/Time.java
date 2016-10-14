@@ -155,10 +155,6 @@ public class Time extends Quantity {
 			return new AbsorbedDose(super.mult(r));
 		}
 		
-
-		
-		
-		
 		
 		public Length mult(LinearVelocity r) { //both values and units are multiplied. No offsets allowed in any of the units
 			return new Length(super.mult(r));

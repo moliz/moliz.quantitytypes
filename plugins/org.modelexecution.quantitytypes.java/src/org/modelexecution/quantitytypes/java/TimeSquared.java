@@ -81,12 +81,10 @@ public class TimeSquared extends Quantity {
 	     */
 
 		public TimeSquared add(TimeSquared r) {  //only works if compatible units && operand has no offset
-			
 			return new TimeSquared(super.add(r));
 		}
 		
 		public TimeSquared minus(TimeSquared r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
-
 			return new TimeSquared(super.minus(r));
 		}
 

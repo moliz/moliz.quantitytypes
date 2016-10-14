@@ -1,0 +1,1114 @@
+Length.divideBy(Time) returns Linear Velocity	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@15db9742
+Length.divideBy(Temperature) returns Linear Thermal Expansion	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@6d06d69c
+Length.divideBy(Angle) returns Length	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7852e922
+Length.divideBy(Capacitance) returns Inverse Permittivity	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@4e25154f
+Length.divideBy(Inverse Permittivity) returns Capacitance	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@70dea4e
+Length.divideBy(Linear Acceleration) returns Time Squared	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5c647e05
+Length.divideBy(Linear Thermal Expansion) returns Temperature	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@33909752
+Length.divideBy(Linear Velocity) returns Time	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@55f96302
+Length.divideBy(Thermal Conductivity) returns Thermal Insulance	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@3d4eac69
+Length.divideBy(Thermal Insulance) returns Thermal Conductivity	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@42a57993
+Length.divideBy(Thrust to Mass Ratio) returns Time Squared	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@75b84c92
+Length.divideBy(Time Squared) returns Linear Acceleration	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6bc7c054
+Mass.divideBy(Length) returns Mass per Unit Length	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@232204a1
+Mass.divideBy(Time) returns Mass per Time	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4aa298b7
+Mass.divideBy(Angle) returns Mass	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7d4991ad
+Mass.divideBy(Area) returns Mass per Unit Area	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@28d93b30
+Mass.divideBy(Density) returns Volume	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b6d3586
+Mass.divideBy(Energy per Unit Area) returns Time Squared	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4554617c
+Mass.divideBy(Force per Unit Length) returns Time Squared	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@74a14482
+Mass.divideBy(Mass per Time) returns Time	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1540e19d
+Mass.divideBy(Mass per Unit Area) returns Area	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@677327b6
+Mass.divideBy(Mass per Unit Length) returns Length	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@14ae5a5
+Mass.divideBy(Time Squared) returns Energy per Unit Area	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7f31245a
+Mass.divideBy(Volume) returns Density	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d6f6e28
+Time.divideBy(Angle) returns Time	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@135fbaa4
+Time.divideBy(Activity) returns Time Squared	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@45ee12a7
+Time.divideBy(Capacitance) returns Resistance	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@330bedb4
+Time.divideBy(Electrical Conductivity) returns Inductance	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@2503dbd3
+Time.divideBy(Frequency) returns Time Squared	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4b67cf4d
+Time.divideBy(Heat Capacity and Entropy) returns Thermal Resistance	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@7ea987ac
+Time.divideBy(Inductance) returns Electrical Conductivity	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@12a3a380
+Time.divideBy(Resistance) returns Capacitance	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@29453f44
+Time.divideBy(Thermal Resistance) returns Heat Capacity and Entropy	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@5cad8086
+Time.divideBy(Time Squared) returns Activity	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6e0be858
+Electric Current.divideBy(Length) returns Magnetic Field Strength	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@61bbe9ba
+Electric Current.divideBy(Angle) returns Electric Current	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@610455d6
+Electric Current.divideBy(Activity) returns Electric Charge	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@511d50c0
+Electric Current.divideBy(Area) returns Electric Current Density	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@60e53b93
+Electric Current.divideBy(Catalytic Activity) returns Electric Charge per Amount of Substance	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@5e2de80c
+Electric Current.divideBy(Electric Charge) returns Activity	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1d44bcfa
+Electric Current.divideBy(Electric Charge Line Density) returns Linear Velocity	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@266474c2
+Electric Current.divideBy(Electric Charge Volume Density) returns Volume per Unit Time	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6f94fa3e
+Electric Current.divideBy(Electric Charge per Amount of Substance) returns Catalytic Activity	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] = [D@5e481248
+Electric Current.divideBy(Electric Current Density) returns Area	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@66d3c617
+Electric Current.divideBy(Electric Current per Angle) returns Plane Angle	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 0.0] = [D@63947c6b
+Electric Current.divideBy(Electric Flux Density) returns Kinematic Viscosity	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2b193f2d
+Electric Current.divideBy(Electrical Conductivity) returns Electromotive Force	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@355da254
+Electric Current.divideBy(Electromotive Force) returns Electrical Conductivity	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@4dc63996
+Electric Current.divideBy(Exposure) returns Mass per Time	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@d716361
+Electric Current.divideBy(Frequency) returns Electric Charge	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6ff3c5b5
+Electric Current.divideBy(Kinematic Viscosity) returns Electric Flux Density	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3764951d
+Electric Current.divideBy(Linear Velocity) returns Electric Charge Line Density	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4b1210ee
+Electric Current.divideBy(Magnetic Field Strength) returns Length	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4d7e1886
+Electric Current.divideBy(Mass per Time) returns Exposure	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3cd1a2f1
+Electric Current.divideBy(Plane Angle) returns Electric Current per Angle	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@2f0e140b
+Electric Current.divideBy(Thermal Diffusivity) returns Electric Flux Density	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7440e464
+Electric Current.divideBy(Volume per Unit Time) returns Electric Charge Volume Density	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@49476842
+Temperature.divideBy(Angle) returns Temperature	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@78308db1
+Temperature.divideBy(Heat Flow Rate) returns Thermal Resistance	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27c170f0
+Temperature.divideBy(Heat Flow Rate per Unit Area) returns Thermal Insulance	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5451c3a8
+Temperature.divideBy(Inverse Amount of Substance) returns Temperature Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@2626b418
+Temperature.divideBy(Power) returns Thermal Resistance	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5a07e868
+Temperature.divideBy(Power per Unit Area) returns Thermal Insulance	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@76ed5528
+Temperature.divideBy(Temperature Amount of Substance) returns Inverse Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] = [D@2c7b84de
+Temperature.divideBy(Thermal Insulance) returns Heat Flow Rate per Unit Area	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@3fee733d
+Temperature.divideBy(Thermal Resistance) returns Heat Flow Rate	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@5acf9800
+Amount of Substance.divideBy(Mass) returns Amount of Substance per Unit Mass	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4617c264
+Amount of Substance.divideBy(Time) returns Catalytic Activity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@36baf30c
+Amount of Substance.divideBy(Angle) returns Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a81197d
+Amount of Substance.divideBy(Amount of Substance Per Unit Volume) returns Volume	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@5ca881b5
+Amount of Substance.divideBy(Amount of Substance per Unit Mass) returns Mass	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@24d46ca6
+Amount of Substance.divideBy(Catalytic Activity) returns Time	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@4517d9a3
+Amount of Substance.divideBy(Volume) returns Amount of Substance Per Unit Volume	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@372f7a8d
+Angle.divideBy(Time) returns Activity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2f92e0f4
+Angle.divideBy(Amount of Substance) returns Inverse Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@28a418fc
+Angle.divideBy(Activity) returns Time	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5305068a
+Angle.divideBy(Coefficient of Heat Transfer) returns Thermal Insulance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@1f32e575
+Angle.divideBy(Electrical Conductivity) returns Resistance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@279f2327
+Angle.divideBy(Frequency) returns Time	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ff4acd0
+Angle.divideBy(Inverse Amount of Substance) returns Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@54bedef2
+Angle.divideBy(Inverse Permittivity) returns Permittivity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@5caf905d
+Angle.divideBy(Permittivity) returns Inverse Permittivity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@27716f4
+Angle.divideBy(Resistance) returns Electrical Conductivity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@8efb846
+Angle.divideBy(Thermal Conductivity) returns Thermal Resistivity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@2a84aee7
+Angle.divideBy(Thermal Insulance) returns Coefficient of Heat Transfer	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@a09ee92
+Angle.divideBy(Thermal Resistivity) returns Thermal Conductivity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@30f39991
+Luminous Intensity.divideBy(Angle) returns Luminous Intensity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@452b3a41
+Luminous Intensity.divideBy(Area) returns Luminance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4a574795
+Luminous Intensity.divideBy(Luminance) returns Area	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] * [-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] = [D@f6f4d33
+Absorbed Dose.divideBy(Length) returns Linear Acceleration	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@23fc625e
+Absorbed Dose.divideBy(Time) returns Absorbed Dose Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3f99bd52
+Absorbed Dose.divideBy(Temperature) returns Specific Heat Capacity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@4f023edb
+Absorbed Dose.divideBy(Angle) returns Absorbed Dose	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3a71f4dd
+Absorbed Dose.divideBy(Absorbed Dose Rate) returns Time	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7adf9f5f
+Absorbed Dose.divideBy(Activity) returns Kinematic Viscosity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@85ede7b
+Absorbed Dose.divideBy(Amount of Substance per Unit Mass) returns Molar Energy	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@5674cd4d
+Absorbed Dose.divideBy(Dose Equivalent) returns Angle	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@63961c42
+Absorbed Dose.divideBy(Electromotive Force) returns Exposure	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@65b54208
+Absorbed Dose.divideBy(Exposure) returns Electromotive Force	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1be6f5c3
+Absorbed Dose.divideBy(Frequency) returns Kinematic Viscosity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6b884d57
+Absorbed Dose.divideBy(Gravitational Attraction) returns Mass per Unit Length	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@38af3868
+Absorbed Dose.divideBy(Kinematic Viscosity) returns Activity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@77459877
+Absorbed Dose.divideBy(Linear Acceleration) returns Length	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5b2133b1
+Absorbed Dose.divideBy(Linear Velocity) returns Linear Velocity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@72ea2f77
+Absorbed Dose.divideBy(Mass per Unit Length) returns Gravitational Attraction	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@33c7353a
+Absorbed Dose.divideBy(Molar Energy) returns Amount of Substance per Unit Mass	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@681a9515
+Absorbed Dose.divideBy(Specific Energy) returns Angle	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3af49f1c
+Absorbed Dose.divideBy(Specific Heat Capacity) returns Temperature	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@19469ea2
+Absorbed Dose.divideBy(Thermal Diffusivity) returns Activity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@13221655
+Absorbed Dose.divideBy(Thrust to Mass Ratio) returns Length	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2f2c9b19
+Absorbed Dose Rate.divideBy(Angle) returns Absorbed Dose Rate	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@31befd9f
+Absorbed Dose Rate.divideBy(Absorbed Dose) returns Activity	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1c20c684
+Absorbed Dose Rate.divideBy(Activity) returns Absorbed Dose	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1fb3ebeb
+Absorbed Dose Rate.divideBy(Dose Equivalent) returns Activity	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@548c4f57
+Absorbed Dose Rate.divideBy(Dynamic Viscosity) returns Gravitational Attraction	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1218025c
+Absorbed Dose Rate.divideBy(Frequency) returns Absorbed Dose	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@816f27d
+Absorbed Dose Rate.divideBy(Gravitational Attraction) returns Dynamic Viscosity	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@87aac27
+Absorbed Dose Rate.divideBy(Linear Acceleration) returns Linear Velocity	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3e3abc88
+Absorbed Dose Rate.divideBy(Linear Velocity) returns Linear Acceleration	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6ce253f1
+Absorbed Dose Rate.divideBy(Specific Energy) returns Activity	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@53d8d10a
+Absorbed Dose Rate.divideBy(Thrust to Mass Ratio) returns Linear Velocity	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@e9e54c2
+Activity.divideBy(Angle) returns Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@65ab7765
+Activity.divideBy(Catalytic Activity) returns Inverse Amount of Substance	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@1b28cdfa
+Activity.divideBy(Exposure) returns Magnetic Flux Density	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@eed1f14
+Activity.divideBy(Frequency) returns Angle	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7229724f
+Activity.divideBy(Inverse Amount of Substance) returns Catalytic Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@4c873330
+Activity.divideBy(Magnetic Flux Density) returns Exposure	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@119d7047
+Amount of Substance Per Unit Volume.divideBy(Angle) returns Amount of Substance Per Unit Volume	=>	[-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@776ec8df
+Amount of Substance Per Unit Volume.divideBy(Amount of Substance per Unit Mass) returns Density	=>	[-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@4eec7777
+Amount of Substance Per Unit Volume.divideBy(Density) returns Amount of Substance per Unit Mass	=>	[-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3b07d329
+Amount of Substance per Unit Mass.divideBy(Angle) returns Amount of Substance per Unit Mass	=>	[0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@41629346
+Angular Acceleration.divideBy(Angle) returns Angular Acceleration	=>	[0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@404b9385
+Angular Acceleration.divideBy(Activity) returns Angular Velocity	=>	[0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d311334
+Angular Acceleration.divideBy(Angular Velocity) returns Activity	=>	[0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@682a0b20
+Angular Acceleration.divideBy(Frequency) returns Angular Velocity	=>	[0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d075dc0
+Angular Mass.divideBy(Length) returns Length Mass	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@214c265e
+Angular Mass.divideBy(Mass) returns Area	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@448139f0
+Angular Mass.divideBy(Time) returns Angular Momentum	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7cca494b
+Angular Mass.divideBy(Angle) returns Angular Mass	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7ba4f24f
+Angular Mass.divideBy(Angular Momentum) returns Time	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3b9a45b3
+Angular Mass.divideBy(Area) returns Mass	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7699a589
+Angular Mass.divideBy(Area Thermal Expansion) returns Mass Temperature	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@58372a00
+Angular Mass.divideBy(Energy and Work) returns Time Squared	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4dd8dc3
+Angular Mass.divideBy(Length Mass) returns Length	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d03e736
+Angular Mass.divideBy(Mass Temperature) returns Area Thermal Expansion	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@568db2f2
+Angular Mass.divideBy(Mass per Unit Length) returns Volume	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@378bf509
+Angular Mass.divideBy(Time Squared) returns Energy and Work	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5fd0d5ae
+Angular Mass.divideBy(Torque) returns Time Squared	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2d98a335
+Angular Mass.divideBy(Volume) returns Mass per Unit Length	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@16b98e56
+Angular Momentum.divideBy(Length) returns Linear Momentum	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7ef20235
+Angular Momentum.divideBy(Mass) returns Kinematic Viscosity	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27d6c5e0
+Angular Momentum.divideBy(Time) returns Energy and Work	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4f3f5b24
+Angular Momentum.divideBy(Angle) returns Angular Momentum	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@15aeb7ab
+Angular Momentum.divideBy(Activity) returns Angular Mass	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7b23ec81
+Angular Momentum.divideBy(Angular Mass) returns Activity	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6acbcfc0
+Angular Momentum.divideBy(Area) returns Mass per Time	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5f184fc6
+Angular Momentum.divideBy(Dynamic Viscosity) returns Volume	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3feba861
+Angular Momentum.divideBy(Electric Charge) returns Magnetic Flux	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5b480cf9
+Angular Momentum.divideBy(Energy and Work) returns Time	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6f496d9f
+Angular Momentum.divideBy(Frequency) returns Angular Mass	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@723279cf
+Angular Momentum.divideBy(Heat Flow Rate) returns Time Squared	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@10f87f48
+Angular Momentum.divideBy(Kinematic Viscosity) returns Mass	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@b4c966a
+Angular Momentum.divideBy(Length Mass) returns Linear Velocity	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2f4d3709
+Angular Momentum.divideBy(Linear Momentum) returns Length	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4e50df2e
+Angular Momentum.divideBy(Linear Velocity) returns Length Mass	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1d81eb93
+Angular Momentum.divideBy(Magnetic Flux) returns Electric Charge	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@7291c18f
+Angular Momentum.divideBy(Mass per Time) returns Area	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@34a245ab
+Angular Momentum.divideBy(Mass per Unit Length) returns Volume per Unit Time	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7cc355be
+Angular Momentum.divideBy(Power) returns Time Squared	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6e8cf4c6
+Angular Momentum.divideBy(Thermal Diffusivity) returns Mass	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@12edcd21
+Angular Momentum.divideBy(Time Squared) returns Heat Flow Rate	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@34c45dca
+Angular Momentum.divideBy(Torque) returns Time	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@52cc8049
+Angular Momentum.divideBy(Volume) returns Dynamic Viscosity	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5b6f7412
+Angular Momentum.divideBy(Volume per Unit Time) returns Mass per Unit Length	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27973e9b
+Angular Velocity.divideBy(Time) returns Angular Acceleration	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@312b1dae
+Angular Velocity.divideBy(Angle) returns Angular Velocity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7530d0a
+Angular Velocity.divideBy(Activity) returns Plane Angle	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27bc2616
+Angular Velocity.divideBy(Angular Acceleration) returns Time	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@3941a79c
+Angular Velocity.divideBy(Frequency) returns Plane Angle	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@506e1b77
+Angular Velocity.divideBy(Plane Angle) returns Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@4fca772d
+Area.divideBy(Length) returns Length	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@9807454
+Area.divideBy(Time) returns Kinematic Viscosity	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d494fbf
+Area.divideBy(Temperature) returns Area Thermal Expansion	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@1ddc4ec2
+Area.divideBy(Angle) returns Area	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@133314b
+Area.divideBy(Absorbed Dose) returns Time Squared	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@b1bc7ed
+Area.divideBy(Area Thermal Expansion) returns Temperature	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@7cd84586
+Area.divideBy(Dose Equivalent) returns Time Squared	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@30dae81
+Area.divideBy(Kinematic Viscosity) returns Time	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b2c6ec2
+Area.divideBy(Length Temperature) returns Linear Thermal Expansion	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@4edde6e5
+Area.divideBy(Linear Thermal Expansion) returns Length Temperature	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@70177ecd
+Area.divideBy(Specific Energy) returns Time Squared	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1e80bfe8
+Area.divideBy(Thermal Diffusivity) returns Time	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@66a29884
+Area.divideBy(Time Squared) returns Absorbed Dose	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4769b07b
+Area Angle.divideBy(Angle) returns Area Angle	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@cc34f4d
+Area Angle.divideBy(Area) returns Solid Angle	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@17a7cec2
+Area Angle.divideBy(Solid Angle) returns Area	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@65b3120a
+Area Temperature.divideBy(Length) returns Length Temperature	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6f539caf
+Area Temperature.divideBy(Temperature) returns Area	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@79fc0f2f
+Area Temperature.divideBy(Angle) returns Area Temperature	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@50040f0c
+Area Temperature.divideBy(Area) returns Temperature	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2dda6444
+Area Temperature.divideBy(Heat Flow Rate) returns Thermal Insulance	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5e9f23b4
+Area Temperature.divideBy(Length Temperature) returns Length	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@4783da3f
+Area Temperature.divideBy(Power) returns Thermal Insulance	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@378fd1ac
+Area Temperature.divideBy(Thermal Insulance) returns Heat Flow Rate	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@49097b5d
+Area Thermal Expansion.divideBy(Length) returns Linear Thermal Expansion	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6e2c634b
+Area Thermal Expansion.divideBy(Angle) returns Area Thermal Expansion	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@37a71e93
+Area Thermal Expansion.divideBy(Linear Thermal Expansion) returns Length	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@7e6cbb7a
+Area Thermal Expansion.divideBy(Mass per Unit Length) returns Specific Heat Pressure	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7c3df479
+Area Thermal Expansion.divideBy(Specific Heat Capacity) returns Time Squared	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@7106e68e
+Area Thermal Expansion.divideBy(Specific Heat Pressure) returns Mass per Unit Length	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@7eda2dbb
+Area Thermal Expansion.divideBy(Time Squared) returns Specific Heat Capacity	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6576fe71
+Capacitance.divideBy(Length) returns Permittivity	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@76fb509a
+Capacitance.divideBy(Time) returns Electrical Conductivity	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@300ffa5d
+Capacitance.divideBy(Angle) returns Capacitance	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1f17ae12
+Capacitance.divideBy(Electrical Conductivity) returns Time	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@4d405ef7
+Capacitance.divideBy(Permittivity) returns Length	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@6193b845
+Catalytic Activity.divideBy(Amount of Substance) returns Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@2e817b38
+Catalytic Activity.divideBy(Angle) returns Catalytic Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@c4437c4
+Catalytic Activity.divideBy(Activity) returns Amount of Substance	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@433c675d
+Catalytic Activity.divideBy(Amount of Substance Per Unit Volume) returns Volume per Unit Time	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@3f91beef
+Catalytic Activity.divideBy(Amount of Substance per Unit Mass) returns Mass per Time	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@1a6c5a9e
+Catalytic Activity.divideBy(Frequency) returns Amount of Substance	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@37bba400
+Catalytic Activity.divideBy(Mass per Time) returns Amount of Substance per Unit Mass	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@179d3b25
+Catalytic Activity.divideBy(Volume per Unit Time) returns Amount of Substance Per Unit Volume	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@254989ff
+Coefficient of Heat Transfer.divideBy(Angle) returns Coefficient of Heat Transfer	=>	[0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5d099f62
+Coefficient of Heat Transfer.divideBy(Linear Momentum) returns Specific Heat Volume	=>	[0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@37f8bb67
+Coefficient of Heat Transfer.divideBy(Linear Velocity) returns Volumetric heat capacity	=>	[0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@49c2faae
+Coefficient of Heat Transfer.divideBy(Specific Heat Volume) returns Linear Momentum	=>	[0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@20ad9418
+Coefficient of Heat Transfer.divideBy(Volumetric heat capacity) returns Linear Velocity	=>	[0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@31cefde0
+Density.divideBy(Angle) returns Density	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@439f5b3d
+Dose Equivalent.divideBy(Length) returns Linear Acceleration	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1d56ce6a
+Dose Equivalent.divideBy(Time) returns Absorbed Dose Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5197848c
+Dose Equivalent.divideBy(Temperature) returns Specific Heat Capacity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@17f052a3
+Dose Equivalent.divideBy(Angle) returns Absorbed Dose	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2e0fa5d3
+Dose Equivalent.divideBy(Absorbed Dose) returns Angle	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5010be6
+Dose Equivalent.divideBy(Absorbed Dose Rate) returns Time	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@685f4c2e
+Dose Equivalent.divideBy(Activity) returns Kinematic Viscosity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7daf6ecc
+Dose Equivalent.divideBy(Amount of Substance per Unit Mass) returns Molar Energy	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@2e5d6d97
+Dose Equivalent.divideBy(Electromotive Force) returns Exposure	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@238e0d81
+Dose Equivalent.divideBy(Exposure) returns Electromotive Force	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@31221be2
+Dose Equivalent.divideBy(Frequency) returns Kinematic Viscosity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@377dca04
+Dose Equivalent.divideBy(Gravitational Attraction) returns Mass per Unit Length	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@728938a9
+Dose Equivalent.divideBy(Kinematic Viscosity) returns Activity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@21b8d17c
+Dose Equivalent.divideBy(Linear Acceleration) returns Length	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6433a2
+Dose Equivalent.divideBy(Linear Velocity) returns Linear Velocity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5910e440
+Dose Equivalent.divideBy(Mass per Unit Length) returns Gravitational Attraction	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6267c3bb
+Dose Equivalent.divideBy(Molar Energy) returns Amount of Substance per Unit Mass	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@533ddba
+Dose Equivalent.divideBy(Specific Energy) returns Angle	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@246b179d
+Dose Equivalent.divideBy(Specific Heat Capacity) returns Temperature	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@7a07c5b4
+Dose Equivalent.divideBy(Thermal Diffusivity) returns Activity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@26a1ab54
+Dose Equivalent.divideBy(Thrust to Mass Ratio) returns Length	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d646c37
+Dynamic Viscosity.divideBy(Time) returns Energy Density	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@41cf53f9
+Dynamic Viscosity.divideBy(Angle) returns Dynamic Viscosity	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5a10411
+Dynamic Viscosity.divideBy(Activity) returns Mass per Unit Length	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ef1e4fa
+Dynamic Viscosity.divideBy(Density) returns Kinematic Viscosity	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@306a30c7
+Dynamic Viscosity.divideBy(Electric Charge Line Density) returns Magnetic Flux Density	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@b81eda8
+Dynamic Viscosity.divideBy(Electric Charge Volume Density) returns Magnetic Flux	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@68de145
+Dynamic Viscosity.divideBy(Energy Density) returns Time	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27fa135a
+Dynamic Viscosity.divideBy(Frequency) returns Mass per Unit Length	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@46f7f36a
+Dynamic Viscosity.divideBy(Kinematic Viscosity) returns Density	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@421faab1
+Dynamic Viscosity.divideBy(Linear Velocity) returns Mass per Unit Area	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2b71fc7e
+Dynamic Viscosity.divideBy(Magnetic Flux) returns Electric Charge Volume Density	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@5ce65a89
+Dynamic Viscosity.divideBy(Magnetic Flux Density) returns Electric Charge Line Density	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@25f38edc
+Dynamic Viscosity.divideBy(Mass per Unit Area) returns Linear Velocity	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1a86f2f1
+Dynamic Viscosity.divideBy(Mass per Unit Length) returns Activity	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3eb07fd3
+Dynamic Viscosity.divideBy(Pressure or Stress) returns Time	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@506c589e
+Dynamic Viscosity.divideBy(Thermal Diffusivity) returns Density	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@69d0a921
+Electric Charge.divideBy(Length) returns Electric Charge Line Density	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@446cdf90
+Electric Charge.divideBy(Mass) returns Exposure	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@799f7e29
+Electric Charge.divideBy(Time) returns Electric Current	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4b85612c
+Electric Charge.divideBy(Electric Current) returns Time	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@277050dc
+Electric Charge.divideBy(Amount of Substance) returns Electric Charge per Amount of Substance	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@5c29bfd
+Electric Charge.divideBy(Angle) returns Electric Charge	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7aec35a
+Electric Charge.divideBy(Area) returns Electric Flux Density	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@67424e82
+Electric Charge.divideBy(Capacitance) returns Electromotive Force	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@42110406
+Electric Charge.divideBy(Electric Charge Line Density) returns Length	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@531d72ca
+Electric Charge.divideBy(Electric Charge Volume Density) returns Volume	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@22d8cfe0
+Electric Charge.divideBy(Electric Charge per Amount of Substance) returns Amount of Substance	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] = [D@579bb367
+Electric Charge.divideBy(Electric Flux Density) returns Area	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1de0aca6
+Electric Charge.divideBy(Electrical Conductivity) returns Magnetic Flux	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@255316f2
+Electric Charge.divideBy(Electromotive Force) returns Capacitance	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@41906a77
+Electric Charge.divideBy(Exposure) returns Mass	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4b9af9a9
+Electric Charge.divideBy(Magnetic Flux) returns Electrical Conductivity	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@5387f9e0
+Electric Charge.divideBy(Volume) returns Electric Charge Volume Density	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6e5e91e4
+Electric Charge Line Density.divideBy(Length) returns Electric Flux Density	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2cdf8d8a
+Electric Charge Line Density.divideBy(Time) returns Magnetic Field Strength	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@30946e09
+Electric Charge Line Density.divideBy(Angle) returns Electric Charge Line Density	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5cb0d902
+Electric Charge Line Density.divideBy(Area) returns Electric Charge Volume Density	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@46fbb2c1
+Electric Charge Line Density.divideBy(Capacitance) returns Electric Field Strength	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@1698c449
+Electric Charge Line Density.divideBy(Electric Charge Volume Density) returns Area	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5ef04b5
+Electric Charge Line Density.divideBy(Electric Field Strength) returns Capacitance	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@5f4da5c3
+Electric Charge Line Density.divideBy(Electric Flux Density) returns Length	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@443b7951
+Electric Charge Line Density.divideBy(Electromotive Force) returns Permittivity	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@14514713
+Electric Charge Line Density.divideBy(Exposure) returns Mass per Unit Length	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@69663380
+Electric Charge Line Density.divideBy(Force per Electric Charge) returns Capacitance	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@5b37e0d2
+Electric Charge Line Density.divideBy(Magnetic Field Strength) returns Time	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4459eb14
+Electric Charge Line Density.divideBy(Mass per Unit Length) returns Exposure	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5a2e4553
+Electric Charge Line Density.divideBy(Permittivity) returns Electromotive Force	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@28c97a5
+Electric Charge Volume Density.divideBy(Angle) returns Electric Charge Volume Density	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6659c656
+Electric Charge Volume Density.divideBy(Amount of Substance Per Unit Volume) returns Electric Charge per Amount of Substance	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@6d5380c2
+Electric Charge Volume Density.divideBy(Density) returns Exposure	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@45ff54e6
+Electric Charge Volume Density.divideBy(Electric Charge per Amount of Substance) returns Amount of Substance Per Unit Volume	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] = [D@2328c243
+Electric Charge Volume Density.divideBy(Exposure) returns Density	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@bebdb06
+Electric Charge per Amount of Substance.divideBy(Angle) returns Electric Charge per Amount of Substance	=>	[0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a4f0f29
+Electric Charge per Amount of Substance.divideBy(Electric Charge) returns Inverse Amount of Substance	=>	[0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@45283ce2
+Electric Charge per Amount of Substance.divideBy(Inverse Amount of Substance) returns Electric Charge	=>	[0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@2077d4de
+Electric Current Density.divideBy(Angle) returns Electric Current Density	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7591083d
+Electric Current Density.divideBy(Activity) returns Electric Flux Density	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@77a567e1
+Electric Current Density.divideBy(Electric Charge Volume Density) returns Linear Velocity	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@736e9adb
+Electric Current Density.divideBy(Electric Flux Density) returns Activity	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6d21714c
+Electric Current Density.divideBy(Frequency) returns Electric Flux Density	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@108c4c35
+Electric Current Density.divideBy(Linear Velocity) returns Electric Charge Volume Density	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4ccabbaa
+Electric Current per Angle.divideBy(Angle) returns Electric Current per Angle	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4bf558aa
+Electric Dipole Moment.divideBy(Length) returns Electric Charge	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2d38eb89
+Electric Dipole Moment.divideBy(Angle) returns Electric Dipole Moment	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5fa7e7ff
+Electric Dipole Moment.divideBy(Area) returns Electric Charge Line Density	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4629104a
+Electric Dipole Moment.divideBy(Electric Charge) returns Length	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@27f8302d
+Electric Dipole Moment.divideBy(Electric Charge Line Density) returns Area	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4d76f3f8
+Electric Dipole Moment.divideBy(Electric Flux Density) returns Volume	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2d8e6db6
+Electric Dipole Moment.divideBy(Exposure) returns Length Mass	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@23ab930d
+Electric Dipole Moment.divideBy(Length Mass) returns Exposure	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4534b60d
+Electric Dipole Moment.divideBy(Volume) returns Electric Flux Density	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3fa77460
+Electric Field Strength.divideBy(Angle) returns Electric Field Strength	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@619a5dff
+Electric Field Strength.divideBy(Electric Flux Density) returns Inverse Permittivity	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1ed6993a
+Electric Field Strength.divideBy(Force per Electric Charge) returns Angle	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@7e32c033
+Electric Field Strength.divideBy(Inverse Permittivity) returns Electric Flux Density	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@7ab2bfe1
+Electric Field Strength.divideBy(Linear Velocity) returns Magnetic Flux Density	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@497470ed
+Electric Field Strength.divideBy(Magnetic Field Strength) returns Resistance	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@63c12fb0
+Electric Field Strength.divideBy(Magnetic Flux Density) returns Linear Velocity	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@b1a58a3
+Electric Field Strength.divideBy(Resistance) returns Magnetic Field Strength	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@6438a396
+Electric Flux Density.divideBy(Length) returns Electric Charge Volume Density	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@e2144e4
+Electric Flux Density.divideBy(Time) returns Electric Current Density	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6477463f
+Electric Flux Density.divideBy(Angle) returns Electric Flux Density	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d71d552
+Electric Flux Density.divideBy(Electric Charge Volume Density) returns Length	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1cf4f579
+Electric Flux Density.divideBy(Electric Current Density) returns Time	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@18769467
+Electric Flux Density.divideBy(Electric Field Strength) returns Permittivity	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@46ee7fe8
+Electric Flux Density.divideBy(Electrical Conductivity) returns Magnetic Flux Density	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@7506e922
+Electric Flux Density.divideBy(Exposure) returns Mass per Unit Area	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4ee285c6
+Electric Flux Density.divideBy(Force per Electric Charge) returns Permittivity	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@621be5d1
+Electric Flux Density.divideBy(Magnetic Flux Density) returns Electrical Conductivity	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@573fd745
+Electric Flux Density.divideBy(Mass per Unit Area) returns Exposure	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@15327b79
+Electric Flux Density.divideBy(Permittivity) returns Electric Field Strength	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@4f2410ac
+Electrical Conductivity.divideBy(Angle) returns Electrical Conductivity	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@722c41f4
+Electrical Conductivity.divideBy(Activity) returns Capacitance	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5b80350b
+Electrical Conductivity.divideBy(Capacitance) returns Activity	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@5d6f64b1
+Electrical Conductivity.divideBy(Frequency) returns Capacitance	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@32a1bec0
+Electrical Conductivity.divideBy(Linear Velocity) returns Permittivity	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@22927a81
+Electrical Conductivity.divideBy(Permittivity) returns Linear Velocity	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@78e03bb5
+Electromotive Force.divideBy(Length) returns Electric Field Strength	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5e8c92f4
+Electromotive Force.divideBy(Electric Current) returns Resistance	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@61e4705b
+Electromotive Force.divideBy(Angle) returns Electromotive Force	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@50134894
+Electromotive Force.divideBy(Activity) returns Magnetic Flux	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2957fcb0
+Electromotive Force.divideBy(Electric Charge Line Density) returns Inverse Permittivity	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1376c05c
+Electromotive Force.divideBy(Electric Field Strength) returns Length	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@51521cc1
+Electromotive Force.divideBy(Force per Electric Charge) returns Length	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@1b4fb997
+Electromotive Force.divideBy(Frequency) returns Magnetic Flux	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@deb6432
+Electromotive Force.divideBy(Inverse Permittivity) returns Electric Charge Line Density	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@28ba21f3
+Electromotive Force.divideBy(Kinematic Viscosity) returns Magnetic Flux Density	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@694f9431
+Electromotive Force.divideBy(Magnetic Flux) returns Activity	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@f2a0b8e
+Electromotive Force.divideBy(Magnetic Flux Density) returns Kinematic Viscosity	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@593634ad
+Electromotive Force.divideBy(Resistance) returns Electric Current	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@20fa23c1
+Electromotive Force.divideBy(Thermal Diffusivity) returns Magnetic Flux Density	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3581c5f3
+Energy Density.divideBy(Temperature) returns Volumetric heat capacity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@6aa8ceb6
+Energy Density.divideBy(Angle) returns Energy Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2530c12
+Energy Density.divideBy(Absorbed Dose) returns Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@73c6c3b2
+Energy Density.divideBy(Activity) returns Dynamic Viscosity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@48533e64
+Energy Density.divideBy(Amount of Substance Per Unit Volume) returns Molar Energy	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@64a294a6
+Energy Density.divideBy(Density) returns Absorbed Dose	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7e0b37bc
+Energy Density.divideBy(Dose Equivalent) returns Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3b95a09c
+Energy Density.divideBy(Dynamic Viscosity) returns Activity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6ae40994
+Energy Density.divideBy(Electric Charge Volume Density) returns Electromotive Force	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1a93a7ca
+Energy Density.divideBy(Electric Field Strength) returns Electric Flux Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3d82c5f3
+Energy Density.divideBy(Electric Flux Density) returns Electric Field Strength	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2b05039f
+Energy Density.divideBy(Electromotive Force) returns Electric Charge Volume Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@61e717c2
+Energy Density.divideBy(Force per Electric Charge) returns Electric Flux Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@66cd51c3
+Energy Density.divideBy(Frequency) returns Dynamic Viscosity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4dcbadb4
+Energy Density.divideBy(Linear Acceleration) returns Mass per Unit Area	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4e515669
+Energy Density.divideBy(Magnetic Field Strength) returns Magnetic Flux Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@17d10166
+Energy Density.divideBy(Magnetic Flux Density) returns Magnetic Field Strength	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@1b9e1916
+Energy Density.divideBy(Mass Temperature) returns Specific Heat Volume	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@ba8a1dc
+Energy Density.divideBy(Mass per Unit Area) returns Linear Acceleration	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4f8e5cde
+Energy Density.divideBy(Molar Energy) returns Amount of Substance Per Unit Volume	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@504bae78
+Energy Density.divideBy(Pressure or Stress) returns Angle	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3b764bce
+Energy Density.divideBy(Specific Energy) returns Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@759ebb3d
+Energy Density.divideBy(Specific Heat Volume) returns Mass Temperature	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@484b61fc
+Energy Density.divideBy(Thrust to Mass Ratio) returns Mass per Unit Area	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@45fe3ee3
+Energy Density.divideBy(Volumetric heat capacity) returns Temperature	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@4cdf35a9
+Energy and Work.divideBy(Length) returns Force	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4c98385c
+Energy and Work.divideBy(Mass) returns Absorbed Dose	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5fcfe4b2
+Energy and Work.divideBy(Time) returns Heat Flow Rate	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6bf2d08e
+Energy and Work.divideBy(Electric Current) returns Magnetic Flux	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5eb5c224
+Energy and Work.divideBy(Temperature) returns Heat Capacity and Entropy	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@53e25b76
+Energy and Work.divideBy(Amount of Substance) returns Molar Energy	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@73a8dfcc
+Energy and Work.divideBy(Angle) returns Energy and Work	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ea30797
+Energy and Work.divideBy(Absorbed Dose) returns Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7e774085
+Energy and Work.divideBy(Activity) returns Angular Momentum	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3f8f9dd6
+Energy and Work.divideBy(Angular Momentum) returns Activity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@aec6354
+Energy and Work.divideBy(Area) returns Energy per Unit Area	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1c655221
+Energy and Work.divideBy(Dose Equivalent) returns Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@58d25a40
+Energy and Work.divideBy(Dynamic Viscosity) returns Volume per Unit Time	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b701da1
+Energy and Work.divideBy(Electric Charge) returns Electromotive Force	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@726f3b58
+Energy and Work.divideBy(Electric Dipole Moment) returns Electric Field Strength	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@442d9b6e
+Energy and Work.divideBy(Electric Field Strength) returns Electric Dipole Moment	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@ee7d9f1
+Energy and Work.divideBy(Electromotive Force) returns Electric Charge	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@15615099
+Energy and Work.divideBy(Energy Density) returns Volume	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1edf1c96
+Energy and Work.divideBy(Energy per Unit Area) returns Area	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@368102c8
+Energy and Work.divideBy(Force) returns Length	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6996db8
+Energy and Work.divideBy(Force per Electric Charge) returns Electric Dipole Moment	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@1963006a
+Energy and Work.divideBy(Force per Unit Length) returns Area	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7fbe847c
+Energy and Work.divideBy(Frequency) returns Angular Momentum	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@41975e01
+Energy and Work.divideBy(Heat Capacity and Entropy) returns Temperature	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@c2e1f26
+Energy and Work.divideBy(Heat Flow Rate) returns Time	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@dcf3e99
+Energy and Work.divideBy(Kinematic Viscosity) returns Mass per Time	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d9c638
+Energy and Work.divideBy(Length Mass) returns Linear Acceleration	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7dc5e7b4
+Energy and Work.divideBy(Linear Acceleration) returns Length Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ee0005
+Energy and Work.divideBy(Linear Momentum) returns Linear Velocity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@75a1cd57
+Energy and Work.divideBy(Linear Velocity) returns Linear Momentum	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d012ddd
+Energy and Work.divideBy(Magnetic Dipole Moment) returns Magnetic Flux Density	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6f2b958e
+Energy and Work.divideBy(Magnetic Flux) returns Electric Current	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@1eb44e46
+Energy and Work.divideBy(Magnetic Flux Density) returns Magnetic Dipole Moment	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6504e3b2
+Energy and Work.divideBy(Mass Temperature) returns Specific Heat Capacity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@515f550a
+Energy and Work.divideBy(Mass per Time) returns Kinematic Viscosity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@626b2d4a
+Energy and Work.divideBy(Molar Energy) returns Amount of Substance	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@5e91993f
+Energy and Work.divideBy(Molar Heat Capacity) returns Temperature Amount of Substance	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@1c4af82c
+Energy and Work.divideBy(Power) returns Time	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@379619aa
+Energy and Work.divideBy(Pressure or Stress) returns Volume	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@cac736f
+Energy and Work.divideBy(Specific Energy) returns Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5e265ba4
+Energy and Work.divideBy(Specific Heat Capacity) returns Mass Temperature	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@156643d4
+Energy and Work.divideBy(Temperature Amount of Substance) returns Molar Heat Capacity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] = [D@123a439b
+Energy and Work.divideBy(Thermal Diffusivity) returns Mass per Time	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7de26db8
+Energy and Work.divideBy(Thrust to Mass Ratio) returns Length Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1175e2db
+Energy and Work.divideBy(Torque) returns Angle	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@36aa7bc2
+Energy and Work.divideBy(Volume) returns Energy Density	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@76ccd017
+Energy and Work.divideBy(Volume per Unit Time) returns Dynamic Viscosity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@182decdb
+Energy per Unit Area.divideBy(Length) returns Energy Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@26f0a63f
+Energy per Unit Area.divideBy(Time) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4361bd48
+Energy per Unit Area.divideBy(Electric Current) returns Magnetic Flux Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@53bd815b
+Energy per Unit Area.divideBy(Angle) returns Energy per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2401f4c3
+Energy per Unit Area.divideBy(Absorbed Dose) returns Mass per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7637f22
+Energy per Unit Area.divideBy(Activity) returns Mass per Time	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4926097b
+Energy per Unit Area.divideBy(Dose Equivalent) returns Mass per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@762efe5d
+Energy per Unit Area.divideBy(Dynamic Viscosity) returns Linear Velocity	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5d22bbb7
+Energy per Unit Area.divideBy(Electric Charge Line Density) returns Electric Field Strength	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@41a4555e
+Energy per Unit Area.divideBy(Electric Current Density) returns Magnetic Flux	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@3830f1c0
+Energy per Unit Area.divideBy(Electric Field Strength) returns Electric Charge Line Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@39ed3c8d
+Energy per Unit Area.divideBy(Electric Flux Density) returns Electromotive Force	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@71dac704
+Energy per Unit Area.divideBy(Electromotive Force) returns Electric Flux Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@123772c4
+Energy per Unit Area.divideBy(Energy Density) returns Length	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2d363fb3
+Energy per Unit Area.divideBy(Force per Electric Charge) returns Electric Charge Line Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@7d6f77cc
+Energy per Unit Area.divideBy(Force per Unit Length) returns Angle	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5aaa6d82
+Energy per Unit Area.divideBy(Frequency) returns Mass per Time	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@73a28541
+Energy per Unit Area.divideBy(Heat Flow Rate per Unit Area) returns Time	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6f75e721
+Energy per Unit Area.divideBy(Length Temperature) returns Volumetric heat capacity	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@69222c14
+Energy per Unit Area.divideBy(Linear Acceleration) returns Mass per Unit Length	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@606d8acf
+Energy per Unit Area.divideBy(Linear Velocity) returns Dynamic Viscosity	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@782830e
+Energy per Unit Area.divideBy(Magnetic Flux) returns Electric Current Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@470e2030
+Energy per Unit Area.divideBy(Magnetic Flux Density) returns Electric Current	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3fb4f649
+Energy per Unit Area.divideBy(Mass per Time) returns Activity	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@33833882
+Energy per Unit Area.divideBy(Mass per Unit Area) returns Absorbed Dose	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@200a570f
+Energy per Unit Area.divideBy(Mass per Unit Length) returns Linear Acceleration	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@16b3fc9e
+Energy per Unit Area.divideBy(Power per Unit Area) returns Time	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@e2d56bf
+Energy per Unit Area.divideBy(Pressure or Stress) returns Length	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@244038d0
+Energy per Unit Area.divideBy(Specific Energy) returns Mass per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5680a178
+Energy per Unit Area.divideBy(Thrust to Mass Ratio) returns Mass per Unit Length	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5fdef03a
+Energy per Unit Area.divideBy(Volumetric heat capacity) returns Length Temperature	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@3b22cdd0
+Exposure.divideBy(Angle) returns Exposure	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1e81f4dc
+Exposure.divideBy(Amount of Substance per Unit Mass) returns Electric Charge per Amount of Substance	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@4d591d15
+Exposure.divideBy(Electric Charge per Amount of Substance) returns Amount of Substance per Unit Mass	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] = [D@65ae6ba4
+Force.divideBy(Length) returns Energy per Unit Area	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@48cf768c
+Force.divideBy(Mass) returns Linear Acceleration	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@59f95c5d
+Force.divideBy(Angle) returns Force	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5ccd43c2
+Force.divideBy(Absorbed Dose) returns Mass per Unit Length	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4aa8f0b4
+Force.divideBy(Activity) returns Linear Momentum	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7960847b
+Force.divideBy(Area) returns Energy Density	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6a6824be
+Force.divideBy(Area Temperature) returns Volumetric heat capacity	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@5c8da962
+Force.divideBy(Dose Equivalent) returns Mass per Unit Length	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@512ddf17
+Force.divideBy(Dynamic Viscosity) returns Kinematic Viscosity	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2c13da15
+Force.divideBy(Electric Charge) returns Electric Field Strength	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@77556fd
+Force.divideBy(Electric Charge Line Density) returns Electromotive Force	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@368239c8
+Force.divideBy(Electric Field Strength) returns Electric Charge	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@9e89d68
+Force.divideBy(Electromotive Force) returns Electric Charge Line Density	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3b192d32
+Force.divideBy(Energy Density) returns Area	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@16f65612
+Force.divideBy(Energy per Unit Area) returns Length	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@311d617d
+Force.divideBy(Force per Electric Charge) returns Electric Charge	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@7c53a9eb
+Force.divideBy(Force per Unit Length) returns Length	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ed17bee
+Force.divideBy(Frequency) returns Linear Momentum	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2a33fae0
+Force.divideBy(Kinematic Viscosity) returns Dynamic Viscosity	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@707f7052
+Force.divideBy(Linear Acceleration) returns Mass	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@11028347
+Force.divideBy(Linear Momentum) returns Activity	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@14899482
+Force.divideBy(Linear Velocity) returns Mass per Time	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@21588809
+Force.divideBy(Magnetic Field Strength) returns Magnetic Flux	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2aae9190
+Force.divideBy(Magnetic Flux) returns Magnetic Field Strength	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@2f333739
+Force.divideBy(Mass per Time) returns Linear Velocity	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@77468bd9
+Force.divideBy(Mass per Unit Length) returns Absorbed Dose	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@12bb4df8
+Force.divideBy(Pressure or Stress) returns Area	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4cc77c2e
+Force.divideBy(Specific Energy) returns Mass per Unit Length	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a7b0070
+Force.divideBy(Thermal Diffusivity) returns Dynamic Viscosity	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@39a054a5
+Force.divideBy(Thrust to Mass Ratio) returns Mass	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@71bc1ae4
+Force.divideBy(Volumetric heat capacity) returns Area Temperature	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6ed3ef1
+Force per Electric Charge.divideBy(Angle) returns Electric Field Strength	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2437c6dc
+Force per Electric Charge.divideBy(Electric Field Strength) returns Angle	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@1f89ab83
+Force per Electric Charge.divideBy(Electric Flux Density) returns Inverse Permittivity	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@e73f9ac
+Force per Electric Charge.divideBy(Inverse Permittivity) returns Electric Flux Density	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@61064425
+Force per Electric Charge.divideBy(Linear Velocity) returns Magnetic Flux Density	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7b1d7fff
+Force per Electric Charge.divideBy(Magnetic Field Strength) returns Resistance	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@299a06ac
+Force per Electric Charge.divideBy(Magnetic Flux Density) returns Linear Velocity	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@383534aa
+Force per Electric Charge.divideBy(Resistance) returns Magnetic Field Strength	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@6bc168e5
+Force per Unit Length.divideBy(Length) returns Energy Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7b3300e5
+Force per Unit Length.divideBy(Time) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2e5c649
+Force per Unit Length.divideBy(Electric Current) returns Magnetic Flux Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@136432db
+Force per Unit Length.divideBy(Angle) returns Energy per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7382f612
+Force per Unit Length.divideBy(Absorbed Dose) returns Mass per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1055e4af
+Force per Unit Length.divideBy(Activity) returns Mass per Time	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3caeaf62
+Force per Unit Length.divideBy(Dose Equivalent) returns Mass per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@e6ea0c6
+Force per Unit Length.divideBy(Dynamic Viscosity) returns Linear Velocity	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6a38e57f
+Force per Unit Length.divideBy(Electric Charge Line Density) returns Electric Field Strength	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5577140b
+Force per Unit Length.divideBy(Electric Current Density) returns Magnetic Flux	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1c6b6478
+Force per Unit Length.divideBy(Electric Field Strength) returns Electric Charge Line Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@67f89fa3
+Force per Unit Length.divideBy(Electric Flux Density) returns Electromotive Force	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4ac68d3e
+Force per Unit Length.divideBy(Electromotive Force) returns Electric Flux Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@277c0f21
+Force per Unit Length.divideBy(Energy Density) returns Length	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6073f712
+Force per Unit Length.divideBy(Energy per Unit Area) returns Angle	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@43556938
+Force per Unit Length.divideBy(Force per Electric Charge) returns Electric Charge Line Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3d04a311
+Force per Unit Length.divideBy(Frequency) returns Mass per Time	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a46a697
+Force per Unit Length.divideBy(Heat Flow Rate per Unit Area) returns Time	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5f205aa
+Force per Unit Length.divideBy(Length Temperature) returns Volumetric heat capacity	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@6d86b085
+Force per Unit Length.divideBy(Linear Acceleration) returns Mass per Unit Length	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@75828a0f
+Force per Unit Length.divideBy(Linear Velocity) returns Dynamic Viscosity	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3abfe836
+Force per Unit Length.divideBy(Magnetic Flux) returns Electric Current Density	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@2ff5659e
+Force per Unit Length.divideBy(Magnetic Flux Density) returns Electric Current	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@77afea7d
+Force per Unit Length.divideBy(Mass per Time) returns Activity	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@161cd475
+Force per Unit Length.divideBy(Mass per Unit Area) returns Absorbed Dose	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@532760d8
+Force per Unit Length.divideBy(Mass per Unit Length) returns Linear Acceleration	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@57fa26b7
+Force per Unit Length.divideBy(Power per Unit Area) returns Time	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5f8ed237
+Force per Unit Length.divideBy(Pressure or Stress) returns Length	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2f410acf
+Force per Unit Length.divideBy(Specific Energy) returns Mass per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@47089e5f
+Force per Unit Length.divideBy(Thrust to Mass Ratio) returns Mass per Unit Length	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4141d797
+Force per Unit Length.divideBy(Volumetric heat capacity) returns Length Temperature	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@68f7aae2
+Frequency.divideBy(Angle) returns Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4f47d241
+Frequency.divideBy(Activity) returns Angle	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4c3e4790
+Frequency.divideBy(Catalytic Activity) returns Inverse Amount of Substance	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@38cccef
+Frequency.divideBy(Exposure) returns Magnetic Flux Density	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5679c6c6
+Frequency.divideBy(Inverse Amount of Substance) returns Catalytic Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@27ddd392
+Frequency.divideBy(Magnetic Flux Density) returns Exposure	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@19e1023e
+Gravitational Attraction.divideBy(Angle) returns Gravitational Attraction	=>	[3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7cef4e59
+Heat Capacity and Entropy.divideBy(Mass) returns Specific Heat Capacity	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@64b8f8f4
+Heat Capacity and Entropy.divideBy(Amount of Substance) returns Molar Heat Capacity	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@2db0f6b2
+Heat Capacity and Entropy.divideBy(Angle) returns Heat Capacity and Entropy	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3cd1f1c8
+Heat Capacity and Entropy.divideBy(Area Thermal Expansion) returns Energy per Unit Area	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@3a4afd8d
+Heat Capacity and Entropy.divideBy(Energy Density) returns Volume Thermal Expansion	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1996cd68
+Heat Capacity and Entropy.divideBy(Energy per Unit Area) returns Area Thermal Expansion	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3339ad8e
+Heat Capacity and Entropy.divideBy(Force) returns Linear Thermal Expansion	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@555590
+Heat Capacity and Entropy.divideBy(Force per Unit Length) returns Area Thermal Expansion	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d1e7682
+Heat Capacity and Entropy.divideBy(Linear Thermal Expansion) returns Force	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@424c0bc4
+Heat Capacity and Entropy.divideBy(Molar Heat Capacity) returns Amount of Substance	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@3c679bde
+Heat Capacity and Entropy.divideBy(Pressure or Stress) returns Volume Thermal Expansion	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@16b4a017
+Heat Capacity and Entropy.divideBy(Specific Heat Capacity) returns Mass	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@8807e25
+Heat Capacity and Entropy.divideBy(Volume) returns Volumetric heat capacity	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2a3046da
+Heat Capacity and Entropy.divideBy(Volume Thermal Expansion) returns Energy Density	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@2a098129
+Heat Capacity and Entropy.divideBy(Volumetric heat capacity) returns Volume	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@198e2867
+Heat Flow Rate.divideBy(Mass) returns Absorbed Dose Rate	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@12f40c25
+Heat Flow Rate.divideBy(Electric Current) returns Electromotive Force	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@3ada9e37
+Heat Flow Rate.divideBy(Angle) returns Heat Flow Rate	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5cbc508c
+Heat Flow Rate.divideBy(Absorbed Dose) returns Mass per Time	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3419866c
+Heat Flow Rate.divideBy(Absorbed Dose Rate) returns Mass	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@63e31ee
+Heat Flow Rate.divideBy(Activity) returns Energy and Work	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@68fb2c38
+Heat Flow Rate.divideBy(Area) returns Heat Flow Rate per Unit Area	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@567d299b
+Heat Flow Rate.divideBy(Area Angle) returns Power per Area Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@2eafffde
+Heat Flow Rate.divideBy(Area Temperature) returns Coefficient of Heat Transfer	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@59690aa4
+Heat Flow Rate.divideBy(Catalytic Activity) returns Molar Energy	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@6842775d
+Heat Flow Rate.divideBy(Coefficient of Heat Transfer) returns Area Temperature	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@574caa3f
+Heat Flow Rate.divideBy(Dose Equivalent) returns Mass per Time	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@64cee07
+Heat Flow Rate.divideBy(Electromotive Force) returns Electric Current	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@1761e840
+Heat Flow Rate.divideBy(Energy Density) returns Volume per Unit Time	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6c629d6e
+Heat Flow Rate.divideBy(Energy and Work) returns Activity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5ecddf8f
+Heat Flow Rate.divideBy(Energy per Unit Area) returns Kinematic Viscosity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3f102e87
+Heat Flow Rate.divideBy(Force) returns Linear Velocity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27abe2cd
+Heat Flow Rate.divideBy(Force per Unit Length) returns Kinematic Viscosity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5f5a92bb
+Heat Flow Rate.divideBy(Frequency) returns Energy and Work	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6fdb1f78
+Heat Flow Rate.divideBy(Heat Flow Rate per Unit Area) returns Area	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@51016012
+Heat Flow Rate.divideBy(Kinematic Viscosity) returns Energy per Unit Area	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@29444d75
+Heat Flow Rate.divideBy(Length Temperature) returns Thermal Conductivity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@2280cdac
+Heat Flow Rate.divideBy(Linear Acceleration) returns Linear Momentum	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1517365b
+Heat Flow Rate.divideBy(Linear Momentum) returns Linear Acceleration	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4fccd51b
+Heat Flow Rate.divideBy(Linear Velocity) returns Force	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@44e81672
+Heat Flow Rate.divideBy(Mass per Time) returns Absorbed Dose	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@60215eee
+Heat Flow Rate.divideBy(Molar Energy) returns Catalytic Activity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@4ca8195f
+Heat Flow Rate.divideBy(Power) returns Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@65e579dc
+Heat Flow Rate.divideBy(Power per Angle) returns Solid Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@61baa894
+Heat Flow Rate.divideBy(Power per Area Angle) returns Area Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@b065c63
+Heat Flow Rate.divideBy(Power per Unit Area) returns Area	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@768debd
+Heat Flow Rate.divideBy(Pressure or Stress) returns Volume per Unit Time	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@490d6c15
+Heat Flow Rate.divideBy(Solid Angle) returns Power per Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@7d4793a8
+Heat Flow Rate.divideBy(Specific Energy) returns Mass per Time	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@449b2d27
+Heat Flow Rate.divideBy(Thermal Conductivity) returns Length Temperature	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@5479e3f
+Heat Flow Rate.divideBy(Thermal Diffusivity) returns Energy per Unit Area	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27082746
+Heat Flow Rate.divideBy(Thrust to Mass Ratio) returns Linear Momentum	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@66133adc
+Heat Flow Rate.divideBy(Torque) returns Activity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7bfcd12c
+Heat Flow Rate.divideBy(Volume per Unit Time) returns Energy Density	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@42f30e0a
+Heat Flow Rate per Unit Area.divideBy(Temperature) returns Coefficient of Heat Transfer	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@24273305
+Heat Flow Rate per Unit Area.divideBy(Angle) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5b1d2887
+Heat Flow Rate per Unit Area.divideBy(Absorbed Dose Rate) returns Mass per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@46f5f779
+Heat Flow Rate per Unit Area.divideBy(Activity) returns Energy per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1c2c22f3
+Heat Flow Rate per Unit Area.divideBy(Coefficient of Heat Transfer) returns Temperature	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@18e8568
+Heat Flow Rate per Unit Area.divideBy(Dynamic Viscosity) returns Linear Acceleration	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@33e5ccce
+Heat Flow Rate per Unit Area.divideBy(Electric Current Density) returns Electromotive Force	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5a42bbf4
+Heat Flow Rate per Unit Area.divideBy(Electric Field Strength) returns Magnetic Field Strength	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@270421f5
+Heat Flow Rate per Unit Area.divideBy(Electromotive Force) returns Electric Current Density	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@52d455b8
+Heat Flow Rate per Unit Area.divideBy(Energy Density) returns Linear Velocity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4f4a7090
+Heat Flow Rate per Unit Area.divideBy(Energy per Unit Area) returns Activity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@18ef96
+Heat Flow Rate per Unit Area.divideBy(Force per Electric Charge) returns Magnetic Field Strength	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6956de9
+Heat Flow Rate per Unit Area.divideBy(Force per Unit Length) returns Activity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@769c9116
+Heat Flow Rate per Unit Area.divideBy(Frequency) returns Energy per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6aceb1a5
+Heat Flow Rate per Unit Area.divideBy(Linear Acceleration) returns Dynamic Viscosity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2d6d8735
+Heat Flow Rate per Unit Area.divideBy(Linear Velocity) returns Energy Density	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ba4d54
+Heat Flow Rate per Unit Area.divideBy(Magnetic Field Strength) returns Electric Field Strength	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@12bc6874
+Heat Flow Rate per Unit Area.divideBy(Mass per Unit Area) returns Absorbed Dose Rate	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@de0a01f
+Heat Flow Rate per Unit Area.divideBy(Power per Area Angle) returns Solid Angle	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@4c75cab9
+Heat Flow Rate per Unit Area.divideBy(Power per Unit Area) returns Angle	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ef7fe8e
+Heat Flow Rate per Unit Area.divideBy(Pressure or Stress) returns Linear Velocity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6f79caec
+Heat Flow Rate per Unit Area.divideBy(Solid Angle) returns Power per Area Angle	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@67117f44
+Heat Flow Rate per Unit Area.divideBy(Thrust to Mass Ratio) returns Dynamic Viscosity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5d3411d
+Illuminance.divideBy(Angle) returns Illuminance	=>	[-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2471cca7
+Illuminance.divideBy(Luminance) returns Plane Angle	=>	[-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] * [-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] = [D@5fe5c6f
+Illuminance.divideBy(Plane Angle) returns Luminance	=>	[-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@6979e8cb
+Inductance.divideBy(Length) returns Permeability	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@763d9750
+Inductance.divideBy(Time) returns Resistance	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5c0369c4
+Inductance.divideBy(Angle) returns Inductance	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2be94b0f
+Inductance.divideBy(Permeability) returns Length	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@d70c109
+Inductance.divideBy(Resistance) returns Time	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@17ed40e0
+Inverse Amount of Substance.divideBy(Angle) returns Inverse Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@50675690
+Inverse Permittivity.divideBy(Angle) returns Inverse Permittivity	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@31b7dea0
+Inverse Permittivity.divideBy(Absorbed Dose) returns Permeability	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3ac42916
+Inverse Permittivity.divideBy(Dose Equivalent) returns Permeability	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@47d384ee
+Inverse Permittivity.divideBy(Inductance) returns Linear Acceleration	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@2d6a9952
+Inverse Permittivity.divideBy(Linear Acceleration) returns Inductance	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@22a71081
+Inverse Permittivity.divideBy(Linear Velocity) returns Resistance	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3930015a
+Inverse Permittivity.divideBy(Permeability) returns Absorbed Dose	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@629f0666
+Inverse Permittivity.divideBy(Resistance) returns Linear Velocity	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@1bc6a36e
+Inverse Permittivity.divideBy(Specific Energy) returns Permeability	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ff8b8f
+Inverse Permittivity.divideBy(Thrust to Mass Ratio) returns Inductance	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@387c703b
+Kinematic Viscosity.divideBy(Length) returns Linear Velocity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@224aed64
+Kinematic Viscosity.divideBy(Time) returns Absorbed Dose	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@c39f790
+Kinematic Viscosity.divideBy(Angle) returns Kinematic Viscosity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@71e7a66b
+Kinematic Viscosity.divideBy(Absorbed Dose) returns Time	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ac1fdc4
+Kinematic Viscosity.divideBy(Absorbed Dose Rate) returns Time Squared	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5f150435
+Kinematic Viscosity.divideBy(Activity) returns Area	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1c53fd30
+Kinematic Viscosity.divideBy(Area) returns Activity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@50cbc42f
+Kinematic Viscosity.divideBy(Dose Equivalent) returns Time	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@75412c2f
+Kinematic Viscosity.divideBy(Exposure) returns Magnetic Flux	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@282ba1e
+Kinematic Viscosity.divideBy(Frequency) returns Area	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@13b6d03
+Kinematic Viscosity.divideBy(Linear Velocity) returns Length	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@f5f2bb7
+Kinematic Viscosity.divideBy(Magnetic Flux) returns Exposure	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@73035e27
+Kinematic Viscosity.divideBy(Specific Energy) returns Time	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@64c64813
+Kinematic Viscosity.divideBy(Thermal Diffusivity) returns Angle	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3ecf72fd
+Kinematic Viscosity.divideBy(Time Squared) returns Absorbed Dose Rate	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@483bf400
+Length Mass.divideBy(Length) returns Mass	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@21a06946
+Length Mass.divideBy(Mass) returns Length	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@77f03bb1
+Length Mass.divideBy(Time) returns Linear Momentum	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@326de728
+Length Mass.divideBy(Angle) returns Length Mass	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@25618e91
+Length Mass.divideBy(Area) returns Mass per Unit Length	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a92922
+Length Mass.divideBy(Force) returns Time Squared	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@71f2a7d5
+Length Mass.divideBy(Linear Momentum) returns Time	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2cfb4a64
+Length Mass.divideBy(Linear Thermal Expansion) returns Mass Temperature	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@5474c6c
+Length Mass.divideBy(Mass Temperature) returns Linear Thermal Expansion	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@4b6995df
+Length Mass.divideBy(Mass per Unit Area) returns Volume	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2fc14f68
+Length Mass.divideBy(Mass per Unit Length) returns Area	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@591f989e
+Length Mass.divideBy(Time Squared) returns Force	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@66048bfd
+Length Mass.divideBy(Volume) returns Mass per Unit Area	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@61443d8f
+Length Temperature.divideBy(Length) returns Temperature	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@445b84c0
+Length Temperature.divideBy(Temperature) returns Length	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@61a52fbd
+Length Temperature.divideBy(Angle) returns Length Temperature	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@233c0b17
+Length Temperature.divideBy(Heat Flow Rate) returns Thermal Resistivity	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@63d4e2ba
+Length Temperature.divideBy(Power) returns Thermal Resistivity	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7bb11784
+Length Temperature.divideBy(Thermal Resistivity) returns Heat Flow Rate	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@33a10788
+Linear Acceleration.divideBy(Angle) returns Linear Acceleration	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7006c658
+Linear Acceleration.divideBy(Activity) returns Linear Velocity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@34033bd0
+Linear Acceleration.divideBy(Area Temperature) returns Specific Heat Volume	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@47fd17e3
+Linear Acceleration.divideBy(Electric Field Strength) returns Exposure	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@7cdbc5d3
+Linear Acceleration.divideBy(Exposure) returns Electric Field Strength	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@3aa9e816
+Linear Acceleration.divideBy(Force per Electric Charge) returns Exposure	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@17d99928
+Linear Acceleration.divideBy(Frequency) returns Linear Velocity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3834d63f
+Linear Acceleration.divideBy(Gravitational Attraction) returns Mass per Unit Area	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ae369b7
+Linear Acceleration.divideBy(Linear Velocity) returns Activity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6fffcba5
+Linear Acceleration.divideBy(Mass per Unit Area) returns Gravitational Attraction	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@34340fab
+Linear Acceleration.divideBy(Specific Heat Volume) returns Area Temperature	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@2aafb23c
+Linear Acceleration.divideBy(Thrust to Mass Ratio) returns Angle	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2b80d80f
+Linear Momentum.divideBy(Length) returns Mass per Time	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3ab39c39
+Linear Momentum.divideBy(Mass) returns Linear Velocity	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2eee9593
+Linear Momentum.divideBy(Time) returns Force	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7907ec20
+Linear Momentum.divideBy(Angle) returns Linear Momentum	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@546a03af
+Linear Momentum.divideBy(Activity) returns Length Mass	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@721e0f4f
+Linear Momentum.divideBy(Area) returns Dynamic Viscosity	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@28864e92
+Linear Momentum.divideBy(Dynamic Viscosity) returns Area	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6ea6d14e
+Linear Momentum.divideBy(Electric Charge Line Density) returns Magnetic Flux	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6ad5c04e
+Linear Momentum.divideBy(Electric Dipole Moment) returns Magnetic Flux Density	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6833ce2c
+Linear Momentum.divideBy(Force) returns Time	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@725bef66
+Linear Momentum.divideBy(Frequency) returns Length Mass	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2aaf7cc2
+Linear Momentum.divideBy(Kinematic Viscosity) returns Mass per Unit Length	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6e3c1e69
+Linear Momentum.divideBy(Length Mass) returns Activity	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1888ff2c
+Linear Momentum.divideBy(Linear Velocity) returns Mass	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@35851384
+Linear Momentum.divideBy(Magnetic Flux) returns Electric Charge Line Density	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@649d209a
+Linear Momentum.divideBy(Magnetic Flux Density) returns Electric Dipole Moment	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6adca536
+Linear Momentum.divideBy(Mass per Time) returns Length	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@357246de
+Linear Momentum.divideBy(Mass per Unit Area) returns Volume per Unit Time	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@28f67ac7
+Linear Momentum.divideBy(Mass per Unit Length) returns Kinematic Viscosity	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@256216b3
+Linear Momentum.divideBy(Thermal Diffusivity) returns Mass per Unit Length	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2a18f23c
+Linear Momentum.divideBy(Volume per Unit Time) returns Mass per Unit Area	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@d7b1517
+Linear Thermal Expansion.divideBy(Angle) returns Linear Thermal Expansion	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@16c0663d
+Linear Thermal Expansion.divideBy(Mass per Unit Area) returns Specific Heat Pressure	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@23223dd8
+Linear Thermal Expansion.divideBy(Specific Heat Pressure) returns Mass per Unit Area	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@4ec6a292
+Linear Velocity.divideBy(Length) returns Activity	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b40d5f0
+Linear Velocity.divideBy(Time) returns Linear Acceleration	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ea4a92b
+Linear Velocity.divideBy(Angle) returns Linear Velocity	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3c5a99da
+Linear Velocity.divideBy(Activity) returns Length	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@47f37ef1
+Linear Velocity.divideBy(Electrical Conductivity) returns Inverse Permittivity	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@5a01ccaa
+Linear Velocity.divideBy(Frequency) returns Length	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@71c7db30
+Linear Velocity.divideBy(Inverse Permittivity) returns Electrical Conductivity	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@19bb089b
+Linear Velocity.divideBy(Linear Acceleration) returns Time	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4563e9ab
+Linear Velocity.divideBy(Thrust to Mass Ratio) returns Time	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@11531931
+Luminance.divideBy(Angle) returns Luminance	=>	[-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5e025e70
+Luminous Flux.divideBy(Angle) returns Luminous Flux	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1fbc7afb
+Luminous Flux.divideBy(Luminous Intensity) returns Plane Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] = [D@45c8e616
+Luminous Flux.divideBy(Area) returns Illuminance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4cdbe50f
+Luminous Flux.divideBy(Illuminance) returns Area	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] * [-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] = [D@66d33a
+Luminous Flux.divideBy(Plane Angle) returns Luminous Intensity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@7cf10a6f
+Magnetic Dipole Moment.divideBy(Electric Current) returns Area	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7e0babb1
+Magnetic Dipole Moment.divideBy(Angle) returns Magnetic Dipole Moment	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6debcae2
+Magnetic Dipole Moment.divideBy(Angular Momentum) returns Exposure	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5ba23b66
+Magnetic Dipole Moment.divideBy(Area) returns Electric Current	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ff4f00f
+Magnetic Dipole Moment.divideBy(Electric Charge) returns Kinematic Viscosity	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@c818063
+Magnetic Dipole Moment.divideBy(Electric Charge Line Density) returns Volume per Unit Time	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@3f0ee7cb
+Magnetic Dipole Moment.divideBy(Electric Dipole Moment) returns Linear Velocity	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@75bd9247
+Magnetic Dipole Moment.divideBy(Exposure) returns Angular Momentum	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7d417077
+Magnetic Dipole Moment.divideBy(Kinematic Viscosity) returns Electric Charge	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7dc36524
+Magnetic Dipole Moment.divideBy(Linear Velocity) returns Electric Dipole Moment	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@35bbe5e8
+Magnetic Dipole Moment.divideBy(Magnetic Field Strength) returns Volume	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2c8d66b2
+Magnetic Dipole Moment.divideBy(Thermal Diffusivity) returns Electric Charge	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5a39699c
+Magnetic Dipole Moment.divideBy(Volume) returns Magnetic Field Strength	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3cb5cdba
+Magnetic Dipole Moment.divideBy(Volume per Unit Time) returns Electric Charge Line Density	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@56cbfb61
+Magnetic Field Strength.divideBy(Length) returns Electric Current Density	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1134affc
+Magnetic Field Strength.divideBy(Angle) returns Magnetic Field Strength	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@d041cf
+Magnetic Field Strength.divideBy(Activity) returns Electric Charge Line Density	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@129a8472
+Magnetic Field Strength.divideBy(Dynamic Viscosity) returns Exposure	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b0375b3
+Magnetic Field Strength.divideBy(Electric Charge Line Density) returns Activity	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2f7c7260
+Magnetic Field Strength.divideBy(Electric Charge Volume Density) returns Kinematic Viscosity	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2d209079
+Magnetic Field Strength.divideBy(Electric Current Density) returns Length	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6bdf28bb
+Magnetic Field Strength.divideBy(Electric Field Strength) returns Electrical Conductivity	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6b71769e
+Magnetic Field Strength.divideBy(Electric Flux Density) returns Linear Velocity	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2752f6e2
+Magnetic Field Strength.divideBy(Electrical Conductivity) returns Electric Field Strength	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@e580929
+Magnetic Field Strength.divideBy(Exposure) returns Dynamic Viscosity	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1cd072a9
+Magnetic Field Strength.divideBy(Force per Electric Charge) returns Electrical Conductivity	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@7c75222b
+Magnetic Field Strength.divideBy(Frequency) returns Electric Charge Line Density	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4c203ea1
+Magnetic Field Strength.divideBy(Kinematic Viscosity) returns Electric Charge Volume Density	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27f674d
+Magnetic Field Strength.divideBy(Linear Velocity) returns Electric Flux Density	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1d251891
+Magnetic Field Strength.divideBy(Thermal Diffusivity) returns Electric Charge Volume Density	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@48140564
+Magnetic Flux.divideBy(Time) returns Electromotive Force	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@58ceff1
+Magnetic Flux.divideBy(Electric Current) returns Inductance	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7c30a502
+Magnetic Flux.divideBy(Angle) returns Magnetic Flux	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@49e4cb85
+Magnetic Flux.divideBy(Area) returns Magnetic Flux Density	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2133c8f8
+Magnetic Flux.divideBy(Electric Charge) returns Resistance	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@43a25848
+Magnetic Flux.divideBy(Electromotive Force) returns Time	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3ac3fd8b
+Magnetic Flux.divideBy(Inductance) returns Electric Current	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@5594a1b5
+Magnetic Flux.divideBy(Magnetic Flux Density) returns Area	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6a5fc7f7
+Magnetic Flux.divideBy(Resistance) returns Electric Charge	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@3b6eb2ec
+Magnetic Flux Density.divideBy(Angle) returns Magnetic Flux Density	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1e643faf
+Magnetic Flux Density.divideBy(Electric Current Density) returns Inductance	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6e8dacdf
+Magnetic Flux Density.divideBy(Electric Flux Density) returns Resistance	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7a79be86
+Magnetic Flux Density.divideBy(Inductance) returns Electric Current Density	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@34ce8af7
+Magnetic Flux Density.divideBy(Magnetic Field Strength) returns Permeability	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@b684286
+Magnetic Flux Density.divideBy(Permeability) returns Magnetic Field Strength	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@880ec60
+Magnetic Flux Density.divideBy(Resistance) returns Electric Flux Density	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@3f3afe78
+Magnetomotive Force.divideBy(Electric Current) returns Plane Angle	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7f63425a
+Magnetomotive Force.divideBy(Angle) returns Magnetomotive Force	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@36d64342
+Magnetomotive Force.divideBy(Angular Velocity) returns Electric Charge	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@39ba5a14
+Magnetomotive Force.divideBy(Electric Charge) returns Angular Velocity	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@511baa65
+Magnetomotive Force.divideBy(Electric Current per Angle) returns Solid Angle	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 0.0] = [D@340f438e
+Magnetomotive Force.divideBy(Plane Angle) returns Electric Current	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@30c7da1e
+Magnetomotive Force.divideBy(Solid Angle) returns Electric Current per Angle	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@5b464ce8
+Mass Temperature.divideBy(Mass) returns Temperature	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@57829d67
+Mass Temperature.divideBy(Temperature) returns Mass	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@19dfb72a
+Mass Temperature.divideBy(Angle) returns Mass Temperature	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@17c68925
+Mass Temperature.divideBy(Area Temperature) returns Mass per Unit Area	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@7e0ea639
+Mass Temperature.divideBy(Length Temperature) returns Mass per Unit Length	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@3d24753a
+Mass Temperature.divideBy(Mass per Unit Area) returns Area Temperature	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@59a6e353
+Mass Temperature.divideBy(Mass per Unit Length) returns Length Temperature	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a0ac6e3
+Mass per Time.divideBy(Length) returns Dynamic Viscosity	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@71be98f5
+Mass per Time.divideBy(Mass) returns Activity	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6fadae5d
+Mass per Time.divideBy(Time) returns Energy per Unit Area	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@17f6480
+Mass per Time.divideBy(Angle) returns Mass per Time	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2d6e8792
+Mass per Time.divideBy(Activity) returns Mass	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2812cbfa
+Mass per Time.divideBy(Density) returns Volume per Unit Time	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2acf57e3
+Mass per Time.divideBy(Dynamic Viscosity) returns Length	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@506e6d5e
+Mass per Time.divideBy(Electric Charge) returns Magnetic Flux Density	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@96532d6
+Mass per Time.divideBy(Electric Flux Density) returns Magnetic Flux	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@3796751b
+Mass per Time.divideBy(Energy per Unit Area) returns Time	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@67b64c45
+Mass per Time.divideBy(Force per Unit Length) returns Time	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4411d970
+Mass per Time.divideBy(Frequency) returns Mass	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6442b0a6
+Mass per Time.divideBy(Heat Flow Rate per Unit Area) returns Time Squared	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@60f82f98
+Mass per Time.divideBy(Kinematic Viscosity) returns Mass per Unit Area	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@35f983a6
+Mass per Time.divideBy(Linear Velocity) returns Mass per Unit Length	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7f690630
+Mass per Time.divideBy(Magnetic Flux) returns Electric Flux Density	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@edf4efb
+Mass per Time.divideBy(Magnetic Flux Density) returns Electric Charge	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@2f7a2457
+Mass per Time.divideBy(Mass per Unit Area) returns Kinematic Viscosity	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@566776ad
+Mass per Time.divideBy(Mass per Unit Length) returns Linear Velocity	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6108b2d7
+Mass per Time.divideBy(Power per Unit Area) returns Time Squared	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1554909b
+Mass per Time.divideBy(Thermal Diffusivity) returns Mass per Unit Area	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6bf256fa
+Mass per Time.divideBy(Time Squared) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6cd8737
+Mass per Time.divideBy(Volume per Unit Time) returns Density	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@22f71333
+Mass per Unit Area.divideBy(Length) returns Density	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@13969fbe
+Mass per Unit Area.divideBy(Angle) returns Mass per Unit Area	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6aaa5eb0
+Mass per Unit Area.divideBy(Density) returns Length	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3498ed
+Mass per Unit Length.divideBy(Length) returns Mass per Unit Area	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1a407d53
+Mass per Unit Length.divideBy(Time) returns Dynamic Viscosity	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d8c7aca
+Mass per Unit Length.divideBy(Angle) returns Mass per Unit Length	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5ebec15
+Mass per Unit Length.divideBy(Area) returns Density	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@21bcffb5
+Mass per Unit Length.divideBy(Density) returns Area	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@380fb434
+Mass per Unit Length.divideBy(Dynamic Viscosity) returns Time	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@668bc3d5
+Mass per Unit Length.divideBy(Energy Density) returns Time Squared	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3cda1055
+Mass per Unit Length.divideBy(Mass per Unit Area) returns Length	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a5d012c
+Mass per Unit Length.divideBy(Pressure or Stress) returns Time Squared	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3fb6a447
+Mass per Unit Length.divideBy(Time Squared) returns Energy Density	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@79b4d0f
+Molar Energy.divideBy(Temperature) returns Molar Heat Capacity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@6b2fad11
+Molar Energy.divideBy(Angle) returns Molar Energy	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@79698539
+Molar Energy.divideBy(Electric Charge per Amount of Substance) returns Electromotive Force	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] = [D@73f792cf
+Molar Energy.divideBy(Electromotive Force) returns Electric Charge per Amount of Substance	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@2ed94a8b
+Molar Energy.divideBy(Energy and Work) returns Inverse Amount of Substance	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@38082d64
+Molar Energy.divideBy(Inverse Amount of Substance) returns Energy and Work	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@dfd3711
+Molar Energy.divideBy(Molar Heat Capacity) returns Temperature	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@42d3bd8b
+Molar Energy.divideBy(Torque) returns Inverse Amount of Substance	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@26ba2a48
+Molar Heat Capacity.divideBy(Angle) returns Molar Heat Capacity	=>	[2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5f2050f6
+Molar Heat Capacity.divideBy(Heat Capacity and Entropy) returns Inverse Amount of Substance	=>	[2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@3b81a1bc
+Molar Heat Capacity.divideBy(Inverse Amount of Substance) returns Heat Capacity and Entropy	=>	[2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@64616ca2
+Permeability.divideBy(Angle) returns Permeability	=>	[1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@13fee20c
+Permittivity.divideBy(Angle) returns Permittivity	=>	[-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4e04a765
+Plane Angle.divideBy(Time) returns Angular Velocity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@783e6358
+Plane Angle.divideBy(Angle) returns Plane Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@17550481
+Plane Angle.divideBy(Angular Acceleration) returns Time Squared	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@735f7ae5
+Plane Angle.divideBy(Angular Velocity) returns Time	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@180bc464
+Plane Angle.divideBy(Time Squared) returns Angular Acceleration	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1324409e
+Power.divideBy(Mass) returns Absorbed Dose Rate	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2c6a3f77
+Power.divideBy(Electric Current) returns Electromotive Force	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@246ae04d
+Power.divideBy(Angle) returns Heat Flow Rate	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@62043840
+Power.divideBy(Absorbed Dose) returns Mass per Time	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5315b42e
+Power.divideBy(Absorbed Dose Rate) returns Mass	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ef9b8bc
+Power.divideBy(Activity) returns Energy and Work	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5d624da6
+Power.divideBy(Area) returns Heat Flow Rate per Unit Area	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1e67b872
+Power.divideBy(Area Angle) returns Power per Area Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@60addb54
+Power.divideBy(Area Temperature) returns Coefficient of Heat Transfer	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@3f2a3a5
+Power.divideBy(Catalytic Activity) returns Molar Energy	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@4cb2c100
+Power.divideBy(Coefficient of Heat Transfer) returns Area Temperature	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6fb554cc
+Power.divideBy(Dose Equivalent) returns Mass per Time	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@614c5515
+Power.divideBy(Electromotive Force) returns Electric Current	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@77b52d12
+Power.divideBy(Energy Density) returns Volume per Unit Time	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2d554825
+Power.divideBy(Energy and Work) returns Activity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@68837a77
+Power.divideBy(Energy per Unit Area) returns Kinematic Viscosity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6be46e8f
+Power.divideBy(Force) returns Linear Velocity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3567135c
+Power.divideBy(Force per Unit Length) returns Kinematic Viscosity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@327471b5
+Power.divideBy(Frequency) returns Energy and Work	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4157f54e
+Power.divideBy(Heat Flow Rate) returns Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@90f6bfd
+Power.divideBy(Heat Flow Rate per Unit Area) returns Area	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@47f6473
+Power.divideBy(Kinematic Viscosity) returns Energy per Unit Area	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@15975490
+Power.divideBy(Length Temperature) returns Thermal Conductivity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@6b143ee9
+Power.divideBy(Linear Acceleration) returns Linear Momentum	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1936f0f5
+Power.divideBy(Linear Momentum) returns Linear Acceleration	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6615435c
+Power.divideBy(Linear Velocity) returns Force	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4909b8da
+Power.divideBy(Mass per Time) returns Absorbed Dose	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3a03464
+Power.divideBy(Molar Energy) returns Catalytic Activity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@2d3fcdbd
+Power.divideBy(Power per Angle) returns Solid Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@617c74e5
+Power.divideBy(Power per Area Angle) returns Area Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@6537cf78
+Power.divideBy(Power per Unit Area) returns Area	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@67b6d4ae
+Power.divideBy(Pressure or Stress) returns Volume per Unit Time	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@34b7bfc0
+Power.divideBy(Solid Angle) returns Power per Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@366e2eef
+Power.divideBy(Specific Energy) returns Mass per Time	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6df97b55
+Power.divideBy(Thermal Conductivity) returns Length Temperature	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@3cbbc1e0
+Power.divideBy(Thermal Diffusivity) returns Energy per Unit Area	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@35fb3008
+Power.divideBy(Thrust to Mass Ratio) returns Linear Momentum	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7225790e
+Power.divideBy(Torque) returns Activity	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@54a097cc
+Power.divideBy(Volume per Unit Time) returns Energy Density	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@36f6e879
+Power per Angle.divideBy(Angle) returns Power per Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5a61f5df
+Power per Angle.divideBy(Area) returns Power per Area Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3551a94
+Power per Angle.divideBy(Power per Area Angle) returns Area	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@531be3c5
+Power per Area Angle.divideBy(Angle) returns Power per Area Angle	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@52af6cff
+Power per Unit Area.divideBy(Temperature) returns Coefficient of Heat Transfer	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@735b478
+Power per Unit Area.divideBy(Angle) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2c9f9fb0
+Power per Unit Area.divideBy(Absorbed Dose Rate) returns Mass per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2096442d
+Power per Unit Area.divideBy(Activity) returns Energy per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@9f70c54
+Power per Unit Area.divideBy(Coefficient of Heat Transfer) returns Temperature	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@234bef66
+Power per Unit Area.divideBy(Dynamic Viscosity) returns Linear Acceleration	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@737996a0
+Power per Unit Area.divideBy(Electric Current Density) returns Electromotive Force	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@61dc03ce
+Power per Unit Area.divideBy(Electric Field Strength) returns Magnetic Field Strength	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@50f8360d
+Power per Unit Area.divideBy(Electromotive Force) returns Electric Current Density	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@2cb4c3ab
+Power per Unit Area.divideBy(Energy Density) returns Linear Velocity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@13c78c0b
+Power per Unit Area.divideBy(Energy per Unit Area) returns Activity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@12843fce
+Power per Unit Area.divideBy(Force per Electric Charge) returns Magnetic Field Strength	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3dd3bcd
+Power per Unit Area.divideBy(Force per Unit Length) returns Activity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@97e1986
+Power per Unit Area.divideBy(Frequency) returns Energy per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@26f67b76
+Power per Unit Area.divideBy(Heat Flow Rate per Unit Area) returns Angle	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@153f5a29
+Power per Unit Area.divideBy(Linear Acceleration) returns Dynamic Viscosity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7f560810
+Power per Unit Area.divideBy(Linear Velocity) returns Energy Density	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@69d9c55
+Power per Unit Area.divideBy(Magnetic Field Strength) returns Electric Field Strength	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@13a57a3b
+Power per Unit Area.divideBy(Mass per Unit Area) returns Absorbed Dose Rate	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7ca48474
+Power per Unit Area.divideBy(Power per Area Angle) returns Solid Angle	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@337d0578
+Power per Unit Area.divideBy(Pressure or Stress) returns Linear Velocity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@59e84876
+Power per Unit Area.divideBy(Solid Angle) returns Power per Area Angle	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@61a485d2
+Power per Unit Area.divideBy(Thrust to Mass Ratio) returns Dynamic Viscosity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@39fb3ab6
+Pressure or Stress.divideBy(Temperature) returns Volumetric heat capacity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@6276ae34
+Pressure or Stress.divideBy(Angle) returns Energy Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7946e1f4
+Pressure or Stress.divideBy(Absorbed Dose) returns Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3c09711b
+Pressure or Stress.divideBy(Activity) returns Dynamic Viscosity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5cc7c2a6
+Pressure or Stress.divideBy(Amount of Substance Per Unit Volume) returns Molar Energy	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@b97c004
+Pressure or Stress.divideBy(Density) returns Absorbed Dose	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4590c9c3
+Pressure or Stress.divideBy(Dose Equivalent) returns Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@32e6e9c3
+Pressure or Stress.divideBy(Dynamic Viscosity) returns Activity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5056dfcb
+Pressure or Stress.divideBy(Electric Charge Volume Density) returns Electromotive Force	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6574b225
+Pressure or Stress.divideBy(Electric Field Strength) returns Electric Flux Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@2669b199
+Pressure or Stress.divideBy(Electric Flux Density) returns Electric Field Strength	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2344fc66
+Pressure or Stress.divideBy(Electromotive Force) returns Electric Charge Volume Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@458ad742
+Pressure or Stress.divideBy(Energy Density) returns Angle	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5afa04c
+Pressure or Stress.divideBy(Force per Electric Charge) returns Electric Flux Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6ea12c19
+Pressure or Stress.divideBy(Frequency) returns Dynamic Viscosity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6a024a67
+Pressure or Stress.divideBy(Linear Acceleration) returns Mass per Unit Area	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7921b0a2
+Pressure or Stress.divideBy(Magnetic Field Strength) returns Magnetic Flux Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@174d20a
+Pressure or Stress.divideBy(Magnetic Flux Density) returns Magnetic Field Strength	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@66d2e7d9
+Pressure or Stress.divideBy(Mass Temperature) returns Specific Heat Volume	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@1efbd816
+Pressure or Stress.divideBy(Mass per Unit Area) returns Linear Acceleration	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6a2bcfcb
+Pressure or Stress.divideBy(Molar Energy) returns Amount of Substance Per Unit Volume	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@4de8b406
+Pressure or Stress.divideBy(Specific Energy) returns Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3c756e4d
+Pressure or Stress.divideBy(Specific Heat Volume) returns Mass Temperature	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@7c0e2abd
+Pressure or Stress.divideBy(Thrust to Mass Ratio) returns Mass per Unit Area	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@48eff760
+Pressure or Stress.divideBy(Volumetric heat capacity) returns Temperature	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@402f32ff
+Resistance.divideBy(Angle) returns Resistance	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@573f2bb1
+Resistance.divideBy(Activity) returns Inductance	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5ae9a829
+Resistance.divideBy(Frequency) returns Inductance	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d8a00e3
+Resistance.divideBy(Inductance) returns Activity	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@548b7f67
+Resistance.divideBy(Linear Velocity) returns Permeability	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7ac7a4e4
+Resistance.divideBy(Permeability) returns Linear Velocity	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@6d78f375
+Solid Angle.divideBy(Angle) returns Solid Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@50c87b21
+Solid Angle.divideBy(Plane Angle) returns Plane Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@5f375618
+Specific Energy.divideBy(Length) returns Linear Acceleration	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1810399e
+Specific Energy.divideBy(Time) returns Absorbed Dose Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@32d992b2
+Specific Energy.divideBy(Temperature) returns Specific Heat Capacity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@215be6bb
+Specific Energy.divideBy(Angle) returns Absorbed Dose	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4439f31e
+Specific Energy.divideBy(Absorbed Dose) returns Angle	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5dfcfece
+Specific Energy.divideBy(Absorbed Dose Rate) returns Time	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@23ceabc1
+Specific Energy.divideBy(Activity) returns Kinematic Viscosity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5d5eef3d
+Specific Energy.divideBy(Amount of Substance per Unit Mass) returns Molar Energy	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@56f4468b
+Specific Energy.divideBy(Dose Equivalent) returns Angle	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6cc4c815
+Specific Energy.divideBy(Electromotive Force) returns Exposure	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3a82f6ef
+Specific Energy.divideBy(Exposure) returns Electromotive Force	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@100fc185
+Specific Energy.divideBy(Frequency) returns Kinematic Viscosity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@643b1d11
+Specific Energy.divideBy(Gravitational Attraction) returns Mass per Unit Length	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ef5e5e3
+Specific Energy.divideBy(Kinematic Viscosity) returns Activity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@36d4b5c
+Specific Energy.divideBy(Linear Acceleration) returns Length	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d00a15d
+Specific Energy.divideBy(Linear Velocity) returns Linear Velocity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@51efea79
+Specific Energy.divideBy(Mass per Unit Length) returns Gravitational Attraction	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5034c75a
+Specific Energy.divideBy(Molar Energy) returns Amount of Substance per Unit Mass	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@396a51ab
+Specific Energy.divideBy(Specific Heat Capacity) returns Temperature	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@51081592
+Specific Energy.divideBy(Thermal Diffusivity) returns Activity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7f9a81e8
+Specific Energy.divideBy(Thrust to Mass Ratio) returns Length	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@9629756
+Specific Heat Capacity.divideBy(Angle) returns Specific Heat Capacity	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@62ee68d8
+Specific Heat Capacity.divideBy(Amount of Substance per Unit Mass) returns Molar Heat Capacity	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@735b5592
+Specific Heat Capacity.divideBy(Energy Density) returns Specific Heat Pressure	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@58651fd0
+Specific Heat Capacity.divideBy(Linear Acceleration) returns Linear Thermal Expansion	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4520ebad
+Specific Heat Capacity.divideBy(Linear Thermal Expansion) returns Linear Acceleration	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@5419f379
+Specific Heat Capacity.divideBy(Molar Heat Capacity) returns Amount of Substance per Unit Mass	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@7dc7cbad
+Specific Heat Capacity.divideBy(Pressure or Stress) returns Specific Heat Pressure	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@d2cc05a
+Specific Heat Capacity.divideBy(Specific Heat Pressure) returns Energy Density	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@4f933fd1
+Specific Heat Capacity.divideBy(Specific Heat Volume) returns Volume	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@548a9f61
+Specific Heat Capacity.divideBy(Thrust to Mass Ratio) returns Linear Thermal Expansion	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1753acfe
+Specific Heat Capacity.divideBy(Volume) returns Specific Heat Volume	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7c16905e
+Specific Heat Pressure.divideBy(Angle) returns Specific Heat Pressure	=>	[3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2a2d45ba
+Specific Heat Volume.divideBy(Angle) returns Specific Heat Volume	=>	[-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2a5ca609
+Temperature Amount of Substance.divideBy(Temperature) returns Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@20e2cbe0
+Temperature Amount of Substance.divideBy(Amount of Substance) returns Temperature	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@68be2bc2
+Temperature Amount of Substance.divideBy(Angle) returns Temperature Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@28feb3fa
+Temperature Amount of Substance.divideBy(Amount of Substance per Unit Mass) returns Mass Temperature	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@675d3402
+Temperature Amount of Substance.divideBy(Mass Temperature) returns Amount of Substance per Unit Mass	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@51565ec2
+Thermal Conductivity.divideBy(Length) returns Coefficient of Heat Transfer	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@482f8f11
+Thermal Conductivity.divideBy(Angle) returns Thermal Conductivity	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1593948d
+Thermal Conductivity.divideBy(Angular Momentum) returns Specific Heat Volume	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b604f19
+Thermal Conductivity.divideBy(Coefficient of Heat Transfer) returns Length	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@7823a2f9
+Thermal Conductivity.divideBy(Dynamic Viscosity) returns Specific Heat Capacity	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4cc0edeb
+Thermal Conductivity.divideBy(Heat Flow Rate per Unit Area) returns Linear Thermal Expansion	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@457e2f02
+Thermal Conductivity.divideBy(Kinematic Viscosity) returns Volumetric heat capacity	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5c7fa833
+Thermal Conductivity.divideBy(Linear Thermal Expansion) returns Heat Flow Rate per Unit Area	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@39aeed2f
+Thermal Conductivity.divideBy(Power per Unit Area) returns Linear Thermal Expansion	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@724af044
+Thermal Conductivity.divideBy(Specific Heat Capacity) returns Dynamic Viscosity	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@4678c730
+Thermal Conductivity.divideBy(Specific Heat Volume) returns Angular Momentum	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6767c1fc
+Thermal Conductivity.divideBy(Thermal Diffusivity) returns Volumetric heat capacity	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@29ee9faa
+Thermal Conductivity.divideBy(Volumetric heat capacity) returns Kinematic Viscosity	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@c038203
+Thermal Diffusivity.divideBy(Length) returns Linear Velocity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@cc285f4
+Thermal Diffusivity.divideBy(Time) returns Absorbed Dose	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@55f3ddb1
+Thermal Diffusivity.divideBy(Angle) returns Kinematic Viscosity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@8bd1b6a
+Thermal Diffusivity.divideBy(Absorbed Dose) returns Time	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@18be83e4
+Thermal Diffusivity.divideBy(Absorbed Dose Rate) returns Time Squared	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@cb5822
+Thermal Diffusivity.divideBy(Activity) returns Area	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4b9e13df
+Thermal Diffusivity.divideBy(Area) returns Activity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2b98378d
+Thermal Diffusivity.divideBy(Dose Equivalent) returns Time	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@475530b9
+Thermal Diffusivity.divideBy(Exposure) returns Magnetic Flux	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1d057a39
+Thermal Diffusivity.divideBy(Frequency) returns Area	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@26be92ad
+Thermal Diffusivity.divideBy(Kinematic Viscosity) returns Angle	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4c70fda8
+Thermal Diffusivity.divideBy(Linear Velocity) returns Length	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@224edc67
+Thermal Diffusivity.divideBy(Magnetic Flux) returns Exposure	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@14acaea5
+Thermal Diffusivity.divideBy(Specific Energy) returns Time	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@46d56d67
+Thermal Diffusivity.divideBy(Time Squared) returns Absorbed Dose Rate	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@d8355a8
+Thermal Insulance.divideBy(Length) returns Thermal Resistivity	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@59fa1d9b
+Thermal Insulance.divideBy(Angle) returns Thermal Insulance	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@28d25987
+Thermal Insulance.divideBy(Area) returns Thermal Resistance	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4501b7af
+Thermal Insulance.divideBy(Thermal Resistance) returns Area	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@523884b2
+Thermal Insulance.divideBy(Thermal Resistivity) returns Length	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@5b275dab
+Thermal Resistance.divideBy(Angle) returns Thermal Resistance	=>	[-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@61832929
+Thermal Resistivity.divideBy(Length) returns Thermal Resistance	=>	[-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@29774679
+Thermal Resistivity.divideBy(Angle) returns Thermal Resistivity	=>	[-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3ffc5af1
+Thermal Resistivity.divideBy(Thermal Resistance) returns Length	=>	[-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@5e5792a0
+Thrust to Mass Ratio.divideBy(Angle) returns Linear Acceleration	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@26653222
+Thrust to Mass Ratio.divideBy(Activity) returns Linear Velocity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3532ec19
+Thrust to Mass Ratio.divideBy(Area Temperature) returns Specific Heat Volume	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@68c4039c
+Thrust to Mass Ratio.divideBy(Electric Field Strength) returns Exposure	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@ae45eb6
+Thrust to Mass Ratio.divideBy(Exposure) returns Electric Field Strength	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@59f99ea
+Thrust to Mass Ratio.divideBy(Force per Electric Charge) returns Exposure	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@27efef64
+Thrust to Mass Ratio.divideBy(Frequency) returns Linear Velocity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6f7fd0e6
+Thrust to Mass Ratio.divideBy(Gravitational Attraction) returns Mass per Unit Area	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@47c62251
+Thrust to Mass Ratio.divideBy(Linear Acceleration) returns Angle	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3e6fa38a
+Thrust to Mass Ratio.divideBy(Linear Velocity) returns Activity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@66a3ffec
+Thrust to Mass Ratio.divideBy(Mass per Unit Area) returns Gravitational Attraction	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@77caeb3e
+Thrust to Mass Ratio.divideBy(Specific Heat Volume) returns Area Temperature	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@1e88b3c
+Time Squared.divideBy(Time) returns Time	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@42d80b78
+Time Squared.divideBy(Angle) returns Time Squared	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3bfdc050
+Time Squared.divideBy(Capacitance) returns Inductance	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@1bce4f0a
+Time Squared.divideBy(Inductance) returns Capacitance	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@5e3a8624
+Torque.divideBy(Length) returns Force	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5c3bd550
+Torque.divideBy(Mass) returns Absorbed Dose	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@91161c7
+Torque.divideBy(Time) returns Heat Flow Rate	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@604ed9f0
+Torque.divideBy(Electric Current) returns Magnetic Flux	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6a4f787b
+Torque.divideBy(Temperature) returns Heat Capacity and Entropy	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@685cb137
+Torque.divideBy(Amount of Substance) returns Molar Energy	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@6a41eaa2
+Torque.divideBy(Angle) returns Energy and Work	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7cd62f43
+Torque.divideBy(Absorbed Dose) returns Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d4b1c02
+Torque.divideBy(Activity) returns Angular Momentum	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6093dd95
+Torque.divideBy(Angular Momentum) returns Activity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5622fdf
+Torque.divideBy(Area) returns Energy per Unit Area	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4883b407
+Torque.divideBy(Dose Equivalent) returns Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7d9d1a19
+Torque.divideBy(Dynamic Viscosity) returns Volume per Unit Time	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@39c0f4a
+Torque.divideBy(Electric Charge) returns Electromotive Force	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1794d431
+Torque.divideBy(Electric Dipole Moment) returns Electric Field Strength	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@42e26948
+Torque.divideBy(Electric Field Strength) returns Electric Dipole Moment	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@57baeedf
+Torque.divideBy(Electromotive Force) returns Electric Charge	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@343f4d3d
+Torque.divideBy(Energy Density) returns Volume	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@53b32d7
+Torque.divideBy(Energy and Work) returns Angle	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5442a311
+Torque.divideBy(Energy per Unit Area) returns Area	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@548e7350
+Torque.divideBy(Force) returns Length	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1a968a59
+Torque.divideBy(Force per Electric Charge) returns Electric Dipole Moment	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@4667ae56
+Torque.divideBy(Force per Unit Length) returns Area	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@77cd7a0
+Torque.divideBy(Frequency) returns Angular Momentum	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@204f30ec
+Torque.divideBy(Heat Capacity and Entropy) returns Temperature	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@e25b2fe
+Torque.divideBy(Heat Flow Rate) returns Time	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@754ba872
+Torque.divideBy(Kinematic Viscosity) returns Mass per Time	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@146ba0ac
+Torque.divideBy(Length Mass) returns Linear Acceleration	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4dfa3a9d
+Torque.divideBy(Linear Acceleration) returns Length Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6eebc39e
+Torque.divideBy(Linear Momentum) returns Linear Velocity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@464bee09
+Torque.divideBy(Linear Velocity) returns Linear Momentum	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@f6c48ac
+Torque.divideBy(Magnetic Dipole Moment) returns Magnetic Flux Density	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@13deb50e
+Torque.divideBy(Magnetic Flux) returns Electric Current	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@239963d8
+Torque.divideBy(Magnetic Flux Density) returns Magnetic Dipole Moment	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3abbfa04
+Torque.divideBy(Mass Temperature) returns Specific Heat Capacity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@57fffcd7
+Torque.divideBy(Mass per Time) returns Kinematic Viscosity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@31ef45e3
+Torque.divideBy(Molar Energy) returns Amount of Substance	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@598067a5
+Torque.divideBy(Molar Heat Capacity) returns Temperature Amount of Substance	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@3c0ecd4b
+Torque.divideBy(Power) returns Time	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@14bf9759
+Torque.divideBy(Pressure or Stress) returns Volume	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5f341870
+Torque.divideBy(Specific Energy) returns Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@553f17c
+Torque.divideBy(Specific Heat Capacity) returns Mass Temperature	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@4f7d0008
+Torque.divideBy(Temperature Amount of Substance) returns Molar Heat Capacity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] = [D@271053e1
+Torque.divideBy(Thermal Diffusivity) returns Mass per Time	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@589838eb
+Torque.divideBy(Thrust to Mass Ratio) returns Length Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@42dafa95
+Torque.divideBy(Volume) returns Energy Density	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6500df86
+Torque.divideBy(Volume per Unit Time) returns Dynamic Viscosity	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@402a079c
+Volume.divideBy(Length) returns Area	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@59ec2012
+Volume.divideBy(Time) returns Volume per Unit Time	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4cf777e8
+Volume.divideBy(Temperature) returns Volume Thermal Expansion	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@2f686d1f
+Volume.divideBy(Angle) returns Volume	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3fee9989
+Volume.divideBy(Area) returns Length	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@73ad2d6
+Volume.divideBy(Area Temperature) returns Linear Thermal Expansion	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@7085bdee
+Volume.divideBy(Area Thermal Expansion) returns Length Temperature	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@1ce92674
+Volume.divideBy(Length Temperature) returns Area Thermal Expansion	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@5700d6b1
+Volume.divideBy(Linear Thermal Expansion) returns Area Temperature	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6fd02e5
+Volume.divideBy(Mass Temperature) returns Specific Heat Pressure	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@5bcab519
+Volume.divideBy(Specific Heat Pressure) returns Mass Temperature	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@e45f292
+Volume.divideBy(Volume Thermal Expansion) returns Temperature	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@5f2108b5
+Volume.divideBy(Volume per Unit Time) returns Time	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@31a5c39e
+Volume Thermal Expansion.divideBy(Length) returns Area Thermal Expansion	=>	[3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3f49dace
+Volume Thermal Expansion.divideBy(Mass) returns Specific Heat Pressure	=>	[3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1e397ed7
+Volume Thermal Expansion.divideBy(Angle) returns Volume Thermal Expansion	=>	[3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@490ab905
+Volume Thermal Expansion.divideBy(Area) returns Linear Thermal Expansion	=>	[3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@56ac3a89
+Volume Thermal Expansion.divideBy(Area Thermal Expansion) returns Length	=>	[3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@27c20538
+Volume Thermal Expansion.divideBy(Linear Thermal Expansion) returns Area	=>	[3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@72d818d1
+Volume Thermal Expansion.divideBy(Specific Heat Pressure) returns Mass	=>	[3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6e06451e
+Volume per Unit Time.divideBy(Length) returns Kinematic Viscosity	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@59494225
+Volume per Unit Time.divideBy(Angle) returns Volume per Unit Time	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6e1567f1
+Volume per Unit Time.divideBy(Activity) returns Volume	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5cb9f472
+Volume per Unit Time.divideBy(Area) returns Linear Velocity	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@cb644e
+Volume per Unit Time.divideBy(Frequency) returns Volume	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@13805618
+Volume per Unit Time.divideBy(Kinematic Viscosity) returns Length	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@56ef9176
+Volume per Unit Time.divideBy(Linear Velocity) returns Area	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4566e5bd
+Volume per Unit Time.divideBy(Thermal Diffusivity) returns Length	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ed4004b
+Volume per Unit Time.divideBy(Volume) returns Activity	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ff5b51f
+Volumetric heat capacity.divideBy(Mass) returns Specific Heat Volume	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@25bbe1b6
+Volumetric heat capacity.divideBy(Angle) returns Volumetric heat capacity	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5702b3b1
+Volumetric heat capacity.divideBy(Amount of Substance Per Unit Volume) returns Molar Heat Capacity	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@69ea3742
+Volumetric heat capacity.divideBy(Density) returns Specific Heat Capacity	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4b952a2d
+Volumetric heat capacity.divideBy(Molar Heat Capacity) returns Amount of Substance Per Unit Volume	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@3159c4b8
+Volumetric heat capacity.divideBy(Specific Heat Capacity) returns Density	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@73846619
+Volumetric heat capacity.divideBy(Specific Heat Volume) returns Mass	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@4bec1f0c

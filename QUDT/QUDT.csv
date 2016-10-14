@@ -1,0 +1,102 @@
+Quantity Kind,QName,Dimension Symbol,Unit,QName,Unit Symbol,Same dimension symbol
+Length,qunatity:Length,L1,Meter,unit:Meter,m,
+Mass,quantity:Mass,M1,Kilogram,unit:Kilogram,kg,
+Time,quantity:Time,T1,Second,unit:SecondTime,s,
+Electric Current,quantity:ElectricCurrent,I1,Ampere,unit:Ampere,A,
+Temperature,quantity:ThermodynamicTemperature,O1,Kelvin,unit:Kelvin,K,
+Amount of Substance,quantity:AmountOfSubstance,N1,Mole,unit:Mole,mol,
+Angle,,U1,Radian,,rad,9X
+Luminous Intensity,quantity:LuminousIntensity,J1,Candela,unit:Candela,cd,
+Absorbed Dose,quantity:AbsorbedDose,L2T-2,Gray,unit:Gray,Gy,5X
+Absorbed Dose Rate,quantity:AbsorbedDoseRate,L2T-3,Gray per second,unit:GrayPerSecond,Gy/s,
+Activity,quantity:Activity,T-1,Becquerel,unit:Becquerel,Bq,8X
+Amount of Substance Per Unit Volume,quantity:AmountOfSubstancePerUnitVolume,L-3N1,Mole per cubic meter,unit:MolePerCubicMeter,mol/m^3,
+Amount of Substance per Unit Mass,quantity:AmountOfSubstancePerUnitMass,M-1N1,Mole per kilogram,unit:MolePerKilogram,mol/kg,
+Angular Acceleration,quantity:AngularAcceleration,U1T-2,Radian per second squared,unit:RadianPerSecondSquared,rad/s^2,
+Angular Mass,quantity:AngularMass,L2M1,Kilogram Meter Squared,unit:KilogramMeterSquared,kg-m^2,
+Angular Momentum,quantity:AngularMomentum,L2M1T-1,Joule Second,unit:JouleSecond,J s,
+Angular Velocity,quantity:AngularVelocity,U1T-1,Radian per second,unit:RadianPerSecond,rad/s,
+Area,quantity:Area,L2,Square meter,unit:SquareMeter,m^2,
+Area Angle,quantity:AreaAngle,U2L2,Square meter steradian,unit:SquareMeterSteradian,m^2-sr,
+Area Temperature,quantity:AreaTemperature,L2O1,Square meter kelvin,unit:SquareMeterKelvin,m^2-K,
+Area Thermal Expansion,quantity:AreaThermalExpansion,L2O-1,Square meter per kelvin,unit:SquareMeterPerKelvin,m^2/K,
+Capacitance,quantity:Capacitance,L-2M-1T4I2,Farad,unit:Farad,F,
+Catalytic Activity,quantity:CatalyticActivity,T-1N1,Katal,unit:Katal,kat,
+Coefficient of Heat Transfer,quantity:CoefficientOfHeatTransfer,M1T-3O-1,Watt per square meter kelvin,unit:WattPerSquareMeterKelvin,W/(m^2-K),
+Density,quantity:Density,L-3M1,Kilogram per cubic meter,unit:KilogramPerCubicMeter,kg/m^3,
+Dose Equivalent,quantity:DoseEquivalent,L2T-2,Sievert,unit:Sievert,Sv,5X
+Dynamic Viscosity,quantity:DynamicViscosity,L-1M1T-1,Pascal second,unit:PascalSecond,Pa-s,
+Electric Charge,quantity:ElectricCharge,T1I1,Coulomb,unit:Coulomb,C,
+Electric Charge Line Density,quantity:ElectricChargeLineDensity,L-1T1I1,Coulomb per meter,unit:CoulombPerMeter,C/m,
+Electric Charge Volume Density,quantity:ElectricChargeVolumeDensity,L-3T1I1,Coulomb per cubic meter,unit:CoulombPerCubicMeter,C/m^3,
+Electric Charge per Amount of Substance,quantity:ElectricChargePerAmountOfSubstance,T1I1N-1,Coulomb per mole,unit:CoulombPerMole,C/mol,
+Electric Current Density,quantity:ElectricCurrentDensity,L-2I1,Ampere per square meter,unit:AmperePerSquareMeter,A/m^2,
+Electric Current per Angle,quantity:CurrentPerAngle,U-1I1,Ampere per radian,unit:AmperePerRadian,A/rad,
+Electric Dipole Moment,quantity:ElectricDipoleMoment,L1T1I1,Coulomb meter,unit:CoulombMeter,C-m,
+Electric Field Strength,quantity:ElectricFieldStrength,L1M1T-3I-1,Volt per Meter,unit:VoltPerMeter,V/m,
+Electric Flux Density,quantity:ElectricFluxDensity,L-2T1I1,Coulomb per Square Meter,unit:CoulombPerSquareMeter,C/m^2,
+Electrical Conductivity,quantity:ElectricalConductivity,L-2M-1T3I2,Siemens,unit:Siemens,S,
+Electromotive Force,quantity:ElectromotiveForce,L2M1T-3I-1,Volt,unit:Volt,V,
+Energy Density,quantity:EnergyDensity,L-1M1T-2,Joule per cubic meter,unit:JoulePerCubicMeter,J/m^3,
+Energy and Work,quantity:EnergyAndWork,L2M1T-2,Joule,unit:Joule,J,XX
+Energy per Unit Area,quantity:EnergyPerUnitArea,M1T-2,Joule per square meter,unit:JoulePerSquareMeter,J/m^2,6X
+Exposure,quantity:Exposure,M-1T1I1,Coulomb per kilogram,unit:CoulombPerKilogram,C/kg,
+Force,quantity:Force,L1M1T-2,Newton,unit:Newton,N,
+Force per Electric Charge,quantity:ForcePerElectricCharge,L1M1T-3I-1,Newton per coulomb,unit:NewtonPerCoulomb,N/C,
+Force per Unit Length,quantity:ForcePerUnitLength,M1T-2,Newton per meter,unit:NewtonPerMeter,N/m,6X
+Frequency,quantity:Frequency,T-1,Hertz,unit:Hertz,Hz,8X
+Gravitational Attraction,quantity:GravitationalAttraction,L3M-1T-2,Cubic meter per kilogram second squared,unit:CubicMeterPerKilogramSecondSquared,m^3/(kg-s^2),
+Heat Capacity and Entropy,quantity:HeatCapacityAndEntropy,L2M1T-2O-1,Joule per kelvin,unit:JoulePerKelvin,J/K,
+Heat Flow Rate,quantity:HeatFlowRate,L2M1T-3,Watt,unit:Watt,W,XXX
+Heat Flow Rate per Unit Area,quantity:HeatFlowRatePerUnitArea,M1T-3,Watt per square meter,unit:WattPerSquareMeter,W/m^2,7X
+Illuminance,quantity:Illuminance,U1L-2J1,Lux,unit:Lux,lx,
+Inductance,quantity:Inductance,L2M1T-2I-2,Henry,unit:Henry,H,
+Inverse Amount of Substance,quantity:InverseAmountOfSubstance,N-1,Per mole,unit:PerMole,mol^(-1),
+Inverse Permittivity,quantity:InversePermittivity,L3M1T-4I-2,Meter per farad,unit:MeterPerFarad,m/F,
+Kinematic Viscosity,quantity:KinematicViscosity,L2T-1,Square meter per second,unit:SquareMeterPerSecond,m^2/sec,XXXX
+Length Mass,quantity:LengthMass,L1M1,Meter kilogram,unit:MeterKilogram,m-kg,
+Length Temperature,quantity:LengthTemperature,L1O1,Meter kelvin,unit:MeterKelvin,m-K,
+Linear Acceleration,quantity:LinearAcceleration,L1T-2,Meter per second squared,unit:MeterPerSecondSquared,m/s^2,X
+Linear Momentum,quantity:LinearMomentum,L1M1T-1,Kilogram Meter Per Second,unit:KilogramMeterPerSecond,kg-m/s,
+Linear Thermal Expansion,quantity:LinearThermalExpansion,L1O-1,Meter per kelvin,unit:MeterPerKelvin,m/K,
+Linear Velocity,quantity:LinearVelocity,L1T-1,Meter per second,unit:MeterPerSecond,m/s,
+Luminance,quantity:Luminance,L-2J1,Candela per square meter,unit:CandelaPerSquareMeter,cd/m^2,
+Luminous Flux,quantity:LuminousFlux,U1J1,Lumen,unit:Lumen,lm,
+Magnetic Dipole Moment,quantity:MagneticDipoleMoment,L2I1,Joule per Tesla,unit:JoulePerTesla,J/T,
+Magnetic Field Strength,quantity:MagneticFieldStrength,L-1I1,Ampere Turn per Meter,unit:AmpereTurnPerMeter,At/m,
+Magnetic Flux,quantity:MagneticFlux,L2M1T-2I-1,Weber,unit:Weber,Wb,
+Magnetic Flux Density,quantity:MagneticFluxDensity,M1T-2I-1,Tesla,unit:Tesla,T,
+Magnetomotive Force,quantity:MagnetomotiveForce,U1I1,Ampere Turn,unit:AmpereTurn,At,
+Mass Temperature,quantity:MassTemperature,M1O1,Kilogram kelvin,unit:KilogramKelvin,kg-K,
+Mass per Time,quantity:MassPerUnitTime,M1T-1,Kilogram per second,unit:KilogramPerSecond,kg/s,
+Mass per Unit Area,quantity:MassPerUnitArea,L-2M1,Kilogram per square meter,unit:KilogramPerSquareMeter,kg/m^2,
+Mass per Unit Length,quantity:MassPerUnitLength,L-1M1,Kilogram per meter,unit:KilogramPerMeter,kg/m,
+Molar Energy,quantity:MolarEnergy,L2M1T-2N-1,Joule per mole,unit:JoulePerMole,J/mol,
+Molar Heat Capacity,quantity:MolarHeatCapacity,L2M1T-2O-1N-1,Joule per mole kelvin,unit:JoulePerMoleKelvin,J/(mol-K),
+Permeability,quantity:Permeability,L1M1T-2I-2,Henry per meter,unit:HenryPerMeter,H/m,
+Permittivity,quantity:Permittivity,L-3M-1T4I2,Farad per meter,unit:FaradPerMeter,F/m,
+Plane Angle,quantity:PlaneAngle,U1,Radian,unit:Radian,rad,9X
+Power,quantity:Power,L2M1T-3,Watt,unit:Watt,W,XXX
+Power per Angle,quantity:PowerPerAngle,U-2L2M1T-3,Watt per steradian,unit:WattPerSteradian,W/sr,
+Power per Area Angle,quantity:PowerPerAreaAngle,U-2M1T-3,Watt per square meter steradian,unit:WattPerSquareMeterSteradian,W/(m^2-sr),
+Power per Unit Area,quantity:PowerPerUnitArea,M1T-3,Watt per square meter,unit:WattPerSquareMeter,W/m^2,7X
+Pressure or Stress,quantity:PressureOrStress,L-1M1T-2,Pascal,unit:Pascal,Pa,
+Resistance,quantity:Resistance,L2M1T-3I-2,Ohm,unit:Ohm,Ohm,
+Solid Angle,quantity:SolidAngle,U2,Steradian,unit:Steradian,sr,
+Specific Energy,quantity:SpecificEnergy,L2T-2,Joule per kilogram,unit:JoulePerKilogram,J/kg,5X
+Specific Heat Capacity,quantity:SpecificHeatCapacity,L2T-2O-1,Joule per kilogram kelvin,unit:JoulePerKilogramKelvin,J/(kg-K),
+Specific Heat Pressure,quantity:SpecificHeatPressure,L3M-1O-1,Joule per kilogram kelvin per pascal,unit:JoulePerKilogramKelvinPerPascal,J/(km-K-Pa),
+Specific Heat Volume,quantity:SpecificHeatVolume,L-1T-2O-1,Joule per kilogram kelvin per cubic meter,unit:JoulePerKilogramKelvinPerCubicMeter,J/(kg-K-m^3),
+Temperature Amount of Substance,quantity:TemperatureAmountOfSubstance,O1N1,Mole kelvin,unit:MoleKelvin,mol-K,
+Thermal Conductivity,quantity:ThermalConductivity,L1M1T-3O-1,Watt per meter kelvin,unit:WattPerMeterKelvin,W/(m*K),
+Thermal Diffusivity,quantity:ThermalDiffusivity,L2T-1,Square meter per second,unit:SquareMeterPerSecond,m^2/sec,XXXX
+Thermal Insulance,quantity:ThermalInsulance,M-1T3O1,Square meter Kelvin per watt,unit:SquareMeterKelvinPerWatt,(K^2)m/W,
+Thermal Resistance,quantity:ThermalResistance,L-2M-1T3O1,Kelvin per watt,unit:KelvinPerWatt,K/W,
+Thermal Resistivity,quantity:ThermalResistivity,L-1M-1T3O1,Meter Kelvin per watt,unit:MeterKelvinPerWatt,K-m/W,
+Thrust to Mass Ratio,quantity:ThrustToMassRatio,L1T-2,Newton per kilogram,unit:NewtonPerKilogram,N/kg,X
+Time Squared,quantity:TimeSquared,T2,Second time squared,unit:SecondTimeSquared,s^2,
+Torque,quantity:BendingMomentOrTorque,L2M1T-2,Newton meter,unit:NewtonMeter,N-m,XX
+Volume,quantity:Volume,L3,Cubic Meter,unit:CubicMeter,m^3,
+Volume Thermal Expansion,quantity:VolumeThermalExpansion,L3O-1,Cubic meter per kelvin,unit:CubicMeterPerKelvin,m^3/K,
+Volume per Unit Time,quantity:VolumePerUnitTime,L3T-1,Cubic meter per second,unit:CubicMeterPerSecond,m^3/s,
+Volumetric heat capacity,quantity:VolumetricHeatCapacity,L-1M1T-2O-1,Joule per cubic meter kelvin,unit:JoulePerCubicMeterKelvin,J/(m^3 K),

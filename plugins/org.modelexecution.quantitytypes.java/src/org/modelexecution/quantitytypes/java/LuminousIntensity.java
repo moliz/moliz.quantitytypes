@@ -1,14 +1,14 @@
 package org.modelexecution.quantitytypes.java;
 
+import java.util.Arrays;
 
 public class LuminousIntensity extends Quantity {
+
 	static protected boolean checkUnit(Unit u) {
-		int k = BaseUnits.Candela.ordinal();
-		if (u.dimensions[k]!=1.0) return false;
-		for (int i=0;i<u.dimensions.length;i++) {
-			if ((i!=k)&&(u.dimensions[i]!=0.0)) return false;
-		}
-		return true;
+	    double [] x = new double [BaseUnits.values().length];
+	    Arrays.fill(x, 0.0);
+	    x[BaseUnits.Candela.ordinal()] = 1.0;
+	    return Arrays.equals(x,u.dimensions);
 	}
 
 	public LuminousIntensity(Quantity q){
@@ -144,6 +144,14 @@ public class LuminousIntensity extends Quantity {
 	
 	public LuminousIntensity divideBy(double r) {  
 		return new LuminousIntensity(this.value.divideBy(new UReal(r)),this.getUnits());
+	}
+
+	public LuminousIntensity mult(UReal r) {  
+		return new LuminousIntensity(this.value.mult(r),this.getUnits());
+	}
+	
+	public LuminousIntensity divideBy(UReal r) {  
+		return new LuminousIntensity(this.value.divideBy(r),this.getUnits());
 	}
 
 	/******

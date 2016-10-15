@@ -1,16 +1,16 @@
 package org.modelexecution.quantitytypes.java;
 
+import java.util.Arrays;
 
 //READY
 
 public class Time extends Quantity {
+
 	static protected boolean checkUnit(Unit u) {
-		int s = BaseUnits.Second.ordinal();
-		if (u.dimensions[s]!=1.0) return false;
-		for (int i=0;i<u.dimensions.length;i++) {
-			if ((i!=s)&&(u.dimensions[i]!=0.0)) return false;
-		}
-		return true;
+		double [] x = new double [BaseUnits.values().length];
+		Arrays.fill(x, 0.0);
+		x[BaseUnits.Second.ordinal()]=1.0;
+		return Arrays.equals(x,u.dimensions);
 	}
 
 	public Time(Quantity q){
@@ -236,6 +236,14 @@ public class Time extends Quantity {
 		
 		public Time divideBy(double r) {  
 			return new Time(this.value.divideBy(new UReal(r)),this.getUnits());
+		}
+
+		public Time mult(UReal r) {  
+			return new Time(this.value.mult(r),this.getUnits());
+		}
+		
+		public Time divideBy(UReal r) {  
+			return new Time(this.value.divideBy(r),this.getUnits());
 		}
 
 		/******

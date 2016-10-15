@@ -1,14 +1,14 @@
 package org.modelexecution.quantitytypes.java;
 
+import java.util.Arrays;
 
 public class Mass extends Quantity {
+
 	static protected boolean checkUnit(Unit u) {
-		int k = BaseUnits.Kilogram.ordinal();
-		if (u.dimensions[k]!=1.0) return false;
-		for (int i=0;i<u.dimensions.length;i++) {
-			if ((i!=k)&&(u.dimensions[i]!=0.0)) return false;
-		}
-		return true;
+	    double [] x = new double [BaseUnits.values().length];
+	    Arrays.fill(x, 0.0);
+	    x[BaseUnits.Kilogram.ordinal()] = 1.0;
+	    return Arrays.equals(x,u.dimensions);
 	}
 
 	public Mass(Quantity q){
@@ -144,6 +144,14 @@ public class Mass extends Quantity {
 	
 	public Mass divideBy(double r) {  
 		return new Mass(this.value.divideBy(new UReal(r)),this.getUnits());
+	}
+
+	public Mass mult(UReal r) {  
+		return new Mass(this.value.mult(r),this.getUnits());
+	}
+	
+	public Mass divideBy(UReal r) {  
+		return new Mass(this.value.divideBy(r),this.getUnits());
 	}
 
 	/******

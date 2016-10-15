@@ -162,6 +162,14 @@ public class LinearVelocity extends Quantity {
 		return new LinearVelocity(this.value.divideBy(new UReal(r)),this.getUnits());
 	}
 
+	public LinearVelocity mult(UReal r) {  
+		return new LinearVelocity(this.value.mult(r),this.getUnits());
+	}
+	
+	public LinearVelocity divideBy(UReal r) {  
+		return new LinearVelocity(this.value.divideBy(r),this.getUnits());
+	}
+
 	/******
 	 * Conversions to basic types: toString, toInteger, toReal, etc. directly from Quantity
 	 */

@@ -148,6 +148,14 @@ public class LinearAcceleration extends Quantity {
 		return new LinearAcceleration(this.value.divideBy(new UReal(r)),this.getUnits());
 	}
 
+	public LinearAcceleration mult(UReal r) {  
+		return new LinearAcceleration(this.value.mult(r),this.getUnits());
+	}
+	
+	public LinearAcceleration divideBy(UReal r) {  
+		return new LinearAcceleration(this.value.divideBy(r),this.getUnits());
+	}
+
 	/******
 	 * Conversions to basic types: toString, toInteger, toReal, etc. directly from Quantity
 	 */

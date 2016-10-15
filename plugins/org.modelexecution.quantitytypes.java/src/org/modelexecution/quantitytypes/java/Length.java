@@ -1,5 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 
+import java.util.Arrays;
 
 //READY
 
@@ -10,13 +11,12 @@ package org.modelexecution.quantitytypes.java;
 public class Length extends Quantity {
 	
 	static protected boolean checkUnit(Unit u) {
-		int l = BaseUnits.Meter.ordinal();
-		if (u.dimensions[l]!=1.0) return false;
-		for (int i=0;i<u.dimensions.length;i++) {
-			if ((i!=l)&&(u.dimensions[i]!=0.0)) return false;
-		}
-		return true;
+	    double [] x = new double [BaseUnits.values().length];
+	    Arrays.fill(x, 0.0);
+	    x[BaseUnits.Meter.ordinal()] = 1.0;
+	    return Arrays.equals(x,u.dimensions);
 	}
+
     /**
      * Constructors 
      */
@@ -174,6 +174,14 @@ public class Length extends Quantity {
 	
 	public Length divideBy(double r) {  
 		return new Length(this.value.divideBy(new UReal(r)),this.getUnits());
+	}
+
+	public Length mult(UReal r) {  
+		return new Length(this.value.mult(r),this.getUnits());
+	}
+	
+	public Length divideBy(UReal r) {  
+		return new Length(this.value.divideBy(r),this.getUnits());
 	}
 
 	/******

@@ -1,16 +1,16 @@
 package org.modelexecution.quantitytypes.java;
 
+import java.util.Arrays;
 
 //READY
 
 public class Angle extends Quantity {
+
 	static protected boolean checkUnit(Unit u) {
-		int k = BaseUnits.Radian.ordinal();
-		if (u.dimensions[k]!=1.0) return false;
-		for (int i=0;i<u.dimensions.length;i++) {
-			if ((i!=k)&&(u.dimensions[i]!=0.0)) return false;
-		}
-		return true;
+	    double [] x = new double [BaseUnits.values().length];
+	    Arrays.fill(x, 0.0);
+	    x[BaseUnits.Radian.ordinal()] = 1.0;
+	    return Arrays.equals(x,u.dimensions);
 	}
 
 	public Angle(Quantity q){
@@ -161,6 +161,14 @@ public class Angle extends Quantity {
 	
 	public Angle divideBy(double r) {  
 		return new Angle(this.value.divideBy(new UReal(r)),this.getUnits());
+	}
+
+	public Angle mult(UReal r) {  
+		return new Angle(this.value.mult(r),this.getUnits());
+	}
+	
+	public Angle divideBy(UReal r) {  
+		return new Angle(this.value.divideBy(r),this.getUnits());
 	}
 
 	/******

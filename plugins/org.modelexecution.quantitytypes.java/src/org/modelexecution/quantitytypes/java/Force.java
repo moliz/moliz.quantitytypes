@@ -1,8 +1,20 @@
 package org.modelexecution.quantitytypes.java;
 
+import java.util.Arrays;
 
 public class Force extends Quantity {
+
 	static protected boolean checkUnit(Unit u) {
+	    double [] x = new double [BaseUnits.values().length];
+	    Arrays.fill(x, 0.0);
+	    x[BaseUnits.Meter.ordinal()]=1.0;
+	    x[BaseUnits.Kilogram.ordinal()]=1.0;
+	    x[BaseUnits.Second.ordinal()]=-2.0;
+	    return Arrays.equals(x,u.dimensions);
+	}
+
+	
+/*	static protected boolean checkUnit(Unit u) {
 		int l = BaseUnits.Meter.ordinal();
 		int k = BaseUnits.Kilogram.ordinal();
 		int s = BaseUnits.Second.ordinal();
@@ -14,7 +26,8 @@ public class Force extends Quantity {
 		}
 		return true;
 	}
-
+*/
+	
 	public Force(Quantity q){
     	value = q.value.clone();
     	if (!checkUnit(q.unit)) throw new RuntimeException("Invalid Unit for creating a Force");

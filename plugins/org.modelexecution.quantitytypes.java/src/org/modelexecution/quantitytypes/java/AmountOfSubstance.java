@@ -1,15 +1,16 @@
 package org.modelexecution.quantitytypes.java;
 
+import java.util.Arrays;
+
 // MISSING SPECIFIC OPERATIONS
 
 public class AmountOfSubstance extends Quantity {
+
 	static protected boolean checkUnit(Unit u) {
-		int k = BaseUnits.Mole.ordinal();
-		if (u.dimensions[k]!=1.0) return false;
-		for (int i=0;i<u.dimensions.length;i++) {
-			if ((i!=k)&&(u.dimensions[i]!=0.0)) return false;
-		}
-		return true;
+	    double [] x = new double [BaseUnits.values().length];
+	    Arrays.fill(x, 0.0);
+	    x[BaseUnits.Mole.ordinal()] = 1.0;
+	    return Arrays.equals(x,u.dimensions);
 	}
 
 	public AmountOfSubstance(Quantity q){
@@ -138,6 +139,16 @@ public class AmountOfSubstance extends Quantity {
 	public AmountOfSubstance divideBy(double r) {  
 		return new AmountOfSubstance(this.value.divideBy(new UReal(r)),this.getUnits());
 	}
+	
+	public AmountOfSubstance mult(UReal r) {  
+		return new AmountOfSubstance(this.value.mult(r),this.getUnits());
+	}
+	
+	public AmountOfSubstance divideBy(UReal r) {  
+		return new AmountOfSubstance(this.value.divideBy(r),this.getUnits());
+	}
+
+
 
 	/******
 	 * Conversions to basic types: toString, toInteger, toReal, etc. directly from Quantity

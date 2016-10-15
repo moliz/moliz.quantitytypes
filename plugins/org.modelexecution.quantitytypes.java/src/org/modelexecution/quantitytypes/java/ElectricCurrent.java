@@ -1,16 +1,16 @@
 package org.modelexecution.quantitytypes.java;
 
+import java.util.Arrays;
 
 // IN PROGRESS
 
 public class ElectricCurrent extends Quantity {
+
 	static protected boolean checkUnit(Unit u) {
-		int s = BaseUnits.Ampere.ordinal();
-		if (u.dimensions[s]!=1.0) return false;
-		for (int i=0;i<u.dimensions.length;i++) {
-			if ((i!=s)&&(u.dimensions[i]!=0.0)) return false;
-		}
-		return true;
+	    double [] x = new double [BaseUnits.values().length];
+	    Arrays.fill(x, 0.0);
+	    x[BaseUnits.Ampere.ordinal()] = 1.0;
+	    return Arrays.equals(x,u.dimensions);
 	}
 
 	public ElectricCurrent(Quantity q){
@@ -147,6 +147,14 @@ public class ElectricCurrent extends Quantity {
 	
 	public ElectricCurrent divideBy(double r) {  
 		return new ElectricCurrent(this.value.divideBy(new UReal(r)),this.getUnits());
+	}
+	
+	public ElectricCurrent mult(UReal r) {  
+		return new ElectricCurrent(this.value.mult(r),this.getUnits());
+	}
+	
+	public ElectricCurrent divideBy(UReal r) {  
+		return new ElectricCurrent(this.value.divideBy(r),this.getUnits());
 	}
 
 	/******

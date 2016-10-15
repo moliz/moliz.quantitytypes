@@ -85,6 +85,11 @@ public class Mass extends Quantity {
 
 		return new Mass(super.minus(r));
 	}
+	
+	public Force mult(LinearAcceleration r) { //both values and units are multiplied. No offsets allowed in any of the units
+		return new Force(super.mult(r));
+	}
+	
 
 /*	public ZZZZ mult(TTTT r) { //both values and units are multiplied. No offsets allowed in any of the units
 		return new AbsorbedDoseRate(super.mult(r));

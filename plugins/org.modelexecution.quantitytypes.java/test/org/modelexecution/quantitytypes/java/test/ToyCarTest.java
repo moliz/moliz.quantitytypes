@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Assert;
 import org.junit.Test;
 import org.modelexecution.quantitytypes.java.BaseUnits;
-import org.modelexecution.quantitytypes.java.CommonUnits;
+import org.modelexecution.quantitytypes.java.Units;
 import org.modelexecution.quantitytypes.java.Length;
 import org.modelexecution.quantitytypes.java.LinearAcceleration;
 import org.modelexecution.quantitytypes.java.LinearVelocity;
@@ -30,13 +30,15 @@ public class ToyCarTest {
 	public void testAc1() {
 
 		// sensed values
-		Length initialPosition = new Length(0, 0.001, CommonUnits.M);
-		Length finalPosition = new Length(10, 0.001, CommonUnits.M);
-		Time duration = new Time(10, 0.002, new Unit(BaseUnits.Second));
+		Length initialPosition = new Length(0, 0.001, Units.Meter);
+		Length finalPosition = new Length(10, 0.001, Units.Meter);
+		Time duration = new Time(10, 0.002, new Unit(Units.Second));
 		LinearVelocity initialVelocity = new LinearVelocity(0, 0*0.01,
-				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
+				Units.MeterPerSecond);
+//				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 		LinearVelocity finalVelocity = new LinearVelocity(2, 2*0.01,
-				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
+				Units.MeterPerSecond);
+//				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 
 		// computed values
 		Length distance = finalPosition.minus(initialPosition);
@@ -70,13 +72,15 @@ public class ToyCarTest {
 	public void testAc2() {
 
 		// sensed values
-		Length initialPosition = new Length(10, 0.001, CommonUnits.M);
-		Length finalPosition = new Length(20, 0.001, CommonUnits.M);
-		Time duration = new Time(5, 0.002, new Unit(BaseUnits.Second));
+		Length initialPosition = new Length(10, 0.001, Units.Meter);
+		Length finalPosition = new Length(20, 0.001, Units.Meter);
+		Time duration = new Time(5, 0.002, new Unit(Units.Second));
 		LinearVelocity initialVelocity = new LinearVelocity(2, 2*0.01,
-				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
+				Units.MeterPerSecond);
+//				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 		LinearVelocity finalVelocity = new LinearVelocity(2, 2*0.01,
-				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
+				Units.MeterPerSecond);
+//				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 
 		// computed values
 		Length distance = finalPosition.minus(initialPosition);
@@ -111,8 +115,8 @@ public class ToyCarTest {
 	public void testVehicle() {
 
 		// sensed values acc1
-		Length initialPositionAcc1 = new Length(0, 0.001, CommonUnits.M);
-		Length finalPositionAcc1 = new Length(10, 0.001, CommonUnits.M);
+		Length initialPositionAcc1 = new Length(0, 0.001, Units.Meter);
+		Length finalPositionAcc1 = new Length(10, 0.001, Units.Meter);
 		Time durationAcc1 = new Time(10, 0.002, new Unit(BaseUnits.Second));
 		LinearVelocity initialVelocityAcc1 = new LinearVelocity(0, 0*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
@@ -125,8 +129,8 @@ public class ToyCarTest {
 		LinearAcceleration avgAccelerationAcc1 = (finalVelocityAcc1.minus(initialVelocityAcc1)).divideBy(durationAcc1);
 
 		// sensed values acc2
-		Length initialPositionAcc2 = new Length(10, 0.001, CommonUnits.M);
-		Length finalPositionAcc2 = new Length(20, 0.001, CommonUnits.M);
+		Length initialPositionAcc2 = new Length(10, 0.001, Units.Meter);
+		Length finalPositionAcc2 = new Length(20, 0.001, Units.Meter);
 		Time durationAcc2 = new Time(5, 0.002, new Unit(BaseUnits.Second));
 		LinearVelocity initialVelocityAcc2 = new LinearVelocity(2, 2*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));

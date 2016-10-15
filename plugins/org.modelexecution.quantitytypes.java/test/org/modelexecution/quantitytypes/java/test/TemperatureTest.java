@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.modelexecution.quantitytypes.java.CommonUnits;
+import org.modelexecution.quantitytypes.java.Units;
 
 import org.modelexecution.quantitytypes.java.ThermodynamicTemperature;
 
@@ -14,13 +14,13 @@ public class TemperatureTest {
 	  
 	 @Before
 	 public void setUp(){
-			q1 = new ThermodynamicTemperature(10.0, 0.000, CommonUnits.CELSIUS);
-			q2 = new ThermodynamicTemperature(5.0, 0.000, CommonUnits.CELSIUS);
+			q1 = new ThermodynamicTemperature(10.0, 0.000, Units.Celsius);
+			q2 = new ThermodynamicTemperature(5.0, 0.000, Units.Celsius);
 			
-			q3 = new ThermodynamicTemperature(10.0, 0.000, CommonUnits.KELVIN);
-			q4 = new ThermodynamicTemperature( 5.0, 0.000, CommonUnits.KELVIN);
+			q3 = new ThermodynamicTemperature(10.0, 0.000, Units.Kelvin);
+			q4 = new ThermodynamicTemperature( 5.0, 0.000, Units.Kelvin);
 			
-			q5 = new ThermodynamicTemperature( 5.0, 0.000, CommonUnits.DeltaCELSIUS);
+			q5 = new ThermodynamicTemperature( 5.0, 0.000, Units.DeltaCelsius);
 	 }
 	
 

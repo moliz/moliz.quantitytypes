@@ -1,16 +1,16 @@
 package org.modelexecution.quantitytypes.java;
 
+import java.util.Arrays;
 
 //READY
 
 public class Time extends Quantity {
+
 	static protected boolean checkUnit(Unit u) {
-		int s = BaseUnits.Second.ordinal();
-		if (u.dimensions[s]!=1.0) return false;
-		for (int i=0;i<u.dimensions.length;i++) {
-			if ((i!=s)&&(u.dimensions[i]!=0.0)) return false;
-		}
-		return true;
+		double [] x = new double [BaseUnits.values().length];
+		Arrays.fill(x, 0.0);
+		x[BaseUnits.Second.ordinal()]=1.0;
+		return Arrays.equals(x,u.dimensions);
 	}
 
 	public Time(Quantity q){
@@ -115,7 +115,7 @@ public class Time extends Quantity {
 			return new Area(super.mult(r));
 		}
 	
-		public Torque mult(HeatflowRate r){
+		public Torque mult(HeatFlowRate r){
 			return new Torque(super.mult(r));
 		}
 
@@ -155,10 +155,6 @@ public class Time extends Quantity {
 			return new AbsorbedDose(super.mult(r));
 		}
 		
-
-		
-		
-		
 		
 		public Length mult(LinearVelocity r) { //both values and units are multiplied. No offsets allowed in any of the units
 			return new Length(super.mult(r));
@@ -197,8 +193,12 @@ public class Time extends Quantity {
 		public Time neg() { //units are maintained
 			return new Time(super.neg());
 		}
+		
+		public Frequency inverse(){
+			return new Frequency(super.inverse());
+		}
 
-	    // power(s), sqrt() and inverse() return Quantity
+	    // power(s), sqrt() return Quantity
 		// lessThan, LessEq, gt, ge all directly from Quantity
 
 		public boolean equals(Time r) {  
@@ -236,6 +236,14 @@ public class Time extends Quantity {
 		
 		public Time divideBy(double r) {  
 			return new Time(this.value.divideBy(new UReal(r)),this.getUnits());
+		}
+
+		public Time mult(UReal r) {  
+			return new Time(this.value.mult(r),this.getUnits());
+		}
+		
+		public Time divideBy(UReal r) {  
+			return new Time(this.value.divideBy(r),this.getUnits());
 		}
 
 		/******

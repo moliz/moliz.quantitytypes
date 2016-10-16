@@ -1,0 +1,150 @@
+package org.modelexecution.quantitytypes.java;
+import java.util.Arrays;
+public class VolumeThermalExpansion extends Quantity {
+static protected boolean checkUnit(Unit u) {
+double [] x = new double [BaseUnits.values().length];
+x[BaseUnits.Meter.ordinal()]=3.0;
+x[BaseUnits.Kilogram.ordinal()]=0.0;
+x[BaseUnits.Second.ordinal()]=0.0;
+x[BaseUnits.Ampere.ordinal()]=0.0;
+x[BaseUnits.Kelvin.ordinal()]=-1.0;
+x[BaseUnits.Mole.ordinal()]=0.0;
+x[BaseUnits.Radian.ordinal()]=0.0;
+x[BaseUnits.Candela.ordinal()]=0.0;
+return Arrays.equals(x,u.dimensions);
+}
+
+public VolumeThermalExpansion(Quantity q){
+value = q.value.clone();
+if (!checkUnit(q.unit)) throw new RuntimeException("Invalid Unit for creating a VolumeThermalExpansion");
+this.unit = new Unit (q.unit);
+}
+public VolumeThermalExpansion () {
+value = new UReal();
+unit = new Unit(DerivedUnits.CubicMeterPerKelvin);
+}
+public VolumeThermalExpansion(UReal u){
+value = u.clone();
+unit = new Unit(DerivedUnits.CubicMeterPerKelvin);
+}
+public VolumeThermalExpansion(UReal u, Unit unit){
+value = u.clone();
+if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating an VolumeThermalExpansion");
+this.unit = new Unit (unit);
+}
+public VolumeThermalExpansion(double x){ //"promotes" a real x
+value = new UReal(x);
+unit = new Unit(DerivedUnits.CubicMeterPerKelvin);
+}
+public VolumeThermalExpansion (double x, double u) {
+value = new UReal(x,u);
+unit = new Unit(DerivedUnits.CubicMeterPerKelvin);
+}
+public VolumeThermalExpansion(double x, Unit unit){ //we only allow the same Units
+value = new UReal(x);
+if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a VolumeThermalExpansion");
+this.unit = new Unit (unit);
+}
+public VolumeThermalExpansion(double x, double u, Unit unit){
+value = new UReal(x,u);
+if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a VolumeThermalExpansion");
+this.unit = new Unit (unit);
+}
+public VolumeThermalExpansion(String x) { //creates a VolumeThermalExpansion from a string representing a real, with u=0.
+value = new UReal(x);
+unit = new Unit(DerivedUnits.CubicMeterPerKelvin);
+}
+public VolumeThermalExpansion(String x, String u) { //creates a VolumeThermalExpansion from two strings representing (x,u).
+value = new UReal(x,u);
+unit = new Unit(DerivedUnits.CubicMeterPerKelvin);
+}
+public VolumeThermalExpansion(String x, String u, Unit unit) { //creates a VolumeThermalExpansion from two strings representing (x,u).
+value = new UReal(x,u);
+if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a VolumeThermalExpansion");
+this.unit = new Unit (unit);
+}
+// Specific Type Operations
+public VolumeThermalExpansion add(VolumeThermalExpansion r) {  //only works if compatible units && operand has no offset
+return new VolumeThermalExpansion(super.add(r));
+}
+public VolumeThermalExpansion minus(VolumeThermalExpansion r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
+return new VolumeThermalExpansion(super.minus(r));
+}
+public Volume mult(ThermodynamicTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new Volume(super.mult(r));
+}
+public HeatCapacityAndEntropy mult(EnergyDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatCapacityAndEntropy(super.mult(r));
+}
+public HeatCapacityAndEntropy mult(Pressure r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatCapacityAndEntropy(super.mult(r));
+}
+public AreaThermalExpansion divideBy(Length r) { //both values and units are divided. No offsets allowed in any of the units
+return new AreaThermalExpansion(super.divideBy(r));
+}
+public SpecificHeatPressure divideBy(Mass r) { //both values and units are divided. No offsets allowed in any of the units
+return new SpecificHeatPressure(super.divideBy(r));
+}
+public LinearThermalExpansion divideBy(Area r) { //both values and units are divided. No offsets allowed in any of the units
+return new LinearThermalExpansion(super.divideBy(r));
+}
+public Length divideBy(AreaThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
+return new Length(super.divideBy(r));
+}
+public Area divideBy(LinearThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
+return new Area(super.divideBy(r));
+}
+public Mass divideBy(SpecificHeatPressure r) { //both values and units are divided. No offsets allowed in any of the units
+return new Mass(super.divideBy(r));
+}
+public VolumeThermalExpansion abs() { //units are maintained
+return new VolumeThermalExpansion(super.abs());
+}
+public VolumeThermalExpansion neg() { //units are maintained
+return new VolumeThermalExpansion(super.neg());
+}
+// power(s), and inverse() return Quantity
+// lessThan, LessEq, gt, ge all directly from Quantity
+public boolean equals(VolumeThermalExpansion r) {  
+return  r.compatibleUnits(this) && 
+this.getUReal().equals(r.convertTo(this.getUnits()).getUReal());
+}
+public boolean distinct(VolumeThermalExpansion r) {
+return !(this.equals(r));
+}
+public VolumeThermalExpansion floor() { //returns (i,u) with i the largest int such that (i,u)<=(x,u) -- units maintained
+return new VolumeThermalExpansion(Math.floor(this.getX()),this.getU(),this.getUnits());
+}
+public VolumeThermalExpansion round(){ //returns (i,u) with i the closest int to x -- units maintained
+return new VolumeThermalExpansion(Math.round(this.getX()),this.getU(),this.getUnits());
+}
+public VolumeThermalExpansion min(VolumeThermalExpansion r) { // units maintained
+if (r.lessThan(this)) return new VolumeThermalExpansion(r.getX(),r.getU(),r.getUnits());
+return new VolumeThermalExpansion(this.getX(),this.getU(),this.getUnits());
+}
+public VolumeThermalExpansion max(VolumeThermalExpansion r) { // unit maintained
+//if (r>this) r; else this;
+if (r.gt(this)) return new VolumeThermalExpansion(r.getX(),r.getU(),r.getUnits());
+return new VolumeThermalExpansion(this.getX(),this.getU(),this.getUnits());
+}
+// working with constants (note that add and minus do not work here
+public VolumeThermalExpansion mult(double r) {
+return new VolumeThermalExpansion(this.value.mult(new UReal(r)),this.getUnits());
+}
+public VolumeThermalExpansion divideBy(double r) {
+return new VolumeThermalExpansion(this.value.divideBy(new UReal(r)),this.getUnits());
+}
+public VolumeThermalExpansion mult(UReal r) {
+return new VolumeThermalExpansion(this.value.mult(r),this.getUnits());
+}
+public VolumeThermalExpansion divideBy(UReal r) {
+return new VolumeThermalExpansion(this.value.divideBy(r),this.getUnits());
+}
+// Conversions to basic types: toString, toInteger, toReal, etc. directly from Quantity
+public int hashcode(){ //required for equals()
+return Math.round((float)value.getX());
+}
+public VolumeThermalExpansion clone() {
+return new VolumeThermalExpansion(this.getUReal(),this.getUnits());
+}
+}

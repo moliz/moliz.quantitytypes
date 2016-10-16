@@ -9,10 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.modelexecution.quantitytypes.java.BaseUnits;
-import org.modelexecution.quantitytypes.java.CommonUnits;
-import org.modelexecution.quantitytypes.java.Quantity;
-import org.modelexecution.quantitytypes.java.Unit;
+import org.modelexecution.quantitytypes.java.*;
 
 /*
  * This test implements the toy example from the SLE 2016 paper. 
@@ -25,18 +22,20 @@ public class ToyCarTest {
 	public void testAc1() {
 
 		// sensed values
-		Quantity initialPosition = new Quantity(0, 0.001, CommonUnits.M);
-		Quantity finalPosition = new Quantity(10, 0.001, CommonUnits.M);
-		Quantity duration = new Quantity(10, 0.002, new Unit(BaseUnits.Second));
-		Quantity initialVelocity = new Quantity(0, 0*0.01,
-				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
-		Quantity finalVelocity = new Quantity(2, 2*0.01,
-				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
+		Length initialPosition = new Length(0, 0.001, Units.Meter);
+		Length finalPosition = new Length(10, 0.001, Units.Meter);
+		Time duration = new Time(10, 0.002, new Unit(Units.Second));
+		LinearVelocity initialVelocity = new LinearVelocity(0, 0*0.01,
+				Units.MeterPerSecond);
+//				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
+		LinearVelocity finalVelocity = new LinearVelocity(2, 2*0.01,
+				Units.MeterPerSecond);
+//				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 
 		// computed values
-		Quantity distance = finalPosition.minus(initialPosition);
-		Quantity avgVelocity = distance.divideBy(duration);
-		Quantity avgAcceleration = (finalVelocity.minus(initialVelocity)).divideBy(duration);
+		Length distance = finalPosition.minus(initialPosition);
+		LinearVelocity avgVelocity = distance.divideBy(duration);
+		LinearAcceleration avgAcceleration = (finalVelocity.minus(initialVelocity)).divideBy(duration);
 
 		// Testing the value results
 		assertEquals("distance=finalPostion-initialPostion must be 10", 10, distance.getX(), 0.1);
@@ -65,18 +64,20 @@ public class ToyCarTest {
 	public void testAc2() {
 
 		// sensed values
-		Quantity initialPosition = new Quantity(10, 0.001, CommonUnits.M);
-		Quantity finalPosition = new Quantity(20, 0.001, CommonUnits.M);
-		Quantity duration = new Quantity(5, 0.002, new Unit(BaseUnits.Second));
-		Quantity initialVelocity = new Quantity(2, 2*0.01,
-				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
-		Quantity finalVelocity = new Quantity(2, 2*0.01,
-				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
+		Length initialPosition = new Length(10, 0.001, Units.Meter);
+		Length finalPosition = new Length(20, 0.001, Units.Meter);
+		Time duration = new Time(5, 0.002, new Unit(Units.Second));
+		LinearVelocity initialVelocity = new LinearVelocity(2, 2*0.01,
+				Units.MeterPerSecond);
+//				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
+		LinearVelocity finalVelocity = new LinearVelocity(2, 2*0.01,
+				Units.MeterPerSecond);
+//				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 
 		// computed values
-		Quantity distance = finalPosition.minus(initialPosition);
-		Quantity avgVelocity = distance.divideBy(duration);
-		Quantity avgAcceleration = (finalVelocity.minus(initialVelocity)).divideBy(duration);
+		Length distance = finalPosition.minus(initialPosition);
+		LinearVelocity avgVelocity = distance.divideBy(duration);
+		LinearAcceleration avgAcceleration = (finalVelocity.minus(initialVelocity)).divideBy(duration);
 
 		// Testing the value results
 		assertEquals("distance=finalPostion-initialPostion must be 10", 10, distance.getX(), 0.1);
@@ -106,36 +107,36 @@ public class ToyCarTest {
 	public void testVehicle() {
 
 		// sensed values acc1
-		Quantity initialPositionAcc1 = new Quantity(0, 0.001, CommonUnits.M);
-		Quantity finalPositionAcc1 = new Quantity(10, 0.001, CommonUnits.M);
-		Quantity durationAcc1 = new Quantity(10, 0.002, new Unit(BaseUnits.Second));
-		Quantity initialVelocityAcc1 = new Quantity(0, 0*0.01,
+		Length initialPositionAcc1 = new Length(0, 0.001, Units.Meter);
+		Length finalPositionAcc1 = new Length(10, 0.001, Units.Meter);
+		Time durationAcc1 = new Time(10, 0.002, new Unit(BaseUnits.Second));
+		LinearVelocity initialVelocityAcc1 = new LinearVelocity(0, 0*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
-		Quantity finalVelocityAcc1 = new Quantity(2, 2*0.01,
+		LinearVelocity finalVelocityAcc1 = new LinearVelocity(2, 2*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 
 		// computed values acc1
-		Quantity distanceAcc1 = finalPositionAcc1.minus(initialPositionAcc1);
-		Quantity avgVelocityAcc1 = distanceAcc1.divideBy(durationAcc1);
-		Quantity avgAccelerationAcc1 = (finalVelocityAcc1.minus(initialVelocityAcc1)).divideBy(durationAcc1);
+		Length distanceAcc1 = finalPositionAcc1.minus(initialPositionAcc1);
+		LinearVelocity avgVelocityAcc1 = distanceAcc1.divideBy(durationAcc1);
+		LinearAcceleration avgAccelerationAcc1 = (finalVelocityAcc1.minus(initialVelocityAcc1)).divideBy(durationAcc1);
 
 		// sensed values acc2
-		Quantity initialPositionAcc2 = new Quantity(10, 0.001, CommonUnits.M);
-		Quantity finalPositionAcc2 = new Quantity(20, 0.001, CommonUnits.M);
-		Quantity durationAcc2 = new Quantity(5, 0.002, new Unit(BaseUnits.Second));
-		Quantity initialVelocityAcc2 = new Quantity(2, 2*0.01,
+		Length initialPositionAcc2 = new Length(10, 0.001, Units.Meter);
+		Length finalPositionAcc2 = new Length(20, 0.001, Units.Meter);
+		Time durationAcc2 = new Time(5, 0.002, new Unit(BaseUnits.Second));
+		LinearVelocity initialVelocityAcc2 = new LinearVelocity(2, 2*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
-		Quantity finalVelocityAcc2 = new Quantity(2, 2*0.01,
+		LinearVelocity finalVelocityAcc2 = new LinearVelocity(2, 2*0.01,
 				new Unit("MeterPerSecond", "m/s", BaseUnits.Meter, 1.0, 1.0, 0.0, BaseUnits.Second, -1.0, 1.0));
 
 		// computed values acc2
-		Quantity distanceAcc2 = finalPositionAcc2.minus(initialPositionAcc2);
-		Quantity avgVelocityAcc2 = distanceAcc2.divideBy(durationAcc2);
-		Quantity avgAccelerationAcc2 = (finalVelocityAcc2.minus(initialVelocityAcc2)).divideBy(durationAcc2);
+		Length distanceAcc2 = finalPositionAcc2.minus(initialPositionAcc2);
+		LinearVelocity avgVelocityAcc2 = distanceAcc2.divideBy(durationAcc2);
+		LinearAcceleration avgAccelerationAcc2 = (finalVelocityAcc2.minus(initialVelocityAcc2)).divideBy(durationAcc2);
 
 		// computed values vehicle
-		Quantity avgVelocity = avgVelocityAcc1.add(avgVelocityAcc2).divideBy(new Quantity(2));
-		Quantity avgAcceleration = avgAccelerationAcc1.add(avgAccelerationAcc2).divideBy(new Quantity(2));
+		LinearVelocity avgVelocity = avgVelocityAcc1.add(avgVelocityAcc2).divideBy(new UReal(2));
+		LinearAcceleration avgAcceleration = avgAccelerationAcc1.add(avgAccelerationAcc2).divideBy(2.0);
 
 		// Testing the value results
 		assertEquals("avgVelocity must be ~1.5", 1.5, avgVelocity.getX(), 0.001);

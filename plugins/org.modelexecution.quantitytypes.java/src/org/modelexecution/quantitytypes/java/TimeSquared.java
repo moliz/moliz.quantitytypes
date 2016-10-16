@@ -103,10 +103,10 @@ return new Mass(super.mult(r));
 public Time mult(Frequency r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Time(super.mult(r));
 }
-public AngularMomentum mult(HeatFlowRate r) { //both values and units are multiplied. No offsets allowed in any of the units
+public AngularMomentum mult(HeatFlowrate r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AngularMomentum(super.mult(r));
 }
-public MassPerUnitTime mult(HeatFlowRatePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
+public MassPerUnitTime mult(HeatFlowratePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MassPerUnitTime(super.mult(r));
 }
 public Length mult(LinearAcceleration r) { //both values and units are multiplied. No offsets allowed in any of the units

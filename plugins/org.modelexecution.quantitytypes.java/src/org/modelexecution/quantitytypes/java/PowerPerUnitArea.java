@@ -73,8 +73,8 @@ return new PowerPerUnitArea(super.minus(r));
 public EnergyPerUnitArea mult(Time r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));
 }
-public HeatFlowRate mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRate(super.mult(r));
+public HeatFlowrate mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowrate(super.mult(r));
 }
 public ThermalConductivity mult(LinearThermalExpansion r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermalConductivity(super.mult(r));

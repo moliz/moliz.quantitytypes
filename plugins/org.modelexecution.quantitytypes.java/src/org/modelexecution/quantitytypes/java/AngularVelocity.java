@@ -85,6 +85,9 @@ return new AngularAcceleration(super.mult(r));
 public AngularAcceleration divideBy(Time r) { //both values and units are divided. No offsets allowed in any of the units
 return new AngularAcceleration(super.divideBy(r));
 }
+public Activity divideBy(Angle r) { //both values and units are divided. No offsets allowed in any of the units
+return new Activity(super.divideBy(r));
+}
 public Angle divideBy(Activity r) { //both values and units are divided. No offsets allowed in any of the units
 return new Angle(super.divideBy(r));
 }
@@ -93,9 +96,6 @@ return new Time(super.divideBy(r));
 }
 public Angle divideBy(Frequency r) { //both values and units are divided. No offsets allowed in any of the units
 return new Angle(super.divideBy(r));
-}
-public Activity divideBy(Angle r) { //both values and units are divided. No offsets allowed in any of the units
-return new Activity(super.divideBy(r));
 }
 public AngularVelocity abs() { //units are maintained
 return new AngularVelocity(super.abs());

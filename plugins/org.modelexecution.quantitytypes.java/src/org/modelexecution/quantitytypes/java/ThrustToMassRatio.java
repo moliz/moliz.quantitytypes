@@ -79,8 +79,8 @@ return new Force(super.mult(r));
 public LinearVelocity mult(Time r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LinearVelocity(super.mult(r));
 }
-public HeatFlowRatePerUnitArea mult(DynamicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRatePerUnitArea(super.mult(r));
+public HeatFlowratePerUnitArea mult(DynamicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowratePerUnitArea(super.mult(r));
 }
 public InversePermittivity mult(Inductance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new InversePermittivity(super.mult(r));
@@ -88,8 +88,8 @@ return new InversePermittivity(super.mult(r));
 public EnergyAndWork mult(LengthMass r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyAndWork(super.mult(r));
 }
-public HeatFlowRate mult(LinearMomentum r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRate(super.mult(r));
+public HeatFlowrate mult(LinearMomentum r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowrate(super.mult(r));
 }
 public SpecificHeatCapacity mult(LinearThermalExpansion r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new SpecificHeatCapacity(super.mult(r));

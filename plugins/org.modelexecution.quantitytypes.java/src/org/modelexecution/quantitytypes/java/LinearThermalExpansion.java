@@ -85,7 +85,7 @@ return new Volume(super.mult(r));
 public HeatCapacityAndEntropy mult(Force r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new HeatCapacityAndEntropy(super.mult(r));
 }
-public ThermalConductivity mult(HeatFlowRatePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
+public ThermalConductivity mult(HeatFlowratePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermalConductivity(super.mult(r));
 }
 public Area mult(LengthTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units

@@ -79,7 +79,7 @@ return new ThermalInsulance(super.mult(r));
 public Time mult(HeatCapacityAndEntropy r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Time(super.mult(r));
 }
-public ThermodynamicTemperature mult(HeatFlowRate r) { //both values and units are multiplied. No offsets allowed in any of the units
+public ThermodynamicTemperature mult(HeatFlowrate r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermodynamicTemperature(super.mult(r));
 }
 public ThermodynamicTemperature mult(Power r) { //both values and units are multiplied. No offsets allowed in any of the units

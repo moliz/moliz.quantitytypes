@@ -97,11 +97,11 @@ return new MagneticFieldStrength(super.mult(r));
 public ElectricCurrent mult(ElectricFluxDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ElectricCurrent(super.mult(r));
 }
-public HeatFlowRate mult(EnergyPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRate(super.mult(r));
+public HeatFlowrate mult(EnergyPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowrate(super.mult(r));
 }
-public HeatFlowRate mult(ForcePerUnitLength r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRate(super.mult(r));
+public HeatFlowrate mult(ForcePerUnitLength r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowrate(super.mult(r));
 }
 public AbsorbedDose mult(Frequency r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AbsorbedDose(super.mult(r));

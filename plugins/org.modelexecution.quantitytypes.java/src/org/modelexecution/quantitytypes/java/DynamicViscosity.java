@@ -94,8 +94,8 @@ return new AbsorbedDoseRate(super.mult(r));
 public Force mult(KinematicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Force(super.mult(r));
 }
-public HeatFlowRatePerUnitArea mult(LinearAcceleration r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRatePerUnitArea(super.mult(r));
+public HeatFlowratePerUnitArea mult(LinearAcceleration r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowratePerUnitArea(super.mult(r));
 }
 public EnergyPerUnitArea mult(LinearVelocity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));
@@ -106,8 +106,8 @@ return new ThermalConductivity(super.mult(r));
 public Force mult(ThermalDiffusivity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Force(super.mult(r));
 }
-public HeatFlowRatePerUnitArea mult(ThrustToMassRatio r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRatePerUnitArea(super.mult(r));
+public HeatFlowratePerUnitArea mult(ThrustToMassRatio r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowratePerUnitArea(super.mult(r));
 }
 public AngularMomentum mult(Volume r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AngularMomentum(super.mult(r));

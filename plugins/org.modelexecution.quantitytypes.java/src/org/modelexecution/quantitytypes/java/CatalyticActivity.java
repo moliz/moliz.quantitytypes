@@ -79,8 +79,8 @@ return new ElectricCurrent(super.mult(r));
 public Activity mult(InverseAmountOfSubstance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Activity(super.mult(r));
 }
-public HeatFlowRate mult(MolarEnergy r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRate(super.mult(r));
+public HeatFlowrate mult(MolarEnergy r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowrate(super.mult(r));
 }
 public Activity divideBy(AmountOfSubstance r) { //both values and units are divided. No offsets allowed in any of the units
 return new Activity(super.divideBy(r));

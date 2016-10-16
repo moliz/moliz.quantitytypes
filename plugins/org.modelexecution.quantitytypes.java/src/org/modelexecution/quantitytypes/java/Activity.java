@@ -115,14 +115,14 @@ return new MagneticFieldStrength(super.mult(r));
 public ElectricCurrentDensity mult(ElectricFluxDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ElectricCurrentDensity(super.mult(r));
 }
-public HeatFlowRate mult(EnergyAndWork r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRate(super.mult(r));
+public HeatFlowrate mult(EnergyAndWork r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowrate(super.mult(r));
 }
-public HeatFlowRatePerUnitArea mult(EnergyPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRatePerUnitArea(super.mult(r));
+public HeatFlowratePerUnitArea mult(EnergyPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowratePerUnitArea(super.mult(r));
 }
-public HeatFlowRatePerUnitArea mult(ForcePerUnitLength r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRatePerUnitArea(super.mult(r));
+public HeatFlowratePerUnitArea mult(ForcePerUnitLength r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowratePerUnitArea(super.mult(r));
 }
 public Resistance mult(Inductance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Resistance(super.mult(r));
@@ -157,8 +157,8 @@ return new AbsorbedDose(super.mult(r));
 public Time mult(TimeSquared r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Time(super.mult(r));
 }
-public HeatFlowRate mult(BendingMomentOrTorque r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRate(super.mult(r));
+public HeatFlowrate mult(BendingMomentOrTorque r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowrate(super.mult(r));
 }
 public VolumePerUnitTime mult(Volume r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new VolumePerUnitTime(super.mult(r));

@@ -79,8 +79,8 @@ return new LinearMomentum(super.mult(r));
 public HeatCapacityAndEntropy mult(LinearThermalExpansion r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new HeatCapacityAndEntropy(super.mult(r));
 }
-public HeatFlowRate mult(LinearVelocity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowRate(super.mult(r));
+public HeatFlowrate mult(LinearVelocity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowrate(super.mult(r));
 }
 public LengthMass mult(TimeSquared r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LengthMass(super.mult(r));

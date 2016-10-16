@@ -115,7 +115,7 @@ public class Time extends Quantity {
 			return new Area(super.mult(r));
 		}
 	
-		public Torque mult(HeatflowRate r){
+		public Torque mult(HeatFlowRate r){
 			return new Torque(super.mult(r));
 		}
 

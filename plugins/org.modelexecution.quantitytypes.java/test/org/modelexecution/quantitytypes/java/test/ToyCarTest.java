@@ -9,15 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.modelexecution.quantitytypes.java.BaseUnits;
-import org.modelexecution.quantitytypes.java.Units;
-import org.modelexecution.quantitytypes.java.Length;
-import org.modelexecution.quantitytypes.java.LinearAcceleration;
-import org.modelexecution.quantitytypes.java.LinearVelocity;
-import org.modelexecution.quantitytypes.java.Quantity;
-import org.modelexecution.quantitytypes.java.Time;
-import org.modelexecution.quantitytypes.java.UReal;
-import org.modelexecution.quantitytypes.java.Unit;
+import org.modelexecution.quantitytypes.java.*;
 
 /*
  * This test implements the toy example from the SLE 2016 paper. 

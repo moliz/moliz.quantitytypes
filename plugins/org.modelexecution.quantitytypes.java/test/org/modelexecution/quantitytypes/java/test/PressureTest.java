@@ -21,7 +21,7 @@ public class PressureTest {
 		
 		Force f = m.mult(g);
 		
-		Quantity p = f.divideBy(a);
+		EnergyDensity p = f.divideBy(a);
 		
 		assertEquals("p=f/a=m*g/a for given values must be 1348875Pa (m^-1, kg, s^-1) NewtonPerSquareMeter | (J/m^3) JoulePerCubicMeter", 1348875, 
 				p.getX(), 0.01);

@@ -127,20 +127,20 @@ return new Length(super.divideBy(r));
 public LinearThermalExpansion divideBy(AreaTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new LinearThermalExpansion(super.divideBy(r));
 }
-public LengthTemPerature divideBy(AreaThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
-return new LengthTemPerature(super.divideBy(r));
+public LengthTemperature divideBy(AreaThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
+return new LengthTemperature(super.divideBy(r));
 }
-public AreaThermalExpansion divideBy(LengthTemPerature r) { //both values and units are divided. No offsets allowed in any of the units
+public AreaThermalExpansion divideBy(LengthTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new AreaThermalExpansion(super.divideBy(r));
 }
 public AreaTemperature divideBy(LinearThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
 return new AreaTemperature(super.divideBy(r));
 }
-public SpecificHeatPressure divideBy(MassTemPerature r) { //both values and units are divided. No offsets allowed in any of the units
+public SpecificHeatPressure divideBy(MassTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new SpecificHeatPressure(super.divideBy(r));
 }
-public MassTemPerature divideBy(SpecificHeatPressure r) { //both values and units are divided. No offsets allowed in any of the units
-return new MassTemPerature(super.divideBy(r));
+public MassTemperature divideBy(SpecificHeatPressure r) { //both values and units are divided. No offsets allowed in any of the units
+return new MassTemperature(super.divideBy(r));
 }
 public ThermodynamicTemperature divideBy(VolumeThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermodynamicTemperature(super.divideBy(r));

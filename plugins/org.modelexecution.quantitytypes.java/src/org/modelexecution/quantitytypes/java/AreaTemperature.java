@@ -76,8 +76,8 @@ return new HeatFlowrate(super.mult(r));
 public Volume mult(LinearThermalExpansion r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Volume(super.mult(r));
 }
-public MassTemPerature mult(MassPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new MassTemPerature(super.mult(r));
+public MassTemperature mult(MassPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new MassTemperature(super.mult(r));
 }
 public LinearAcceleration mult(SpecificHeatVolume r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LinearAcceleration(super.mult(r));
@@ -85,8 +85,8 @@ return new LinearAcceleration(super.mult(r));
 public Force mult(VolumetricHeatCapacity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Force(super.mult(r));
 }
-public LengthTemPerature divideBy(Length r) { //both values and units are divided. No offsets allowed in any of the units
-return new LengthTemPerature(super.divideBy(r));
+public LengthTemperature divideBy(Length r) { //both values and units are divided. No offsets allowed in any of the units
+return new LengthTemperature(super.divideBy(r));
 }
 public Area divideBy(ThermodynamicTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new Area(super.divideBy(r));
@@ -97,7 +97,7 @@ return new ThermodynamicTemperature(super.divideBy(r));
 public ThermalInsulance divideBy(HeatFlowrate r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalInsulance(super.divideBy(r));
 }
-public Length divideBy(LengthTemPerature r) { //both values and units are divided. No offsets allowed in any of the units
+public Length divideBy(LengthTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new Length(super.divideBy(r));
 }
 public ThermalInsulance divideBy(Power r) { //both values and units are divided. No offsets allowed in any of the units

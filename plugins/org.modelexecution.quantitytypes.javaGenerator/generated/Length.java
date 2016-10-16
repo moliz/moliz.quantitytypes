@@ -73,8 +73,8 @@ return new Length(super.minus(r));
 public LengthMass mult(Mass r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LengthMass(super.mult(r));
 }
-public LengthTemPerature mult(ThermodynamicTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new LengthTemPerature(super.mult(r));
+public LengthTemperature mult(ThermodynamicTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new LengthTemperature(super.mult(r));
 }
 public LinearVelocity mult(Activity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LinearVelocity(super.mult(r));
@@ -136,7 +136,7 @@ return new VolumePerUnitTime(super.mult(r));
 public AngularMass mult(LengthMass r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AngularMass(super.mult(r));
 }
-public AreaTemperature mult(LengthTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
+public AreaTemperature mult(LengthTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AreaTemperature(super.mult(r));
 }
 public AbsorbedDose mult(LinearAcceleration r) { //both values and units are multiplied. No offsets allowed in any of the units

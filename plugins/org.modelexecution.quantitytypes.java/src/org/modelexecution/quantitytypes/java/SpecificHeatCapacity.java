@@ -82,7 +82,7 @@ return new VolumetricHeatCapacity(super.mult(r));
 public ThermalConductivity mult(DynamicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermalConductivity(super.mult(r));
 }
-public EnergyAndWork mult(MassTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
+public EnergyAndWork mult(MassTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyAndWork(super.mult(r));
 }
 public AreaThermalExpansion mult(TimeSquared r) { //both values and units are multiplied. No offsets allowed in any of the units

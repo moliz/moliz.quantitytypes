@@ -70,7 +70,7 @@ return new ThermalConductivity(super.add(r));
 public ThermalConductivity minus(ThermalConductivity r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
 return new ThermalConductivity(super.minus(r));
 }
-public HeatFlowrate mult(LengthTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
+public HeatFlowrate mult(LengthTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new HeatFlowrate(super.mult(r));
 }
 public Length mult(ThermalInsulance r) { //both values and units are multiplied. No offsets allowed in any of the units

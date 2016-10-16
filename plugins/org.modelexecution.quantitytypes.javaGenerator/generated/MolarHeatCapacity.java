@@ -82,7 +82,7 @@ return new VolumetricHeatCapacity(super.mult(r));
 public SpecificHeatCapacity mult(AmountOfSubstancePerUnitMass r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new SpecificHeatCapacity(super.mult(r));
 }
-public EnergyAndWork mult(TemPeratureAmountOfSubstance r) { //both values and units are multiplied. No offsets allowed in any of the units
+public EnergyAndWork mult(TemperatureAmountOfSubstance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyAndWork(super.mult(r));
 }
 public InverseAmountOfSubstance divideBy(HeatCapacityAndEntropy r) { //both values and units are divided. No offsets allowed in any of the units

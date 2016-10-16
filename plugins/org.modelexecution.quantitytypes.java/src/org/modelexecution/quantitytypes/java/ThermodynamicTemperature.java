@@ -70,14 +70,14 @@ return new ThermodynamicTemperature(super.add(r));
 public ThermodynamicTemperature minus(ThermodynamicTemperature r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
 return new ThermodynamicTemperature(super.minus(r));
 }
-public LengthTemPerature mult(Length r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new LengthTemPerature(super.mult(r));
+public LengthTemperature mult(Length r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new LengthTemperature(super.mult(r));
 }
-public MassTemPerature mult(Mass r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new MassTemPerature(super.mult(r));
+public MassTemperature mult(Mass r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new MassTemperature(super.mult(r));
 }
-public TemPeratureAmountOfSubstance mult(AmountOfSubstance r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new TemPeratureAmountOfSubstance(super.mult(r));
+public TemperatureAmountOfSubstance mult(AmountOfSubstance r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new TemperatureAmountOfSubstance(super.mult(r));
 }
 public AreaTemperature mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AreaTemperature(super.mult(r));
@@ -112,8 +112,8 @@ return new ThermalResistance(super.divideBy(r));
 public ThermalInsulance divideBy(HeatFlowratePerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalInsulance(super.divideBy(r));
 }
-public TemPeratureAmountOfSubstance divideBy(InverseAmountOfSubstance r) { //both values and units are divided. No offsets allowed in any of the units
-return new TemPeratureAmountOfSubstance(super.divideBy(r));
+public TemperatureAmountOfSubstance divideBy(InverseAmountOfSubstance r) { //both values and units are divided. No offsets allowed in any of the units
+return new TemperatureAmountOfSubstance(super.divideBy(r));
 }
 public ThermalResistance divideBy(Power r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalResistance(super.divideBy(r));
@@ -121,7 +121,7 @@ return new ThermalResistance(super.divideBy(r));
 public ThermalInsulance divideBy(PowerPerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalInsulance(super.divideBy(r));
 }
-public InverseAmountOfSubstance divideBy(TemPeratureAmountOfSubstance r) { //both values and units are divided. No offsets allowed in any of the units
+public InverseAmountOfSubstance divideBy(TemperatureAmountOfSubstance r) { //both values and units are divided. No offsets allowed in any of the units
 return new InverseAmountOfSubstance(super.divideBy(r));
 }
 public HeatFlowratePerUnitArea divideBy(ThermalInsulance r) { //both values and units are divided. No offsets allowed in any of the units

@@ -82,8 +82,8 @@ return new HeatFlowratePerUnitArea(super.mult(r));
 public Mass mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Mass(super.mult(r));
 }
-public MassTemPerature mult(AreaTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new MassTemPerature(super.mult(r));
+public MassTemperature mult(AreaTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new MassTemperature(super.mult(r));
 }
 public EnergyPerUnitArea mult(DoseEquivalent r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));

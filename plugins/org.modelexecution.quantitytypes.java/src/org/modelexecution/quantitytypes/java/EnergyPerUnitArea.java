@@ -145,7 +145,7 @@ return new MassPerUnitTime(super.divideBy(r));
 public Time divideBy(HeatFlowratePerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
 return new Time(super.divideBy(r));
 }
-public VolumetricHeatCapacity divideBy(LengthTemPerature r) { //both values and units are divided. No offsets allowed in any of the units
+public VolumetricHeatCapacity divideBy(LengthTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new VolumetricHeatCapacity(super.divideBy(r));
 }
 public MassPerUnitLength divideBy(LinearAcceleration r) { //both values and units are divided. No offsets allowed in any of the units
@@ -181,8 +181,8 @@ return new MassPerUnitArea(super.divideBy(r));
 public MassPerUnitLength divideBy(ThrustToMassRatio r) { //both values and units are divided. No offsets allowed in any of the units
 return new MassPerUnitLength(super.divideBy(r));
 }
-public LengthTemPerature divideBy(VolumetricHeatCapacity r) { //both values and units are divided. No offsets allowed in any of the units
-return new LengthTemPerature(super.divideBy(r));
+public LengthTemperature divideBy(VolumetricHeatCapacity r) { //both values and units are divided. No offsets allowed in any of the units
+return new LengthTemperature(super.divideBy(r));
 }
 public EnergyPerUnitArea abs() { //units are maintained
 return new EnergyPerUnitArea(super.abs());

@@ -79,7 +79,7 @@ return new Force(super.mult(r));
 public ThermalConductivity mult(KinematicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermalConductivity(super.mult(r));
 }
-public EnergyPerUnitArea mult(LengthTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
+public EnergyPerUnitArea mult(LengthTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));
 }
 public CoefficientOfHeatTransfer mult(LinearVelocity r) { //both values and units are multiplied. No offsets allowed in any of the units

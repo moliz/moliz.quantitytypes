@@ -79,8 +79,8 @@ return new AreaTemperature(super.mult(r));
 public ThermodynamicTemperature mult(ThermalResistance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermodynamicTemperature(super.mult(r));
 }
-public LengthTemPerature mult(ThermalResistivity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new LengthTemPerature(super.mult(r));
+public LengthTemperature mult(ThermalResistivity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new LengthTemperature(super.mult(r));
 }
 public AngularMomentum mult(TimeSquared r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AngularMomentum(super.mult(r));
@@ -145,7 +145,7 @@ return new Area(super.divideBy(r));
 public EnergyPerUnitArea divideBy(KinematicViscosity r) { //both values and units are divided. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.divideBy(r));
 }
-public ThermalConductivity divideBy(LengthTemPerature r) { //both values and units are divided. No offsets allowed in any of the units
+public ThermalConductivity divideBy(LengthTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalConductivity(super.divideBy(r));
 }
 public LinearMomentum divideBy(LinearAcceleration r) { //both values and units are divided. No offsets allowed in any of the units
@@ -181,8 +181,8 @@ return new PowerPerAngle(super.divideBy(r));
 public MassPerUnitTime divideBy(SpecificEnergy r) { //both values and units are divided. No offsets allowed in any of the units
 return new MassPerUnitTime(super.divideBy(r));
 }
-public LengthTemPerature divideBy(ThermalConductivity r) { //both values and units are divided. No offsets allowed in any of the units
-return new LengthTemPerature(super.divideBy(r));
+public LengthTemperature divideBy(ThermalConductivity r) { //both values and units are divided. No offsets allowed in any of the units
+return new LengthTemperature(super.divideBy(r));
 }
 public EnergyPerUnitArea divideBy(ThermalDiffusivity r) { //both values and units are divided. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.divideBy(r));

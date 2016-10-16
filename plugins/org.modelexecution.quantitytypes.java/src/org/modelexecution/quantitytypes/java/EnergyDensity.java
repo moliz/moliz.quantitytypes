@@ -145,7 +145,7 @@ return new MagneticFluxDensity(super.divideBy(r));
 public MagneticFieldStrength divideBy(MagneticFluxDensity r) { //both values and units are divided. No offsets allowed in any of the units
 return new MagneticFieldStrength(super.divideBy(r));
 }
-public SpecificHeatVolume divideBy(MassTemPerature r) { //both values and units are divided. No offsets allowed in any of the units
+public SpecificHeatVolume divideBy(MassTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new SpecificHeatVolume(super.divideBy(r));
 }
 public LinearAcceleration divideBy(MassPerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
@@ -157,8 +157,8 @@ return new AmountOfSubstancePerUnitVolume(super.divideBy(r));
 public Density divideBy(SpecificEnergy r) { //both values and units are divided. No offsets allowed in any of the units
 return new Density(super.divideBy(r));
 }
-public MassTemPerature divideBy(SpecificHeatVolume r) { //both values and units are divided. No offsets allowed in any of the units
-return new MassTemPerature(super.divideBy(r));
+public MassTemperature divideBy(SpecificHeatVolume r) { //both values and units are divided. No offsets allowed in any of the units
+return new MassTemperature(super.divideBy(r));
 }
 public MassPerUnitArea divideBy(ThrustToMassRatio r) { //both values and units are divided. No offsets allowed in any of the units
 return new MassPerUnitArea(super.divideBy(r));

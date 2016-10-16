@@ -97,8 +97,8 @@ return new AbsorbedDose(super.mult(r));
 public LinearMomentum mult(KinematicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LinearMomentum(super.mult(r));
 }
-public MassTemPerature mult(LengthTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new MassTemPerature(super.mult(r));
+public MassTemperature mult(LengthTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new MassTemperature(super.mult(r));
 }
 public EnergyPerUnitArea mult(LinearAcceleration r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));

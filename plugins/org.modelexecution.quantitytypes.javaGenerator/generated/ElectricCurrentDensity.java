@@ -21,11 +21,11 @@ this.unit = new Unit (q.unit);
 }
 public ElectricCurrentDensity () {
 value = new UReal();
-unit = new Unit(DerivedUnits.AmPerePerSquareMeter);
+unit = new Unit(DerivedUnits.AmperePerSquareMeter);
 }
 public ElectricCurrentDensity(UReal u){
 value = u.clone();
-unit = new Unit(DerivedUnits.AmPerePerSquareMeter);
+unit = new Unit(DerivedUnits.AmperePerSquareMeter);
 }
 public ElectricCurrentDensity(UReal u, Unit unit){
 value = u.clone();
@@ -34,11 +34,11 @@ this.unit = new Unit (unit);
 }
 public ElectricCurrentDensity(double x){ //"promotes" a real x
 value = new UReal(x);
-unit = new Unit(DerivedUnits.AmPerePerSquareMeter);
+unit = new Unit(DerivedUnits.AmperePerSquareMeter);
 }
 public ElectricCurrentDensity (double x, double u) {
 value = new UReal(x,u);
-unit = new Unit(DerivedUnits.AmPerePerSquareMeter);
+unit = new Unit(DerivedUnits.AmperePerSquareMeter);
 }
 public ElectricCurrentDensity(double x, Unit unit){ //we only allow the same Units
 value = new UReal(x);
@@ -52,11 +52,11 @@ this.unit = new Unit (unit);
 }
 public ElectricCurrentDensity(String x) { //creates a ElectricCurrentDensity from a string representing a real, with u=0.
 value = new UReal(x);
-unit = new Unit(DerivedUnits.AmPerePerSquareMeter);
+unit = new Unit(DerivedUnits.AmperePerSquareMeter);
 }
 public ElectricCurrentDensity(String x, String u) { //creates a ElectricCurrentDensity from two strings representing (x,u).
 value = new UReal(x,u);
-unit = new Unit(DerivedUnits.AmPerePerSquareMeter);
+unit = new Unit(DerivedUnits.AmperePerSquareMeter);
 }
 public ElectricCurrentDensity(String x, String u, Unit unit) { //creates a ElectricCurrentDensity from two strings representing (x,u).
 value = new UReal(x,u);

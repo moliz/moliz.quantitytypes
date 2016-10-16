@@ -76,7 +76,7 @@ return new VolumeThermalExpansion(super.mult(r));
 public SpecificHeatCapacity mult(EnergyDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new SpecificHeatCapacity(super.mult(r));
 }
-public Volume mult(MassTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
+public Volume mult(MassTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Volume(super.mult(r));
 }
 public LinearThermalExpansion mult(MassPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units

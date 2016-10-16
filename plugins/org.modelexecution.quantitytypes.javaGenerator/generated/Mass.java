@@ -73,8 +73,8 @@ return new Mass(super.minus(r));
 public LengthMass mult(Length r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LengthMass(super.mult(r));
 }
-public MassTemPerature mult(ThermodynamicTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new MassTemPerature(super.mult(r));
+public MassTemperature mult(ThermodynamicTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new MassTemperature(super.mult(r));
 }
 public EnergyAndWork mult(AbsorbedDose r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyAndWork(super.mult(r));

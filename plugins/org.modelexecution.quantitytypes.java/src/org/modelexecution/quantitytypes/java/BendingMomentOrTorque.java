@@ -181,7 +181,7 @@ return new ElectricCurrent(super.divideBy(r));
 public MagneticDipoleMoment divideBy(MagneticFluxDensity r) { //both values and units are divided. No offsets allowed in any of the units
 return new MagneticDipoleMoment(super.divideBy(r));
 }
-public SpecificHeatCapacity divideBy(MassTemPerature r) { //both values and units are divided. No offsets allowed in any of the units
+public SpecificHeatCapacity divideBy(MassTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new SpecificHeatCapacity(super.divideBy(r));
 }
 public KinematicViscosity divideBy(MassPerUnitTime r) { //both values and units are divided. No offsets allowed in any of the units
@@ -190,8 +190,8 @@ return new KinematicViscosity(super.divideBy(r));
 public AmountOfSubstance divideBy(MolarEnergy r) { //both values and units are divided. No offsets allowed in any of the units
 return new AmountOfSubstance(super.divideBy(r));
 }
-public TemPeratureAmountOfSubstance divideBy(MolarHeatCapacity r) { //both values and units are divided. No offsets allowed in any of the units
-return new TemPeratureAmountOfSubstance(super.divideBy(r));
+public TemperatureAmountOfSubstance divideBy(MolarHeatCapacity r) { //both values and units are divided. No offsets allowed in any of the units
+return new TemperatureAmountOfSubstance(super.divideBy(r));
 }
 public Time divideBy(Power r) { //both values and units are divided. No offsets allowed in any of the units
 return new Time(super.divideBy(r));
@@ -202,10 +202,10 @@ return new Volume(super.divideBy(r));
 public Mass divideBy(SpecificEnergy r) { //both values and units are divided. No offsets allowed in any of the units
 return new Mass(super.divideBy(r));
 }
-public MassTemPerature divideBy(SpecificHeatCapacity r) { //both values and units are divided. No offsets allowed in any of the units
-return new MassTemPerature(super.divideBy(r));
+public MassTemperature divideBy(SpecificHeatCapacity r) { //both values and units are divided. No offsets allowed in any of the units
+return new MassTemperature(super.divideBy(r));
 }
-public MolarHeatCapacity divideBy(TemPeratureAmountOfSubstance r) { //both values and units are divided. No offsets allowed in any of the units
+public MolarHeatCapacity divideBy(TemperatureAmountOfSubstance r) { //both values and units are divided. No offsets allowed in any of the units
 return new MolarHeatCapacity(super.divideBy(r));
 }
 public MassPerUnitTime divideBy(ThermalDiffusivity r) { //both values and units are divided. No offsets allowed in any of the units

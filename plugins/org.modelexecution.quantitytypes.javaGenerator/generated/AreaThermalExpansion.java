@@ -82,10 +82,10 @@ return new HeatCapacityAndEntropy(super.mult(r));
 public HeatCapacityAndEntropy mult(ForcePerUnitLength r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new HeatCapacityAndEntropy(super.mult(r));
 }
-public Volume mult(LengthTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
+public Volume mult(LengthTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Volume(super.mult(r));
 }
-public AngularMass mult(MassTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
+public AngularMass mult(MassTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AngularMass(super.mult(r));
 }
 public LinearThermalExpansion divideBy(Length r) { //both values and units are divided. No offsets allowed in any of the units

@@ -109,10 +109,10 @@ return new TimeSquared(super.divideBy(r));
 public Time divideBy(LinearMomentum r) { //both values and units are divided. No offsets allowed in any of the units
 return new Time(super.divideBy(r));
 }
-public MassTemPerature divideBy(LinearThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
-return new MassTemPerature(super.divideBy(r));
+public MassTemperature divideBy(LinearThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
+return new MassTemperature(super.divideBy(r));
 }
-public LinearThermalExpansion divideBy(MassTemPerature r) { //both values and units are divided. No offsets allowed in any of the units
+public LinearThermalExpansion divideBy(MassTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new LinearThermalExpansion(super.divideBy(r));
 }
 public Volume divideBy(MassPerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units

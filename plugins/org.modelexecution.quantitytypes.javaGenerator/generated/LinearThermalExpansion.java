@@ -88,13 +88,13 @@ return new HeatCapacityAndEntropy(super.mult(r));
 public ThermalConductivity mult(HeatFlowratePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermalConductivity(super.mult(r));
 }
-public Area mult(LengthTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
+public Area mult(LengthTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Area(super.mult(r));
 }
 public SpecificHeatCapacity mult(LinearAcceleration r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new SpecificHeatCapacity(super.mult(r));
 }
-public LengthMass mult(MassTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
+public LengthMass mult(MassTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LengthMass(super.mult(r));
 }
 public ThermalConductivity mult(PowerPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units

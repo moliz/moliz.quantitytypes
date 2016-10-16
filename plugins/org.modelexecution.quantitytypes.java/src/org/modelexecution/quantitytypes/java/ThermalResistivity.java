@@ -73,11 +73,11 @@ return new ThermalResistivity(super.minus(r));
 public ThermalInsulance mult(Length r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermalInsulance(super.mult(r));
 }
-public LengthTemPerature mult(HeatFlowrate r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new LengthTemPerature(super.mult(r));
+public LengthTemperature mult(HeatFlowrate r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new LengthTemperature(super.mult(r));
 }
-public LengthTemPerature mult(Power r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new LengthTemPerature(super.mult(r));
+public LengthTemperature mult(Power r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new LengthTemperature(super.mult(r));
 }
 public ThermalResistance divideBy(Length r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalResistance(super.divideBy(r));

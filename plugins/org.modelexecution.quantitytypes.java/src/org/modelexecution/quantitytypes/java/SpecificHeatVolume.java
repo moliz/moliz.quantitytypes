@@ -82,7 +82,7 @@ return new LinearAcceleration(super.mult(r));
 public CoefficientOfHeatTransfer mult(LinearMomentum r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new CoefficientOfHeatTransfer(super.mult(r));
 }
-public EnergyDensity mult(MassTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
+public EnergyDensity mult(MassTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyDensity(super.mult(r));
 }
 public SpecificHeatCapacity mult(Volume r) { //both values and units are multiplied. No offsets allowed in any of the units

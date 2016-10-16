@@ -91,8 +91,8 @@ return new Time(super.divideBy(r));
 public Mass divideBy(Area r) { //both values and units are divided. No offsets allowed in any of the units
 return new Mass(super.divideBy(r));
 }
-public MassTemPerature divideBy(AreaThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
-return new MassTemPerature(super.divideBy(r));
+public MassTemperature divideBy(AreaThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
+return new MassTemperature(super.divideBy(r));
 }
 public TimeSquared divideBy(EnergyAndWork r) { //both values and units are divided. No offsets allowed in any of the units
 return new TimeSquared(super.divideBy(r));
@@ -100,7 +100,7 @@ return new TimeSquared(super.divideBy(r));
 public Length divideBy(LengthMass r) { //both values and units are divided. No offsets allowed in any of the units
 return new Length(super.divideBy(r));
 }
-public AreaThermalExpansion divideBy(MassTemPerature r) { //both values and units are divided. No offsets allowed in any of the units
+public AreaThermalExpansion divideBy(MassTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new AreaThermalExpansion(super.divideBy(r));
 }
 public Volume divideBy(MassPerUnitLength r) { //both values and units are divided. No offsets allowed in any of the units

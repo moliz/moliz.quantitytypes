@@ -21,11 +21,11 @@ this.unit = new Unit (q.unit);
 }
 public Time () {
 value = new UReal();
-unit = new Unit(DerivedUnits.SecondTime);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time(UReal u){
 value = u.clone();
-unit = new Unit(DerivedUnits.SecondTime);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time(UReal u, Unit unit){
 value = u.clone();
@@ -34,11 +34,11 @@ this.unit = new Unit (unit);
 }
 public Time(double x){ //"promotes" a real x
 value = new UReal(x);
-unit = new Unit(DerivedUnits.SecondTime);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time (double x, double u) {
 value = new UReal(x,u);
-unit = new Unit(DerivedUnits.SecondTime);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time(double x, Unit unit){ //we only allow the same Units
 value = new UReal(x);
@@ -52,11 +52,11 @@ this.unit = new Unit (unit);
 }
 public Time(String x) { //creates a Time from a string representing a real, with u=0.
 value = new UReal(x);
-unit = new Unit(DerivedUnits.SecondTime);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time(String x, String u) { //creates a Time from two strings representing (x,u).
 value = new UReal(x,u);
-unit = new Unit(DerivedUnits.SecondTime);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time(String x, String u, Unit unit) { //creates a Time from two strings representing (x,u).
 value = new UReal(x,u);

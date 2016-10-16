@@ -178,11 +178,11 @@ return new TimeSquared(super.divideBy(r));
 public Time divideBy(KinematicViscosity r) { //both values and units are divided. No offsets allowed in any of the units
 return new Time(super.divideBy(r));
 }
-public LinearThermalExpansion divideBy(LengthTemPerature r) { //both values and units are divided. No offsets allowed in any of the units
+public LinearThermalExpansion divideBy(LengthTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new LinearThermalExpansion(super.divideBy(r));
 }
-public LengthTemPerature divideBy(LinearThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
-return new LengthTemPerature(super.divideBy(r));
+public LengthTemperature divideBy(LinearThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
+return new LengthTemperature(super.divideBy(r));
 }
 public TimeSquared divideBy(SpecificEnergy r) { //both values and units are divided. No offsets allowed in any of the units
 return new TimeSquared(super.divideBy(r));

@@ -82,7 +82,7 @@ return new MolarEnergy(super.mult(r));
 public MolarHeatCapacity mult(HeatCapacityAndEntropy r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MolarHeatCapacity(super.mult(r));
 }
-public ThermodynamicTemperature mult(TemPeratureAmountOfSubstance r) { //both values and units are multiplied. No offsets allowed in any of the units
+public ThermodynamicTemperature mult(TemperatureAmountOfSubstance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermodynamicTemperature(super.mult(r));
 }
 public MolarEnergy mult(BendingMomentOrTorque r) { //both values and units are multiplied. No offsets allowed in any of the units

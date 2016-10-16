@@ -79,8 +79,8 @@ return new AmountOfSubstancePerUnitVolume(super.mult(r));
 public Exposure mult(ElectricChargePerAmountOfSubstance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Exposure(super.mult(r));
 }
-public TemPeratureAmountOfSubstance mult(MassTemPerature r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new TemPeratureAmountOfSubstance(super.mult(r));
+public TemperatureAmountOfSubstance mult(MassTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new TemperatureAmountOfSubstance(super.mult(r));
 }
 public CatalyticActivity mult(MassPerUnitTime r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new CatalyticActivity(super.mult(r));

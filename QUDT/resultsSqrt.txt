@@ -1,7 +1,0 @@
-Angle.sqrt() returns Angle	=>	 sqrt [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-Absorbed Dose.sqrt() returns Linear Velocity	=>	 sqrt [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-Area.sqrt() returns Length	=>	 sqrt [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-Dose Equivalent.sqrt() returns Linear Velocity	=>	 sqrt [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-Solid Angle.sqrt() returns Plane Angle	=>	 sqrt [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0]
-Specific Energy.sqrt() returns Linear Velocity	=>	 sqrt [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-Time Squared.sqrt() returns Time	=>	 sqrt [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0]

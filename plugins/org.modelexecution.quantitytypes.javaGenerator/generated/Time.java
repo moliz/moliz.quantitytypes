@@ -121,10 +121,10 @@ return new LinearMomentum(super.mult(r));
 public MassPerUnitTime mult(ForcePerUnitLength r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MassPerUnitTime(super.mult(r));
 }
-public EnergyAndWork mult(HeatFlowrate r) { //both values and units are multiplied. No offsets allowed in any of the units
+public EnergyAndWork mult(HeatFlowRate r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyAndWork(super.mult(r));
 }
-public EnergyPerUnitArea mult(HeatFlowratePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
+public EnergyPerUnitArea mult(HeatFlowRatePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));
 }
 public Area mult(KinematicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units

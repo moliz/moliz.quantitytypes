@@ -79,8 +79,8 @@ return new MassTemperature(super.mult(r));
 public EnergyAndWork mult(AbsorbedDose r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyAndWork(super.mult(r));
 }
-public HeatFlowrate mult(AbsorbedDoseRate r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(AbsorbedDoseRate r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public MassPerUnitTime mult(Activity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MassPerUnitTime(super.mult(r));

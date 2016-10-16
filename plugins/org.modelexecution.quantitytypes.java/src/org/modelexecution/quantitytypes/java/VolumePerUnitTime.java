@@ -88,8 +88,8 @@ return new MagneticDipoleMoment(super.mult(r));
 public ElectricCurrent mult(ElectricChargeVolumeDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ElectricCurrent(super.mult(r));
 }
-public HeatFlowrate mult(EnergyDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(EnergyDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public LinearMomentum mult(MassPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LinearMomentum(super.mult(r));
@@ -97,8 +97,8 @@ return new LinearMomentum(super.mult(r));
 public AngularMomentum mult(MassPerUnitLength r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AngularMomentum(super.mult(r));
 }
-public HeatFlowrate mult(Pressure r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(Pressure r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public KinematicViscosity divideBy(Length r) { //both values and units are divided. No offsets allowed in any of the units
 return new KinematicViscosity(super.divideBy(r));

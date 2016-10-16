@@ -82,8 +82,8 @@ return new Area(super.mult(r));
 public MassTemperature mult(MassPerUnitLength r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MassTemperature(super.mult(r));
 }
-public HeatFlowrate mult(ThermalConductivity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(ThermalConductivity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public EnergyPerUnitArea mult(VolumetricHeatCapacity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));
@@ -94,14 +94,14 @@ return new ThermodynamicTemperature(super.divideBy(r));
 public Length divideBy(ThermodynamicTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new Length(super.divideBy(r));
 }
-public ThermalResistivity divideBy(HeatFlowrate r) { //both values and units are divided. No offsets allowed in any of the units
+public ThermalResistivity divideBy(HeatFlowRate r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalResistivity(super.divideBy(r));
 }
 public ThermalResistivity divideBy(Power r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalResistivity(super.divideBy(r));
 }
-public HeatFlowrate divideBy(ThermalResistivity r) { //both values and units are divided. No offsets allowed in any of the units
-return new HeatFlowrate(super.divideBy(r));
+public HeatFlowRate divideBy(ThermalResistivity r) { //both values and units are divided. No offsets allowed in any of the units
+return new HeatFlowRate(super.divideBy(r));
 }
 public LengthTemperature abs() { //units are maintained
 return new LengthTemperature(super.abs());

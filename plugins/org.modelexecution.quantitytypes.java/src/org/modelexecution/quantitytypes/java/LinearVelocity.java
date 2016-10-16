@@ -100,11 +100,11 @@ return new MagneticDipoleMoment(super.mult(r));
 public MagneticFieldStrength mult(ElectricFluxDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MagneticFieldStrength(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(EnergyDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(EnergyDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
-public HeatFlowrate mult(Force r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(Force r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public LinearAcceleration mult(Frequency r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LinearAcceleration(super.mult(r));
@@ -136,8 +136,8 @@ return new Resistance(super.mult(r));
 public ElectricalConductivity mult(Permittivity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ElectricalConductivity(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(Pressure r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(Pressure r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
 public InversePermittivity mult(Resistance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new InversePermittivity(super.mult(r));

@@ -70,10 +70,10 @@ return new ThermalInsulance(super.add(r));
 public ThermalInsulance minus(ThermalInsulance r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
 return new ThermalInsulance(super.minus(r));
 }
-public AreaTemperature mult(HeatFlowrate r) { //both values and units are multiplied. No offsets allowed in any of the units
+public AreaTemperature mult(HeatFlowRate r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AreaTemperature(super.mult(r));
 }
-public ThermodynamicTemperature mult(HeatFlowratePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
+public ThermodynamicTemperature mult(HeatFlowRatePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermodynamicTemperature(super.mult(r));
 }
 public AreaTemperature mult(Power r) { //both values and units are multiplied. No offsets allowed in any of the units

@@ -94,8 +94,8 @@ return new MagneticFieldStrength(super.mult(r));
 public LinearAcceleration mult(Exposure r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LinearAcceleration(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(MagneticFieldStrength r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(MagneticFieldStrength r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
 public ElectricFluxDensity mult(Permittivity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ElectricFluxDensity(super.mult(r));

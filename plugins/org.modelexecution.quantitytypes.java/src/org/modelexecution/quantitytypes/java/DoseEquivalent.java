@@ -85,8 +85,8 @@ return new EnergyDensity(super.mult(r));
 public AbsorbedDoseRate mult(Frequency r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AbsorbedDoseRate(super.mult(r));
 }
-public HeatFlowrate mult(MassPerUnitTime r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(MassPerUnitTime r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public EnergyPerUnitArea mult(MassPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));

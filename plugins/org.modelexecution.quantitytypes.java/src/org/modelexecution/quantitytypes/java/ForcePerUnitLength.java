@@ -76,8 +76,8 @@ return new Force(super.mult(r));
 public MassPerUnitTime mult(Time r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MassPerUnitTime(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(Activity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(Activity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
 public EnergyAndWork mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyAndWork(super.mult(r));
@@ -85,14 +85,14 @@ return new EnergyAndWork(super.mult(r));
 public HeatCapacityAndEntropy mult(AreaThermalExpansion r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new HeatCapacityAndEntropy(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(Frequency r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(Frequency r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
-public HeatFlowrate mult(KinematicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(KinematicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
-public HeatFlowrate mult(ThermalDiffusivity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(ThermalDiffusivity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public Mass mult(TimeSquared r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Mass(super.mult(r));
@@ -100,8 +100,8 @@ return new Mass(super.mult(r));
 public EnergyDensity divideBy(Length r) { //both values and units are divided. No offsets allowed in any of the units
 return new EnergyDensity(super.divideBy(r));
 }
-public HeatFlowratePerUnitArea divideBy(Time r) { //both values and units are divided. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.divideBy(r));
+public HeatFlowRatePerUnitArea divideBy(Time r) { //both values and units are divided. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.divideBy(r));
 }
 public MagneticFluxDensity divideBy(ElectricCurrent r) { //both values and units are divided. No offsets allowed in any of the units
 return new MagneticFluxDensity(super.divideBy(r));
@@ -142,7 +142,7 @@ return new ElectricChargeLineDensity(super.divideBy(r));
 public MassPerUnitTime divideBy(Frequency r) { //both values and units are divided. No offsets allowed in any of the units
 return new MassPerUnitTime(super.divideBy(r));
 }
-public Time divideBy(HeatFlowratePerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
+public Time divideBy(HeatFlowRatePerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
 return new Time(super.divideBy(r));
 }
 public VolumetricHeatCapacity divideBy(LengthTemperature r) { //both values and units are divided. No offsets allowed in any of the units

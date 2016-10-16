@@ -85,8 +85,8 @@ return new AreaTemperature(super.mult(r));
 public Area mult(AreaThermalExpansion r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Area(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(CoefficientOfHeatTransfer r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(CoefficientOfHeatTransfer r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
 public EnergyAndWork mult(HeatCapacityAndEntropy r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyAndWork(super.mult(r));
@@ -106,10 +106,10 @@ return new Volume(super.mult(r));
 public EnergyDensity mult(VolumetricHeatCapacity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyDensity(super.mult(r));
 }
-public ThermalResistance divideBy(HeatFlowrate r) { //both values and units are divided. No offsets allowed in any of the units
+public ThermalResistance divideBy(HeatFlowRate r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalResistance(super.divideBy(r));
 }
-public ThermalInsulance divideBy(HeatFlowratePerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
+public ThermalInsulance divideBy(HeatFlowRatePerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalInsulance(super.divideBy(r));
 }
 public TemperatureAmountOfSubstance divideBy(InverseAmountOfSubstance r) { //both values and units are divided. No offsets allowed in any of the units
@@ -124,11 +124,11 @@ return new ThermalInsulance(super.divideBy(r));
 public InverseAmountOfSubstance divideBy(TemperatureAmountOfSubstance r) { //both values and units are divided. No offsets allowed in any of the units
 return new InverseAmountOfSubstance(super.divideBy(r));
 }
-public HeatFlowratePerUnitArea divideBy(ThermalInsulance r) { //both values and units are divided. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.divideBy(r));
+public HeatFlowRatePerUnitArea divideBy(ThermalInsulance r) { //both values and units are divided. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.divideBy(r));
 }
-public HeatFlowrate divideBy(ThermalResistance r) { //both values and units are divided. No offsets allowed in any of the units
-return new HeatFlowrate(super.divideBy(r));
+public HeatFlowRate divideBy(ThermalResistance r) { //both values and units are divided. No offsets allowed in any of the units
+return new HeatFlowRate(super.divideBy(r));
 }
 public ThermodynamicTemperature abs() { //units are maintained
 return new ThermodynamicTemperature(super.abs());

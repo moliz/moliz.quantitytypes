@@ -73,11 +73,11 @@ return new CoefficientOfHeatTransfer(super.minus(r));
 public ThermalConductivity mult(Length r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermalConductivity(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(ThermodynamicTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(ThermodynamicTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
-public HeatFlowrate mult(AreaTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(AreaTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public SpecificHeatVolume divideBy(LinearMomentum r) { //both values and units are divided. No offsets allowed in any of the units
 return new SpecificHeatVolume(super.divideBy(r));

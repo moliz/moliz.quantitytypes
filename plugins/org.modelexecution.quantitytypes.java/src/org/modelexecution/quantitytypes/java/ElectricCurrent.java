@@ -79,8 +79,8 @@ return new MagnetomotiveForce(super.mult(r));
 public MagneticDipoleMoment mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MagneticDipoleMoment(super.mult(r));
 }
-public HeatFlowrate mult(ElectromotiveForce r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(ElectromotiveForce r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public MagneticFlux mult(Inductance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MagneticFlux(super.mult(r));

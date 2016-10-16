@@ -115,7 +115,7 @@ return new Time(super.divideBy(r));
 public AngularMass divideBy(Frequency r) { //both values and units are divided. No offsets allowed in any of the units
 return new AngularMass(super.divideBy(r));
 }
-public TimeSquared divideBy(HeatFlowrate r) { //both values and units are divided. No offsets allowed in any of the units
+public TimeSquared divideBy(HeatFlowRate r) { //both values and units are divided. No offsets allowed in any of the units
 return new TimeSquared(super.divideBy(r));
 }
 public Mass divideBy(KinematicViscosity r) { //both values and units are divided. No offsets allowed in any of the units
@@ -145,8 +145,8 @@ return new TimeSquared(super.divideBy(r));
 public Mass divideBy(ThermalDiffusivity r) { //both values and units are divided. No offsets allowed in any of the units
 return new Mass(super.divideBy(r));
 }
-public HeatFlowrate divideBy(TimeSquared r) { //both values and units are divided. No offsets allowed in any of the units
-return new HeatFlowrate(super.divideBy(r));
+public HeatFlowRate divideBy(TimeSquared r) { //both values and units are divided. No offsets allowed in any of the units
+return new HeatFlowRate(super.divideBy(r));
 }
 public Time divideBy(BendingMomentOrTorque r) { //both values and units are divided. No offsets allowed in any of the units
 return new Time(super.divideBy(r));

@@ -70,8 +70,8 @@ return new AreaAngle(super.add(r));
 public AreaAngle minus(AreaAngle r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
 return new AreaAngle(super.minus(r));
 }
-public HeatFlowrate mult(PowerPerAreaAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(PowerPerAreaAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public SolidAngle divideBy(Area r) { //both values and units are divided. No offsets allowed in any of the units
 return new SolidAngle(super.divideBy(r));

@@ -73,11 +73,11 @@ return new PowerPerAreaAngle(super.minus(r));
 public PowerPerAngle mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new PowerPerAngle(super.mult(r));
 }
-public HeatFlowrate mult(AreaAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(AreaAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(SolidAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(SolidAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
 public PowerPerAreaAngle abs() { //units are maintained
 return new PowerPerAreaAngle(super.abs());

@@ -76,11 +76,11 @@ return new ElectricCurrent(super.mult(r));
 public ElectricChargeLineDensity mult(Time r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ElectricChargeLineDensity(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(ElectricFieldStrength r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(ElectricFieldStrength r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(ForcePerElectricCharge r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(ForcePerElectricCharge r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
 public Force mult(MagneticFlux r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Force(super.mult(r));

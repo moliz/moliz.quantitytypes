@@ -115,8 +115,8 @@ return new EnergyAndWork(super.mult(r));
 public KinematicViscosity mult(Frequency r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new KinematicViscosity(super.mult(r));
 }
-public HeatFlowrate mult(HeatFlowratePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(HeatFlowRatePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public LuminousFlux mult(Illuminance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LuminousFlux(super.mult(r));
@@ -145,8 +145,8 @@ return new LengthMass(super.mult(r));
 public PowerPerAngle mult(PowerPerAreaAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new PowerPerAngle(super.mult(r));
 }
-public HeatFlowrate mult(PowerPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(PowerPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public Force mult(Pressure r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Force(super.mult(r));

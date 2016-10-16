@@ -73,11 +73,11 @@ return new BendingMomentOrTorque(super.minus(r));
 public AngularMomentum mult(Time r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AngularMomentum(super.mult(r));
 }
-public HeatFlowrate mult(Activity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(Activity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
-public HeatFlowrate mult(Frequency r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(Frequency r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public MolarEnergy mult(InverseAmountOfSubstance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MolarEnergy(super.mult(r));
@@ -91,8 +91,8 @@ return new Force(super.divideBy(r));
 public AbsorbedDose divideBy(Mass r) { //both values and units are divided. No offsets allowed in any of the units
 return new AbsorbedDose(super.divideBy(r));
 }
-public HeatFlowrate divideBy(Time r) { //both values and units are divided. No offsets allowed in any of the units
-return new HeatFlowrate(super.divideBy(r));
+public HeatFlowRate divideBy(Time r) { //both values and units are divided. No offsets allowed in any of the units
+return new HeatFlowRate(super.divideBy(r));
 }
 public MagneticFlux divideBy(ElectricCurrent r) { //both values and units are divided. No offsets allowed in any of the units
 return new MagneticFlux(super.divideBy(r));
@@ -154,7 +154,7 @@ return new AngularMomentum(super.divideBy(r));
 public ThermodynamicTemperature divideBy(HeatCapacityAndEntropy r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermodynamicTemperature(super.divideBy(r));
 }
-public Time divideBy(HeatFlowrate r) { //both values and units are divided. No offsets allowed in any of the units
+public Time divideBy(HeatFlowRate r) { //both values and units are divided. No offsets allowed in any of the units
 return new Time(super.divideBy(r));
 }
 public MassPerUnitTime divideBy(KinematicViscosity r) { //both values and units are divided. No offsets allowed in any of the units

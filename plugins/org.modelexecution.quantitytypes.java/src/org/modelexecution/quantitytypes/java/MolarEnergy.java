@@ -79,8 +79,8 @@ return new EnergyDensity(super.mult(r));
 public AbsorbedDose mult(AmountOfSubstancePerUnitMass r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AbsorbedDose(super.mult(r));
 }
-public HeatFlowrate mult(CatalyticActivity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(CatalyticActivity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public MolarHeatCapacity divideBy(ThermodynamicTemperature r) { //both values and units are divided. No offsets allowed in any of the units
 return new MolarHeatCapacity(super.divideBy(r));

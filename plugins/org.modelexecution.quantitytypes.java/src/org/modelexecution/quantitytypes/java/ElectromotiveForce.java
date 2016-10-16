@@ -73,8 +73,8 @@ return new ElectromotiveForce(super.minus(r));
 public MagneticFlux mult(Time r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MagneticFlux(super.mult(r));
 }
-public HeatFlowrate mult(ElectricCurrent r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(ElectricCurrent r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public ElectricCharge mult(Capacitance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ElectricCharge(super.mult(r));
@@ -91,8 +91,8 @@ return new EnergyDensity(super.mult(r));
 public MolarEnergy mult(ElectricChargePerAmountOfSubstance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MolarEnergy(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(ElectricCurrentDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(ElectricCurrentDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
 public EnergyPerUnitArea mult(ElectricFluxDensity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));

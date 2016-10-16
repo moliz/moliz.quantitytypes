@@ -100,8 +100,8 @@ return new Mass(super.divideBy(r));
 public EnergyAndWork divideBy(Activity r) { //both values and units are divided. No offsets allowed in any of the units
 return new EnergyAndWork(super.divideBy(r));
 }
-public HeatFlowratePerUnitArea divideBy(Area r) { //both values and units are divided. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.divideBy(r));
+public HeatFlowRatePerUnitArea divideBy(Area r) { //both values and units are divided. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.divideBy(r));
 }
 public PowerPerAreaAngle divideBy(AreaAngle r) { //both values and units are divided. No offsets allowed in any of the units
 return new PowerPerAreaAngle(super.divideBy(r));
@@ -139,7 +139,7 @@ return new KinematicViscosity(super.divideBy(r));
 public EnergyAndWork divideBy(Frequency r) { //both values and units are divided. No offsets allowed in any of the units
 return new EnergyAndWork(super.divideBy(r));
 }
-public Area divideBy(HeatFlowratePerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
+public Area divideBy(HeatFlowRatePerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
 return new Area(super.divideBy(r));
 }
 public EnergyPerUnitArea divideBy(KinematicViscosity r) { //both values and units are divided. No offsets allowed in any of the units

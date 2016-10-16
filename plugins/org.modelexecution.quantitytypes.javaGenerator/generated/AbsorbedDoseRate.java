@@ -70,14 +70,14 @@ return new AbsorbedDoseRate(super.add(r));
 public AbsorbedDoseRate minus(AbsorbedDoseRate r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
 return new AbsorbedDoseRate(super.minus(r));
 }
-public HeatFlowrate mult(Mass r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(Mass r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public AbsorbedDose mult(Time r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new AbsorbedDose(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(MassPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(MassPerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
 public KinematicViscosity mult(TimeSquared r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new KinematicViscosity(super.mult(r));

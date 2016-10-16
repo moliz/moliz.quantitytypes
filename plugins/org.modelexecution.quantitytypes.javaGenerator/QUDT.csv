@@ -47,8 +47,8 @@ Force Per Unit Length,quantity:ForcePerUnitLength,M1T-2,Newton Per Meter,unit:Ne
 Frequency,quantity:Frequency,T-1,Hertz,unit:Hertz,Hz,8X
 Gravitational Attraction,quantity:GravitationalAttraction,L3M-1T-2,Cubic Meter Per Kilogram Second Squared,unit:CubicMeterPerKilogramSecondSquared,m^3/(kg-s^2),
 Heat Capacity And Entropy,quantity:HeatCapacityAndEntropy,L2M1T-2O-1,Joule Per Kelvin,unit:JoulePerKelvin,J/K,
-Heat Flowrate,quantity:HeatFlowrate,L2M1T-3,Watt,unit:Watt,W,XXX
-Heat Flowrate Per Unit Area,quantity:HeatFlowratePerUnitArea,M1T-3,Watt Per Square Meter,unit:WattPerSquareMeter,W/m^2,7X
+Heat Flow Rate,quantity:HeatFlowRate,L2M1T-3,Watt,unit:Watt,W,XXX
+Heat Flow Rate Per Unit Area,quantity:HeatFlowRatePerUnitArea,M1T-3,Watt Per Square Meter,unit:WattPerSquareMeter,W/m^2,7X
 Illuminance,quantity:Illuminance,U1L-2J1,Lux,unit:Lux,lx,
 Inductance,quantity:Inductance,L2M1T-2I-2,Henry,unit:Henry,H,
 Inverse Amount Of Substance,quantity:InverseAmountOfSubstance,N-1,Per Mole,unit:PerMole,mol^(-1),

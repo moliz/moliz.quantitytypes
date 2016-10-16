@@ -76,11 +76,11 @@ return new AreaAngle(super.mult(r));
 public MagnetomotiveForce mult(CurrentPerAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MagnetomotiveForce(super.mult(r));
 }
-public HeatFlowrate mult(PowerPerAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(PowerPerAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(PowerPerAreaAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(PowerPerAreaAngle r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
 public Angle divideBy(Angle r) { //both values and units are divided. No offsets allowed in any of the units
 return new Angle(super.divideBy(r));

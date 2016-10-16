@@ -76,8 +76,8 @@ return new MassPerUnitLength(super.mult(r));
 public EnergyPerUnitArea mult(AbsorbedDose r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(AbsorbedDoseRate r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(AbsorbedDoseRate r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
 public Mass mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Mass(super.mult(r));

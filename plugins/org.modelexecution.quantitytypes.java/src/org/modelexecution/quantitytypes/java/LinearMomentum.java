@@ -82,8 +82,8 @@ return new Force(super.mult(r));
 public Force mult(Frequency r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Force(super.mult(r));
 }
-public HeatFlowrate mult(LinearAcceleration r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(LinearAcceleration r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public EnergyAndWork mult(LinearVelocity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyAndWork(super.mult(r));
@@ -91,8 +91,8 @@ return new EnergyAndWork(super.mult(r));
 public CoefficientOfHeatTransfer mult(SpecificHeatVolume r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new CoefficientOfHeatTransfer(super.mult(r));
 }
-public HeatFlowrate mult(ThrustToMassRatio r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(ThrustToMassRatio r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public MassPerUnitTime divideBy(Length r) { //both values and units are divided. No offsets allowed in any of the units
 return new MassPerUnitTime(super.divideBy(r));

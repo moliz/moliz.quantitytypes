@@ -70,8 +70,8 @@ return new AreaTemperature(super.add(r));
 public AreaTemperature minus(AreaTemperature r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
 return new AreaTemperature(super.minus(r));
 }
-public HeatFlowrate mult(CoefficientOfHeatTransfer r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(CoefficientOfHeatTransfer r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public Volume mult(LinearThermalExpansion r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Volume(super.mult(r));
@@ -94,7 +94,7 @@ return new Area(super.divideBy(r));
 public ThermodynamicTemperature divideBy(Area r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermodynamicTemperature(super.divideBy(r));
 }
-public ThermalInsulance divideBy(HeatFlowrate r) { //both values and units are divided. No offsets allowed in any of the units
+public ThermalInsulance divideBy(HeatFlowRate r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalInsulance(super.divideBy(r));
 }
 public Length divideBy(LengthTemperature r) { //both values and units are divided. No offsets allowed in any of the units
@@ -103,8 +103,8 @@ return new Length(super.divideBy(r));
 public ThermalInsulance divideBy(Power r) { //both values and units are divided. No offsets allowed in any of the units
 return new ThermalInsulance(super.divideBy(r));
 }
-public HeatFlowrate divideBy(ThermalInsulance r) { //both values and units are divided. No offsets allowed in any of the units
-return new HeatFlowrate(super.divideBy(r));
+public HeatFlowRate divideBy(ThermalInsulance r) { //both values and units are divided. No offsets allowed in any of the units
+return new HeatFlowRate(super.divideBy(r));
 }
 public AreaTemperature abs() { //units are maintained
 return new AreaTemperature(super.abs());

@@ -70,8 +70,8 @@ return new ThermalConductivity(super.add(r));
 public ThermalConductivity minus(ThermalConductivity r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
 return new ThermalConductivity(super.minus(r));
 }
-public HeatFlowrate mult(LengthTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(LengthTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public Length mult(ThermalInsulance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Length(super.mult(r));
@@ -88,14 +88,14 @@ return new Length(super.divideBy(r));
 public SpecificHeatCapacity divideBy(DynamicViscosity r) { //both values and units are divided. No offsets allowed in any of the units
 return new SpecificHeatCapacity(super.divideBy(r));
 }
-public LinearThermalExpansion divideBy(HeatFlowratePerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
+public LinearThermalExpansion divideBy(HeatFlowRatePerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
 return new LinearThermalExpansion(super.divideBy(r));
 }
 public VolumetricHeatCapacity divideBy(KinematicViscosity r) { //both values and units are divided. No offsets allowed in any of the units
 return new VolumetricHeatCapacity(super.divideBy(r));
 }
-public HeatFlowratePerUnitArea divideBy(LinearThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.divideBy(r));
+public HeatFlowRatePerUnitArea divideBy(LinearThermalExpansion r) { //both values and units are divided. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.divideBy(r));
 }
 public LinearThermalExpansion divideBy(PowerPerUnitArea r) { //both values and units are divided. No offsets allowed in any of the units
 return new LinearThermalExpansion(super.divideBy(r));

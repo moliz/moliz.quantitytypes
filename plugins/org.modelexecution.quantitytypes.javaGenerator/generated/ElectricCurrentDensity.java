@@ -79,8 +79,8 @@ return new ElectricFluxDensity(super.mult(r));
 public ElectricCurrent mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ElectricCurrent(super.mult(r));
 }
-public HeatFlowratePerUnitArea mult(ElectromotiveForce r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowratePerUnitArea(super.mult(r));
+public HeatFlowRatePerUnitArea mult(ElectromotiveForce r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRatePerUnitArea(super.mult(r));
 }
 public MagneticFluxDensity mult(Inductance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MagneticFluxDensity(super.mult(r));

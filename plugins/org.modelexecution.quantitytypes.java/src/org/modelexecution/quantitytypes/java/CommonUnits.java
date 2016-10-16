@@ -1,7 +1,7 @@
 package org.modelexecution.quantitytypes.java;
 
 
-public class CommonUnitsOld {
+public class CommonUnits {
 
 	
 	//METRIC SYSTEM - SI UNITS

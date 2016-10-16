@@ -391,14 +391,6 @@ public class Quantity implements Comparable<Quantity> {
 	public Quantity divideBy(double r) {  
 		return new Quantity(this.value.divideBy(new UReal(r)),this.getUnits());
 	}
-	
-	public Quantity mult(UReal r) {  
-		return new Quantity(this.value.mult(r),this.getUnits());
-	}
-	
-	public Quantity divideBy(UReal r) {  
-		return new Quantity(this.value.divideBy(r),this.getUnits());
-	}
 
 	/******
 	 * Conversions to basic types

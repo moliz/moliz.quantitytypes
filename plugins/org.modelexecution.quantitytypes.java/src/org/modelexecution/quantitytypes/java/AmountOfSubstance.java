@@ -70,8 +70,8 @@ return new AmountOfSubstance(super.add(r));
 public AmountOfSubstance minus(AmountOfSubstance r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
 return new AmountOfSubstance(super.minus(r));
 }
-public TemperatureAmountOfSubstance mult(ThermodynamicTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new TemperatureAmountOfSubstance(super.mult(r));
+public TemPeratureAmountOfSubstance mult(ThermodynamicTemperature r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new TemPeratureAmountOfSubstance(super.mult(r));
 }
 public CatalyticActivity mult(Activity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new CatalyticActivity(super.mult(r));

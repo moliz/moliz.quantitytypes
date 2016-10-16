@@ -73,9 +73,6 @@ return new Angle(super.minus(r));
 public MagnetomotiveForce mult(ElectricCurrent r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MagnetomotiveForce(super.mult(r));
 }
-public SolidAngle mult(Angle r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new SolidAngle(super.mult(r));
-}
 public LuminousFlux mult(LuminousIntensity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LuminousFlux(super.mult(r));
 }

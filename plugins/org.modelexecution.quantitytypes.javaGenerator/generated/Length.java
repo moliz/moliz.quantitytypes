@@ -21,11 +21,11 @@ this.unit = new Unit (q.unit);
 }
 public Length () {
 value = new UReal();
-unit = new Unit(BaseUnits.Meter);
+unit = new Unit(DerivedUnits.Meter);
 }
 public Length(UReal u){
 value = u.clone();
-unit = new Unit(BaseUnits.Meter);
+unit = new Unit(DerivedUnits.Meter);
 }
 public Length(UReal u, Unit unit){
 value = u.clone();
@@ -34,11 +34,11 @@ this.unit = new Unit (unit);
 }
 public Length(double x){ //"promotes" a real x
 value = new UReal(x);
-unit = new Unit(BaseUnits.Meter);
+unit = new Unit(DerivedUnits.Meter);
 }
 public Length (double x, double u) {
 value = new UReal(x,u);
-unit = new Unit(BaseUnits.Meter);
+unit = new Unit(DerivedUnits.Meter);
 }
 public Length(double x, Unit unit){ //we only allow the same Units
 value = new UReal(x);
@@ -52,11 +52,11 @@ this.unit = new Unit (unit);
 }
 public Length(String x) { //creates a Length from a string representing a real, with u=0.
 value = new UReal(x);
-unit = new Unit(BaseUnits.Meter);
+unit = new Unit(DerivedUnits.Meter);
 }
 public Length(String x, String u) { //creates a Length from two strings representing (x,u).
 value = new UReal(x,u);
-unit = new Unit(BaseUnits.Meter);
+unit = new Unit(DerivedUnits.Meter);
 }
 public Length(String x, String u, Unit unit) { //creates a Length from two strings representing (x,u).
 value = new UReal(x,u);
@@ -78,9 +78,6 @@ return new LengthTemperature(super.mult(r));
 }
 public LinearVelocity mult(Activity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new LinearVelocity(super.mult(r));
-}
-public Area mult(Length r){
-	return new Area(super.mult(r));
 }
 public Volume mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new Volume(super.mult(r));

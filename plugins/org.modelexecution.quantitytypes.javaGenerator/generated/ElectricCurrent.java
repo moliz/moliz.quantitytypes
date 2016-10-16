@@ -21,11 +21,11 @@ this.unit = new Unit (q.unit);
 }
 public ElectricCurrent () {
 value = new UReal();
-unit = new Unit(BaseUnits.Ampere);
+unit = new Unit(DerivedUnits.Ampere);
 }
 public ElectricCurrent(UReal u){
 value = u.clone();
-unit = new Unit(BaseUnits.Ampere);
+unit = new Unit(DerivedUnits.Ampere);
 }
 public ElectricCurrent(UReal u, Unit unit){
 value = u.clone();
@@ -34,11 +34,11 @@ this.unit = new Unit (unit);
 }
 public ElectricCurrent(double x){ //"promotes" a real x
 value = new UReal(x);
-unit = new Unit(BaseUnits.Ampere);
+unit = new Unit(DerivedUnits.Ampere);
 }
 public ElectricCurrent (double x, double u) {
 value = new UReal(x,u);
-unit = new Unit(BaseUnits.Ampere);
+unit = new Unit(DerivedUnits.Ampere);
 }
 public ElectricCurrent(double x, Unit unit){ //we only allow the same Units
 value = new UReal(x);
@@ -52,11 +52,11 @@ this.unit = new Unit (unit);
 }
 public ElectricCurrent(String x) { //creates a ElectricCurrent from a string representing a real, with u=0.
 value = new UReal(x);
-unit = new Unit(BaseUnits.Ampere);
+unit = new Unit(DerivedUnits.Ampere);
 }
 public ElectricCurrent(String x, String u) { //creates a ElectricCurrent from two strings representing (x,u).
 value = new UReal(x,u);
-unit = new Unit(BaseUnits.Ampere);
+unit = new Unit(DerivedUnits.Ampere);
 }
 public ElectricCurrent(String x, String u, Unit unit) { //creates a ElectricCurrent from two strings representing (x,u).
 value = new UReal(x,u);
@@ -79,8 +79,8 @@ return new MagnetomotiveForce(super.mult(r));
 public MagneticDipoleMoment mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MagneticDipoleMoment(super.mult(r));
 }
-public HeatFlowrate mult(ElectromotiveForce r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(ElectromotiveForce r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public MagneticFlux mult(Inductance r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MagneticFlux(super.mult(r));

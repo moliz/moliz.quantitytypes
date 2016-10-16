@@ -1,0 +1,1086 @@
+Length.mult(Mass) returns Length Mass	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@15db9742
+Length.mult(Temperature) returns Length Temperature	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@6d06d69c
+Length.mult(Angle) returns Length	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7852e922
+Length.mult(Activity) returns Linear Velocity	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4e25154f
+Length.mult(Area) returns Volume	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@70dea4e
+Length.mult(Area Thermal Expansion) returns Volume Thermal Expansion	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@5c647e05
+Length.mult(Coefficient of Heat Transfer) returns Thermal Conductivity	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@33909752
+Length.mult(Density) returns Mass per Unit Area	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@55f96302
+Length.mult(Dynamic Viscosity) returns Mass per Time	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d4eac69
+Length.mult(Electric Charge) returns Electric Dipole Moment	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@42a57993
+Length.mult(Electric Charge Line Density) returns Electric Charge	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@75b84c92
+Length.mult(Electric Charge Volume Density) returns Electric Flux Density	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6bc7c054
+Length.mult(Electric Current Density) returns Magnetic Field Strength	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@232204a1
+Length.mult(Electric Field Strength) returns Electromotive Force	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@4aa298b7
+Length.mult(Electric Flux Density) returns Electric Charge Line Density	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7d4991ad
+Length.mult(Energy Density) returns Energy per Unit Area	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@28d93b30
+Length.mult(Energy per Unit Area) returns Force	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b6d3586
+Length.mult(Force) returns Energy and Work	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4554617c
+Length.mult(Force per Electric Charge) returns Electromotive Force	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@74a14482
+Length.mult(Force per Unit Length) returns Force	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1540e19d
+Length.mult(Frequency) returns Linear Velocity	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@677327b6
+Length.mult(Kinematic Viscosity) returns Volume per Unit Time	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@14ae5a5
+Length.mult(Length Mass) returns Angular Mass	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7f31245a
+Length.mult(Length Temperature) returns Area Temperature	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@6d6f6e28
+Length.mult(Linear Acceleration) returns Absorbed Dose	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@135fbaa4
+Length.mult(Linear Momentum) returns Angular Momentum	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@45ee12a7
+Length.mult(Linear Thermal Expansion) returns Area Thermal Expansion	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@330bedb4
+Length.mult(Linear Velocity) returns Kinematic Viscosity	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2503dbd3
+Length.mult(Magnetic Field Strength) returns Electric Current	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4b67cf4d
+Length.mult(Mass per Time) returns Linear Momentum	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7ea987ac
+Length.mult(Mass per Unit Area) returns Mass per Unit Length	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@12a3a380
+Length.mult(Mass per Unit Length) returns Mass	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@29453f44
+Length.mult(Permeability) returns Inductance	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@5cad8086
+Length.mult(Permittivity) returns Capacitance	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@6e0be858
+Length.mult(Pressure or Stress) returns Energy per Unit Area	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@61bbe9ba
+Length.mult(Thermal Diffusivity) returns Volume per Unit Time	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@610455d6
+Length.mult(Thermal Resistance) returns Thermal Resistivity	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@511d50c0
+Length.mult(Thermal Resistivity) returns Thermal Insulance	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@60e53b93
+Length.mult(Thrust to Mass Ratio) returns Absorbed Dose	=>	[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5e2de80c
+Mass.mult(Length) returns Length Mass	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1d44bcfa
+Mass.mult(Temperature) returns Mass Temperature	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@266474c2
+Mass.mult(Angle) returns Mass	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6f94fa3e
+Mass.mult(Absorbed Dose) returns Energy and Work	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5e481248
+Mass.mult(Absorbed Dose Rate) returns Heat Flow Rate	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@66d3c617
+Mass.mult(Activity) returns Mass per Time	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@63947c6b
+Mass.mult(Amount of Substance per Unit Mass) returns Amount of Substance	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@2b193f2d
+Mass.mult(Area) returns Angular Mass	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@355da254
+Mass.mult(Dose Equivalent) returns Energy and Work	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4dc63996
+Mass.mult(Exposure) returns Electric Charge	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@d716361
+Mass.mult(Frequency) returns Mass per Time	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6ff3c5b5
+Mass.mult(Kinematic Viscosity) returns Angular Momentum	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3764951d
+Mass.mult(Linear Acceleration) returns Force	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4b1210ee
+Mass.mult(Linear Velocity) returns Linear Momentum	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4d7e1886
+Mass.mult(Specific Energy) returns Energy and Work	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3cd1a2f1
+Mass.mult(Specific Heat Capacity) returns Heat Capacity and Entropy	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@2f0e140b
+Mass.mult(Specific Heat Pressure) returns Volume Thermal Expansion	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@7440e464
+Mass.mult(Specific Heat Volume) returns Volumetric heat capacity	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@49476842
+Mass.mult(Thermal Diffusivity) returns Angular Momentum	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@78308db1
+Mass.mult(Thrust to Mass Ratio) returns Force	=>	[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27c170f0
+Time.mult(Electric Current) returns Electric Charge	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5451c3a8
+Time.mult(Angle) returns Time	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2626b418
+Time.mult(Absorbed Dose) returns Kinematic Viscosity	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5a07e868
+Time.mult(Absorbed Dose Rate) returns Absorbed Dose	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@76ed5528
+Time.mult(Activity) returns Angle	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2c7b84de
+Time.mult(Angular Acceleration) returns Angular Velocity	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@3fee733d
+Time.mult(Angular Momentum) returns Angular Mass	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5acf9800
+Time.mult(Angular Velocity) returns Plane Angle	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@4617c264
+Time.mult(Catalytic Activity) returns Amount of Substance	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@36baf30c
+Time.mult(Dose Equivalent) returns Kinematic Viscosity	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a81197d
+Time.mult(Dynamic Viscosity) returns Mass per Unit Length	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5ca881b5
+Time.mult(Electric Current Density) returns Electric Flux Density	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@24d46ca6
+Time.mult(Electrical Conductivity) returns Capacitance	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@4517d9a3
+Time.mult(Electromotive Force) returns Magnetic Flux	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@372f7a8d
+Time.mult(Energy Density) returns Dynamic Viscosity	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2f92e0f4
+Time.mult(Energy and Work) returns Angular Momentum	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@28a418fc
+Time.mult(Energy per Unit Area) returns Mass per Time	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5305068a
+Time.mult(Force) returns Linear Momentum	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1f32e575
+Time.mult(Force per Unit Length) returns Mass per Time	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@279f2327
+Time.mult(Frequency) returns Angle	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ff4acd0
+Time.mult(Heat Flow Rate) returns Energy and Work	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@54bedef2
+Time.mult(Heat Flow Rate per Unit Area) returns Energy per Unit Area	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5caf905d
+Time.mult(Kinematic Viscosity) returns Area	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27716f4
+Time.mult(Linear Acceleration) returns Linear Velocity	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@8efb846
+Time.mult(Linear Momentum) returns Length Mass	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2a84aee7
+Time.mult(Linear Velocity) returns Length	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@a09ee92
+Time.mult(Magnetic Field Strength) returns Electric Charge Line Density	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@30f39991
+Time.mult(Mass per Time) returns Mass	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@452b3a41
+Time.mult(Power) returns Energy and Work	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4a574795
+Time.mult(Power per Unit Area) returns Energy per Unit Area	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@f6f4d33
+Time.mult(Pressure or Stress) returns Dynamic Viscosity	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@23fc625e
+Time.mult(Resistance) returns Inductance	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@3f99bd52
+Time.mult(Specific Energy) returns Kinematic Viscosity	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4f023edb
+Time.mult(Thermal Diffusivity) returns Area	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3a71f4dd
+Time.mult(Thrust to Mass Ratio) returns Linear Velocity	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7adf9f5f
+Time.mult(Torque) returns Angular Momentum	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@85ede7b
+Time.mult(Volume per Unit Time) returns Volume	=>	[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5674cd4d
+Electric Current.mult(Time) returns Electric Charge	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@63961c42
+Electric Current.mult(Angle) returns Electric Current	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@65b54208
+Electric Current.mult(Area) returns Magnetic Dipole Moment	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1be6f5c3
+Electric Current.mult(Electromotive Force) returns Heat Flow Rate	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6b884d57
+Electric Current.mult(Inductance) returns Magnetic Flux	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@38af3868
+Electric Current.mult(Magnetic Flux) returns Energy and Work	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@77459877
+Electric Current.mult(Magnetic Flux Density) returns Energy per Unit Area	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@5b2133b1
+Electric Current.mult(Plane Angle) returns Magnetomotive Force	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@72ea2f77
+Electric Current.mult(Resistance) returns Electromotive Force	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@33c7353a
+Temperature.mult(Length) returns Length Temperature	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@681a9515
+Temperature.mult(Mass) returns Mass Temperature	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3af49f1c
+Temperature.mult(Amount of Substance) returns Temperature Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@19469ea2
+Temperature.mult(Angle) returns Temperature	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@13221655
+Temperature.mult(Area) returns Area Temperature	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2f2c9b19
+Temperature.mult(Area Thermal Expansion) returns Area	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@31befd9f
+Temperature.mult(Coefficient of Heat Transfer) returns Heat Flow Rate per Unit Area	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@1c20c684
+Temperature.mult(Heat Capacity and Entropy) returns Energy and Work	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@1fb3ebeb
+Temperature.mult(Linear Thermal Expansion) returns Length	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@548c4f57
+Temperature.mult(Molar Heat Capacity) returns Molar Energy	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@1218025c
+Temperature.mult(Specific Heat Capacity) returns Absorbed Dose	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@816f27d
+Temperature.mult(Volume Thermal Expansion) returns Volume	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@87aac27
+Temperature.mult(Volumetric heat capacity) returns Energy Density	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@3e3abc88
+Amount of Substance.mult(Temperature) returns Temperature Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@6ce253f1
+Amount of Substance.mult(Angle) returns Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@53d8d10a
+Amount of Substance.mult(Activity) returns Catalytic Activity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@e9e54c2
+Amount of Substance.mult(Electric Charge per Amount of Substance) returns Electric Charge	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] = [D@65ab7765
+Amount of Substance.mult(Frequency) returns Catalytic Activity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b28cdfa
+Amount of Substance.mult(Inverse Amount of Substance) returns Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@eed1f14
+Amount of Substance.mult(Molar Energy) returns Energy and Work	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@7229724f
+Amount of Substance.mult(Molar Heat Capacity) returns Heat Capacity and Entropy	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@4c873330
+Angle.mult(Length) returns Length	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@119d7047
+Angle.mult(Mass) returns Mass	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@776ec8df
+Angle.mult(Time) returns Time	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4eec7777
+Angle.mult(Electric Current) returns Electric Current	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@3b07d329
+Angle.mult(Temperature) returns Temperature	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@41629346
+Angle.mult(Amount of Substance) returns Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@404b9385
+Angle.mult(Luminous Intensity) returns Luminous Intensity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] = [D@6d311334
+Angle.mult(Absorbed Dose) returns Absorbed Dose	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@682a0b20
+Angle.mult(Absorbed Dose Rate) returns Absorbed Dose Rate	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d075dc0
+Angle.mult(Activity) returns Activity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@214c265e
+Angle.mult(Amount of Substance Per Unit Volume) returns Amount of Substance Per Unit Volume	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@448139f0
+Angle.mult(Amount of Substance per Unit Mass) returns Amount of Substance per Unit Mass	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@7cca494b
+Angle.mult(Angular Acceleration) returns Angular Acceleration	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@7ba4f24f
+Angle.mult(Angular Mass) returns Angular Mass	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3b9a45b3
+Angle.mult(Angular Momentum) returns Angular Momentum	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7699a589
+Angle.mult(Angular Velocity) returns Angular Velocity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@58372a00
+Angle.mult(Area) returns Area	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4dd8dc3
+Angle.mult(Area Angle) returns Area Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@6d03e736
+Angle.mult(Area Temperature) returns Area Temperature	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@568db2f2
+Angle.mult(Area Thermal Expansion) returns Area Thermal Expansion	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@378bf509
+Angle.mult(Capacitance) returns Capacitance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@5fd0d5ae
+Angle.mult(Catalytic Activity) returns Catalytic Activity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@2d98a335
+Angle.mult(Coefficient of Heat Transfer) returns Coefficient of Heat Transfer	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@16b98e56
+Angle.mult(Density) returns Density	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7ef20235
+Angle.mult(Dose Equivalent) returns Absorbed Dose	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27d6c5e0
+Angle.mult(Dynamic Viscosity) returns Dynamic Viscosity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4f3f5b24
+Angle.mult(Electric Charge) returns Electric Charge	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@15aeb7ab
+Angle.mult(Electric Charge Line Density) returns Electric Charge Line Density	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7b23ec81
+Angle.mult(Electric Charge Volume Density) returns Electric Charge Volume Density	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6acbcfc0
+Angle.mult(Electric Charge per Amount of Substance) returns Electric Charge per Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] = [D@5f184fc6
+Angle.mult(Electric Current Density) returns Electric Current Density	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@3feba861
+Angle.mult(Electric Current per Angle) returns Electric Current per Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 0.0] = [D@5b480cf9
+Angle.mult(Electric Dipole Moment) returns Electric Dipole Moment	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6f496d9f
+Angle.mult(Electric Field Strength) returns Electric Field Strength	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@723279cf
+Angle.mult(Electric Flux Density) returns Electric Flux Density	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@10f87f48
+Angle.mult(Electrical Conductivity) returns Electrical Conductivity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@b4c966a
+Angle.mult(Electromotive Force) returns Electromotive Force	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@2f4d3709
+Angle.mult(Energy Density) returns Energy Density	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4e50df2e
+Angle.mult(Energy and Work) returns Energy and Work	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1d81eb93
+Angle.mult(Energy per Unit Area) returns Energy per Unit Area	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7291c18f
+Angle.mult(Exposure) returns Exposure	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@34a245ab
+Angle.mult(Force) returns Force	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7cc355be
+Angle.mult(Force per Electric Charge) returns Electric Field Strength	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6e8cf4c6
+Angle.mult(Force per Unit Length) returns Energy per Unit Area	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@12edcd21
+Angle.mult(Frequency) returns Activity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@34c45dca
+Angle.mult(Gravitational Attraction) returns Gravitational Attraction	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@52cc8049
+Angle.mult(Heat Capacity and Entropy) returns Heat Capacity and Entropy	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@5b6f7412
+Angle.mult(Heat Flow Rate) returns Heat Flow Rate	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27973e9b
+Angle.mult(Heat Flow Rate per Unit Area) returns Heat Flow Rate per Unit Area	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@312b1dae
+Angle.mult(Illuminance) returns Illuminance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] = [D@7530d0a
+Angle.mult(Inductance) returns Inductance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@27bc2616
+Angle.mult(Inverse Amount of Substance) returns Inverse Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@3941a79c
+Angle.mult(Inverse Permittivity) returns Inverse Permittivity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@506e1b77
+Angle.mult(Kinematic Viscosity) returns Kinematic Viscosity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4fca772d
+Angle.mult(Length Mass) returns Length Mass	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@9807454
+Angle.mult(Length Temperature) returns Length Temperature	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@3d494fbf
+Angle.mult(Linear Acceleration) returns Linear Acceleration	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ddc4ec2
+Angle.mult(Linear Momentum) returns Linear Momentum	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@133314b
+Angle.mult(Linear Thermal Expansion) returns Linear Thermal Expansion	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@b1bc7ed
+Angle.mult(Linear Velocity) returns Linear Velocity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7cd84586
+Angle.mult(Luminance) returns Luminance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] = [D@30dae81
+Angle.mult(Luminous Flux) returns Luminous Flux	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] = [D@1b2c6ec2
+Angle.mult(Magnetic Dipole Moment) returns Magnetic Dipole Moment	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4edde6e5
+Angle.mult(Magnetic Field Strength) returns Magnetic Field Strength	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@70177ecd
+Angle.mult(Magnetic Flux) returns Magnetic Flux	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@1e80bfe8
+Angle.mult(Magnetic Flux Density) returns Magnetic Flux Density	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@66a29884
+Angle.mult(Magnetomotive Force) returns Magnetomotive Force	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0] = [D@4769b07b
+Angle.mult(Mass Temperature) returns Mass Temperature	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@cc34f4d
+Angle.mult(Mass per Time) returns Mass per Time	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@17a7cec2
+Angle.mult(Mass per Unit Area) returns Mass per Unit Area	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@65b3120a
+Angle.mult(Mass per Unit Length) returns Mass per Unit Length	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6f539caf
+Angle.mult(Molar Energy) returns Molar Energy	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@79fc0f2f
+Angle.mult(Molar Heat Capacity) returns Molar Heat Capacity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@50040f0c
+Angle.mult(Permeability) returns Permeability	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@2dda6444
+Angle.mult(Permittivity) returns Permittivity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@5e9f23b4
+Angle.mult(Plane Angle) returns Plane Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@4783da3f
+Angle.mult(Power) returns Heat Flow Rate	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@378fd1ac
+Angle.mult(Power per Angle) returns Power per Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@49097b5d
+Angle.mult(Power per Area Angle) returns Power per Area Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@6e2c634b
+Angle.mult(Power per Unit Area) returns Heat Flow Rate per Unit Area	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@37a71e93
+Angle.mult(Pressure or Stress) returns Energy Density	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7e6cbb7a
+Angle.mult(Resistance) returns Resistance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@7c3df479
+Angle.mult(Solid Angle) returns Solid Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@7106e68e
+Angle.mult(Specific Energy) returns Absorbed Dose	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7eda2dbb
+Angle.mult(Specific Heat Capacity) returns Specific Heat Capacity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6576fe71
+Angle.mult(Specific Heat Pressure) returns Specific Heat Pressure	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@76fb509a
+Angle.mult(Specific Heat Volume) returns Specific Heat Volume	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@300ffa5d
+Angle.mult(Temperature Amount of Substance) returns Temperature Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] = [D@1f17ae12
+Angle.mult(Thermal Conductivity) returns Thermal Conductivity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@4d405ef7
+Angle.mult(Thermal Diffusivity) returns Kinematic Viscosity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6193b845
+Angle.mult(Thermal Insulance) returns Thermal Insulance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@2e817b38
+Angle.mult(Thermal Resistance) returns Thermal Resistance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@c4437c4
+Angle.mult(Thermal Resistivity) returns Thermal Resistivity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@433c675d
+Angle.mult(Thrust to Mass Ratio) returns Linear Acceleration	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3f91beef
+Angle.mult(Time Squared) returns Time Squared	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1a6c5a9e
+Angle.mult(Torque) returns Energy and Work	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@37bba400
+Angle.mult(Volume) returns Volume	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@179d3b25
+Angle.mult(Volume Thermal Expansion) returns Volume Thermal Expansion	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@254989ff
+Angle.mult(Volume per Unit Time) returns Volume per Unit Time	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5d099f62
+Angle.mult(Volumetric heat capacity) returns Volumetric heat capacity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@37f8bb67
+Luminous Intensity.mult(Angle) returns Luminous Intensity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@49c2faae
+Luminous Intensity.mult(Plane Angle) returns Luminous Flux	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@20ad9418
+Absorbed Dose.mult(Mass) returns Energy and Work	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@31cefde0
+Absorbed Dose.mult(Time) returns Kinematic Viscosity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@439f5b3d
+Absorbed Dose.mult(Angle) returns Absorbed Dose	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1d56ce6a
+Absorbed Dose.mult(Activity) returns Absorbed Dose Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5197848c
+Absorbed Dose.mult(Density) returns Energy Density	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@17f052a3
+Absorbed Dose.mult(Frequency) returns Absorbed Dose Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2e0fa5d3
+Absorbed Dose.mult(Mass per Time) returns Heat Flow Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5010be6
+Absorbed Dose.mult(Mass per Unit Area) returns Energy per Unit Area	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@685f4c2e
+Absorbed Dose.mult(Mass per Unit Length) returns Force	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7daf6ecc
+Absorbed Dose.mult(Permeability) returns Inverse Permittivity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@2e5d6d97
+Absorbed Dose.mult(Time Squared) returns Area	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@238e0d81
+Absorbed Dose Rate.mult(Mass) returns Heat Flow Rate	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@31221be2
+Absorbed Dose Rate.mult(Time) returns Absorbed Dose	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@377dca04
+Absorbed Dose Rate.mult(Angle) returns Absorbed Dose Rate	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@728938a9
+Absorbed Dose Rate.mult(Mass per Unit Area) returns Heat Flow Rate per Unit Area	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@21b8d17c
+Absorbed Dose Rate.mult(Time Squared) returns Kinematic Viscosity	=>	[2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6433a2
+Activity.mult(Length) returns Linear Velocity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5910e440
+Activity.mult(Mass) returns Mass per Time	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6267c3bb
+Activity.mult(Time) returns Angle	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@533ddba
+Activity.mult(Amount of Substance) returns Catalytic Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@246b179d
+Activity.mult(Angle) returns Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a07c5b4
+Activity.mult(Absorbed Dose) returns Absorbed Dose Rate	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@26a1ab54
+Activity.mult(Angular Mass) returns Angular Momentum	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d646c37
+Activity.mult(Angular Momentum) returns Energy and Work	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@41cf53f9
+Activity.mult(Angular Velocity) returns Angular Acceleration	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@5a10411
+Activity.mult(Area) returns Kinematic Viscosity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ef1e4fa
+Activity.mult(Capacitance) returns Electrical Conductivity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@306a30c7
+Activity.mult(Dose Equivalent) returns Absorbed Dose Rate	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@b81eda8
+Activity.mult(Dynamic Viscosity) returns Energy Density	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@68de145
+Activity.mult(Electric Charge) returns Electric Current	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@27fa135a
+Activity.mult(Electric Charge Line Density) returns Magnetic Field Strength	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@46f7f36a
+Activity.mult(Electric Flux Density) returns Electric Current Density	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@421faab1
+Activity.mult(Energy and Work) returns Heat Flow Rate	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2b71fc7e
+Activity.mult(Energy per Unit Area) returns Heat Flow Rate per Unit Area	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5ce65a89
+Activity.mult(Force per Unit Length) returns Heat Flow Rate per Unit Area	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@25f38edc
+Activity.mult(Inductance) returns Resistance	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@1a86f2f1
+Activity.mult(Kinematic Viscosity) returns Absorbed Dose	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3eb07fd3
+Activity.mult(Length Mass) returns Linear Momentum	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@506c589e
+Activity.mult(Linear Momentum) returns Force	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@69d0a921
+Activity.mult(Linear Velocity) returns Linear Acceleration	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@446cdf90
+Activity.mult(Magnetic Flux) returns Electromotive Force	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@799f7e29
+Activity.mult(Mass per Time) returns Energy per Unit Area	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4b85612c
+Activity.mult(Mass per Unit Length) returns Dynamic Viscosity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@277050dc
+Activity.mult(Plane Angle) returns Angular Velocity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@5c29bfd
+Activity.mult(Specific Energy) returns Absorbed Dose Rate	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7aec35a
+Activity.mult(Thermal Diffusivity) returns Absorbed Dose	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@67424e82
+Activity.mult(Time Squared) returns Time	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@42110406
+Activity.mult(Torque) returns Heat Flow Rate	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@531d72ca
+Activity.mult(Volume) returns Volume per Unit Time	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@22d8cfe0
+Amount of Substance Per Unit Volume.mult(Angle) returns Amount of Substance Per Unit Volume	=>	[-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@579bb367
+Amount of Substance Per Unit Volume.mult(Electric Charge per Amount of Substance) returns Electric Charge Volume Density	=>	[-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] = [D@1de0aca6
+Amount of Substance Per Unit Volume.mult(Molar Energy) returns Energy Density	=>	[-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@255316f2
+Amount of Substance Per Unit Volume.mult(Molar Heat Capacity) returns Volumetric heat capacity	=>	[-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@41906a77
+Amount of Substance Per Unit Volume.mult(Volume) returns Amount of Substance	=>	[-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4b9af9a9
+Amount of Substance Per Unit Volume.mult(Volume per Unit Time) returns Catalytic Activity	=>	[-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5387f9e0
+Amount of Substance per Unit Mass.mult(Mass) returns Amount of Substance	=>	[0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6e5e91e4
+Amount of Substance per Unit Mass.mult(Angle) returns Amount of Substance per Unit Mass	=>	[0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2cdf8d8a
+Amount of Substance per Unit Mass.mult(Density) returns Amount of Substance Per Unit Volume	=>	[0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@30946e09
+Amount of Substance per Unit Mass.mult(Electric Charge per Amount of Substance) returns Exposure	=>	[0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] = [D@5cb0d902
+Amount of Substance per Unit Mass.mult(Mass Temperature) returns Temperature Amount of Substance	=>	[0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@46fbb2c1
+Amount of Substance per Unit Mass.mult(Mass per Time) returns Catalytic Activity	=>	[0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1698c449
+Amount of Substance per Unit Mass.mult(Molar Energy) returns Absorbed Dose	=>	[0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@5ef04b5
+Amount of Substance per Unit Mass.mult(Molar Heat Capacity) returns Specific Heat Capacity	=>	[0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@5f4da5c3
+Angular Acceleration.mult(Time) returns Angular Velocity	=>	[0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@443b7951
+Angular Acceleration.mult(Angle) returns Angular Acceleration	=>	[0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@14514713
+Angular Acceleration.mult(Time Squared) returns Plane Angle	=>	[0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@69663380
+Angular Mass.mult(Angle) returns Angular Mass	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5b37e0d2
+Angular Mass.mult(Activity) returns Angular Momentum	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4459eb14
+Angular Mass.mult(Frequency) returns Angular Momentum	=>	[2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5a2e4553
+Angular Momentum.mult(Time) returns Angular Mass	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@28c97a5
+Angular Momentum.mult(Angle) returns Angular Momentum	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6659c656
+Angular Momentum.mult(Activity) returns Energy and Work	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d5380c2
+Angular Momentum.mult(Exposure) returns Magnetic Dipole Moment	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@45ff54e6
+Angular Momentum.mult(Frequency) returns Energy and Work	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2328c243
+Angular Momentum.mult(Specific Heat Volume) returns Thermal Conductivity	=>	[2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@bebdb06
+Angular Velocity.mult(Time) returns Plane Angle	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a4f0f29
+Angular Velocity.mult(Angle) returns Angular Velocity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@45283ce2
+Angular Velocity.mult(Activity) returns Angular Acceleration	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2077d4de
+Angular Velocity.mult(Electric Charge) returns Magnetomotive Force	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7591083d
+Angular Velocity.mult(Frequency) returns Angular Acceleration	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@77a567e1
+Area.mult(Length) returns Volume	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@736e9adb
+Area.mult(Mass) returns Angular Mass	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d21714c
+Area.mult(Electric Current) returns Magnetic Dipole Moment	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@108c4c35
+Area.mult(Temperature) returns Area Temperature	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@4ccabbaa
+Area.mult(Angle) returns Area	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4bf558aa
+Area.mult(Activity) returns Kinematic Viscosity	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2d38eb89
+Area.mult(Density) returns Mass per Unit Length	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5fa7e7ff
+Area.mult(Dynamic Viscosity) returns Linear Momentum	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4629104a
+Area.mult(Electric Charge Line Density) returns Electric Dipole Moment	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@27f8302d
+Area.mult(Electric Charge Volume Density) returns Electric Charge Line Density	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4d76f3f8
+Area.mult(Electric Current Density) returns Electric Current	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2d8e6db6
+Area.mult(Electric Flux Density) returns Electric Charge	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@23ab930d
+Area.mult(Energy Density) returns Force	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4534b60d
+Area.mult(Energy per Unit Area) returns Energy and Work	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3fa77460
+Area.mult(Force per Unit Length) returns Energy and Work	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@619a5dff
+Area.mult(Frequency) returns Kinematic Viscosity	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ed6993a
+Area.mult(Heat Flow Rate per Unit Area) returns Heat Flow Rate	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7e32c033
+Area.mult(Illuminance) returns Luminous Flux	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] = [D@7ab2bfe1
+Area.mult(Linear Thermal Expansion) returns Volume Thermal Expansion	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@497470ed
+Area.mult(Linear Velocity) returns Volume per Unit Time	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@63c12fb0
+Area.mult(Luminance) returns Luminous Intensity	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] = [D@b1a58a3
+Area.mult(Magnetic Flux Density) returns Magnetic Flux	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6438a396
+Area.mult(Mass per Time) returns Angular Momentum	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@e2144e4
+Area.mult(Mass per Unit Area) returns Mass	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6477463f
+Area.mult(Mass per Unit Length) returns Length Mass	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d71d552
+Area.mult(Power per Area Angle) returns Power per Angle	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@1cf4f579
+Area.mult(Power per Unit Area) returns Heat Flow Rate	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@18769467
+Area.mult(Pressure or Stress) returns Force	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@46ee7fe8
+Area.mult(Solid Angle) returns Area Angle	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@7506e922
+Area.mult(Thermal Resistance) returns Thermal Insulance	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@4ee285c6
+Area Angle.mult(Angle) returns Area Angle	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@621be5d1
+Area Angle.mult(Power per Area Angle) returns Heat Flow Rate	=>	[2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@573fd745
+Area Temperature.mult(Angle) returns Area Temperature	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@15327b79
+Area Temperature.mult(Coefficient of Heat Transfer) returns Heat Flow Rate	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@4f2410ac
+Area Temperature.mult(Linear Thermal Expansion) returns Volume	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@722c41f4
+Area Temperature.mult(Mass per Unit Area) returns Mass Temperature	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5b80350b
+Area Temperature.mult(Specific Heat Volume) returns Linear Acceleration	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@5d6f64b1
+Area Temperature.mult(Volumetric heat capacity) returns Force	=>	[2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@32a1bec0
+Area Thermal Expansion.mult(Length) returns Volume Thermal Expansion	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@22927a81
+Area Thermal Expansion.mult(Temperature) returns Area	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@78e03bb5
+Area Thermal Expansion.mult(Angle) returns Area Thermal Expansion	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5e8c92f4
+Area Thermal Expansion.mult(Energy per Unit Area) returns Heat Capacity and Entropy	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@61e4705b
+Area Thermal Expansion.mult(Force per Unit Length) returns Heat Capacity and Entropy	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@50134894
+Area Thermal Expansion.mult(Length Temperature) returns Volume	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@2957fcb0
+Area Thermal Expansion.mult(Mass Temperature) returns Angular Mass	=>	[2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@1376c05c
+Capacitance.mult(Angle) returns Capacitance	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@51521cc1
+Capacitance.mult(Activity) returns Electrical Conductivity	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b4fb997
+Capacitance.mult(Electric Field Strength) returns Electric Charge Line Density	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@deb6432
+Capacitance.mult(Electromotive Force) returns Electric Charge	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@28ba21f3
+Capacitance.mult(Force per Electric Charge) returns Electric Charge Line Density	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@694f9431
+Capacitance.mult(Frequency) returns Electrical Conductivity	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@f2a0b8e
+Capacitance.mult(Inductance) returns Time Squared	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@593634ad
+Capacitance.mult(Inverse Permittivity) returns Length	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@20fa23c1
+Capacitance.mult(Resistance) returns Time	=>	[-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@3581c5f3
+Catalytic Activity.mult(Time) returns Amount of Substance	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6aa8ceb6
+Catalytic Activity.mult(Angle) returns Catalytic Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2530c12
+Catalytic Activity.mult(Electric Charge per Amount of Substance) returns Electric Current	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] = [D@73c6c3b2
+Catalytic Activity.mult(Inverse Amount of Substance) returns Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@48533e64
+Catalytic Activity.mult(Molar Energy) returns Heat Flow Rate	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@64a294a6
+Coefficient of Heat Transfer.mult(Length) returns Thermal Conductivity	=>	[0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7e0b37bc
+Coefficient of Heat Transfer.mult(Temperature) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@3b95a09c
+Coefficient of Heat Transfer.mult(Angle) returns Coefficient of Heat Transfer	=>	[0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6ae40994
+Coefficient of Heat Transfer.mult(Area Temperature) returns Heat Flow Rate	=>	[0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@1a93a7ca
+Coefficient of Heat Transfer.mult(Thermal Insulance) returns Angle	=>	[0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@3d82c5f3
+Density.mult(Length) returns Mass per Unit Area	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2b05039f
+Density.mult(Angle) returns Density	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@61e717c2
+Density.mult(Absorbed Dose) returns Energy Density	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@66cd51c3
+Density.mult(Amount of Substance per Unit Mass) returns Amount of Substance Per Unit Volume	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@4dcbadb4
+Density.mult(Area) returns Mass per Unit Length	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4e515669
+Density.mult(Dose Equivalent) returns Energy Density	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@17d10166
+Density.mult(Exposure) returns Electric Charge Volume Density	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1b9e1916
+Density.mult(Kinematic Viscosity) returns Dynamic Viscosity	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ba8a1dc
+Density.mult(Specific Energy) returns Energy Density	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4f8e5cde
+Density.mult(Specific Heat Capacity) returns Volumetric heat capacity	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@504bae78
+Density.mult(Thermal Diffusivity) returns Dynamic Viscosity	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3b764bce
+Density.mult(Volume) returns Mass	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@759ebb3d
+Density.mult(Volume per Unit Time) returns Mass per Time	=>	[-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@484b61fc
+Dose Equivalent.mult(Mass) returns Energy and Work	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@45fe3ee3
+Dose Equivalent.mult(Time) returns Kinematic Viscosity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4cdf35a9
+Dose Equivalent.mult(Angle) returns Absorbed Dose	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4c98385c
+Dose Equivalent.mult(Activity) returns Absorbed Dose Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5fcfe4b2
+Dose Equivalent.mult(Density) returns Energy Density	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6bf2d08e
+Dose Equivalent.mult(Frequency) returns Absorbed Dose Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5eb5c224
+Dose Equivalent.mult(Mass per Time) returns Heat Flow Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@53e25b76
+Dose Equivalent.mult(Mass per Unit Area) returns Energy per Unit Area	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@73a8dfcc
+Dose Equivalent.mult(Mass per Unit Length) returns Force	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ea30797
+Dose Equivalent.mult(Permeability) returns Inverse Permittivity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@7e774085
+Dose Equivalent.mult(Time Squared) returns Area	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3f8f9dd6
+Dynamic Viscosity.mult(Length) returns Mass per Time	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@aec6354
+Dynamic Viscosity.mult(Time) returns Mass per Unit Length	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1c655221
+Dynamic Viscosity.mult(Angle) returns Dynamic Viscosity	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@58d25a40
+Dynamic Viscosity.mult(Activity) returns Energy Density	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b701da1
+Dynamic Viscosity.mult(Area) returns Linear Momentum	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@726f3b58
+Dynamic Viscosity.mult(Exposure) returns Magnetic Field Strength	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@442d9b6e
+Dynamic Viscosity.mult(Frequency) returns Energy Density	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ee7d9f1
+Dynamic Viscosity.mult(Gravitational Attraction) returns Absorbed Dose Rate	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@15615099
+Dynamic Viscosity.mult(Kinematic Viscosity) returns Force	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1edf1c96
+Dynamic Viscosity.mult(Linear Acceleration) returns Heat Flow Rate per Unit Area	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@368102c8
+Dynamic Viscosity.mult(Linear Velocity) returns Energy per Unit Area	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6996db8
+Dynamic Viscosity.mult(Specific Heat Capacity) returns Thermal Conductivity	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@1963006a
+Dynamic Viscosity.mult(Thermal Diffusivity) returns Force	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7fbe847c
+Dynamic Viscosity.mult(Thrust to Mass Ratio) returns Heat Flow Rate per Unit Area	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@41975e01
+Dynamic Viscosity.mult(Volume) returns Angular Momentum	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@c2e1f26
+Dynamic Viscosity.mult(Volume per Unit Time) returns Energy and Work	=>	[-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@dcf3e99
+Electric Charge.mult(Length) returns Electric Dipole Moment	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d9c638
+Electric Charge.mult(Angle) returns Electric Charge	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7dc5e7b4
+Electric Charge.mult(Activity) returns Electric Current	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ee0005
+Electric Charge.mult(Angular Velocity) returns Magnetomotive Force	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@75a1cd57
+Electric Charge.mult(Electric Field Strength) returns Force	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3d012ddd
+Electric Charge.mult(Electromotive Force) returns Energy and Work	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6f2b958e
+Electric Charge.mult(Force per Electric Charge) returns Force	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@1eb44e46
+Electric Charge.mult(Frequency) returns Electric Current	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6504e3b2
+Electric Charge.mult(Inverse Amount of Substance) returns Electric Charge per Amount of Substance	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@515f550a
+Electric Charge.mult(Kinematic Viscosity) returns Magnetic Dipole Moment	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@626b2d4a
+Electric Charge.mult(Magnetic Flux) returns Angular Momentum	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@5e91993f
+Electric Charge.mult(Magnetic Flux Density) returns Mass per Time	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@1c4af82c
+Electric Charge.mult(Resistance) returns Magnetic Flux	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@379619aa
+Electric Charge.mult(Thermal Diffusivity) returns Magnetic Dipole Moment	=>	[0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@cac736f
+Electric Charge Line Density.mult(Length) returns Electric Charge	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5e265ba4
+Electric Charge Line Density.mult(Angle) returns Electric Charge Line Density	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@156643d4
+Electric Charge Line Density.mult(Activity) returns Magnetic Field Strength	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@123a439b
+Electric Charge Line Density.mult(Area) returns Electric Dipole Moment	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7de26db8
+Electric Charge Line Density.mult(Electric Field Strength) returns Energy per Unit Area	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@1175e2db
+Electric Charge Line Density.mult(Electromotive Force) returns Force	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@36aa7bc2
+Electric Charge Line Density.mult(Force per Electric Charge) returns Energy per Unit Area	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@76ccd017
+Electric Charge Line Density.mult(Frequency) returns Magnetic Field Strength	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@182decdb
+Electric Charge Line Density.mult(Inverse Permittivity) returns Electromotive Force	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@26f0a63f
+Electric Charge Line Density.mult(Linear Velocity) returns Electric Current	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4361bd48
+Electric Charge Line Density.mult(Magnetic Flux) returns Linear Momentum	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@53bd815b
+Electric Charge Line Density.mult(Magnetic Flux Density) returns Dynamic Viscosity	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@2401f4c3
+Electric Charge Line Density.mult(Volume per Unit Time) returns Magnetic Dipole Moment	=>	[-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7637f22
+Electric Charge Volume Density.mult(Length) returns Electric Flux Density	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4926097b
+Electric Charge Volume Density.mult(Angle) returns Electric Charge Volume Density	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@762efe5d
+Electric Charge Volume Density.mult(Area) returns Electric Charge Line Density	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5d22bbb7
+Electric Charge Volume Density.mult(Electromotive Force) returns Energy Density	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@41a4555e
+Electric Charge Volume Density.mult(Kinematic Viscosity) returns Magnetic Field Strength	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3830f1c0
+Electric Charge Volume Density.mult(Linear Velocity) returns Electric Current Density	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@39ed3c8d
+Electric Charge Volume Density.mult(Magnetic Flux) returns Dynamic Viscosity	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@71dac704
+Electric Charge Volume Density.mult(Thermal Diffusivity) returns Magnetic Field Strength	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@123772c4
+Electric Charge Volume Density.mult(Volume) returns Electric Charge	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2d363fb3
+Electric Charge Volume Density.mult(Volume per Unit Time) returns Electric Current	=>	[-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7d6f77cc
+Electric Charge per Amount of Substance.mult(Amount of Substance) returns Electric Charge	=>	[0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@5aaa6d82
+Electric Charge per Amount of Substance.mult(Angle) returns Electric Charge per Amount of Substance	=>	[0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@73a28541
+Electric Charge per Amount of Substance.mult(Amount of Substance Per Unit Volume) returns Electric Charge Volume Density	=>	[0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@6f75e721
+Electric Charge per Amount of Substance.mult(Amount of Substance per Unit Mass) returns Exposure	=>	[0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@69222c14
+Electric Charge per Amount of Substance.mult(Catalytic Activity) returns Electric Current	=>	[0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@606d8acf
+Electric Charge per Amount of Substance.mult(Electromotive Force) returns Molar Energy	=>	[0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@782830e
+Electric Current Density.mult(Length) returns Magnetic Field Strength	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@470e2030
+Electric Current Density.mult(Time) returns Electric Flux Density	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3fb4f649
+Electric Current Density.mult(Angle) returns Electric Current Density	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@33833882
+Electric Current Density.mult(Area) returns Electric Current	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@200a570f
+Electric Current Density.mult(Electromotive Force) returns Heat Flow Rate per Unit Area	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@16b3fc9e
+Electric Current Density.mult(Inductance) returns Magnetic Flux Density	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@e2d56bf
+Electric Current Density.mult(Magnetic Flux) returns Energy per Unit Area	=>	[-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@244038d0
+Electric Current per Angle.mult(Angle) returns Electric Current per Angle	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5680a178
+Electric Current per Angle.mult(Plane Angle) returns Electric Current	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@5fdef03a
+Electric Current per Angle.mult(Solid Angle) returns Magnetomotive Force	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@3b22cdd0
+Electric Dipole Moment.mult(Angle) returns Electric Dipole Moment	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1e81f4dc
+Electric Dipole Moment.mult(Electric Field Strength) returns Energy and Work	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@4d591d15
+Electric Dipole Moment.mult(Force per Electric Charge) returns Energy and Work	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@65ae6ba4
+Electric Dipole Moment.mult(Linear Velocity) returns Magnetic Dipole Moment	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@48cf768c
+Electric Dipole Moment.mult(Magnetic Flux Density) returns Linear Momentum	=>	[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@59f95c5d
+Electric Field Strength.mult(Length) returns Electromotive Force	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5ccd43c2
+Electric Field Strength.mult(Angle) returns Electric Field Strength	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4aa8f0b4
+Electric Field Strength.mult(Capacitance) returns Electric Charge Line Density	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@7960847b
+Electric Field Strength.mult(Electric Charge) returns Force	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6a6824be
+Electric Field Strength.mult(Electric Charge Line Density) returns Energy per Unit Area	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5c8da962
+Electric Field Strength.mult(Electric Dipole Moment) returns Energy and Work	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@512ddf17
+Electric Field Strength.mult(Electric Flux Density) returns Energy Density	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2c13da15
+Electric Field Strength.mult(Electrical Conductivity) returns Magnetic Field Strength	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@77556fd
+Electric Field Strength.mult(Exposure) returns Linear Acceleration	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@368239c8
+Electric Field Strength.mult(Magnetic Field Strength) returns Heat Flow Rate per Unit Area	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@9e89d68
+Electric Field Strength.mult(Permittivity) returns Electric Flux Density	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@3b192d32
+Electric Flux Density.mult(Length) returns Electric Charge Line Density	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@16f65612
+Electric Flux Density.mult(Angle) returns Electric Flux Density	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@311d617d
+Electric Flux Density.mult(Activity) returns Electric Current Density	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7c53a9eb
+Electric Flux Density.mult(Area) returns Electric Charge	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ed17bee
+Electric Flux Density.mult(Electric Field Strength) returns Energy Density	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@2a33fae0
+Electric Flux Density.mult(Electromotive Force) returns Energy per Unit Area	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@707f7052
+Electric Flux Density.mult(Force per Electric Charge) returns Energy Density	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@11028347
+Electric Flux Density.mult(Frequency) returns Electric Current Density	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@14899482
+Electric Flux Density.mult(Inverse Permittivity) returns Electric Field Strength	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@21588809
+Electric Flux Density.mult(Kinematic Viscosity) returns Electric Current	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2aae9190
+Electric Flux Density.mult(Linear Velocity) returns Magnetic Field Strength	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2f333739
+Electric Flux Density.mult(Magnetic Flux) returns Mass per Time	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@77468bd9
+Electric Flux Density.mult(Resistance) returns Magnetic Flux Density	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@12bb4df8
+Electric Flux Density.mult(Thermal Diffusivity) returns Electric Current	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4cc77c2e
+Electric Flux Density.mult(Volume) returns Electric Dipole Moment	=>	[-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a7b0070
+Electrical Conductivity.mult(Time) returns Capacitance	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@39a054a5
+Electrical Conductivity.mult(Angle) returns Electrical Conductivity	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@71bc1ae4
+Electrical Conductivity.mult(Electric Field Strength) returns Magnetic Field Strength	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6ed3ef1
+Electrical Conductivity.mult(Electromotive Force) returns Electric Current	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@2437c6dc
+Electrical Conductivity.mult(Force per Electric Charge) returns Magnetic Field Strength	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@1f89ab83
+Electrical Conductivity.mult(Inductance) returns Time	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@e73f9ac
+Electrical Conductivity.mult(Inverse Permittivity) returns Linear Velocity	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@61064425
+Electrical Conductivity.mult(Magnetic Flux) returns Electric Charge	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@7b1d7fff
+Electrical Conductivity.mult(Magnetic Flux Density) returns Electric Flux Density	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@299a06ac
+Electrical Conductivity.mult(Resistance) returns Angle	=>	[-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@383534aa
+Electromotive Force.mult(Time) returns Magnetic Flux	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6bc168e5
+Electromotive Force.mult(Electric Current) returns Heat Flow Rate	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7b3300e5
+Electromotive Force.mult(Angle) returns Electromotive Force	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2e5c649
+Electromotive Force.mult(Capacitance) returns Electric Charge	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@136432db
+Electromotive Force.mult(Electric Charge) returns Energy and Work	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7382f612
+Electromotive Force.mult(Electric Charge Line Density) returns Force	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1055e4af
+Electromotive Force.mult(Electric Charge Volume Density) returns Energy Density	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@3caeaf62
+Electromotive Force.mult(Electric Charge per Amount of Substance) returns Molar Energy	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, -1.0, 0.0, 0.0] = [D@e6ea0c6
+Electromotive Force.mult(Electric Current Density) returns Heat Flow Rate per Unit Area	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6a38e57f
+Electromotive Force.mult(Electric Flux Density) returns Energy per Unit Area	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5577140b
+Electromotive Force.mult(Electrical Conductivity) returns Electric Current	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@1c6b6478
+Electromotive Force.mult(Exposure) returns Absorbed Dose	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@67f89fa3
+Electromotive Force.mult(Permittivity) returns Electric Charge Line Density	=>	[2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@4ac68d3e
+Energy Density.mult(Length) returns Energy per Unit Area	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@277c0f21
+Energy Density.mult(Time) returns Dynamic Viscosity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6073f712
+Energy Density.mult(Angle) returns Energy Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@43556938
+Energy Density.mult(Area) returns Force	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d04a311
+Energy Density.mult(Linear Velocity) returns Heat Flow Rate per Unit Area	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a46a697
+Energy Density.mult(Specific Heat Pressure) returns Specific Heat Capacity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@5f205aa
+Energy Density.mult(Time Squared) returns Mass per Unit Length	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d86b085
+Energy Density.mult(Volume) returns Energy and Work	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@75828a0f
+Energy Density.mult(Volume Thermal Expansion) returns Heat Capacity and Entropy	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@3abfe836
+Energy Density.mult(Volume per Unit Time) returns Heat Flow Rate	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ff5659e
+Energy and Work.mult(Time) returns Angular Momentum	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@77afea7d
+Energy and Work.mult(Angle) returns Energy and Work	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@161cd475
+Energy and Work.mult(Activity) returns Heat Flow Rate	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@532760d8
+Energy and Work.mult(Frequency) returns Heat Flow Rate	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@57fa26b7
+Energy and Work.mult(Inverse Amount of Substance) returns Molar Energy	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@5f8ed237
+Energy and Work.mult(Time Squared) returns Angular Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2f410acf
+Energy per Unit Area.mult(Length) returns Force	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@47089e5f
+Energy per Unit Area.mult(Time) returns Mass per Time	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4141d797
+Energy per Unit Area.mult(Angle) returns Energy per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@68f7aae2
+Energy per Unit Area.mult(Activity) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4f47d241
+Energy per Unit Area.mult(Area) returns Energy and Work	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4c3e4790
+Energy per Unit Area.mult(Area Thermal Expansion) returns Heat Capacity and Entropy	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@38cccef
+Energy per Unit Area.mult(Frequency) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5679c6c6
+Energy per Unit Area.mult(Kinematic Viscosity) returns Heat Flow Rate	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27ddd392
+Energy per Unit Area.mult(Thermal Diffusivity) returns Heat Flow Rate	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@19e1023e
+Energy per Unit Area.mult(Time Squared) returns Mass	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7cef4e59
+Exposure.mult(Mass) returns Electric Charge	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@64b8f8f4
+Exposure.mult(Angle) returns Exposure	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2db0f6b2
+Exposure.mult(Angular Momentum) returns Magnetic Dipole Moment	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3cd1f1c8
+Exposure.mult(Density) returns Electric Charge Volume Density	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3a4afd8d
+Exposure.mult(Dynamic Viscosity) returns Magnetic Field Strength	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1996cd68
+Exposure.mult(Electric Field Strength) returns Linear Acceleration	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3339ad8e
+Exposure.mult(Electromotive Force) returns Absorbed Dose	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@555590
+Exposure.mult(Force per Electric Charge) returns Linear Acceleration	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6d1e7682
+Exposure.mult(Length Mass) returns Electric Dipole Moment	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@424c0bc4
+Exposure.mult(Magnetic Flux) returns Kinematic Viscosity	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3c679bde
+Exposure.mult(Magnetic Flux Density) returns Activity	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@16b4a017
+Exposure.mult(Mass per Time) returns Electric Current	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@8807e25
+Exposure.mult(Mass per Unit Area) returns Electric Flux Density	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2a3046da
+Exposure.mult(Mass per Unit Length) returns Electric Charge Line Density	=>	[0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2a098129
+Force.mult(Length) returns Energy and Work	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@198e2867
+Force.mult(Time) returns Linear Momentum	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@12f40c25
+Force.mult(Angle) returns Force	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3ada9e37
+Force.mult(Linear Thermal Expansion) returns Heat Capacity and Entropy	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@5cbc508c
+Force.mult(Linear Velocity) returns Heat Flow Rate	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3419866c
+Force.mult(Time Squared) returns Length Mass	=>	[1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@63e31ee
+Force per Electric Charge.mult(Length) returns Electromotive Force	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@68fb2c38
+Force per Electric Charge.mult(Angle) returns Electric Field Strength	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@567d299b
+Force per Electric Charge.mult(Capacitance) returns Electric Charge Line Density	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@2eafffde
+Force per Electric Charge.mult(Electric Charge) returns Force	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@59690aa4
+Force per Electric Charge.mult(Electric Charge Line Density) returns Energy per Unit Area	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6842775d
+Force per Electric Charge.mult(Electric Dipole Moment) returns Energy and Work	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@574caa3f
+Force per Electric Charge.mult(Electric Flux Density) returns Energy Density	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@64cee07
+Force per Electric Charge.mult(Electrical Conductivity) returns Magnetic Field Strength	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@1761e840
+Force per Electric Charge.mult(Exposure) returns Linear Acceleration	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6c629d6e
+Force per Electric Charge.mult(Magnetic Field Strength) returns Heat Flow Rate per Unit Area	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5ecddf8f
+Force per Electric Charge.mult(Permittivity) returns Electric Flux Density	=>	[1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@3f102e87
+Force per Unit Length.mult(Length) returns Force	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27abe2cd
+Force per Unit Length.mult(Time) returns Mass per Time	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5f5a92bb
+Force per Unit Length.mult(Angle) returns Energy per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6fdb1f78
+Force per Unit Length.mult(Activity) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@51016012
+Force per Unit Length.mult(Area) returns Energy and Work	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@29444d75
+Force per Unit Length.mult(Area Thermal Expansion) returns Heat Capacity and Entropy	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@2280cdac
+Force per Unit Length.mult(Frequency) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1517365b
+Force per Unit Length.mult(Kinematic Viscosity) returns Heat Flow Rate	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4fccd51b
+Force per Unit Length.mult(Thermal Diffusivity) returns Heat Flow Rate	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@44e81672
+Force per Unit Length.mult(Time Squared) returns Mass	=>	[0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@60215eee
+Frequency.mult(Length) returns Linear Velocity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4ca8195f
+Frequency.mult(Mass) returns Mass per Time	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@65e579dc
+Frequency.mult(Time) returns Angle	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@61baa894
+Frequency.mult(Amount of Substance) returns Catalytic Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@b065c63
+Frequency.mult(Angle) returns Activity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@768debd
+Frequency.mult(Absorbed Dose) returns Absorbed Dose Rate	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@490d6c15
+Frequency.mult(Angular Mass) returns Angular Momentum	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7d4793a8
+Frequency.mult(Angular Momentum) returns Energy and Work	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@449b2d27
+Frequency.mult(Angular Velocity) returns Angular Acceleration	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@5479e3f
+Frequency.mult(Area) returns Kinematic Viscosity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27082746
+Frequency.mult(Capacitance) returns Electrical Conductivity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@66133adc
+Frequency.mult(Dose Equivalent) returns Absorbed Dose Rate	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7bfcd12c
+Frequency.mult(Dynamic Viscosity) returns Energy Density	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@42f30e0a
+Frequency.mult(Electric Charge) returns Electric Current	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@24273305
+Frequency.mult(Electric Charge Line Density) returns Magnetic Field Strength	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5b1d2887
+Frequency.mult(Electric Flux Density) returns Electric Current Density	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@46f5f779
+Frequency.mult(Energy and Work) returns Heat Flow Rate	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1c2c22f3
+Frequency.mult(Energy per Unit Area) returns Heat Flow Rate per Unit Area	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@18e8568
+Frequency.mult(Force per Unit Length) returns Heat Flow Rate per Unit Area	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@33e5ccce
+Frequency.mult(Inductance) returns Resistance	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@5a42bbf4
+Frequency.mult(Kinematic Viscosity) returns Absorbed Dose	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@270421f5
+Frequency.mult(Length Mass) returns Linear Momentum	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@52d455b8
+Frequency.mult(Linear Momentum) returns Force	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4f4a7090
+Frequency.mult(Linear Velocity) returns Linear Acceleration	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@18ef96
+Frequency.mult(Magnetic Flux) returns Electromotive Force	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6956de9
+Frequency.mult(Mass per Time) returns Energy per Unit Area	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@769c9116
+Frequency.mult(Mass per Unit Length) returns Dynamic Viscosity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6aceb1a5
+Frequency.mult(Plane Angle) returns Angular Velocity	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@2d6d8735
+Frequency.mult(Specific Energy) returns Absorbed Dose Rate	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ba4d54
+Frequency.mult(Thermal Diffusivity) returns Absorbed Dose	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@12bc6874
+Frequency.mult(Time Squared) returns Time	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@de0a01f
+Frequency.mult(Torque) returns Heat Flow Rate	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4c75cab9
+Frequency.mult(Volume) returns Volume per Unit Time	=>	[0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ef7fe8e
+Gravitational Attraction.mult(Angle) returns Gravitational Attraction	=>	[3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6f79caec
+Gravitational Attraction.mult(Dynamic Viscosity) returns Absorbed Dose Rate	=>	[3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@67117f44
+Gravitational Attraction.mult(Mass per Unit Area) returns Linear Acceleration	=>	[3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5d3411d
+Gravitational Attraction.mult(Mass per Unit Length) returns Absorbed Dose	=>	[3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2471cca7
+Heat Capacity and Entropy.mult(Temperature) returns Energy and Work	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@5fe5c6f
+Heat Capacity and Entropy.mult(Angle) returns Heat Capacity and Entropy	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6979e8cb
+Heat Capacity and Entropy.mult(Inverse Amount of Substance) returns Molar Heat Capacity	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@763d9750
+Heat Capacity and Entropy.mult(Thermal Resistance) returns Time	=>	[2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@5c0369c4
+Heat Flow Rate.mult(Time) returns Energy and Work	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2be94b0f
+Heat Flow Rate.mult(Angle) returns Heat Flow Rate	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@d70c109
+Heat Flow Rate.mult(Thermal Insulance) returns Area Temperature	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@17ed40e0
+Heat Flow Rate.mult(Thermal Resistance) returns Temperature	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@50675690
+Heat Flow Rate.mult(Thermal Resistivity) returns Length Temperature	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@31b7dea0
+Heat Flow Rate.mult(Time Squared) returns Angular Momentum	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3ac42916
+Heat Flow Rate per Unit Area.mult(Time) returns Energy per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@47d384ee
+Heat Flow Rate per Unit Area.mult(Angle) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2d6a9952
+Heat Flow Rate per Unit Area.mult(Area) returns Heat Flow Rate	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@22a71081
+Heat Flow Rate per Unit Area.mult(Linear Thermal Expansion) returns Thermal Conductivity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@3930015a
+Heat Flow Rate per Unit Area.mult(Thermal Insulance) returns Temperature	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@629f0666
+Heat Flow Rate per Unit Area.mult(Time Squared) returns Mass per Time	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1bc6a36e
+Illuminance.mult(Angle) returns Illuminance	=>	[-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ff8b8f
+Illuminance.mult(Area) returns Luminous Flux	=>	[-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@387c703b
+Inductance.mult(Electric Current) returns Magnetic Flux	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@224aed64
+Inductance.mult(Angle) returns Inductance	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@c39f790
+Inductance.mult(Activity) returns Resistance	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@71e7a66b
+Inductance.mult(Capacitance) returns Time Squared	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@2ac1fdc4
+Inductance.mult(Electric Current Density) returns Magnetic Flux Density	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5f150435
+Inductance.mult(Electrical Conductivity) returns Time	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@1c53fd30
+Inductance.mult(Frequency) returns Resistance	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@50cbc42f
+Inductance.mult(Linear Acceleration) returns Inverse Permittivity	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@75412c2f
+Inductance.mult(Thrust to Mass Ratio) returns Inverse Permittivity	=>	[2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@282ba1e
+Inverse Amount of Substance.mult(Amount of Substance) returns Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@13b6d03
+Inverse Amount of Substance.mult(Angle) returns Inverse Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@f5f2bb7
+Inverse Amount of Substance.mult(Catalytic Activity) returns Activity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@73035e27
+Inverse Amount of Substance.mult(Electric Charge) returns Electric Charge per Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@64c64813
+Inverse Amount of Substance.mult(Energy and Work) returns Molar Energy	=>	[0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3ecf72fd
+Inverse Amount of Substance.mult(Heat Capacity and Entropy) returns Molar Heat Capacity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@483bf400
+Inverse Amount of Substance.mult(Temperature Amount of Substance) returns Temperature	=>	[0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] = [D@21a06946
+Inverse Amount of Substance.mult(Torque) returns Molar Energy	=>	[0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@77f03bb1
+Inverse Permittivity.mult(Angle) returns Inverse Permittivity	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@326de728
+Inverse Permittivity.mult(Capacitance) returns Length	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@25618e91
+Inverse Permittivity.mult(Electric Charge Line Density) returns Electromotive Force	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7a92922
+Inverse Permittivity.mult(Electric Flux Density) returns Electric Field Strength	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@71f2a7d5
+Inverse Permittivity.mult(Electrical Conductivity) returns Linear Velocity	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@2cfb4a64
+Inverse Permittivity.mult(Permittivity) returns Angle	=>	[3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@5474c6c
+Kinematic Viscosity.mult(Length) returns Volume per Unit Time	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4b6995df
+Kinematic Viscosity.mult(Mass) returns Angular Momentum	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2fc14f68
+Kinematic Viscosity.mult(Time) returns Area	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@591f989e
+Kinematic Viscosity.mult(Angle) returns Kinematic Viscosity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@66048bfd
+Kinematic Viscosity.mult(Activity) returns Absorbed Dose	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@61443d8f
+Kinematic Viscosity.mult(Density) returns Dynamic Viscosity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@445b84c0
+Kinematic Viscosity.mult(Dynamic Viscosity) returns Force	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@61a52fbd
+Kinematic Viscosity.mult(Electric Charge) returns Magnetic Dipole Moment	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@233c0b17
+Kinematic Viscosity.mult(Electric Charge Volume Density) returns Magnetic Field Strength	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@63d4e2ba
+Kinematic Viscosity.mult(Electric Flux Density) returns Electric Current	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7bb11784
+Kinematic Viscosity.mult(Energy per Unit Area) returns Heat Flow Rate	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@33a10788
+Kinematic Viscosity.mult(Force per Unit Length) returns Heat Flow Rate	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7006c658
+Kinematic Viscosity.mult(Frequency) returns Absorbed Dose	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@34033bd0
+Kinematic Viscosity.mult(Magnetic Flux Density) returns Electromotive Force	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@47fd17e3
+Kinematic Viscosity.mult(Mass per Time) returns Energy and Work	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7cdbc5d3
+Kinematic Viscosity.mult(Mass per Unit Area) returns Mass per Time	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3aa9e816
+Kinematic Viscosity.mult(Mass per Unit Length) returns Linear Momentum	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@17d99928
+Kinematic Viscosity.mult(Volumetric heat capacity) returns Thermal Conductivity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@3834d63f
+Length Mass.mult(Length) returns Angular Mass	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ae369b7
+Length Mass.mult(Angle) returns Length Mass	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6fffcba5
+Length Mass.mult(Activity) returns Linear Momentum	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@34340fab
+Length Mass.mult(Exposure) returns Electric Dipole Moment	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2aafb23c
+Length Mass.mult(Frequency) returns Linear Momentum	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2b80d80f
+Length Mass.mult(Linear Acceleration) returns Energy and Work	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3ab39c39
+Length Mass.mult(Linear Velocity) returns Angular Momentum	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2eee9593
+Length Mass.mult(Thrust to Mass Ratio) returns Energy and Work	=>	[1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7907ec20
+Length Temperature.mult(Length) returns Area Temperature	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@546a03af
+Length Temperature.mult(Angle) returns Length Temperature	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@721e0f4f
+Length Temperature.mult(Area Thermal Expansion) returns Volume	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@28864e92
+Length Temperature.mult(Linear Thermal Expansion) returns Area	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6ea6d14e
+Length Temperature.mult(Mass per Unit Length) returns Mass Temperature	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6ad5c04e
+Length Temperature.mult(Thermal Conductivity) returns Heat Flow Rate	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6833ce2c
+Length Temperature.mult(Volumetric heat capacity) returns Energy per Unit Area	=>	[1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@725bef66
+Linear Acceleration.mult(Length) returns Absorbed Dose	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2aaf7cc2
+Linear Acceleration.mult(Mass) returns Force	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6e3c1e69
+Linear Acceleration.mult(Time) returns Linear Velocity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1888ff2c
+Linear Acceleration.mult(Angle) returns Linear Acceleration	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@35851384
+Linear Acceleration.mult(Dynamic Viscosity) returns Heat Flow Rate per Unit Area	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@649d209a
+Linear Acceleration.mult(Inductance) returns Inverse Permittivity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@6adca536
+Linear Acceleration.mult(Length Mass) returns Energy and Work	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@357246de
+Linear Acceleration.mult(Linear Momentum) returns Heat Flow Rate	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@28f67ac7
+Linear Acceleration.mult(Linear Thermal Expansion) returns Specific Heat Capacity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@256216b3
+Linear Acceleration.mult(Linear Velocity) returns Absorbed Dose Rate	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2a18f23c
+Linear Acceleration.mult(Mass per Unit Area) returns Energy Density	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@d7b1517
+Linear Acceleration.mult(Mass per Unit Length) returns Energy per Unit Area	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@16c0663d
+Linear Acceleration.mult(Time Squared) returns Length	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@23223dd8
+Linear Momentum.mult(Length) returns Angular Momentum	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4ec6a292
+Linear Momentum.mult(Time) returns Length Mass	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b40d5f0
+Linear Momentum.mult(Angle) returns Linear Momentum	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ea4a92b
+Linear Momentum.mult(Activity) returns Force	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3c5a99da
+Linear Momentum.mult(Frequency) returns Force	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@47f37ef1
+Linear Momentum.mult(Linear Acceleration) returns Heat Flow Rate	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5a01ccaa
+Linear Momentum.mult(Linear Velocity) returns Energy and Work	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@71c7db30
+Linear Momentum.mult(Specific Heat Volume) returns Coefficient of Heat Transfer	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@19bb089b
+Linear Momentum.mult(Thrust to Mass Ratio) returns Heat Flow Rate	=>	[1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4563e9ab
+Linear Thermal Expansion.mult(Length) returns Area Thermal Expansion	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@11531931
+Linear Thermal Expansion.mult(Temperature) returns Length	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@5e025e70
+Linear Thermal Expansion.mult(Angle) returns Linear Thermal Expansion	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1fbc7afb
+Linear Thermal Expansion.mult(Area) returns Volume Thermal Expansion	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@45c8e616
+Linear Thermal Expansion.mult(Area Temperature) returns Volume	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@4cdbe50f
+Linear Thermal Expansion.mult(Force) returns Heat Capacity and Entropy	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@66d33a
+Linear Thermal Expansion.mult(Heat Flow Rate per Unit Area) returns Thermal Conductivity	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7cf10a6f
+Linear Thermal Expansion.mult(Length Temperature) returns Area	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@7e0babb1
+Linear Thermal Expansion.mult(Linear Acceleration) returns Specific Heat Capacity	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6debcae2
+Linear Thermal Expansion.mult(Mass Temperature) returns Length Mass	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@5ba23b66
+Linear Thermal Expansion.mult(Power per Unit Area) returns Thermal Conductivity	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ff4f00f
+Linear Thermal Expansion.mult(Thrust to Mass Ratio) returns Specific Heat Capacity	=>	[1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@c818063
+Linear Velocity.mult(Length) returns Kinematic Viscosity	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3f0ee7cb
+Linear Velocity.mult(Mass) returns Linear Momentum	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@75bd9247
+Linear Velocity.mult(Time) returns Length	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7d417077
+Linear Velocity.mult(Angle) returns Linear Velocity	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7dc36524
+Linear Velocity.mult(Activity) returns Linear Acceleration	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@35bbe5e8
+Linear Velocity.mult(Area) returns Volume per Unit Time	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2c8d66b2
+Linear Velocity.mult(Dynamic Viscosity) returns Energy per Unit Area	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5a39699c
+Linear Velocity.mult(Electric Charge Line Density) returns Electric Current	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@3cb5cdba
+Linear Velocity.mult(Electric Charge Volume Density) returns Electric Current Density	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@56cbfb61
+Linear Velocity.mult(Electric Dipole Moment) returns Magnetic Dipole Moment	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1134affc
+Linear Velocity.mult(Electric Flux Density) returns Magnetic Field Strength	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@d041cf
+Linear Velocity.mult(Energy Density) returns Heat Flow Rate per Unit Area	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@129a8472
+Linear Velocity.mult(Force) returns Heat Flow Rate	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1b0375b3
+Linear Velocity.mult(Frequency) returns Linear Acceleration	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2f7c7260
+Linear Velocity.mult(Length Mass) returns Angular Momentum	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2d209079
+Linear Velocity.mult(Linear Acceleration) returns Absorbed Dose Rate	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6bdf28bb
+Linear Velocity.mult(Linear Momentum) returns Energy and Work	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6b71769e
+Linear Velocity.mult(Magnetic Flux Density) returns Electric Field Strength	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@2752f6e2
+Linear Velocity.mult(Mass per Time) returns Force	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@e580929
+Linear Velocity.mult(Mass per Unit Area) returns Dynamic Viscosity	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1cd072a9
+Linear Velocity.mult(Mass per Unit Length) returns Mass per Time	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7c75222b
+Linear Velocity.mult(Permeability) returns Resistance	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@4c203ea1
+Linear Velocity.mult(Permittivity) returns Electrical Conductivity	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@27f674d
+Linear Velocity.mult(Pressure or Stress) returns Heat Flow Rate per Unit Area	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1d251891
+Linear Velocity.mult(Resistance) returns Inverse Permittivity	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@48140564
+Linear Velocity.mult(Thrust to Mass Ratio) returns Absorbed Dose Rate	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@58ceff1
+Linear Velocity.mult(Volumetric heat capacity) returns Coefficient of Heat Transfer	=>	[1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@7c30a502
+Luminance.mult(Angle) returns Luminance	=>	[-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@49e4cb85
+Luminance.mult(Area) returns Luminous Intensity	=>	[-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2133c8f8
+Luminance.mult(Plane Angle) returns Illuminance	=>	[-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@43a25848
+Luminous Flux.mult(Angle) returns Luminous Flux	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3ac3fd8b
+Magnetic Dipole Moment.mult(Angle) returns Magnetic Dipole Moment	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5594a1b5
+Magnetic Dipole Moment.mult(Magnetic Flux Density) returns Energy and Work	=>	[2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@6a5fc7f7
+Magnetic Field Strength.mult(Length) returns Electric Current	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3b6eb2ec
+Magnetic Field Strength.mult(Time) returns Electric Charge Line Density	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1e643faf
+Magnetic Field Strength.mult(Angle) returns Magnetic Field Strength	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6e8dacdf
+Magnetic Field Strength.mult(Electric Field Strength) returns Heat Flow Rate per Unit Area	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@7a79be86
+Magnetic Field Strength.mult(Force per Electric Charge) returns Heat Flow Rate per Unit Area	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@34ce8af7
+Magnetic Field Strength.mult(Magnetic Flux) returns Force	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@b684286
+Magnetic Field Strength.mult(Magnetic Flux Density) returns Energy Density	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@880ec60
+Magnetic Field Strength.mult(Permeability) returns Magnetic Flux Density	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@3f3afe78
+Magnetic Field Strength.mult(Resistance) returns Electric Field Strength	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@7f63425a
+Magnetic Field Strength.mult(Volume) returns Magnetic Dipole Moment	=>	[-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@36d64342
+Magnetic Flux.mult(Electric Current) returns Energy and Work	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@39ba5a14
+Magnetic Flux.mult(Angle) returns Magnetic Flux	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@511baa65
+Magnetic Flux.mult(Activity) returns Electromotive Force	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@340f438e
+Magnetic Flux.mult(Electric Charge) returns Angular Momentum	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@30c7da1e
+Magnetic Flux.mult(Electric Charge Line Density) returns Linear Momentum	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5b464ce8
+Magnetic Flux.mult(Electric Charge Volume Density) returns Dynamic Viscosity	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@57829d67
+Magnetic Flux.mult(Electric Current Density) returns Energy per Unit Area	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@19dfb72a
+Magnetic Flux.mult(Electric Flux Density) returns Mass per Time	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@17c68925
+Magnetic Flux.mult(Electrical Conductivity) returns Electric Charge	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@7e0ea639
+Magnetic Flux.mult(Exposure) returns Kinematic Viscosity	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@3d24753a
+Magnetic Flux.mult(Frequency) returns Electromotive Force	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@59a6e353
+Magnetic Flux.mult(Magnetic Field Strength) returns Force	=>	[2.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@7a0ac6e3
+Magnetic Flux Density.mult(Electric Current) returns Energy per Unit Area	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@71be98f5
+Magnetic Flux Density.mult(Angle) returns Magnetic Flux Density	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6fadae5d
+Magnetic Flux Density.mult(Area) returns Magnetic Flux	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@17f6480
+Magnetic Flux Density.mult(Electric Charge) returns Mass per Time	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2d6e8792
+Magnetic Flux Density.mult(Electric Charge Line Density) returns Dynamic Viscosity	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2812cbfa
+Magnetic Flux Density.mult(Electric Dipole Moment) returns Linear Momentum	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@2acf57e3
+Magnetic Flux Density.mult(Electrical Conductivity) returns Electric Flux Density	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@506e6d5e
+Magnetic Flux Density.mult(Exposure) returns Activity	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@96532d6
+Magnetic Flux Density.mult(Kinematic Viscosity) returns Electromotive Force	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3796751b
+Magnetic Flux Density.mult(Linear Velocity) returns Electric Field Strength	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@67b64c45
+Magnetic Flux Density.mult(Magnetic Dipole Moment) returns Energy and Work	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4411d970
+Magnetic Flux Density.mult(Magnetic Field Strength) returns Energy Density	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6442b0a6
+Magnetic Flux Density.mult(Thermal Diffusivity) returns Electromotive Force	=>	[0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@60f82f98
+Magnetomotive Force.mult(Angle) returns Magnetomotive Force	=>	[0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@35f983a6
+Mass Temperature.mult(Angle) returns Mass Temperature	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7f690630
+Mass Temperature.mult(Amount of Substance per Unit Mass) returns Temperature Amount of Substance	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@edf4efb
+Mass Temperature.mult(Area Thermal Expansion) returns Angular Mass	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@2f7a2457
+Mass Temperature.mult(Linear Thermal Expansion) returns Length Mass	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@566776ad
+Mass Temperature.mult(Specific Heat Capacity) returns Energy and Work	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6108b2d7
+Mass Temperature.mult(Specific Heat Pressure) returns Volume	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@1554909b
+Mass Temperature.mult(Specific Heat Volume) returns Energy Density	=>	[0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6bf256fa
+Mass per Time.mult(Length) returns Linear Momentum	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6cd8737
+Mass per Time.mult(Time) returns Mass	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@22f71333
+Mass per Time.mult(Angle) returns Mass per Time	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@13969fbe
+Mass per Time.mult(Absorbed Dose) returns Heat Flow Rate	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6aaa5eb0
+Mass per Time.mult(Activity) returns Energy per Unit Area	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3498ed
+Mass per Time.mult(Amount of Substance per Unit Mass) returns Catalytic Activity	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@1a407d53
+Mass per Time.mult(Area) returns Angular Momentum	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3d8c7aca
+Mass per Time.mult(Dose Equivalent) returns Heat Flow Rate	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5ebec15
+Mass per Time.mult(Exposure) returns Electric Current	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@21bcffb5
+Mass per Time.mult(Frequency) returns Energy per Unit Area	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@380fb434
+Mass per Time.mult(Kinematic Viscosity) returns Energy and Work	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@668bc3d5
+Mass per Time.mult(Linear Velocity) returns Force	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3cda1055
+Mass per Time.mult(Specific Energy) returns Heat Flow Rate	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7a5d012c
+Mass per Time.mult(Thermal Diffusivity) returns Energy and Work	=>	[0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3fb6a447
+Mass per Unit Area.mult(Length) returns Mass per Unit Length	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@79b4d0f
+Mass per Unit Area.mult(Angle) returns Mass per Unit Area	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6b2fad11
+Mass per Unit Area.mult(Absorbed Dose) returns Energy per Unit Area	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@79698539
+Mass per Unit Area.mult(Absorbed Dose Rate) returns Heat Flow Rate per Unit Area	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@73f792cf
+Mass per Unit Area.mult(Area) returns Mass	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ed94a8b
+Mass per Unit Area.mult(Area Temperature) returns Mass Temperature	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@38082d64
+Mass per Unit Area.mult(Dose Equivalent) returns Energy per Unit Area	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@dfd3711
+Mass per Unit Area.mult(Exposure) returns Electric Flux Density	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@42d3bd8b
+Mass per Unit Area.mult(Gravitational Attraction) returns Linear Acceleration	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@26ba2a48
+Mass per Unit Area.mult(Kinematic Viscosity) returns Mass per Time	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5f2050f6
+Mass per Unit Area.mult(Linear Acceleration) returns Energy Density	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3b81a1bc
+Mass per Unit Area.mult(Linear Velocity) returns Dynamic Viscosity	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@64616ca2
+Mass per Unit Area.mult(Specific Energy) returns Energy per Unit Area	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@13fee20c
+Mass per Unit Area.mult(Specific Heat Pressure) returns Linear Thermal Expansion	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@4e04a765
+Mass per Unit Area.mult(Thermal Diffusivity) returns Mass per Time	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@783e6358
+Mass per Unit Area.mult(Thrust to Mass Ratio) returns Energy Density	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@17550481
+Mass per Unit Area.mult(Volume) returns Length Mass	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@735f7ae5
+Mass per Unit Area.mult(Volume per Unit Time) returns Linear Momentum	=>	[-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@180bc464
+Mass per Unit Length.mult(Length) returns Mass	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1324409e
+Mass per Unit Length.mult(Angle) returns Mass per Unit Length	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2c6a3f77
+Mass per Unit Length.mult(Absorbed Dose) returns Force	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@246ae04d
+Mass per Unit Length.mult(Activity) returns Dynamic Viscosity	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@62043840
+Mass per Unit Length.mult(Area) returns Length Mass	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5315b42e
+Mass per Unit Length.mult(Dose Equivalent) returns Force	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ef9b8bc
+Mass per Unit Length.mult(Exposure) returns Electric Charge Line Density	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@5d624da6
+Mass per Unit Length.mult(Frequency) returns Dynamic Viscosity	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1e67b872
+Mass per Unit Length.mult(Gravitational Attraction) returns Absorbed Dose	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@60addb54
+Mass per Unit Length.mult(Kinematic Viscosity) returns Linear Momentum	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3f2a3a5
+Mass per Unit Length.mult(Length Temperature) returns Mass Temperature	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@4cb2c100
+Mass per Unit Length.mult(Linear Acceleration) returns Energy per Unit Area	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6fb554cc
+Mass per Unit Length.mult(Linear Velocity) returns Mass per Time	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@614c5515
+Mass per Unit Length.mult(Specific Energy) returns Force	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@77b52d12
+Mass per Unit Length.mult(Specific Heat Pressure) returns Area Thermal Expansion	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@2d554825
+Mass per Unit Length.mult(Thermal Diffusivity) returns Linear Momentum	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@68837a77
+Mass per Unit Length.mult(Thrust to Mass Ratio) returns Energy per Unit Area	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6be46e8f
+Mass per Unit Length.mult(Volume) returns Angular Mass	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3567135c
+Mass per Unit Length.mult(Volume per Unit Time) returns Angular Momentum	=>	[-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@327471b5
+Molar Energy.mult(Amount of Substance) returns Energy and Work	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@4157f54e
+Molar Energy.mult(Angle) returns Molar Energy	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@90f6bfd
+Molar Energy.mult(Amount of Substance Per Unit Volume) returns Energy Density	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@47f6473
+Molar Energy.mult(Amount of Substance per Unit Mass) returns Absorbed Dose	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@15975490
+Molar Energy.mult(Catalytic Activity) returns Heat Flow Rate	=>	[2.0, 1.0, -2.0, 0.0, 0.0, -1.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@6b143ee9
+Molar Heat Capacity.mult(Temperature) returns Molar Energy	=>	[2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@1936f0f5
+Molar Heat Capacity.mult(Amount of Substance) returns Heat Capacity and Entropy	=>	[2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@6615435c
+Molar Heat Capacity.mult(Angle) returns Molar Heat Capacity	=>	[2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4909b8da
+Molar Heat Capacity.mult(Amount of Substance Per Unit Volume) returns Volumetric heat capacity	=>	[2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@3a03464
+Molar Heat Capacity.mult(Amount of Substance per Unit Mass) returns Specific Heat Capacity	=>	[2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] * [0.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@2d3fcdbd
+Molar Heat Capacity.mult(Temperature Amount of Substance) returns Energy and Work	=>	[2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] = [D@617c74e5
+Permeability.mult(Length) returns Inductance	=>	[1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6537cf78
+Permeability.mult(Angle) returns Permeability	=>	[1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@67b6d4ae
+Permeability.mult(Absorbed Dose) returns Inverse Permittivity	=>	[1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@34b7bfc0
+Permeability.mult(Dose Equivalent) returns Inverse Permittivity	=>	[1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@366e2eef
+Permeability.mult(Linear Velocity) returns Resistance	=>	[1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6df97b55
+Permeability.mult(Magnetic Field Strength) returns Magnetic Flux Density	=>	[1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@3cbbc1e0
+Permeability.mult(Specific Energy) returns Inverse Permittivity	=>	[1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@35fb3008
+Permittivity.mult(Length) returns Capacitance	=>	[-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7225790e
+Permittivity.mult(Angle) returns Permittivity	=>	[-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@54a097cc
+Permittivity.mult(Electric Field Strength) returns Electric Flux Density	=>	[-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@36f6e879
+Permittivity.mult(Electromotive Force) returns Electric Charge Line Density	=>	[-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@5a61f5df
+Permittivity.mult(Force per Electric Charge) returns Electric Flux Density	=>	[-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@3551a94
+Permittivity.mult(Inverse Permittivity) returns Angle	=>	[-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 1.0, -4.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@531be3c5
+Permittivity.mult(Linear Velocity) returns Electrical Conductivity	=>	[-3.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@52af6cff
+Plane Angle.mult(Electric Current) returns Magnetomotive Force	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@735b478
+Plane Angle.mult(Angle) returns Plane Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2c9f9fb0
+Plane Angle.mult(Luminous Intensity) returns Luminous Flux	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] = [D@2096442d
+Plane Angle.mult(Activity) returns Angular Velocity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@9f70c54
+Plane Angle.mult(Electric Current per Angle) returns Electric Current	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 0.0] = [D@234bef66
+Plane Angle.mult(Frequency) returns Angular Velocity	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@737996a0
+Plane Angle.mult(Luminance) returns Illuminance	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0] * [-2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0] = [D@61dc03ce
+Power.mult(Time) returns Energy and Work	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@50f8360d
+Power.mult(Angle) returns Heat Flow Rate	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2cb4c3ab
+Power.mult(Thermal Insulance) returns Area Temperature	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@13c78c0b
+Power.mult(Thermal Resistance) returns Temperature	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@12843fce
+Power.mult(Thermal Resistivity) returns Length Temperature	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@3dd3bcd
+Power.mult(Time Squared) returns Angular Momentum	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@97e1986
+Power per Angle.mult(Angle) returns Power per Angle	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@26f67b76
+Power per Angle.mult(Solid Angle) returns Heat Flow Rate	=>	[2.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@153f5a29
+Power per Area Angle.mult(Angle) returns Power per Area Angle	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7f560810
+Power per Area Angle.mult(Area) returns Power per Angle	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@69d9c55
+Power per Area Angle.mult(Area Angle) returns Heat Flow Rate	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@13a57a3b
+Power per Area Angle.mult(Solid Angle) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] = [D@7ca48474
+Power per Unit Area.mult(Time) returns Energy per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@337d0578
+Power per Unit Area.mult(Angle) returns Heat Flow Rate per Unit Area	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@59e84876
+Power per Unit Area.mult(Area) returns Heat Flow Rate	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@61a485d2
+Power per Unit Area.mult(Linear Thermal Expansion) returns Thermal Conductivity	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@39fb3ab6
+Power per Unit Area.mult(Thermal Insulance) returns Temperature	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@6276ae34
+Power per Unit Area.mult(Time Squared) returns Mass per Time	=>	[0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7946e1f4
+Pressure or Stress.mult(Length) returns Energy per Unit Area	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3c09711b
+Pressure or Stress.mult(Time) returns Dynamic Viscosity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5cc7c2a6
+Pressure or Stress.mult(Angle) returns Energy Density	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@b97c004
+Pressure or Stress.mult(Area) returns Force	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4590c9c3
+Pressure or Stress.mult(Linear Velocity) returns Heat Flow Rate per Unit Area	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@32e6e9c3
+Pressure or Stress.mult(Specific Heat Pressure) returns Specific Heat Capacity	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@5056dfcb
+Pressure or Stress.mult(Time Squared) returns Mass per Unit Length	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6574b225
+Pressure or Stress.mult(Volume) returns Energy and Work	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2669b199
+Pressure or Stress.mult(Volume Thermal Expansion) returns Heat Capacity and Entropy	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@2344fc66
+Pressure or Stress.mult(Volume per Unit Time) returns Heat Flow Rate	=>	[-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@458ad742
+Resistance.mult(Time) returns Inductance	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5afa04c
+Resistance.mult(Electric Current) returns Electromotive Force	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@6ea12c19
+Resistance.mult(Angle) returns Resistance	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6a024a67
+Resistance.mult(Capacitance) returns Time	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@7921b0a2
+Resistance.mult(Electric Charge) returns Magnetic Flux	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@174d20a
+Resistance.mult(Electric Flux Density) returns Magnetic Flux Density	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@66d2e7d9
+Resistance.mult(Electrical Conductivity) returns Angle	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, -1.0, 3.0, 2.0, 0.0, 0.0, 0.0, 0.0] = [D@1efbd816
+Resistance.mult(Linear Velocity) returns Inverse Permittivity	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6a2bcfcb
+Resistance.mult(Magnetic Field Strength) returns Electric Field Strength	=>	[2.0, 1.0, -3.0, -2.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4de8b406
+Solid Angle.mult(Angle) returns Solid Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3c756e4d
+Solid Angle.mult(Area) returns Area Angle	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7c0e2abd
+Solid Angle.mult(Electric Current per Angle) returns Magnetomotive Force	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 0.0] = [D@48eff760
+Solid Angle.mult(Power per Angle) returns Heat Flow Rate	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@402f32ff
+Solid Angle.mult(Power per Area Angle) returns Heat Flow Rate per Unit Area	=>	[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, -2.0, 0.0] = [D@573f2bb1
+Specific Energy.mult(Mass) returns Energy and Work	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5ae9a829
+Specific Energy.mult(Time) returns Kinematic Viscosity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d8a00e3
+Specific Energy.mult(Angle) returns Absorbed Dose	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@548b7f67
+Specific Energy.mult(Activity) returns Absorbed Dose Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7ac7a4e4
+Specific Energy.mult(Density) returns Energy Density	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d78f375
+Specific Energy.mult(Frequency) returns Absorbed Dose Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@50c87b21
+Specific Energy.mult(Mass per Time) returns Heat Flow Rate	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5f375618
+Specific Energy.mult(Mass per Unit Area) returns Energy per Unit Area	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1810399e
+Specific Energy.mult(Mass per Unit Length) returns Force	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@32d992b2
+Specific Energy.mult(Permeability) returns Inverse Permittivity	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@215be6bb
+Specific Energy.mult(Time Squared) returns Area	=>	[2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4439f31e
+Specific Heat Capacity.mult(Mass) returns Heat Capacity and Entropy	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5dfcfece
+Specific Heat Capacity.mult(Temperature) returns Absorbed Dose	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@23ceabc1
+Specific Heat Capacity.mult(Angle) returns Specific Heat Capacity	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5d5eef3d
+Specific Heat Capacity.mult(Density) returns Volumetric heat capacity	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@56f4468b
+Specific Heat Capacity.mult(Dynamic Viscosity) returns Thermal Conductivity	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6cc4c815
+Specific Heat Capacity.mult(Mass Temperature) returns Energy and Work	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@3a82f6ef
+Specific Heat Capacity.mult(Time Squared) returns Area Thermal Expansion	=>	[2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@100fc185
+Specific Heat Pressure.mult(Mass) returns Volume Thermal Expansion	=>	[3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@643b1d11
+Specific Heat Pressure.mult(Angle) returns Specific Heat Pressure	=>	[3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2ef5e5e3
+Specific Heat Pressure.mult(Energy Density) returns Specific Heat Capacity	=>	[3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@36d4b5c
+Specific Heat Pressure.mult(Mass Temperature) returns Volume	=>	[3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@6d00a15d
+Specific Heat Pressure.mult(Mass per Unit Area) returns Linear Thermal Expansion	=>	[3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@51efea79
+Specific Heat Pressure.mult(Mass per Unit Length) returns Area Thermal Expansion	=>	[3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5034c75a
+Specific Heat Pressure.mult(Pressure or Stress) returns Specific Heat Capacity	=>	[3.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@396a51ab
+Specific Heat Volume.mult(Mass) returns Volumetric heat capacity	=>	[-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@51081592
+Specific Heat Volume.mult(Angle) returns Specific Heat Volume	=>	[-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7f9a81e8
+Specific Heat Volume.mult(Angular Momentum) returns Thermal Conductivity	=>	[-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@9629756
+Specific Heat Volume.mult(Area Temperature) returns Linear Acceleration	=>	[-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@62ee68d8
+Specific Heat Volume.mult(Linear Momentum) returns Coefficient of Heat Transfer	=>	[-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@735b5592
+Specific Heat Volume.mult(Mass Temperature) returns Energy Density	=>	[-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@58651fd0
+Specific Heat Volume.mult(Volume) returns Specific Heat Capacity	=>	[-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4520ebad
+Temperature Amount of Substance.mult(Angle) returns Temperature Amount of Substance	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5419f379
+Temperature Amount of Substance.mult(Inverse Amount of Substance) returns Temperature	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@7dc7cbad
+Temperature Amount of Substance.mult(Molar Heat Capacity) returns Energy and Work	=>	[0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, -1.0, 0.0, 0.0] = [D@d2cc05a
+Thermal Conductivity.mult(Angle) returns Thermal Conductivity	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4f933fd1
+Thermal Conductivity.mult(Length Temperature) returns Heat Flow Rate	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@548a9f61
+Thermal Conductivity.mult(Thermal Insulance) returns Length	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@1753acfe
+Thermal Conductivity.mult(Thermal Resistivity) returns Angle	=>	[1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@7c16905e
+Thermal Diffusivity.mult(Length) returns Volume per Unit Time	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2a2d45ba
+Thermal Diffusivity.mult(Mass) returns Angular Momentum	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2a5ca609
+Thermal Diffusivity.mult(Time) returns Area	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@20e2cbe0
+Thermal Diffusivity.mult(Angle) returns Kinematic Viscosity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@68be2bc2
+Thermal Diffusivity.mult(Activity) returns Absorbed Dose	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@28feb3fa
+Thermal Diffusivity.mult(Density) returns Dynamic Viscosity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@675d3402
+Thermal Diffusivity.mult(Dynamic Viscosity) returns Force	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@51565ec2
+Thermal Diffusivity.mult(Electric Charge) returns Magnetic Dipole Moment	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@482f8f11
+Thermal Diffusivity.mult(Electric Charge Volume Density) returns Magnetic Field Strength	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1593948d
+Thermal Diffusivity.mult(Electric Flux Density) returns Electric Current	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@1b604f19
+Thermal Diffusivity.mult(Energy per Unit Area) returns Heat Flow Rate	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7823a2f9
+Thermal Diffusivity.mult(Force per Unit Length) returns Heat Flow Rate	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4cc0edeb
+Thermal Diffusivity.mult(Frequency) returns Absorbed Dose	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@457e2f02
+Thermal Diffusivity.mult(Magnetic Flux Density) returns Electromotive Force	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, -1.0, 0.0, 0.0, 0.0, 0.0] = [D@5c7fa833
+Thermal Diffusivity.mult(Mass per Time) returns Energy and Work	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@39aeed2f
+Thermal Diffusivity.mult(Mass per Unit Area) returns Mass per Time	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@724af044
+Thermal Diffusivity.mult(Mass per Unit Length) returns Linear Momentum	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4678c730
+Thermal Diffusivity.mult(Volumetric heat capacity) returns Thermal Conductivity	=>	[2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6767c1fc
+Thermal Insulance.mult(Angle) returns Thermal Insulance	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@29ee9faa
+Thermal Insulance.mult(Coefficient of Heat Transfer) returns Angle	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@c038203
+Thermal Insulance.mult(Heat Flow Rate) returns Area Temperature	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@cc285f4
+Thermal Insulance.mult(Heat Flow Rate per Unit Area) returns Temperature	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@55f3ddb1
+Thermal Insulance.mult(Power) returns Area Temperature	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@8bd1b6a
+Thermal Insulance.mult(Power per Unit Area) returns Temperature	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@18be83e4
+Thermal Insulance.mult(Thermal Conductivity) returns Length	=>	[0.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@cb5822
+Thermal Resistance.mult(Length) returns Thermal Resistivity	=>	[-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4b9e13df
+Thermal Resistance.mult(Angle) returns Thermal Resistance	=>	[-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@2b98378d
+Thermal Resistance.mult(Area) returns Thermal Insulance	=>	[-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@475530b9
+Thermal Resistance.mult(Heat Capacity and Entropy) returns Time	=>	[-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@1d057a39
+Thermal Resistance.mult(Heat Flow Rate) returns Temperature	=>	[-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@26be92ad
+Thermal Resistance.mult(Power) returns Temperature	=>	[-2.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4c70fda8
+Thermal Resistivity.mult(Length) returns Thermal Insulance	=>	[-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@224edc67
+Thermal Resistivity.mult(Angle) returns Thermal Resistivity	=>	[-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@14acaea5
+Thermal Resistivity.mult(Heat Flow Rate) returns Length Temperature	=>	[-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@46d56d67
+Thermal Resistivity.mult(Power) returns Length Temperature	=>	[-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@d8355a8
+Thermal Resistivity.mult(Thermal Conductivity) returns Angle	=>	[-1.0, -1.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -3.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@59fa1d9b
+Thrust to Mass Ratio.mult(Length) returns Absorbed Dose	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@28d25987
+Thrust to Mass Ratio.mult(Mass) returns Force	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4501b7af
+Thrust to Mass Ratio.mult(Time) returns Linear Velocity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@523884b2
+Thrust to Mass Ratio.mult(Angle) returns Linear Acceleration	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5b275dab
+Thrust to Mass Ratio.mult(Dynamic Viscosity) returns Heat Flow Rate per Unit Area	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@61832929
+Thrust to Mass Ratio.mult(Inductance) returns Inverse Permittivity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, -2.0, 0.0, 0.0, 0.0, 0.0] = [D@29774679
+Thrust to Mass Ratio.mult(Length Mass) returns Energy and Work	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3ffc5af1
+Thrust to Mass Ratio.mult(Linear Momentum) returns Heat Flow Rate	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5e5792a0
+Thrust to Mass Ratio.mult(Linear Thermal Expansion) returns Specific Heat Capacity	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@26653222
+Thrust to Mass Ratio.mult(Linear Velocity) returns Absorbed Dose Rate	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3532ec19
+Thrust to Mass Ratio.mult(Mass per Unit Area) returns Energy Density	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@68c4039c
+Thrust to Mass Ratio.mult(Mass per Unit Length) returns Energy per Unit Area	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@ae45eb6
+Thrust to Mass Ratio.mult(Time Squared) returns Length	=>	[1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@59f99ea
+Time Squared.mult(Angle) returns Time Squared	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@27efef64
+Time Squared.mult(Absorbed Dose) returns Area	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6f7fd0e6
+Time Squared.mult(Absorbed Dose Rate) returns Kinematic Viscosity	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@47c62251
+Time Squared.mult(Activity) returns Time	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3e6fa38a
+Time Squared.mult(Angular Acceleration) returns Plane Angle	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 1.0, 0.0] = [D@66a3ffec
+Time Squared.mult(Dose Equivalent) returns Area	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@77caeb3e
+Time Squared.mult(Energy Density) returns Mass per Unit Length	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1e88b3c
+Time Squared.mult(Energy and Work) returns Angular Mass	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@42d80b78
+Time Squared.mult(Energy per Unit Area) returns Mass	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3bfdc050
+Time Squared.mult(Force) returns Length Mass	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1bce4f0a
+Time Squared.mult(Force per Unit Length) returns Mass	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5e3a8624
+Time Squared.mult(Frequency) returns Time	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5c3bd550
+Time Squared.mult(Heat Flow Rate) returns Angular Momentum	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@91161c7
+Time Squared.mult(Heat Flow Rate per Unit Area) returns Mass per Time	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@604ed9f0
+Time Squared.mult(Linear Acceleration) returns Length	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6a4f787b
+Time Squared.mult(Power) returns Angular Momentum	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@685cb137
+Time Squared.mult(Power per Unit Area) returns Mass per Time	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 1.0, -3.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6a41eaa2
+Time Squared.mult(Pressure or Stress) returns Mass per Unit Length	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7cd62f43
+Time Squared.mult(Specific Energy) returns Area	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6d4b1c02
+Time Squared.mult(Specific Heat Capacity) returns Area Thermal Expansion	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@6093dd95
+Time Squared.mult(Thrust to Mass Ratio) returns Length	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5622fdf
+Time Squared.mult(Torque) returns Angular Mass	=>	[0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4883b407
+Torque.mult(Time) returns Angular Momentum	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7d9d1a19
+Torque.mult(Angle) returns Energy and Work	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@39c0f4a
+Torque.mult(Activity) returns Heat Flow Rate	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1794d431
+Torque.mult(Frequency) returns Heat Flow Rate	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@42e26948
+Torque.mult(Inverse Amount of Substance) returns Molar Energy	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0] = [D@57baeedf
+Torque.mult(Time Squared) returns Angular Mass	=>	[2.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@343f4d3d
+Volume.mult(Angle) returns Volume	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@53b32d7
+Volume.mult(Activity) returns Volume per Unit Time	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5442a311
+Volume.mult(Amount of Substance Per Unit Volume) returns Amount of Substance	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@548e7350
+Volume.mult(Density) returns Mass	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1a968a59
+Volume.mult(Dynamic Viscosity) returns Angular Momentum	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4667ae56
+Volume.mult(Electric Charge Volume Density) returns Electric Charge	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@77cd7a0
+Volume.mult(Electric Flux Density) returns Electric Dipole Moment	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@204f30ec
+Volume.mult(Energy Density) returns Energy and Work	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@e25b2fe
+Volume.mult(Frequency) returns Volume per Unit Time	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@754ba872
+Volume.mult(Magnetic Field Strength) returns Magnetic Dipole Moment	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@146ba0ac
+Volume.mult(Mass per Unit Area) returns Length Mass	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4dfa3a9d
+Volume.mult(Mass per Unit Length) returns Angular Mass	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6eebc39e
+Volume.mult(Pressure or Stress) returns Energy and Work	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@464bee09
+Volume.mult(Specific Heat Volume) returns Specific Heat Capacity	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@f6c48ac
+Volume.mult(Volumetric heat capacity) returns Heat Capacity and Entropy	=>	[3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] = [D@13deb50e
+Volume Thermal Expansion.mult(Temperature) returns Volume	=>	[3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@239963d8
+Volume Thermal Expansion.mult(Angle) returns Volume Thermal Expansion	=>	[3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3abbfa04
+Volume Thermal Expansion.mult(Energy Density) returns Heat Capacity and Entropy	=>	[3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@57fffcd7
+Volume Thermal Expansion.mult(Pressure or Stress) returns Heat Capacity and Entropy	=>	[3.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@31ef45e3
+Volume per Unit Time.mult(Time) returns Volume	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@598067a5
+Volume per Unit Time.mult(Angle) returns Volume per Unit Time	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3c0ecd4b
+Volume per Unit Time.mult(Amount of Substance Per Unit Volume) returns Catalytic Activity	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0] = [D@14bf9759
+Volume per Unit Time.mult(Density) returns Mass per Time	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5f341870
+Volume per Unit Time.mult(Dynamic Viscosity) returns Energy and Work	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@553f17c
+Volume per Unit Time.mult(Electric Charge Line Density) returns Magnetic Dipole Moment	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@4f7d0008
+Volume per Unit Time.mult(Electric Charge Volume Density) returns Electric Current	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-3.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0] = [D@271053e1
+Volume per Unit Time.mult(Energy Density) returns Heat Flow Rate	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@589838eb
+Volume per Unit Time.mult(Mass per Unit Area) returns Linear Momentum	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@42dafa95
+Volume per Unit Time.mult(Mass per Unit Length) returns Angular Momentum	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@6500df86
+Volume per Unit Time.mult(Pressure or Stress) returns Heat Flow Rate	=>	[3.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] * [-1.0, 1.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@402a079c
+Volumetric heat capacity.mult(Temperature) returns Energy Density	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@59ec2012
+Volumetric heat capacity.mult(Angle) returns Volumetric heat capacity	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@4cf777e8
+Volumetric heat capacity.mult(Area Temperature) returns Force	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@2f686d1f
+Volumetric heat capacity.mult(Kinematic Viscosity) returns Thermal Conductivity	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@3fee9989
+Volumetric heat capacity.mult(Length Temperature) returns Energy per Unit Area	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0] = [D@73ad2d6
+Volumetric heat capacity.mult(Linear Velocity) returns Coefficient of Heat Transfer	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@7085bdee
+Volumetric heat capacity.mult(Thermal Diffusivity) returns Thermal Conductivity	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [2.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@1ce92674
+Volumetric heat capacity.mult(Volume) returns Heat Capacity and Entropy	=>	[-1.0, 1.0, -2.0, 0.0, -1.0, 0.0, 0.0, 0.0] * [3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] = [D@5700d6b1

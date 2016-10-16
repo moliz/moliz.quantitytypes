@@ -21,11 +21,11 @@ this.unit = new Unit (q.unit);
 }
 public Mass () {
 value = new UReal();
-unit = new Unit(BaseUnits.Kilogram);
+unit = new Unit(DerivedUnits.Kilogram);
 }
 public Mass(UReal u){
 value = u.clone();
-unit = new Unit(BaseUnits.Kilogram);
+unit = new Unit(DerivedUnits.Kilogram);
 }
 public Mass(UReal u, Unit unit){
 value = u.clone();
@@ -34,11 +34,11 @@ this.unit = new Unit (unit);
 }
 public Mass(double x){ //"promotes" a real x
 value = new UReal(x);
-unit = new Unit(BaseUnits.Kilogram);
+unit = new Unit(DerivedUnits.Kilogram);
 }
 public Mass (double x, double u) {
 value = new UReal(x,u);
-unit = new Unit(BaseUnits.Kilogram);
+unit = new Unit(DerivedUnits.Kilogram);
 }
 public Mass(double x, Unit unit){ //we only allow the same Units
 value = new UReal(x);
@@ -52,11 +52,11 @@ this.unit = new Unit (unit);
 }
 public Mass(String x) { //creates a Mass from a string representing a real, with u=0.
 value = new UReal(x);
-unit = new Unit(BaseUnits.Kilogram);
+unit = new Unit(DerivedUnits.Kilogram);
 }
 public Mass(String x, String u) { //creates a Mass from two strings representing (x,u).
 value = new UReal(x,u);
-unit = new Unit(BaseUnits.Kilogram);
+unit = new Unit(DerivedUnits.Kilogram);
 }
 public Mass(String x, String u, Unit unit) { //creates a Mass from two strings representing (x,u).
 value = new UReal(x,u);
@@ -79,8 +79,8 @@ return new MassTemperature(super.mult(r));
 public EnergyAndWork mult(AbsorbedDose r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyAndWork(super.mult(r));
 }
-public HeatFlowrate mult(AbsorbedDoseRate r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(AbsorbedDoseRate r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public MassPerUnitTime mult(Activity r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MassPerUnitTime(super.mult(r));

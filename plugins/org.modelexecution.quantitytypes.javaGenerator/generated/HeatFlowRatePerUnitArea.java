@@ -1,6 +1,6 @@
 package org.modelexecution.quantitytypes.java;
 import java.util.Arrays;
-public class HeatFlowratePerUnitArea extends Quantity {
+public class HeatFlowRatePerUnitArea extends Quantity {
 static protected boolean checkUnit(Unit u) {
 double [] x = new double [BaseUnits.values().length];
 x[BaseUnits.Meter.ordinal()]=0.0;
@@ -14,67 +14,67 @@ x[BaseUnits.Candela.ordinal()]=0.0;
 return Arrays.equals(x,u.dimensions);
 }
 
-public HeatFlowratePerUnitArea(Quantity q){
+public HeatFlowRatePerUnitArea(Quantity q){
 value = q.value.clone();
-if (!checkUnit(q.unit)) throw new RuntimeException("Invalid Unit for creating a HeatFlowratePerUnitArea");
+if (!checkUnit(q.unit)) throw new RuntimeException("Invalid Unit for creating a HeatFlowRatePerUnitArea");
 this.unit = new Unit (q.unit);
 }
-public HeatFlowratePerUnitArea () {
+public HeatFlowRatePerUnitArea () {
 value = new UReal();
 unit = new Unit(DerivedUnits.WattPerSquareMeter);
 }
-public HeatFlowratePerUnitArea(UReal u){
+public HeatFlowRatePerUnitArea(UReal u){
 value = u.clone();
 unit = new Unit(DerivedUnits.WattPerSquareMeter);
 }
-public HeatFlowratePerUnitArea(UReal u, Unit unit){
+public HeatFlowRatePerUnitArea(UReal u, Unit unit){
 value = u.clone();
-if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating an HeatFlowratePerUnitArea");
+if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating an HeatFlowRatePerUnitArea");
 this.unit = new Unit (unit);
 }
-public HeatFlowratePerUnitArea(double x){ //"promotes" a real x
+public HeatFlowRatePerUnitArea(double x){ //"promotes" a real x
 value = new UReal(x);
 unit = new Unit(DerivedUnits.WattPerSquareMeter);
 }
-public HeatFlowratePerUnitArea (double x, double u) {
+public HeatFlowRatePerUnitArea (double x, double u) {
 value = new UReal(x,u);
 unit = new Unit(DerivedUnits.WattPerSquareMeter);
 }
-public HeatFlowratePerUnitArea(double x, Unit unit){ //we only allow the same Units
+public HeatFlowRatePerUnitArea(double x, Unit unit){ //we only allow the same Units
 value = new UReal(x);
-if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a HeatFlowratePerUnitArea");
+if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a HeatFlowRatePerUnitArea");
 this.unit = new Unit (unit);
 }
-public HeatFlowratePerUnitArea(double x, double u, Unit unit){
+public HeatFlowRatePerUnitArea(double x, double u, Unit unit){
 value = new UReal(x,u);
-if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a HeatFlowratePerUnitArea");
+if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a HeatFlowRatePerUnitArea");
 this.unit = new Unit (unit);
 }
-public HeatFlowratePerUnitArea(String x) { //creates a HeatFlowratePerUnitArea from a string representing a real, with u=0.
+public HeatFlowRatePerUnitArea(String x) { //creates a HeatFlowRatePerUnitArea from a string representing a real, with u=0.
 value = new UReal(x);
 unit = new Unit(DerivedUnits.WattPerSquareMeter);
 }
-public HeatFlowratePerUnitArea(String x, String u) { //creates a HeatFlowratePerUnitArea from two strings representing (x,u).
+public HeatFlowRatePerUnitArea(String x, String u) { //creates a HeatFlowRatePerUnitArea from two strings representing (x,u).
 value = new UReal(x,u);
 unit = new Unit(DerivedUnits.WattPerSquareMeter);
 }
-public HeatFlowratePerUnitArea(String x, String u, Unit unit) { //creates a HeatFlowratePerUnitArea from two strings representing (x,u).
+public HeatFlowRatePerUnitArea(String x, String u, Unit unit) { //creates a HeatFlowRatePerUnitArea from two strings representing (x,u).
 value = new UReal(x,u);
-if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a HeatFlowratePerUnitArea");
+if (!checkUnit(unit)) throw new RuntimeException("Invalid Unit for creating a HeatFlowRatePerUnitArea");
 this.unit = new Unit (unit);
 }
 // Specific Type Operations
-public HeatFlowratePerUnitArea add(HeatFlowratePerUnitArea r) {  //only works if compatible units && operand has no offset
-return new HeatFlowratePerUnitArea(super.add(r));
+public HeatFlowRatePerUnitArea add(HeatFlowRatePerUnitArea r) {  //only works if compatible units && operand has no offset
+return new HeatFlowRatePerUnitArea(super.add(r));
 }
-public HeatFlowratePerUnitArea minus(HeatFlowratePerUnitArea r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
-return new HeatFlowratePerUnitArea(super.minus(r));
+public HeatFlowRatePerUnitArea minus(HeatFlowRatePerUnitArea r) { //only works if compatible units. You can subtract 2 units with offsets, but it returns a DeltaUnit (without offset)
+return new HeatFlowRatePerUnitArea(super.minus(r));
 }
 public EnergyPerUnitArea mult(Time r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));
 }
-public HeatFlowrate mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
-return new HeatFlowrate(super.mult(r));
+public HeatFlowRate mult(Area r) { //both values and units are multiplied. No offsets allowed in any of the units
+return new HeatFlowRate(super.mult(r));
 }
 public ThermalConductivity mult(LinearThermalExpansion r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new ThermalConductivity(super.mult(r));
@@ -148,54 +148,54 @@ return new PowerPerAreaAngle(super.divideBy(r));
 public DynamicViscosity divideBy(ThrustToMassRatio r) { //both values and units are divided. No offsets allowed in any of the units
 return new DynamicViscosity(super.divideBy(r));
 }
-public HeatFlowratePerUnitArea abs() { //units are maintained
-return new HeatFlowratePerUnitArea(super.abs());
+public HeatFlowRatePerUnitArea abs() { //units are maintained
+return new HeatFlowRatePerUnitArea(super.abs());
 }
-public HeatFlowratePerUnitArea neg() { //units are maintained
-return new HeatFlowratePerUnitArea(super.neg());
+public HeatFlowRatePerUnitArea neg() { //units are maintained
+return new HeatFlowRatePerUnitArea(super.neg());
 }
 // power(s), and inverse() return Quantity
 // lessThan, LessEq, gt, ge all directly from Quantity
-public boolean equals(HeatFlowratePerUnitArea r) {  
+public boolean equals(HeatFlowRatePerUnitArea r) {  
 return  r.compatibleUnits(this) && 
 this.getUReal().equals(r.convertTo(this.getUnits()).getUReal());
 }
-public boolean distinct(HeatFlowratePerUnitArea r) {
+public boolean distinct(HeatFlowRatePerUnitArea r) {
 return !(this.equals(r));
 }
-public HeatFlowratePerUnitArea floor() { //returns (i,u) with i the largest int such that (i,u)<=(x,u) -- units maintained
-return new HeatFlowratePerUnitArea(Math.floor(this.getX()),this.getU(),this.getUnits());
+public HeatFlowRatePerUnitArea floor() { //returns (i,u) with i the largest int such that (i,u)<=(x,u) -- units maintained
+return new HeatFlowRatePerUnitArea(Math.floor(this.getX()),this.getU(),this.getUnits());
 }
-public HeatFlowratePerUnitArea round(){ //returns (i,u) with i the closest int to x -- units maintained
-return new HeatFlowratePerUnitArea(Math.round(this.getX()),this.getU(),this.getUnits());
+public HeatFlowRatePerUnitArea round(){ //returns (i,u) with i the closest int to x -- units maintained
+return new HeatFlowRatePerUnitArea(Math.round(this.getX()),this.getU(),this.getUnits());
 }
-public HeatFlowratePerUnitArea min(HeatFlowratePerUnitArea r) { // units maintained
-if (r.lessThan(this)) return new HeatFlowratePerUnitArea(r.getX(),r.getU(),r.getUnits());
-return new HeatFlowratePerUnitArea(this.getX(),this.getU(),this.getUnits());
+public HeatFlowRatePerUnitArea min(HeatFlowRatePerUnitArea r) { // units maintained
+if (r.lessThan(this)) return new HeatFlowRatePerUnitArea(r.getX(),r.getU(),r.getUnits());
+return new HeatFlowRatePerUnitArea(this.getX(),this.getU(),this.getUnits());
 }
-public HeatFlowratePerUnitArea max(HeatFlowratePerUnitArea r) { // unit maintained
+public HeatFlowRatePerUnitArea max(HeatFlowRatePerUnitArea r) { // unit maintained
 //if (r>this) r; else this;
-if (r.gt(this)) return new HeatFlowratePerUnitArea(r.getX(),r.getU(),r.getUnits());
-return new HeatFlowratePerUnitArea(this.getX(),this.getU(),this.getUnits());
+if (r.gt(this)) return new HeatFlowRatePerUnitArea(r.getX(),r.getU(),r.getUnits());
+return new HeatFlowRatePerUnitArea(this.getX(),this.getU(),this.getUnits());
 }
 // working with constants (note that add and minus do not work here
-public HeatFlowratePerUnitArea mult(double r) {
-return new HeatFlowratePerUnitArea(this.value.mult(new UReal(r)),this.getUnits());
+public HeatFlowRatePerUnitArea mult(double r) {
+return new HeatFlowRatePerUnitArea(this.value.mult(new UReal(r)),this.getUnits());
 }
-public HeatFlowratePerUnitArea divideBy(double r) {
-return new HeatFlowratePerUnitArea(this.value.divideBy(new UReal(r)),this.getUnits());
+public HeatFlowRatePerUnitArea divideBy(double r) {
+return new HeatFlowRatePerUnitArea(this.value.divideBy(new UReal(r)),this.getUnits());
 }
-public HeatFlowratePerUnitArea mult(UReal r) {
-return new HeatFlowratePerUnitArea(this.value.mult(r),this.getUnits());
+public HeatFlowRatePerUnitArea mult(UReal r) {
+return new HeatFlowRatePerUnitArea(this.value.mult(r),this.getUnits());
 }
-public HeatFlowratePerUnitArea divideBy(UReal r) {
-return new HeatFlowratePerUnitArea(this.value.divideBy(r),this.getUnits());
+public HeatFlowRatePerUnitArea divideBy(UReal r) {
+return new HeatFlowRatePerUnitArea(this.value.divideBy(r),this.getUnits());
 }
 // Conversions to basic types: toString, toInteger, toReal, etc. directly from Quantity
 public int hashcode(){ //required for equals()
 return Math.round((float)value.getX());
 }
-public HeatFlowratePerUnitArea clone() {
-return new HeatFlowratePerUnitArea(this.getUReal(),this.getUnits());
+public HeatFlowRatePerUnitArea clone() {
+return new HeatFlowRatePerUnitArea(this.getUReal(),this.getUnits());
 }
 }

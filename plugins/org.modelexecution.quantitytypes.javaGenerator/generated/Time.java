@@ -21,11 +21,11 @@ this.unit = new Unit (q.unit);
 }
 public Time () {
 value = new UReal();
-unit = new Unit(BaseUnits.Second);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time(UReal u){
 value = u.clone();
-unit = new Unit(BaseUnits.Second);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time(UReal u, Unit unit){
 value = u.clone();
@@ -34,11 +34,11 @@ this.unit = new Unit (unit);
 }
 public Time(double x){ //"promotes" a real x
 value = new UReal(x);
-unit = new Unit(BaseUnits.Second);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time (double x, double u) {
 value = new UReal(x,u);
-unit = new Unit(BaseUnits.Second);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time(double x, Unit unit){ //we only allow the same Units
 value = new UReal(x);
@@ -52,11 +52,11 @@ this.unit = new Unit (unit);
 }
 public Time(String x) { //creates a Time from a string representing a real, with u=0.
 value = new UReal(x);
-unit = new Unit(BaseUnits.Second);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time(String x, String u) { //creates a Time from two strings representing (x,u).
 value = new UReal(x,u);
-unit = new Unit(BaseUnits.Second);
+unit = new Unit(DerivedUnits.Second);
 }
 public Time(String x, String u, Unit unit) { //creates a Time from two strings representing (x,u).
 value = new UReal(x,u);
@@ -121,10 +121,10 @@ return new LinearMomentum(super.mult(r));
 public MassPerUnitTime mult(ForcePerUnitLength r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new MassPerUnitTime(super.mult(r));
 }
-public EnergyAndWork mult(HeatFlowrate r) { //both values and units are multiplied. No offsets allowed in any of the units
+public EnergyAndWork mult(HeatFlowRate r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyAndWork(super.mult(r));
 }
-public EnergyPerUnitArea mult(HeatFlowratePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
+public EnergyPerUnitArea mult(HeatFlowRatePerUnitArea r) { //both values and units are multiplied. No offsets allowed in any of the units
 return new EnergyPerUnitArea(super.mult(r));
 }
 public Area mult(KinematicViscosity r) { //both values and units are multiplied. No offsets allowed in any of the units

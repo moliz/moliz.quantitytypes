@@ -1,5 +1,3 @@
-
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -56,12 +54,12 @@ public class BuildJavaMethods {
         bw.write("}\n");
         bw.write("public "+qu.getQuantityKind().replace(" ", "")+" () {\n");
         bw.write("value = new UReal();\n");
-        bw.write("unit = new Unit("+unit(qu)+");\n");
+        bw.write("unit = new Unit(DerivedUnits."+qu.getUnit().replace(" ", "")+");\n");
         bw.write("}\n");
 
         bw.write("public "+qu.getQuantityKind().replace(" ", "")+"(UReal u){\n");
         bw.write("value = u.clone();\n");
-        bw.write("unit = new Unit("+unit(qu)+");\n");
+        bw.write("unit = new Unit(DerivedUnits."+qu.getUnit().replace(" ", "")+");\n");
         bw.write("}\n");
 
         bw.write("public "+qu.getQuantityKind().replace(" ", "")+"(UReal u, Unit unit){\n");
@@ -72,12 +70,12 @@ public class BuildJavaMethods {
 
         bw.write("public "+qu.getQuantityKind().replace(" ", "")+"(double x){ //\"promotes\" a real x\n"); 
         bw.write("value = new UReal(x);\n");
-        bw.write("unit = new Unit("+unit(qu)+");\n");
+        bw.write("unit = new Unit(DerivedUnits."+qu.getUnit().replace(" ", "")+");\n");
         bw.write("}\n");
       
         bw.write("public "+qu.getQuantityKind().replace(" ", "")+" (double x, double u) {\n");
         bw.write("value = new UReal(x,u);\n");
-        bw.write("unit = new Unit("+unit(qu)+");\n");
+        bw.write("unit = new Unit(DerivedUnits."+qu.getUnit().replace(" ", "")+");\n");
         bw.write("}\n");
         
         bw.write("public "+qu.getQuantityKind().replace(" ", "")+"(double x, Unit unit){ //we only allow the same Units\n");
@@ -94,12 +92,12 @@ public class BuildJavaMethods {
 
         bw.write("public "+qu.getQuantityKind().replace(" ", "")+"(String x) { //creates a "+qu.getQuantityKind().replace(" ", "")+" from a string representing a real, with u=0.\n");
         bw.write("value = new UReal(x);\n");
-        bw.write("unit = new Unit("+unit(qu)+");\n");
+        bw.write("unit = new Unit(DerivedUnits."+qu.getUnit().replace(" ", "")+");\n");
         bw.write("}\n");
         
         bw.write("public "+qu.getQuantityKind().replace(" ", "")+"(String x, String u) { //creates a "+qu.getQuantityKind().replace(" ", "")+" from two strings representing (x,u).\n");
         bw.write("value = new UReal(x,u);\n");
-        bw.write("unit = new Unit("+unit(qu)+");\n");
+        bw.write("unit = new Unit(DerivedUnits."+qu.getUnit().replace(" ", "")+");\n");
         bw.write("}\n");
        
         bw.write("public "+qu.getQuantityKind().replace(" ", "")+"(String x, String u, Unit unit) { //creates a "+qu.getQuantityKind().replace(" ", "")+" from two strings representing (x,u).\n");
@@ -196,14 +194,6 @@ public class BuildJavaMethods {
         
         bw.close();
 	}
-	
-	private static String unit(QUEntry qu){
-		if (qu.getDimensionSymbol().length()==2 && qu.getDimensionSymbol().charAt(1)=='1'){
-			return "BaseUnits."+qu.getUnit().replace(" ", "");
-		} else {
-			return "DerivedUnits."+qu.getUnit().replace(" ", "");
-		}
-	}
 
 	private static void checkUnit(List<QUEntry> qudt, int i, BufferedWriter bw) throws IOException {
 		
@@ -276,7 +266,7 @@ public class BuildJavaMethods {
 	private static void mult(List<QUEntry> qudt, int i, BufferedWriter bw) throws IOException {
 		
 		for (int j = 0; j < qudt.size(); j++) {
-			
+			if (i != j) {
 
 				QUEntry qu2 = qudt.get(j);
 
@@ -299,7 +289,7 @@ public class BuildJavaMethods {
 				}
 				
 			}
-		
+		}
 		
 	}
 	
@@ -329,11 +319,6 @@ public class BuildJavaMethods {
 				}
 			}
 		}
-		
-		bw.write("public UReal divideBy("+qudt.get(i).getQuantityKind().replace(" ", "")+" r) { //This operation converts first both operands to SI units and then divides)\n");
-		bw.write("return super.divideBy(r).value.clone();\n");
-		bw.write("}\n");
-		
 	}
 
 	private static String exists(double[] result, List<QUEntry> qudt) {

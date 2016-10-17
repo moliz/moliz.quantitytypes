@@ -9,7 +9,7 @@ import org.junit.runners.Suite.SuiteClasses;
                 CircleTest.class,
                 TemperatureTest.class,
                 ToyCarTest.class,
-                UnitCancellation.class,
+                //UnitCancellation.class,
                 PressureTest.class
                 })
 

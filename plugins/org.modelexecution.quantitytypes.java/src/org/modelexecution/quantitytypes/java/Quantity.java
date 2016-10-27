@@ -18,6 +18,11 @@ public class Quantity implements Comparable<Quantity> {
         unit = new Unit(); //unit-less 
     }
 
+    public Quantity(UReal u){
+    	this.value = u.clone();
+    	this.unit = new Unit ();//unit-less
+    }
+
     public Quantity(UReal u, Unit unit){
     	value = u.clone();
     	this.unit = new Unit (unit);

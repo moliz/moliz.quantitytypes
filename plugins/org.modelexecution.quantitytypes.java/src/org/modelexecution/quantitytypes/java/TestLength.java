@@ -33,7 +33,7 @@ public class TestLength {
 			LinearVelocity v = lf.divideBy(s);
 			LinearAcceleration a = v.divideBy(s);
 			
-			Quantity x = v.divideBy(v);
+			UReal x = v.divideBy(v);
 			System.out.println("x: "+x);
 			
 			

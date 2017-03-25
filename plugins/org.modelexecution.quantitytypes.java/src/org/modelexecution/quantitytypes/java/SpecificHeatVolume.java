@@ -11,6 +11,7 @@ x[BaseUnits.Kelvin.ordinal()]=-1.0;
 x[BaseUnits.Mole.ordinal()]=0.0;
 x[BaseUnits.Radian.ordinal()]=0.0;
 x[BaseUnits.Candela.ordinal()]=0.0;
+
 return Arrays.equals(x,u.dimensions);
 }
 

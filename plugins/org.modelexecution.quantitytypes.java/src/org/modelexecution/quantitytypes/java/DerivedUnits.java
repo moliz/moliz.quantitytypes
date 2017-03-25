@@ -93,5 +93,6 @@ public enum DerivedUnits {
 	CubicMeter,
 	CubicMeterPerKelvin,
 	CubicMeterPerSecond,
-	JoulePerCubicMeterKelvin
+	JoulePerCubicMeterKelvin,
+	BitsPerSecond
 }

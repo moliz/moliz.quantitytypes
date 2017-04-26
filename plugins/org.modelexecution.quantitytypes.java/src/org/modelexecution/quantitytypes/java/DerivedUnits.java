@@ -42,8 +42,6 @@ public enum DerivedUnits {
 	Hertz,
 	CubicMeterPerKilogramSecondSquared,
 	JoulePerKelvin,
-	// Watt, duplicated
-	// WattPerSquareMeter, duplicated
 	Lux,
 	Henry,
 	PerMole,
@@ -83,7 +81,6 @@ public enum DerivedUnits {
 	JoulePerKilogramKelvinPerCubicMeter,
 	MoleKelvin,
 	WattPerMeterKelvin,
-	// SquareMeterPerSecond, duplicated
 	SquareMeterKelvinPerWatt,
 	KelvinPerWatt,
 	MeterKelvinPerWatt,

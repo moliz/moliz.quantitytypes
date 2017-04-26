@@ -316,66 +316,72 @@ public class Units {
 	public final static Unit JoulePerCubicMeterKelvin = new Unit(DerivedUnits.JoulePerCubicMeterKelvin);
 	
 	// DATA STORAGE
-		public final static Unit Yottabit = new Unit("Yottabit", "Yb", BaseUnits.Bit, 1.0, 1000000000000000000000000.0, 0.0);
-		public final static Unit Zettabit = new Unit("Zettabit", "Zb", BaseUnits.Bit, 1.0, 1000000000000000000.0, 0.0);
-		public final static Unit Exabit = new Unit("Exabit", "Eb", BaseUnits.Bit, 1.0, 1000000000000000000.0, 0.0);
-		public final static Unit Petabit = new Unit("Petabit", "Pb", BaseUnits.Bit, 1.0, 1000000000000000.0, 0.0);
-		public final static Unit Terabit = new Unit("Terabit", "Tb", BaseUnits.Bit, 1.0, 1000000000000.0, 0.0);
-		public final static Unit Gigabit = new Unit("Gigabit", "Gb", BaseUnits.Bit, 1.0, 1000000000.0, 0.0);
-		public final static Unit Megaebit = new Unit("Megaebit", "Mb", BaseUnits.Bit, 1.0, 1000000.0, 0.0);
-		public final static Unit Kilobit = new Unit("Kilobit", "kb", BaseUnits.Bit, 1.0, 1000.0, 0.0);
-		public final static Unit Hectobit = new Unit("Hectobit", "hb", BaseUnits.Bit, 1.0, 100.0, 0.0);
-		public final static Unit Decabit = new Unit("Decabit", "dab", BaseUnits.Bit, 1.0, 10.0, 0.0);
-		public final static Unit Bit = new Unit(BaseUnits.Bit);
+	public final static Unit Yottabit = new Unit("Yottabit", "Yb", BaseUnits.Bit, 1.0, 1000000000000000000000000.0, 0.0);
+	public final static Unit Zettabit = new Unit("Zettabit", "Zb", BaseUnits.Bit, 1.0, 1000000000000000000.0, 0.0);
+	public final static Unit Exabit = new Unit("Exabit", "Eb", BaseUnits.Bit, 1.0, 1000000000000000000.0, 0.0);
+	public final static Unit Petabit = new Unit("Petabit", "Pb", BaseUnits.Bit, 1.0, 1000000000000000.0, 0.0);
+	public final static Unit Terabit = new Unit("Terabit", "Tb", BaseUnits.Bit, 1.0, 1000000000000.0, 0.0);
+	public final static Unit Gigabit = new Unit("Gigabit", "Gb", BaseUnits.Bit, 1.0, 1000000000.0, 0.0);
+	public final static Unit Megaebit = new Unit("Megaebit", "Mb", BaseUnits.Bit, 1.0, 1000000.0, 0.0);
+	public final static Unit Kilobit = new Unit("Kilobit", "kb", BaseUnits.Bit, 1.0, 1000.0, 0.0);
+	public final static Unit Hectobit = new Unit("Hectobit", "hb", BaseUnits.Bit, 1.0, 100.0, 0.0);
+	public final static Unit Decabit = new Unit("Decabit", "dab", BaseUnits.Bit, 1.0, 10.0, 0.0);
+	public final static Unit Bit = new Unit(BaseUnits.Bit);
 		
-		public final static Unit YOBIBIT = new Unit("Yobibit", "Yib", BaseUnits.Bit, 1.0, Math.pow(2, 80), 0.0);
-		public final static Unit ZEBIBIT = new Unit("Zebibit", "Zib", BaseUnits.Bit, 1.0, Math.pow(2, 70), 0.0);
-		public final static Unit EXBIBIT = new Unit("Exbibit", "Eib", BaseUnits.Bit, 1.0, Math.pow(2, 60), 0.0);
-		public final static Unit PEBIBIT = new Unit("Pebibit", "Pib", BaseUnits.Bit, 1.0, Math.pow(2, 50), 0.0);
-		public final static Unit TEBIBIT = new Unit("Tebibit", "Tib", BaseUnits.Bit, 1.0, Math.pow(2, 40), 0.0);
-		public final static Unit GIBIBIT = new Unit("Gibibit", "Gib", BaseUnits.Bit, 1.0, Math.pow(2, 30), 0.0);
-		public final static Unit MEBIBIT = new Unit("Mebibit", "Mib", BaseUnits.Bit, 1.0, Math.pow(2, 20), 0.0);
-		public final static Unit KIBIBIT = new Unit("Kibibit", "Kib", BaseUnits.Bit, 1.0, Math.pow(2, 10), 0.0);
+	public final static Unit YOBIBIT = new Unit("Yobibit", "Yib", BaseUnits.Bit, 1.0, Math.pow(2, 80), 0.0);
+	public final static Unit ZEBIBIT = new Unit("Zebibit", "Zib", BaseUnits.Bit, 1.0, Math.pow(2, 70), 0.0);
+	public final static Unit EXBIBIT = new Unit("Exbibit", "Eib", BaseUnits.Bit, 1.0, Math.pow(2, 60), 0.0);
+	public final static Unit PEBIBIT = new Unit("Pebibit", "Pib", BaseUnits.Bit, 1.0, Math.pow(2, 50), 0.0);
+	public final static Unit TEBIBIT = new Unit("Tebibit", "Tib", BaseUnits.Bit, 1.0, Math.pow(2, 40), 0.0);
+	public final static Unit GIBIBIT = new Unit("Gibibit", "Gib", BaseUnits.Bit, 1.0, Math.pow(2, 30), 0.0);
+	public final static Unit MEBIBIT = new Unit("Mebibit", "Mib", BaseUnits.Bit, 1.0, Math.pow(2, 20), 0.0);
+	public final static Unit KIBIBIT = new Unit("Kibibit", "Kib", BaseUnits.Bit, 1.0, Math.pow(2, 10), 0.0);
+	
+	public final static Unit Yottabyte = new Unit("Yottabyte", "YB", BaseUnits.Bit, 1.0, 8000000000000000000000000.0, 0.0);
+	public final static Unit Zettabyte = new Unit("Zettabyte", "ZB", BaseUnits.Bit, 1.0, 8000000000000000000.0, 0.0);
+	public final static Unit Exabyte = new Unit("Exabyte", "EB", BaseUnits.Bit, 1.0, 8000000000000000000.0, 0.0);
+	public final static Unit Petabyte = new Unit("Petabyte", "PB", BaseUnits.Bit, 1.0, 8000000000000000.0, 0.0);
+	public final static Unit Terabyte = new Unit("Terabyte", "TB", BaseUnits.Bit, 1.0, 8000000000000.0, 0.0);
+	public final static Unit Gigabyte = new Unit("Gigabyte", "GB", BaseUnits.Bit, 1.0, 8000000000.0, 0.0);
+	public final static Unit Megaebyte = new Unit("Megaebyte", "MB", BaseUnits.Bit, 1.0, 8000000.0, 0.0);
+	public final static Unit Kilobyte = new Unit("Kilobyte", "kB", BaseUnits.Bit, 1.0, 8000.0, 0.0);
+	public final static Unit Hectobyte = new Unit("Hectobyte", "hB", BaseUnits.Bit, 1.0, 800.0, 0.0);
+	public final static Unit Decabyte = new Unit("Decabyte", "daB", BaseUnits.Bit, 1.0, 80.0, 0.0);
+	public final static Unit Byte = new Unit("Byte", "B", BaseUnits.Bit, 1.0, 8.0, 0.0); 
 		
-		public final static Unit Yottabyte = new Unit("Yottabyte", "YB", BaseUnits.Bit, 1.0, 8000000000000000000000000.0, 0.0);
-		public final static Unit Zettabyte = new Unit("Zettabyte", "ZB", BaseUnits.Bit, 1.0, 8000000000000000000.0, 0.0);
-		public final static Unit Exabyte = new Unit("Exabyte", "EB", BaseUnits.Bit, 1.0, 8000000000000000000.0, 0.0);
-		public final static Unit Petabyte = new Unit("Petabyte", "PB", BaseUnits.Bit, 1.0, 8000000000000000.0, 0.0);
-		public final static Unit Terabyte = new Unit("Terabyte", "TB", BaseUnits.Bit, 1.0, 8000000000000.0, 0.0);
-		public final static Unit Gigabyte = new Unit("Gigabyte", "GB", BaseUnits.Bit, 1.0, 8000000000.0, 0.0);
-		public final static Unit Megaebyte = new Unit("Megaebyte", "MB", BaseUnits.Bit, 1.0, 8000000.0, 0.0);
-		public final static Unit Kilobyte = new Unit("Kilobyte", "kB", BaseUnits.Bit, 1.0, 8000.0, 0.0);
-		public final static Unit Hectobyte = new Unit("Hectobyte", "hB", BaseUnits.Bit, 1.0, 800.0, 0.0);
-		public final static Unit Decabyte = new Unit("Decabyte", "daB", BaseUnits.Bit, 1.0, 80.0, 0.0);
-		public final static Unit Byte = new Unit("Byte", "B", BaseUnits.Bit, 1.0, 8.0, 0.0); 
+	public final static Unit Yobibyte = new Unit("Yobibyte", "YiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 80), 0.0);
+	public final static Unit Zebibyte = new Unit("Zebibyte", "ZiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 70), 0.0);
+	public final static Unit Exbibyte = new Unit("Exbibyte", "EiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 60), 0.0);
+	public final static Unit Pebibyte = new Unit("Pebibyte", "PiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 50), 0.0);
+	public final static Unit Tebibyte = new Unit("Tebibyte", "TiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 40), 0.0);
+	public final static Unit Gibibyte = new Unit("Gibibyte", "GiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 30), 0.0);
+	public final static Unit Mebibyte = new Unit("Mebibyte", "MiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 20), 0.0);
+	public final static Unit Kibibyte = new Unit("Kibibyte", "KiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 10), 0.0);
+	
 		
-		public final static Unit Yobibyte = new Unit("Yobibyte", "YiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 80), 0.0);
-		public final static Unit Zebibyte = new Unit("Zebibyte", "ZiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 70), 0.0);
-		public final static Unit Exbibyte = new Unit("Exbibyte", "EiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 60), 0.0);
-		public final static Unit Pebibyte = new Unit("Pebibyte", "PiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 50), 0.0);
-		public final static Unit Tebibyte = new Unit("Tebibyte", "TiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 40), 0.0);
-		public final static Unit Gibibyte = new Unit("Gibibyte", "GiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 30), 0.0);
-		public final static Unit Mebibyte = new Unit("Mebibyte", "MiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 20), 0.0);
-		public final static Unit Kibibyte = new Unit("Kibibyte", "KiB", BaseUnits.Bit, 1.0, 8*Math.pow(2, 10), 0.0);
+	// ENTROPY
+	public final static Unit Shannon = new Unit(BaseUnits.Shannon);
+	public final static Unit NatUnitOfInfo = new Unit("Natural Unit of Information", "nat", BaseUnits.Shannon, 1.0, 1/Math.log(2), 0.0);
+	public final static Unit Hartley = new Unit("Hartley", "Hart", BaseUnits.Shannon, 1.0, 1/Math.log(10), 0.0);
 		
 		
-		// ENTROPY
-		public final static Unit Shannon = new Unit(BaseUnits.Shannon);
-		public final static Unit NatUnitOfInfo = new Unit("Natural Unit of Information", "nat", BaseUnits.Shannon, 1.0, 1/Math.log(2), 0.0);
-		public final static Unit Hartley = new Unit("Hartley", "Hart", BaseUnits.Shannon, 1.0, 1/Math.log(10), 0.0);
+	// TRAFFIC INTENSITY
+	public final static Unit Erlang = new Unit(BaseUnits.Erlang);
 		
-		
-		// TRAFFIC INTENSITY
-		public final static Unit Erlang = new Unit(BaseUnits.Erlang);
-		
-		// LEVEL
-		public final static Unit Decibel = new Unit(BaseUnits.Decibel);
-		public final static Unit Neper = new Unit("Neper", "Np", BaseUnits.Decibel, 1.0, 0.05*Math.log(10), 0.0);
+	// LEVEL
+	public final static Unit Decibel = new Unit(BaseUnits.Decibel);
+	public final static Unit Neper = new Unit("Neper", "Np", BaseUnits.Decibel, 1.0, 0.05*Math.log(10), 0.0);
 
 		
-		// Derived Units
+	// Derived Units
 		
-		public final static Unit BitsPerSecond = new Unit(DerivedUnits.BitsPerSecond);
+	public final static Unit GigabitPerSecond = new Unit("GigabitPerSecond", "Gb/s", BaseUnits.Bit, 1.0, 1000000000.0, 0.0, BaseUnits.Second, -1, 1);
+	public final static Unit MegaebitPerSecond = new Unit("Megaebit", "Mb/s", BaseUnits.Bit, 1.0, 1000000.0, 0.0, BaseUnits.Second, -1, 1);
+	public final static Unit KilobitPerSecond = new Unit("Kilobit", "kb/s", BaseUnits.Bit, 1.0, 1000.0, 0.0, BaseUnits.Second, -1, 1);
+	public final static Unit BitsPerSecond = new Unit(DerivedUnits.BitsPerSecond);
 
+	public final static Unit GigabytePerSecond = new Unit("Gigabyte", "GB/s", BaseUnits.Bit, 1.0, 8000000000.0, 0.0, BaseUnits.Second, -1, 1);
+	public final static Unit MegaebytePerSecond = new Unit("Megaebyte", "MB/s", BaseUnits.Bit, 1.0, 8000000.0, 0.0, BaseUnits.Second, -1, 1);
+	public final static Unit KilobytePerSecond = new Unit("Kilobyte", "kB/s", BaseUnits.Bit, 1.0, 8000.0, 0.0, BaseUnits.Second, -1, 1);
 	
 }

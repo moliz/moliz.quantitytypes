@@ -93,5 +93,6 @@ public enum DerivedDimensions {
 	Volume,
 	VolumeThermalExpansion,
 	VolumePerUnitTime,
-	VolumetricHeatCapacity
+	VolumetricHeatCapacity,
+	StoragePerUnitTime
 }

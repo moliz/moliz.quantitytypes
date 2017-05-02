@@ -12,14 +12,14 @@ public class TestUReal {
 		System.out.println("a: "+a);
 		System.out.println("b: "+b);
 		
-		System.out.println("Equals: "+a.equals(b));
-		System.out.println("LessThan: "+a.lt(b));
-		System.out.println("GT: "+a.gt(b));
-		System.out.println("U_Equals: "+a.uEquals(b));
-		System.out.println("U_LessThan: "+a.uLt(b));
-		System.out.println("U_GT: "+a.uGt(b));
-		System.out.println("U_LessEq: "+a.uLe(b));
-		System.out.println("U_GEq: "+a.uGe(b));
+		System.out.println("a Equals b: "+a.equals(b));
+		System.out.println("a LessThan b: "+a.lt(b));
+		System.out.println("a GreaterThan b: "+a.gt(b));
+		System.out.println("p(a Equals b): "+a.uEquals(b));
+		System.out.println("p(a LessThan b): "+a.uLt(b));
+		System.out.println("p(a GreaterThan b): "+a.uGt(b));
+		System.out.println("p(a LessEq b): "+a.uLe(b));
+		System.out.println("p(a GreaterEq b): "+a.uGe(b));
 	}
 
 		public static void main(String[] args) {
@@ -247,6 +247,9 @@ public class TestUReal {
  		if (a.uEquals(b)> 0.1) showCompare("not equals",a,b);
 		if (a.uGt(b) < 0.001)showCompare("U gt",a,b);
 
+		a = new UReal(1.0,0.0);
+		b = new UReal(5.0,0.0);
+		showCompare("", a, b);
 		
 
 

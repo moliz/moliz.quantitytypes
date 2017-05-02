@@ -641,6 +641,9 @@ public class Unit implements Cloneable {
 				break;
 		case JoulePerCubicMeterKelvin:
 				fillDim(BaseUnits.Meter,-1.0,BaseUnits.Kilogram,1.0,BaseUnits.Second,-2.0,BaseUnits.Kelvin,-1.0); 
+				break;
+		case BitsPerSecond:
+				fillDim(BaseUnits.Bit,1.0,BaseUnits.Second,-1.0); 
 		}
 	}
 	
@@ -1023,10 +1026,11 @@ public class Unit implements Cloneable {
 	}
 	
 	public boolean isDimensionless(){ //all units but Radian are dimensionless 
-		for (int i=0;i<dimensions.length-1;i++){
-			if (dimensions[i]!=0.0) return false;
+		for (int i=0;i<dimensions.length;i++){
+			if ((i!=BaseUnits.Radian.ordinal())&&(i!=BaseUnits.Erlang.ordinal())&&(dimensions[i]!=0.0)) return false;
 		}
-		return true; //all exponents should be 0.0 apart from the one from radian (which is the last one).
+		return true; //all exponents should be 0.0 apart from the one from radian 
+					 //and the one from the Erlang .
 	}
 	
 	public boolean isUnitless(){ //all 8 exponents should be 0.0
@@ -1219,6 +1223,8 @@ public class Unit implements Cloneable {
 			return DerivedUnits.CubicMeterPerSecond;
 		if (fillUnitDimensions(BaseUnits.Meter,-1.0,BaseUnits.Kilogram,1.0,BaseUnits.Second,-2.0,BaseUnits.Kelvin,-1.0).equals(this))
 			return DerivedUnits.JoulePerCubicMeterKelvin;
+		if (fillUnitDimensions(BaseUnits.Bit,1.0, BaseUnits.Second,-1.0).equals(this))
+			return DerivedUnits.BitsPerSecond;
 		return null;
 	}
 
@@ -1314,6 +1320,7 @@ public class Unit implements Cloneable {
             || (fillUnitDimensions(BaseUnits.Meter,3,BaseUnits.Kelvin,-1.0).equals(this))
             || (fillUnitDimensions(BaseUnits.Meter,3,BaseUnits.Second,-1.0).equals(this))
             || (fillUnitDimensions(BaseUnits.Meter,-1.0,BaseUnits.Kilogram,1.0,BaseUnits.Second,-2.0,BaseUnits.Kelvin,-1.0).equals(this))
+            || (fillUnitDimensions(BaseUnits.Bit,1,BaseUnits.Second,-1.0).equals(this))
 			;
 	}
 
@@ -1326,6 +1333,10 @@ public class Unit implements Cloneable {
 		if (new Unit(BaseUnits.Mole,1.0).equals(this)) return BaseUnits.Mole;
 		if (new Unit(BaseUnits.Candela,1.0).equals(this)) return BaseUnits.Candela;
 		if (new Unit(BaseUnits.Radian,1.0).equals(this)) return BaseUnits.Radian;
+		if (new Unit(BaseUnits.Bit,1.0).equals(this)) return BaseUnits.Radian;
+		if (new Unit(BaseUnits.Erlang,1.0).equals(this)) return BaseUnits.Erlang;
+		if (new Unit(BaseUnits.Shannon,1.0).equals(this)) return BaseUnits.Shannon;
+		if (new Unit(BaseUnits.Decibel,1.0).equals(this)) return BaseUnits.Decibel;
 		return null;
 	}
 

@@ -1,0 +1,287 @@
+
+-- EXAMPLE OF THE USE OF QUANTITIES
+!new UReal('v1')
+!new UReal('v2')
+!new UReal('v3')
+!new Boolean ("b")
+!v1.x :=10.0
+!v1.u :=0.002
+!v2.x :=20.0
+!v2.u :=0.001
+!v3:=v1.add(v2) 
+
+!new Unit('Km')
+!new Unit('m')
+!new Unit('ft')
+!new Unit('s')
+!new Unit('min')
+!new Unit('rad')
+!new Unit('U')
+!new Unit('Kms')
+
+!new Unit('Kel')
+!new Unit('Cel')
+!new Unit('Far')
+
+
+!Km.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!m.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!ft.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!s.dimensions := Sequence{0.0,0.0,1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!min.dimensions := Sequence{0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!rad.dimensions := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0}
+!U.dimensions := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!Kms.dimensions := Sequence{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+
+!Km.conversionFactor := Sequence{1000.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!m.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!ft.conversionFactor := Sequence{0.0.3048,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!s.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!min.conversionFactor := Sequence{1.0,1.0,60.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!rad.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!U.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!Kms.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+
+!Km.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!m.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!ft.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!s.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!min.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!rad.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!U.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!Kms.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+
+!Kel.dimensions := Sequence{0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!Kel.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!Kel.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+
+!Cel.dimensions := Sequence{0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!Cel.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!Cel.offset := Sequence{0.0,0.0,0.0,0.0,273.15,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+
+!Far.dimensions := Sequence{0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!Far.conversionFactor := Sequence{1.0,1.0,1.0,1.0,0.55555556,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!Far.offset := Sequence{0.0,0.0,0.0,0.0,255.372222222,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+
+!new Quantity('q1')
+!new Quantity('q2')
+!new Quantity('q3')
+!new Quantity('q4')
+!new Quantity('q5')
+!new Quantity('q6')
+!new Quantity('q7')
+!new Quantity('q8')
+!new Quantity('q9')
+!new Quantity('qa')
+!new Quantity('qb')
+!new Quantity('qc')
+
+!q1.value := v1
+!q1.unit := Kel
+!q2.value := v2
+!q2.unit := Far
+!q3.value := v3
+!q3.unit := Cel
+
+!q4:=q1.convertTo(Kel)
+?q4.value.x
+?q4.unit.dimensions
+?q4.unit.conversionFactor
+?q4.unit.offset
+
+!q5:=q1.convertTo(Far)
+?q5.value.x
+?q5.unit.dimensions
+?q5.unit.conversionFactor
+?q5.unit.offset
+
+!q6:=q1.convertTo(Cel)
+?q6.value.x
+?q6.unit.dimensions
+?q6.unit.conversionFactor
+?q6.unit.offset
+
+!q7:=q2.convertTo(Kel)
+?q7.value.x
+?q7.unit.dimensions
+?q7.unit.conversionFactor
+?q7.unit.offset
+
+!q8:=q2.convertTo(Far)
+?q8.value.x
+?q8.unit.dimensions
+?q8.unit.conversionFactor
+?q8.unit.offset
+
+!q9:=q2.convertTo(Cel)
+?q9.value.x
+?q9.unit.dimensions
+?q9.unit.conversionFactor
+?q9.unit.offset
+
+!qa:=q3.convertTo(Kel)
+?qa.value.x
+?qa.unit.dimensions
+?qa.unit.conversionFactor
+?qa.unit.offset
+
+!qb:=q3.convertTo(Far)
+?qb.value.x
+?qb.unit.dimensions
+?qb.unit.conversionFactor
+?qb.unit.offset
+
+!qc:=q3.convertTo(Cel)
+?qc.value.x
+?qc.unit.dimensions
+?qc.unit.conversionFactor
+?qc.unit.offset
+----------------------------
+!q4:=q1.convertToSIUnits();
+?q4.value.x
+?q4.unit.dimensions
+?q4.unit.conversionFactor
+?q4.unit.offset
+
+!q5:=q2.convertToSIUnits();
+?q5.value.x
+?q5.unit.dimensions
+?q5.unit.conversionFactor
+?q5.unit.offset
+
+!q6:=q3.convertToSIUnits();
+?q6.value.x
+?q6.unit.dimensions
+?q6.unit.conversionFactor
+?q6.unit.offset
+
+!q7:=q1.convertFromSIUnits(q1.value);
+?q7.value.x
+?q7.unit.dimensions
+?q7.unit.conversionFactor
+?q7.unit.offset
+
+!q8:=q2.convertFromSIUnits(q1.value);
+?q8.value.x
+?q8.unit.dimensions
+?q8.unit.conversionFactor
+?q8.unit.offset
+
+!q9:=q3.convertFromSIUnits(q1.value);
+?q9.value.x
+?q9.unit.dimensions
+?q9.unit.conversionFactor
+?q9.unit.offset
+----------------------
+
+!q1.value := v1
+!q1.unit := Kel
+!q2.value := v2
+!q2.unit := Far
+!q3.value := v3
+!q3.unit := Cel
+
+!q4:=q3.add(q1);
+?q4.value.x
+?q4.unit.dimensions
+?q4.unit.conversionFactor
+?q4.unit.offset
+
+!q4:=q1.minus(q1);
+?q4.value.x
+?q4.unit.dimensions
+?q4.unit.conversionFactor
+?q4.unit.offset
+
+!q4:=q2.minus(q2);
+?q4.value.x
+?q4.unit.dimensions
+?q4.unit.conversionFactor
+?q4.unit.offset
+
+!q4:=q2.minus(q3);
+?q4.value.x
+?q4.unit.dimensions
+?q4.unit.conversionFactor
+?q4.unit.offset
+-------------------------
+!b:=Km.isDimensionless()
+?b -- should be false
+!b:=s.isDimensionless()
+?b -- should be false
+!b:=rad.isDimensionless()
+?b -- should be false
+!b:=U.isDimensionless()
+?b -- should be true
+!b:=Kms.isDimensionless()
+?b -- should be false
+------------------------------------
+!b:=Km.isUnitless()
+?b -- should be false
+!b:=s.isUnitless()
+?b -- should be false
+!b:=rad.isUnitless()
+?b -- should be true
+!b:=U.isUnitless()
+?b -- should be true
+!b:=Kms.isUnitless()
+?b -- should be false
+------------------------------------
+!b:=Km.equals(Km)
+?b -- should be true
+!b:=Km.equals(Kms)
+?b -- should be false
+!b:=Km.equals(U)
+?b -- should be false
+------------------------------------
+!b:=Km.isCompatibleWith(Km)
+?b -- should be true
+!b:=Km.isCompatibleWith(Kms)
+?b -- should be false
+!b:=Km.isCompatibleWith(U)
+?b -- should be false
+-----------------------------------
+!b:=Km.isBaseUnit()
+?b -- should be true
+!b:=rad.isBaseUnit()
+?b -- should be true
+!b:=Kms.isBaseUnit()
+?b -- should be false
+!b:=U.isBaseUnit()
+?b -- should be false
+----------------------------------
+!q1.value := v1
+!q1.unit := Km
+!q2.value := v2
+!q2.unit := ft
+!q3.value := v3
+!q3.unit := s
+!q4.value := v1
+!q4.unit := s
+!q5:=q1.minus(q2)
+!q6:=q2.minus(q1)
+--!q7:=q1.divideBy(q3) -- error, detected
+!q8:=q1.power(3.0)
+!q9:=q7.power(3.0)
+
+?q5.value.x
+?q5.unit.dimensions
+?q5.unit.conversionFactor
+?q5.unit.offset
+
+?q6.value.x
+?q6.unit.dimensions
+?q6.unit.conversionFactor
+?q6.unit.offset
+
+?q7.value.x
+?q7.value.u
+?q7.unit.dimensions
+?q8.value.x
+?q8.value.u
+?q8.unit.dimensions
+?q9.value.x
+?q9.value.u
+?q9.unit.dimensions
+?q9.unit.conversionFactor
+?q9.unit.offset

@@ -754,7 +754,8 @@ public class Unit implements Cloneable {
 	}
 
 	public Unit(DerivedUnits d){
-		dimensions = fillUnitDimensions(d);
+//		dimensions = fillUnitDimensions(d);
+		fillUnitDimensions(d);
 		Arrays.fill(this.conversionFactor, 1.0); 
 		Arrays.fill(this.offset, 0.0); 
 	}

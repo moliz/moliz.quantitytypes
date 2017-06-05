@@ -1,6 +1,5 @@
 package org.modelexecution.quantitytypes.java;
 
-
 public enum DerivedUnits {
 	Gray,
 	GrayPerSecond,

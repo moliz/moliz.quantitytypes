@@ -17,7 +17,7 @@ public class Unit implements Cloneable {
 //  STATIC VARIABLES
 //**************
 	
-	public final static String [] BaseUnitNames ={"Meter", "Kilogram", "Second", "Ampere", "Kelvin", "Mole", "Candela", "Radian", "Bit", "Shannon", "Erlang", "Decibel"};
+	public final static String [] BaseUnitNames ={"Meter", "Kilogram", "Second", "Ampere", "Kelvin", "Mole", "Candela", "Bit", "Shannon", "Erlang", "Decibel", "Radian"};
 
 	public final static String [] DerivedUnitNames ={	
 			"Gray",
@@ -111,7 +111,7 @@ public class Unit implements Cloneable {
 			"JoulePerCubicMeterKelvin", 
 			"BitsPerSecond"};
 
-	public final static String [] BaseUnitSymbols ={"m", "kg", "s", "A", "K", "mol", "cd", "rad", "bit", "Sh", "E", "dB"};
+	public final static String [] BaseUnitSymbols ={"m", "kg", "s", "A", "K", "mol", "cd", "bit", "Sh", "E", "dB", "rad"};
 
 	public final static String [] DerivedUnitSymbols ={	
 			"Gy",
@@ -1334,7 +1334,7 @@ public class Unit implements Cloneable {
 		if (new Unit(BaseUnits.Mole,1.0).equals(this)) return BaseUnits.Mole;
 		if (new Unit(BaseUnits.Candela,1.0).equals(this)) return BaseUnits.Candela;
 		if (new Unit(BaseUnits.Radian,1.0).equals(this)) return BaseUnits.Radian;
-		if (new Unit(BaseUnits.Bit,1.0).equals(this)) return BaseUnits.Radian;
+		if (new Unit(BaseUnits.Bit,1.0).equals(this)) return BaseUnits.Bit;
 		if (new Unit(BaseUnits.Erlang,1.0).equals(this)) return BaseUnits.Erlang;
 		if (new Unit(BaseUnits.Shannon,1.0).equals(this)) return BaseUnits.Shannon;
 		if (new Unit(BaseUnits.Decibel,1.0).equals(this)) return BaseUnits.Decibel;

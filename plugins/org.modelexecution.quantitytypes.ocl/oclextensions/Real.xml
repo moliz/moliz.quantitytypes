@@ -13,6 +13,13 @@
 	</body>
   </operation>
 
+  <operation source="Real" name="log" returnType="Real">
+	<body><![CDATA[
+		Math.log($self)
+	]]>
+	</body>
+  </operation>
+
   <operation source="Real" name="power" returnType="Real">
 		<parameter>
 			<par name="e" type="Real" />

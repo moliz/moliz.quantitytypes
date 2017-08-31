@@ -15,7 +15,7 @@
 ?result.x  -- should be ~ -10
 ?result.u
 !result:=u1.mult(u2)
-?result.x  -- should be ~ 200
+?result.x  -- should be ~ -200
 ?result.u
 !result:=u1.divideBy(u2) 
 ?result.x  -- should be ~0.5
@@ -36,9 +36,9 @@
 !result:=u1.sqrt() 
 ?result.x  -- should be ~3.16
 ?result.u
-!b:=u1.lt(u2) 
+!b:=u1.lessThan(u2) 
 ?b -- should be true
-!b:=u2.le(u1) 
+!b:=u2.lessEq(u1) 
 ?b -- should be false
 !b:=u1.equals(u2)
 ?b -- should be false
@@ -83,7 +83,7 @@
 ?result.x  -- should be 3
 ?result.u
 !result:=u2.round()
-?result.x  -- should be 4
+?result.x  -- should be 3
 ?result.u
 !result:=u3.floor()
 ?result.x  -- should be 3
@@ -92,12 +92,12 @@
 ?result.x  -- should be 4
 ?result.u
 --checking violations of preconditions
-!u1.x :=3.0
-!u1.u :=0.001
-!u2.x :=0.0
-!u2.u :=0.001
-!u3.x :=-1.0
-!u3.u :=0.001
+--!u1.x :=3.0
+--!u1.u :=0.001
+--!u2.x :=0.0
+--!u2.u :=0.001
+--!u3.x :=-1.0
+--!u3.u :=0.001
 --!result:=u1.divideBy(u2)
 --!result:=u2.inverse()
 --!result:=u3.sqrt()

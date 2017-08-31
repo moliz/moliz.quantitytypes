@@ -23,32 +23,32 @@
 !new Unit('Far')
 
 
-!Km.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!m.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!ft.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!s.dimensions := Sequence{0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!min.dimensions := Sequence{0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!rad.dimensions := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0}
-!U.dimensions := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!Kms.dimensions := Sequence{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!Km.dimensions := Sequence{1,0,0,0,0,0,0,0}
+!m.dimensions := Sequence{1,0,0,0,0,0,0,0}
+!ft.dimensions := Sequence{1,0,0,0,0,0,0,0}
+!s.dimensions := Sequence{0,0,1,0,0,0,0,0}
+!min.dimensions := Sequence{0,0,1,0,0,0,0,0}
+!rad.dimensions := Sequence{0,0,0,0,0,0,0,1}
+!U.dimensions := Sequence{0,0,0,0,0,0,0,0}
+!Kms.dimensions := Sequence{1,0,-1,0,0,0,0,0}
 
-!Km.conversionFactor := Sequence{1000.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!m.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!ft.conversionFactor := Sequence{0.3048,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!s.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!min.conversionFactor := Sequence{1.0,1.0,60.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!rad.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!U.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!Kms.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!Km.conversionFactor := Sequence{1000,1,1,1,1,1,1,1}
+!m.conversionFactor := Sequence{1,1,1,1,1,1,1,1}
+!ft.conversionFactor := Sequence{0.3048,1,1,1,1,1,1,1}
+!s.conversionFactor := Sequence{1,1,1,1,1,1,1,1}
+!min.conversionFactor := Sequence{1,1,60,1,1,1,1,1}
+!rad.conversionFactor := Sequence{1,1,1,1,1,1,1,1}
+!U.conversionFactor := Sequence{1,1,1,1,1,1,1,1}
+!Kms.conversionFactor := Sequence{1,1,1,1,1,1,1,1}
 
-!Km.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0}
-!m.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!ft.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!s.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!min.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!rad.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!U.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!Kms.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!Km.offset := Sequence{0,0,0,0,0,0,0,0}
+!m.offset := Sequence{0,0,0,0,0,0,0,0}
+!ft.offset := Sequence{0,0,0,0,0,0,0,0}
+!s.offset := Sequence{0,0,0,0,0,0,0,0}
+!min.offset := Sequence{0,0,0,0,0,0,0,0}
+!rad.offset := Sequence{0,0,0,0,0,0,0,0}
+!U.offset := Sequence{0,0,0,0,0,0,0,0}
+!Kms.offset := Sequence{0,0,0,0,0,0,0,0}
 
 !Km.name := 'Kilometer'
 !ft.name := 'foot'
@@ -60,19 +60,19 @@
 !min.symbol := 'min'
 !Kms.symbol := 'Km/s'
 
-!Kel.dimensions := Sequence{0,0,0,0,1.0,0,0,0,0,0,0,0}
-!Kel.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!Kel.offset := Sequence{0,0,0,0,0,0,0,0,0,0,0,0}
+!Kel.dimensions := Sequence{0,0,0,0,1,0,0,0}
+!Kel.conversionFactor := Sequence{1,1,1,1,1,1,1,1}
+!Kel.offset := Sequence{0,0,0,0,0,0,0,0}
 
-!Cel.dimensions := Sequence{0,0,0,0,1.0,0,0,0,0,0,0,0}
-!Cel.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!Cel.offset := Sequence{0,0,0,0,273.15,0,0,0,0,0,0,0}
+!Cel.dimensions := Sequence{0,0,0,0,1,0,0,0}
+!Cel.conversionFactor := Sequence{1,1,1,1,1,1,1,1}
+!Cel.offset := Sequence{0,0,0,0,273.15,0,0,0}
 !Cel.name := 'Celsius'
 !Cel.symbol := 'ºC'
 
-!Far.dimensions := Sequence{0,0,0,0,1.0,0,0,0,0,0,0,0}
-!Far.conversionFactor := Sequence{1.0,1.0,1.0,1.0,0.55555556,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!Far.offset := Sequence{0,0,0,0,255.372222222,0,0,0,0,0,0,0}
+!Far.dimensions := Sequence{0,0,0,0,1,0,0,0}
+!Far.conversionFactor := Sequence{1,1,1,1,0.55555556,1,1,1}
+!Far.offset := Sequence{0,0,0,0,255.372222222,0,0,0}
 !Far.symbol := 'ºF'
 !Far.name := 'Farenheit'
 

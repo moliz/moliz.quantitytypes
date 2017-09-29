@@ -52,17 +52,17 @@ public class SimpleTest {
 			System.out.println(m[7].mult(m[0]));
 			System.out.println(m[6].divideBy(m[1]));
 			
-			System.out.println((new SIUnit(BaseUnits.Meter, 1.0)).isBaseUnit());
-			System.out.println((new SIUnit(BaseUnits.Meter, 4.0)).isBaseUnit());
-			System.out.println((new SIUnit(BaseUnits.Meter, 0.5)).isBaseUnit());
-			System.out.println((new SIUnit(BaseUnits.Meter, 0.0)).isBaseUnit());
-			System.out.println((new SIUnit(BaseUnits.Meter, 1.0)).isUnitless());
-			System.out.println((new SIUnit(BaseUnits.Meter, 0.0)).isUnitless());
-			System.out.println((new SIUnit()).isUnitless());
-			System.out.println((new SIUnit(BaseUnits.Meter, 1.0)).isDimensionless());
-			System.out.println((new SIUnit(BaseUnits.Meter, 0.0)).isDimensionless());
-			System.out.println((new SIUnit()).isDimensionless());
-			System.out.println((new SIUnit()).isBaseUnit());
+			System.out.println((new Unit(BaseUnits.Meter, 1.0)).isBaseUnit());
+			System.out.println((new Unit(BaseUnits.Meter, 4.0)).isBaseUnit());
+			System.out.println((new Unit(BaseUnits.Meter, 0.5)).isBaseUnit());
+			System.out.println((new Unit(BaseUnits.Meter, 0.0)).isBaseUnit());
+			System.out.println((new Unit(BaseUnits.Meter, 1.0)).isUnitless());
+			System.out.println((new Unit(BaseUnits.Meter, 0.0)).isUnitless());
+			System.out.println((new Unit()).isUnitless());
+			System.out.println((new Unit(BaseUnits.Meter, 1.0)).isDimensionless());
+			System.out.println((new Unit(BaseUnits.Meter, 0.0)).isDimensionless());
+			System.out.println((new Unit()).isDimensionless());
+			System.out.println((new Unit()).isBaseUnit());
 
 
 			

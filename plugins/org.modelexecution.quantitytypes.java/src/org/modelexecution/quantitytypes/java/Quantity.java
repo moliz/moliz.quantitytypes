@@ -326,7 +326,7 @@ public class Quantity implements Comparable<Quantity> {
 //		assert this.compatibleUnits(r.unit);
 		if (!this.compatibleUnits(r.unit)) throw new RuntimeException("lessThan: Incompatible Units: "+this.unit+" and "+r.unit);
 
-		return this.getUReal().lessThan(r.convertTo(this.getUnits()).getUReal());
+		return this.getUReal().lt(r.convertTo(this.getUnits()).getUReal());
 	}
 	
 	public boolean lessEq(Quantity r) {  //only if same unit

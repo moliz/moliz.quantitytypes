@@ -1,0 +1,177 @@
+-- EXAMPLE OF USES OF UReal VALUES
+!new UReal('a')
+!new UReal('b')
+-------------------------------------------
+!a.x :=1.0
+!a.u :=1.5
+!b.x :=5.0
+!b.u :=1.0
+!b1:=a.equals(b)--should be false
+?b1
+!b2:=a.lt(b)--should be true
+?b2
+!b3:=a.gt(b)--should be false
+?b3
+!aEQb:=a.uEquals(b) 
+?aEQb -- 0.1068
+!aLTb:=a.uLt(b) 
+?aLTb -- 0.8931
+!aGTb:=a.uGt(b)
+?aGTb -- 0.00001
+-------------------------------------------
+!a.x :=1.0
+!a.u :=1.0
+!b.x :=1.0
+!b.u :=1.0
+!b1:=a.equals(b)--should be true
+?b1
+!b2:=a.lt(b)--should be false
+?b2
+!b3:=a.gt(b)--should be false
+?b3
+!aEQb:=a.uEquals(b) 
+?aEQb -- 0.9999
+!aLTb:=a.uLt(b) 
+?aLTb -- 0.0
+!aGTb:=a.uGt(b)
+?aGTb -- 0.0
+-------------------------------------------
+!a.x :=1.0
+!a.u :=7.0
+!b.x :=1.0
+!b.u :=2.0
+!b1:=a.equals(b)--should be true
+?b1
+!b2:=a.lt(b)--should be false
+?b2
+!b3:=a.gt(b)--should be false
+?b3
+!aEQb:=a.uEquals(b) 
+?aEQb -- 0.4616
+!aLTb:=a.uLt(b) 
+?aLTb -- 0.2691
+!aGTb:=a.uGt(b)
+?aGTb -- 0.2691
+-------------------------------------------
+!a.x :=1.0
+!a.u :=1.0
+!b.x :=10.0
+!b.u :=2.0
+!b1:=a.equals(b)--should be false
+?b1
+!b2:=a.lt(b)--should be true
+?b2
+!b3:=a.gt(b)--should be false
+?b3
+!aEQb:=a.uEquals(b) 
+?aEQb -- 0.0025
+!aLTb:=a.uLt(b) 
+?aLTb -- 0.99746
+!aGTb:=a.uGt(b)
+?aGTb -- 0.0025
+-------------------------------------------
+!a.x :=1.0
+!a.u :=1.0
+!b.x :=50.0
+!b.u :=2.0
+!b1:=a.equals(b)--should be false
+?b1
+!b2:=a.lt(b)--should be true
+?b2
+!b3:=a.gt(b)--should be false
+?b3
+!aEQb:=a.uEquals(b) 
+?aEQb -- 0.00
+!aLTb:=a.uLt(b) 
+?aLTb -- 1.0
+!aGTb:=a.uGt(b)
+?aGTb -- 0.0
+-------------------------------------------
+!a.x :=1.0
+!a.u :=3.0
+!b.x :=1.5
+!b.u :=3.0
+!b1:=a.equals(b)--should be true
+?b1
+!b2:=a.lt(b)--should be false
+?b2
+!b3:=a.gt(b)--should be false
+?b3
+!aEQb:=a.uEquals(b) 
+?aEQb -- 0.93358
+!aLTb:=a.uLt(b) 
+?aLTb -- 0.0664
+!aGTb:=a.uGt(b)
+?aGTb -- 0.0664
+-------------------------------------------
+!a.x :=1.0
+!a.u :=3.0
+!b.x :=1.5
+!b.u :=5.0
+!b1:=a.equals(b)--should be true
+?b1
+!b2:=a.lt(b)--should be false
+?b2
+!b3:=a.gt(b)--should be false
+?b3
+!aEQb:=a.uEquals(b) 
+?aEQb -- 0.75448
+!aLTb:=a.uLt(b) 
+?aLTb -- 0.1525
+!aGTb:=a.uGt(b)
+?aGTb -- 0.0929
+-------------------------------------------
+!a.x :=1.0
+!a.u :=3.0
+!b.x :=5.0
+!b.u :=0.0
+!b1:=a.equals(b)--should be false
+?b1
+!b2:=a.lt(b)--should be true
+?b2
+!b3:=a.gt(b)--should be false
+?b3
+!aEQb:=a.uEquals(b) 
+?aEQb -- 0.0
+!aLTb:=a.uLt(b) 
+?aLTb -- 0.90878
+!aGTb:=a.uGt(b)
+?aGTb -- 0.0912
+-------------------------------------------
+!a.x :=1.0
+!a.u :=3.0
+!b.x :=1.0
+!b.u :=0.0
+!b1:=a.equals(b)--should be true
+?b1
+!b2:=a.lt(b)--should be false
+?b2
+!b3:=a.gt(b)--should be false
+?b3
+!aEQb:=a.uEquals(b) 
+?aEQb -- 0.0
+!aLTb:=a.uLt(b) 
+?aLTb -- 0.5
+!aGTb:=a.uGt(b)
+?aGTb -- 0.5
+-------------------------------------------
+!a.x :=1.0
+!a.u :=0.0
+!b.x :=5.0
+!b.u :=0.0
+!b1:=a.equals(b)--should be false
+?b1
+!b2:=a.lt(b)--should be true
+?b2
+!b3:=a.gt(b)--should be false
+?b3
+!aEQb:=a.uEquals(b) 
+?aEQb -- 0.0
+!aLTb:=a.uLt(b) 
+?aLTb -- 1.0
+!aGTb:=a.uGt(b)
+?aGTb -- 0.0
+-------------------------------------------
+
+
+

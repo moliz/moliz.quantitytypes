@@ -1,0 +1,117 @@
+
+-- EXAMPLE OF THE USE OF QUANTITIES
+!new UReal('v1')
+!new UReal('v2')
+!new UReal('v3')
+!v1.x :=10.0
+!v1.u :=0.002
+!v2.x :=20.0
+!v2.u :=0.001
+!v3:=v1.add(v2) 
+
+!new Unit('bit')
+!new Unit('byte')
+!new Unit('bitPerS')
+!new Unit('bytePerS')
+!new Unit('Sh')
+!new Unit('E')
+!new Unit('dB')
+!new Unit('s')
+
+!bit.dimensions := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0}
+!byte.dimensions := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0}
+!bitPerS.dimensions := Sequence{0.0,0.0,-1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0}
+!s.dimensions := Sequence{0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!bytePerS.dimensions := Sequence{0.0,0.0,-1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0}
+!Sh.dimensions := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0}
+!E.dimensions := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0}
+!dB.dimensions := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0}
+
+!bit.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!byte.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0,1.0,1.0,1.0}
+!bitPerS.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!s.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!bytePerS.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,8.0,1.0,1.0,1.0}
+!E.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!Sh.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!dB.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+
+!bit.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!byte.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!bitPerS.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!s.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!bytePerS.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!E.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!Sh.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!dB.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+
+!byte.name := 'Byte'
+!bytePerS.name := 'BytePerSecond'
+
+!byte.symbol := 'B'
+!bytePerS.symbol := 'B/s'
+
+!new Quantity('q1')
+!new Quantity('q2')
+!new Quantity('q3')
+!new Quantity('q4')
+!new Quantity('q5')
+!new Quantity('q6')
+!new Quantity('q7')
+!new Quantity('q8')
+!new Quantity('q9')
+!new Quantity('qa')
+!new Quantity('qb')
+!new Quantity('qc')
+
+!q1.value := v1
+!q1.unit := bit
+!q2.value := v2
+!q2.unit := bitPerS
+
+
+!q5:=q1.convertTo(byte)
+?q5.value.x
+?q5.unit.dimensions
+?q5.unit.conversionFactor
+?q5.unit.offset
+
+!q6:=q2.convertTo(bytePerS)
+?q6.value.x
+?q6.unit.dimensions
+?q6.unit.conversionFactor
+?q6.unit.offset
+
+----------------------------
+!q4:=q5.convertToSIUnits();
+?q4.value.x
+?q4.unit.dimensions
+?q4.unit.conversionFactor
+?q4.unit.offset
+
+!q3:=q2.convertToSIUnits();
+?q3.value.x
+?q3.unit.dimensions
+?q3.unit.conversionFactor
+?q3.unit.offset
+
+----------------------
+
+?bit.defaultName()
+?byte.defaultName()
+?bitPerS.defaultName()
+?s.defaultName()
+?bytePerS.defaultName()
+?Sh.defaultName()
+?dB.defaultName()
+?E.defaultName()
+
+?bit.defaultSymbol()
+?byte.defaultSymbol()
+?bitPerS.defaultSymbol()
+?s.defaultSymbol()
+?bytePerS.defaultSymbol()
+?Sh.defaultSymbol()
+?E.defaultSymbol()
+?dB.defaultSymbol()
+

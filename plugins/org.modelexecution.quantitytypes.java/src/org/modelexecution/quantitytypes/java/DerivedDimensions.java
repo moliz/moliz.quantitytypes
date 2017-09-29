@@ -1,6 +1,5 @@
 package org.modelexecution.quantitytypes.java;
 
-
 public enum DerivedDimensions {
 	AbsorbedDose,
 	AbsorbedDoseRate,
@@ -41,9 +40,7 @@ public enum DerivedDimensions {
 	ForcePerUnitLength,
 	Frequency,
 	GravitationalAttraction,
-	HeatCapacityAndEntropy,
-	// HeatFlowRate, -- same as Power
-	// HeatFlowRatePerUnitArea, -- same as PowerPerUnitArea
+	HeatCapacityAndEntropy, // HeatFlowRate, -- same as Power // HeatFlowRatePerUnitArea, -- same as PowerPerUnitArea
 	Illuminance,
 	Inductance,
 	InverseAmountOfSubstance,
@@ -82,8 +79,7 @@ public enum DerivedDimensions {
 	SpecificHeatPressure,
 	SpecificHeatVolume,
 	TemperatureAmountOfSubstance,
-	ThermalConductivity,
-	// ThermalDiffusivity, -- same as KinematicViscosity
+	ThermalConductivity, // ThermalDiffusivity, -- same as KinematicViscosity
 	ThermalInsulance,
 	ThermalResistance,
 	ThermalResistivity,
@@ -93,5 +89,6 @@ public enum DerivedDimensions {
 	Volume,
 	VolumeThermalExpansion,
 	VolumePerUnitTime,
-	VolumetricHeatCapacity
+	VolumetricHeatCapacity,
+	StoragePerUnitTime
 }

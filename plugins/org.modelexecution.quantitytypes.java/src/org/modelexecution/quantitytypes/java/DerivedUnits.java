@@ -1,6 +1,5 @@
 package org.modelexecution.quantitytypes.java;
 
-
 public enum DerivedUnits {
 	Gray,
 	GrayPerSecond,
@@ -42,8 +41,6 @@ public enum DerivedUnits {
 	Hertz,
 	CubicMeterPerKilogramSecondSquared,
 	JoulePerKelvin,
-	// Watt, duplicated
-	// WattPerSquareMeter, duplicated
 	Lux,
 	Henry,
 	PerMole,
@@ -83,7 +80,6 @@ public enum DerivedUnits {
 	JoulePerKilogramKelvinPerCubicMeter,
 	MoleKelvin,
 	WattPerMeterKelvin,
-	// SquareMeterPerSecond, duplicated
 	SquareMeterKelvinPerWatt,
 	KelvinPerWatt,
 	MeterKelvinPerWatt,
@@ -93,5 +89,6 @@ public enum DerivedUnits {
 	CubicMeter,
 	CubicMeterPerKelvin,
 	CubicMeterPerSecond,
-	JoulePerCubicMeterKelvin
+	JoulePerCubicMeterKelvin,
+	BitsPerSecond
 }

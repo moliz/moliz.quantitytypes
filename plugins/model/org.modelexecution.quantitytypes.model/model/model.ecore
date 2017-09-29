@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://www.example.org/model" nsPrefix="model">
+  <eClassifiers xsi:type="ecore:EClass" name="Quantity" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" lowerBound="1" eType="#//Unit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//UncertainValue"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Length" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Angle" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Unit" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="symbol" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dimensions" upperBound="-1"
+        eType="#//Dimension" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conversionFactors" upperBound="-1"
+        eType="#//ConversionFactor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIntervalScaled" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRatioScaled" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mass" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Time" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectricCurrent" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ThermodynamicTemperature" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstance" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensity" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinearVelocity" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinearAcceleration" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LengthUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MassUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectricCurrentUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ThermodynamicTemperatureUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstanceUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensityUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AngleUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinearVelocityUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinearAccelerationUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemOfUnits">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="baseUnits" upperBound="-1"
+        eType="#//Unit" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="derivedUnits" upperBound="-1"
+        eType="#//Unit" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="standardizationBody" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dimension" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exponent" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="1.0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LengthDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConversionFactor" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetUnit" lowerBound="1"
+        eType="#//Unit"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicator" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="1.0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0.0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MassDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectricCurrentDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ThermodynamicTemperatureDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstanceDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensityDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AngleDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UncertainValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estimatedValue" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uncertainty" lowerBound="1"
+        eType="#//Uncertainty" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Uncertainty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="standardUncertainty" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataStorage" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entropy" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TrafficIntensity" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Level" eSuperTypes="#//Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataStorageUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntropyUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TrafficIntensityUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LevelUnit" eSuperTypes="#//Unit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataStorageDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntropyDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TrafficIntensityDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LevelDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LengthConversionFactor" eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MassConversionFactor" eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeConversionFactor" eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectricCurrentConversionFactor" eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ThermodynamicTemperatureConversionFactor"
+      eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstanceConversionFactor" eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensityConversionFactor"
+      eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AngleConversionFactor" eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataStorageConversionFactor" eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntropyConversionFactor" eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TrafficIntensityConversionFactor" eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LevelConversionFactor" eSuperTypes="#//ConversionFactor"/>
+</ecore:EPackage>

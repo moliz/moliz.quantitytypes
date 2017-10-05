@@ -22,8 +22,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/symbol"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Unit/dimensions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Unit/conversionFactors"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isIntervalScaled"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isRatioScaled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isBaseUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isScaledUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isDerivedUnit"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Mass"/>
     <genClasses ecoreClass="model.ecore#//Time"/>
@@ -44,8 +46,7 @@
     <genClasses ecoreClass="model.ecore#//LinearVelocityUnit"/>
     <genClasses ecoreClass="model.ecore#//LinearAccelerationUnit"/>
     <genClasses ecoreClass="model.ecore#//SystemOfUnits">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//SystemOfUnits/baseUnits"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//SystemOfUnits/derivedUnits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//SystemOfUnits/units"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SystemOfUnits/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SystemOfUnits/standardizationBody"/>
     </genClasses>
@@ -54,7 +55,7 @@
     </genClasses>
     <genClasses ecoreClass="model.ecore#//LengthDimension"/>
     <genClasses ecoreClass="model.ecore#//ConversionFactor">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ConversionFactor/targetUnit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ConversionFactor/baseUnit"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ConversionFactor/multiplicator"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ConversionFactor/offset"/>
     </genClasses>
@@ -65,9 +66,9 @@
     <genClasses ecoreClass="model.ecore#//AmountOfSubstanceDimension"/>
     <genClasses ecoreClass="model.ecore#//LuminosityIntensityDimension"/>
     <genClasses ecoreClass="model.ecore#//AngleDimension"/>
-    <genClasses ecoreClass="model.ecore#//UncertainValue">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//UncertainValue/estimatedValue"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//UncertainValue/uncertainty"/>
+    <genClasses ecoreClass="model.ecore#//UncertainRealValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//UncertainRealValue/estimatedValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//UncertainRealValue/uncertainty"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Uncertainty">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Uncertainty/standardUncertainty"/>
@@ -96,5 +97,18 @@
     <genClasses ecoreClass="model.ecore#//EntropyConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//TrafficIntensityConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//LevelConversionFactor"/>
+    <genClasses ecoreClass="model.ecore#//UnvertainValue"/>
+    <genClasses ecoreClass="model.ecore#//UncertainBooleanValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//UncertainBooleanValue/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//UncertainBooleanValue/probability"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//NormalDistributionValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NormalDistributionValue/meanValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NormalDistributionValue/standardDeviation"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//IntervalValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//IntervalValue/lowerEndpoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//IntervalValue/upperEndpoint"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

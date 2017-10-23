@@ -30,16 +30,16 @@
 !fv2.u :=0.2
 
 !new Unit('m')
-!m.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
-!m.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!m.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!m.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!m.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!m.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
 !m.name:=m.defaultName();
 !m.symbol:=m.defaultSymbol();
 
 !new Unit('s')
-!s.dimensions := Sequence{0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0}
-!s.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
-!s.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!s.dimensions := Sequence{0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!s.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!s.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
 !s.name:=s.defaultName();
 !s.symbol:=s.defaultSymbol();
 

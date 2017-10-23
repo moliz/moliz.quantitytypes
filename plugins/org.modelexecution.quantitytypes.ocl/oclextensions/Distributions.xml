@@ -1,5 +1,26 @@
 <extensions>
 
+  <operation source="Real" name="expDistr" returnType="Real">
+	<body><![CDATA[
+		if $self != 0
+           return (6.9077553 - Math.log(Random.rand(1000) + 1)) * $self
+        else 
+           return 0.0
+        end
+	]]>
+	</body>
+  </operation>
+
+  <operation source="Real" name="normalDistr" returnType="Real">
+		<parameter>
+			<par name="s" type="Real" />
+		</parameter>
+	<body><![CDATA[
+       return $self + ( $s * Math.sqrt(-2.0 * Math.log(Random.rand)) * Math.cos(6.283185307 * Random.rand) )
+	]]>
+	</body>
+  </operation>
+
   <operation source="Real" name="pdf01" returnType="Real">
 	<body><![CDATA[
            #  Distribution.Normal.pdf($self)

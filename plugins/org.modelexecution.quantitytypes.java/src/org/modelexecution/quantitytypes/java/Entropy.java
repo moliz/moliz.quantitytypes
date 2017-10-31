@@ -23,7 +23,7 @@ public class Entropy extends Quantity {
 	public Entropy(Quantity q) {
 		value = q.value.clone();
 		if (!checkUnit(q.unit))
-			throw new RuntimeException("Invalid Unit for creating a Entropy");
+			throw new RuntimeException("Invalid Unit for creating an Entropy");
 		this.unit = new Unit(q.unit);
 	}
 

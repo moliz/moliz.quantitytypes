@@ -71,9 +71,9 @@
     <genClasses ecoreClass="model.ecore#//AmountOfSubstanceDimension"/>
     <genClasses ecoreClass="model.ecore#//LuminosityIntensityDimension"/>
     <genClasses ecoreClass="model.ecore#//AngleDimension"/>
-    <genClasses ecoreClass="model.ecore#//UncertainRealValue">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//UncertainRealValue/value"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//UncertainRealValue/uncertainty"/>
+    <genClasses ecoreClass="model.ecore#//QuantityValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//QuantityValue/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//QuantityValue/uncertainty"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//MeasurementUncertainty">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//MeasurementUncertainty/standardUncertainty"/>

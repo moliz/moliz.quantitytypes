@@ -3,7 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://www.example.org/model" nsPrefix="model">
   <eClassifiers xsi:type="ecore:EClass" name="Quantity" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="unit" lowerBound="1" eType="#//Unit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//UncertainRealValue"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//QuantityValue"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Length" eSuperTypes="#//BaseQuantity"/>
@@ -85,7 +85,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstanceDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensityDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="AngleDimension" eSuperTypes="#//Dimension"/>
-  <eClassifiers xsi:type="ecore:EClass" name="UncertainRealValue">
+  <eClassifiers xsi:type="ecore:EClass" name="QuantityValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="uncertainty" lowerBound="1"
         eType="#//MeasurementUncertainty" containment="true"/>

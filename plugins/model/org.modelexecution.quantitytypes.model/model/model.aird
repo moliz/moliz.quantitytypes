@@ -2910,9 +2910,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_tNNjQKUYEeeq9urgDROiQQ" name="UncertainRealValue" tooltipText="" outgoingEdges="_D9l44KUbEeeq9urgDROiQQ" incomingEdges="_7gkCMKUaEeeq9urgDROiQQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="model.ecore#//UncertainRealValue"/>
-      <semanticElements xmi:type="ecore:EClass" href="model.ecore#//UncertainRealValue"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_tNNjQKUYEeeq9urgDROiQQ" name="QuantityValue" tooltipText="" outgoingEdges="_D9l44KUbEeeq9urgDROiQQ" incomingEdges="_7gkCMKUaEeeq9urgDROiQQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="model.ecore#//QuantityValue"/>
+      <semanticElements xmi:type="ecore:EClass" href="model.ecore#//QuantityValue"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2921,8 +2921,8 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_v2eEgKUYEeeq9urgDROiQQ" name="value : EDouble = 0.0" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="model.ecore#//UncertainRealValue/value"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//UncertainRealValue/value"/>
+        <target xmi:type="ecore:EAttribute" href="model.ecore#//QuantityValue/value"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="model.ecore#//QuantityValue/value"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_471boKUaEeeq9urgDROiQQ" labelAlignment="LEFT" description="_NZ18cKUREeeq9urgDROiQQ">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
@@ -2960,8 +2960,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_D9l44KUbEeeq9urgDROiQQ" name="[1..1] uncertainty" sourceNode="_tNNjQKUYEeeq9urgDROiQQ" targetNode="_6MBtoKUZEeeq9urgDROiQQ">
-      <target xmi:type="ecore:EReference" href="model.ecore#//UncertainRealValue/uncertainty"/>
-      <semanticElements xmi:type="ecore:EReference" href="model.ecore#//UncertainRealValue/uncertainty"/>
+      <target xmi:type="ecore:EReference" href="model.ecore#//QuantityValue/uncertainty"/>
+      <semanticElements xmi:type="ecore:EReference" href="model.ecore#//QuantityValue/uncertainty"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_FA4h4KUbEeeq9urgDROiQQ" description="_CkA20KUbEeeq9urgDROiQQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_FA4h4aUbEeeq9urgDROiQQ" showIcon="false">
           <labelFormat>bold</labelFormat>

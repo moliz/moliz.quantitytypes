@@ -34,6 +34,12 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIntervalScaled" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDimensionlessUnit" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"
+        derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isUnitlessUnit" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"
+        derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mass" eSuperTypes="#//BaseQuantity"/>
   <eClassifiers xsi:type="ecore:EClass" name="Time" eSuperTypes="#//BaseQuantity"/>

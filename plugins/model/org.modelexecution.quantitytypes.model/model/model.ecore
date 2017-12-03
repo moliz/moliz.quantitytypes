@@ -129,10 +129,10 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Interval" eSuperTypes="#//MeasurementUncertaintyInformation">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerEndpoint" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="upperEndpoint" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lowerEndpoint" lowerBound="1"
+        eType="#//Quantity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="upperEndpoint" lowerBound="1"
+        eType="#//Quantity" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MeasurementUncertaintyInformation" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Sampling" eSuperTypes="#//MeasurementUncertaintyInformation">

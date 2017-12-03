@@ -108,8 +108,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NormalDistribution/standardDeviation"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Interval">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Interval/lowerEndpoint"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Interval/upperEndpoint"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Interval/lowerEndpoint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Interval/upperEndpoint"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//MeasurementUncertaintyInformation"/>
     <genClasses ecoreClass="model.ecore#//Sampling">

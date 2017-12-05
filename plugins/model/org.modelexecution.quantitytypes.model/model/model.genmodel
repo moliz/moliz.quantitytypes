@@ -40,7 +40,7 @@
     <genClasses ecoreClass="model.ecore#//ElectricCurrentUnit"/>
     <genClasses ecoreClass="model.ecore#//ThermodynamicTemperatureUnit"/>
     <genClasses ecoreClass="model.ecore#//AmountOfSubstanceUnit"/>
-    <genClasses ecoreClass="model.ecore#//LuminosIntensityUnit"/>
+    <genClasses ecoreClass="model.ecore#//LuminousIntensityUnit"/>
     <genClasses ecoreClass="model.ecore#//AngleUnit"/>
     <genClasses ecoreClass="model.ecore#//SystemOfUnits">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//SystemOfUnits/units"/>
@@ -61,7 +61,7 @@
     <genClasses ecoreClass="model.ecore#//ElectricCurrentDimension"/>
     <genClasses ecoreClass="model.ecore#//ThermodynamicTemperatureDimension"/>
     <genClasses ecoreClass="model.ecore#//AmountOfSubstanceDimension"/>
-    <genClasses ecoreClass="model.ecore#//LuminosIntensityDimension"/>
+    <genClasses ecoreClass="model.ecore#//LuminousIntensityDimension"/>
     <genClasses ecoreClass="model.ecore#//AngleDimension"/>
     <genClasses ecoreClass="model.ecore#//QuantityValue">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//QuantityValue/uncertainty"/>
@@ -71,7 +71,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//MeasurementUncertainty/information"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//MeasurementUncertainty/standardUncertainty"/>
     </genClasses>
-    <genClasses ecoreClass="model.ecore#//DataStorage"/>
+    <genClasses ecoreClass="model.ecore#//DataStorageCapacity"/>
     <genClasses ecoreClass="model.ecore#//Entropy"/>
     <genClasses ecoreClass="model.ecore#//TrafficIntensity"/>
     <genClasses ecoreClass="model.ecore#//Level"/>
@@ -79,7 +79,7 @@
     <genClasses ecoreClass="model.ecore#//EntropyUnit"/>
     <genClasses ecoreClass="model.ecore#//TrafficIntensityUnit"/>
     <genClasses ecoreClass="model.ecore#//LevelUnit"/>
-    <genClasses ecoreClass="model.ecore#//DataStorageDimension"/>
+    <genClasses ecoreClass="model.ecore#//DataStorageCapacityDimension"/>
     <genClasses ecoreClass="model.ecore#//EntropyDimension"/>
     <genClasses ecoreClass="model.ecore#//TrafficIntensityDimension"/>
     <genClasses ecoreClass="model.ecore#//LevelDimension"/>
@@ -89,9 +89,9 @@
     <genClasses ecoreClass="model.ecore#//ElectricCurrentConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//ThermodynamicTemperatureConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//AmountOfSubstanceConversionFactor"/>
-    <genClasses ecoreClass="model.ecore#//LuminosIntensityConversionFactor"/>
+    <genClasses ecoreClass="model.ecore#//LuminousIntensityConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//AngleConversionFactor"/>
-    <genClasses ecoreClass="model.ecore#//DataStorageConversionFactor"/>
+    <genClasses ecoreClass="model.ecore#//DataStorageCapacityConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//EntropyConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//TrafficIntensityConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//LevelConversionFactor"/>

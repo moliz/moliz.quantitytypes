@@ -108,7 +108,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ElectricCurrentUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="ThermodynamicTemperatureUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstanceUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensityUnit" eSuperTypes="#//BaseQuantityUnit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LuminosIntensityUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="AngleUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="SystemOfUnits">
     <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
@@ -134,7 +134,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ElectricCurrentDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="ThermodynamicTemperatureDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstanceDimension" eSuperTypes="#//Dimension"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensityDimension" eSuperTypes="#//Dimension"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LuminosIntensityDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="AngleDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="QuantityValue">
     <eStructuralFeatures xsi:type="ecore:EReference" name="uncertainty" lowerBound="1"
@@ -194,8 +194,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ThermodynamicTemperatureConversionFactor"
       eSuperTypes="#//ConversionFactor"/>
   <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstanceConversionFactor" eSuperTypes="#//ConversionFactor"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensityConversionFactor"
-      eSuperTypes="#//ConversionFactor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LuminosIntensityConversionFactor" eSuperTypes="#//ConversionFactor"/>
   <eClassifiers xsi:type="ecore:EClass" name="AngleConversionFactor" eSuperTypes="#//ConversionFactor"/>
   <eClassifiers xsi:type="ecore:EClass" name="DataStorageConversionFactor" eSuperTypes="#//ConversionFactor"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntropyConversionFactor" eSuperTypes="#//ConversionFactor"/>

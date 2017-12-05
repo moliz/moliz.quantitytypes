@@ -33,14 +33,14 @@
     <genClasses ecoreClass="model.ecore#//ElectricCurrent"/>
     <genClasses ecoreClass="model.ecore#//ThermodynamicTemperature"/>
     <genClasses ecoreClass="model.ecore#//AmountOfSubstance"/>
-    <genClasses ecoreClass="model.ecore#//LuminosityIntensity"/>
+    <genClasses ecoreClass="model.ecore#//LuminosIntensity"/>
     <genClasses ecoreClass="model.ecore#//LengthUnit"/>
     <genClasses ecoreClass="model.ecore#//MassUnit"/>
     <genClasses ecoreClass="model.ecore#//TimeUnit"/>
     <genClasses ecoreClass="model.ecore#//ElectricCurrentUnit"/>
     <genClasses ecoreClass="model.ecore#//ThermodynamicTemperatureUnit"/>
     <genClasses ecoreClass="model.ecore#//AmountOfSubstanceUnit"/>
-    <genClasses ecoreClass="model.ecore#//LuminosityIntensityUnit"/>
+    <genClasses ecoreClass="model.ecore#//LuminosIntensityUnit"/>
     <genClasses ecoreClass="model.ecore#//AngleUnit"/>
     <genClasses ecoreClass="model.ecore#//SystemOfUnits">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//SystemOfUnits/units"/>
@@ -61,7 +61,7 @@
     <genClasses ecoreClass="model.ecore#//ElectricCurrentDimension"/>
     <genClasses ecoreClass="model.ecore#//ThermodynamicTemperatureDimension"/>
     <genClasses ecoreClass="model.ecore#//AmountOfSubstanceDimension"/>
-    <genClasses ecoreClass="model.ecore#//LuminosityIntensityDimension"/>
+    <genClasses ecoreClass="model.ecore#//LuminosIntensityDimension"/>
     <genClasses ecoreClass="model.ecore#//AngleDimension"/>
     <genClasses ecoreClass="model.ecore#//QuantityValue">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//QuantityValue/uncertainty"/>
@@ -89,7 +89,7 @@
     <genClasses ecoreClass="model.ecore#//ElectricCurrentConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//ThermodynamicTemperatureConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//AmountOfSubstanceConversionFactor"/>
-    <genClasses ecoreClass="model.ecore#//LuminosityIntensityConversionFactor"/>
+    <genClasses ecoreClass="model.ecore#//LuminosIntensityConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//AngleConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//DataStorageConversionFactor"/>
     <genClasses ecoreClass="model.ecore#//EntropyConversionFactor"/>

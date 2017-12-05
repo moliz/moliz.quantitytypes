@@ -1,0 +1,13 @@
+* NormalDistribution.meanValue:
+
+		attribute meanValue : ecore::EDouble[1] { derived }
+		{
+			initial: QuantityValue.allInstances() -> select(v | v.uncertainty = (MeasurementUncertainty.allInstances() -> select(u | u.information = self) -> asOrderedSet() -> first())) -> asOrderedSet() -> first().value;
+		}
+		
+* NormalDistribution.standardDeviation:
+
+			attribute standardDeviation : ecore::EDouble[1] { derived }
+			{
+				initial: MeasurementUncertainty.allInstances() -> select(u | u.information = self) -> asOrderedSet() -> first().standardUncertainty;
+			}

@@ -94,12 +94,12 @@
       <details key="AmountOfSubstanceRequiresAmountOfSubstanceUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: An amount of substance needs an amount of substance unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(AmountOfSubstanceUnit)&#xA;}.status"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensity" eSuperTypes="#//BaseQuantity">
+  <eClassifiers xsi:type="ecore:EClass" name="LuminousIntensity" eSuperTypes="#//BaseQuantity">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="LuminosityIntensityRequiresLuminosityIntensityUnit"/>
+      <details key="constraints" value="LuminousIntensityRequiresLuminousIntensityUnit"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="LuminosityIntensityRequiresLuminosityIntensityUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A luminosity intensity needs a luminosity intensity unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(LuminosityIntensityUnit)&#xA;}.status"/>
+      <details key="LuminousIntensityRequiresLuminousIntensityUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A luminous intensity needs a luminous intensity unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(LuminousIntensityUnit)&#xA;}.status"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LengthUnit" eSuperTypes="#//BaseQuantityUnit"/>
@@ -149,10 +149,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataStorageCapacity" eSuperTypes="#//BaseQuantity">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="DataStorageRequiresDataStorageUnit"/>
+      <details key="constraints" value="DataStorageCapacityRequiresDataStorageCapacityUnit"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="DataStorageRequiresDataStorageUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A data storage needs a data storage unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(DataStorageUnit)&#xA;}.status"/>
+      <details key="DataStorageCapacityRequiresDataStorageCapacityUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A data storage capacity needs a data storage capacity unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(DataStorageCapacityUnit)&#xA;}.status"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entropy" eSuperTypes="#//BaseQuantity">
@@ -179,7 +179,7 @@
       <details key="LevelRequiresLevelUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A level needs a level unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(LevelUnit)&#xA;}.status"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataStorageUnit" eSuperTypes="#//BaseQuantityUnit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataStorageCapacityUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntropyUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="TrafficIntensityUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="LevelUnit" eSuperTypes="#//BaseQuantityUnit"/>
@@ -203,17 +203,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="LevelConversionFactor" eSuperTypes="#//ConversionFactor"/>
   <eClassifiers xsi:type="ecore:EClass" name="NormalDistribution" eSuperTypes="#//MeasurementUncertaintyInformation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="meanValue" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" derived="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="derivation" value="QuantityValue.allInstances() -> select(v | v.uncertainty = (MeasurementUncertainty.allInstances() -> select(u | u.information = self) -> asOrderedSet() -> first())) -> asOrderedSet() -> first().value"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="standardDeviation" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" derived="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="derivation" value="MeasurementUncertainty.allInstances() -> select(u | u.information = self) -> asOrderedSet() -> first().standardUncertainty"/>
-      </eAnnotations>
-    </eStructuralFeatures>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Interval" eSuperTypes="#//MeasurementUncertaintyInformation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="lowerEndpoint" lowerBound="1"

@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model:SystemOfUnits xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://www.example.org/model" xsi:schemaLocation="http://www.example.org/model ../model/model.ecore" name="SI" standardizationBody="SI">
-  <units xsi:type="model:LengthUnit" name="meter" symbol="m">
-    <dimensions xsi:type="model:LengthDimension"/>
+<model:SystemOfUnits
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:model="http://www.modelexecution.org/quantities"
+    xsi:schemaLocation="http://www.modelexecution.org/quantities ../model/model.ecore"
+    name="SI"
+    standardizationBody="SI">
+  <units xsi:type="model:LengthUnit"
+      name="meter"
+      symbol="m">
+    <dimensions
+        xsi:type="model:LengthDimension"/>
+    <conversionFactors
+        xsi:type="model:LengthConversionFactor"/>
   </units>
-  <units xsi:type="model:LengthUnit" name="kilometer" symbol="km">
-    <dimensions xsi:type="model:LengthDimension"/>
-    <conversionFactors xsi:type="model:LengthConversionFactor" multiplicator="1000.0"/>
+  <units xsi:type="model:LengthUnit"
+      name="kilometer"
+      symbol="km">
+    <dimensions
+        xsi:type="model:LengthDimension"/>
+    <conversionFactors
+        xsi:type="model:LengthConversionFactor"
+        multiplicator="1000.0"/>
   </units>
 </model:SystemOfUnits>

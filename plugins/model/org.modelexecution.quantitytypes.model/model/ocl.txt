@@ -2,52 +2,12 @@
 
 		attribute meanValue : ecore::EDouble[1] { derived }
 		{
-			initial: QuantityValue.allInstances() -> select(v | v.uncertainty = (MeasurementUncertainty.allInstances() -> select(u | u.information = self) -> asOrderedSet() -> first())) -> asOrderedSet() -> first().value;
+			initial: QuantityValue.allInstances() -> select(v | v.uncertainty = (MeasurementUncertainty.allInstances() -> select(u | u.information = self) -> asOrderedSet() -> first())) -> asOrderedSet() -> first().value else true endif;
 		}
 		
 * NormalDistribution.standardDeviation:
 
 			attribute standardDeviation : ecore::EDouble[1] { derived }
 			{
-				initial: MeasurementUncertainty.allInstances() -> select(u | u.information = self) -> asOrderedSet() -> first().standardUncertainty;
+				initial: MeasurementUncertainty.allInstances() -> select(u | u.information = self) -> asOrderedSet() -> first().standardUncertainty else true endif;
 			}
-
-* Constraint on Unit.conversionFactors:
-
-	invariant LengthDimensionRequiresLengthConversionFactor('A length conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(LengthDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(LengthConversionFactor))->notEmpty();
-	
-	invariant MassDimensionRequiresMassConversionFactor('A mass conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(MassDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(MassConversionFactor))->notEmpty();
-	
-	invariant TimeDimensionRequiresTimeConversionFactor('A time conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(TimeDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(TimeConversionFactor))->notEmpty();
-	
-	invariant ElectricCurrentDimensionRequiresElectricCurrentConversionFactor('An electric current conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(ElectricCurrentDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(ElectricCurrentConversionFactor))->notEmpty();
-	
-	invariant ThermodynamicTemperatureDimensionRequiresThermodynamicTemperatureConversionFactor('A thermodynamic temperature conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(ThermodynamicTemperatureDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(ThermodynamicTemperatureConversionFactor))->notEmpty();
-	
-	invariant AmountOfSubstanceDimensionRequiresAmountOfSubstanceConversionFactor('An amount of substance conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(AmountOfSubstanceDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(AmountOfSubstanceConversionFactor))->notEmpty();
-	
-	invariant LuminousIntensityDimensionRequiresLuminousIntensityConversionFactor('A luminous intensity conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(LuminousIntensityDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(LuminousIntensityConversionFactor))->notEmpty();
-	
-	invariant AngleDimensionRequiresAngleConversionFactor('An angle conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(AngleDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(AngleConversionFactor))->notEmpty();
-	
-	invariant DataStorageCapacityDimensionRequiresDataStorageCapacityConversionFactor('A data storage capacity conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(DataStorageCapacityDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(DataStorageCapacityConversionFactor))->notEmpty();
-	
-	invariant EntropyDimensionRequiresEntropyConversionFactor('An entropy conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(EntropyDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(EntropyConversionFactor))->notEmpty();
-	
-	invariant TrafficIntensityDimensionRequiresTrafficIntensityConversionFactor('A traffic intensity conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(TrafficIntensityDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(TrafficIntensityConversionFactor))->notEmpty();
-	
-	invariant LevelDimensionRequiresLevelConversionFactor('A level conversion factor has to be defined.'): 
-	self.dimensions->select(d | d.oclIsKindOf(LevelDimension))->notEmpty() implies self.conversionFactors->select(f | f.oclIsKindOf(LevelConversionFactor))->notEmpty();
-
-	

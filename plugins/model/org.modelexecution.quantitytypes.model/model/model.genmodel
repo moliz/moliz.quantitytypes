@@ -26,11 +26,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isBaseUnit"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isDerivedUnit"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isCoherentDerivedUnit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isMultiple"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isSubmultiple"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isIntervalScaled"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isDimensionlessUnit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Unit/isUnitlessUnit"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Mass"/>
     <genClasses ecoreClass="model.ecore#//Time"/>

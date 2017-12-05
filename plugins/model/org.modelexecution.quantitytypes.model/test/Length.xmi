@@ -3,8 +3,15 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:model="http://www.example.org/model"
-    xsi:schemaLocation="http://www.example.org/model ../model/model.ecore">
+    xmlns:model="http://www.modelexecution.org/quantities"
+    xsi:schemaLocation="http://www.modelexecution.org/quantities ../model/model.ecore">
   <unit xsi:type="model:LengthUnit"
       href="SystemOfUnits.xmi#//@units.0"/>
+  <value value="200.25">
+    <uncertainty
+        standardUncertainty="0.0589">
+      <information
+          xsi:type="model:NormalDistribution"/>
+    </uncertainty>
+  </value>
 </model:Length>

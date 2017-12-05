@@ -38,8 +38,6 @@
     <genClasses ecoreClass="model.ecore#//ThermodynamicTemperature"/>
     <genClasses ecoreClass="model.ecore#//AmountOfSubstance"/>
     <genClasses ecoreClass="model.ecore#//LuminosityIntensity"/>
-    <genClasses ecoreClass="model.ecore#//LinearVelocity"/>
-    <genClasses ecoreClass="model.ecore#//LinearAcceleration"/>
     <genClasses ecoreClass="model.ecore#//LengthUnit"/>
     <genClasses ecoreClass="model.ecore#//MassUnit"/>
     <genClasses ecoreClass="model.ecore#//TimeUnit"/>
@@ -48,8 +46,6 @@
     <genClasses ecoreClass="model.ecore#//AmountOfSubstanceUnit"/>
     <genClasses ecoreClass="model.ecore#//LuminosityIntensityUnit"/>
     <genClasses ecoreClass="model.ecore#//AngleUnit"/>
-    <genClasses ecoreClass="model.ecore#//LinearVelocityUnit"/>
-    <genClasses ecoreClass="model.ecore#//LinearAccelerationUnit"/>
     <genClasses ecoreClass="model.ecore#//SystemOfUnits">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//SystemOfUnits/units"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//SystemOfUnits/name"/>
@@ -72,12 +68,12 @@
     <genClasses ecoreClass="model.ecore#//LuminosityIntensityDimension"/>
     <genClasses ecoreClass="model.ecore#//AngleDimension"/>
     <genClasses ecoreClass="model.ecore#//QuantityValue">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//QuantityValue/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//QuantityValue/uncertainty"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//QuantityValue/value"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//MeasurementUncertainty">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//MeasurementUncertainty/standardUncertainty"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//MeasurementUncertainty/information"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//MeasurementUncertainty/standardUncertainty"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//DataStorage"/>
     <genClasses ecoreClass="model.ecore#//Entropy"/>

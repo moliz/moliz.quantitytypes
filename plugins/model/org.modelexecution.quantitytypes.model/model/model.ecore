@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://www.example.org/model" nsPrefix="model">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model" nsURI="http://www.modelexecution.org/quantities" nsPrefix="model">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Quantity" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="unit" lowerBound="1" eType="#//Unit"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//QuantityValue"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Length" eSuperTypes="#//BaseQuantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Angle" eSuperTypes="#//BaseQuantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Length" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="LengthRequiresLengthUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="LengthRequiresLengthUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A length needs a lenght unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(LengthUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Angle" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="AngleRequiresAngleUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="AngleRequiresAngleUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: An angle needs an angle unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(AngleUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Unit" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="symbol" lowerBound="1"
@@ -41,14 +63,55 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"
         derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Mass" eSuperTypes="#//BaseQuantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Time" eSuperTypes="#//BaseQuantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ElectricCurrent" eSuperTypes="#//BaseQuantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ThermodynamicTemperature" eSuperTypes="#//BaseQuantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstance" eSuperTypes="#//BaseQuantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensity" eSuperTypes="#//BaseQuantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LinearVelocity" eSuperTypes="#//DerivedQuantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LinearAcceleration" eSuperTypes="#//DerivedQuantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Mass" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="MassRequiresMassUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="MassRequiresMassUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A mass needs a mass unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(MassUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Time" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="TimeRequiresTimeUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="TimeRequiresTimeUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A time needs a time unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(TimeUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectricCurrent" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ElectricCurrentRequiresElectricCurrentUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="ElectricCurrentRequiresElectricCurrentUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: An electric current needs an electric current unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(ElectricCurrentUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ThermodynamicTemperature" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ThermodynamicTemperatureRequiresThermodynamicTemperatureUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="ThermodynamicTemperatureRequiresThermodynamicTemperatureUnit"
+          value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A thermodynamic temperature needs a thermodynamic temperature unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(ThermodynamicTemperatureUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstance" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="AmountOfSubstanceRequiresAmountOfSubstanceUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="AmountOfSubstanceRequiresAmountOfSubstanceUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: An amount of substance needs an amount of substance unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(AmountOfSubstanceUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensity" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="LuminosityIntensityRequiresLuminosityIntensityUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="LuminosityIntensityRequiresLuminosityIntensityUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A luminosity intensity needs a luminosity intensity unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(LuminosityIntensityUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LengthUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="MassUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="TimeUnit" eSuperTypes="#//BaseQuantityUnit"/>
@@ -57,8 +120,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstanceUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensityUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="AngleUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LinearVelocityUnit" eSuperTypes="#//DerivedQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LinearAccelerationUnit" eSuperTypes="#//DerivedQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="SystemOfUnits">
     <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
         eType="#//Unit" containment="true"/>
@@ -67,16 +128,16 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dimension" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="exponent" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="1.0"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LengthDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="ConversionFactor" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="baseUnit" lowerBound="1"
         eType="#//Unit" changeable="false" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multiplicator" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="1.0"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0.0"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MassDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="TimeDimension" eSuperTypes="#//Dimension"/>
@@ -86,20 +147,48 @@
   <eClassifiers xsi:type="ecore:EClass" name="LuminosityIntensityDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="AngleDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="QuantityValue">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="uncertainty" lowerBound="1"
         eType="#//MeasurementUncertainty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MeasurementUncertainty">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="standardUncertainty" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="information" eType="#//MeasurementUncertaintyInformation"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="standardUncertainty" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataStorage" eSuperTypes="#//BaseQuantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Entropy" eSuperTypes="#//BaseQuantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TrafficIntensity" eSuperTypes="#//BaseQuantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Level" eSuperTypes="#//BaseQuantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataStorage" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="DataStorageRequiresDataStorageUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="DataStorageRequiresDataStorageUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A data storage needs a data storage unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(DataStorageUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entropy" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="EntropyRequiresEntropyUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="EntropyRequiresEntropyUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: An entropy needs an entropy unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(EntropyUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrafficIntensity" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="TrafficIntensityRequiresTrafficIntensityUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="TrafficIntensityRequiresTrafficIntensityUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A traffic intensity needs a traffic intensity unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(TrafficIntensityUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Level" eSuperTypes="#//BaseQuantity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="LevelRequiresLevelUnit"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="LevelRequiresLevelUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A level needs a level unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(LevelUnit)&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataStorageUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntropyUnit" eSuperTypes="#//BaseQuantityUnit"/>
   <eClassifiers xsi:type="ecore:EClass" name="TrafficIntensityUnit" eSuperTypes="#//BaseQuantityUnit"/>

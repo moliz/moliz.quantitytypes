@@ -5,8 +5,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:model="http://www.example.org/model"
     xsi:schemaLocation="http://www.example.org/model ../model/model.ecore">
-  <value estimatedValue="500.0">
-    <uncertainty
-        standardUncertainty="1.0E-4"/>
-  </value>
+  <unit xsi:type="model:LengthUnit"
+      href="SystemOfUnits.xmi#//@units.0"/>
 </model:Length>

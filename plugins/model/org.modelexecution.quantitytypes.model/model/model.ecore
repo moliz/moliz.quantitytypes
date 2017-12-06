@@ -125,14 +125,71 @@
       <details key="LuminousIntensityRequiresLuminousIntensityUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A luminous intensity needs a luminous intensity unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(LuminousIntensityUnit)&#xA;}.status"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LengthUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MassUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TimeUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ElectricCurrentUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ThermodynamicTemperatureUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstanceUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LuminousIntensityUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AngleUnit" eSuperTypes="#//BaseQuantityUnit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LengthUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="LengthUnitRequiresLengthDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="LengthUnitRequiresLengthDimension" value="Tuple {&#xA;&#x9;message : String = 'A length unit needs to define exactly one length dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(LengthDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(LengthDimension)) -> asOrderedSet() -> first().oclAsType(LengthDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MassUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="MassUnitRequiresMassDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="MassUnitRequiresMassDimension" value="Tuple {&#xA;&#x9;message : String = 'A mass unit needs to define exactly one mass dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(MassDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(MassDimension)) -> asOrderedSet() -> first().oclAsType(MassDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="TimeUnitRequiresTimeDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="TimeUnitRequiresTimeDimension" value="Tuple {&#xA;&#x9;message : String = 'A time unit needs to define exactly one time dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(TimeDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(TimeDimension)) -> asOrderedSet() -> first().oclAsType(TimeDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectricCurrentUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ElectricCurrentUnitRequiresElectricCurrentDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="ElectricCurrentUnitRequiresElectricCurrentDimension" value="Tuple {&#xA;&#x9;message : String = 'An electric current unit needs to define exactly one electric current dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(ElectricCurrentDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(ElectricCurrentDimension)) -> asOrderedSet() -> first().oclAsType(ElectricCurrentDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ThermodynamicTemperatureUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ThermodynamicTemperatureUnitRequiresThermodynamicTemperatureDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="ThermodynamicTemperatureUnitRequiresThermodynamicTemperatureDimension"
+          value="Tuple {&#xA;&#x9;message : String = 'A thermodynamic temperature unit needs to define exactly one thermodynamic temperature dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(ThermodynamicTemperatureDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(ThermodynamicTemperatureDimension)) -> asOrderedSet() -> first().oclAsType(ThermodynamicTemperatureDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AmountOfSubstanceUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="AmountOfSubstanceUnitRequiresAmountOfSubstanceDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="AmountOfSubstanceUnitRequiresAmountOfSubstanceDimension" value="Tuple {&#xA;&#x9;message : String = 'An amount of substance unit needs to define exactly one amount of substance dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(AmountOfSubstanceDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(AmountOfSubstanceDimension)) -> asOrderedSet() -> first().oclAsType(AmountOfSubstanceDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LuminousIntensityUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="LuminousIntensityUnitRequiresLuminousIntensityDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="LuminousIntensityUnitRequiresLuminousIntensityDimension" value="Tuple {&#xA;&#x9;message : String = 'A luminous intensity unit needs to define exactly one luminous intensity dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(LuminousIntensityDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(LuminousIntensityDimension)) -> asOrderedSet() -> first().oclAsType(LuminousIntensityDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AngleUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="AngleUnitRequiresAngleDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="AngleUnitRequiresAngleDimension" value="Tuple {&#xA;&#x9;message : String = 'An angle unit needs to define exactly one angle dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(AngleDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(AngleDimension)) -> asOrderedSet() -> first().oclAsType(AngleDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SystemOfUnits">
     <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
         eType="#//Unit" containment="true"/>
@@ -202,10 +259,38 @@
       <details key="LevelRequiresLevelUnit" value="Tuple {&#xA;&#x9;message : String = 'Invalid unit: A level needs a level unit.',&#xA;&#x9;status : Boolean = self.unit.oclIsKindOf(LevelUnit)&#xA;}.status"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataStorageCapacityUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EntropyUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TrafficIntensityUnit" eSuperTypes="#//BaseQuantityUnit"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LevelUnit" eSuperTypes="#//BaseQuantityUnit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataStorageCapacityUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="DataStorageCapacityUnitRequiresDataStorageCapacityDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="DataStorageCapacityUnitRequiresDataStorageCapacityDimension" value="Tuple {&#xA;&#x9;message : String = 'A data storage capacity unit needs to define exactly one data storage capacity dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(DataStorageCapacityDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(DataStorageCapacityDimension)) -> asOrderedSet() -> first().oclAsType(DataStorageCapacityDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntropyUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="EntropyUnitRequiresEntropyDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="EntropyUnitRequiresEntropyDimension" value="Tuple {&#xA;&#x9;message : String = 'An entropy unit needs to define exactly one entropy dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(EntropyDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(EntropyDimension)) -> asOrderedSet() -> first().oclAsType(EntropyDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrafficIntensityUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="TrafficIntensityUnitRequiresTrafficIntensityDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="TrafficIntensityUnitRequiresTrafficIntensityDimension" value="Tuple {&#xA;&#x9;message : String = 'A traffic intensity unit needs to define exactly one traffic intensity dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(TrafficIntensityDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(TrafficIntensityDimension)) -> asOrderedSet() -> first().oclAsType(TrafficIntensityDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LevelUnit" eSuperTypes="#//BaseQuantityUnit">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="LevelUnitRequiresLevelDimension"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="LevelUnitRequiresLevelDimension" value="Tuple {&#xA;&#x9;message : String = 'A level unit needs to define exactly one level dimension with exponent 1.0.',&#xA;&#x9;status : Boolean = self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(LevelDimension)) -> size() = 1 and self.dimensions -> select (dim : Dimension | dim.oclIsKindOf(LevelDimension)) -> asOrderedSet() -> first().oclAsType(LevelDimension).exponent = 1.0 and self.dimensions -> size () = 1&#xA;}.status"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataStorageCapacityDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntropyDimension" eSuperTypes="#//Dimension"/>
   <eClassifiers xsi:type="ecore:EClass" name="TrafficIntensityDimension" eSuperTypes="#//Dimension"/>

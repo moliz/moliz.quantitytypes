@@ -2084,7 +2084,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_2q0RsKUOEeeq9urgDROiQQ" name="LuminosityIntensity" tooltipText="" outgoingEdges="_6fTagKUPEeeq9urgDROiQQ" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_2q0RsKUOEeeq9urgDROiQQ" name="LuminousIntensity" tooltipText="" outgoingEdges="_6fTagKUPEeeq9urgDROiQQ" width="12" height="10">
       <target xmi:type="ecore:EClass" href="model.ecore#//LuminousIntensity"/>
       <semanticElements xmi:type="ecore:EClass" href="model.ecore#//LuminousIntensity"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -2799,7 +2799,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_m-97gKUcEeeq9urgDROiQQ" name="DataStorageUnit" tooltipText="" outgoingEdges="__lzHUKUcEeeq9urgDROiQQ" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_m-97gKUcEeeq9urgDROiQQ" name="DataStorageCapacityUnit" tooltipText="" outgoingEdges="__lzHUKUcEeeq9urgDROiQQ" width="12" height="10">
       <target xmi:type="ecore:EClass" href="model.ecore#//DataStorageCapacityUnit"/>
       <semanticElements xmi:type="ecore:EClass" href="model.ecore#//DataStorageCapacityUnit"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>

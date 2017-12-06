@@ -104,19 +104,40 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="conversionFactors" upperBound="-1"
         eType="#//ConversionFactor" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRatioScaled" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"
-        derived="true"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
+        defaultValueLiteral="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="self.conversionFactors->forAll(f : ConversionFactor | f.offset = 0.0)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBaseUnit" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"
-        derived="true"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
+        defaultValueLiteral="false" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="self.conversionFactors->size() = 1 and self.conversionFactors->asOrderedSet()->first().multiplicator = 1.0 and self.conversionFactors->asOrderedSet()->first().offset = 0.0 and self.dimensions->size() = 1 and self.dimensions->asOrderedSet()->first().exponent = 1"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isDerivedUnit" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
-        defaultValueLiteral="false" derived="true"/>
+        defaultValueLiteral="false" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="not self.isBaseUnit"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isCoherentDerivedUnit"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        changeable="false" defaultValueLiteral="false" derived="true"/>
+        changeable="false" defaultValueLiteral="false" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="not self.isBaseUnit and self.conversionFactors -> forAll(f : ConversionFactor | f.multiplicator = 1.0 and f.offset = 0.0)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIntervalScaled" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" derived="true"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" changeable="false"
+        derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="self.conversionFactors -> exists(f : ConversionFactor | f.offset &lt;> 0.0)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mass" eSuperTypes="#//BaseQuantity">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">

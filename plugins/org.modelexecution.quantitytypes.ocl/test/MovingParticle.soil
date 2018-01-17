@@ -1,0 +1,95 @@
+-- INITIAL VALUES
+--Observation M0
+!new UReal('p0')
+!p0.x :=0.0
+!p0.u :=0.001
+!new UReal('t0')
+!t0.x :=0.0
+!t0.u :=0.0014
+!new UReal('v0')
+!v0.x :=0.0
+!v0.u :=0.0
+
+--Observation M1
+!new UReal('p1')
+!p1.x :=10.0
+!p1.u :=0.001
+!new UReal('t1')
+!t1.x :=10.0
+!t1.u :=0.0019799
+!new UReal('v1')
+!v1.x :=2.0
+!v1.u :=0.002
+
+
+!new Unit('m')
+!m.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!m.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!m.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!m.name:=m.defaultName();
+!m.symbol:=m.defaultSymbol();
+
+!new Unit('s')
+!s.dimensions := Sequence{0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!s.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!s.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!s.name:=s.defaultName();
+!s.symbol:=s.defaultSymbol();
+
+!new Unit('ms')
+!ms.dimensions := Sequence{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!ms.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!ms.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!ms.name:=s.defaultName();
+!ms.symbol:=s.defaultSymbol();
+
+!new Quantity('m0Position')
+!new Quantity('m1Position')
+!new Quantity('m0Time')
+!new Quantity('m1Time')
+!new Quantity('m0Velocity')
+!new Quantity('m1Velocity')
+
+!new Quantity('distance')
+!new Quantity('duration')
+!new Quantity('avrgVelocity')
+!new Quantity('avrgAcceleration')
+
+!m0Position.value := p0
+!m0Position.unit := m
+!m1Position.value := p1
+!m1Position.unit := m
+!m0Time.value := t0
+!m0Time.unit := s
+!m1Time.value := t1
+!m1Time.unit := s
+!m0Velocity.value := v0
+!m0Velocity.unit := ms
+!m1Velocity.value := v1
+!m1Velocity.unit := ms
+
+
+!distance:=m1Position.minus(m0Position)
+?distance.value.x
+?distance.value.u
+?distance.unit.symbol
+?distance.unit.dimensions
+
+!duration:=m1Time.minus(m0Time)
+?duration.value.x
+?duration.value.u
+?duration.unit.symbol
+?duration.unit.dimensions
+
+!avrgVelocity:=distance.divideBy(duration)
+?avrgVelocity.value.x
+?avrgVelocity.value.u
+?avrgVelocity.unit.symbol
+?avrgVelocity.unit.dimensions
+
+!avrgAcceleration:=avrgVelocity.divideBy(duration)
+?avrgAcceleration.value.x
+?avrgAcceleration.value.u
+?avrgAcceleration.unit.symbol
+?avrgAcceleration.unit.dimensions
+

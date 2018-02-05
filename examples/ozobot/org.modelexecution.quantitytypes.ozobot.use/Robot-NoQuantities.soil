@@ -1,0 +1,45 @@
+!new Coordinate('initial')
+!initial.x:=0.0
+!initial.y:=0.0
+!new Coordinate('target')
+!target.x:=10.0
+!target.y:=10.0
+
+!new Robot('robot')
+!robot.position:=initial
+!robot.headsTo:=0
+
+!new Movement('m1')
+!m1.move:=10.0
+
+!new Movement('m2')
+!m2.rotate:=1.5707963267948965
+
+!new Movement('m3')
+!m3.move:=10.0
+
+!new Movement('m4')
+!m4.move:=14.1421356
+!m4.rotate:=5.0*3.141592653589793/4.0
+
+!new Movement('m5')
+!m5.move:=14.1421356
+!m5.rotate:=3.141592653589793/4.0
+
+!insert(robot,m1) into Plan
+!insert(robot,m2) into Plan
+!insert(robot,m3) into Plan
+!insert(robot,m4) into Plan
+!insert(robot,m5) into Plan
+
+!robot.performAllMoves()
+
+?target.x
+?target.y
+?robot.position.x
+?robot.position.y
+?robot.headsTo
+
+!b:=robot.position.coincide(target)
+?b
+

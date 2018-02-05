@@ -1,0 +1,57 @@
+use> open MovingRobot-NoQuantities.use
+compiling specification...
+done
+Model MovingRobot (4 classes, 2 associations, 0 invariants, 3 operations, 0 pre-/postconditions, 0 state machines)
+use> open Robot-NoQuantities.soil
+Robot-NoQuantities.soil> !new Coordinate('initial')
+Robot-NoQuantities.soil> !initial.x:=0.0
+Robot-NoQuantities.soil> !initial.y:=0.0
+Robot-NoQuantities.soil> !new Coordinate('target')
+Robot-NoQuantities.soil> !target.x:=10.0
+Robot-NoQuantities.soil> !target.y:=10.0
+Robot-NoQuantities.soil>
+Robot-NoQuantities.soil> !new Robot('robot')
+Robot-NoQuantities.soil> !robot.position:=initial
+Robot-NoQuantities.soil> !robot.headsTo:=0
+Robot-NoQuantities.soil>
+Robot-NoQuantities.soil> !new Movement('m1')
+Robot-NoQuantities.soil> !m1.move:=10.0
+Robot-NoQuantities.soil>
+Robot-NoQuantities.soil> !new Movement('m2')
+Robot-NoQuantities.soil> !m2.rotate:=1.5707963267948965
+Robot-NoQuantities.soil>
+Robot-NoQuantities.soil> !new Movement('m3')
+Robot-NoQuantities.soil> !m3.move:=10.0
+Robot-NoQuantities.soil>
+Robot-NoQuantities.soil> !new Movement('m4')
+Robot-NoQuantities.soil> !m4.move:=14.1421356
+Robot-NoQuantities.soil> !m4.rotate:=5.0*3.141592653589793/4.0
+Robot-NoQuantities.soil>
+Robot-NoQuantities.soil> !new Movement('m5')
+Robot-NoQuantities.soil> !m5.move:=14.1421356
+Robot-NoQuantities.soil> !m5.rotate:=3.141592653589793/4.0
+Robot-NoQuantities.soil>
+Robot-NoQuantities.soil> !insert(robot,m1) into Plan
+Robot-NoQuantities.soil> !insert(robot,m2) into Plan
+Robot-NoQuantities.soil> !insert(robot,m3) into Plan
+Robot-NoQuantities.soil> !insert(robot,m4) into Plan
+Robot-NoQuantities.soil> !insert(robot,m5) into Plan
+Robot-NoQuantities.soil>
+Robot-NoQuantities.soil> !robot.performAllMoves()
+Robot-NoQuantities.soil>
+Robot-NoQuantities.soil> ?target.x
+-> 10.0 : Real
+Robot-NoQuantities.soil> ?target.y
+-> 10.0 : Real
+Robot-NoQuantities.soil> ?robot.position.x
+-> 9.999999999999998 : Real
+Robot-NoQuantities.soil> ?robot.position.y
+-> 10.0 : Real
+Robot-NoQuantities.soil> ?robot.headsTo
+-> 0.7853981633974483 : Real
+Robot-NoQuantities.soil>
+Robot-NoQuantities.soil> !b:=robot.position.coincide(target)
+Robot-NoQuantities.soil> ?b
+-> true : Boolean
+Robot-NoQuantities.soil>
+Robot-NoQuantities.soil>

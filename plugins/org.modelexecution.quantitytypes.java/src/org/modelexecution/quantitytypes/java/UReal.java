@@ -261,6 +261,37 @@ public class UReal implements Cloneable,Comparable<UReal> {
 		return result;
 	}
 
+	/***
+	 * comparison operations WITH ZERO = UReal(0.0)
+	 */
+	public boolean ltZero() {
+		return this.lt(new UReal());
+	}
+	
+	
+	public boolean leZero() {
+		return this.le(new UReal());
+	}
+
+	
+	public boolean gtZero() {
+		return this.gt(new UReal());
+	}
+	
+	
+	public boolean geZero() {
+		return this.ge(new UReal());
+	}
+	
+
+	public boolean equalsZero() {
+		return this.equals(new UReal());
+	}
+
+	public boolean distinctZero() {
+		return this.distinct(new UReal());
+	}
+
 	/*** 
 	 *   FUZZY COMPARISON OPERATIONS
 	 *   Assume UReal values (x,u) represent standard uncertainty values, i.e., they follow a Normal distribution
@@ -442,14 +473,47 @@ public class UReal implements Cloneable,Comparable<UReal> {
 		Result r = this.calculate(number);
 		return r.gt+r.eq;
 	}
-	
-
-
-    
+   
 	/*** 
 	 *   END OF FUZZY COMPARISON OPERATIONS
 	 */
+
+
+	/*** 
+	 *   FUZZY COMPARISON OPERATIONS WITH ZERO=UReal(0.0,0.0)
+	 *   Assume UReal values (x,u) represent standard uncertainty values, i.e., they follow a Normal distribution
+	 *   of mean x and standard deviation \sigma = u
+	 */
 	
+
+	public double uEqualsZero() {
+		return this.uEquals(new UReal());
+	}
+
+	public double uDistinctZero() {
+		return this.uDistinct(new UReal());
+	}
+
+	public double uLtZero() {
+		return this.uLt(new UReal());
+	}
+	
+	public double uLeZero() {
+		return this.uLe(new UReal());
+	}
+
+	public double uGtZero() {
+		return this.uGt(new UReal());
+	}
+
+	public double uGeZero() {
+		return this.uGe(new UReal());
+	}
+    
+	/*** 
+	 *   END OF FUZZY COMPARISON OPERATIONS WITH ZERO
+	 */
+
 	@Override
 	public int compareTo(UReal other) {
 		if (this.equals(other)) return 0;

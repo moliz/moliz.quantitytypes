@@ -3,15 +3,40 @@ package org.modelexecution.quantitytypes.java;
 import java.util.Arrays;
 import java.util.Random;
 
-public class N_UReal implements Cloneable {
+
+public class N_UReal implements Cloneable,Comparable<N_UReal>{
 	
-	protected final int MAXLENGTH = 1000;
+	protected final int MAXLENGTH = 100000;
 	protected double [] sample = new double [MAXLENGTH];
 	private static Random rnd = new Random();
 
-	protected double x =0.0; 
+	protected double x = 0.0; 
 	protected double u = 0.0;
 
+	/**
+	 * auxiliary class
+	 */
+	class Result {
+		double lt;
+		double eq;
+		double gt;
+		
+		Result (){
+			this.lt = 0.0;
+			this.eq= 1.0;
+			this.gt = 0.0;
+		}
+		Result (double l, double e, double g){
+			this.lt = l;
+			this.eq= e;
+			this.gt = g;
+		}
+		
+		Result check(boolean swap){ //swap the values if swap == true
+			if (!swap) return this;
+			return new Result(this.gt,this.eq,this.lt);
+		}
+	}
 
 	/**
 	 * auxiliary methods
@@ -273,7 +298,11 @@ public class N_UReal implements Cloneable {
 		return result;
 	}
 
-	public boolean lessThan(N_UReal r) {
+	/*** 
+	 *   CRISP COMPARISON OPERATIONS
+	 */
+
+	public boolean lt(N_UReal r) {
 		boolean result = false;
 		result = (this.getX() < r.getX()) &&
                  ((this.getX() + this.getU())  < (r.getX() - r.getU()));
@@ -281,9 +310,9 @@ public class N_UReal implements Cloneable {
 	}
 	
 	
-	public boolean lessEq(N_UReal r) {
+	public boolean le(N_UReal r) {
 		boolean result = false;
-		result = (this.lessThan(r) || this.equals(r));
+		result = (this.lt(r) || this.equals(r));
 		return result;
 	}
 
@@ -291,7 +320,7 @@ public class N_UReal implements Cloneable {
 	public boolean gt(N_UReal r) {
 		boolean result = false;
 		
-		result = r.lessThan(this);
+		result = r.lt(this);
 		
 		return result;
 	}
@@ -324,6 +353,134 @@ public class N_UReal implements Cloneable {
 		return result;
 	}
 	
+	/***
+	 * comparison operations WITH ZERO = UReal(0.0)
+	 */
+	public boolean ltZero() {
+		return this.lt(new N_UReal());
+	}
+	
+	
+	public boolean leZero() {
+		return this.le(new N_UReal());
+	}
+
+	
+	public boolean gtZero() {
+		return this.gt(new N_UReal());
+	}
+	
+	
+	public boolean geZero() {
+		return this.ge(new N_UReal());
+	}
+	
+
+	public boolean equalsZero() {
+		return this.equals(new N_UReal());
+	}
+
+	public boolean distinctZero() {
+		return this.distinct(new N_UReal());
+	}
+
+
+	/*** 
+	 *   FUZZY COMPARISON OPERATIONS
+	 */
+
+    /** 
+     * This method returns three numbers (lt, eq, gt) with the probabilities that 
+     * lt: this < number, 
+     * eq: this = number
+     * gt: this > number
+     */
+	private Result calculate(N_UReal number) {
+		Result res = new Result(0.0,0.0,0.0);
+	
+	    for (int i = 0; i < MAXLENGTH; i++) {
+	    	if (this.sample[i] < number.sample[i]) res.lt++;
+	    	else if (this.sample[i] > number.sample[i]) res.gt++;
+	    	else res.eq++;
+	    };
+	    res.lt = res.lt/MAXLENGTH;
+	    res.gt = res.gt/MAXLENGTH;
+	    res.eq = 1.0 - (res.lt+res.gt);
+	    return res;
+	}
+
+	public double uEquals(N_UReal number) {
+		Result r = this.calculate(number);
+		return r.eq;
+	}
+
+	public double uDistinct(N_UReal number) {
+	
+		return 1.0 - (this.uEquals(number));
+	}
+
+	public double uLt(N_UReal number) {
+		Result r = this.calculate(number);
+		return r.lt;
+	}
+	
+	public double uLe(N_UReal number) {
+		Result r = this.calculate(number);
+			return r.lt+r.eq;
+	}
+
+	public double uGt(N_UReal number) {
+		Result r = this.calculate(number);
+			return r.gt;
+	}
+
+	
+	public double uGe(N_UReal number) {
+		Result r = this.calculate(number);
+		return r.gt+r.eq;
+	}
+	/*** 
+	 *   FUZZY COMPARISON OPERATIONS WITH ZERO=UReal(0.0,0.0)
+	 */
+	
+
+	public double uEqualsZero() {
+		return this.uEquals(new N_UReal());
+	}
+
+	public double uDistinctZero() {
+		return this.uDistinct(new N_UReal());
+	}
+
+	public double uLtZero() {
+		return this.uLt(new N_UReal());
+	}
+	
+	public double uLeZero() {
+		return this.uLe(new N_UReal());
+	}
+
+	public double uGtZero() {
+		return this.uGt(new N_UReal());
+	}
+
+	public double uGeZero() {
+		return this.uGe(new N_UReal());
+	}
+    
+	/*** 
+	 *   END OF FUZZY COMPARISON OPERATIONS
+	 */
+
+	
+	
+	@Override
+	public int compareTo(N_UReal other) {
+		if (this.equals(other)) return 0;
+		if (this.lt(other)) return -1;
+		return 1;
+	}
+
 	public N_UReal inv() { //inverse (reciprocal)
 		return new N_UReal(1.0).divideBy(this);
 	}
@@ -348,7 +505,7 @@ public class N_UReal implements Cloneable {
 	
 	
 	public N_UReal min(N_UReal r) {
-		if (r.lessThan(this)) return r.clone(); 
+		if (r.lt(this)) return r.clone(); 
 		return this.clone();
 	}
 	public N_UReal max(N_UReal r) {
@@ -365,9 +522,23 @@ public class N_UReal implements Cloneable {
 		return "(" + x + "," + u + ") ["+sample[0]+","+sample[1]+","+sample[2]+","+sample[3]+","+sample[4]+"]";
 	}
 
-	/******
-	 * Other
+	
+	public int toInteger(){ //
+		return (int)Math.floor(this.getX());
+	}
+	
+	public double toReal()  { 
+		return this.getX();
+	}
+	
+	/**
+	 * Other Methods 
 	 */
+
+ 	public int hashcode(){ //required for equals()
+		return Math.round((float)x);
+	}
+
 
 	public N_UReal clone() {
 		return new N_UReal(this.getX(),this.getU(),this.sample);

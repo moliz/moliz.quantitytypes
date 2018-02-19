@@ -1062,6 +1062,23 @@ divideBy(r : UReal) : UReal
         result := aux;
     end   
 
+sin() :UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x.sin();
+        aux.u := self.x.cos() * self.u ;
+        result := aux;
+    end   
+
+cos() :UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x.cos();
+        aux.u := self.x.sin() * self.u ;
+        result := aux;
+    end   
    
 abs() : UReal
      begin

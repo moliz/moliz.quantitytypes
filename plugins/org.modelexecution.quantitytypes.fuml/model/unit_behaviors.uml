@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_DibbkIbhEeasqvfKuoya8g" name="UnitBehaviors">
+    <packagedElement xmi:type="uml:Package" xmi:id="_IoUscIbjEeasqvfKuoya8g" name="UnitFunctions">
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_dIa-UIbhEeasqvfKuoya8g" name="UnitIsBaseUnit">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_haYiwIbhEeasqvfKuoya8g" name="unit">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_jVK0cIbhEeasqvfKuoya8g" name="result" direction="out">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_LrbtkIbiEeasqvfKuoya8g" name="UnitIsDerivedUnit">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LrbtkYbiEeasqvfKuoya8g" name="unit">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LrbtkobiEeasqvfKuoya8g" name="result" direction="out">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_NDrS4IbiEeasqvfKuoya8g" name="UnitIsUnitless">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NDrS4YbiEeasqvfKuoya8g" name="unit">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NDrS4obiEeasqvfKuoya8g" name="result" direction="out">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_NUnR4IbiEeasqvfKuoya8g" name="UnitIsDimensionless">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NUnR4YbiEeasqvfKuoya8g" name="unit">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NUnR4obiEeasqvfKuoya8g" name="result" direction="out">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_Nd80EIbiEeasqvfKuoya8g" name="UnitIsCompatibleWith">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Nd80EYbiEeasqvfKuoya8g" name="unit1">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YojEQIbiEeasqvfKuoya8g" name="unit2">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Nd80EobiEeasqvfKuoya8g" name="result" direction="out">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_NmBK8IbiEeasqvfKuoya8g" name="UnitMultiply">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NmBK8YbiEeasqvfKuoya8g" name="unit1">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_eLqukIbiEeasqvfKuoya8g" name="unit2">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NmBK8obiEeasqvfKuoya8g" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_iw5NQIbiEeasqvfKuoya8g" name="UnitDivide">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iw5NQYbiEeasqvfKuoya8g" name="unit1">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iw5NQobiEeasqvfKuoya8g" name="unit2">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iw5NQ4biEeasqvfKuoya8g" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_Nu294IbiEeasqvfKuoya8g" name="UnitPower">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Nu294YbiEeasqvfKuoya8g" name="unit">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_sbwwEIbiEeasqvfKuoya8g" name="s">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Nu294obiEeasqvfKuoya8g" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_N2Lt4IbiEeasqvfKuoya8g" name="UnitEquals">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_N2Lt4YbiEeasqvfKuoya8g" name="unit1">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-5TCYIbiEeasqvfKuoya8g" name="unit2">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_N2Lt4obiEeasqvfKuoya8g" name="result" direction="out">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_MaSiMIbjEeasqvfKuoya8g">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MaVlgIbjEeasqvfKuoya8g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:ModelLibrary xmi:id="_NV5O0IbjEeasqvfKuoya8g" base_Package="_IoUscIbjEeasqvfKuoya8g"/>
+</xmi:XMI>

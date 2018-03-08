@@ -62,6 +62,17 @@
           <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
         </ownedParameter>
       </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_Y8bSsIZXEeac_O_NHDIeYg" name="URealLessThan">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_b1PS4IZXEeac_O_NHDIeYg" name="x">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_b1PS4YZXEeac_O_NHDIeYg" name="y">
+          <type xmi:type="uml:DataType" href="uncertainty_types.uml#_SDW-IHNIEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_crEHoIZXEeac_O_NHDIeYg" name="result">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </packagedElement>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8gKPcHQYEeaXEsucMy-yAQ">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8gKPcXQYEeaXEsucMy-yAQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ajcHkOcKEeeVf5cFU4mLQA" type="PapyrusUMLClassDiagram" name="Class Diagram" measurementUnit="Pixel">
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ajcHkOcKEeeVf5cFU4mLQA" type="PapyrusUMLClassDiagram" name="Class Diagram" measurementUnit="Pixel">
   <children xmi:type="notation:Shape" xmi:id="_10qdEOcKEeeVf5cFU4mLQA" type="DataType_Shape">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_guowgPAIEeeCa6mAgb8KHQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gusa4PAIEeeCa6mAgb8KHQ" key="fillColor" value="true"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iPMkUPAIEeeCa6mAgb8KHQ" key="gradient" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_11Zc4OcKEeeVf5cFU4mLQA" type="DataType_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_11bSEOcKEeeVf5cFU4mLQA" type="DataType_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_11b5IOcKEeeVf5cFU4mLQA" y="15"/>
@@ -29,6 +33,10 @@
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_10qdEecKEeeVf5cFU4mLQA" x="520" y="80"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_QmCtgOcOEeeVf5cFU4mLQA" type="DataType_Shape">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gu4BEPAIEeeCa6mAgb8KHQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gu4BEfAIEeeCa6mAgb8KHQ" key="fillColor" value="true"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iaspsPAIEeeCa6mAgb8KHQ" key="gradient" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_QmEisOcOEeeVf5cFU4mLQA" type="DataType_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_QmEisecOEeeVf5cFU4mLQA" type="DataType_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_QmEisucOEeeVf5cFU4mLQA" y="15"/>
@@ -57,6 +65,10 @@
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QmCtgecOEeeVf5cFU4mLQA" x="880" y="80"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_vfyo4ecOEeeVf5cFU4mLQA" type="DataType_Shape">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__VAncvAJEeeCa6mAgb8KHQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__VAnc_AJEeeCa6mAgb8KHQ" key="fillColor" value="true"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__gmMYPAJEeeCa6mAgb8KHQ" key="gradient" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_vfyo4-cOEeeVf5cFU4mLQA" type="DataType_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_vfyo5OcOEeeVf5cFU4mLQA" type="DataType_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_vfyo5ecOEeeVf5cFU4mLQA" y="15"/>
@@ -85,6 +97,10 @@
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vfyo4ucOEeeVf5cFU4mLQA" x="1140" y="80"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_6Y8jwecOEeeVf5cFU4mLQA" type="DataType_Shape">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__VAncPAJEeeCa6mAgb8KHQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__VAncfAJEeeCa6mAgb8KHQ" key="fillColor" value="true"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__gKHgPAJEeeCa6mAgb8KHQ" key="gradient" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_6Y8jw-cOEeeVf5cFU4mLQA" type="DataType_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_6Y8jxOcOEeeVf5cFU4mLQA" type="DataType_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_6Y8jxecOEeeVf5cFU4mLQA" y="15"/>
@@ -109,6 +125,10 @@
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6Y8jwucOEeeVf5cFU4mLQA" x="1140" y="240"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_JOh38OcPEeeVf5cFU4mLQA" type="DataType_Shape">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_guxTYPAIEeeCa6mAgb8KHQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_guxTYfAIEeeCa6mAgb8KHQ" key="fillColor" value="true"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iQ_UEPAIEeeCa6mAgb8KHQ" key="gradient" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_JOh38ucPEeeVf5cFU4mLQA" type="DataType_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_JOh38-cPEeeVf5cFU4mLQA" type="DataType_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_JOh39OcPEeeVf5cFU4mLQA" y="15"/>
@@ -129,6 +149,10 @@
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JOh38ecPEeeVf5cFU4mLQA" x="440" y="260"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_KxBlcecPEeeVf5cFU4mLQA" type="DataType_Shape">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_guzIkPAIEeeCa6mAgb8KHQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_guzIkfAIEeeCa6mAgb8KHQ" key="fillColor" value="true"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iSzR8PAIEeeCa6mAgb8KHQ" key="gradient" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_KxBlc-cPEeeVf5cFU4mLQA" type="DataType_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_KxBldOcPEeeVf5cFU4mLQA" type="DataType_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_KxBldecPEeeVf5cFU4mLQA" y="15"/>
@@ -149,6 +173,10 @@
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KxBlcucPEeeVf5cFU4mLQA" x="560" y="260"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_PoKTgecPEeeVf5cFU4mLQA" type="DataType_Shape">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gu1k0PAIEeeCa6mAgb8KHQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gu1k0fAIEeeCa6mAgb8KHQ" key="fillColor" value="true"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iVTzYPAIEeeCa6mAgb8KHQ" key="gradient" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_PoKTg-cPEeeVf5cFU4mLQA" type="DataType_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_PoKThOcPEeeVf5cFU4mLQA" type="DataType_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_PoKThecPEeeVf5cFU4mLQA" y="15"/>
@@ -169,6 +197,10 @@
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PoKTgucPEeeVf5cFU4mLQA" x="800" y="260"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_TqgHkOcPEeeVf5cFU4mLQA" type="DataType_Shape">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gu2L4PAIEeeCa6mAgb8KHQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gu2L4fAIEeeCa6mAgb8KHQ" key="fillColor" value="true"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iWgtQPAIEeeCa6mAgb8KHQ" key="gradient" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_TqgHkucPEeeVf5cFU4mLQA" type="DataType_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_Tqij0OcPEeeVf5cFU4mLQA" type="DataType_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_Tqij0ecPEeeVf5cFU4mLQA" y="15"/>
@@ -189,6 +221,10 @@
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TqgHkecPEeeVf5cFU4mLQA" x="911" y="259"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_HLKckOcQEeeVf5cFU4mLQA" type="DataType_Shape">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gu0WsPAIEeeCa6mAgb8KHQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gu0WsfAIEeeCa6mAgb8KHQ" key="fillColor" value="true"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iUEdQPAIEeeCa6mAgb8KHQ" key="gradient" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_HLM40OcQEeeVf5cFU4mLQA" type="DataType_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_HLM40ecQEeeVf5cFU4mLQA" type="DataType_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_HLM40ucQEeeVf5cFU4mLQA" y="15"/>
@@ -209,6 +245,10 @@
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HLKckecQEeeVf5cFU4mLQA" x="680" y="260"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_I6JG4OcQEeeVf5cFU4mLQA" type="DataType_Shape">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gu2y8PAIEeeCa6mAgb8KHQ" source="PapyrusCSSForceValue">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gu2y8fAIEeeCa6mAgb8KHQ" key="fillColor" value="true"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iXuOMPAIEeeCa6mAgb8KHQ" key="gradient" value="true"/>
+    </eAnnotations>
     <children xmi:type="notation:DecorationNode" xmi:id="_I6LjIOcQEeeVf5cFU4mLQA" type="DataType_NameLabel"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_I6LjIecQEeeVf5cFU4mLQA" type="DataType_FloatingNameLabel">
       <layoutConstraint xmi:type="notation:Location" xmi:id="_I6LjIucQEeeVf5cFU4mLQA" y="15"/>

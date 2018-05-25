@@ -1,0 +1,202 @@
+use> open Robot.soil
+Robot.soil> -- reset
+Robot.soil> -- open Robot.soil
+Robot.soil>
+Robot.soil> --- UNIT
+Robot.soil> !new Unit('Km')
+Robot.soil> !new Unit('m')
+Robot.soil> !new Unit('ft')
+Robot.soil> !new Unit('rad')
+Robot.soil> !Km.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+Robot.soil> !m.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+Robot.soil> !ft.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+Robot.soil> !rad.dimensions := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0}
+Robot.soil>
+Robot.soil> !Km.conversionFactor := Sequence{1000.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+Robot.soil> !m.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+Robot.soil> !ft.conversionFactor := Sequence{0.3048,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+Robot.soil> !rad.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+Robot.soil>
+Robot.soil> !Km.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+Robot.soil> !m.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+Robot.soil> !ft.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+Robot.soil> !rad.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+Robot.soil>
+Robot.soil> !Km.name := 'Kilometer'
+Robot.soil> !m.name := m.defaultName()
+Robot.soil> !ft.name := 'Foot'
+Robot.soil> !rad.name := rad.defaultName()
+Robot.soil> !Km.symbol := 'Km'
+Robot.soil> !m.symbol := m.defaultSymbol()
+Robot.soil> !ft.symbol := 'ft'
+Robot.soil> !rad.symbol := rad.defaultSymbol()
+Robot.soil>
+Robot.soil>
+Robot.soil> !lp:=0.001 -- precision for meters
+Robot.soil> !ap:=0.001 -- precision for angles
+Robot.soil>
+Robot.soil> !lt:=0.0 -- length tolerance for distance movements
+Robot.soil> !at:=0.0 -- angle tolerance for angle movements
+Robot.soil>
+Robot.soil>
+Robot.soil> -- UReal VALUES
+Robot.soil> !new UReal('x00U')
+Robot.soil> !new UReal('x10U')
+Robot.soil> !new UReal('x20U')
+Robot.soil> !new UReal('x30U')
+Robot.soil> !x00U.x :=0.0
+Robot.soil> !x00U.u :=lp
+Robot.soil> !x10U.x :=10.0
+Robot.soil> !x10U.u :=lp
+Robot.soil> !x20U.x :=20.0
+Robot.soil> !x20U.u :=lp
+Robot.soil> !x30U.x :=30.0
+Robot.soil> !x30U.u :=lp
+Robot.soil> !new UReal('y00U')
+Robot.soil> !new UReal('y10U')
+Robot.soil> !new UReal('y20U')
+Robot.soil> !new UReal('y30U')
+Robot.soil> !y00U.x :=0.0
+Robot.soil> !y00U.u :=lp
+Robot.soil> !y10U.x :=10.0
+Robot.soil> !y10U.u :=lp
+Robot.soil> !y20U.x :=20.0
+Robot.soil> !y20U.u :=lp
+Robot.soil> !y30U.x :=30.0
+Robot.soil> !y30U.u :=lp
+Robot.soil>
+Robot.soil> !new UReal('xy1010U')
+Robot.soil> !xy1010U.x:=1.41421356*10.0
+Robot.soil> !xy1010U.u:=lp
+Robot.soil>
+Robot.soil> !new UReal('h0U')
+Robot.soil> !new UReal('h90U')
+Robot.soil> !new UReal('h180U')
+Robot.soil> !new UReal('h270U')
+Robot.soil> !new UReal('h45U')
+Robot.soil> !new UReal('h225U')
+Robot.soil>
+Robot.soil> !h0U.x :=0.0
+Robot.soil> !h0U.u :=ap
+Robot.soil> !h90U.x :=1.5707963267948965
+Robot.soil> !h90U.u :=ap
+Robot.soil> !h180U.x :=3.141592653589793
+Robot.soil> !h180U.u :=ap
+Robot.soil> !h270U.x :=4.7123889803846895
+Robot.soil> !h270U.u :=ap
+Robot.soil> !h45U.x :=3.141592653589793/4.0
+Robot.soil> !h45U.u :=ap
+Robot.soil> !h225U.x :=5.0*3.141592653589793/4.0
+Robot.soil> !h225U.u :=ap
+Robot.soil>
+Robot.soil> !new UReal('lengthTolerance')
+Robot.soil> !lengthTolerance.x:=lt
+Robot.soil> !lengthTolerance.u:=0.0
+Robot.soil> !new UReal('angleTolerance')
+Robot.soil> !angleTolerance.x:=at
+Robot.soil> !angleTolerance.u:=0.0
+Robot.soil>
+Robot.soil> --- LENGTHS
+Robot.soil>
+Robot.soil> !new Length('x00')
+Robot.soil> !x00.value:=x00U
+Robot.soil> !x00.unit:=m
+Robot.soil> !new Length('y00')
+Robot.soil> !y00.value:=y00U
+Robot.soil> !y00.unit:=m
+Robot.soil> !new Length('x10')
+Robot.soil> !x10.value:=x10U
+Robot.soil> !x10.unit:=m
+Robot.soil> !new Length('y10')
+Robot.soil> !y10.value:=y10U
+Robot.soil> !y10.unit:=m
+Robot.soil> !new Length('x20')
+Robot.soil> !x20.value:=x20U
+Robot.soil> !x20.unit:=m
+Robot.soil> !new Length('y20')
+Robot.soil> !y20.value:=y20U
+Robot.soil> !y20.unit:=m
+Robot.soil> !new Length('x30')
+Robot.soil> !x30.value:=x30U
+Robot.soil> !x30.unit:=m
+Robot.soil> !new Length('y30')
+Robot.soil> !y30.value:=y30U
+Robot.soil> !y30.unit:=m
+Robot.soil> !new Length('xy1010')
+Robot.soil> !xy1010.value:=xy1010U
+Robot.soil> !xy1010.unit:=ft
+Robot.soil>
+Robot.soil> -- ANGLES
+Robot.soil> !new Angle('h0')
+Robot.soil> !new Angle('h90')
+Robot.soil> !new Angle('h180')
+Robot.soil> !new Angle('h270')
+Robot.soil> !new Angle('h45')
+Robot.soil> !new Angle('h225')
+Robot.soil>
+Robot.soil> !h0.value :=h0U
+Robot.soil> !h0.unit:=rad
+Robot.soil> !h90.value :=h90U
+Robot.soil> !h90.unit:=rad
+Robot.soil> !h180.value :=h180U
+Robot.soil> !h180.unit:=rad
+Robot.soil> !h270.value :=h270U
+Robot.soil> !h270.unit:=rad
+Robot.soil> !h45.value :=h45U
+Robot.soil> !h45.unit:=rad
+Robot.soil> !h225.value :=h225U
+Robot.soil> !h225.unit:=rad
+Robot.soil>
+Robot.soil> !new Coordinate('initial')
+Robot.soil> !initial.x:=x00
+Robot.soil> !initial.y:=y00
+Robot.soil> !new Coordinate('target')
+Robot.soil> !target.x:=x10
+Robot.soil> !target.y:=y10
+Robot.soil>
+Robot.soil> !new Robot('robot')
+Robot.soil> !robot.position:=initial
+Robot.soil> !robot.headsTo:=h0
+Robot.soil>
+Robot.soil> !new Movement('m1')
+Robot.soil> !m1.move:=x10
+Robot.soil>
+Robot.soil> !new Movement('m2')
+Robot.soil> !m2.rotate:=h90
+Robot.soil>
+Robot.soil> !new Movement('m3')
+Robot.soil> !m3.move:=x10
+Robot.soil>
+Robot.soil> !new Movement('m4')
+Robot.soil> !m4.move:=xy1010
+Robot.soil> !m4.rotate:=h225
+Robot.soil>
+Robot.soil> !new Movement('m5')
+Robot.soil> !m5.move:=xy1010
+Robot.soil> !m5.rotate:=h45
+Robot.soil>
+Robot.soil> !insert(robot,m1) into Plan
+Robot.soil> !insert(robot,m2) into Plan
+Robot.soil> !insert(robot,m3) into Plan
+Robot.soil> !insert(robot,m4) into Plan
+Robot.soil> !insert(robot,m5) into Plan
+Robot.soil>
+Robot.soil> !robot.performAllMoves()
+Robot.soil>
+Robot.soil> ?target.xy
+-> Tuple{x=10.0,y=10.0} : Tuple(x:Real,y:Real)
+Robot.soil> ?target.u
+-> Tuple{ux=0.001,uy=0.001} : Tuple(ux:Real,uy:Real)
+Robot.soil> ?robot.xyh
+-> Tuple{x=10.0,y=10.0,h=0.7853981633974483} : Tuple(x:Real,y:Real,h:Real)
+Robot.soil> ?robot.u
+-> Tuple{ux=0.010985149565556325,uy=0.010985149565556325,uh=0.001} : Tuple(ux:Real,uy:Real,uh:Real)
+Robot.soil> !b:=robot.position.coincide(target)
+Robot.soil> ?b
+-> true : Boolean
+Robot.soil> !r:=robot.position.uCoincide(target)
+Robot.soil> ?r
+-> 0.03479626661931806 : Real
+Robot.soil>
+Robot.soil>
+use> 

@@ -13,6 +13,77 @@
           <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
         </ownedParameter>
       </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_hlK0sIZYEeac_O_NHDIeYg" name="QuantityPlus">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hlK0sYZYEeac_O_NHDIeYg" name="x">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hlK0soZYEeac_O_NHDIeYg" name="y">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hlK0s4ZYEeac_O_NHDIeYg" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_iOYJwIZYEeac_O_NHDIeYg" name="QuantityDivide">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOYJwYZYEeac_O_NHDIeYg" name="x">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOYJwoZYEeac_O_NHDIeYg" name="y">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iOYJw4ZYEeac_O_NHDIeYg" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_iWduwIZYEeac_O_NHDIeYg" name="QuantityTimes">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iWduwYZYEeac_O_NHDIeYg" name="x">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iWduwoZYEeac_O_NHDIeYg" name="y">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iWduw4ZYEeac_O_NHDIeYg" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_n0MiwIZYEeac_O_NHDIeYg" name="QuantityAbs">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_n0MiwYZYEeac_O_NHDIeYg" name="x">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_n0Miw4ZYEeac_O_NHDIeYg" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_n8vawIZYEeac_O_NHDIeYg" name="QuantityNegate">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_n8vawYZYEeac_O_NHDIeYg" name="x">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_n8vaw4ZYEeac_O_NHDIeYg" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_pMiOsIZYEeac_O_NHDIeYg" name="QuantityLessThan">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pMiOsYZYEeac_O_NHDIeYg" name="x">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pMiOsoZYEeac_O_NHDIeYg" name="y">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pMiOs4ZYEeac_O_NHDIeYg" name="result" direction="out">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </packagedElement>
+      <packagedElement xmi:type="uml:FunctionBehavior" xmi:id="_qPsU0IZYEeac_O_NHDIeYg" name="QuantityConvertToUnit">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qPsU0YZYEeac_O_NHDIeYg" name="q">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qPsU0oZYEeac_O_NHDIeYg" name="u">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#_5U2ScHNGEea8m7SzDfIMAA"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qPsU04ZYEeac_O_NHDIeYg" name="result" direction="out">
+          <type xmi:type="uml:DataType" href="quantity_types.uml#__ZWS4HNDEea8m7SzDfIMAA"/>
+        </ownedParameter>
+      </packagedElement>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_NnhIIHNMEea8m7SzDfIMAA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NnhvMHNMEea8m7SzDfIMAA" source="http://www.eclipse.org/uml2/2.0.0/UML">
           <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>

@@ -1,0 +1,64 @@
+model MovingRobot
+
+class Coordinate
+attributes
+  x : Real
+  y : Real
+operations
+  coincide(c:Coordinate):Boolean = (self.x = c.x) and (self.y = c.y)
+end
+  
+class Robot
+attributes
+  position : Coordinate 
+  headsTo : Real
+operations
+   performAllMoves()
+   begin
+      for m in self.moves do
+          m.performMove()
+      end
+   end
+end
+
+class Target
+attributes
+  position : Coordinate
+end
+
+association Mission between 
+  Robot [*] role robot
+  Target [1] role target
+end
+
+class Movement
+attributes
+   move:Real
+   rotate:Real
+operations
+   performMove()
+   begin
+     declare aux:Coordinate, sa:Real, ca:Real, dx:Real, dy:Real;
+     -- we change the angle first (if we have to), to move in that direction
+     if not self.rotate.oclIsUndefined() then 
+         self.robot.headsTo:=self.rotate
+     end;
+     -- and then we move (if we have to)
+     if not self.move.oclIsUndefined() then
+         sa:=self.robot.headsTo.sin();
+         ca:=self.robot.headsTo.cos();
+         dx:=self.move * ca;
+         dy:=self.move * sa;
+         aux := new Coordinate;
+         aux.x := self.robot.position.x + dx;
+         aux.y := self.robot.position.y + dy;
+         self.robot.position:=aux;
+     end;
+   end
+end
+
+association Plan between 
+  Robot [1] role robot
+  Movement [*] role moves ordered
+end
+

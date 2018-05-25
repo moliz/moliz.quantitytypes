@@ -195,7 +195,7 @@ public Pressure round(){ //returns (i,u) with i the closest int to x -- units ma
 return new Pressure(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Pressure min(Pressure r) { // units maintained
-if (r.lessThan(this)) return new Pressure(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Pressure(r.getX(),r.getU(),r.getUnits());
 return new Pressure(this.getX(),this.getU(),this.getUnits());
 }
 public Pressure max(Pressure r) { // unit maintained

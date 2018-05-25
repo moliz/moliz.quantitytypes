@@ -114,7 +114,7 @@ public SpecificHeatVolume round(){ //returns (i,u) with i the closest int to x -
 return new SpecificHeatVolume(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public SpecificHeatVolume min(SpecificHeatVolume r) { // units maintained
-if (r.lessThan(this)) return new SpecificHeatVolume(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new SpecificHeatVolume(r.getX(),r.getU(),r.getUnits());
 return new SpecificHeatVolume(this.getX(),this.getU(),this.getUnits());
 }
 public SpecificHeatVolume max(SpecificHeatVolume r) { // unit maintained

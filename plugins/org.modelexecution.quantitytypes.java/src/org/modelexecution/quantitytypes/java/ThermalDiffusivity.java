@@ -189,7 +189,7 @@ public ThermalDiffusivity round(){ //returns (i,u) with i the closest int to x -
 return new ThermalDiffusivity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ThermalDiffusivity min(ThermalDiffusivity r) { // units maintained
-if (r.lessThan(this)) return new ThermalDiffusivity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ThermalDiffusivity(r.getX(),r.getU(),r.getUnits());
 return new ThermalDiffusivity(this.getX(),this.getU(),this.getUnits());
 }
 public ThermalDiffusivity max(ThermalDiffusivity r) { // unit maintained

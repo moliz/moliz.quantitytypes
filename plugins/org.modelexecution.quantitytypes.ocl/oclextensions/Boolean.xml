@@ -1,0 +1,7 @@
+<extensions>
+  <operation source="Boolean" name="toUBoolean" returnType="UBoolean">
+	<body><![CDATA[
+	]]>
+	</body>
+  </operation>
+</extensions>

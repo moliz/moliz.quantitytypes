@@ -102,7 +102,7 @@ public StoragePerUnitTime round(){ //returns (i,u) with i the closest int to x -
 return new StoragePerUnitTime(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public StoragePerUnitTime min(StoragePerUnitTime r) { // units maintained
-if (r.lessThan(this)) return new StoragePerUnitTime(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new StoragePerUnitTime(r.getX(),r.getU(),r.getUnits());
 return new StoragePerUnitTime(this.getX(),this.getU(),this.getUnits());
 }
 public StoragePerUnitTime max(StoragePerUnitTime r) { // unit maintained

@@ -135,7 +135,7 @@ public Capacitance round(){ //returns (i,u) with i the closest int to x -- units
 return new Capacitance(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Capacitance min(Capacitance r) { // units maintained
-if (r.lessThan(this)) return new Capacitance(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Capacitance(r.getX(),r.getU(),r.getUnits());
 return new Capacitance(this.getX(),this.getU(),this.getUnits());
 }
 public Capacitance max(Capacitance r) { // unit maintained

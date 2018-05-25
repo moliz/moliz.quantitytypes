@@ -171,7 +171,7 @@ public MagneticFieldStrength round(){ //returns (i,u) with i the closest int to 
 return new MagneticFieldStrength(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public MagneticFieldStrength min(MagneticFieldStrength r) { // units maintained
-if (r.lessThan(this)) return new MagneticFieldStrength(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new MagneticFieldStrength(r.getX(),r.getU(),r.getUnits());
 return new MagneticFieldStrength(this.getX(),this.getU(),this.getUnits());
 }
 public MagneticFieldStrength max(MagneticFieldStrength r) { // unit maintained

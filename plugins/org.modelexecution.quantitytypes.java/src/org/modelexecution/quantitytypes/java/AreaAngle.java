@@ -108,7 +108,7 @@ public AreaAngle round(){ //returns (i,u) with i the closest int to x -- units m
 return new AreaAngle(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public AreaAngle min(AreaAngle r) { // units maintained
-if (r.lessThan(this)) return new AreaAngle(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new AreaAngle(r.getX(),r.getU(),r.getUnits());
 return new AreaAngle(this.getX(),this.getU(),this.getUnits());
 }
 public AreaAngle max(AreaAngle r) { // unit maintained

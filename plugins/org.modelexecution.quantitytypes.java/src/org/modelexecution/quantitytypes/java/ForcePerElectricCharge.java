@@ -147,7 +147,7 @@ public ForcePerElectricCharge round(){ //returns (i,u) with i the closest int to
 return new ForcePerElectricCharge(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ForcePerElectricCharge min(ForcePerElectricCharge r) { // units maintained
-if (r.lessThan(this)) return new ForcePerElectricCharge(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ForcePerElectricCharge(r.getX(),r.getU(),r.getUnits());
 return new ForcePerElectricCharge(this.getX(),this.getU(),this.getUnits());
 }
 public ForcePerElectricCharge max(ForcePerElectricCharge r) { // unit maintained

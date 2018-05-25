@@ -117,7 +117,7 @@ public MagnetomotiveForce round(){ //returns (i,u) with i the closest int to x -
 return new MagnetomotiveForce(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public MagnetomotiveForce min(MagnetomotiveForce r) { // units maintained
-if (r.lessThan(this)) return new MagnetomotiveForce(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new MagnetomotiveForce(r.getX(),r.getU(),r.getUnits());
 return new MagnetomotiveForce(this.getX(),this.getU(),this.getUnits());
 }
 public MagnetomotiveForce max(MagnetomotiveForce r) { // unit maintained

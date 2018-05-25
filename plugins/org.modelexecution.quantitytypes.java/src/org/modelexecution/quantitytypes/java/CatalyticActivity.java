@@ -132,7 +132,7 @@ public CatalyticActivity round(){ //returns (i,u) with i the closest int to x --
 return new CatalyticActivity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public CatalyticActivity min(CatalyticActivity r) { // units maintained
-if (r.lessThan(this)) return new CatalyticActivity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new CatalyticActivity(r.getX(),r.getU(),r.getUnits());
 return new CatalyticActivity(this.getX(),this.getU(),this.getUnits());
 }
 public CatalyticActivity max(CatalyticActivity r) { // unit maintained

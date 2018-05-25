@@ -108,7 +108,7 @@ public PowerPerAreaAngle round(){ //returns (i,u) with i the closest int to x --
 return new PowerPerAreaAngle(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public PowerPerAreaAngle min(PowerPerAreaAngle r) { // units maintained
-if (r.lessThan(this)) return new PowerPerAreaAngle(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new PowerPerAreaAngle(r.getX(),r.getU(),r.getUnits());
 return new PowerPerAreaAngle(this.getX(),this.getU(),this.getUnits());
 }
 public PowerPerAreaAngle max(PowerPerAreaAngle r) { // unit maintained

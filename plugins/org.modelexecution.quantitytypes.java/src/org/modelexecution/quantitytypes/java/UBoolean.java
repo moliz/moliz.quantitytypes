@@ -83,9 +83,10 @@ public class UBoolean implements Cloneable, Comparable<UBoolean> {
 
 	public UBoolean implies(UBoolean b) {
 		UBoolean result = new UBoolean(
-				(!this.getB()) || b.getB(),
+				!this.getB() || b.getB(),
 				this.getC() + b.getC() - (this.getC()*b.getC()) );
 		return result;
+//		return this.uNot().uOr(b);
 	}
 
     public UBoolean equivalent(UBoolean b) {
@@ -114,19 +115,9 @@ public class UBoolean implements Cloneable, Comparable<UBoolean> {
 		return !this.equals(b);
 	}
 
-	public boolean equals(UBoolean b, double confidence) {
+	public boolean equalsC(UBoolean b, double confidence) {
 		UBoolean x = this.equivalent(b);
 		return x.c >= confidence;
-	}
-
-	public UBoolean uEquals(UBoolean b) {
-		return this.equivalent(b);
-	}
-
-	public boolean isCloseTo(UBoolean u, double error){
-		if (getB() != u.getB()) return false; // redundante si es un UBoolean b == true
-        return Math.abs(getC()-u.getC()) <= error;
-
 	}
 
 	@Override

@@ -3,7 +3,6 @@ package org.modelexecution.quantitytypes.java;
 import java.util.Arrays;
 import java.util.Random;
 
-
 public class N_UReal implements Cloneable,Comparable<N_UReal>{
 	
 	protected final int MAXLENGTH = 100000;
@@ -82,19 +81,13 @@ public class N_UReal implements Cloneable,Comparable<N_UReal>{
 	}
 
 	/**
-     * Setters and getters 
+     * Getters (no setters in this case, they are derived!)
      */
     public double getX() {
 		return x; 
 	}
-    public void setX(double x) {
-		this.x = x; 
-	}
     public double getU() {
 		return u;
-	}
-	public void setU(double u) {
-		this.u = u;
 	}
 	protected double[] getSample() { //gets a copy of the sample
 		return Arrays.copyOf(sample, sample.length);
@@ -129,7 +122,24 @@ public class N_UReal implements Cloneable,Comparable<N_UReal>{
     	fillSample(sample,x,u,dist);
 	}
 
-	public N_UReal(double x, double u, double s[]) { //for cloning numbers
+	//creates x, u from the given sample
+    public N_UReal(double s[]) { 
+		sample = Arrays.copyOf(s, s.length);
+		double sum = 0.0; 
+        double dev = 0.0;
+		
+	    for (int i = 0; i < MAXLENGTH; i++) {
+            sum += sample[i];
+            dev += sample[i]*sample[i];
+	    }
+	    // average
+	    x = sum/MAXLENGTH;
+	    //standard deviation
+	    u = Math.sqrt(Math.abs(dev-(sum*sum/MAXLENGTH))/(MAXLENGTH-1));
+	}
+
+    
+	private N_UReal(double x, double u, double s[]) { //only for cloning numbers
 		this.x = x;
 		this.u = u;
 		sample = Arrays.copyOf(s, s.length);
@@ -297,44 +307,174 @@ public class N_UReal implements Cloneable,Comparable<N_UReal>{
 	
 		return result;
 	}
+	
+	public N_UReal sin() {
+		N_UReal result = new N_UReal();
+		double sum = 0.0; 
+        double dev = 0.0;
+	
+	    for (int i = 0; i < MAXLENGTH; i++) {
+	    	result.sample[i] = Math.sin(this.sample[i]);
+            sum += result.sample[i];
+            dev += result.sample[i]*result.sample[i];
+	    }
+	    // average
+	    result.x = sum/MAXLENGTH;
+	    //standard deviation
+	    result.u = Math.sqrt(Math.abs(dev-(sum*sum/MAXLENGTH))/(MAXLENGTH-1));
+	
+		return result;
+	}
+	
+	public N_UReal cos() {
+		N_UReal result = new N_UReal();
+		double sum = 0.0; 
+        double dev = 0.0;
+	
+	    for (int i = 0; i < MAXLENGTH; i++) {
+	    	result.sample[i] = Math.cos(this.sample[i]);
+            sum += result.sample[i];
+            dev += result.sample[i]*result.sample[i];
+	    }
+	    // average
+	    result.x = sum/MAXLENGTH;
+	    //standard deviation
+	    result.u = Math.sqrt(Math.abs(dev-(sum*sum/MAXLENGTH))/(MAXLENGTH-1));
+	
+		return result;
+	}
+	
+	public N_UReal tan() {
+		N_UReal result = new N_UReal();
+		double sum = 0.0; 
+        double dev = 0.0;
+	
+	    for (int i = 0; i < MAXLENGTH; i++) {
+	    	result.sample[i] = Math.tan(this.sample[i]);
+            sum += result.sample[i];
+            dev += result.sample[i]*result.sample[i];
+	    }
+	    // average
+	    result.x = sum/MAXLENGTH;
+	    //standard deviation
+	    result.u = Math.sqrt(Math.abs(dev-(sum*sum/MAXLENGTH))/(MAXLENGTH-1));
+	
+		return result;
+	}
+	
+	public N_UReal asin() {
+		N_UReal result = new N_UReal();
+		double sum = 0.0; 
+        double dev = 0.0;
+	
+	    for (int i = 0; i < MAXLENGTH; i++) {
+	    	result.sample[i] = Math.asin(this.sample[i]);
+            sum += result.sample[i];
+            dev += result.sample[i]*result.sample[i];
+	    }
+	    // average
+	    result.x = sum/MAXLENGTH;
+	    //standard deviation
+	    result.u = Math.sqrt(Math.abs(dev-(sum*sum/MAXLENGTH))/(MAXLENGTH-1));
+	
+		return result;
+	}
+	
+	public N_UReal acos() {
+		N_UReal result = new N_UReal();
+		double sum = 0.0; 
+        double dev = 0.0;
+	
+	    for (int i = 0; i < MAXLENGTH; i++) {
+	    	result.sample[i] = Math.acos(this.sample[i]);
+            sum += result.sample[i];
+            dev += result.sample[i]*result.sample[i];
+	    }
+	    // average
+	    result.x = sum/MAXLENGTH;
+	    //standard deviation
+	    result.u = Math.sqrt(Math.abs(dev-(sum*sum/MAXLENGTH))/(MAXLENGTH-1));
+	
+		return result;
+	}
+	
+	public N_UReal atan() {
+		N_UReal result = new N_UReal();
+		double sum = 0.0; 
+        double dev = 0.0;
+	
+	    for (int i = 0; i < MAXLENGTH; i++) {
+	    	result.sample[i] = Math.atan(this.sample[i]);
+            sum += result.sample[i];
+            dev += result.sample[i]*result.sample[i];
+	    }
+	    // average
+	    result.x = sum/MAXLENGTH;
+	    //standard deviation
+	    result.u = Math.sqrt(Math.abs(dev-(sum*sum/MAXLENGTH))/(MAXLENGTH-1));
+	
+		return result;
+	}
+
+	public N_UReal inverse() { //inverse (reciprocal)
+		return new N_UReal(1.0).divideBy(this);
+	}
+	
+	public N_UReal floor() { //returns (i,u) with i the largest int such that (i,u)<=(x,u)
+		double [] s = getSample();
+		double newX = Math.floor(this.getX());
+		for (int i=0;i<s.length;i++) {
+			s[i] = newX + (s[i] - this.getX()); 
+		}
+		return new N_UReal(newX,this.getU(),s);
+	}
+	public N_UReal round(){ //returns (i,u) with i the closest int to x
+		double [] s = getSample();
+		double newX = Math.round(this.getX());
+		for (int i=0;i<s.length;i++) {
+			s[i] = newX + (s[i] - this.getX()); 
+		}
+		return new N_UReal(newX,this.getU(),s);
+	}
+
 
 	/*** 
 	 *   CRISP COMPARISON OPERATIONS
-	 */
+	 * 	These operations, that return a boolean, have been superseded by the
+	 *  corresponding UBoolean-returning operations -- except equals() and
+	 *  distinct, since they have another meaning in Java!.
+     */
 
-	public boolean lt(N_UReal r) {
-		boolean result = false;
-		result = (this.getX() < r.getX()) &&
-                 ((this.getX() + this.getU())  < (r.getX() - r.getU()));
-		return result;
-	}
-	
-	
-	public boolean le(N_UReal r) {
-		boolean result = false;
-		result = (this.lt(r) || this.equals(r));
-		return result;
-	}
+	//	public boolean lt(N_UReal r) {
+	//		boolean result = false;
+	//result = (this.getX() < r.getX()) &&
+	//           ((this.getX() + this.getU())  < (r.getX() - r.getU()));
+	//return result;
+	//	}
+	//	
+	//
+	//	public boolean le(N_UReal r) {
+	//	boolean result = false;
+	//	result = (this.lt(r) || this.equals(r));
+	//	return result;
+	//}
 
-	
-	public boolean gt(N_UReal r) {
-		boolean result = false;
+	//	public boolean gt(N_UReal r) {
+	//	boolean result = false;
+	//	
+	//	result = r.lt(this);
+	//	
+	//	return result;
+	//}
 		
-		result = r.lt(this);
-		
-		return result;
-	}
+	//public boolean ge(N_UReal r) {
+	//	boolean result = false;
+	//	
+	//	result = (this.gt(r) || this.equals(r)); 
+	//	
+	//	return result;
+	//}
 	
-	
-	public boolean ge(N_UReal r) {
-		boolean result = false;
-		
-		result = (this.gt(r) || this.equals(r)); 
-		
-		return result;
-	}
-	
-
 	public boolean equals(N_UReal r) {
 		boolean result = false;
 		
@@ -356,26 +496,22 @@ public class N_UReal implements Cloneable,Comparable<N_UReal>{
 	/***
 	 * comparison operations WITH ZERO = UReal(0.0)
 	 */
-	public boolean ltZero() {
-		return this.lt(new N_UReal());
-	}
+	//public boolean ltZero() {
+	//	return this.lt(new N_UReal());
+	//}
+		
+	//public boolean leZero() {
+	//	return this.le(new N_UReal());
+	//}
 	
+	//public boolean gtZero() {
+	//	return this.gt(new N_UReal());
+	//}
+	//	
+	//public boolean geZero() {
+	//	return this.ge(new N_UReal());
+	//}
 	
-	public boolean leZero() {
-		return this.le(new N_UReal());
-	}
-
-	
-	public boolean gtZero() {
-		return this.gt(new N_UReal());
-	}
-	
-	
-	public boolean geZero() {
-		return this.ge(new N_UReal());
-	}
-	
-
 	public boolean equalsZero() {
 		return this.equals(new N_UReal());
 	}
@@ -408,64 +544,64 @@ public class N_UReal implements Cloneable,Comparable<N_UReal>{
 	    res.eq = 1.0 - (res.lt+res.gt);
 	    return res;
 	}
-
-	public double uEquals(N_UReal number) {
-		Result r = this.calculate(number);
-		return r.eq;
-	}
-
-	public double uDistinct(N_UReal number) {
 	
-		return 1.0 - (this.uEquals(number));
+	public UBoolean uEquals(N_UReal number) {
+		Result r = this.calculate(number);
+		return new UBoolean(true,r.eq);
 	}
 
-	public double uLt(N_UReal number) {
+	public UBoolean uDistinct(N_UReal r) {
+		return this.uEquals(r).not();
+	}
+
+	public UBoolean lt(N_UReal number) {
 		Result r = this.calculate(number);
-		return r.lt;
+		return new UBoolean(true,r.lt);
 	}
 	
-	public double uLe(N_UReal number) {
+	public UBoolean le(N_UReal number) {
 		Result r = this.calculate(number);
-			return r.lt+r.eq;
+		return new UBoolean(true, r.lt+r.eq);
 	}
 
-	public double uGt(N_UReal number) {
+	public UBoolean gt(N_UReal number) {
 		Result r = this.calculate(number);
-			return r.gt;
+		return new UBoolean (true, r.gt);
 	}
 
 	
-	public double uGe(N_UReal number) {
+	public UBoolean ge(N_UReal number) {
 		Result r = this.calculate(number);
-		return r.gt+r.eq;
+		return new UBoolean(true,r.gt+r.eq);
 	}
+
 	/*** 
 	 *   FUZZY COMPARISON OPERATIONS WITH ZERO=UReal(0.0,0.0)
 	 */
-	
 
-	public double uEqualsZero() {
+
+	public UBoolean uEqualsZero() {
 		return this.uEquals(new N_UReal());
 	}
 
-	public double uDistinctZero() {
+	public UBoolean uDistinctZero() {
 		return this.uDistinct(new N_UReal());
 	}
 
-	public double uLtZero() {
-		return this.uLt(new N_UReal());
+	public UBoolean uLtZero() {
+		return this.lt(new N_UReal());
 	}
 	
-	public double uLeZero() {
-		return this.uLe(new N_UReal());
+	public UBoolean uLeZero() {
+		return this.le(new N_UReal());
 	}
 
-	public double uGtZero() {
-		return this.uGt(new N_UReal());
+	public UBoolean uGtZero() {
+		return this.gt(new N_UReal());
 	}
 
-	public double uGeZero() {
-		return this.uGe(new N_UReal());
+	public UBoolean uGeZero() {
+		return this.ge(new N_UReal());
 	}
     
 	/*** 
@@ -477,40 +613,18 @@ public class N_UReal implements Cloneable,Comparable<N_UReal>{
 	@Override
 	public int compareTo(N_UReal other) {
 		if (this.equals(other)) return 0;
-		if (this.lt(other)) return -1;
+		if (this.lt(other).toBoolean()) return -1;
 		return 1;
 	}
-
-	public N_UReal inv() { //inverse (reciprocal)
-		return new N_UReal(1.0).divideBy(this);
-	}
-	
-	public N_UReal floor() { //returns (i,u) with i the largest int such that (i,u)<=(x,u)
-		double [] s = getSample();
-		double newX = Math.floor(this.getX());
-		for (int i=0;i<s.length;i++) {
-			s[i] = newX + (s[i] - this.getX()); 
-		}
-		return new N_UReal(newX,this.getU(),s);
-	}
-	public N_UReal round(){ //returns (i,u) with i the closest int to x
-		double [] s = getSample();
-		double newX = Math.round(this.getX());
-		for (int i=0;i<s.length;i++) {
-			s[i] = newX + (s[i] - this.getX()); 
-		}
-		return new N_UReal(newX,this.getU(),s);
-	}
-
 	
 	
 	public N_UReal min(N_UReal r) {
-		if (r.lt(this)) return r.clone(); 
+		if (r.lt(this).toBoolean()) return r.clone(); 
 		return this.clone();
 	}
 	public N_UReal max(N_UReal r) {
 		//if (r>this) r; else this;
-		if (r.gt(this)) return r.clone(); 
+		if (r.gt(this).toBoolean()) return r.clone(); 
 		return this.clone();
 	}
 	
@@ -521,7 +635,6 @@ public class N_UReal implements Cloneable,Comparable<N_UReal>{
 	public String toString() {
 		return "(" + x + "," + u + ") ["+sample[0]+","+sample[1]+","+sample[2]+","+sample[3]+","+sample[4]+"]";
 	}
-
 	
 	public int toInteger(){ //
 		return (int)Math.floor(this.getX());
@@ -530,6 +643,7 @@ public class N_UReal implements Cloneable,Comparable<N_UReal>{
 	public double toReal()  { 
 		return this.getX();
 	}
+	
 	
 	/**
 	 * Other Methods 

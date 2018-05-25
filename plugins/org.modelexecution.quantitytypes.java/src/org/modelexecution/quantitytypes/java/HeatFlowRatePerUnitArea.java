@@ -177,7 +177,7 @@ public HeatFlowRatePerUnitArea round(){ //returns (i,u) with i the closest int t
 return new HeatFlowRatePerUnitArea(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public HeatFlowRatePerUnitArea min(HeatFlowRatePerUnitArea r) { // units maintained
-if (r.lessThan(this)) return new HeatFlowRatePerUnitArea(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new HeatFlowRatePerUnitArea(r.getX(),r.getU(),r.getUnits());
 return new HeatFlowRatePerUnitArea(this.getX(),this.getU(),this.getUnits());
 }
 public HeatFlowRatePerUnitArea max(HeatFlowRatePerUnitArea r) { // unit maintained

@@ -174,7 +174,7 @@ public ElectromotiveForce round(){ //returns (i,u) with i the closest int to x -
 return new ElectromotiveForce(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ElectromotiveForce min(ElectromotiveForce r) { // units maintained
-if (r.lessThan(this)) return new ElectromotiveForce(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ElectromotiveForce(r.getX(),r.getU(),r.getUnits());
 return new ElectromotiveForce(this.getX(),this.getU(),this.getUnits());
 }
 public ElectromotiveForce max(ElectromotiveForce r) { // unit maintained

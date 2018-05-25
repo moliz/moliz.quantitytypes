@@ -138,7 +138,7 @@ public ElectricChargeVolumeDensity round(){ //returns (i,u) with i the closest i
 return new ElectricChargeVolumeDensity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ElectricChargeVolumeDensity min(ElectricChargeVolumeDensity r) { // units maintained
-if (r.lessThan(this)) return new ElectricChargeVolumeDensity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ElectricChargeVolumeDensity(r.getX(),r.getU(),r.getUnits());
 return new ElectricChargeVolumeDensity(this.getX(),this.getU(),this.getUnits());
 }
 public ElectricChargeVolumeDensity max(ElectricChargeVolumeDensity r) { // unit maintained

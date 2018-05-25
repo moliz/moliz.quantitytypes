@@ -117,7 +117,7 @@ public SolidAngle round(){ //returns (i,u) with i the closest int to x -- units 
 return new SolidAngle(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public SolidAngle min(SolidAngle r) { // units maintained
-if (r.lessThan(this)) return new SolidAngle(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new SolidAngle(r.getX(),r.getU(),r.getUnits());
 return new SolidAngle(this.getX(),this.getU(),this.getUnits());
 }
 public SolidAngle max(SolidAngle r) { // unit maintained

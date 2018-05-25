@@ -131,7 +131,7 @@ public Density round(){ //returns (i,u) with i the closest int to x -- units mai
 return new Density(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Density min(Density r) { // units maintained
-if (r.lessThan(this)) return new Density(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Density(r.getX(),r.getU(),r.getUnits());
 return new Density(this.getX(),this.getU(),this.getUnits());
 }
 public Density max(Density r) { // unit maintained

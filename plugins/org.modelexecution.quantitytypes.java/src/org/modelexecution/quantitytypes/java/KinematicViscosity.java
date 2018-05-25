@@ -189,7 +189,7 @@ public KinematicViscosity round(){ //returns (i,u) with i the closest int to x -
 return new KinematicViscosity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public KinematicViscosity min(KinematicViscosity r) { // units maintained
-if (r.lessThan(this)) return new KinematicViscosity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new KinematicViscosity(r.getX(),r.getU(),r.getUnits());
 return new KinematicViscosity(this.getX(),this.getU(),this.getUnits());
 }
 public KinematicViscosity max(KinematicViscosity r) { // unit maintained

@@ -123,7 +123,7 @@ public class TrafficIntensity extends Quantity {
 	}
 
 	public TrafficIntensity min(TrafficIntensity r) { // units maintained
-		if (r.lessThan(this))
+		if (r.lt(this))
 			return new TrafficIntensity(r.getX(), r.getU(), r.getUnits());
 		return new TrafficIntensity(this.getX(), this.getU(), this.getUnits());
 	}

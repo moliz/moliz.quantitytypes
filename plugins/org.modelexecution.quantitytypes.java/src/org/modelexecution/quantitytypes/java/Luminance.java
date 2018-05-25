@@ -105,7 +105,7 @@ public Luminance round(){ //returns (i,u) with i the closest int to x -- units m
 return new Luminance(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Luminance min(Luminance r) { // units maintained
-if (r.lessThan(this)) return new Luminance(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Luminance(r.getX(),r.getU(),r.getUnits());
 return new Luminance(this.getX(),this.getU(),this.getUnits());
 }
 public Luminance max(Luminance r) { // unit maintained

@@ -186,7 +186,7 @@ public SpecificEnergy round(){ //returns (i,u) with i the closest int to x -- un
 return new SpecificEnergy(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public SpecificEnergy min(SpecificEnergy r) { // units maintained
-if (r.lessThan(this)) return new SpecificEnergy(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new SpecificEnergy(r.getX(),r.getU(),r.getUnits());
 return new SpecificEnergy(this.getX(),this.getU(),this.getUnits());
 }
 public SpecificEnergy max(SpecificEnergy r) { // unit maintained

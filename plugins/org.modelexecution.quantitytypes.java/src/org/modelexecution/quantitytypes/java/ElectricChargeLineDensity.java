@@ -174,7 +174,7 @@ public ElectricChargeLineDensity round(){ //returns (i,u) with i the closest int
 return new ElectricChargeLineDensity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ElectricChargeLineDensity min(ElectricChargeLineDensity r) { // units maintained
-if (r.lessThan(this)) return new ElectricChargeLineDensity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ElectricChargeLineDensity(r.getX(),r.getU(),r.getUnits());
 return new ElectricChargeLineDensity(this.getX(),this.getU(),this.getUnits());
 }
 public ElectricChargeLineDensity max(ElectricChargeLineDensity r) { // unit maintained

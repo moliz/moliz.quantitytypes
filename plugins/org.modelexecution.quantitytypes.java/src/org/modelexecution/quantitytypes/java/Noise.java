@@ -99,7 +99,7 @@ public Noise round(){ //returns (i,u) with i the closest int to x -- units maint
 return new Noise(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Noise min(Noise r) { // units maintained
-if (r.lessThan(this)) return new Noise(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Noise(r.getX(),r.getU(),r.getUnits());
 return new Noise(this.getX(),this.getU(),this.getUnits());
 }
 public Noise max(Noise r) { // unit maintained

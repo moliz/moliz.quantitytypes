@@ -144,7 +144,7 @@ public AngularMass round(){ //returns (i,u) with i the closest int to x -- units
 return new AngularMass(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public AngularMass min(AngularMass r) { // units maintained
-if (r.lessThan(this)) return new AngularMass(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new AngularMass(r.getX(),r.getU(),r.getUnits());
 return new AngularMass(this.getX(),this.getU(),this.getUnits());
 }
 public AngularMass max(AngularMass r) { // unit maintained

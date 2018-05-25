@@ -126,7 +126,7 @@ public VolumeThermalExpansion round(){ //returns (i,u) with i the closest int to
 return new VolumeThermalExpansion(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public VolumeThermalExpansion min(VolumeThermalExpansion r) { // units maintained
-if (r.lessThan(this)) return new VolumeThermalExpansion(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new VolumeThermalExpansion(r.getX(),r.getU(),r.getUnits());
 return new VolumeThermalExpansion(this.getX(),this.getU(),this.getUnits());
 }
 public VolumeThermalExpansion max(VolumeThermalExpansion r) { // unit maintained

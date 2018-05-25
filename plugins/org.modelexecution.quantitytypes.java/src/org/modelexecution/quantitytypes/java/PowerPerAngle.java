@@ -108,7 +108,7 @@ public PowerPerAngle round(){ //returns (i,u) with i the closest int to x -- uni
 return new PowerPerAngle(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public PowerPerAngle min(PowerPerAngle r) { // units maintained
-if (r.lessThan(this)) return new PowerPerAngle(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new PowerPerAngle(r.getX(),r.getU(),r.getUnits());
 return new PowerPerAngle(this.getX(),this.getU(),this.getUnits());
 }
 public PowerPerAngle max(PowerPerAngle r) { // unit maintained

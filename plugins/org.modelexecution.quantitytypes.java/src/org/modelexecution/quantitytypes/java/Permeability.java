@@ -117,7 +117,7 @@ public Permeability round(){ //returns (i,u) with i the closest int to x -- unit
 return new Permeability(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Permeability min(Permeability r) { // units maintained
-if (r.lessThan(this)) return new Permeability(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Permeability(r.getX(),r.getU(),r.getUnits());
 return new Permeability(this.getX(),this.getU(),this.getUnits());
 }
 public Permeability max(Permeability r) { // unit maintained

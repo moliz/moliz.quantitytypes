@@ -108,7 +108,7 @@ public GravitationalAttraction round(){ //returns (i,u) with i the closest int t
 return new GravitationalAttraction(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public GravitationalAttraction min(GravitationalAttraction r) { // units maintained
-if (r.lessThan(this)) return new GravitationalAttraction(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new GravitationalAttraction(r.getX(),r.getU(),r.getUnits());
 return new GravitationalAttraction(this.getX(),this.getU(),this.getUnits());
 }
 public GravitationalAttraction max(GravitationalAttraction r) { // unit maintained

@@ -204,7 +204,7 @@ public LinearVelocity round(){ //returns (i,u) with i the closest int to x -- un
 return new LinearVelocity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public LinearVelocity min(LinearVelocity r) { // units maintained
-if (r.lessThan(this)) return new LinearVelocity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new LinearVelocity(r.getX(),r.getU(),r.getUnits());
 return new LinearVelocity(this.getX(),this.getU(),this.getUnits());
 }
 public LinearVelocity max(LinearVelocity r) { // unit maintained

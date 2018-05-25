@@ -174,7 +174,7 @@ public ElectricFluxDensity round(){ //returns (i,u) with i the closest int to x 
 return new ElectricFluxDensity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ElectricFluxDensity min(ElectricFluxDensity r) { // units maintained
-if (r.lessThan(this)) return new ElectricFluxDensity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ElectricFluxDensity(r.getX(),r.getU(),r.getUnits());
 return new ElectricFluxDensity(this.getX(),this.getU(),this.getUnits());
 }
 public ElectricFluxDensity max(ElectricFluxDensity r) { // unit maintained

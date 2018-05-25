@@ -558,7 +558,7 @@ public class Length extends Quantity {
 	}
 
 	public Length min(Length r) { // units maintained
-		if (r.lessThan(this))
+		if (r.lt(this))
 			return new Length(r.getX(), r.getU(), r.getUnits());
 		return new Length(this.getX(), this.getU(), this.getUnits());
 	}

@@ -135,7 +135,7 @@ public AreaTemperature round(){ //returns (i,u) with i the closest int to x -- u
 return new AreaTemperature(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public AreaTemperature min(AreaTemperature r) { // units maintained
-if (r.lessThan(this)) return new AreaTemperature(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new AreaTemperature(r.getX(),r.getU(),r.getUnits());
 return new AreaTemperature(this.getX(),this.getU(),this.getUnits());
 }
 public AreaTemperature max(AreaTemperature r) { // unit maintained

@@ -117,7 +117,7 @@ public TemperatureAmountOfSubstance round(){ //returns (i,u) with i the closest 
 return new TemperatureAmountOfSubstance(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public TemperatureAmountOfSubstance min(TemperatureAmountOfSubstance r) { // units maintained
-if (r.lessThan(this)) return new TemperatureAmountOfSubstance(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new TemperatureAmountOfSubstance(r.getX(),r.getU(),r.getUnits());
 return new TemperatureAmountOfSubstance(this.getX(),this.getU(),this.getUnits());
 }
 public TemperatureAmountOfSubstance max(TemperatureAmountOfSubstance r) { // unit maintained

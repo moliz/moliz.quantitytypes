@@ -117,7 +117,7 @@ public Permittivity round(){ //returns (i,u) with i the closest int to x -- unit
 return new Permittivity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Permittivity min(Permittivity r) { // units maintained
-if (r.lessThan(this)) return new Permittivity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Permittivity(r.getX(),r.getU(),r.getUnits());
 return new Permittivity(this.getX(),this.getU(),this.getUnits());
 }
 public Permittivity max(Permittivity r) { // unit maintained

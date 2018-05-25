@@ -189,7 +189,7 @@ public DynamicViscosity round(){ //returns (i,u) with i the closest int to x -- 
 return new DynamicViscosity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public DynamicViscosity min(DynamicViscosity r) { // units maintained
-if (r.lessThan(this)) return new DynamicViscosity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new DynamicViscosity(r.getX(),r.getU(),r.getUnits());
 return new DynamicViscosity(this.getX(),this.getU(),this.getUnits());
 }
 public DynamicViscosity max(DynamicViscosity r) { // unit maintained

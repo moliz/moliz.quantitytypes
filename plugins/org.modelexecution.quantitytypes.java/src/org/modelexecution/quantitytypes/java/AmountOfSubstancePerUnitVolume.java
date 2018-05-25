@@ -120,7 +120,7 @@ public AmountOfSubstancePerUnitVolume round(){ //returns (i,u) with i the closes
 return new AmountOfSubstancePerUnitVolume(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public AmountOfSubstancePerUnitVolume min(AmountOfSubstancePerUnitVolume r) { // units maintained
-if (r.lessThan(this)) return new AmountOfSubstancePerUnitVolume(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new AmountOfSubstancePerUnitVolume(r.getX(),r.getU(),r.getUnits());
 return new AmountOfSubstancePerUnitVolume(this.getX(),this.getU(),this.getUnits());
 }
 public AmountOfSubstancePerUnitVolume max(AmountOfSubstancePerUnitVolume r) { // unit maintained

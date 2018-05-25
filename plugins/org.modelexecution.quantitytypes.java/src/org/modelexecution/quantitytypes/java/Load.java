@@ -99,7 +99,7 @@ public Load round(){ //returns (i,u) with i the closest int to x -- units mainta
 return new Load(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Load min(Load r) { // units maintained
-if (r.lessThan(this)) return new Load(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Load(r.getX(),r.getU(),r.getUnits());
 return new Load(this.getX(),this.getU(),this.getUnits());
 }
 public Load max(Load r) { // unit maintained

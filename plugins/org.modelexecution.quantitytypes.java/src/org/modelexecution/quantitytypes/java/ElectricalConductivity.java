@@ -141,7 +141,7 @@ public ElectricalConductivity round(){ //returns (i,u) with i the closest int to
 return new ElectricalConductivity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ElectricalConductivity min(ElectricalConductivity r) { // units maintained
-if (r.lessThan(this)) return new ElectricalConductivity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ElectricalConductivity(r.getX(),r.getU(),r.getUnits());
 return new ElectricalConductivity(this.getX(),this.getU(),this.getUnits());
 }
 public ElectricalConductivity max(ElectricalConductivity r) { // unit maintained

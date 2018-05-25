@@ -186,7 +186,7 @@ public ElectricCharge round(){ //returns (i,u) with i the closest int to x -- un
 return new ElectricCharge(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ElectricCharge min(ElectricCharge r) { // units maintained
-if (r.lessThan(this)) return new ElectricCharge(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ElectricCharge(r.getX(),r.getU(),r.getUnits());
 return new ElectricCharge(this.getX(),this.getU(),this.getUnits());
 }
 public ElectricCharge max(ElectricCharge r) { // unit maintained

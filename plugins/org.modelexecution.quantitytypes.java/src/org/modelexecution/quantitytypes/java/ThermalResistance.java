@@ -114,7 +114,7 @@ public ThermalResistance round(){ //returns (i,u) with i the closest int to x --
 return new ThermalResistance(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ThermalResistance min(ThermalResistance r) { // units maintained
-if (r.lessThan(this)) return new ThermalResistance(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ThermalResistance(r.getX(),r.getU(),r.getUnits());
 return new ThermalResistance(this.getX(),this.getU(),this.getUnits());
 }
 public ThermalResistance max(ThermalResistance r) { // unit maintained

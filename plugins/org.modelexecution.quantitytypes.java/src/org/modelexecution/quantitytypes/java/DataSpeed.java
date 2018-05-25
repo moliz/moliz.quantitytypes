@@ -115,7 +115,7 @@ public class DataSpeed extends Quantity {
 	}
 
 	public DataSpeed min(DataSpeed r) { // units maintained
-		if (r.lessThan(this))
+		if (r.lt(this))
 			return new DataSpeed(r.getX(), r.getU(), r.getUnits());
 		return new DataSpeed(this.getX(), this.getU(), this.getUnits());
 	}

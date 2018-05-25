@@ -132,7 +132,7 @@ public Angle round(){ //returns (i,u) with i the closest int to x -- units maint
 return new Angle(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Angle min(Angle r) { // units maintained
-if (r.lessThan(this)) return new Angle(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Angle(r.getX(),r.getU(),r.getUnits());
 return new Angle(this.getX(),this.getU(),this.getUnits());
 }
 public Angle max(Angle r) { // unit maintained

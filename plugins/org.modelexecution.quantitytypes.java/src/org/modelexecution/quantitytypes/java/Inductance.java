@@ -135,7 +135,7 @@ public Inductance round(){ //returns (i,u) with i the closest int to x -- units 
 return new Inductance(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Inductance min(Inductance r) { // units maintained
-if (r.lessThan(this)) return new Inductance(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Inductance(r.getX(),r.getU(),r.getUnits());
 return new Inductance(this.getX(),this.getU(),this.getUnits());
 }
 public Inductance max(Inductance r) { // unit maintained

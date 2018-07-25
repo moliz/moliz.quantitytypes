@@ -69,22 +69,26 @@ public class UBoolean implements Cloneable, Comparable<UBoolean> {
 
 	public UBoolean and(UBoolean b) {
 		UBoolean result = new UBoolean(
-				this.getB() && b.getB(),
-		        this.getC() * b.getC() );
+//				this.getB() && b.getB(),
+//		        this.getC() * b.getC() );
+				this.b & b.b,
+		        this.c * b.c );
 		return result;
 	}
 	
 	public UBoolean or(UBoolean b) {
 		UBoolean result = new UBoolean(
-					this.getB() || b.getB(),
-					this.getC() + b.getC() - (this.getC()*b.getC()) );
+//				this.getB() || b.getB(),
+//				this.getC() + b.getC() - (this.getC()*b.getC()) );
+				this.b | b.b,
+				this.c + b.c - (this.c*b.c) );
 		return result;
 	}
 
 	public UBoolean implies(UBoolean b) {
 		UBoolean result = new UBoolean(
-				!this.getB() || b.getB(),
-				this.getC() + b.getC() - (this.getC()*b.getC()) );
+				(!this.b) | b.b,
+				this.c + b.c - (this.c*b.c) );
 		return result;
 //		return this.uNot().uOr(b);
 	}
@@ -95,6 +99,10 @@ public class UBoolean implements Cloneable, Comparable<UBoolean> {
 
 	public UBoolean xor(UBoolean b) {
 		return this.equivalent(b).not();
+	}
+
+    public UBoolean uEquals(UBoolean b) {
+		return this.equivalent(b);
 	}
 
 	/***

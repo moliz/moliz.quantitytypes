@@ -102,7 +102,7 @@ public class N_UBoolean implements Cloneable, Comparable<N_UBoolean> {
     public N_UBoolean and(N_UBoolean o) {
         boolean[] andSample = new boolean[SAMPLESIZE];
         for (int i = 0; i < SAMPLESIZE; i++) {
-            andSample[i] = this.sample[i] && o.sample[i];
+            andSample[i] = this.sample[i] & o.sample[i];
         }
         return new N_UBoolean(andSample);
     }
@@ -110,7 +110,7 @@ public class N_UBoolean implements Cloneable, Comparable<N_UBoolean> {
     public N_UBoolean or(N_UBoolean o) {
         boolean[] andSample = new boolean[SAMPLESIZE];
         for (int i = 0; i < SAMPLESIZE; i++) {
-            andSample[i] = this.sample[i] || o.sample[i];
+            andSample[i] = this.sample[i] | o.sample[i];
         }
         return new N_UBoolean(andSample);
     }
@@ -118,7 +118,7 @@ public class N_UBoolean implements Cloneable, Comparable<N_UBoolean> {
     public N_UBoolean implies(N_UBoolean nUBoolean) {
         boolean[] impliesSample = new boolean[SAMPLESIZE];
         for (int i = 0; i < SAMPLESIZE; i++) {
-            impliesSample[i] = !this.sample[i] || nUBoolean.sample[i];
+            impliesSample[i] = (!this.sample[i]) | nUBoolean.sample[i];
         }
         return new N_UBoolean(impliesSample);
     }

@@ -1,4 +1,4 @@
-liteliteralsRaiz cuadpackage org.modelexecution.quantitytypes.java;
+package org.modelexecution.quantitytypes.java;
 
 import java.util.EnumMap;
 import java.util.Map;

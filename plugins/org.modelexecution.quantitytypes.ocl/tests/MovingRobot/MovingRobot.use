@@ -1,21 +1,682 @@
+model MovingRobot
+
+class Coordinate
+attributes
+  x : Length
+  y : Length
+  xy : Tuple(x:Real,y:Real) derived: Tuple{x:x.quantityValue.value.x,y:y.quantityValue.value.x}
+  u : Tuple(ux:Real,uy:Real) derived: Tuple{ux:x.quantityValue.value.u,uy:y.quantityValue.value.u}
+operations
+  coincide(c:Coordinate):Boolean -- self.x.equals(c.x) and self.y.equals(c.y);
+  begin
+    declare fx:Boolean, fy:Boolean;
+    fx:=self.x.equals(c.x);
+    fy:=self.y.equals(c.y);
+    result :=  fx and fy;
+  end
+  uCoincide(c:Coordinate):UBoolean -- self.x.uEquals(c.x) * self.y.uEquals(c.y);
+  begin
+    declare fx:UBoolean, fy:UBoolean;
+    fx:=self.x.uEquals(c.x);
+    fy:=self.y.uEquals(c.y);
+    result :=  fx.uAnd(fy);
+  end
+end
+  
+class Robot
+attributes
+  position : Coordinate 
+  headsTo : Angle
+  xyh : Tuple(x:Real,y:Real,h:Real) derived: Tuple{x:position.x.quantityValue.value.x,y:position.y.quantityValue.value.x,h:headsTo.quantityValue.value.x}
+  u : Tuple(ux:Real,uy:Real,uh:Real) derived: Tuple{ux:position.x.quantityValue.value.u,uy:position.y.quantityValue.value.u,uh:headsTo.quantityValue.value.u}
+operations
+   performAllMoves()
+   begin
+      for m in self.moves do
+          m.performMove()
+      end
+   end
+end
+
+class Target
+attributes
+  position : Coordinate
+end
+
+association Mission between 
+  Robot [*] role robot
+  Target [1] role target
+end
+
+class Movement
+attributes
+   move:Length
+   rotate:Angle
+operations
+   performMove()
+   begin
+     declare aux:Coordinate, sa:UReal, ca:UReal, dx:Length, dy:Length;
+     -- we change the angle first (if we have to), to move in that direction
+     if not self.rotate.oclIsUndefined() then 
+         self.robot.headsTo:=self.rotate
+     end;
+     -- and then we move (if we have to)
+     if not self.move.oclIsUndefined() then
+         sa:=self.robot.headsTo.sin();
+         ca:=self.robot.headsTo.cos();
+         dx:=self.move.sUMult(ca);
+         dy:=self.move.sUMult(sa);
+         aux := new Coordinate;
+         aux.x := self.robot.position.x.add(dx);
+         aux.y := self.robot.position.y.add(dy);
+         self.robot.position:=aux;
+     end;
+   end
+end
+
+association Plan between 
+  Robot [1] role robot
+  Movement [*] role moves ordered
+end
+
+constraints
+
+-- context Robot inv PrecisionUnderControl:
+--   self.position.x.value.u < 0.01 and self.position.y.value.u < 0.01
+
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-- Length and Angle
+-- 
+class Length
+
+attributes
+  quantityValue : QuantityValue
+
+operations
+
+--- conversion operations
+
+sameUnits(x :Length) :Boolean = self.quantityValue.sameUnits(x.quantityValue)
+
+compatibleUnits(u :Unit) :Boolean = self.quantityValue.compatibleUnits(u)
+
+convertTo(u :Unit) :Length
+   begin
+		declare aux:Length;
+		aux := new Length; 
+	    aux.quantityValue:=self.quantityValue.convertTo(u);
+	    result:=aux;
+   end   
+
+convertToSIUnits() :Length
+  begin
+ 		declare aux:Length;
+		aux := new Length; 
+	    aux.quantityValue:=self.quantityValue.convertToSIUnits();
+	    result:=aux;
+ end   
+--
+  
+convertFromSIUnits(val :UReal) :Length
+    -- val is the Length value expressed in SIUnits
+  begin
+ 		declare aux:Length;
+		aux := new Length; 
+	    aux.quantityValue:=self.quantityValue.convertFromSIUnits(val);
+	    result:=aux;
+  end   
+
+-- arithmetic operations -----------
+
+add(x :Length) : Length
+    begin
+ 		declare aux:Length;
+		aux := new Length; 
+	    aux.quantityValue:=self.quantityValue.add(x.quantityValue);
+	    result:=aux;
+   end   
+
+minus(x :Length) : Length
+    begin
+ 		declare aux:Length;
+		aux := new Length; 
+	    aux.quantityValue:=self.quantityValue.minus(x.quantityValue);
+	    result:=aux;
+    end   
+
+-- mult(x :Length) : Length
+--    begin
+-- 		declare aux:Length;
+--		aux := new Length; 
+--	    aux.quantityValue:=self.quantityValue.mult(x.quantityValue);
+--	    result:=aux;
+--   end   
+
+--divideBy(x :Length) : Length
+--    begin
+-- 		declare aux:Length;
+--		aux := new Length; 
+--	    aux.quantityValue:=self.quantityValue.divideBy(x.quantityValue);
+--	    result:=aux;
+--   end   
+
+abs() :Length
+    begin
+ 		declare aux:Length;
+		aux := new Length; 
+	    aux.quantityValue:=self.quantityValue.abs();
+	    result:=aux;
+    end   
+
+neg() :Length
+    begin
+ 		declare aux:Length;
+		aux := new Length; 
+	    aux.quantityValue:=self.quantityValue.neg();
+	    result:=aux;
+    end   
+
+--power(s : Real) :Length
+--    begin
+-- 		declare aux:Length;
+--		aux := new Length; 
+--	    aux.quantityValue:=self.quantityValue.power(s);
+--   end   
+
+floor() :Length
+    begin
+ 		declare aux:Length;
+		aux := new Length; 
+	    aux.quantityValue:=self.quantityValue.floor();
+	    result:=aux;
+    end   
+
+round() :Length
+    begin
+  		declare aux:Length;
+		aux := new Length; 
+	    aux.quantityValue:=self.quantityValue.round();
+	    result:=aux;
+    end   
+
+--- Multiplication by a scalar
+
+sMult(x :Real) : Length -- multiplication by a Real
+    begin
+ 		declare aux:Length;
+		aux := new Length; 
+	    aux.quantityValue:=self.quantityValue.sMult(x);
+	    result:=aux;
+   end   
+
+sUMult(x :UReal) : Length -- multiplication by a UReal
+    begin
+ 		declare aux:Length;
+		aux := new Length; 
+	    aux.quantityValue:=self.quantityValue.sUMult(x);
+	    result:=aux;
+   end   
+
+--- COMPARISON OPERATIONS
+
+equals(x :Length) :Boolean 
+  begin
+    result:=self.quantityValue.equals(x.quantityValue);
+  end
+
+distinct(x :Length) :Boolean -- = not self.equals(x)
+  begin
+	declare aux:Boolean;
+    aux:=self.quantityValue.equals(x.quantityValue);
+	result:=not aux;
+  end
+
+lt(x :Length) :Boolean
+  begin
+    result:=self.quantityValue.lt(x.quantityValue);
+  end
+
+le(x :Length) :Boolean -- = self.lt(x) or self.equals(x)
+  begin
+    result:=self.quantityValue.le(x.quantityValue);
+  end
+
+gt(x :Length) :Boolean
+  begin
+    result:=self.quantityValue.gt(x.quantityValue);
+  end
+
+ge(x :Length) :Boolean -- = self.gt(x) or self.equals(x)
+  begin
+    result:=self.quantityValue.ge(x.quantityValue);
+  end
+
+
+max(x :Length) :Length -- = if x.lt(self) then self else x endif
+  begin
+    declare b:Boolean;
+    b:=x.lt(self);
+    if b then result:=self; 
+    else result:=x;
+    end
+  end
+
+min(x :Length) :Length -- = if self.lt(x) then self else x endif
+  begin
+    declare b:Boolean;
+    b:=x.lt(self);
+    if b then result:=x;
+    else result:=self;
+    end
+  end
+
+--- FUZZY COMPARISON OPERATIONS
+--- Return a UBoolean value
+
+uEquals(x :Length) :UBoolean 
+  begin
+    result:=self.quantityValue.uEquals(x.quantityValue);
+ end
+
+uDistinct(x :Length) :UBoolean -- = 1.0 - self.uEquals(x)
+  begin
+    result:=self.quantityValue.uDistinct(x.quantityValue);
+  end
+
+uLt(x :Length) :UBoolean
+  begin
+    result:=self.quantityValue.uLt(x.quantityValue);
+  end
+
+uLe(x :Length) :UBoolean 
+  begin
+    result:=self.quantityValue.uLe(x.quantityValue);
+  end
+
+uGt(x :Length) :UBoolean
+  begin
+    result:=self.quantityValue.uGt(x.quantityValue);
+  end
+
+uGe(x :Length) :UBoolean
+  begin
+    result:=self.quantityValue.uGe(x.quantityValue);
+  end
+
+end
+
+constraints
+
+context Length::add(x :Length) :Length
+  pre: self.compatibleUnits(x.quantityValue.unit) 
+       and x.quantityValue.unit.noOffset() -- operand should have no offset
+
+context Length::minus(x :Length) :Length
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       and (not x.quantityValue.unit.noOffset() implies not self.quantityValue.unit.noOffset())
+       -- You can subtract two units with offset (although the 
+       -- result will be a "delta" unit, i.e., with no offset 
+       -- But if x has offset, self should have it too.
+
+context Length::equals(x :Length) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Length::distinct(x :Length) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Length::lt(x :Length) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Length::le(x :Length) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+
+context Length::gt(x :Length) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Length::ge(x :Length) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+
+context Length::uEquals(x :Length) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Length::uDistinct(x :Length) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Length::uLt(x :Length) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Length::uLe(x :Length) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+
+context Length::uGt(x :Length) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Length::uGe(x :Length) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+
+context Length::max(x :Length) :Length
+  pre: self.compatibleUnits(x.quantityValue.unit)
+
+context Length::min(x :Length) :Length
+  pre: self.compatibleUnits(x.quantityValue.unit)
+  
+context Length::convertTo(u :Unit) :Length
+  pre:  self.compatibleUnits(u)
+  
+  
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+class Angle
+
+attributes
+  quantityValue : QuantityValue
+
+operations
+
+--- conversion operations
+
+sameUnits(x :Angle) :Boolean = self.quantityValue.sameUnits(x.quantityValue)
+
+compatibleUnits(u :Unit) :Boolean = self.quantityValue.compatibleUnits(u)
+
+convertTo(u :Unit) :Angle
+   begin
+		declare aux:Angle;
+		aux := new Angle; 
+	    aux.quantityValue:=self.quantityValue.convertTo(u);
+	    result:=aux;
+   end   
+
+convertToSIUnits() :Angle
+  begin
+ 		declare aux:Angle;
+		aux := new Angle; 
+	    aux.quantityValue:=self.quantityValue.convertToSIUnits();
+	    result:=aux;
+ end   
+--
+  
+convertFromSIUnits(val :UReal) :Angle
+    -- val is the Angle value expressed in SIUnits
+  begin
+ 		declare aux:Angle;
+		aux := new Angle; 
+	    aux.quantityValue:=self.quantityValue.convertFromSIUnits(val);
+	    result:=aux;
+  end   
+
+-- arithmetic operations -----------
+
+add(x :Angle) : Angle
+    begin
+ 		declare aux:Angle;
+		aux := new Angle; 
+	    aux.quantityValue:=self.quantityValue.add(x.quantityValue);
+	    result:=aux;
+   end   
+
+minus(x :Angle) : Angle
+    begin
+ 		declare aux:Angle;
+		aux := new Angle; 
+	    aux.quantityValue:=self.quantityValue.minus(x.quantityValue);
+	    result:=aux;
+    end   
+
+-- mult(x :Angle) : Angle
+--    begin
+-- 		declare aux:Angle;
+--		aux := new Angle; 
+--	    aux.quantityValue:=self.quantityValue.mult(x.quantityValue);
+--	    result:=aux;
+--   end   
+
+--divideBy(x :Angle) : Angle
+--    begin
+-- 		declare aux:Angle;
+--		aux := new Angle; 
+--	    aux.quantityValue:=self.quantityValue.divideBy(x.quantityValue);
+--	    result:=aux;
+--   end   
+
+abs() :Angle
+    begin
+ 		declare aux:Angle;
+		aux := new Angle; 
+	    aux.quantityValue:=self.quantityValue.abs();
+	    result:=aux;
+    end   
+
+neg() :Angle
+    begin
+ 		declare aux:Angle;
+		aux := new Angle; 
+	    aux.quantityValue:=self.quantityValue.neg();
+	    result:=aux;
+    end   
+
+--power(s : Real) :Angle
+--    begin
+-- 		declare aux:Angle;
+--		aux := new Angle; 
+--	    aux.quantityValue:=self.quantityValue.power(s);
+--   end   
+
+floor() :Angle
+    begin
+ 		declare aux:Angle;
+		aux := new Angle; 
+	    aux.quantityValue:=self.quantityValue.floor();
+	    result:=aux;
+    end   
+
+round() :Angle
+    begin
+  		declare aux:Angle;
+		aux := new Angle; 
+	    aux.quantityValue:=self.quantityValue.round();
+	    result:=aux;
+    end   
+
+sin() : UReal
+begin
+result:=self.quantityValue.value.sin()
+end
+
+cos() : UReal
+begin
+result:=self.quantityValue.value.cos()
+end
+
+tan() : UReal
+begin
+result:=self.quantityValue.value.tan()
+end
+
+--- Multiplication by a scalar
+
+sMult(x :Real) : Angle -- multiplication by a Real
+    begin
+ 		declare aux:Angle;
+		aux := new Angle; 
+	    aux.quantityValue:=self.quantityValue.sMult(x);
+	    result:=aux;
+   end   
+
+sUMult(x :UReal) : Angle -- multiplication by a UReal
+    begin
+ 		declare aux:Angle;
+		aux := new Angle; 
+	    aux.quantityValue:=self.quantityValue.sUMult(x);
+	    result:=aux;
+   end   
+
+
+--- COMPARISON OPERATIONS
+
+equals(x :Angle) :Boolean 
+  begin
+    result:=self.quantityValue.equals(x.quantityValue);
+  end
+
+distinct(x :Angle) :Boolean -- = not self.equals(x)
+  begin
+	declare aux:Boolean;
+    aux:=self.quantityValue.equals(x.quantityValue);
+	result:=not aux;
+  end
+
+lt(x :Angle) :Boolean
+  begin
+    result:=self.quantityValue.lt(x.quantityValue);
+  end
+
+le(x :Angle) :Boolean -- = self.lt(x) or self.equals(x)
+  begin
+    result:=self.quantityValue.le(x.quantityValue);
+  end
+
+gt(x :Angle) :Boolean
+  begin
+    result:=self.quantityValue.gt(x.quantityValue);
+  end
+
+ge(x :Angle) :Boolean -- = self.gt(x) or self.equals(x)
+  begin
+    result:=self.quantityValue.ge(x.quantityValue);
+  end
+
+
+max(x :Angle) :Angle -- = if x.lt(self) then self else x endif
+  begin
+    declare b:Boolean;
+    b:=x.lt(self);
+    if b then result:=self; 
+    else result:=x;
+    end
+  end
+
+min(x :Angle) :Angle -- = if self.lt(x) then self else x endif
+  begin
+    declare b:Boolean;
+    b:=x.lt(self);
+    if b then result:=x;
+    else result:=self;
+    end
+  end
+
+--- FUZZY COMPARISON OPERATIONS
+--- Return a UBoolean value
+
+uEquals(x :Angle) :UBoolean 
+  begin
+    result:=self.quantityValue.uEquals(x.quantityValue);
+ end
+
+uDistinct(x :Angle) :UBoolean -- = 1.0 - self.uEquals(x)
+  begin
+    result:=self.quantityValue.uDistinct(x.quantityValue);
+  end
+
+uLt(x :Angle) :UBoolean
+  begin
+    result:=self.quantityValue.uLt(x.quantityValue);
+  end
+
+uLe(x :Angle) :UBoolean 
+  begin
+    result:=self.quantityValue.uLe(x.quantityValue);
+  end
+
+uGt(x :Angle) :UBoolean
+  begin
+    result:=self.quantityValue.uGt(x.quantityValue);
+  end
+
+uGe(x :Angle) :UBoolean
+  begin
+    result:=self.quantityValue.uGe(x.quantityValue);
+  end
+
+end
+
+constraints
+
+context Angle::add(x :Angle) :Angle
+  pre: self.compatibleUnits(x.quantityValue.unit) 
+       and x.quantityValue.unit.noOffset() -- operand should have no offset
+
+context Angle::minus(x :Angle) :Angle
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       and (not x.quantityValue.unit.noOffset() implies not self.quantityValue.unit.noOffset())
+       -- You can subtract two units with offset (although the 
+       -- result will be a "delta" unit, i.e., with no offset 
+       -- But if x has offset, self should have it too.
+
+context Angle::equals(x :Angle) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Angle::distinct(x :Angle) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Angle::lt(x :Angle) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Angle::le(x :Angle) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+
+context Angle::gt(x :Angle) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Angle::ge(x :Angle) :Boolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+
+context Angle::uEquals(x :Angle) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Angle::uDistinct(x :Angle) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Angle::uLt(x :Angle) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Angle::uLe(x :Angle) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+
+context Angle::uGt(x :Angle) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       
+context Angle::uGe(x :Angle) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
+
+context Angle::max(x :Angle) :Angle
+  pre: self.compatibleUnits(x.quantityValue.unit)
+
+context Angle::min(x :Angle) :Angle
+  pre: self.compatibleUnits(x.quantityValue.unit)
+  
+context Angle::convertTo(u :Unit) :Angle
+  pre:  self.compatibleUnits(u)
+  
+  
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 -- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 --
 -- This model provides types "UReal", "Unit" and "Quantity"
 -- and their corresponding operations, as defined first in the paper
 -- "Adding Uncertainty and Units to Quantity Types in Software Models" 
--- by T. Mayerhofer, M. Wimmer and A. Vallecillo. In Proc. of SLE 2016.
+-- by T. Mayerhofer, M. Wimmer and A. Vallecillo. In Proc. of SLE 2016,
 --
 -- It has been updated in version 3.0 to incorporate 
--- a) Type QuantityValue that represents a quantity value as defined in the VIM
--- b) The new definition of Quantities, that use quanityValue as pivot
---    for value and for unit.
--- c) fuzzy comparison operators that return UBoolean instead of Boolean.
+-- a) fuzzy comparison operators that return UBoolean instead of Boolean.
 --    (they returned Real in version 2)
--- d) change of names of comparison operators lessThan (to "lt") and 
+-- b) change of names of comparison operators lessThan (to "lt") and 
 --    lessEq (to "le").
--- e) ISO 80000 new units: Bit, Shannon, Erlang, Decibel.
--- f) Meter unit is now correctly named Metre
+-- c) ISO 80000 new units: Bit, Shannon, Erlang, Decibel.
+-- d) The new definition of Quantities, that use quantityValue as pivot
+--    for value and for unit.
+-- e) Meter unit is now correctly named Metre
 --
 -- The operations in this file have been specified using SOIL 
 -- (Simple OCL-like Imperative Language) which is part of USE
@@ -49,10 +710,6 @@
 
 
 -- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-model Quantities
-
--- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 class Unit
 
@@ -852,7 +1509,7 @@ sMult(x :Real) : QuantityValue -- multiplication by a Real
         aux.unit := self.unit;
         result := aux;
     end   
-	
+
 --- COMPARISON OPERATIONS
 
 equals(x :QuantityValue) :Boolean 
@@ -1162,7 +1819,7 @@ sUMult(x :UReal) : Quantity -- multiplication by a UReal
 	    aux.quantityValue:=self.quantityValue.sUMult(x);
 	    result:=aux;
    end   
-
+   
 --- COMPARISON OPERATIONS
 
 equals(x :Quantity) :Boolean 
@@ -1319,11 +1976,10 @@ context Quantity::min(x :Quantity) :Quantity
   
 context Quantity::convertTo(u :Unit) :Quantity
   pre:  self.compatibleUnits(u)
-
+  
   
 -- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
--- %%% NOW THE OCL/UML TYPES EXTENDED WITH 
--- %%% MEASUREMENT UNCERTAINTY
+
 --------------------------------------------
 
 class UBoolean

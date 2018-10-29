@@ -10,28 +10,83 @@
     <showrolenames>false</showrolenames>
     <showgrid>false</showgrid>
   </diagramOptions>
+  <node id="UBoolean" sizeCalculated="true" type="Class">
+    <name>UBoolean</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>288.0</x>
+      <y>374.0</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="Length" sizeCalculated="true" type="Class">
+    <name>Length</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>783.0</x>
+      <y>612.0</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
+  <node id="QuantityValue" sizeCalculated="true" type="Class">
+    <name>QuantityValue</name>
+    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+      <x>520.0</x>
+      <y>16.0</y>
+    </strategy>
+    <hidden>false</hidden>
+  </node>
   <node id="UReal" sizeCalculated="true" type="Class">
     <name>UReal</name>
     <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-      <x>27.0</x>
-      <y>35.0</y>
+      <x>15.0</x>
+      <y>16.0</y>
     </strategy>
     <hidden>false</hidden>
   </node>
   <node id="Quantity" sizeCalculated="true" type="Class">
     <name>Quantity</name>
     <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-      <x>248.0</x>
-      <y>37.0</y>
+      <x>801.0</x>
+      <y>17.0</y>
     </strategy>
     <hidden>false</hidden>
   </node>
-  <node id="Unit" sizeCalculated="true" type="Class">
+  <node height="329.0" id="Unit" sizeCalculated="false" type="Class" width="217.29443359375">
     <name>Unit</name>
     <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-      <x>490.0</x>
-      <y>40.0</y>
+      <x>287.0</x>
+      <y>15.0</y>
     </strategy>
     <hidden>false</hidden>
   </node>
+  <edge type="Generalization">
+    <source>Length</source>
+    <target>Quantity</target>
+    <name>Inheritance</name>
+    <properties/>
+    <waypoints>
+      <edgeproperty id="Generalization::Length::Quantity::WayPoint::0"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>0</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>0</id>
+        <specialid>1</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+      <edgeproperty id="Generalization::Length::Quantity::WayPoint::1"
+        sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+        <name>1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+          <userOffsetX>0.0</userOffsetX>
+          <userOffsetY>0.0</userOffsetY>
+        </strategy>
+        <id>1</id>
+        <specialid>2</specialid>
+        <hidden>false</hidden>
+      </edgeproperty>
+    </waypoints>
+    <hidden>false</hidden>
+  </edge>
 </diagram_Layout>

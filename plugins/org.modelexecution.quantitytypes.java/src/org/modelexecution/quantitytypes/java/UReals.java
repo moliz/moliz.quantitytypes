@@ -27,7 +27,7 @@ public class UReals {
 	 * STATIC OPERATIONS
 	 */
 
-	public static UReal create(double x, double u) {
+	public static UReal generate(double x, double u) {
 		return new UReal(x,u);
 	}
 	

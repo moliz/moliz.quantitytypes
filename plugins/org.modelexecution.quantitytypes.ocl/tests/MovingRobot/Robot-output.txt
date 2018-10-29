@@ -1,3 +1,4 @@
+USE version 4.2.0-487, Copyright (C) 1999-2016 University of Bremen
 use> open Robot.soil
 Robot.soil> -- reset
 Robot.soil> -- open Robot.soil
@@ -97,42 +98,82 @@ Robot.soil> !angleTolerance.x:=at
 Robot.soil> !angleTolerance.u:=0.0
 Robot.soil>
 Robot.soil> --- LENGTHS
-Robot.soil>
-Robot.soil> !new Length('x00')
+Robot.soil> !new Length('Lx00')
+Robot.soil> !new QuantityValue('x00')
+Robot.soil> !Lx00.quantityValue:=x00
 Robot.soil> !x00.value:=x00U
 Robot.soil> !x00.unit:=m
-Robot.soil> !new Length('y00')
+Robot.soil>
+Robot.soil> !new Length('Ly00')
+Robot.soil> !new QuantityValue('y00')
+Robot.soil> !Ly00.quantityValue:=y00
 Robot.soil> !y00.value:=y00U
 Robot.soil> !y00.unit:=m
-Robot.soil> !new Length('x10')
+Robot.soil>
+Robot.soil> !new Length('Lx10')
+Robot.soil> !new QuantityValue('x10')
+Robot.soil> !Lx10.quantityValue:=x10
 Robot.soil> !x10.value:=x10U
 Robot.soil> !x10.unit:=m
-Robot.soil> !new Length('y10')
+Robot.soil>
+Robot.soil> !new Length('Ly10')
+Robot.soil> !new QuantityValue('y10')
+Robot.soil> !Ly10.quantityValue:=y10
 Robot.soil> !y10.value:=y10U
 Robot.soil> !y10.unit:=m
-Robot.soil> !new Length('x20')
+Robot.soil>
+Robot.soil> !new Length('Lx20')
+Robot.soil> !new QuantityValue('x20')
+Robot.soil> !Lx20.quantityValue:=x20
 Robot.soil> !x20.value:=x20U
 Robot.soil> !x20.unit:=m
-Robot.soil> !new Length('y20')
+Robot.soil>
+Robot.soil> !new Length('Ly20')
+Robot.soil> !new QuantityValue('y20')
+Robot.soil> !Ly20.quantityValue:=y20
 Robot.soil> !y20.value:=y20U
 Robot.soil> !y20.unit:=m
-Robot.soil> !new Length('x30')
+Robot.soil>
+Robot.soil> !new Length('Lx30')
+Robot.soil> !new QuantityValue('x30')
+Robot.soil> !Lx30.quantityValue:=x30
 Robot.soil> !x30.value:=x30U
 Robot.soil> !x30.unit:=m
-Robot.soil> !new Length('y30')
+Robot.soil>
+Robot.soil> !new Length('Ly30')
+Robot.soil> !new QuantityValue('y30')
+Robot.soil> !Ly30.quantityValue:=y30
 Robot.soil> !y30.value:=y30U
 Robot.soil> !y30.unit:=m
-Robot.soil> !new Length('xy1010')
+Robot.soil>
+Robot.soil> !new Length('Lxy1010')
+Robot.soil> !new QuantityValue('xy1010')
+Robot.soil> !Lxy1010.quantityValue:=xy1010
 Robot.soil> !xy1010.value:=xy1010U
 Robot.soil> !xy1010.unit:=ft
 Robot.soil>
 Robot.soil> -- ANGLES
-Robot.soil> !new Angle('h0')
-Robot.soil> !new Angle('h90')
-Robot.soil> !new Angle('h180')
-Robot.soil> !new Angle('h270')
-Robot.soil> !new Angle('h45')
-Robot.soil> !new Angle('h225')
+Robot.soil> !new Angle('Ah0')
+Robot.soil> !new QuantityValue('h0')
+Robot.soil> !Ah0.quantityValue:=h0
+Robot.soil>
+Robot.soil> !new Angle('Ah90')
+Robot.soil> !new QuantityValue('h90')
+Robot.soil> !Ah90.quantityValue:=h90
+Robot.soil>
+Robot.soil> !new Angle('Ah180')
+Robot.soil> !new QuantityValue('h180')
+Robot.soil> !Ah180.quantityValue:=h180
+Robot.soil>
+Robot.soil> !new Angle('Ah270')
+Robot.soil> !new QuantityValue('h270')
+Robot.soil> !Ah270.quantityValue:=h270
+Robot.soil> !new Angle('Ah45')
+Robot.soil> !new QuantityValue('h45')
+Robot.soil> !Ah45.quantityValue:=h45
+Robot.soil> !new Angle('Ah225')
+Robot.soil> !new QuantityValue('h225')
+Robot.soil> !Ah225.quantityValue:=h225
 Robot.soil>
 Robot.soil> !h0.value :=h0U
 Robot.soil> !h0.unit:=rad
@@ -148,32 +189,32 @@ Robot.soil> !h225.value :=h225U
 Robot.soil> !h225.unit:=rad
 Robot.soil>
 Robot.soil> !new Coordinate('initial')
-Robot.soil> !initial.x:=x00
-Robot.soil> !initial.y:=y00
+Robot.soil> !initial.x:=Lx00
+Robot.soil> !initial.y:=Ly00
 Robot.soil> !new Coordinate('target')
-Robot.soil> !target.x:=x10
-Robot.soil> !target.y:=y10
+Robot.soil> !target.x:=Lx10
+Robot.soil> !target.y:=Ly10
 Robot.soil>
 Robot.soil> !new Robot('robot')
 Robot.soil> !robot.position:=initial
-Robot.soil> !robot.headsTo:=h0
+Robot.soil> !robot.headsTo:=Ah0
 Robot.soil>
 Robot.soil> !new Movement('m1')
-Robot.soil> !m1.move:=x10
+Robot.soil> !m1.move:=Lx10
 Robot.soil>
 Robot.soil> !new Movement('m2')
-Robot.soil> !m2.rotate:=h90
+Robot.soil> !m2.rotate:=Ah90
 Robot.soil>
 Robot.soil> !new Movement('m3')
-Robot.soil> !m3.move:=x10
+Robot.soil> !m3.move:=Lx10
 Robot.soil>
 Robot.soil> !new Movement('m4')
-Robot.soil> !m4.move:=xy1010
-Robot.soil> !m4.rotate:=h225
+Robot.soil> !m4.move:=Lxy1010
+Robot.soil> !m4.rotate:=Ah225
 Robot.soil>
 Robot.soil> !new Movement('m5')
-Robot.soil> !m5.move:=xy1010
-Robot.soil> !m5.rotate:=h45
+Robot.soil> !m5.move:=Lxy1010
+Robot.soil> !m5.rotate:=Ah45
 Robot.soil>
 Robot.soil> !insert(robot,m1) into Plan
 Robot.soil> !insert(robot,m2) into Plan
@@ -195,8 +236,8 @@ Robot.soil> !b:=robot.position.coincide(target)
 Robot.soil> ?b
 -> true : Boolean
 Robot.soil> !r:=robot.position.uCoincide(target)
-Robot.soil> ?r
+Robot.soil> ?r.c
 -> 0.03479626661931806 : Real
 Robot.soil>
 Robot.soil>
-use> 
+use>

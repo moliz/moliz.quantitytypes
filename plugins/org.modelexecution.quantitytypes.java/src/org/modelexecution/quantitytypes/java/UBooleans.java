@@ -22,7 +22,7 @@ public class UBooleans {
      * STATIC Operations
      */
 
-    public static UBoolean not(UBoolean b) {
+    public static UBoolean uNot(UBoolean b) {
 	   return b.not();
    }
 

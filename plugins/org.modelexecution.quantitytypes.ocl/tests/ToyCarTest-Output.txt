@@ -1,0 +1,220 @@
+use> open ToyCarTest.soil
+ToyCarTest.soil> -- INITIAL VALUES
+ToyCarTest.soil> !new UReal('ip1')
+ToyCarTest.soil> !ip1.x :=0.0
+ToyCarTest.soil> !ip1.u :=0.0
+ToyCarTest.soil> !new UReal('fp1')
+ToyCarTest.soil> !fp1.x :=10.0
+ToyCarTest.soil> !fp1.u :=0.001
+ToyCarTest.soil> !new UReal('dur1')
+ToyCarTest.soil> !dur1.x :=10.0
+ToyCarTest.soil> !dur1.u :=0.002
+ToyCarTest.soil> !new UReal('iv1')
+ToyCarTest.soil> !iv1.x :=0.0
+ToyCarTest.soil> !iv1.u :=0.0
+ToyCarTest.soil> !new UReal('fv1')
+ToyCarTest.soil> !fv1.x :=2.0
+ToyCarTest.soil> !fv1.u :=0.2
+ToyCarTest.soil>
+ToyCarTest.soil> !new UReal('ip2')
+ToyCarTest.soil> !ip2:=fp1
+ToyCarTest.soil> !new UReal('fp2')
+ToyCarTest.soil> !fp2.x :=20.0
+ToyCarTest.soil> !fp2.u :=0.001
+ToyCarTest.soil> !new UReal('dur2')
+ToyCarTest.soil> !dur2.x :=5.0
+ToyCarTest.soil> !dur2.u :=0.002
+ToyCarTest.soil> !new UReal('iv2')
+ToyCarTest.soil> !iv2 := fv1
+ToyCarTest.soil> !new UReal('fv2')
+ToyCarTest.soil> !fv2.x :=2.0
+ToyCarTest.soil> !fv2.u :=0.2
+ToyCarTest.soil>
+ToyCarTest.soil> !new Unit('m')
+ToyCarTest.soil> !m.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+ToyCarTest.soil> !m.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+ToyCarTest.soil> !m.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+ToyCarTest.soil> !m.name:=m.defaultName();
+ToyCarTest.soil> !m.symbol:=m.defaultSymbol();
+ToyCarTest.soil>
+ToyCarTest.soil> !new Unit('s')
+ToyCarTest.soil> !s.dimensions := Sequence{0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+ToyCarTest.soil> !s.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+ToyCarTest.soil> !s.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+ToyCarTest.soil> !s.name:=s.defaultName();
+ToyCarTest.soil> !s.symbol:=s.defaultSymbol();
+ToyCarTest.soil>
+ToyCarTest.soil> -----------------------------------------
+ToyCarTest.soil> !new Quantity('initialPosition1Q')
+ToyCarTest.soil> !new Quantity('finalPosition1Q')
+ToyCarTest.soil> !new Quantity('duration1Q')
+ToyCarTest.soil> !new Quantity('initialVelocity1Q')
+ToyCarTest.soil> !new Quantity('finalVelocity1Q')
+ToyCarTest.soil> !new Quantity('distance1Q')
+ToyCarTest.soil> !new Quantity('avrgVelocity1Q')
+ToyCarTest.soil> !new Quantity('avrgAcceleration1Q')
+ToyCarTest.soil>
+ToyCarTest.soil> !new Quantity('initialPosition2Q')
+ToyCarTest.soil> !new Quantity('finalPosition2Q')
+ToyCarTest.soil> !new Quantity('duration2Q')
+ToyCarTest.soil> !new Quantity('initialVelocity2Q')
+ToyCarTest.soil> !new Quantity('finalVelocity2Q')
+ToyCarTest.soil> !new Quantity('distance2Q')
+ToyCarTest.soil> !new Quantity('avrgVelocity2Q')
+ToyCarTest.soil> !new Quantity('avrgAcceleration2Q')
+ToyCarTest.soil>
+ToyCarTest.soil> !new Quantity('avrgVelocityQ')
+ToyCarTest.soil> !new Quantity('avrgAccelerationQ')
+ToyCarTest.soil> -----------------------------------------
+ToyCarTest.soil> !new QuantityValue('initialPosition1')
+ToyCarTest.soil> !new QuantityValue('finalPosition1')
+ToyCarTest.soil> !new QuantityValue('duration1')
+ToyCarTest.soil> !new QuantityValue('initialVelocity1')
+ToyCarTest.soil> !new QuantityValue('finalVelocity1')
+ToyCarTest.soil> !new QuantityValue('distance1')
+ToyCarTest.soil> !new QuantityValue('avrgVelocity1')
+ToyCarTest.soil> !new QuantityValue('avrgAcceleration1')
+ToyCarTest.soil>
+ToyCarTest.soil> !new QuantityValue('initialPosition2')
+ToyCarTest.soil> !new QuantityValue('finalPosition2')
+ToyCarTest.soil> !new QuantityValue('duration2')
+ToyCarTest.soil> !new QuantityValue('initialVelocity2')
+ToyCarTest.soil> !new QuantityValue('finalVelocity2')
+ToyCarTest.soil> !new QuantityValue('distance2')
+ToyCarTest.soil> !new QuantityValue('avrgVelocity2')
+ToyCarTest.soil> !new QuantityValue('avrgAcceleration2')
+ToyCarTest.soil>
+ToyCarTest.soil> !new QuantityValue('avrgVelocity')
+ToyCarTest.soil> !new QuantityValue('avrgAcceleration')
+ToyCarTest.soil> -----------------------------------------
+ToyCarTest.soil>
+ToyCarTest.soil> !initialPosition1Q.quantityValue:=initialPosition1
+ToyCarTest.soil> !finalPosition1Q.quantityValue:=finalPosition1
+ToyCarTest.soil> !duration1Q.quantityValue:=duration1
+ToyCarTest.soil> !initialVelocity1Q.quantityValue:=initialVelocity1
+ToyCarTest.soil> !finalVelocity1Q.quantityValue:=finalVelocity1
+ToyCarTest.soil> !distance1Q.quantityValue:=distance1
+ToyCarTest.soil> !avrgVelocity1Q.quantityValue:=avrgVelocity1
+ToyCarTest.soil> !avrgAcceleration1Q.quantityValue:=avrgAcceleration1
+ToyCarTest.soil>
+ToyCarTest.soil> !initialPosition2Q.quantityValue:=initialPosition2
+ToyCarTest.soil> !finalPosition2Q.quantityValue:=finalPosition2
+ToyCarTest.soil> !duration2Q.quantityValue:=duration2
+ToyCarTest.soil> !initialVelocity2Q.quantityValue:=initialVelocity2
+ToyCarTest.soil> !finalVelocity2Q.quantityValue:=finalVelocity2
+ToyCarTest.soil> !distance2Q.quantityValue:=distance2
+ToyCarTest.soil> !avrgVelocity2Q.quantityValue:=avrgVelocity2
+ToyCarTest.soil> !avrgAcceleration2Q.quantityValue:=avrgAcceleration2
+ToyCarTest.soil>
+ToyCarTest.soil> !avrgVelocityQ.quantityValue:=avrgVelocity
+ToyCarTest.soil> !avrgAccelerationQ.quantityValue:=avrgAcceleration
+ToyCarTest.soil>
+ToyCarTest.soil> -----------------------------------------
+ToyCarTest.soil> !initialPosition1.value := ip1
+ToyCarTest.soil> !initialPosition1.unit := m
+ToyCarTest.soil> !finalPosition1.value := fp1
+ToyCarTest.soil> !finalPosition1.unit := m
+ToyCarTest.soil> !duration1.value := dur1
+ToyCarTest.soil> !duration1.unit :=s
+ToyCarTest.soil> !initialVelocity1.value := iv1
+ToyCarTest.soil> !initialVelocity1.unit :=s
+ToyCarTest.soil> !finalVelocity1.value := fv1
+ToyCarTest.soil> !finalVelocity1.unit :=s
+ToyCarTest.soil>
+ToyCarTest.soil> !distance1:=finalPosition1.minus(initialPosition1)
+ToyCarTest.soil> ?distance1.value.x
+-> 10.0 : Real
+ToyCarTest.soil> ?distance1.value.u
+-> 0.001 : Real
+ToyCarTest.soil> ?distance1.unit.symbol
+-> 'm' : String
+ToyCarTest.soil> ?distance1.unit.dimensions
+-> Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+ToyCarTest.soil>
+ToyCarTest.soil> !avrgVelocity1:=distance1.divideBy(duration1)
+ToyCarTest.soil> ?avrgVelocity1.value.x
+-> 1.00000004 : Real
+ToyCarTest.soil> ?avrgVelocity1.value.u
+-> 3.7416573867739413E-4 : Real
+ToyCarTest.soil> ?avrgVelocity1.unit.symbol
+-> 'm/s' : String
+ToyCarTest.soil> ?avrgVelocity1.unit.dimensions
+-> Sequence{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+ToyCarTest.soil>
+ToyCarTest.soil> !avrgAcceleration1:=avrgVelocity1.divideBy(duration1)
+ToyCarTest.soil> ?avrgAcceleration1.value.x
+-> 0.10000000800000017 : Real
+ToyCarTest.soil> ?avrgAcceleration1.value.u
+-> 1.2000000013333334E-4 : Real
+ToyCarTest.soil> ?avrgAcceleration1.unit.symbol
+-> 'm/s^2' : String
+ToyCarTest.soil> ?avrgAcceleration1.unit.dimensions
+-> Sequence{1.0,0.0,-2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+ToyCarTest.soil>
+ToyCarTest.soil> !initialPosition2.value := ip2
+ToyCarTest.soil> !initialPosition2.unit := m
+ToyCarTest.soil> !finalPosition2.value := fp2
+ToyCarTest.soil> !finalPosition2.unit := m
+ToyCarTest.soil> !duration2.value := dur1
+ToyCarTest.soil> !duration2.unit :=s
+ToyCarTest.soil> !initialVelocity2.value := iv1
+ToyCarTest.soil> !initialVelocity2.unit :=s
+ToyCarTest.soil> !finalVelocity2.value := fv1
+ToyCarTest.soil> !finalVelocity2.unit :=s
+ToyCarTest.soil>
+ToyCarTest.soil> !distance2:=finalPosition2.minus(initialPosition2)
+ToyCarTest.soil> ?distance2.value.x
+-> 10.0 : Real
+ToyCarTest.soil> ?distance2.value.u
+-> 0.001414213562373095 : Real
+ToyCarTest.soil> ?distance2.unit.symbol
+-> 'm' : String
+ToyCarTest.soil> ?distance2.unit.dimensions
+-> Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+ToyCarTest.soil>
+ToyCarTest.soil> !avrgVelocity2:=distance2.divideBy(duration2)
+ToyCarTest.soil> ?avrgVelocity2.value.x
+-> 1.00000004 : Real
+ToyCarTest.soil> ?avrgVelocity2.value.u
+-> 4.898979485566356E-4 : Real
+ToyCarTest.soil> ?avrgVelocity2.unit.symbol
+-> 'm/s' : String
+ToyCarTest.soil> ?avrgVelocity2.unit.dimensions
+-> Sequence{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+ToyCarTest.soil>
+ToyCarTest.soil> !avrgAcceleration2:=avrgVelocity2.divideBy(duration2)
+ToyCarTest.soil> ?avrgAcceleration2.value.x
+-> 0.10000000800000017 : Real
+ToyCarTest.soil> ?avrgAcceleration2.value.u
+-> 1.5620499362056258E-4 : Real
+ToyCarTest.soil> ?avrgAcceleration2.unit.symbol
+-> 'm/s^2' : String
+ToyCarTest.soil> ?avrgAcceleration2.unit.dimensions
+-> Sequence{1.0,0.0,-2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+ToyCarTest.soil>
+ToyCarTest.soil> !new Quantity('aux1')
+ToyCarTest.soil> !new Quantity('aux2')
+ToyCarTest.soil> !aux1:=avrgVelocity1.add(avrgVelocity2);
+ToyCarTest.soil> !avrgVelocity:=aux1.sMult(0.5);
+ToyCarTest.soil> !aux2:=avrgAcceleration1.add(avrgAcceleration2);
+ToyCarTest.soil> !avrgAcceleration:=aux2.sMult(0.5);
+ToyCarTest.soil>
+ToyCarTest.soil> ?avrgVelocity.value.x
+-> 1.00000004 : Real
+ToyCarTest.soil> ?avrgVelocity.value.u
+-> 3.082207001484488E-4 : Real
+ToyCarTest.soil> ?avrgVelocity.unit.symbol
+-> 'm/s' : String
+ToyCarTest.soil> ?avrgVelocity.unit.dimensions
+-> Sequence{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+ToyCarTest.soil>
+ToyCarTest.soil> ?avrgAcceleration.value.x
+-> 0.10000000800000017 : Real
+ToyCarTest.soil> ?avrgAcceleration.value.u
+-> 9.848857809918874E-5 : Real
+ToyCarTest.soil> ?avrgAcceleration.unit.symbol
+-> 'm/s^2' : String
+ToyCarTest.soil> ?avrgAcceleration.unit.dimensions
+-> Sequence{1.0,0.0,-2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+ToyCarTest.soil>
+use>

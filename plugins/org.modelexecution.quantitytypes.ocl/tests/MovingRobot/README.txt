@@ -22,7 +22,7 @@ a) For the Robot with Quantities:
 
 * MovingRobot.use: specs of the Robot using Quantities
 * MovingRobot_default.clt: diagrammatic info for these specs
-* Robot-NoQuantities.soil: set of SOIL commands to execute the MovingRobot.use specs
+* Robot.soil: set of SOIL commands to execute the MovingRobot.use specs
 * Robot-output.txt: output of executing the SOIL commands
 
 To execute these specs, in the USE/OCL console, execute:

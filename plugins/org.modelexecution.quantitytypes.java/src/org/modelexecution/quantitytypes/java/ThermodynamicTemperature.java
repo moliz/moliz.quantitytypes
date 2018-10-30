@@ -159,7 +159,7 @@ public ThermodynamicTemperature round(){ //returns (i,u) with i the closest int 
 return new ThermodynamicTemperature(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ThermodynamicTemperature min(ThermodynamicTemperature r) { // units maintained
-if (r.lessThan(this)) return new ThermodynamicTemperature(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ThermodynamicTemperature(r.getX(),r.getU(),r.getUnits());
 return new ThermodynamicTemperature(this.getX(),this.getU(),this.getUnits());
 }
 public ThermodynamicTemperature max(ThermodynamicTemperature r) { // unit maintained

@@ -207,7 +207,7 @@ public Activity round(){ //returns (i,u) with i the closest int to x -- units ma
 return new Activity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Activity min(Activity r) { // units maintained
-if (r.lessThan(this)) return new Activity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Activity(r.getX(),r.getU(),r.getUnits());
 return new Activity(this.getX(),this.getU(),this.getUnits());
 }
 public Activity max(Activity r) { // unit maintained

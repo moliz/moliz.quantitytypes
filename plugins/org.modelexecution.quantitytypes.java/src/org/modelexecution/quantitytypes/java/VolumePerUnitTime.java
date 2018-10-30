@@ -153,7 +153,7 @@ public VolumePerUnitTime round(){ //returns (i,u) with i the closest int to x --
 return new VolumePerUnitTime(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public VolumePerUnitTime min(VolumePerUnitTime r) { // units maintained
-if (r.lessThan(this)) return new VolumePerUnitTime(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new VolumePerUnitTime(r.getX(),r.getU(),r.getUnits());
 return new VolumePerUnitTime(this.getX(),this.getU(),this.getUnits());
 }
 public VolumePerUnitTime max(VolumePerUnitTime r) { // unit maintained

@@ -111,7 +111,7 @@ public LuminousFlux round(){ //returns (i,u) with i the closest int to x -- unit
 return new LuminousFlux(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public LuminousFlux min(LuminousFlux r) { // units maintained
-if (r.lessThan(this)) return new LuminousFlux(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new LuminousFlux(r.getX(),r.getU(),r.getUnits());
 return new LuminousFlux(this.getX(),this.getU(),this.getUnits());
 }
 public LuminousFlux max(LuminousFlux r) { // unit maintained

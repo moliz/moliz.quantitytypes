@@ -138,7 +138,7 @@ public LinearThermalExpansion round(){ //returns (i,u) with i the closest int to
 return new LinearThermalExpansion(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public LinearThermalExpansion min(LinearThermalExpansion r) { // units maintained
-if (r.lessThan(this)) return new LinearThermalExpansion(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new LinearThermalExpansion(r.getX(),r.getU(),r.getUnits());
 return new LinearThermalExpansion(this.getX(),this.getU(),this.getUnits());
 }
 public LinearThermalExpansion max(LinearThermalExpansion r) { // unit maintained

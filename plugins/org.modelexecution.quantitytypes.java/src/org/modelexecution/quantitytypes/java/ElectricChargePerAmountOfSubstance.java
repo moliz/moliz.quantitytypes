@@ -120,7 +120,7 @@ public ElectricChargePerAmountOfSubstance round(){ //returns (i,u) with i the cl
 return new ElectricChargePerAmountOfSubstance(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ElectricChargePerAmountOfSubstance min(ElectricChargePerAmountOfSubstance r) { // units maintained
-if (r.lessThan(this)) return new ElectricChargePerAmountOfSubstance(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ElectricChargePerAmountOfSubstance(r.getX(),r.getU(),r.getUnits());
 return new ElectricChargePerAmountOfSubstance(this.getX(),this.getU(),this.getUnits());
 }
 public ElectricChargePerAmountOfSubstance max(ElectricChargePerAmountOfSubstance r) { // unit maintained

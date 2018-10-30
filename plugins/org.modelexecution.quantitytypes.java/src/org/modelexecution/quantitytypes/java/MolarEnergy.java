@@ -132,7 +132,7 @@ public MolarEnergy round(){ //returns (i,u) with i the closest int to x -- units
 return new MolarEnergy(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public MolarEnergy min(MolarEnergy r) { // units maintained
-if (r.lessThan(this)) return new MolarEnergy(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new MolarEnergy(r.getX(),r.getU(),r.getUnits());
 return new MolarEnergy(this.getX(),this.getU(),this.getUnits());
 }
 public MolarEnergy max(MolarEnergy r) { // unit maintained

@@ -120,7 +120,7 @@ public AmountOfSubstancePerUnitMass round(){ //returns (i,u) with i the closest 
 return new AmountOfSubstancePerUnitMass(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public AmountOfSubstancePerUnitMass min(AmountOfSubstancePerUnitMass r) { // units maintained
-if (r.lessThan(this)) return new AmountOfSubstancePerUnitMass(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new AmountOfSubstancePerUnitMass(r.getX(),r.getU(),r.getUnits());
 return new AmountOfSubstancePerUnitMass(this.getX(),this.getU(),this.getUnits());
 }
 public AmountOfSubstancePerUnitMass max(AmountOfSubstancePerUnitMass r) { // unit maintained

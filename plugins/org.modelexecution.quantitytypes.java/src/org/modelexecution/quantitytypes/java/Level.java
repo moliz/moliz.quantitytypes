@@ -118,7 +118,7 @@ public class Level extends Quantity {
 		}
 
 		public Level min(Level r) { // units maintained
-			if (r.lessThan(this))
+			if (r.lt(this))
 				return new Level(r.getX(), r.getU(), r.getUnits());
 			return new Level(this.getX(), this.getU(), this.getUnits());
 		}

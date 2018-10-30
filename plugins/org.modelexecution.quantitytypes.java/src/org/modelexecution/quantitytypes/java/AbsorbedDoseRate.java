@@ -141,7 +141,7 @@ public AbsorbedDoseRate round(){ //returns (i,u) with i the closest int to x -- 
 return new AbsorbedDoseRate(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public AbsorbedDoseRate min(AbsorbedDoseRate r) { // units maintained
-if (r.lessThan(this)) return new AbsorbedDoseRate(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new AbsorbedDoseRate(r.getX(),r.getU(),r.getUnits());
 return new AbsorbedDoseRate(this.getX(),this.getU(),this.getUnits());
 }
 public AbsorbedDoseRate max(AbsorbedDoseRate r) { // unit maintained

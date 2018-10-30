@@ -204,7 +204,7 @@ public Force round(){ //returns (i,u) with i the closest int to x -- units maint
 return new Force(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Force min(Force r) { // units maintained
-if (r.lessThan(this)) return new Force(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Force(r.getX(),r.getU(),r.getUnits());
 return new Force(this.getX(),this.getU(),this.getUnits());
 }
 public Force max(Force r) { // unit maintained

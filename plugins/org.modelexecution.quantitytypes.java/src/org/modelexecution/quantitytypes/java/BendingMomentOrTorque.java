@@ -249,7 +249,7 @@ public BendingMomentOrTorque round(){ //returns (i,u) with i the closest int to 
 return new BendingMomentOrTorque(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public BendingMomentOrTorque min(BendingMomentOrTorque r) { // units maintained
-if (r.lessThan(this)) return new BendingMomentOrTorque(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new BendingMomentOrTorque(r.getX(),r.getU(),r.getUnits());
 return new BendingMomentOrTorque(this.getX(),this.getU(),this.getUnits());
 }
 public BendingMomentOrTorque max(BendingMomentOrTorque r) { // unit maintained

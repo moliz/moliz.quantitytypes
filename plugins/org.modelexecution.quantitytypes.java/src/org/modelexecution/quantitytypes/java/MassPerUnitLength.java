@@ -180,7 +180,7 @@ public MassPerUnitLength round(){ //returns (i,u) with i the closest int to x --
 return new MassPerUnitLength(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public MassPerUnitLength min(MassPerUnitLength r) { // units maintained
-if (r.lessThan(this)) return new MassPerUnitLength(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new MassPerUnitLength(r.getX(),r.getU(),r.getUnits());
 return new MassPerUnitLength(this.getX(),this.getU(),this.getUnits());
 }
 public MassPerUnitLength max(MassPerUnitLength r) { // unit maintained

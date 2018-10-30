@@ -141,7 +141,7 @@ public MagneticDipoleMoment round(){ //returns (i,u) with i the closest int to x
 return new MagneticDipoleMoment(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public MagneticDipoleMoment min(MagneticDipoleMoment r) { // units maintained
-if (r.lessThan(this)) return new MagneticDipoleMoment(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new MagneticDipoleMoment(r.getX(),r.getU(),r.getUnits());
 return new MagneticDipoleMoment(this.getX(),this.getU(),this.getUnits());
 }
 public MagneticDipoleMoment max(MagneticDipoleMoment r) { // unit maintained

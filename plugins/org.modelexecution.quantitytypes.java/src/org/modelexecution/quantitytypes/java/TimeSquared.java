@@ -174,7 +174,7 @@ public TimeSquared round(){ //returns (i,u) with i the closest int to x -- units
 return new TimeSquared(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public TimeSquared min(TimeSquared r) { // units maintained
-if (r.lessThan(this)) return new TimeSquared(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new TimeSquared(r.getX(),r.getU(),r.getUnits());
 return new TimeSquared(this.getX(),this.getU(),this.getUnits());
 }
 public TimeSquared max(TimeSquared r) { // unit maintained

@@ -321,21 +321,21 @@ public class Quantity implements Comparable<Quantity> {
 		return result;
 	}
 
-	public boolean lessThan(Quantity r) {  //only if same unit
+	public boolean lt(Quantity r) {  //only if same unit
 
 //		assert this.compatibleUnits(r.unit);
 		if (!this.compatibleUnits(r.unit)) throw new RuntimeException("lessThan: Incompatible Units: "+this.unit+" and "+r.unit);
 
-		return this.getUReal().lt(r.convertTo(this.getUnits()).getUReal());
+		return this.getUReal().lt(r.convertTo(this.getUnits()).getUReal()).toBoolean();
 	}
 	
-	public boolean lessEq(Quantity r) {  //only if same unit
+	public boolean lEq(Quantity r) {  //only if same unit
 
 //		assert this.compatibleUnits(r.unit);
 		if (!this.compatibleUnits(r.unit)) throw new RuntimeException("lessEq: Incompatible Units: "+this.unit+" and "+r.unit);
 
 		Quantity other = r.convertTo(this.getUnits());
-		return (this.lessThan(other) || this.equals(other));
+		return (this.lt(other) || this.equals(other));
 	}
 
 	public boolean gt(Quantity r) {  //only if same unit
@@ -343,7 +343,7 @@ public class Quantity implements Comparable<Quantity> {
 //		assert this.compatibleUnits(r.unit);
 		if (!this.compatibleUnits(r.unit)) throw new RuntimeException("gt: Incompatible Units: "+this.unit+" and "+r.unit);
 
-		return r.convertTo(this.getUnits()).lessThan(this);		
+		return r.convertTo(this.getUnits()).lt(this);		
 	}
 	
 	public boolean ge(Quantity r) {  //only if same unit
@@ -376,7 +376,7 @@ public class Quantity implements Comparable<Quantity> {
 		return new Quantity(Math.round(this.getX()),this.getU(),this.getUnits());
 	}
 	public Quantity min(Quantity r) { // units maintained
-		if (r.lessThan(this)) return new Quantity(r.getX(),r.getU(),r.getUnits()); 
+		if (r.lt(this)) return new Quantity(r.getX(),r.getU(),r.getUnits()); 
 		return new Quantity(this.getX(),this.getU(),this.getUnits());
 	}
 	public Quantity max(Quantity r) { // unit maintained
@@ -437,7 +437,7 @@ public class Quantity implements Comparable<Quantity> {
 	@Override
 	public int compareTo(Quantity other) {
 		if (this.equals(other)) return 0;
-		if (this.lessThan(other)) return -1;
+		if (this.lt(other)) return -1;
 		return 1;
 	}
 

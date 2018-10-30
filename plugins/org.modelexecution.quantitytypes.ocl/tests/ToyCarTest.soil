@@ -1,0 +1,185 @@
+-- INITIAL VALUES
+!new UReal('ip1')
+!ip1.x :=0.0
+!ip1.u :=0.0
+!new UReal('fp1')
+!fp1.x :=10.0
+!fp1.u :=0.001
+!new UReal('dur1')
+!dur1.x :=10.0
+!dur1.u :=0.002
+!new UReal('iv1')
+!iv1.x :=0.0
+!iv1.u :=0.0
+!new UReal('fv1')
+!fv1.x :=2.0
+!fv1.u :=0.2
+
+!new UReal('ip2')
+!ip2:=fp1 
+!new UReal('fp2')
+!fp2.x :=20.0
+!fp2.u :=0.001
+!new UReal('dur2')
+!dur2.x :=5.0
+!dur2.u :=0.002
+!new UReal('iv2')
+!iv2 := fv1
+!new UReal('fv2')
+!fv2.x :=2.0
+!fv2.u :=0.2
+
+!new Unit('m')
+!m.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!m.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!m.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!m.name:=m.defaultName();
+!m.symbol:=m.defaultSymbol();
+
+!new Unit('s')
+!s.dimensions := Sequence{0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!s.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+!s.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+!s.name:=s.defaultName();
+!s.symbol:=s.defaultSymbol();
+
+-----------------------------------------
+!new Quantity('initialPosition1Q')
+!new Quantity('finalPosition1Q')
+!new Quantity('duration1Q')
+!new Quantity('initialVelocity1Q')
+!new Quantity('finalVelocity1Q')
+!new Quantity('distance1Q')
+!new Quantity('avrgVelocity1Q')
+!new Quantity('avrgAcceleration1Q')
+
+!new Quantity('initialPosition2Q')
+!new Quantity('finalPosition2Q')
+!new Quantity('duration2Q')
+!new Quantity('initialVelocity2Q')
+!new Quantity('finalVelocity2Q')
+!new Quantity('distance2Q')
+!new Quantity('avrgVelocity2Q')
+!new Quantity('avrgAcceleration2Q')
+
+!new Quantity('avrgVelocityQ')
+!new Quantity('avrgAccelerationQ')
+-----------------------------------------
+!new QuantityValue('initialPosition1')
+!new QuantityValue('finalPosition1')
+!new QuantityValue('duration1')
+!new QuantityValue('initialVelocity1')
+!new QuantityValue('finalVelocity1')
+!new QuantityValue('distance1')
+!new QuantityValue('avrgVelocity1')
+!new QuantityValue('avrgAcceleration1')
+
+!new QuantityValue('initialPosition2')
+!new QuantityValue('finalPosition2')
+!new QuantityValue('duration2')
+!new QuantityValue('initialVelocity2')
+!new QuantityValue('finalVelocity2')
+!new QuantityValue('distance2')
+!new QuantityValue('avrgVelocity2')
+!new QuantityValue('avrgAcceleration2')
+
+!new QuantityValue('avrgVelocity')
+!new QuantityValue('avrgAcceleration')
+-----------------------------------------
+
+!initialPosition1Q.quantityValue:=initialPosition1
+!finalPosition1Q.quantityValue:=finalPosition1
+!duration1Q.quantityValue:=duration1
+!initialVelocity1Q.quantityValue:=initialVelocity1
+!finalVelocity1Q.quantityValue:=finalVelocity1
+!distance1Q.quantityValue:=distance1
+!avrgVelocity1Q.quantityValue:=avrgVelocity1
+!avrgAcceleration1Q.quantityValue:=avrgAcceleration1
+
+!initialPosition2Q.quantityValue:=initialPosition2
+!finalPosition2Q.quantityValue:=finalPosition2
+!duration2Q.quantityValue:=duration2
+!initialVelocity2Q.quantityValue:=initialVelocity2
+!finalVelocity2Q.quantityValue:=finalVelocity2
+!distance2Q.quantityValue:=distance2
+!avrgVelocity2Q.quantityValue:=avrgVelocity2
+!avrgAcceleration2Q.quantityValue:=avrgAcceleration2
+
+!avrgVelocityQ.quantityValue:=avrgVelocity
+!avrgAccelerationQ.quantityValue:=avrgAcceleration
+
+-----------------------------------------
+!initialPosition1.value := ip1
+!initialPosition1.unit := m
+!finalPosition1.value := fp1
+!finalPosition1.unit := m
+!duration1.value := dur1
+!duration1.unit :=s
+!initialVelocity1.value := iv1
+!initialVelocity1.unit :=s
+!finalVelocity1.value := fv1
+!finalVelocity1.unit :=s
+
+!distance1:=finalPosition1.minus(initialPosition1)
+?distance1.value.x
+?distance1.value.u
+?distance1.unit.symbol
+?distance1.unit.dimensions
+
+!avrgVelocity1:=distance1.divideBy(duration1)
+?avrgVelocity1.value.x
+?avrgVelocity1.value.u
+?avrgVelocity1.unit.symbol
+?avrgVelocity1.unit.dimensions
+
+!avrgAcceleration1:=avrgVelocity1.divideBy(duration1)
+?avrgAcceleration1.value.x
+?avrgAcceleration1.value.u
+?avrgAcceleration1.unit.symbol
+?avrgAcceleration1.unit.dimensions
+
+!initialPosition2.value := ip2
+!initialPosition2.unit := m
+!finalPosition2.value := fp2
+!finalPosition2.unit := m
+!duration2.value := dur1
+!duration2.unit :=s
+!initialVelocity2.value := iv1
+!initialVelocity2.unit :=s
+!finalVelocity2.value := fv1
+!finalVelocity2.unit :=s
+
+!distance2:=finalPosition2.minus(initialPosition2)
+?distance2.value.x
+?distance2.value.u
+?distance2.unit.symbol
+?distance2.unit.dimensions
+
+!avrgVelocity2:=distance2.divideBy(duration2)
+?avrgVelocity2.value.x
+?avrgVelocity2.value.u
+?avrgVelocity2.unit.symbol
+?avrgVelocity2.unit.dimensions
+
+!avrgAcceleration2:=avrgVelocity2.divideBy(duration2)
+?avrgAcceleration2.value.x
+?avrgAcceleration2.value.u
+?avrgAcceleration2.unit.symbol
+?avrgAcceleration2.unit.dimensions
+
+!new Quantity('aux1')
+!new Quantity('aux2')
+!aux1:=avrgVelocity1.add(avrgVelocity2);
+!avrgVelocity:=aux1.sMult(0.5);
+!aux2:=avrgAcceleration1.add(avrgAcceleration2);
+!avrgAcceleration:=aux2.sMult(0.5);
+
+?avrgVelocity.value.x
+?avrgVelocity.value.u
+?avrgVelocity.unit.symbol
+?avrgVelocity.unit.dimensions
+
+?avrgAcceleration.value.x
+?avrgAcceleration.value.u
+?avrgAcceleration.unit.symbol
+?avrgAcceleration.unit.dimensions

@@ -132,7 +132,7 @@ public LengthTemperature round(){ //returns (i,u) with i the closest int to x --
 return new LengthTemperature(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public LengthTemperature min(LengthTemperature r) { // units maintained
-if (r.lessThan(this)) return new LengthTemperature(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new LengthTemperature(r.getX(),r.getU(),r.getUnits());
 return new LengthTemperature(this.getX(),this.getU(),this.getUnits());
 }
 public LengthTemperature max(LengthTemperature r) { // unit maintained

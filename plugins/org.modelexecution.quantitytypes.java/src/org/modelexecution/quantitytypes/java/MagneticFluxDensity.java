@@ -153,7 +153,7 @@ public MagneticFluxDensity round(){ //returns (i,u) with i the closest int to x 
 return new MagneticFluxDensity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public MagneticFluxDensity min(MagneticFluxDensity r) { // units maintained
-if (r.lessThan(this)) return new MagneticFluxDensity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new MagneticFluxDensity(r.getX(),r.getU(),r.getUnits());
 return new MagneticFluxDensity(this.getX(),this.getU(),this.getUnits());
 }
 public MagneticFluxDensity max(MagneticFluxDensity r) { // unit maintained

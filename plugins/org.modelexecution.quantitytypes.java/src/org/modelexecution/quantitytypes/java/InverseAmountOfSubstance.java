@@ -120,7 +120,7 @@ public InverseAmountOfSubstance round(){ //returns (i,u) with i the closest int 
 return new InverseAmountOfSubstance(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public InverseAmountOfSubstance min(InverseAmountOfSubstance r) { // units maintained
-if (r.lessThan(this)) return new InverseAmountOfSubstance(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new InverseAmountOfSubstance(r.getX(),r.getU(),r.getUnits());
 return new InverseAmountOfSubstance(this.getX(),this.getU(),this.getUnits());
 }
 public InverseAmountOfSubstance max(InverseAmountOfSubstance r) { // unit maintained

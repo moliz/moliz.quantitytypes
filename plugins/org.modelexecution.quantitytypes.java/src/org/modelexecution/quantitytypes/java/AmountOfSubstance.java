@@ -138,7 +138,7 @@ public AmountOfSubstance round(){ //returns (i,u) with i the closest int to x --
 return new AmountOfSubstance(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public AmountOfSubstance min(AmountOfSubstance r) { // units maintained
-if (r.lessThan(this)) return new AmountOfSubstance(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new AmountOfSubstance(r.getX(),r.getU(),r.getUnits());
 return new AmountOfSubstance(this.getX(),this.getU(),this.getUnits());
 }
 public AmountOfSubstance max(AmountOfSubstance r) { // unit maintained

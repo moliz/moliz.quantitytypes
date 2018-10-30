@@ -207,7 +207,7 @@ public Frequency round(){ //returns (i,u) with i the closest int to x -- units m
 return new Frequency(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Frequency min(Frequency r) { // units maintained
-if (r.lessThan(this)) return new Frequency(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Frequency(r.getX(),r.getU(),r.getUnits());
 return new Frequency(this.getX(),this.getU(),this.getUnits());
 }
 public Frequency max(Frequency r) { // unit maintained

@@ -4,13 +4,18 @@
 -- This model provides types "UReal", "Unit" and "Quantity"
 -- and their corresponding operations, as defined first in the paper
 -- "Adding Uncertainty and Units to Quantity Types in Software Models" 
--- by T. Mayerhofer, M. Wimmer and A. Vallecillo. In Proc. of SLE 2016,
+-- by T. Mayerhofer, M. Wimmer and A. Vallecillo. In Proc. of SLE 2016.
 --
--- It has been updated in version 2.0 to incorporate 
--- a) fuzzy comparison operators that return Real instead of Boolean.
--- b) change of names of comparison operators lessThan (to "lt") and 
+-- It has been updated in version 3.0 to incorporate 
+-- a) Type QuantityValue that represents a quantity value as defined in the VIM
+-- b) The new definition of Quantities, that use quanityValue as pivot
+--    for value and for unit.
+-- c) fuzzy comparison operators that return UBoolean instead of Boolean.
+--    (they returned Real in version 2)
+-- d) change of names of comparison operators lessThan (to "lt") and 
 --    lessEq (to "le").
--- c) ISO 80000 new units: Bit, Shannon, Erlang, Decibel.
+-- e) ISO 80000 new units: Bit, Shannon, Erlang, Decibel.
+-- f) Meter unit is now correctly named Metre
 --
 -- The operations in this file have been specified using SOIL 
 -- (Simple OCL-like Imperative Language) which is part of USE
@@ -30,14 +35,14 @@
 -- These operations have been included in the extensions to USE using its
 -- predefined extensions mechanisms (files "Real.xml", "Distributions.xml" 
 -- and "Sequence.xml" need to be placed in the USE folder "oclExtensions"). 
--- Warning: in case these files 
--- already exist in the oclExtensions folder, please make sure the contents of 
--- the new ones extend what is currently in the existing ones.
+-- Warning: in case these files already exist in the oclExtensions folder, 
+-- please make sure the contents of the new ones extend what is currently 
+-- in the existing ones.
 --
 -- AUTHORS: A. Vallecillo, Loli Burgueño, Tanja Mayerhofer and Manuel Wimmer. 
 -- CONTACT: av@lcc.uma.es
--- VERSION: 2.0
--- DATE: 31 Aug 2017
+-- VERSION: 3.0
+-- DATE: 26 Oct 2018
 -- 
 -- Thanks to Martin Gogolla for his help, comments and suggestions on 
 -- previous versions of this OCL/USE specification.
@@ -46,6 +51,8 @@
 -- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 model Quantities
+
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 class Unit
 
@@ -90,290 +97,290 @@ isDerivedUnit() :Boolean =
    let DerivedUnitDimensions  : Sequence(Sequence(Real)) = Sequence{	
 --   Length, Mass, Time, ElectricCurrent, ThermodynamicTemperature, AmountOfSubstance,LuminousIntensity, Storage, Entropy, Load, Noise, Angle
 --   L, M, T, I, O, N, J, S, E, L, D, U
---   Meter, Kilogram, Second, Ampere, Kelvin, Mole, Candela, Bit, Shannon, Erlang, Decibel, Radian
+--   Metre, Kilogram, Second, Ampere, Kelvin, Mole, Candela, Bit, Shannon, Erlang, Decibel, Radian
 --   m, kg, s, A, K, mol, cd, bit, Sh, E, dB, rad
             Sequence{ 2, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Gy', 		L2T-2	Gray	unit:Gray	Gy
             Sequence{ 2, 0,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Gy/s', 		L2T-3	Gray per second	unit:GrayPerSecond	Gy/s
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Bq', 		T-1	Becquerel	unit:Becquerel	Bq
-            Sequence{-3, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'mol/m^3', 		L-3N1	Mole per cubic meter	unit:MolePerCubicMeter	mol/m^3
+            Sequence{-3, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'mol/m^3', 		L-3N1	Mole per cubic metre	unit:MolePerCubicmetre	mol/m^3
             Sequence{ 0,-1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'mol/kg', 		M-3N1	Mole per kilogram	unit:MolePerKilogram	mol/kg
             Sequence{ 0, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 1},  -- 'rad/s^2', 		U1T-2	Radian per second squared	unit:RadianPerSecondSquared	rad/s^2
-            Sequence{ 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m^2', 		L2M1	Kilogram Meter Squared	unit:KilogramMeterSquared	kg-m^2
+            Sequence{ 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m^2', 		L2M1	Kilogram metre Squared	unit:KilogrammetreSquared	kg-m^2
             Sequence{ 2, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J*s', 		L2M1T-1	Joule Second	unit:JouleSecond	J s
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 1},  -- 'rad/s', 		U1T-1	Radian per second	unit:RadianPerSecond	rad/s
-            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2', 		L2	Square meter	unit:SquareMeter	m^2
-            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},  -- 'm^2*st', 		U1L2	Square meter steradian	unit:SquareMeterSteradian	m^2-sr
-            Sequence{ 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2*K', 		L2Θ1	Square meter kelvin	unit:SquareMeterKelvin	m^2-K
-            Sequence{ 2, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/K', 		L2Θ-1	Square meter per kelvin	unit:SquareMeterPerKelvin	m^2/K
+            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2', 		L2	Square metre	unit:SquareMetre	m^2
+            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},  -- 'm^2*st', 		U1L2	Square metre steradian	unit:SquareMetreSteradian	m^2-sr
+            Sequence{ 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2*K', 		L2Θ1	Square metre kelvin	unit:SquareMetreKelvin	m^2-K
+            Sequence{ 2, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/K', 		L2Θ-1	Square metre per kelvin	unit:SquareMetrePerKelvin	m^2/K
             Sequence{-2,-1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'F', 		L-2M-1T4I2	Farad	unit:Farad	F
             Sequence{ 0, 0,-1, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'kat', 		T-1N1	Katal	unit:Katal	kat
-            Sequence{ 0, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m^2*K)', 	M1T-3Θ-1	M1T-3Θ-1	Watt per square meter kelvin	unit:WattPerSquareMeterKelvin	W/(m^2-K)
-            Sequence{-3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^3', L-3M1		L-3M1	Kilogram per cubic meter	unit:KilogramPerCubicMeter	kg/m^3
+            Sequence{ 0, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m^2*K)', 	M1T-3Θ-1	M1T-3Θ-1	Watt per square metre kelvin	unit:WattPerSquareMetreKelvin	W/(m^2-K)
+            Sequence{-3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^3', L-3M1		L-3M1	Kilogram per cubic metre	unit:KilogramPerCubicMetre	kg/m^3
             Sequence{ 2, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Sv', L2T-2		L2T-2	Sievert	unit:Sievert	Sv
             Sequence{-1, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Pa*s', L-1M1T-1		L-1M1T-1	Pascal second	unit:PascalSecond	Pa-s
             Sequence{ 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C', T1I1		T1I1	Coulomb	unit:Coulomb	C
-            Sequence{-1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m', L-1T1I1		L-1T1I1	Coulomb per meter	unit:CoulombPerMeter	C/m
-            Sequence{-3, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^3', L-3T1I1		L-3T1I1	Coulomb per cubic meter	unit:CoulombPerCubicMeter	C/m^3
+            Sequence{-1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m', L-1T1I1		L-1T1I1	Coulomb per metre	unit:CoulombPerMetre	C/m
+            Sequence{-3, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^3', L-3T1I1		L-3T1I1	Coulomb per cubic metre	unit:CoulombPerCubicMetre	C/m^3
             Sequence{ 0, 0, 1, 1, 0,-1, 0, 0, 0, 0, 0, 0},  -- 'C/mol', 		T1I1N-1	Coulomb per mole	unit:CoulombPerMole	C/mol
-            Sequence{-2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'A/m^2', 		L-2I1	Ampere per square meter	unit:AmperePerSquareMeter	A/m^2
+            Sequence{-2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'A/m^2', 		L-2I1	Ampere per square metre	unit:AmperePerSquareMetre	A/m^2
             Sequence{ 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0,-1},  -- 'A/rad', 		U-1I1	Ampere per radian	unit:AmperePerRadian	A/rad
-            Sequence{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C*m', 		L1T1I1	Coulomb meter	unit:CoulombMeter	C-m
-            Sequence{ 1, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'V/m', 		L1M1T-3I-1	Volt per Meter	unit:VoltPerMeter	V/m
-            Sequence{-2, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^2', 		L-2T1I1	Coulomb per Square Meter	unit:CoulombPerSquareMeter	C/m^2
+            Sequence{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C*m', 		L1T1I1	Coulomb metre	unit:CoulombMetre	C-m
+            Sequence{ 1, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'V/m', 		L1M1T-3I-1	Volt per Metre	unit:VoltPerMetre	V/m
+            Sequence{-2, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^2', 		L-2T1I1	Coulomb per Square Metre	unit:CoulombPerSquareMetre	C/m^2
             Sequence{-2,-1, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'S', 		L-2M-1T3I2	Siemens	unit:Siemens	S
             Sequence{ 2, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'V', 		L2M1T-3I-1	Volt	unit:Volt	V
-            Sequence{-1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^3', 		L-1M1T-2	Joule per cubic meter	unit:JoulePerCubicMeter	J/m^3
+            Sequence{-1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^3', 		L-1M1T-2	Joule per cubic metre	unit:JoulePerCubicMetre	J/m^3
             Sequence{ 2, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J', 		L2M1T-2	Joule	unit:Joule	J
-            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^2', 		M1T-2	Joule per square meter	unit:JoulePerSquareMeter	J/m^2
+            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^2', 		M1T-2	Joule per square metre	unit:JoulePerSquareMetre	J/m^2
             Sequence{ 0,-1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/kg', 		M-1T1I1	Coulomb per kilogram	unit:CoulombPerKilogram	C/kg
             Sequence{ 1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N', 		L1M1T-2	Newton	unit:Newton	N
             Sequence{ 1, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/C', 		L1M1T-3I-1	Newton per coulomb	unit:NewtonPerCoulomb	N/C
-            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/m', 		M1T-2	Newton per meter	unit:NewtonPerMeter	N/m
+            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/m', 		M1T-2	Newton per metre	unit:NewtonPerMetre	N/m
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Hz', 		T-1	Hertz	unit:Hertz	Hz
-            Sequence{ 3,-1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/(kg*s^2)', 		L3M-1T-2	Cubic meter per kilogram second squared	unit:CubicMeterPerKilogramSecondSquared	m^3/(kg-s^2)
+            Sequence{ 3,-1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/(kg*s^2)', 		L3M-1T-2	Cubic metre per kilogram second squared	unit:CubicMetrePerKilogramSecondSquared	m^3/(kg-s^2)
             Sequence{ 2, 1,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/K', 		L2M1T-2Θ-1	Joule per kelvin	unit:JoulePerKelvin	J/K
             Sequence{-2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1},  -- 'Lx', 		U1L-2J1	Lux	unit:Lux	lx
             Sequence{ 2, 1,-2,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'H', 		L2M1T-2I-2	Henry	unit:Henry	H
             Sequence{ 0, 0, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0},  -- '1/mol', 		N-1	Per mole	unit:PerMole	mol^(-1)
-            Sequence{ 3, 1,-4,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/F', 		L3M1T-4I-2	Meter per farad	unit:MeterPerFarad	m/F
-            Sequence{ 2, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/s', 		L2T-1	Square meter per second	unit:SquareMeterPerSecond	m^2/sec
-            Sequence{ 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm*kg', 		L1M1	Meter kilogram	unit:MeterKilogram	m-kg
-            Sequence{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K', 		L1Θ1	Meter kelvin	unit:MeterKelvin	m-K
-            Sequence{ 1, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s^2', 		L1T-2	Meter per second squared	unit:MeterPerSecondSquared	m/s^2
-            Sequence{ 1, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m/s', 		L1M1T-1	Kilogram Meter Per Second	unit:KilogramMeterPerSecond	kg-m/s
-            Sequence{ 1, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm/K', 		L1Θ-1	Meter per kelvin	unit:MeterPerKelvin	m/K
-            Sequence{ 1, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s', 		L1T-1	Meter per second	unit:MeterPerSecond	m/s
-            Sequence{-2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},  -- 'cd/m^2', 		L-2J1	Candela per square meter	unit:CandelaPerSquareMeter	cd/m^2
+            Sequence{ 3, 1,-4,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/F', 		L3M1T-4I-2	Metre per farad	unit:MetrePerFarad	m/F
+            Sequence{ 2, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/s', 		L2T-1	Square metre per second	unit:SquareMetrePerSecond	m^2/sec
+            Sequence{ 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm*kg', 		L1M1	Metre kilogram	unit:MetreKilogram	m-kg
+            Sequence{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K', 		L1Θ1	Metre kelvin	unit:MetreKelvin	m-K
+            Sequence{ 1, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s^2', 		L1T-2	Metre per second squared	unit:MetrePerSecondSquared	m/s^2
+            Sequence{ 1, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m/s', 		L1M1T-1	Kilogram Metre Per Second	unit:KilogramMetrePerSecond	kg-m/s
+            Sequence{ 1, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm/K', 		L1Θ-1	Metre per kelvin	unit:MetrePerKelvin	m/K
+            Sequence{ 1, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s', 		L1T-1	Metre per second	unit:MetrePerSecond	m/s
+            Sequence{-2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},  -- 'cd/m^2', 		L-2J1	Candela per square metre	unit:CandelaPerSquareMetre	cd/m^2
             Sequence{ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1},  -- 'lm', 		U1J1	Lumen	unit:Lumen	lm
             Sequence{ 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/T', 		L2I1	Joule per Tesla	unit:JoulePerTesla	J/T
-            Sequence{-1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'AT/m', 		L-1I1	Ampere Turn per Meter	unit:AmpereTurnPerMeter	At/m
+            Sequence{-1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'AT/m', 		L-1I1	Ampere Turn per Metre	unit:AmpereTurnPerMetre	At/m
             Sequence{ 2, 1,-2,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Wb', 		L2M1T-2I-1	Weber	unit:Weber	Wb
             Sequence{ 0, 1,-2,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'T', 		M1T-2I-1	Tesla	unit:Tesla	T
             Sequence{ 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1},  -- 'AT', 		U1I1	Ampere Turn	unit:AmpereTurn	At
             Sequence{ 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*K', 		M1Θ1	Kilogram kelvin	unit:KilogramKelvin	kg-K
             Sequence{ 0, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/s', 		M1T-1	Kilogram per second	unit:KilogramPerSecond	kg/s
-            Sequence{-2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^2', 		L-2M1	Kilogram per square meter	unit:KilogramPerSquareMeter	kg/m^2
-            Sequence{-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m', 		L-1M1	Kilogram per meter	unit:KilogramPerMeter	kg/m
+            Sequence{-2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^2', 		L-2M1	Kilogram per square metre	unit:KilogramPerSquareMetre	kg/m^2
+            Sequence{-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m', 		L-1M1	Kilogram per metre	unit:KilogramPerMetre	kg/m
             Sequence{ 2, 1,-2, 0, 0,-1, 0, 0, 0, 0, 0, 0},  -- 'J/mol', 		L2M1T-2N-1	Joule per mole	unit:JoulePerMole	J/mol
             Sequence{ 2, 1,-2, 0,-1,-1, 0, 0, 0, 0, 0, 0},  -- 'J/(mol*K)', 		L2M1T-2Θ-1N-1	Joule per mole kelvin	unit:JoulePerMoleKelvin	J/(mol-K)
-            Sequence{ 1, 1,-2,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'H/m', 		L1M1T-2I-2	Henry per meter	unit:HenryPerMeter	H/m
-            Sequence{-3,-1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'F/m', 		L-3M-1T4I2	Farad per meter	unit:FaradPerMeter	F/m
+            Sequence{ 1, 1,-2,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'H/m', 		L1M1T-2I-2	Henry per metre	unit:HenryPerMetre	H/m
+            Sequence{-3,-1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'F/m', 		L-3M-1T4I2	Farad per metre	unit:FaradPerMetre	F/m
             Sequence{ 2, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'W', 		L2M1T-3	Watt	unit:Watt	W
             Sequence{ 2, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0,-2},  -- 'W/sr', 		U-1L2M1T-3	Watt per steradian	unit:WattPerSteradian	W/sr
-            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0,-2},  -- 'W/(m^2sr)', 		U-1M1T-3	Watt per square meter steradian	unit:WattPerSquareMeterSteradian	W/(m^2-sr)
-            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'W/m^2', 		M1T-3	Watt per square meter	unit:WattPerSquareMeter	W/m^2
+            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0,-2},  -- 'W/(m^2sr)', 		U-1M1T-3	Watt per square metre steradian	unit:WattPerSquareMetreSteradian	W/(m^2-sr)
+            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'W/m^2', 		M1T-3	Watt per square metre	unit:WattPerSquareMetre	W/m^2
             Sequence{-1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Pa', 		L-1M1T-2	Pascal	unit:Pascal	Pa
             Sequence{ 2, 1,-3,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Ohm', 		L2M1T-3I-2	Ohm	unit:Ohm	Ohm
             Sequence{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},  -- 'sr', 		U1	Steradian	unit:Steradian	sr
             Sequence{ 2, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/kg', 		L2T-2	Joule per kilogram	unit:JoulePerKilogram	J/kg
             Sequence{ 2, 0,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K)', 		L2T-2Θ-1	Joule per kilogram kelvin	unit:JoulePerKilogramKelvin	J/(kg-K)
             Sequence{ 3,-1, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K*Pa)', 		L3M-1Θ-1	Joule per kilogram kelvin per pascal	unit:JoulePerKilogramKelvinPerPascal	J/(km-K-Pa)
-            Sequence{-1, 0,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K*m^3)', 		L-1T-2Θ-1	Joule per kilogram kelvin per cubic meter	unit:JoulePerKilogramKelvinPerCubicMeter	J/(kg-K-m^3)
+            Sequence{-1, 0,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K*m^3)', 		L-1T-2Θ-1	Joule per kilogram kelvin per cubic metre	unit:JoulePerKilogramKelvinPerCubicMetre	J/(kg-K-m^3)
             Sequence{ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0},  -- 'mol*K', 		Θ1N1	Mole kelvin	unit:MoleKelvin	mol-K
-            Sequence{ 1, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m*K)', 		L1M1T-3Θ-1	Watt per meter kelvin	unit:WattPerMeterKelvin	W/(m*K)
-            Sequence{ 0,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/W', 		M-1T3Θ1	Square meter Kelvin per watt	unit:SquareMeterKelvinPerWatt	(K^2)m/W
+            Sequence{ 1, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m*K)', 		L1M1T-3Θ-1	Watt per metre kelvin	unit:WattPerMetreKelvin	W/(m*K)
+            Sequence{ 0,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/W', 		M-1T3Θ1	Square metre Kelvin per watt	unit:SquareMetreKelvinPerWatt	(K^2)m/W
             Sequence{-2,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'K/W', 		L-2M-1T3Θ1	Kelvin per watt	unit:KelvinPerWatt	K/W
-            Sequence{-1,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K/W', 		L-1M-1T3Θ1	Meter Kelvin per watt	unit:MeterKelvinPerWatt	K-m/W
+            Sequence{-1,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K/W', 		L-1M-1T3Θ1	Metre Kelvin per watt	unit:MetreKelvinPerWatt	K-m/W
             Sequence{ 1, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/kg', 		L1T-2	Newton per kilogram	unit:NewtonPerKilogram	N/kg
             Sequence{ 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 's^2', 		T2	Second time squared	unit:SecondTimeSquared	s^2
-            Sequence{ 2, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N*m', 		L2M1T-2	Newton meter	unit:NewtonMeter	N-m
-            Sequence{ 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3', 		L3	Cubic Meter	unit:CubicMeter	m^3
-            Sequence{ 3,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/K', 		L3Θ-1	Cubic meter per kelvin	unit:CubicMeterPerKelvin	m^3/K
-            Sequence{ 3, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/s', 		L3T-1	Cubic meter per second	unit:CubicMeterPerSecond	m^3/s
-            Sequence{ 1, 1,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0}, -- 'J/(m^3*K)'		L-1M1T-2Θ-1	Joule per cubic meter kelvin	unit:JoulePerCubicMeterKelvin	J/(m^3 K)
+            Sequence{ 2, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N*m', 		L2M1T-2	Newton metre	unit:NewtonMetre	N-m
+            Sequence{ 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3', 		L3	Cubic Metre	unit:CubicMetre	m^3
+            Sequence{ 3,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/K', 		L3Θ-1	Cubic metre per kelvin	unit:CubicMetrePerKelvin	m^3/K
+            Sequence{ 3, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/s', 		L3T-1	Cubic metre per second	unit:CubicMetrePerSecond	m^3/s
+            Sequence{ 1, 1,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0}, -- 'J/(m^3*K)'		L-1M1T-2Θ-1	Joule per cubic metre kelvin	unit:JoulePerCubicMetreKelvin	J/(m^3 K)
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 1, 0, 0, 0, 0} -- 'bit/s'		S1T-1 bit per second
             } in
         DerivedUnitDimensions->includes(self.dimensions) and self.noOffset() and self.conversionFactor->count(1.0)=12
 
 defaultName():String = 
-   let BaseUnitNames : Sequence(String) = Sequence{ 'Meter', 'Kilogram', 'Second', 'Ampere', 'Kelvin', 'Mole', 'Candela', 
+   let BaseUnitNames : Sequence(String) = Sequence{ 'Metre', 'Kilogram', 'Second', 'Ampere', 'Kelvin', 'Mole', 'Candela', 
                                                     'Bit', 'Shannon', 'Erlang', 'Decibel', 'Radian'} in
    let DerivedUnitDimensions  : Sequence(Sequence(Real)) = Sequence{	
 --   Length, Mass, Time, ElectricCurrent, ThermodynamicTemperature, AmountOfSubstance,LuminousIntensity, Storage, Entropy, Load, Noise, Angle
 --   L, M, T, I, O, N, J, S, E, L, D, U
---   Meter, Kilogram, Second, Ampere, Kelvin, Mole, Candela, Bit, Shannon, Erlang, Decibel, Radian
+--   Metre, Kilogram, Second, Ampere, Kelvin, Mole, Candela, Bit, Shannon, Erlang, Decibel, Radian
 --   m, kg, s, A, K, mol, cd, bit, Sh, E, dB, rad
             Sequence{ 2, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Gy', 		L2T-2	Gray	unit:Gray	Gy
             Sequence{ 2, 0,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Gy/s', 		L2T-3	Gray per second	unit:GrayPerSecond	Gy/s
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Bq', 		T-1	Becquerel	unit:Becquerel	Bq
-            Sequence{-3, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'mol/m^3', 		L-3N1	Mole per cubic meter	unit:MolePerCubicMeter	mol/m^3
+            Sequence{-3, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'mol/m^3', 		L-3N1	Mole per cubic metre	unit:MolePerCubicMetre	mol/m^3
             Sequence{ 0,-1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'mol/kg', 		M-3N1	Mole per kilogram	unit:MolePerKilogram	mol/kg
             Sequence{ 0, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 1},  -- 'rad/s^2', 		U1T-2	Radian per second squared	unit:RadianPerSecondSquared	rad/s^2
-            Sequence{ 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m^2', 		L2M1	Kilogram Meter Squared	unit:KilogramMeterSquared	kg-m^2
+            Sequence{ 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m^2', 		L2M1	Kilogram Metre Squared	unit:KilogramMetreSquared	kg-m^2
             Sequence{ 2, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J*s', 		L2M1T-1	Joule Second	unit:JouleSecond	J s
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 1},  -- 'rad/s', 		U1T-1	Radian per second	unit:RadianPerSecond	rad/s
-            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2', 		L2	Square meter	unit:SquareMeter	m^2
-            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},  -- 'm^2*st', 		U1L2	Square meter steradian	unit:SquareMeterSteradian	m^2-sr
-            Sequence{ 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2*K', 		L2Θ1	Square meter kelvin	unit:SquareMeterKelvin	m^2-K
-            Sequence{ 2, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/K', 		L2Θ-1	Square meter per kelvin	unit:SquareMeterPerKelvin	m^2/K
+            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2', 		L2	Square metre	unit:SquareMetre	m^2
+            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},  -- 'm^2*st', 		U1L2	Square metre steradian	unit:SquareMetreSteradian	m^2-sr
+            Sequence{ 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2*K', 		L2Θ1	Square metre kelvin	unit:SquareMetreKelvin	m^2-K
+            Sequence{ 2, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/K', 		L2Θ-1	Square metre per kelvin	unit:SquareMetrePerKelvin	m^2/K
             Sequence{-2,-1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'F', 		L-2M-1T4I2	Farad	unit:Farad	F
             Sequence{ 0, 0,-1, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'kat', 		T-1N1	Katal	unit:Katal	kat
-            Sequence{ 0, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m^2*K)', 	M1T-3Θ-1	M1T-3Θ-1	Watt per square meter kelvin	unit:WattPerSquareMeterKelvin	W/(m^2-K)
-            Sequence{-3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^3', L-3M1		L-3M1	Kilogram per cubic meter	unit:KilogramPerCubicMeter	kg/m^3
+            Sequence{ 0, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m^2*K)', 	M1T-3Θ-1	M1T-3Θ-1	Watt per square metre kelvin	unit:WattPerSquareMetreKelvin	W/(m^2-K)
+            Sequence{-3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^3', L-3M1		L-3M1	Kilogram per cubic metre	unit:KilogramPerCubicMetre	kg/m^3
             Sequence{ 2, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Sv', L2T-2		L2T-2	Sievert	unit:Sievert	Sv
             Sequence{-1, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Pa*s', L-1M1T-1		L-1M1T-1	Pascal second	unit:PascalSecond	Pa-s
             Sequence{ 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C', T1I1		T1I1	Coulomb	unit:Coulomb	C
-            Sequence{-1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m', L-1T1I1		L-1T1I1	Coulomb per meter	unit:CoulombPerMeter	C/m
-            Sequence{-3, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^3', L-3T1I1		L-3T1I1	Coulomb per cubic meter	unit:CoulombPerCubicMeter	C/m^3
+            Sequence{-1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m', L-1T1I1		L-1T1I1	Coulomb per metre	unit:CoulombPerMetre	C/m
+            Sequence{-3, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^3', L-3T1I1		L-3T1I1	Coulomb per cubic metre	unit:CoulombPerCubicMetre	C/m^3
             Sequence{ 0, 0, 1, 1, 0,-1, 0, 0, 0, 0, 0, 0},  -- 'C/mol', 		T1I1N-1	Coulomb per mole	unit:CoulombPerMole	C/mol
-            Sequence{-2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'A/m^2', 		L-2I1	Ampere per square meter	unit:AmperePerSquareMeter	A/m^2
+            Sequence{-2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'A/m^2', 		L-2I1	Ampere per square metre	unit:AmperePerSquareMetre	A/m^2
             Sequence{ 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0,-1},  -- 'A/rad', 		U-1I1	Ampere per radian	unit:AmperePerRadian	A/rad
-            Sequence{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C*m', 		L1T1I1	Coulomb meter	unit:CoulombMeter	C-m
-            Sequence{ 1, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'V/m', 		L1M1T-3I-1	Volt per Meter	unit:VoltPerMeter	V/m
-            Sequence{-2, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^2', 		L-2T1I1	Coulomb per Square Meter	unit:CoulombPerSquareMeter	C/m^2
+            Sequence{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C*m', 		L1T1I1	Coulomb metre	unit:CoulombMetre	C-m
+            Sequence{ 1, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'V/m', 		L1M1T-3I-1	Volt per Metre	unit:VoltPerMetre	V/m
+            Sequence{-2, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^2', 		L-2T1I1	Coulomb per Square Metre	unit:CoulombPerSquareMetre	C/m^2
             Sequence{-2,-1, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'S', 		L-2M-1T3I2	Siemens	unit:Siemens	S
             Sequence{ 2, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'V', 		L2M1T-3I-1	Volt	unit:Volt	V
-            Sequence{-1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^3', 		L-1M1T-2	Joule per cubic meter	unit:JoulePerCubicMeter	J/m^3
+            Sequence{-1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^3', 		L-1M1T-2	Joule per cubic metre	unit:JoulePerCubicMetre	J/m^3
             Sequence{ 2, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J', 		L2M1T-2	Joule	unit:Joule	J
-            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^2', 		M1T-2	Joule per square meter	unit:JoulePerSquareMeter	J/m^2
+            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^2', 		M1T-2	Joule per square metre	unit:JoulePerSquareMetre	J/m^2
             Sequence{ 0,-1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/kg', 		M-1T1I1	Coulomb per kilogram	unit:CoulombPerKilogram	C/kg
             Sequence{ 1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N', 		L1M1T-2	Newton	unit:Newton	N
             Sequence{ 1, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/C', 		L1M1T-3I-1	Newton per coulomb	unit:NewtonPerCoulomb	N/C
-            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/m', 		M1T-2	Newton per meter	unit:NewtonPerMeter	N/m
+            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/m', 		M1T-2	Newton per metre	unit:NewtonPerMetre	N/m
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Hz', 		T-1	Hertz	unit:Hertz	Hz
-            Sequence{ 3,-1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/(kg*s^2)', 		L3M-1T-2	Cubic meter per kilogram second squared	unit:CubicMeterPerKilogramSecondSquared	m^3/(kg-s^2)
+            Sequence{ 3,-1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/(kg*s^2)', 		L3M-1T-2	Cubic metre per kilogram second squared	unit:CubicMetrePerKilogramSecondSquared	m^3/(kg-s^2)
             Sequence{ 2, 1,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/K', 		L2M1T-2Θ-1	Joule per kelvin	unit:JoulePerKelvin	J/K
             Sequence{-2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1},  -- 'Lx', 		U1L-2J1	Lux	unit:Lux	lx
             Sequence{ 2, 1,-2,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'H', 		L2M1T-2I-2	Henry	unit:Henry	H
             Sequence{ 0, 0, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0},  -- '1/mol', 		N-1	Per mole	unit:PerMole	mol^(-1)
-            Sequence{ 3, 1,-4,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/F', 		L3M1T-4I-2	Meter per farad	unit:MeterPerFarad	m/F
-            Sequence{ 2, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/s', 		L2T-1	Square meter per second	unit:SquareMeterPerSecond	m^2/sec
-            Sequence{ 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm*kg', 		L1M1	Meter kilogram	unit:MeterKilogram	m-kg
-            Sequence{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K', 		L1Θ1	Meter kelvin	unit:MeterKelvin	m-K
-            Sequence{ 1, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s^2', 		L1T-2	Meter per second squared	unit:MeterPerSecondSquared	m/s^2
-            Sequence{ 1, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m/s', 		L1M1T-1	Kilogram Meter Per Second	unit:KilogramMeterPerSecond	kg-m/s
-            Sequence{ 1, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm/K', 		L1Θ-1	Meter per kelvin	unit:MeterPerKelvin	m/K
-            Sequence{ 1, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s', 		L1T-1	Meter per second	unit:MeterPerSecond	m/s
-            Sequence{-2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},  -- 'cd/m^2', 		L-2J1	Candela per square meter	unit:CandelaPerSquareMeter	cd/m^2
+            Sequence{ 3, 1,-4,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/F', 		L3M1T-4I-2	Metre per farad	unit:MetrePerFarad	m/F
+            Sequence{ 2, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/s', 		L2T-1	Square metre per second	unit:SquareMetrePerSecond	m^2/sec
+            Sequence{ 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm*kg', 		L1M1	Metre kilogram	unit:MetreKilogram	m-kg
+            Sequence{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K', 		L1Θ1	Metre kelvin	unit:MetreKelvin	m-K
+            Sequence{ 1, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s^2', 		L1T-2	Metre per second squared	unit:MetrePerSecondSquared	m/s^2
+            Sequence{ 1, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m/s', 		L1M1T-1	Kilogram Metre Per Second	unit:KilogramMetrePerSecond	kg-m/s
+            Sequence{ 1, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm/K', 		L1Θ-1	Metre per kelvin	unit:MetrePerKelvin	m/K
+            Sequence{ 1, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s', 		L1T-1	Metre per second	unit:MetrePerSecond	m/s
+            Sequence{-2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},  -- 'cd/m^2', 		L-2J1	Candela per square metre	unit:CandelaPerSquareMetre	cd/m^2
             Sequence{ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1},  -- 'lm', 		U1J1	Lumen	unit:Lumen	lm
             Sequence{ 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/T', 		L2I1	Joule per Tesla	unit:JoulePerTesla	J/T
-            Sequence{-1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'AT/m', 		L-1I1	Ampere Turn per Meter	unit:AmpereTurnPerMeter	At/m
+            Sequence{-1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'AT/m', 		L-1I1	Ampere Turn per Metre	unit:AmpereTurnPerMetre	At/m
             Sequence{ 2, 1,-2,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Wb', 		L2M1T-2I-1	Weber	unit:Weber	Wb
             Sequence{ 0, 1,-2,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'T', 		M1T-2I-1	Tesla	unit:Tesla	T
             Sequence{ 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1},  -- 'AT', 		U1I1	Ampere Turn	unit:AmpereTurn	At
             Sequence{ 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*K', 		M1Θ1	Kilogram kelvin	unit:KilogramKelvin	kg-K
             Sequence{ 0, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/s', 		M1T-1	Kilogram per second	unit:KilogramPerSecond	kg/s
-            Sequence{-2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^2', 		L-2M1	Kilogram per square meter	unit:KilogramPerSquareMeter	kg/m^2
-            Sequence{-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m', 		L-1M1	Kilogram per meter	unit:KilogramPerMeter	kg/m
+            Sequence{-2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^2', 		L-2M1	Kilogram per square metre	unit:KilogramPerSquareMetre	kg/m^2
+            Sequence{-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m', 		L-1M1	Kilogram per metre	unit:KilogramPerMetre	kg/m
             Sequence{ 2, 1,-2, 0, 0,-1, 0, 0, 0, 0, 0, 0},  -- 'J/mol', 		L2M1T-2N-1	Joule per mole	unit:JoulePerMole	J/mol
             Sequence{ 2, 1,-2, 0,-1,-1, 0, 0, 0, 0, 0, 0},  -- 'J/(mol*K)', 		L2M1T-2Θ-1N-1	Joule per mole kelvin	unit:JoulePerMoleKelvin	J/(mol-K)
-            Sequence{ 1, 1,-2,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'H/m', 		L1M1T-2I-2	Henry per meter	unit:HenryPerMeter	H/m
-            Sequence{-3,-1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'F/m', 		L-3M-1T4I2	Farad per meter	unit:FaradPerMeter	F/m
+            Sequence{ 1, 1,-2,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'H/m', 		L1M1T-2I-2	Henry per metre	unit:HenryPerMetre	H/m
+            Sequence{-3,-1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'F/m', 		L-3M-1T4I2	Farad per metre	unit:FaradPerMetre	F/m
             Sequence{ 2, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'W', 		L2M1T-3	Watt	unit:Watt	W
             Sequence{ 2, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0,-2},  -- 'W/sr', 		U-1L2M1T-3	Watt per steradian	unit:WattPerSteradian	W/sr
-            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0,-2},  -- 'W/(m^2sr)', 		U-1M1T-3	Watt per square meter steradian	unit:WattPerSquareMeterSteradian	W/(m^2-sr)
-            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'W/m^2', 		M1T-3	Watt per square meter	unit:WattPerSquareMeter	W/m^2
+            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0,-2},  -- 'W/(m^2sr)', 		U-1M1T-3	Watt per square metre steradian	unit:WattPerSquareMetreSteradian	W/(m^2-sr)
+            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'W/m^2', 		M1T-3	Watt per square metre	unit:WattPerSquareMetre	W/m^2
             Sequence{-1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Pa', 		L-1M1T-2	Pascal	unit:Pascal	Pa
             Sequence{ 2, 1,-3,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Ohm', 		L2M1T-3I-2	Ohm	unit:Ohm	Ohm
             Sequence{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},  -- 'sr', 		U1	Steradian	unit:Steradian	sr
             Sequence{ 2, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/kg', 		L2T-2	Joule per kilogram	unit:JoulePerKilogram	J/kg
             Sequence{ 2, 0,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K)', 		L2T-2Θ-1	Joule per kilogram kelvin	unit:JoulePerKilogramKelvin	J/(kg-K)
             Sequence{ 3,-1, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K*Pa)', 		L3M-1Θ-1	Joule per kilogram kelvin per pascal	unit:JoulePerKilogramKelvinPerPascal	J/(km-K-Pa)
-            Sequence{-1, 0,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K*m^3)', 		L-1T-2Θ-1	Joule per kilogram kelvin per cubic meter	unit:JoulePerKilogramKelvinPerCubicMeter	J/(kg-K-m^3)
+            Sequence{-1, 0,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K*m^3)', 		L-1T-2Θ-1	Joule per kilogram kelvin per cubic metre	unit:JoulePerKilogramKelvinPerCubicMetre	J/(kg-K-m^3)
             Sequence{ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0},  -- 'mol*K', 		Θ1N1	Mole kelvin	unit:MoleKelvin	mol-K
-            Sequence{ 1, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m*K)', 		L1M1T-3Θ-1	Watt per meter kelvin	unit:WattPerMeterKelvin	W/(m*K)
-            Sequence{ 0,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/W', 		M-1T3Θ1	Square meter Kelvin per watt	unit:SquareMeterKelvinPerWatt	(K^2)m/W
+            Sequence{ 1, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m*K)', 		L1M1T-3Θ-1	Watt per metre kelvin	unit:WattPerMetreKelvin	W/(m*K)
+            Sequence{ 0,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/W', 		M-1T3Θ1	Square metre Kelvin per watt	unit:SquareMetreKelvinPerWatt	(K^2)m/W
             Sequence{-2,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'K/W', 		L-2M-1T3Θ1	Kelvin per watt	unit:KelvinPerWatt	K/W
-            Sequence{-1,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K/W', 		L-1M-1T3Θ1	Meter Kelvin per watt	unit:MeterKelvinPerWatt	K-m/W
+            Sequence{-1,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K/W', 		L-1M-1T3Θ1	Metre Kelvin per watt	unit:MetreKelvinPerWatt	K-m/W
             Sequence{ 1, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/kg', 		L1T-2	Newton per kilogram	unit:NewtonPerKilogram	N/kg
             Sequence{ 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 's^2', 		T2	Second time squared	unit:SecondTimeSquared	s^2
-            Sequence{ 2, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N*m', 		L2M1T-2	Newton meter	unit:NewtonMeter	N-m
-            Sequence{ 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3', 		L3	Cubic Meter	unit:CubicMeter	m^3
-            Sequence{ 3,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/K', 		L3Θ-1	Cubic meter per kelvin	unit:CubicMeterPerKelvin	m^3/K
-            Sequence{ 3, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/s', 		L3T-1	Cubic meter per second	unit:CubicMeterPerSecond	m^3/s
-            Sequence{ 1, 1,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0}, -- 'J/(m^3*K)'		L-1M1T-2Θ-1	Joule per cubic meter kelvin	unit:JoulePerCubicMeterKelvin	J/(m^3 K)
+            Sequence{ 2, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N*m', 		L2M1T-2	Newton metre	unit:NewtonMetre	N-m
+            Sequence{ 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3', 		L3	Cubic Metre	unit:CubicMetre	m^3
+            Sequence{ 3,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/K', 		L3Θ-1	Cubic metre per kelvin	unit:CubicMetrePerKelvin	m^3/K
+            Sequence{ 3, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/s', 		L3T-1	Cubic metre per second	unit:CubicMetrePerSecond	m^3/s
+            Sequence{ 1, 1,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0}, -- 'J/(m^3*K)'		L-1M1T-2Θ-1	Joule per cubic metre kelvin	unit:JoulePerCubicMetreKelvin	J/(m^3 K)
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 1, 0, 0, 0, 0} -- 'bit/s'		S1T-1 bit per second
             } in
  let DerivedUnitNames  : Sequence(String) =Sequence{	
 			'Gray',
 			'GrayPerSecond',
 			'Becquerel',
-			'MolePerCubicMeter',
+			'MolePerCubicMetre',
 			'MolePerKilogram',
 			'RadianPerSecondSquared',
-			'KilogramMeterSquared',
+			'KilogramMetreSquared',
 			'JouleSecond',
 			'RadianPerSecond',
-			'SquareMeter',
-			'SquareMeterSteradian',
-			'SquareMeterKelvin',
-			'SquareMeterPerKelvin',
+			'SquareMetre',
+			'SquareMetreSteradian',
+			'SquareMetreKelvin',
+			'SquareMetrePerKelvin',
 			'Farad',
 			'Katal',
-			'WattPerSquareMeterKelvin',
-			'KilogramPerCubicMeter',
+			'WattPerSquareMetreKelvin',
+			'KilogramPerCubicMetre',
 			'Sievert',
 			'PascalSecond',
 			'Coulomb',
-			'CoulombPerMeter',
-			'CoulombPerCubicMeter',
+			'CoulombPerMetre',
+			'CoulombPerCubicMetre',
 			'CoulombPerMole',
-			'AmperePerSquareMeter',
+			'AmperePerSquareMetre',
 			'AmperePerRadian',
-			'CoulombMeter',
-			'VoltPerMeter',
-			'CoulombPerSquareMeter',
+			'CoulombMetre',
+			'VoltPerMetre',
+			'CoulombPerSquareMetre',
 			'Siemens',
 			'Volt',
-			'JoulePerCubicMeter',
+			'JoulePerCubicMetre',
 			'Joule',
-			'JoulePerSquareMeter',
+			'JoulePerSquareMetre',
 			'CoulombPerKilogram',
 			'Newton',
 			'NewtonPerCoulomb',
-			'NewtonPerMeter',
+			'NewtonPerMetre',
 			'Hertz',
-			'CubicMeterPerKilogramSecondSquared',
+			'CubicMetrePerKilogramSecondSquared',
 			'JoulePerKelvin',
 			'Lux',
 			'Henry',
 			'PerMole',
-			'MeterPerFarad',
-			'SquareMeterPerSecond',
-			'MeterKilogram',
-			'MeterKelvin',
-			'MeterPerSecondSquared',
-			'KilogramMeterPerSecond',
-			'MeterPerKelvin',
-			'MeterPerSecond',
-			'CandelaPerSquareMeter',
+			'MetrePerFarad',
+			'SquareMetrePerSecond',
+			'MetreKilogram',
+			'MetreKelvin',
+			'MetrePerSecondSquared',
+			'KilogramMetrePerSecond',
+			'MetrePerKelvin',
+			'MetrePerSecond',
+			'CandelaPerSquareMetre',
 			'Lumen',
 			'JoulePerTesla',
-			'AmpereTurnPerMeter',
+			'AmpereTurnPerMetre',
 			'Weber',
 			'Tesla',
 			'AmpereTurn',
 			'KilogramKelvin',
 			'KilogramPerSecond',
-			'KilogramPerSquareMeter',
-			'KilogramPerMeter',
+			'KilogramPerSquareMetre',
+			'KilogramPerMetre',
 			'JoulePerMole',
 			'JoulePerMoleKelvin',
-			'HenryPerMeter',
-			'FaradPerMeter',
+			'HenryPerMetre',
+			'FaradPerMetre',
 			'Watt',
 			'WattPerSteradian',
-			'WattPerSquareMeterSteradian',
-			'WattPerSquareMeter',
+			'WattPerSquareMetreSteradian',
+			'WattPerSquareMetre',
 			'Pascal',
 			'Ohm',
 			'Steradian',
 			'JoulePerKilogram',
 			'JoulePerKilogramKelvin',
 			'JoulePerKilogramKelvinPerPascal',
-			'JoulePerKilogramKelvinPerCubicMeter',
+			'JoulePerKilogramKelvinPerCubicMetre',
 			'MoleKelvin',
-			'WattPerMeterKelvin',
-			'SquareMeterKelvinPerWatt',
+			'WattPerMetreKelvin',
+			'SquareMetreKelvinPerWatt',
 			'KelvinPerWatt',
-			'MeterKelvinPerWatt',
+			'MetreKelvinPerWatt',
 			'NewtonPerKilogram',
 			'SecondTimeSquared',
 			'Torque',
-			'CubicMeter',
-			'CubicMeterPerKelvin',
-			'CubicMeterPerSecond',
-			'JoulePerCubicMeterKelvin',
+			'CubicMetre',
+			'CubicMetrePerKelvin',
+			'CubicMetrePerSecond',
+			'JoulePerCubicMetreKelvin',
             'BitPerSecond' } in
 if not self.name.oclIsUndefined() or self.isDimensionless() then
     self.name
@@ -391,97 +398,97 @@ let BaseUnitSymbols : Sequence(String) = Sequence{'m', 'kg', 's', 'A', 'K', 'mol
    let DerivedUnitDimensions  : Sequence(Sequence(Real)) = Sequence{	
 --   Length, Mass, Time, ElectricCurrent, ThermodynamicTemperature, AmountOfSubstance,LuminousIntensity, Storage, Entropy, Load, Noise, Angle
 --   L, M, T, I, O, N, J, S, E, L, D, U
---   Meter, Kilogram, Second, Ampere, Kelvin, Mole, Candela, Bit, Shannon, Erlang, Decibel, Radian
+--   Metre, Kilogram, Second, Ampere, Kelvin, Mole, Candela, Bit, Shannon, Erlang, Decibel, Radian
 --   m, kg, s, A, K, mol, cd, bit, Sh, E, dB, rad
             Sequence{ 2, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Gy', 		L2T-2	Gray	unit:Gray	Gy
             Sequence{ 2, 0,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Gy/s', 		L2T-3	Gray per second	unit:GrayPerSecond	Gy/s
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Bq', 		T-1	Becquerel	unit:Becquerel	Bq
-            Sequence{-3, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'mol/m^3', 		L-3N1	Mole per cubic meter	unit:MolePerCubicMeter	mol/m^3
+            Sequence{-3, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'mol/m^3', 		L-3N1	Mole per cubic metre	unit:MolePerCubicMetre	mol/m^3
             Sequence{ 0,-1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'mol/kg', 		M-3N1	Mole per kilogram	unit:MolePerKilogram	mol/kg
             Sequence{ 0, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 1},  -- 'rad/s^2', 		U1T-2	Radian per second squared	unit:RadianPerSecondSquared	rad/s^2
-            Sequence{ 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m^2', 		L2M1	Kilogram Meter Squared	unit:KilogramMeterSquared	kg-m^2
+            Sequence{ 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m^2', 		L2M1	Kilogram Metre Squared	unit:KilogramMetreSquared	kg-m^2
             Sequence{ 2, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J*s', 		L2M1T-1	Joule Second	unit:JouleSecond	J s
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 1},  -- 'rad/s', 		U1T-1	Radian per second	unit:RadianPerSecond	rad/s
-            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2', 		L2	Square meter	unit:SquareMeter	m^2
-            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},  -- 'm^2*st', 		U1L2	Square meter steradian	unit:SquareMeterSteradian	m^2-sr
-            Sequence{ 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2*K', 		L2Θ1	Square meter kelvin	unit:SquareMeterKelvin	m^2-K
-            Sequence{ 2, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/K', 		L2Θ-1	Square meter per kelvin	unit:SquareMeterPerKelvin	m^2/K
+            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2', 		L2	Square metre	unit:SquareMetre	m^2
+            Sequence{ 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},  -- 'm^2*st', 		U1L2	Square metre steradian	unit:SquareMetreSteradian	m^2-sr
+            Sequence{ 2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2*K', 		L2Θ1	Square metre kelvin	unit:SquareMetreKelvin	m^2-K
+            Sequence{ 2, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/K', 		L2Θ-1	Square metre per kelvin	unit:SquareMetrePerKelvin	m^2/K
             Sequence{-2,-1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'F', 		L-2M-1T4I2	Farad	unit:Farad	F
             Sequence{ 0, 0,-1, 0, 0, 1, 0, 0, 0, 0, 0, 0},  -- 'kat', 		T-1N1	Katal	unit:Katal	kat
-            Sequence{ 0, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m^2*K)', 	M1T-3Θ-1	M1T-3Θ-1	Watt per square meter kelvin	unit:WattPerSquareMeterKelvin	W/(m^2-K)
-            Sequence{-3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^3', L-3M1		L-3M1	Kilogram per cubic meter	unit:KilogramPerCubicMeter	kg/m^3
+            Sequence{ 0, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m^2*K)', 	M1T-3Θ-1	M1T-3Θ-1	Watt per square metre kelvin	unit:WattPerSquareMetreKelvin	W/(m^2-K)
+            Sequence{-3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^3', L-3M1		L-3M1	Kilogram per cubic metre	unit:KilogramPerCubicMetre	kg/m^3
             Sequence{ 2, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Sv', L2T-2		L2T-2	Sievert	unit:Sievert	Sv
             Sequence{-1, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Pa*s', L-1M1T-1		L-1M1T-1	Pascal second	unit:PascalSecond	Pa-s
             Sequence{ 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C', T1I1		T1I1	Coulomb	unit:Coulomb	C
-            Sequence{-1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m', L-1T1I1		L-1T1I1	Coulomb per meter	unit:CoulombPerMeter	C/m
-            Sequence{-3, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^3', L-3T1I1		L-3T1I1	Coulomb per cubic meter	unit:CoulombPerCubicMeter	C/m^3
+            Sequence{-1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m', L-1T1I1		L-1T1I1	Coulomb per metre	unit:CoulombPerMetre	C/m
+            Sequence{-3, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^3', L-3T1I1		L-3T1I1	Coulomb per cubic metre	unit:CoulombPerCubicMetre	C/m^3
             Sequence{ 0, 0, 1, 1, 0,-1, 0, 0, 0, 0, 0, 0},  -- 'C/mol', 		T1I1N-1	Coulomb per mole	unit:CoulombPerMole	C/mol
-            Sequence{-2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'A/m^2', 		L-2I1	Ampere per square meter	unit:AmperePerSquareMeter	A/m^2
+            Sequence{-2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'A/m^2', 		L-2I1	Ampere per square metre	unit:AmperePerSquareMetre	A/m^2
             Sequence{ 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0,-1},  -- 'A/rad', 		U-1I1	Ampere per radian	unit:AmperePerRadian	A/rad
-            Sequence{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C*m', 		L1T1I1	Coulomb meter	unit:CoulombMeter	C-m
-            Sequence{ 1, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'V/m', 		L1M1T-3I-1	Volt per Meter	unit:VoltPerMeter	V/m
-            Sequence{-2, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^2', 		L-2T1I1	Coulomb per Square Meter	unit:CoulombPerSquareMeter	C/m^2
+            Sequence{ 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C*m', 		L1T1I1	Coulomb metre	unit:CoulombMetre	C-m
+            Sequence{ 1, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'V/m', 		L1M1T-3I-1	Volt per Metre	unit:VoltPerMetre	V/m
+            Sequence{-2, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/m^2', 		L-2T1I1	Coulomb per Square Metre	unit:CoulombPerSquareMetre	C/m^2
             Sequence{-2,-1, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'S', 		L-2M-1T3I2	Siemens	unit:Siemens	S
             Sequence{ 2, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'V', 		L2M1T-3I-1	Volt	unit:Volt	V
-            Sequence{-1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^3', 		L-1M1T-2	Joule per cubic meter	unit:JoulePerCubicMeter	J/m^3
+            Sequence{-1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^3', 		L-1M1T-2	Joule per cubic metre	unit:JoulePerCubicMetre	J/m^3
             Sequence{ 2, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J', 		L2M1T-2	Joule	unit:Joule	J
-            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^2', 		M1T-2	Joule per square meter	unit:JoulePerSquareMeter	J/m^2
+            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/m^2', 		M1T-2	Joule per square metre	unit:JoulePerSquareMetre	J/m^2
             Sequence{ 0,-1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'C/kg', 		M-1T1I1	Coulomb per kilogram	unit:CoulombPerKilogram	C/kg
             Sequence{ 1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N', 		L1M1T-2	Newton	unit:Newton	N
             Sequence{ 1, 1,-3,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/C', 		L1M1T-3I-1	Newton per coulomb	unit:NewtonPerCoulomb	N/C
-            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/m', 		M1T-2	Newton per meter	unit:NewtonPerMeter	N/m
+            Sequence{ 0, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/m', 		M1T-2	Newton per metre	unit:NewtonPerMetre	N/m
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Hz', 		T-1	Hertz	unit:Hertz	Hz
-            Sequence{ 3,-1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/(kg*s^2)', 		L3M-1T-2	Cubic meter per kilogram second squared	unit:CubicMeterPerKilogramSecondSquared	m^3/(kg-s^2)
+            Sequence{ 3,-1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/(kg*s^2)', 		L3M-1T-2	Cubic metre per kilogram second squared	unit:CubicMetrePerKilogramSecondSquared	m^3/(kg-s^2)
             Sequence{ 2, 1,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/K', 		L2M1T-2Θ-1	Joule per kelvin	unit:JoulePerKelvin	J/K
             Sequence{-2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1},  -- 'Lx', 		U1L-2J1	Lux	unit:Lux	lx
             Sequence{ 2, 1,-2,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'H', 		L2M1T-2I-2	Henry	unit:Henry	H
             Sequence{ 0, 0, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0},  -- '1/mol', 		N-1	Per mole	unit:PerMole	mol^(-1)
-            Sequence{ 3, 1,-4,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/F', 		L3M1T-4I-2	Meter per farad	unit:MeterPerFarad	m/F
-            Sequence{ 2, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/s', 		L2T-1	Square meter per second	unit:SquareMeterPerSecond	m^2/sec
-            Sequence{ 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm*kg', 		L1M1	Meter kilogram	unit:MeterKilogram	m-kg
-            Sequence{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K', 		L1Θ1	Meter kelvin	unit:MeterKelvin	m-K
-            Sequence{ 1, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s^2', 		L1T-2	Meter per second squared	unit:MeterPerSecondSquared	m/s^2
-            Sequence{ 1, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m/s', 		L1M1T-1	Kilogram Meter Per Second	unit:KilogramMeterPerSecond	kg-m/s
-            Sequence{ 1, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm/K', 		L1Θ-1	Meter per kelvin	unit:MeterPerKelvin	m/K
-            Sequence{ 1, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s', 		L1T-1	Meter per second	unit:MeterPerSecond	m/s
-            Sequence{-2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},  -- 'cd/m^2', 		L-2J1	Candela per square meter	unit:CandelaPerSquareMeter	cd/m^2
+            Sequence{ 3, 1,-4,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/F', 		L3M1T-4I-2	Metre per farad	unit:MetrePerFarad	m/F
+            Sequence{ 2, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/s', 		L2T-1	Square metre per second	unit:SquareMetrePerSecond	m^2/sec
+            Sequence{ 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm*kg', 		L1M1	Metre kilogram	unit:MetreKilogram	m-kg
+            Sequence{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K', 		L1Θ1	Metre kelvin	unit:MetreKelvin	m-K
+            Sequence{ 1, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s^2', 		L1T-2	Metre per second squared	unit:MetrePerSecondSquared	m/s^2
+            Sequence{ 1, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*m/s', 		L1M1T-1	Kilogram Metre Per Second	unit:KilogramMetrePerSecond	kg-m/s
+            Sequence{ 1, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'm/K', 		L1Θ-1	Metre per kelvin	unit:MetrePerKelvin	m/K
+            Sequence{ 1, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm/s', 		L1T-1	Metre per second	unit:MetrePerSecond	m/s
+            Sequence{-2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},  -- 'cd/m^2', 		L-2J1	Candela per square metre	unit:CandelaPerSquareMetre	cd/m^2
             Sequence{ 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1},  -- 'lm', 		U1J1	Lumen	unit:Lumen	lm
             Sequence{ 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/T', 		L2I1	Joule per Tesla	unit:JoulePerTesla	J/T
-            Sequence{-1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'AT/m', 		L-1I1	Ampere Turn per Meter	unit:AmpereTurnPerMeter	At/m
+            Sequence{-1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'AT/m', 		L-1I1	Ampere Turn per Metre	unit:AmpereTurnPerMetre	At/m
             Sequence{ 2, 1,-2,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Wb', 		L2M1T-2I-1	Weber	unit:Weber	Wb
             Sequence{ 0, 1,-2,-1, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'T', 		M1T-2I-1	Tesla	unit:Tesla	T
             Sequence{ 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1},  -- 'AT', 		U1I1	Ampere Turn	unit:AmpereTurn	At
             Sequence{ 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'kg*K', 		M1Θ1	Kilogram kelvin	unit:KilogramKelvin	kg-K
             Sequence{ 0, 1,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/s', 		M1T-1	Kilogram per second	unit:KilogramPerSecond	kg/s
-            Sequence{-2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^2', 		L-2M1	Kilogram per square meter	unit:KilogramPerSquareMeter	kg/m^2
-            Sequence{-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m', 		L-1M1	Kilogram per meter	unit:KilogramPerMeter	kg/m
+            Sequence{-2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m^2', 		L-2M1	Kilogram per square metre	unit:KilogramPerSquareMetre	kg/m^2
+            Sequence{-1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'kg/m', 		L-1M1	Kilogram per metre	unit:KilogramPerMetre	kg/m
             Sequence{ 2, 1,-2, 0, 0,-1, 0, 0, 0, 0, 0, 0},  -- 'J/mol', 		L2M1T-2N-1	Joule per mole	unit:JoulePerMole	J/mol
             Sequence{ 2, 1,-2, 0,-1,-1, 0, 0, 0, 0, 0, 0},  -- 'J/(mol*K)', 		L2M1T-2Θ-1N-1	Joule per mole kelvin	unit:JoulePerMoleKelvin	J/(mol-K)
-            Sequence{ 1, 1,-2,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'H/m', 		L1M1T-2I-2	Henry per meter	unit:HenryPerMeter	H/m
-            Sequence{-3,-1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'F/m', 		L-3M-1T4I2	Farad per meter	unit:FaradPerMeter	F/m
+            Sequence{ 1, 1,-2,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'H/m', 		L1M1T-2I-2	Henry per metre	unit:HenryPerMetre	H/m
+            Sequence{-3,-1, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'F/m', 		L-3M-1T4I2	Farad per metre	unit:FaradPerMetre	F/m
             Sequence{ 2, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'W', 		L2M1T-3	Watt	unit:Watt	W
             Sequence{ 2, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0,-2},  -- 'W/sr', 		U-1L2M1T-3	Watt per steradian	unit:WattPerSteradian	W/sr
-            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0,-2},  -- 'W/(m^2sr)', 		U-1M1T-3	Watt per square meter steradian	unit:WattPerSquareMeterSteradian	W/(m^2-sr)
-            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'W/m^2', 		M1T-3	Watt per square meter	unit:WattPerSquareMeter	W/m^2
+            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0,-2},  -- 'W/(m^2sr)', 		U-1M1T-3	Watt per square metre steradian	unit:WattPerSquareMetreSteradian	W/(m^2-sr)
+            Sequence{ 0, 1,-3, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'W/m^2', 		M1T-3	Watt per square metre	unit:WattPerSquareMetre	W/m^2
             Sequence{-1, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Pa', 		L-1M1T-2	Pascal	unit:Pascal	Pa
             Sequence{ 2, 1,-3,-2, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'Ohm', 		L2M1T-3I-2	Ohm	unit:Ohm	Ohm
             Sequence{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2},  -- 'sr', 		U1	Steradian	unit:Steradian	sr
             Sequence{ 2, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'J/kg', 		L2T-2	Joule per kilogram	unit:JoulePerKilogram	J/kg
             Sequence{ 2, 0,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K)', 		L2T-2Θ-1	Joule per kilogram kelvin	unit:JoulePerKilogramKelvin	J/(kg-K)
             Sequence{ 3,-1, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K*Pa)', 		L3M-1Θ-1	Joule per kilogram kelvin per pascal	unit:JoulePerKilogramKelvinPerPascal	J/(km-K-Pa)
-            Sequence{-1, 0,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K*m^3)', 		L-1T-2Θ-1	Joule per kilogram kelvin per cubic meter	unit:JoulePerKilogramKelvinPerCubicMeter	J/(kg-K-m^3)
+            Sequence{-1, 0,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'J/(kg*K*m^3)', 		L-1T-2Θ-1	Joule per kilogram kelvin per cubic metre	unit:JoulePerKilogramKelvinPerCubicMetre	J/(kg-K-m^3)
             Sequence{ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0},  -- 'mol*K', 		Θ1N1	Mole kelvin	unit:MoleKelvin	mol-K
-            Sequence{ 1, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m*K)', 		L1M1T-3Θ-1	Watt per meter kelvin	unit:WattPerMeterKelvin	W/(m*K)
-            Sequence{ 0,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/W', 		M-1T3Θ1	Square meter Kelvin per watt	unit:SquareMeterKelvinPerWatt	(K^2)m/W
+            Sequence{ 1, 1,-3, 0,-1, 0, 0, 0, 0, 0, 0, 0},  -- 'W/(m*K)', 		L1M1T-3Θ-1	Watt per metre kelvin	unit:WattPerMetreKelvin	W/(m*K)
+            Sequence{ 0,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm^2/W', 		M-1T3Θ1	Square metre Kelvin per watt	unit:SquareMetreKelvinPerWatt	(K^2)m/W
             Sequence{-2,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'K/W', 		L-2M-1T3Θ1	Kelvin per watt	unit:KelvinPerWatt	K/W
-            Sequence{-1,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K/W', 		L-1M-1T3Θ1	Meter Kelvin per watt	unit:MeterKelvinPerWatt	K-m/W
+            Sequence{-1,-1, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0},  -- 'm*K/W', 		L-1M-1T3Θ1	Metre Kelvin per watt	unit:MetreKelvinPerWatt	K-m/W
             Sequence{ 1, 0,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N/kg', 		L1T-2	Newton per kilogram	unit:NewtonPerKilogram	N/kg
             Sequence{ 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 's^2', 		T2	Second time squared	unit:SecondTimeSquared	s^2
-            Sequence{ 2, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N*m', 		L2M1T-2	Newton meter	unit:NewtonMeter	N-m
-            Sequence{ 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3', 		L3	Cubic Meter	unit:CubicMeter	m^3
-            Sequence{ 3,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/K', 		L3Θ-1	Cubic meter per kelvin	unit:CubicMeterPerKelvin	m^3/K
-            Sequence{ 3, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/s', 		L3T-1	Cubic meter per second	unit:CubicMeterPerSecond	m^3/s
-            Sequence{ 1, 1,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0}, -- 'J/(m^3*K)'		L-1M1T-2Θ-1	Joule per cubic meter kelvin	unit:JoulePerCubicMeterKelvin	J/(m^3 K)
+            Sequence{ 2, 1,-2, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'N*m', 		L2M1T-2	Newton metre	unit:NewtonMetre	N-m
+            Sequence{ 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3', 		L3	Cubic Metre	unit:CubicMetre	m^3
+            Sequence{ 3,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/K', 		L3Θ-1	Cubic metre per kelvin	unit:CubicMetrePerKelvin	m^3/K
+            Sequence{ 3, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0},  -- 'm^3/s', 		L3T-1	Cubic metre per second	unit:CubicMetrePerSecond	m^3/s
+            Sequence{ 1, 1,-2, 0,-1, 0, 0, 0, 0, 0, 0, 0}, -- 'J/(m^3*K)'		L-1M1T-2Θ-1	Joule per cubic metre kelvin	unit:JoulePerCubicMetreKelvin	J/(m^3 K)
             Sequence{ 0, 0,-1, 0, 0, 0, 0, 1, 0, 0, 0, 0} -- 'bit/s'		S1T-1 bit per second
             } in
 	let DerivedUnitSymbols  : Sequence(String) =    Sequence{	
@@ -645,7 +652,7 @@ context u : Unit inv atMostOneOffset:
     
 -- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-class Quantity
+class QuantityValue
 
 attributes
   value : UReal
@@ -655,18 +662,18 @@ operations
 
 --- conversion operations
 
-sameUnits(x :Quantity) :Boolean = self.unit.equals(x.unit)
+sameUnits(x :QuantityValue) :Boolean = self.unit.equals(x.unit)
 
 compatibleUnits(u :Unit) :Boolean = self.unit.isCompatibleWith(u)
 
-convertTo(u :Unit) :Quantity
+convertTo(u :Unit) :QuantityValue
    begin
-      declare value1 : UReal, value2 : UReal, value3 : UReal, aux :Quantity;
+      declare value1 : UReal, value2 : UReal, value3 : UReal, aux :QuantityValue;
       value1 := new UReal;
       value3 :=new UReal;
       value1.x := self.unit.factor()/u.factor();
       value1.u := 0.0;
-      aux := new Quantity;
+      aux := new QuantityValue;
       value2:=self.value.mult(value1);
       value3.x := (self.unit.offset->sum() - u.offset->sum())/u.factor();
       value3.u:=0.0;
@@ -675,7 +682,7 @@ convertTo(u :Unit) :Quantity
       result := aux;
    end   
 
-convertToSIUnits() :Quantity
+convertToSIUnits() :QuantityValue
   begin
     declare auxUnit : Unit;
     auxUnit:=new Unit;
@@ -688,15 +695,15 @@ convertToSIUnits() :Quantity
   end   
 --
   
-convertFromSIUnits(val :UReal) :Quantity
-    -- val is the Quantity value expressed in SIUnits
+convertFromSIUnits(val :UReal) :QuantityValue
+    -- val is the QuantityValue value expressed in SIUnits
   begin
-    declare auxQ : Quantity, auxUnit : Unit;
+    declare auxQ : QuantityValue, auxUnit : Unit;
     auxUnit:=new Unit;
     auxUnit.dimensions:=self.unit.dimensions;
     auxUnit.conversionFactor:=Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0};
     auxUnit.offset:=Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0};
-    auxQ:=new Quantity;
+    auxQ:=new QuantityValue;
     auxQ.value:=val;
     auxQ.unit:=auxUnit;
     result:=auxQ.convertTo(self.unit);
@@ -704,12 +711,12 @@ convertFromSIUnits(val :UReal) :Quantity
 
 -- arithmetic operations -----------
 
-add(x :Quantity) : Quantity
+add(x :QuantityValue) : QuantityValue
     begin
-        declare one: Quantity, other : Quantity, auxR:UReal, auxR2:UReal;
+        declare one: QuantityValue, other : QuantityValue, auxR:UReal, auxR2:UReal;
         if self.unit.noOffset() then 
             other := x.convertTo(self.unit);
-            one:=new Quantity;
+            one:=new QuantityValue;
             one.value := self.value.add(other.value);
             one.unit := self.unit;
             result := one;
@@ -722,12 +729,12 @@ add(x :Quantity) : Quantity
         end
     end   
 
-minus(x :Quantity) : Quantity
+minus(x :QuantityValue) : QuantityValue
     begin
-        declare one: Quantity, other : Quantity, auxR:UReal, auxR2:UReal, auxU:Unit;
+        declare one: QuantityValue, other : QuantityValue, auxR:UReal, auxR2:UReal, auxU:Unit;
 		if (x.unit.noOffset() and self.unit.noOffset()) then
 			other := x.convertTo(self.unit);
-            one:=new Quantity;
+            one:=new QuantityValue;
             one.value := self.value.minus(other.value);
             one.unit := self.unit;
             result := one;
@@ -741,7 +748,7 @@ minus(x :Quantity) : Quantity
 		    else -- neither x nor self are Delta Units, but the result should be a Delta Unit...
                  -- and then we convert to the  Delta"self" unit, with no offset
 		       other:= x.convertTo(self.unit);
-		       one:=new Quantity;
+		       one:=new QuantityValue;
                auxR:=self.value;
                one.value:= auxR.minus(other.value);
                auxU:=new Unit;
@@ -756,68 +763,68 @@ minus(x :Quantity) : Quantity
         end
     end   
 
-mult(x :Quantity) : Quantity
+mult(x :QuantityValue) : QuantityValue
     begin
-        declare one: Quantity, other : Quantity, aux : Quantity;
+        declare one: QuantityValue, other : QuantityValue, aux : QuantityValue;
         one:= self.convertToSIUnits();
         other := x.convertToSIUnits();
-        aux := new Quantity;
+        aux := new QuantityValue;
         aux.value := one.value.mult(other.value);
         aux.unit := one.unit.multiplyUnits(other.unit);
         result := aux;
     end   
 
-divideBy(x :Quantity) : Quantity
+divideBy(x :QuantityValue) : QuantityValue
     begin
-        declare one: Quantity, other : Quantity, aux : Quantity;
+        declare one: QuantityValue, other : QuantityValue, aux : QuantityValue;
         one:= self.convertToSIUnits();
         other := x.convertToSIUnits();
-        aux := new Quantity;
+        aux := new QuantityValue;
         aux.value := one.value.divideBy(other.value);
         aux.unit := one.unit.divideUnits(other.unit);
         result := aux;
     end   
 
-abs() :Quantity
+abs() :QuantityValue
     begin
-        declare aux : Quantity;
-        aux := new Quantity;
+        declare aux : QuantityValue;
+        aux := new QuantityValue;
         aux.value := self.value.abs();
         aux.unit := self.unit;
         result := aux;
     end   
 
-neg() :Quantity
+neg() :QuantityValue
     begin
-        declare aux : Quantity;
-        aux := new Quantity;
+        declare aux : QuantityValue;
+        aux := new QuantityValue;
         aux.value := self.value.neg();
         aux.unit := self.unit;
         result := aux;
     end   
 
-power(s : Real) :Quantity
+power(s : Real) :QuantityValue
     begin
-        declare aux : Quantity;
-        aux := new Quantity;
+        declare aux : QuantityValue;
+        aux := new QuantityValue;
         aux.value := self.value.power(s);
         aux.unit := self.unit.powerUnits(s);
         result := aux;
     end   
 
-floor() :Quantity
+floor() :QuantityValue
     begin
-        declare aux : Quantity;
-        aux := new Quantity;
+        declare aux : QuantityValue;
+        aux := new QuantityValue;
         aux.value := self.value.floor();
         aux.unit := self.unit;
         result := aux;
     end   
 
-round() :Quantity
+round() :QuantityValue
     begin
-        declare aux : Quantity;
-        aux := new Quantity;
+        declare aux : QuantityValue;
+        aux := new QuantityValue;
         aux.value := self.value.round();
         aux.unit := self.unit;
         result := aux;
@@ -825,10 +832,19 @@ round() :Quantity
 
 --- Multiplication by a scalar
 
-sMult(x :Real) : Quantity
+sUMult(x :UReal) : QuantityValue -- multiplication by a UReal
     begin
-        declare aux : Quantity, ur : UReal;
-        aux := new Quantity;
+        declare aux : QuantityValue;
+        aux := new QuantityValue;
+        aux.value := self.value.mult(x);
+        aux.unit := self.unit;
+        result := aux;
+    end   
+
+sMult(x :Real) : QuantityValue -- multiplication by a Real
+    begin
+        declare aux : QuantityValue, ur : UReal;
+        aux := new QuantityValue;
         ur := new UReal;
         ur.x := x;
         ur.u := 0.0;       
@@ -836,49 +852,349 @@ sMult(x :Real) : Quantity
         aux.unit := self.unit;
         result := aux;
     end   
+	
+--- COMPARISON OPERATIONS
+
+equals(x :QuantityValue) :Boolean 
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=self.value.equals(other.value);
+  end
+
+distinct(x :QuantityValue) :Boolean -- = not self.equals(x)
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=not self.value.equals(other.value);
+  end
+
+lt(x :QuantityValue) :Boolean
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=self.value.lt(other.value);
+  end
+
+le(x :QuantityValue) :Boolean -- = self.lt(x) or self.equals(x)
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=self.value.le(other.value);
+  end
+
+gt(x :QuantityValue) :Boolean
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=self.value.gt(other.value);
+  end
+
+ge(x :QuantityValue) :Boolean -- = self.gt(x) or self.equals(x)
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=self.value.ge(other.value);
+  end
+
+
+max(x :QuantityValue) :QuantityValue -- = if x.lt(self) then self else x endif
+  begin
+    declare b:Boolean;
+    b:=x.lt(self);
+    if b then result:=self; 
+    else result:=x;
+    end
+  end
+
+min(x :QuantityValue) :QuantityValue -- = if self.lt(x) then self else x endif
+  begin
+    declare b:Boolean;
+    b:=x.lt(self);
+    if b then result:=x;
+    else result:=self;
+    end
+  end
+
+--- FUZZY COMPARISON OPERATIONS
+--- Return a UBoolean value
+
+uEquals(x :QuantityValue) :UBoolean 
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=self.value.uEquals(other.value);
+  end
+
+uDistinct(x :QuantityValue) :UBoolean -- = 1.0 - self.uEquals(x)
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=self.value.uDistinct(other.value);
+  end
+
+uLt(x :QuantityValue) :UBoolean
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=self.value.uLt(other.value);
+  end
+
+uLe(x :QuantityValue) :UBoolean 
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=self.value.uLe(other.value);
+  end
+
+uGt(x :QuantityValue) :UBoolean
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=self.value.uGt(other.value);
+  end
+
+uGe(x :QuantityValue) :UBoolean
+  begin
+    declare other:QuantityValue;
+    other:=x.convertTo(self.unit);
+    result:=self.value.uGe(other.value);
+  end
+
+end
+
+constraints
+
+context QuantityValue::add(x :QuantityValue) :QuantityValue
+  pre: self.compatibleUnits(x.unit) 
+       and x.unit.noOffset() -- operand should have no offset
+
+context QuantityValue::minus(x :QuantityValue) :QuantityValue
+  pre: self.compatibleUnits(x.unit)
+       and (not x.unit.noOffset() implies not self.unit.noOffset())
+       -- You can subtract two units with offset (although the 
+       -- result will be a "delta" unit, i.e., with no offset 
+       -- But if x has offset, self should have it too.
+
+context QuantityValue::mult(x :QuantityValue) :QuantityValue
+  pre: x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+
+context QuantityValue::divideBy(x :QuantityValue) :QuantityValue
+  pre: ((x.value.x - x.value.u).max(0) > (x.value.x + x.value.u).min(0)) --not x.value.equals(0,0)
+       and x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+
+context QuantityValue::power(s :Real) :QuantityValue
+  pre: s<>0 implies self.unit.noOffset() 
+
+context QuantityValue::equals(x :QuantityValue) :Boolean
+  pre: self.compatibleUnits(x.unit)
+       
+context QuantityValue::distinct(x :QuantityValue) :Boolean
+  pre: self.compatibleUnits(x.unit)
+       
+context QuantityValue::lt(x :QuantityValue) :Boolean
+  pre: self.compatibleUnits(x.unit)
+       
+context QuantityValue::le(x :QuantityValue) :Boolean
+  pre: self.compatibleUnits(x.unit)
+
+context QuantityValue::gt(x :QuantityValue) :Boolean
+  pre: self.compatibleUnits(x.unit)
+       
+context QuantityValue::ge(x :QuantityValue) :Boolean
+  pre: self.compatibleUnits(x.unit)
+
+context QuantityValue::uEquals(x :QuantityValue) :UBoolean
+  pre: self.compatibleUnits(x.unit)
+       
+context QuantityValue::uDistinct(x :QuantityValue) :UBoolean
+  pre: self.compatibleUnits(x.unit)
+       
+context QuantityValue::uLt(x :QuantityValue) :UBoolean
+  pre: self.compatibleUnits(x.unit)
+       
+context QuantityValue::uLe(x :QuantityValue) :UBoolean
+  pre: self.compatibleUnits(x.unit)
+
+context QuantityValue::uGt(x :QuantityValue) :UBoolean
+  pre: self.compatibleUnits(x.unit)
+       
+context QuantityValue::uGe(x :QuantityValue) :UBoolean
+  pre: self.compatibleUnits(x.unit)
+
+context QuantityValue::max(x :QuantityValue) :QuantityValue
+  pre: self.compatibleUnits(x.unit)
+
+context QuantityValue::min(x :QuantityValue) :QuantityValue
+  pre: self.compatibleUnits(x.unit)
+  
+context QuantityValue::convertTo(u :Unit) :QuantityValue
+  pre:  self.compatibleUnits(u)
+
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+class Quantity
+
+attributes
+  quantityValue : QuantityValue
+
+operations
+
+--- conversion operations
+
+sameUnits(x :Quantity) :Boolean = self.quantityValue.sameUnits(x.quantityValue)
+
+compatibleUnits(u :Unit) :Boolean = self.quantityValue.compatibleUnits(u)
+
+convertTo(u :Unit) :Quantity
+   begin
+		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.convertTo(u);
+	    result:=aux;
+   end   
+
+convertToSIUnits() :Quantity
+  begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.convertToSIUnits();
+	    result:=aux;
+ end   
+--
+  
+convertFromSIUnits(val :UReal) :Quantity
+    -- val is the Quantity value expressed in SIUnits
+  begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.convertFromSIUnits(val);
+	    result:=aux;
+  end   
+
+-- arithmetic operations -----------
+
+add(x :Quantity) : Quantity
+    begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.add(x.quantityValue);
+	    result:=aux;
+   end   
+
+minus(x :Quantity) : Quantity
+    begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.minus(x.quantityValue);
+	    result:=aux;
+    end   
+
+mult(x :Quantity) : Quantity
+    begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.mult(x.quantityValue);
+	    result:=aux;
+    end   
+
+divideBy(x :Quantity) : Quantity
+    begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.divideBy(x.quantityValue);
+	    result:=aux;
+    end   
+
+abs() :Quantity
+    begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.abs();
+	    result:=aux;
+    end   
+
+neg() :Quantity
+    begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.neg();
+	    result:=aux;
+    end   
+
+power(s : Real) :Quantity
+    begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.power(s);
+    end   
+
+floor() :Quantity
+    begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.floor();
+	    result:=aux;
+    end   
+
+round() :Quantity
+    begin
+  		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.round();
+	    result:=aux;
+    end   
+
+--- Multiplication by a scalar
+
+sMult(x :Real) : Quantity -- multiplication by a Real
+    begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.sMult(x);
+	    result:=aux;
+   end   
+
+sUMult(x :UReal) : Quantity -- multiplication by a UReal
+    begin
+ 		declare aux:Quantity;
+		aux := new Quantity; 
+	    aux.quantityValue:=self.quantityValue.sUMult(x);
+	    result:=aux;
+   end   
 
 --- COMPARISON OPERATIONS
 
 equals(x :Quantity) :Boolean 
   begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=self.value.equals(other.value);
+    result:=self.quantityValue.equals(x.quantityValue);
   end
 
 distinct(x :Quantity) :Boolean -- = not self.equals(x)
   begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=not self.value.equals(other.value);
+	declare aux:Boolean;
+    aux:=self.quantityValue.equals(x.quantityValue);
+	result:=not aux;
   end
 
 lt(x :Quantity) :Boolean
   begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=self.value.lt(other.value);
+    result:=self.quantityValue.lt(x.quantityValue);
   end
 
 le(x :Quantity) :Boolean -- = self.lt(x) or self.equals(x)
   begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=self.value.le(other.value);
+    result:=self.quantityValue.le(x.quantityValue);
   end
 
 gt(x :Quantity) :Boolean
   begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=self.value.gt(other.value);
+    result:=self.quantityValue.gt(x.quantityValue);
   end
 
 ge(x :Quantity) :Boolean -- = self.gt(x) or self.equals(x)
   begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=self.value.ge(other.value);
+    result:=self.quantityValue.ge(x.quantityValue);
   end
 
 
@@ -901,48 +1217,36 @@ min(x :Quantity) :Quantity -- = if self.lt(x) then self else x endif
   end
 
 --- FUZZY COMPARISON OPERATIONS
---- Return a Real value with probablity between 0.0 a 1.0
+--- Return a UBoolean value
 
-uEquals(x :Quantity) :Real 
+uEquals(x :Quantity) :UBoolean 
   begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=self.value.uEquals(other.value);
+    result:=self.quantityValue.uEquals(x.quantityValue);
+ end
+
+uDistinct(x :Quantity) :UBoolean -- = 1.0 - self.uEquals(x)
+  begin
+    result:=self.quantityValue.uDistinct(x.quantityValue);
   end
 
-uDistinct(x :Quantity) :Real -- = 1.0 - self.uEquals(x)
+uLt(x :Quantity) :UBoolean
   begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=self.value.uDistinct(other.value);
+    result:=self.quantityValue.uLt(x.quantityValue);
   end
 
-uLt(x :Quantity) :Real
+uLe(x :Quantity) :UBoolean 
   begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=self.value.uLt(other.value);
+    result:=self.quantityValue.uLe(x.quantityValue);
   end
 
-uLe(x :Quantity) :Real 
+uGt(x :Quantity) :UBoolean
   begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=self.value.uLe(other.value);
+    result:=self.quantityValue.uGt(x.quantityValue);
   end
 
-uGt(x :Quantity) :Real
+uGe(x :Quantity) :UBoolean
   begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=self.value.uGt(other.value);
-  end
-
-uGe(x :Quantity) :Real
-  begin
-    declare other:Quantity;
-    other:=x.convertTo(self.unit);
-    result:=self.value.uGe(other.value);
+    result:=self.quantityValue.uGe(x.quantityValue);
   end
 
 end
@@ -950,80 +1254,197 @@ end
 constraints
 
 context Quantity::add(x :Quantity) :Quantity
-  pre: self.compatibleUnits(x.unit) 
-       and x.unit.noOffset() -- operand should have no offset
+  pre: self.compatibleUnits(x.quantityValue.unit) 
+       and x.quantityValue.unit.noOffset() -- operand should have no offset
 
 context Quantity::minus(x :Quantity) :Quantity
-  pre: self.compatibleUnits(x.unit)
-       and (not x.unit.noOffset() implies not self.unit.noOffset())
+  pre: self.compatibleUnits(x.quantityValue.unit)
+       and (not x.quantityValue.unit.noOffset() implies not self.quantityValue.unit.noOffset())
        -- You can subtract two units with offset (although the 
        -- result will be a "delta" unit, i.e., with no offset 
        -- But if x has offset, self should have it too.
 
 context Quantity::mult(x :Quantity) :Quantity
-  pre: x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+  pre: x.quantityValue.unit.noOffset() and self.quantityValue.unit.noOffset() -- both operands should have no offset
 
 context Quantity::divideBy(x :Quantity) :Quantity
-  pre: ((x.value.x - x.value.u).max(0) > (x.value.x + x.value.u).min(0)) --not x.value.equals(0,0)
-       and x.unit.noOffset() and self.unit.noOffset() -- both operands should have no offset
+  pre: ((x.quantityValue.value.x - x.quantityValue.value.u).max(0) > 
+        (x.quantityValue.value.x + x.quantityValue.value.u).min(0)) --not x.quantityValue.value.equals(0,0)
+       and x.quantityValue.unit.noOffset() and self.quantityValue.unit.noOffset() -- both operands should have no offset
 
 context Quantity::power(s :Real) :Quantity
-  pre: s<>0 implies self.unit.noOffset() 
+  pre: s<>0 implies self.quantityValue.unit.noOffset() 
 
 context Quantity::equals(x :Quantity) :Boolean
-  pre: self.compatibleUnits(x.unit)
+  pre: self.compatibleUnits(x.quantityValue.unit)
        
 context Quantity::distinct(x :Quantity) :Boolean
-  pre: self.compatibleUnits(x.unit)
+  pre: self.compatibleUnits(x.quantityValue.unit)
        
 context Quantity::lt(x :Quantity) :Boolean
-  pre: self.compatibleUnits(x.unit)
+  pre: self.compatibleUnits(x.quantityValue.unit)
        
 context Quantity::le(x :Quantity) :Boolean
-  pre: self.compatibleUnits(x.unit)
+  pre: self.compatibleUnits(x.quantityValue.unit)
 
 context Quantity::gt(x :Quantity) :Boolean
-  pre: self.compatibleUnits(x.unit)
+  pre: self.compatibleUnits(x.quantityValue.unit)
        
 context Quantity::ge(x :Quantity) :Boolean
-  pre: self.compatibleUnits(x.unit)
+  pre: self.compatibleUnits(x.quantityValue.unit)
 
-context Quantity::uEquals(x :Quantity) :Real
-  pre: self.compatibleUnits(x.unit)
+context Quantity::uEquals(x :Quantity) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
        
-context Quantity::uDistinct(x :Quantity) :Real
-  pre: self.compatibleUnits(x.unit)
+context Quantity::uDistinct(x :Quantity) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
        
-context Quantity::uLt(x :Quantity) :Real
-  pre: self.compatibleUnits(x.unit)
+context Quantity::uLt(x :Quantity) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
        
-context Quantity::uLe(x :Quantity) :Real
-  pre: self.compatibleUnits(x.unit)
+context Quantity::uLe(x :Quantity) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
 
-context Quantity::uGt(x :Quantity) :Real
-  pre: self.compatibleUnits(x.unit)
+context Quantity::uGt(x :Quantity) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
        
-context Quantity::uGe(x :Quantity) :Real
-  pre: self.compatibleUnits(x.unit)
+context Quantity::uGe(x :Quantity) :UBoolean
+  pre: self.compatibleUnits(x.quantityValue.unit)
 
 context Quantity::max(x :Quantity) :Quantity
-  pre: self.compatibleUnits(x.unit)
+  pre: self.compatibleUnits(x.quantityValue.unit)
 
 context Quantity::min(x :Quantity) :Quantity
-  pre: self.compatibleUnits(x.unit)
+  pre: self.compatibleUnits(x.quantityValue.unit)
   
 context Quantity::convertTo(u :Unit) :Quantity
   pre:  self.compatibleUnits(u)
 
+  
+-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-- %%% NOW THE OCL/UML TYPES EXTENDED WITH 
+-- %%% MEASUREMENT UNCERTAINTY
+--------------------------------------------
+
+class UBoolean
+   -- canonical form:
+   -- pairs (true,c), with c the confidence that self is true
+attributes
+   b : Boolean 
+   c : Real
+
+operations
+
+getC() : Real -- returns the confidence attribute
+              -- it requires the UBoolean to be in normal form:
+= if (not self.b) then 1-self.c else self.c endif
+
+
+uNot() : UBoolean
+    begin
+        declare aux : UBoolean;
+        aux := new UBoolean;
+        aux.b:=not self.b;
+        aux.c:=self.c;
+        -- returns the UBoolean number in normal form:
+        if (not aux.b) then aux.b:= true; aux.c:=1-aux.c; end;
+        result:=aux;
+    end
+post: (result.b) and (result.c = if self.b then 1-self.c else self.c endif)
+
+uAnd(b : UBoolean) : UBoolean
+    begin
+        declare aux : UBoolean;
+        aux := new UBoolean;
+        aux.b:=self.b and b.b;
+        aux.c:= self.c * b.c;
+        -- return the UBoolean number in normal form:
+        if (not aux.b) then aux.b:= true; aux.c:=1-aux.c; end;
+        result:=aux;
+    end
+post: let C : Real = (self.c * b.c) in
+      (result.b) and (result.c = if (self.b and b.b) then C else (1 - C) endif)
+
+uOr(b : UBoolean) : UBoolean
+    begin
+        declare aux : UBoolean;
+        aux := new UBoolean;
+        aux.b:=self.b or b.b;
+        aux.c:= self.c + b.c - (self.c * b.c); 
+        -- return the UBoolean number in normal form:
+        if (not aux.b) then aux.b:= true; aux.c:=1-aux.c; end;
+        result:=aux;
+    end
+post: let C : Real = (self.c + b.c - (self.c * b.c)) in
+      (result.b) and 
+      (result.c = if (self.b or b.b) then C else (1 - C) endif)
+
+uImplies(b : UBoolean) : UBoolean
+    begin
+        declare aux : UBoolean;
+        aux := new UBoolean;
+        aux.b:=self.b implies b.b;
+        aux.c:= self.c + b.c - (self.c * b.c); 
+        -- return the UBoolean number in normal form:
+        if (not aux.b) then aux.b:= true; aux.c:=1-aux.c; end;
+        result:=aux;
+    end
+post: let C : Real = (self.c + b.c - (self.c * b.c)) in
+      (result.b) and 
+      (result.c = if (self.b implies b.b) then C else (1 - C) endif)
+
+
+uEquivalent(b : UBoolean) : UBoolean
+    begin
+        declare aux1 :UBoolean, aux2 : UBoolean;
+        aux1:=self.uImplies(b);
+        aux2:=b.uImplies(self);
+        result:= aux2.uAnd(aux1);
+    end
+-- post: result = self.uImplies(b).uAnd(b.uImplies(self))
+      
+
+uXor(b : UBoolean) : UBoolean
+    begin
+        declare aux : UBoolean;
+        aux:=self.uEquivalent(b);
+        result:= aux.uNot();
+    end
+-- post: result = self.uEquivalent(b).uNot()
+
+equals(b : UBoolean) : Boolean = (self.b=b.b) and (self.c=b.c)
+
+equalsC(b : UBoolean, c: Real) : Boolean = (self.b=b.b) and ((self.c-b.c).abs()<=(1-c))
+
+distinct(b : UBoolean) : Boolean = not (self.equals(b))
+
+uEquals(b : UBoolean) : UBoolean
+    begin
+        result:= self.uEquivalent(b);
+    end
+-- post: result = self.uEquivalent(b)
+
+toBoolean() : Boolean = if (self.c>=0.5) then (self.b) else (not self.b) endif
+
+-- toBoolean, but specifying the confidence threshold to decide when it is true.
+toBooleanC(c:Real):Boolean = if (self.c>=c) then (self.b) else (not self.b) endif
+
+toString() : String = 'UBoolean{b='+self.b.toString()+'; c='+self.c.toString()+'}'
+
+
+end
+
 -- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 -- 
-class UReal
+class UReal -- uses UBoolean
 
 attributes
     x : Real
     u : Real
 
 operations
+
+-- Operations
 
 add(r : UReal) : UReal
     begin
@@ -1059,6 +1480,59 @@ divideBy(r : UReal) : UReal
         aux.x := (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x));
         aux.u := ((self.u*self.u/r.x) + 
                  ((r.u*r.u*self.x*self.x)/(r.x*r.x*r.x*r.x))).sqrt();
+        result := aux;
+    end   
+
+sin() :UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x.sin();
+        aux.u := (self.x.cos() * self.u).abs() ;
+        result := aux;
+    end   
+
+cos() :UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x.cos();
+        aux.u := (self.x.sin() * self.u).abs() ;
+        result := aux;
+    end   
+    
+tan():UReal
+    begin
+        declare aux1 : UReal, aux2 : UReal;
+        aux1 := self.sin();
+        aux2 := self.cos();
+        result:=aux1.divideBy(aux2);
+    end
+
+atan() :UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x.atan();
+        aux.u := self.u / (1 + self.x*self.x) ;
+        result := aux;
+    end   
+
+asin() :UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x.asin();
+        aux.u := self.u / ((1 - self.x*self.x).sqrt()) ;
+        result := aux;
+    end   
+
+acos() :UReal
+     begin
+        declare aux : UReal;
+        aux := new UReal;
+        aux.x := self.x.acos();
+        aux.u := self.u / ((1 - self.x*self.x).sqrt()) ;
         result := aux;
     end   
 
@@ -1159,6 +1633,23 @@ max(r : UReal) : UReal
 min(r : UReal) : UReal
     = if r.lt(self) then r else self endif
 
+
+-- Comparisons with Zero=UReal(0,0)
+equalsZero() : Boolean 
+   = (self.x - self.u).max(0.0) <= (self.x + self.u).min(0.0)
+
+ltZero() : Boolean
+   = ((self.x + self.u)<0.0) 
+
+leZero() : Boolean 
+   = self.ltZero() or self.equalsZero()
+    
+gtZero() : Boolean
+   = not self.leZero() 
+
+geZero() : Boolean 
+   = not self.ltZero()
+
    
 -- Fuzzy comparison operations
 
@@ -1230,48 +1721,138 @@ end -- calculate
 
 -- fuzzy operations
 
-uEquals(r : UReal) : Real
+uEquals(r : UReal) : UBoolean
     begin
-       declare aux : Tuple(lt:Real,eq:Real,gt:Real);		
+       declare aux : Tuple(lt:Real,eq:Real,gt:Real), aux2 : UBoolean;		
+       aux2:=new UBoolean;
        aux:=self.calculate(r);
-       result := aux.eq;
+       aux2.b := true;
+       aux2.c := aux.eq;
+       result:=aux2;
     end
 
-uDistinct(r : UReal) : Real
+uDistinct(r : UReal) : UBoolean
     begin
-        declare aux : Real;
+        declare aux : UBoolean;
         aux := self.uEquals(r);
-        result := 1.0 - aux;
+        result := aux.uNot();
     end
 
-uLt(r : UReal) : Real
+uLt(r : UReal) : UBoolean
      begin
-       declare aux : Tuple(lt:Real,eq:Real,gt:Real);		
+       declare aux : Tuple(lt:Real,eq:Real,gt:Real), aux2 : UBoolean;
+       aux2:=new UBoolean;
        aux:=self.calculate(r);
-       result := aux.lt;
+       aux2.b:=true;
+       aux2.c:=aux.lt;
+       result := aux2;
     end
 
-uLe(r : UReal) : Real 
+uLe(r : UReal) : UBoolean 
      begin
-       declare aux : Tuple(lt:Real,eq:Real,gt:Real);		
+       declare aux : Tuple(lt:Real,eq:Real,gt:Real), aux2 : UBoolean;
+       aux2:=new UBoolean;
        aux:=self.calculate(r);
-       result := aux.lt+aux.eq;
+       aux2.b:=true;
+       aux2.c:=aux.lt+aux.eq;
+       result := aux2;
     end
    
-uGt(r : UReal) : Real
+uGt(r : UReal) : UBoolean
      begin
-       declare aux : Tuple(lt:Real,eq:Real,gt:Real);		
+       declare aux : Tuple(lt:Real,eq:Real,gt:Real), aux2 : UBoolean;
+       aux2:=new UBoolean;
        aux:=self.calculate(r);
-       result := aux.gt;
+       aux2.b:=true;
+       aux2.c:=aux.gt;
+       result := aux2;
     end
 
-uGe(r : UReal) : Real 
+uGe(r : UReal) : UBoolean 
      begin
-       declare aux : Tuple(lt:Real,eq:Real,gt:Real);		
+       declare aux : Tuple(lt:Real,eq:Real,gt:Real), aux2 : UBoolean;
+       aux2:=new UBoolean;
        aux:=self.calculate(r);
-       result := aux.gt+aux.eq;
+       aux2.b:=true;
+       aux2.c:=aux.gt+aux.eq;
+       result := aux2;
     end
+
+-- comparisons with Zero
+
+uEqualsZero() : UBoolean
+    begin
+       declare aux : Tuple(lt:Real,eq:Real,gt:Real), r:UReal, aux2 : UBoolean;
+       r:=new UReal;
+       aux2:=new UBoolean;
+       r.x:=0.0;
+       r.u:=0.0;		
+       aux:=self.calculate(r);
+       aux2.b:=true;
+       aux2.c:=aux.eq;
+       result := aux2;
+    end
+
+uLtZero() : UBoolean
+     begin
+        declare aux : Tuple(lt:Real,eq:Real,gt:Real), r:UReal, aux2 : UBoolean;
+       aux2:=new UBoolean;
+       r:=new UReal;
+       r.x:=0.0;
+       r.u:=0.0;		
+       aux:=self.calculate(r);
+       aux2.b:=true;
+       aux2.c:=aux.lt;
+       result := aux2;
+    end
+
+uLeZero() : UBoolean 
+     begin
+       declare aux : Tuple(lt:Real,eq:Real,gt:Real), r:UReal, aux2 : UBoolean;
+       aux2:=new UBoolean;
+       r:=new UReal;
+       r.x:=0.0;
+       r.u:=0.0;		
+       aux:=self.calculate(r);
+       aux2.b:=true;
+       aux2.c:=aux.lt+aux.eq;
+       result := aux2;
+    end
+   
+uGtZero() : UBoolean
+     begin
+       declare aux : Tuple(lt:Real,eq:Real,gt:Real), r:UReal, aux2 : UBoolean;
+       aux2:=new UBoolean;
+       r:=new UReal;
+       r.x:=0.0;
+       r.u:=0.0;		
+       aux:=self.calculate(r);
+       aux2.b:=true;
+       aux2.c:=aux.gt;
+       result := aux2;
  
+    end
+
+uGeZero() : UBoolean 
+     begin
+       declare aux : Tuple(lt:Real,eq:Real,gt:Real), r:UReal, aux2 : UBoolean;
+       aux2:=new UBoolean;
+       r:=new UReal;
+       r.x:=0.0;
+       r.u:=0.0;		
+       aux:=self.calculate(r);
+       aux2.b:=true;
+       aux2.c:=aux.gt+aux.eq;
+       result := aux2;
+    end
+
+-- conversion operations
+toInteger() : Integer = self.x.floor() 
+
+toReal() : Real = self.x
+
+toString() : String = 'UReal{x='.concat(self.x.toString()).concat('; u=').concat(self.u.toString()).concat('}')
+
 end
 
 constraints -- precondition on operations
@@ -1284,7 +1865,7 @@ pre:  (self.x + self.u)>=0.0
 
 context UReal::inverse() : UReal
     pre:  (self.x - self.u).max(0) > (self.x + self.u).min(0) -- not self.equals(0.0)
-
+	
 ---------------------------------------------------
 
 

@@ -147,7 +147,7 @@ public ElectricFieldStrength round(){ //returns (i,u) with i the closest int to 
 return new ElectricFieldStrength(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ElectricFieldStrength min(ElectricFieldStrength r) { // units maintained
-if (r.lessThan(this)) return new ElectricFieldStrength(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ElectricFieldStrength(r.getX(),r.getU(),r.getUnits());
 return new ElectricFieldStrength(this.getX(),this.getU(),this.getUnits());
 }
 public ElectricFieldStrength max(ElectricFieldStrength r) { // unit maintained

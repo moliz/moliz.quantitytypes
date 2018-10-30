@@ -120,7 +120,7 @@ public MolarHeatCapacity round(){ //returns (i,u) with i the closest int to x --
 return new MolarHeatCapacity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public MolarHeatCapacity min(MolarHeatCapacity r) { // units maintained
-if (r.lessThan(this)) return new MolarHeatCapacity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new MolarHeatCapacity(r.getX(),r.getU(),r.getUnits());
 return new MolarHeatCapacity(this.getX(),this.getU(),this.getUnits());
 }
 public MolarHeatCapacity max(MolarHeatCapacity r) { // unit maintained

@@ -102,7 +102,7 @@ public Storage round(){ //returns (i,u) with i the closest int to x -- units mai
 return new Storage(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Storage min(Storage r) { // units maintained
-if (r.lessThan(this)) return new Storage(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Storage(r.getX(),r.getU(),r.getUnits());
 return new Storage(this.getX(),this.getU(),this.getUnits());
 }
 public Storage max(Storage r) { // unit maintained

@@ -147,7 +147,7 @@ public SpecificHeatCapacity round(){ //returns (i,u) with i the closest int to x
 return new SpecificHeatCapacity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public SpecificHeatCapacity min(SpecificHeatCapacity r) { // units maintained
-if (r.lessThan(this)) return new SpecificHeatCapacity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new SpecificHeatCapacity(r.getX(),r.getU(),r.getUnits());
 return new SpecificHeatCapacity(this.getX(),this.getU(),this.getUnits());
 }
 public SpecificHeatCapacity max(SpecificHeatCapacity r) { // unit maintained

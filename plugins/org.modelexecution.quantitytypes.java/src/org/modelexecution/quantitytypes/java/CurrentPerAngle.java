@@ -105,7 +105,7 @@ public CurrentPerAngle round(){ //returns (i,u) with i the closest int to x -- u
 return new CurrentPerAngle(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public CurrentPerAngle min(CurrentPerAngle r) { // units maintained
-if (r.lessThan(this)) return new CurrentPerAngle(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new CurrentPerAngle(r.getX(),r.getU(),r.getUnits());
 return new CurrentPerAngle(this.getX(),this.getU(),this.getUnits());
 }
 public CurrentPerAngle max(CurrentPerAngle r) { // unit maintained

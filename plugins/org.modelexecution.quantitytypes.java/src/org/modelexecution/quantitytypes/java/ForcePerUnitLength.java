@@ -213,7 +213,7 @@ public ForcePerUnitLength round(){ //returns (i,u) with i the closest int to x -
 return new ForcePerUnitLength(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ForcePerUnitLength min(ForcePerUnitLength r) { // units maintained
-if (r.lessThan(this)) return new ForcePerUnitLength(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ForcePerUnitLength(r.getX(),r.getU(),r.getUnits());
 return new ForcePerUnitLength(this.getX(),this.getU(),this.getUnits());
 }
 public ForcePerUnitLength max(ForcePerUnitLength r) { // unit maintained

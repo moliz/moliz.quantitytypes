@@ -1,0 +1,138 @@
+USE version 4.2.0-487, Copyright (C) 1999-2016 University of Bremen
+use> open MovingParticle.soil
+MovingParticle.soil> -- INITIAL VALUES
+MovingParticle.soil> --Observation M0
+MovingParticle.soil> !new UReal('p0')
+MovingParticle.soil> !p0.x :=0.0
+MovingParticle.soil> !p0.u :=0.001
+MovingParticle.soil> !new UReal('t0')
+MovingParticle.soil> !t0.x :=0.0
+MovingParticle.soil> !t0.u :=0.0014
+MovingParticle.soil> !new UReal('v0')
+MovingParticle.soil> !v0.x :=0.0
+MovingParticle.soil> !v0.u :=0.0
+MovingParticle.soil>
+MovingParticle.soil> --Observation M1
+MovingParticle.soil> !new UReal('p1')
+MovingParticle.soil> !p1.x :=10.0
+MovingParticle.soil> !p1.u :=0.001
+MovingParticle.soil> !new UReal('t1')
+MovingParticle.soil> !t1.x :=10.0
+MovingParticle.soil> !t1.u :=0.0019799
+MovingParticle.soil> !new UReal('v1')
+MovingParticle.soil> !v1.x :=2.0
+MovingParticle.soil> !v1.u :=0.002
+MovingParticle.soil>
+MovingParticle.soil>
+MovingParticle.soil> !new Unit('m')
+MovingParticle.soil> !m.dimensions := Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+MovingParticle.soil> !m.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+MovingParticle.soil> !m.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+MovingParticle.soil> !m.name:=m.defaultName();
+MovingParticle.soil> !m.symbol:=m.defaultSymbol();
+MovingParticle.soil>
+MovingParticle.soil> !new Unit('s')
+MovingParticle.soil> !s.dimensions := Sequence{0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+MovingParticle.soil> !s.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+MovingParticle.soil> !s.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+MovingParticle.soil> !s.name:=s.defaultName();
+MovingParticle.soil> !s.symbol:=s.defaultSymbol();
+MovingParticle.soil>
+MovingParticle.soil> !new Unit('ms')
+MovingParticle.soil> !ms.dimensions := Sequence{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+MovingParticle.soil> !ms.conversionFactor := Sequence{1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0}
+MovingParticle.soil> !ms.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0}
+MovingParticle.soil> !ms.name:=s.defaultName();
+MovingParticle.soil> !ms.symbol:=s.defaultSymbol();
+MovingParticle.soil>
+MovingParticle.soil> !new Quantity('m0PositionQ')
+MovingParticle.soil> !new Quantity('m1PositionQ')
+MovingParticle.soil> !new Quantity('m0TimeQ')
+MovingParticle.soil> !new Quantity('m1TimeQ')
+MovingParticle.soil> !new Quantity('m0VelocityQ')
+MovingParticle.soil> !new Quantity('m1VelocityQ')
+MovingParticle.soil>
+MovingParticle.soil> !new Quantity('distanceQ')
+MovingParticle.soil> !new Quantity('durationQ')
+MovingParticle.soil> !new Quantity('avrgVelocityQ')
+MovingParticle.soil> !new Quantity('avrgAccelerationQ')
+MovingParticle.soil>
+MovingParticle.soil> !new QuantityValue('m0Position')
+MovingParticle.soil> !new QuantityValue('m1Position')
+MovingParticle.soil> !new QuantityValue('m0Time')
+MovingParticle.soil> !new QuantityValue('m1Time')
+MovingParticle.soil> !new QuantityValue('m0Velocity')
+MovingParticle.soil> !new QuantityValue('m1Velocity')
+MovingParticle.soil>
+MovingParticle.soil> !new QuantityValue('distance')
+MovingParticle.soil> !new QuantityValue('duration')
+MovingParticle.soil> !new QuantityValue('avrgVelocity')
+MovingParticle.soil> !new QuantityValue('avrgAcceleration')
+MovingParticle.soil>
+MovingParticle.soil> !m0PositionQ.quantityValue:=m0Position
+MovingParticle.soil> !m1PositionQ.quantityValue:=m1Position
+MovingParticle.soil> !m0TimeQ.quantityValue:=m0Time
+MovingParticle.soil> !m1TimeQ.quantityValue:=m1Time
+MovingParticle.soil> !m0VelocityQ.quantityValue:=m0Velocity
+MovingParticle.soil> !m1VelocityQ.quantityValue:=m1Velocity
+MovingParticle.soil> !distanceQ.quantityValue:=distance
+MovingParticle.soil> !durationQ.quantityValue:=duration
+MovingParticle.soil> !avrgVelocityQ.quantityValue:=avrgVelocity
+MovingParticle.soil> !avrgAccelerationQ.quantityValue:=avrgAcceleration
+MovingParticle.soil>
+MovingParticle.soil> !m0Position.value := p0
+MovingParticle.soil> !m0Position.unit := m
+MovingParticle.soil> !m1Position.value := p1
+MovingParticle.soil> !m1Position.unit := m
+MovingParticle.soil> !m0Time.value := t0
+MovingParticle.soil> !m0Time.unit := s
+MovingParticle.soil> !m1Time.value := t1
+MovingParticle.soil> !m1Time.unit := s
+MovingParticle.soil> !m0Velocity.value := v0
+MovingParticle.soil> !m0Velocity.unit := ms
+MovingParticle.soil> !m1Velocity.value := v1
+MovingParticle.soil> !m1Velocity.unit := ms
+MovingParticle.soil>
+MovingParticle.soil>
+MovingParticle.soil> !distance:=m1Position.minus(m0Position)
+MovingParticle.soil> ?distance.value.x
+-> 10.0 : Real
+MovingParticle.soil> ?distance.value.u
+-> 0.001414213562373095 : Real
+MovingParticle.soil> ?distance.unit.symbol
+-> 'm' : String
+MovingParticle.soil> ?distance.unit.dimensions
+-> Sequence{1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+MovingParticle.soil>
+MovingParticle.soil> !duration:=m1Time.minus(m0Time)
+MovingParticle.soil> ?duration.value.x
+-> 10.0 : Real
+MovingParticle.soil> ?duration.value.u
+-> 0.0024248719574443516 : Real
+MovingParticle.soil> ?duration.unit.symbol
+-> 's' : String
+MovingParticle.soil> ?duration.unit.dimensions
+-> Sequence{0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+MovingParticle.soil>
+MovingParticle.soil> !avrgVelocity:=distance.divideBy(duration)
+MovingParticle.soil> ?avrgVelocity.value.x
+-> 1.0000000588000402 : Real
+MovingParticle.soil> ?avrgVelocity.value.u
+-> 5.087239330914165E-4 : Real
+MovingParticle.soil> ?avrgVelocity.unit.symbol
+-> 'm/s' : String
+MovingParticle.soil> ?avrgVelocity.unit.dimensions
+-> Sequence{1.0,0.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+MovingParticle.soil>
+MovingParticle.soil> !avrgAcceleration:=avrgVelocity.divideBy(duration)
+MovingParticle.soil> ?avrgAcceleration.value.x
+-> 0.10000001176000838 : Real
+MovingParticle.soil> ?avrgAcceleration.value.u
+-> 1.6268990282174522E-4 : Real
+MovingParticle.soil> ?avrgAcceleration.unit.symbol
+-> 'm/s^2' : String
+MovingParticle.soil> ?avrgAcceleration.unit.dimensions
+-> Sequence{1.0,0.0,-2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0} : Sequence(Real)
+MovingParticle.soil>
+MovingParticle.soil>
+use>

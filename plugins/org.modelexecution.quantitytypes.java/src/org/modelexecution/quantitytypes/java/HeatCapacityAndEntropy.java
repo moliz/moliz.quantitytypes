@@ -150,7 +150,7 @@ public HeatCapacityAndEntropy round(){ //returns (i,u) with i the closest int to
 return new HeatCapacityAndEntropy(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public HeatCapacityAndEntropy min(HeatCapacityAndEntropy r) { // units maintained
-if (r.lessThan(this)) return new HeatCapacityAndEntropy(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new HeatCapacityAndEntropy(r.getX(),r.getU(),r.getUnits());
 return new HeatCapacityAndEntropy(this.getX(),this.getU(),this.getUnits());
 }
 public HeatCapacityAndEntropy max(HeatCapacityAndEntropy r) { // unit maintained

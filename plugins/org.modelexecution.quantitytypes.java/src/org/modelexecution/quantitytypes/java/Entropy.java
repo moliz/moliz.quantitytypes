@@ -115,7 +115,7 @@ public class Entropy extends Quantity {
 	}
 
 	public Entropy min(Entropy r) { // units maintained
-		if (r.lessThan(this))
+		if (r.lt(this))
 			return new Entropy(r.getX(), r.getU(), r.getUnits());
 		return new Entropy(this.getX(), this.getU(), this.getUnits());
 	}

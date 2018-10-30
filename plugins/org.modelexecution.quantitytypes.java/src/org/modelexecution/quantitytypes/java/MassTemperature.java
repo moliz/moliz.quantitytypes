@@ -135,7 +135,7 @@ public MassTemperature round(){ //returns (i,u) with i the closest int to x -- u
 return new MassTemperature(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public MassTemperature min(MassTemperature r) { // units maintained
-if (r.lessThan(this)) return new MassTemperature(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new MassTemperature(r.getX(),r.getU(),r.getUnits());
 return new MassTemperature(this.getX(),this.getU(),this.getUnits());
 }
 public MassTemperature max(MassTemperature r) { // unit maintained

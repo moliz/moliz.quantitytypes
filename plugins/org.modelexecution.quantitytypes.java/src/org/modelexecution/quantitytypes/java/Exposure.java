@@ -144,7 +144,7 @@ public Exposure round(){ //returns (i,u) with i the closest int to x -- units ma
 return new Exposure(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Exposure min(Exposure r) { // units maintained
-if (r.lessThan(this)) return new Exposure(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Exposure(r.getX(),r.getU(),r.getUnits());
 return new Exposure(this.getX(),this.getU(),this.getUnits());
 }
 public Exposure max(Exposure r) { // unit maintained

@@ -373,7 +373,7 @@ public class AbsorbedDose extends Quantity {
 	}
 
 	public AbsorbedDose min(AbsorbedDose r) { // units maintained
-		if (r.lessThan(this))
+		if (r.lt(this))
 			return new AbsorbedDose(r.getX(), r.getU(), r.getUnits());
 		return new AbsorbedDose(this.getX(), this.getU(), this.getUnits());
 	}

@@ -144,7 +144,7 @@ public ThermalConductivity round(){ //returns (i,u) with i the closest int to x 
 return new ThermalConductivity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ThermalConductivity min(ThermalConductivity r) { // units maintained
-if (r.lessThan(this)) return new ThermalConductivity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ThermalConductivity(r.getX(),r.getU(),r.getUnits());
 return new ThermalConductivity(this.getX(),this.getU(),this.getUnits());
 }
 public ThermalConductivity max(ThermalConductivity r) { // unit maintained

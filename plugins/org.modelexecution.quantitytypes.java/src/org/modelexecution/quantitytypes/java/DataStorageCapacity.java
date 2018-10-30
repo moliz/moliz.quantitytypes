@@ -119,7 +119,7 @@ public class DataStorageCapacity extends Quantity {
 	}
 
 	public DataStorageCapacity min(DataStorageCapacity r) { // units maintained
-		if (r.lessThan(this))
+		if (r.lt(this))
 			return new DataStorageCapacity(r.getX(), r.getU(), r.getUnits());
 		return new DataStorageCapacity(this.getX(), this.getU(), this.getUnits());
 	}

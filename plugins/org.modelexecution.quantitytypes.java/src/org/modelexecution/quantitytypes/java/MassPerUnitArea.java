@@ -156,7 +156,7 @@ public MassPerUnitArea round(){ //returns (i,u) with i the closest int to x -- u
 return new MassPerUnitArea(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public MassPerUnitArea min(MassPerUnitArea r) { // units maintained
-if (r.lessThan(this)) return new MassPerUnitArea(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new MassPerUnitArea(r.getX(),r.getU(),r.getUnits());
 return new MassPerUnitArea(this.getX(),this.getU(),this.getUnits());
 }
 public MassPerUnitArea max(MassPerUnitArea r) { // unit maintained

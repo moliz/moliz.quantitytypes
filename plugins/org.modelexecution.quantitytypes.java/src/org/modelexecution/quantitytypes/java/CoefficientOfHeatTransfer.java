@@ -123,7 +123,7 @@ public CoefficientOfHeatTransfer round(){ //returns (i,u) with i the closest int
 return new CoefficientOfHeatTransfer(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public CoefficientOfHeatTransfer min(CoefficientOfHeatTransfer r) { // units maintained
-if (r.lessThan(this)) return new CoefficientOfHeatTransfer(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new CoefficientOfHeatTransfer(r.getX(),r.getU(),r.getUnits());
 return new CoefficientOfHeatTransfer(this.getX(),this.getU(),this.getUnits());
 }
 public CoefficientOfHeatTransfer max(CoefficientOfHeatTransfer r) { // unit maintained

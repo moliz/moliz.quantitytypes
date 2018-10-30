@@ -225,7 +225,7 @@ public Area round(){ //returns (i,u) with i the closest int to x -- units mainta
 return new Area(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Area min(Area r) { // units maintained
-if (r.lessThan(this)) return new Area(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Area(r.getX(),r.getU(),r.getUnits());
 return new Area(this.getX(),this.getU(),this.getUnits());
 }
 public Area max(Area r) { // unit maintained

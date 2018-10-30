@@ -204,7 +204,7 @@ public MassPerUnitTime round(){ //returns (i,u) with i the closest int to x -- u
 return new MassPerUnitTime(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public MassPerUnitTime min(MassPerUnitTime r) { // units maintained
-if (r.lessThan(this)) return new MassPerUnitTime(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new MassPerUnitTime(r.getX(),r.getU(),r.getUnits());
 return new MassPerUnitTime(this.getX(),this.getU(),this.getUnits());
 }
 public MassPerUnitTime max(MassPerUnitTime r) { // unit maintained

@@ -165,7 +165,7 @@ public LinearAcceleration round(){ //returns (i,u) with i the closest int to x -
 return new LinearAcceleration(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public LinearAcceleration min(LinearAcceleration r) { // units maintained
-if (r.lessThan(this)) return new LinearAcceleration(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new LinearAcceleration(r.getX(),r.getU(),r.getUnits());
 return new LinearAcceleration(this.getX(),this.getU(),this.getUnits());
 }
 public LinearAcceleration max(LinearAcceleration r) { // unit maintained

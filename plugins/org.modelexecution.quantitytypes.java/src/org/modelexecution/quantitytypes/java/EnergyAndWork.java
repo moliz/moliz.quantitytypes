@@ -565,7 +565,7 @@ public class EnergyAndWork extends Quantity {
 	}
 
 	public EnergyAndWork min(EnergyAndWork r) { // units maintained
-		if (r.lessThan(this))
+		if (r.lt(this))
 			return new EnergyAndWork(r.getX(), r.getU(), r.getUnits());
 		return new EnergyAndWork(this.getX(), this.getU(), this.getUnits());
 	}

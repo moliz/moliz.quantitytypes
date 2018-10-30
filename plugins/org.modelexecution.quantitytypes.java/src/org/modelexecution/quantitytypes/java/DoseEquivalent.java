@@ -186,7 +186,7 @@ public DoseEquivalent round(){ //returns (i,u) with i the closest int to x -- un
 return new DoseEquivalent(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public DoseEquivalent min(DoseEquivalent r) { // units maintained
-if (r.lessThan(this)) return new DoseEquivalent(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new DoseEquivalent(r.getX(),r.getU(),r.getUnits());
 return new DoseEquivalent(this.getX(),this.getU(),this.getUnits());
 }
 public DoseEquivalent max(DoseEquivalent r) { // unit maintained

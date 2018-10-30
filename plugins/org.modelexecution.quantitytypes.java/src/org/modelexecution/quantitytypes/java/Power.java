@@ -225,7 +225,7 @@ public Power round(){ //returns (i,u) with i the closest int to x -- units maint
 return new Power(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Power min(Power r) { // units maintained
-if (r.lessThan(this)) return new Power(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Power(r.getX(),r.getU(),r.getUnits());
 return new Power(this.getX(),this.getU(),this.getUnits());
 }
 public Power max(Power r) { // unit maintained

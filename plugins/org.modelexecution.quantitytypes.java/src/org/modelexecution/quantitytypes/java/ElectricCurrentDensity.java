@@ -132,7 +132,7 @@ public ElectricCurrentDensity round(){ //returns (i,u) with i the closest int to
 return new ElectricCurrentDensity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ElectricCurrentDensity min(ElectricCurrentDensity r) { // units maintained
-if (r.lessThan(this)) return new ElectricCurrentDensity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ElectricCurrentDensity(r.getX(),r.getU(),r.getUnits());
 return new ElectricCurrentDensity(this.getX(),this.getU(),this.getUnits());
 }
 public ElectricCurrentDensity max(ElectricCurrentDensity r) { // unit maintained

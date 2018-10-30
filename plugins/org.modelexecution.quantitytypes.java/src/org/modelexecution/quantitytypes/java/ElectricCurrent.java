@@ -189,7 +189,7 @@ public ElectricCurrent round(){ //returns (i,u) with i the closest int to x -- u
 return new ElectricCurrent(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ElectricCurrent min(ElectricCurrent r) { // units maintained
-if (r.lessThan(this)) return new ElectricCurrent(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ElectricCurrent(r.getX(),r.getU(),r.getUnits());
 return new ElectricCurrent(this.getX(),this.getU(),this.getUnits());
 }
 public ElectricCurrent max(ElectricCurrent r) { // unit maintained

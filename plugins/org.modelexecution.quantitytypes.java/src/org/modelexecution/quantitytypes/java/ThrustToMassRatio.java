@@ -165,7 +165,7 @@ public ThrustToMassRatio round(){ //returns (i,u) with i the closest int to x --
 return new ThrustToMassRatio(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public ThrustToMassRatio min(ThrustToMassRatio r) { // units maintained
-if (r.lessThan(this)) return new ThrustToMassRatio(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new ThrustToMassRatio(r.getX(),r.getU(),r.getUnits());
 return new ThrustToMassRatio(this.getX(),this.getU(),this.getUnits());
 }
 public ThrustToMassRatio max(ThrustToMassRatio r) { // unit maintained

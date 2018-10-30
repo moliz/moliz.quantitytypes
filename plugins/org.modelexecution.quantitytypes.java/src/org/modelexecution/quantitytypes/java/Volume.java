@@ -177,7 +177,7 @@ public Volume round(){ //returns (i,u) with i the closest int to x -- units main
 return new Volume(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public Volume min(Volume r) { // units maintained
-if (r.lessThan(this)) return new Volume(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new Volume(r.getX(),r.getU(),r.getUnits());
 return new Volume(this.getX(),this.getU(),this.getUnits());
 }
 public Volume max(Volume r) { // unit maintained

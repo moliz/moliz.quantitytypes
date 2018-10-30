@@ -183,7 +183,7 @@ public LinearMomentum round(){ //returns (i,u) with i the closest int to x -- un
 return new LinearMomentum(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public LinearMomentum min(LinearMomentum r) { // units maintained
-if (r.lessThan(this)) return new LinearMomentum(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new LinearMomentum(r.getX(),r.getU(),r.getUnits());
 return new LinearMomentum(this.getX(),this.getU(),this.getUnits());
 }
 public LinearMomentum max(LinearMomentum r) { // unit maintained

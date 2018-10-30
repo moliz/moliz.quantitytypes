@@ -186,7 +186,7 @@ public AngularMomentum round(){ //returns (i,u) with i the closest int to x -- u
 return new AngularMomentum(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public AngularMomentum min(AngularMomentum r) { // units maintained
-if (r.lessThan(this)) return new AngularMomentum(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new AngularMomentum(r.getX(),r.getU(),r.getUnits());
 return new AngularMomentum(this.getX(),this.getU(),this.getUnits());
 }
 public AngularMomentum max(AngularMomentum r) { // unit maintained

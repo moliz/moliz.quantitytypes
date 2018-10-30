@@ -19,6 +19,48 @@
 	]]>
 	</body>
   </operation>
+  
+  <operation source="Real" name="sin" returnType="Real">
+	<body><![CDATA[
+		Math.sin($self)
+	]]>
+	</body>
+  </operation>
+
+  <operation source="Real" name="cos" returnType="Real">
+	<body><![CDATA[
+		Math.cos($self)
+	]]>
+	</body>
+  </operation>
+
+  <operation source="Real" name="tan" returnType="Real">
+	<body><![CDATA[
+		Math.tan($self)
+	]]>
+	</body>
+  </operation>
+
+  <operation source="Real" name="asin" returnType="Real">
+	<body><![CDATA[
+		Math.asin($self)
+	]]>
+	</body>
+  </operation>
+
+  <operation source="Real" name="acos" returnType="Real">
+	<body><![CDATA[
+		Math.acos($self)
+	]]>
+	</body>
+  </operation>
+
+  <operation source="Real" name="atan" returnType="Real">
+	<body><![CDATA[
+		Math.atan($self)
+	]]>
+	</body>
+  </operation>
 
   <operation source="Real" name="power" returnType="Real">
 		<parameter>

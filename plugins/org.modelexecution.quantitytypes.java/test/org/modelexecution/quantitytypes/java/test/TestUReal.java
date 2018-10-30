@@ -13,13 +13,13 @@ public class TestUReal {
 		System.out.println("b: "+b);
 		
 		System.out.println("a Equals b: "+a.equals(b));
-		System.out.println("a LessThan b: "+a.lt(b));
-		System.out.println("a GreaterThan b: "+a.gt(b));
+		System.out.println("a LessThan b: "+a.lt(b).toBoolean());
+		System.out.println("a GreaterThan b: "+a.gt(b).toBoolean());
 		System.out.println("p(a Equals b): "+a.uEquals(b));
-		System.out.println("p(a LessThan b): "+a.uLt(b));
-		System.out.println("p(a GreaterThan b): "+a.uGt(b));
-		System.out.println("p(a LessEq b): "+a.uLe(b));
-		System.out.println("p(a GreaterEq b): "+a.uGe(b));
+		System.out.println("p(a LessThan b): "+a.lt(b));
+		System.out.println("p(a GreaterThan b): "+a.gt(b));
+		System.out.println("p(a LessEq b): "+a.le(b));
+		System.out.println("p(a GreaterEq b): "+a.ge(b));
 	}
 
 		public static void main(String[] args) {
@@ -29,72 +29,72 @@ public class TestUReal {
 		a = new UReal(5.0,1.0);
 		b = new UReal(1.0,1.5);
  //		showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (!a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) > 0.00001) showCompare("U less than",a,b);
- 		if (a.uEquals(b)> 0.2) showCompare("not equals",a,b);
-		if (a.uGt(b) < 0.00001)showCompare("gt",a,b);
+		if (!a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() > 0.00001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()> 0.2) showCompare("not equals",a,b);
+		if (a.gt(b).getC() < 0.00001)showCompare("gt",a,b);
 
 		a = new UReal(1.0,1.0);
 		b = new UReal(1.0,1.0);
  //		showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) > 0.00001) showCompare("U less than",a,b);
- 		if (a.uEquals(b)<0.99999) showCompare("not equals",a,b);
-		if (a.uGt(b) > 0.00001)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() > 0.00001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()<0.99999) showCompare("not equals",a,b);
+		if (a.gt(b).getC() > 0.00001)showCompare("gt",a,b);
 
 		a = new UReal(1.0,7.0);
 		b = new UReal(1.0,2.0);
  //		showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) <.26) showCompare("U less than",a,b);
- 		if (a.uEquals(b)<0.4) showCompare("not equals",a,b);
-		if (a.uGt(b) < .26)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() <.26) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()<0.4) showCompare("not equals",a,b);
+		if (a.gt(b).getC() < .26)showCompare("gt",a,b);
 
 		a = new UReal(1.0,1.0);
 		b = new UReal(10.0,2.0);
  //		showCompare("",a,b);
-        if (!a.lt(b)) showCompare("less than",a,b);
+        if (!a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) <.99) showCompare("U less than",a,b);
- 		if (a.uEquals(b) > 0.1) showCompare("equals",a,b);
-		if (a.uGt(b) > .001)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() <.99) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC() > 0.1) showCompare("equals",a,b);
+		if (a.gt(b).getC() > .001)showCompare("gt",a,b);
 
 		a = new UReal(1.0,1.0);
 		b = new UReal(50.0,2.0);
  //	showCompare("",a,b);
-        if (!a.lt(b)) showCompare("less than",a,b);
+        if (!a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) <.99) showCompare("U less than",a,b);
- 		if (a.uEquals(b) > 0.1) showCompare("equals",a,b);
-		if (a.uGt(b) > .001)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() <.99) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC() > 0.1) showCompare("equals",a,b);
+		if (a.gt(b).getC() > .001)showCompare("gt",a,b);
 
 		a = new UReal(1.0,3.0);
 		b = new UReal(1.5,3.0);
  //	showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) >.1) showCompare("U less than",a,b);
- 		if (a.uEquals(b) < 0.1) showCompare("equals",a,b);
-		if (a.uGt(b) > .1)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() >.1) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC() < 0.1) showCompare("equals",a,b);
+		if (a.gt(b).getC() > .1)showCompare("gt",a,b);
 
 		a = new UReal(1.0,3.0);
 		b = new UReal(1.5,5.0);
  //	showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) >.2) showCompare("U less than",a,b);
- 		if (a.uEquals(b) < 0.1) showCompare("equals",a,b);
-		if (a.uGt(b) > .1)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() >.2) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC() < 0.1) showCompare("equals",a,b);
+		if (a.gt(b).getC() > .1)showCompare("gt",a,b);
 
 		/****
 		 * CAMBIOS
@@ -104,72 +104,72 @@ public class TestUReal {
 		a = new UReal(5.0,1.5);
 		b = new UReal(1.0,1.0);
  //		showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (!a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) > 0.00001) showCompare("U less than",a,b);
- 		if (a.uEquals(b)> 0.2) showCompare("not equals",a,b);
-		if (a.uGt(b) < 0.00001)showCompare("gt",a,b);
+		if (!a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() > 0.00001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()> 0.2) showCompare("not equals",a,b);
+		if (a.gt(b).getC() < 0.00001)showCompare("gt",a,b);
 
 		a = new UReal(1.0,1.0);
 		b = new UReal(1.0,1.0);
  //		showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) > 0.00001) showCompare("U less than",a,b);
- 		if (a.uEquals(b)<0.99999) showCompare("not equals",a,b);
-		if (a.uGt(b) > 0.00001)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() > 0.00001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()<0.99999) showCompare("not equals",a,b);
+		if (a.gt(b).getC() > 0.00001)showCompare("gt",a,b);
 
 		a = new UReal(1.0,2.0);
 		b = new UReal(1.0,7.0);
  //		showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) <.26) showCompare("U less than",a,b);
- 		if (a.uEquals(b)<0.4) showCompare("not equals",a,b);
-		if (a.uGt(b) < .26)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() <.26) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()<0.4) showCompare("not equals",a,b);
+		if (a.gt(b).getC() < .26)showCompare("gt",a,b);
 
 		a = new UReal(1.0,2.0);
 		b = new UReal(10.0,1.0);
  //		showCompare("",a,b);
-        if (!a.lt(b)) showCompare("less than",a,b);
+        if (!a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) <.99) showCompare("U less than",a,b);
- 		if (a.uEquals(b) > 0.1) showCompare("equals",a,b);
-		if (a.uGt(b) > .001)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() <.99) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC() > 0.1) showCompare("equals",a,b);
+		if (a.gt(b).getC() > .001)showCompare("gt",a,b);
 
 		a = new UReal(1.0,2.0);
 		b = new UReal(50.0,1.0);
  //	showCompare("",a,b);
-        if (!a.lt(b)) showCompare("less than",a,b);
+        if (!a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) <.99) showCompare("U less than",a,b);
- 		if (a.uEquals(b) > 0.1) showCompare("equals",a,b);
-		if (a.uGt(b) > .001)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() <.99) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC() > 0.1) showCompare("equals",a,b);
+		if (a.gt(b).getC() > .001)showCompare("gt",a,b);
 
 		a = new UReal(1.5,3.0);
 		b = new UReal(1.0,3.0);
  //	showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) >.1) showCompare("U less than",a,b);
- 		if (a.uEquals(b) < 0.1) showCompare("equals",a,b);
-		if (a.uGt(b) > .1)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() >.1) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC() < 0.1) showCompare("equals",a,b);
+		if (a.gt(b).getC() > .1)showCompare("gt",a,b);
 
 		a = new UReal(1.0,5.0);
 		b = new UReal(1.5,3.0);
  //	showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) >.2) showCompare("U less than",a,b);
- 		if (a.uEquals(b) < 0.1) showCompare("equals",a,b);
-		if (a.uGt(b) > .1)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() >.2) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC() < 0.1) showCompare("equals",a,b);
+		if (a.gt(b).getC() > .1)showCompare("gt",a,b);
 
 		/***
 		 * PATHOLOGICAL CASES
@@ -177,32 +177,32 @@ public class TestUReal {
 		a = new UReal(5.0,0.0);
 		b = new UReal(1.0,0.0);
  //		showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (!a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) > 0.00001) showCompare("U less than",a,b);
- 		if (a.uEquals(b)> 0.2) showCompare("not equals",a,b);
-		if (a.uGt(b) < 0.00001)showCompare("gt",a,b);
+		if (!a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() > 0.00001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()> 0.2) showCompare("not equals",a,b);
+		if (a.gt(b).getC() < 0.00001)showCompare("gt",a,b);
 
 		a = new UReal(1.0,0.0);
 		b = new UReal(5.0,0.0);
  //		showCompare("",a,b);
-        if (!a.lt(b)) showCompare("less than",a,b);
+        if (!a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) < 0.00001) showCompare("U less than",a,b);
- 		if (a.uEquals(b)> 0.2) showCompare("not equals",a,b);
-		if (a.uGt(b) > 0.00001)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() < 0.00001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()> 0.2) showCompare("not equals",a,b);
+		if (a.gt(b).getC() > 0.00001)showCompare("gt",a,b);
 
 		a = new UReal(5.0,0.0);
 		b = new UReal(5.0,0.0);
  //	showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) > 0.00001) showCompare("U less than",a,b);
- 		if (a.uEquals(b)< 0.0001) showCompare("not equals",a,b);
-		if (a.uGt(b) > 0.00001)showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() > 0.00001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()< 0.0001) showCompare("not equals",a,b);
+		if (a.gt(b).getC() > 0.00001)showCompare("gt",a,b);
 
 	/**
 	 *  s1 = 0	
@@ -210,46 +210,46 @@ public class TestUReal {
 		a = new UReal(5.0,0.0);
 		b = new UReal(1.0,1.0);
  //		showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (!a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) > 0.001) showCompare("U less than",a,b);
- 		if (a.uEquals(b)> 0.2) showCompare("not equals",a,b);
- 		if (a.uGt(b) < 0.001)showCompare("Ugt",a,b);
+		if (!a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() > 0.001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()> 0.2) showCompare("not equals",a,b);
+ 		if (a.gt(b).getC()< 0.001)showCompare("Ugt",a,b);
 
 		a = new UReal(5.0,1.0);
 		b = new UReal(1.0,0.0);
  //		showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (!a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) > 0.001) showCompare("U less than",a,b);
- 		if (a.uEquals(b)> 0.2) showCompare("not equals",a,b);
- 		if (a.uGt(b) < 0.001)showCompare("Ugt",a,b);
+		if (!a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() > 0.001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()> 0.2) showCompare("not equals",a,b);
+ 		if (a.gt(b).getC() < 0.001)showCompare("Ugt",a,b);
 
 		a = new UReal(4.0,1.0);
 		b = new UReal(4.0,0.0);
  //	showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (!a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) < 0.001) showCompare("U less than",a,b);
- 		if (a.uEquals(b)> 0.1) showCompare("not equals",a,b);
-		if (a.uGt(b) < 0.001)showCompare("U gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() < 0.001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()> 0.1) showCompare("not equals",a,b);
+		if (a.gt(b).getC() < 0.001)showCompare("U gt",a,b);
 
 		a = new UReal(4.0,0.0);
 		b = new UReal(4.0,1.0);
  //	showCompare("",a,b);
-        if (a.lt(b)) showCompare("less than",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
-        if (a.uLt(b) < 0.001) showCompare("U less than",a,b);
- 		if (a.uEquals(b)> 0.1) showCompare("not equals",a,b);
-		if (a.uGt(b) < 0.001)showCompare("U gt",a,b);
+		if (!a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() < 0.001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()> 0.1) showCompare("not equals",a,b);
+		if (a.gt(b).getC() < 0.001)showCompare("U gt",a,b);
 
 		a = new UReal(1.0,0.0);
 		b = new UReal(5.0,0.0);
-		showCompare("", a, b);
+		//showCompare("", a, b);
 		
 
 
@@ -261,7 +261,7 @@ public class TestUReal {
  //		showCompare("",a,b);
         if (!a.lessThan(b)) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
         if (a.U_lessThan(b)!=1.0) showCompare("U less than",a,b);
         if (a.U_lessEq(b)!=1.0) showCompare("U lessEq",a,b);
 		if (a.U_equals(b)!=0.0) showCompare("not equals",a,b);
@@ -274,7 +274,7 @@ public class TestUReal {
 //		showCompare("",a,b);
         if (!a.lessThan(b)) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
         if (a.U_lessThan(b)!=1.0) showCompare("U less than",a,b);
         if (a.U_lessEq(b)!=1.0) showCompare("U lessEq",a,b);
 		if (a.U_equals(b)!=0.0) showCompare("not equals",a,b);
@@ -287,7 +287,7 @@ public class TestUReal {
 //		showCompare("",a,b);
         if (a.lessThan(b)) showCompare("less than",a,b);
 		if (!a.equals(b)) showCompare("equals",a,b);
-		if (a.gt(b))showCompare("gt",a,b);
+		if (a.gt(b).toBoolean())showCompare("gt",a,b);
         if (a.U_lessThan(b)!=0.0) showCompare("U less than",a,b);
         if (a.U_lessEq(b)!=1.0) showCompare("U lessEq",a,b);
 		if (a.U_equals(b)!=1.0) showCompare("not equals",a,b);

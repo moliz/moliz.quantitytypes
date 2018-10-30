@@ -465,7 +465,7 @@ public class Time extends Quantity {
 	}
 
 	public Time min(Time r) { // units maintained
-		if (r.lessThan(this))
+		if (r.lt(this))
 			return new Time(r.getX(), r.getU(), r.getUnits());
 		return new Time(this.getX(), this.getU(), this.getUnits());
 	}

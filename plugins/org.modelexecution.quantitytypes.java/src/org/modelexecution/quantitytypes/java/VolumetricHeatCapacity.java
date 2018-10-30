@@ -138,7 +138,7 @@ public VolumetricHeatCapacity round(){ //returns (i,u) with i the closest int to
 return new VolumetricHeatCapacity(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public VolumetricHeatCapacity min(VolumetricHeatCapacity r) { // units maintained
-if (r.lessThan(this)) return new VolumetricHeatCapacity(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new VolumetricHeatCapacity(r.getX(),r.getU(),r.getUnits());
 return new VolumetricHeatCapacity(this.getX(),this.getU(),this.getUnits());
 }
 public VolumetricHeatCapacity max(VolumetricHeatCapacity r) { // unit maintained

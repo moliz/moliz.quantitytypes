@@ -156,7 +156,7 @@ public MagneticFlux round(){ //returns (i,u) with i the closest int to x -- unit
 return new MagneticFlux(Math.round(this.getX()),this.getU(),this.getUnits());
 }
 public MagneticFlux min(MagneticFlux r) { // units maintained
-if (r.lessThan(this)) return new MagneticFlux(r.getX(),r.getU(),r.getUnits());
+if (r.lt(this)) return new MagneticFlux(r.getX(),r.getU(),r.getUnits());
 return new MagneticFlux(this.getX(),this.getU(),this.getUnits());
 }
 public MagneticFlux max(MagneticFlux r) { // unit maintained

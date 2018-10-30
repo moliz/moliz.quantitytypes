@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_aSBAYOcKEeeVf5cFU4mLQA" name="quantities">
   <packagedElement xmi:type="uml:DataType" xmi:id="_1zpJYOcKEeeVf5cFU4mLQA" name="Quantity">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_rpd3kOcOEeeVf5cFU4mLQA" name="unit" type="_Ql0rEOcOEeeVf5cFU4mLQA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_yMsUAOcOEeeVf5cFU4mLQA" name="value" type="_vfyo4OcOEeeVf5cFU4mLQA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:DataType" xmi:id="_Ql0rEOcOEeeVf5cFU4mLQA" name="Unit">
@@ -17,6 +16,7 @@
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_AqJcEOcPEeeVf5cFU4mLQA" name="uncertainty" type="_6Y8jwOcOEeeVf5cFU4mLQA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_rpd3kOcOEeeVf5cFU4mLQA" name="unit" type="_Ql0rEOcOEeeVf5cFU4mLQA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:DataType" xmi:id="_6Y8jwOcOEeeVf5cFU4mLQA" name="MeasurementUncertainty">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_9KzAUOcOEeeVf5cFU4mLQA" name="standardUncertainty">

@@ -85,11 +85,14 @@ public class UUnlimitedNatural implements Cloneable,Comparable<UUnlimitedNatural
 		if ((this.getX()==-1)||r.getX()==-1) throw new RuntimeException("Invalid mult with *"); 
 		
 		result.setX(this.getX() * r.getX());
-		
-		double a = r.getX()*r.getX()*this.getU()*this.getU();
-		double b = this.getX()*this.getX()*r.getU()*r.getU();
-		result.setU(Math.sqrt(a + b));
-	
+
+		if (this.getU()==0.0) { result.setU(r.getU()); }
+		else if (r.getU()==0.0) {result.setU(this.getU()); }
+			 else {
+				double a = r.getX()*r.getX()*this.getU()*this.getU();
+				double b = this.getX()*this.getX()*r.getU()*r.getU();
+				result.setU(Math.sqrt(a + b));
+			 }	
 		return result;
 	}
 	
@@ -98,33 +101,181 @@ public class UUnlimitedNatural implements Cloneable,Comparable<UUnlimitedNatural
 		UUnlimitedNatural result = new UUnlimitedNatural();
 		if ((this.getX()==-1)||r.getX()==-1) throw new RuntimeException("Invalid add with *"); 
 	
+		if (r==this) { // pathological cases x/x
+			result.setX(1);
+			result.setU(0.0);
+			return result;
+		}
+		if (r.getU()==0.0) { // r is a scalar
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()); // "this" may be a scalar, too
+			return result;
+		}
+		if (this.getU()==0.0) { // "this is a scalar, r is not
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()/(this.getX()*this.getX()));
+			return result;
+		}
+		// both variables have associated uncertainty
+		
 		double a = this.getX() / r.getX();
-		double b = (this.getX()*r.getU()*r.getU())/(Math.pow(r.getX(), 3));
+//		double b = (this.getX()*r.getU()*r.getU())/(Math.pow(r.getX(), 3));
+		double b = (this.getX()*r.getU()*r.getU())/(r.getX()*r.getX()*r.getX());
 		result.setX((int)Math.floor(a + b));
 		
-		double c = ((u*u)/r.getX());
-		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / Math.pow(r.getX(), 4);
+		double c = ((u*u)/Math.abs(r.getX()));
+//		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / Math.pow(r.getX(), 4);
+		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / (r.getX()*r.getX()*r.getX()*r.getX());
 		result.setU(Math.sqrt(c + d));
 		
 		return result;
 	}
 		
+	/** this operation returns a UReal
+	 */
 	public UReal divideByR(UUnlimitedNatural r) {
 		UReal result = new UReal();
 		if ((this.getX()==-1)||r.getX()==-1) throw new RuntimeException("Invalid add with *"); 
 	
+		if (r==this) { // pathological cases x/x
+			result.setX(1.0);
+			result.setU(0.0);
+			return result;
+		}
+		if (r.getU()==0.0) { // r is a scalar
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()); // "this" may be a scalar, too
+			return result;
+		}
+		if (this.getU()==0.0) { // "this is a scalar, r is not
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()/(this.getX()*this.getX()));
+			return result;
+		}
+		// both variables have associated uncertainty
 		double a = this.getX() / r.getX();
-		double b = (this.getX()*r.getU()*r.getU())/(Math.pow(r.getX(), 3));
-		result.setX(a + b);
+//		double b = (this.getX()*r.getU()*r.getU())/(Math.pow(r.getX(), 3));
+		double b = (this.getX()*r.getU()*r.getU())/(r.getX()*r.getX()*r.getX());
+		result.setX((int)Math.floor(a + b));
 		
-		double c = ((u*u)/r.getX());
-		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / Math.pow(r.getX(), 4);
+		double c = ((u*u)/Math.abs(r.getX()));
+//		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / Math.pow(r.getX(), 4);
+		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / (r.getX()*r.getX()*r.getX()*r.getX());
 		result.setU(Math.sqrt(c + d));
+	
+		return result;
+	}
+
+	  /*********
+     * 
+     * Type Operations between correlated variables
+     */
+
+	
+	public UUnlimitedNatural add(UUnlimitedNatural r, double covariance) {
+		if ((this.getX()==-1)||r.getX()==-1) throw new RuntimeException("Invalid add with *"); 
+		UUnlimitedNatural result = new UUnlimitedNatural();
+		result.setX(this.getX() + r.getX());
+		result.setU( Math.sqrt((this.getU() * this.getU()) + (r.getU() * r.getU())+ 2 * covariance ));
+		return result;
+	}
+	
+
+/** no minus for UUnlimitedNatural
+*/
+
+	
+	public UUnlimitedNatural mult(UUnlimitedNatural r, double covariance) {
+		UUnlimitedNatural result = new UUnlimitedNatural();
+		if ((this.getX()==-1)||r.getX()==-1) throw new RuntimeException("Invalid mult with *"); 
+		
+		result.setX(this.getX() * r.getX());
+
+		if (this.getU()==0.0) { result.setU(r.getU()); }
+		else if (r.getU()==0.0) {result.setU(this.getU()); }
+			 else {
+				double a = r.getX()*r.getX()*this.getU()*this.getU();
+				double b = this.getX()*this.getX()*r.getU()*r.getU();
+				double c = 2 * this.getX() * r.getX() * covariance;
+				result.setU(Math.sqrt(a + b + c));
+			 }	
+		return result;
+	}
+	
+	
+	public UUnlimitedNatural divideBy(UUnlimitedNatural r, double covariance) {
+		UUnlimitedNatural result = new UUnlimitedNatural();
+		if ((this.getX()==-1)||r.getX()==-1) throw new RuntimeException("Invalid add with *"); 
+	
+		if (r==this) { // pathological cases x/x
+			result.setX(1);
+			result.setU(0.0);
+			return result;
+		}
+		if (r.getU()==0.0) { // r is a scalar
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()); // "this" may be a scalar, too
+			return result;
+		}
+		if (this.getU()==0.0) { // "this is a scalar, r is not
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()/(this.getX()*this.getX()));
+			return result;
+		}
+		// both variables have associated uncertainty
+		
+		double a = this.getX() / r.getX();
+//		double b = (this.getX()*r.getU()*r.getU())/(Math.pow(r.getX(), 3));
+		double b = (this.getX()*r.getU()*r.getU())/(r.getX()*r.getX()*r.getX());
+		result.setX((int)Math.floor(a + b));
+		
+		double c = ((u*u)/Math.abs(r.getX()));
+//		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / Math.pow(r.getX(), 4);
+		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / (r.getX()*r.getX()*r.getX()*r.getX());
+		double e = (this.getX()*covariance)/Math.abs(r.getX()*r.getX()*r.getX());
+		result.setU(Math.sqrt(c + d - e));
+
 		
 		return result;
 	}
 		
+	/** this operation returns a UReal
+	 */
+	public UReal divideByR(UUnlimitedNatural r, double covariance) {
+		UReal result = new UReal();
+		if ((this.getX()==-1)||r.getX()==-1) throw new RuntimeException("Invalid add with *"); 
+	
+		if (r==this) { // pathological cases x/x
+			result.setX(1.0);
+			result.setU(0.0);
+			return result;
+		}
+		if (r.getU()==0.0) { // r is a scalar
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()); // "this" may be a scalar, too
+			return result;
+		}
+		if (this.getU()==0.0) { // "this is a scalar, r is not
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()/(this.getX()*this.getX()));
+			return result;
+		}
+		// both variables have associated uncertainty
+		double a = this.getX() / r.getX();
+//		double b = (this.getX()*r.getU()*r.getU())/(Math.pow(r.getX(), 3));
+		double b = (this.getX()*r.getU()*r.getU())/(r.getX()*r.getX()*r.getX());
+		result.setX((int)Math.floor(a + b));
+		
+		double c = ((u*u)/Math.abs(r.getX()));
+//		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / Math.pow(r.getX(), 4);
+		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / (r.getX()*r.getX()*r.getX()*r.getX());
+		double e = (this.getX()*covariance)/Math.abs(r.getX()*r.getX()*r.getX());
+		result.setU(Math.sqrt(c + d - e));
+	
+		return result;
+	}
 
+	
 	/***
 	 * comparison operations
 	 * These operations, exept equals and distinct, have been replaced by

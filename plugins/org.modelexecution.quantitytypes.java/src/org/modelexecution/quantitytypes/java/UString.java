@@ -3,6 +3,7 @@ package org.modelexecution.quantitytypes.java;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class UString {
 
 	public static final double THRESHOLD = 0.95d;
@@ -95,7 +96,7 @@ public class UString {
 //        return new UBoolean(true, conf);
         int result = this.string.compareTo(u.string);
         boolean b = result == 0;
-        double conf = calculateConf(u);
+        double conf = (this==u) ? 1.0 : calculateConf(u);
         return new UBoolean(b, conf);
     }
 

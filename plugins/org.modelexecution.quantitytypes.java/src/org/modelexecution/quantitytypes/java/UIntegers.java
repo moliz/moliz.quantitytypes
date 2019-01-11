@@ -43,6 +43,21 @@ public class UIntegers  {
 	public static UReal divideByR(UInteger r1, UInteger r2) {
 		return r1.divideByR(r2);
 	}
+	public static UInteger add(UInteger r1, UInteger r2, double covariance) {
+		return r1.add(r2, covariance);
+	}
+	public static UInteger minus(UInteger r1, UInteger r2, double covariance) {
+		return r1.minus(r2, covariance);
+	}
+	public static UInteger mult(UInteger r1, UInteger r2, double covariance) {
+		return r1.mult(r2, covariance);
+	}
+	public static UInteger divideBy(UInteger r1, UInteger r2, double covariance) {
+		return r1.divideBy(r2, covariance);
+	}
+	public static UReal divideByR(UInteger r1, UInteger r2, double covariance) {
+		return r1.divideByR(r2, covariance);
+	}
 	public static UInteger abs(UInteger r1) {
 		return r1.abs();
 	}

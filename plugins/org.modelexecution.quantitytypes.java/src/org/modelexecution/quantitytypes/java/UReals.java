@@ -45,6 +45,20 @@ public class UReals {
 		return number1.divideBy(number2);
 	}
 	
+	public static UReal add(UReal number1, UReal number2, double covariance) {
+		return number1.add(number2,covariance);
+	}
+
+	public static UReal minus(UReal number1, UReal number2, double covariance) {
+		return number1.minus(number2,covariance);
+	}
+	public static UReal mult(UReal number1, UReal number2, double covariance) {
+		return number1.mult(number2,covariance);
+	}
+	public static UReal divideBy(UReal number1, UReal number2, double covariance) {
+		return number1.divideBy(number2,covariance);
+	}
+	
 	public static UReal add(UReal number1, double number2) {
 		return number1.add(new UReal(number2));
 	}

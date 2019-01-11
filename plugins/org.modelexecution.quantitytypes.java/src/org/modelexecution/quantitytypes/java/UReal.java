@@ -82,9 +82,10 @@ public class UReal implements Cloneable,Comparable<UReal> {
 
 	public UReal minus(UReal r) {
 		UReal result = new UReal();
-			result.setX(this.getX() - r.getX());
-			result.setU(Math.sqrt((this.getU()*this.getU()) + (r.getU()*r.getU())));
-			return result;
+		result.setX(this.getX() - r.getX());
+		if (r==this) result.setU(0.0);
+		else result.setU(Math.sqrt((this.getU()*this.getU()) + (r.getU()*r.getU())));
+		return result;
 	}
 	
 	public UReal mult(UReal r) {
@@ -92,16 +93,36 @@ public class UReal implements Cloneable,Comparable<UReal> {
 		
 		result.setX(this.getX() * r.getX());
 		
-		double a = r.getX()*r.getX()*this.getU()*this.getU();
-		double b = this.getX()*this.getX()*r.getU()*r.getU();
-		result.setU(Math.sqrt(a + b));
-	
+		if (this.getU()==0.0) { result.setU(r.getU()); }
+		else if (r.getU()==0.0) {result.setU(this.getU()); }
+			 else {
+				double a = r.getX()*r.getX()*this.getU()*this.getU();
+				double b = this.getX()*this.getX()*r.getU()*r.getU();
+				result.setU(Math.sqrt(a + b));
+			 }	
 		return result;
 	}
 	
 	public UReal divideBy(UReal r) {
 		UReal result = new UReal();
-	
+
+		if (r==this) { // pathological cases x/x
+			result.setX(1.0);
+			result.setU(0.0);
+			return result;
+		}
+		if (r.getU()==0.0) { // r is a scalar
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()); // "this" may be a scalar, too
+			return result;
+		}
+		if (this.getU()==0.0) { // "this is a scalar, r is not
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()/(this.getX()*this.getX()));
+			return result;
+		}
+		// both variables have associated uncertainty
+		
 		double a = this.getX() / r.getX();
 //		double b = (this.getX()*r.getU()*r.getU())/(Math.pow(r.getX(), 3));
 		double b = (this.getX()*r.getU()*r.getU())/(r.getX()*r.getX()*r.getX());
@@ -206,6 +227,77 @@ public class UReal implements Cloneable,Comparable<UReal> {
 		return new UReal(Math.round(this.getX()),this.getU());
 	}
 
+	 /*********
+     * 
+     * Type Operations with correlated variables
+     */
+	public UReal add(UReal r, double covariance) {
+		UReal result = new UReal();
+		result.setX(this.getX() + r.getX());
+		result.setU( Math.sqrt((this.getU() * this.getU()) + (r.getU() * r.getU()) + 2 * covariance));
+		return result;
+	}
+
+	public UReal minus(UReal r, double covariance) {
+		UReal result = new UReal();
+		result.setX(this.getX() - r.getX());
+		if (r==this) result.setU(0.0);
+		else result.setU(Math.sqrt((this.getU()*this.getU()) + (r.getU()*r.getU() - 2 * covariance)));
+		return result;
+	}
+	
+	public UReal mult(UReal r, double covariance) {
+		UReal result = new UReal();
+		
+		result.setX(this.getX() * r.getX());
+		
+		if (this.getU()==0.0) { result.setU(r.getU()); }
+		else if (r.getU()==0.0) { result.setU(this.getU()); }
+			 else { 
+				 double a = r.getX()*r.getX()*this.getU()*this.getU();
+				 double b = this.getX()*this.getX()*r.getU()*r.getU();
+				 double c = 2 * this.getX() * r.getX() * covariance;
+				 result.setU(Math.sqrt(a + b + c));
+			 }
+		return result;
+	}
+	
+	public UReal divideBy(UReal r, double covariance) {
+		UReal result = new UReal();
+	
+		if (r==this) { // pathological cases x/x. Covariance should be 1!
+			result.setX(1.0);
+			result.setU(0.0);
+			return result;
+		}
+		if (r.getU()==0.0) { // r is a scalar
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()); // "this" may be a scalar, too
+			return result;
+		}
+		if (this.getU()==0.0) { // "this is a scalar, r is not
+			result.setX(this.getX() / r.getX());
+			result.setU(this.getU()/(this.getX()*this.getX()));
+			return result;
+		}
+		// both variables have associated uncertainty
+
+		double a = this.getX() / r.getX();
+//		double b = (this.getX()*r.getU()*r.getU())/(Math.pow(r.getX(), 3));
+		double b = (this.getX()*r.getU()*r.getU())/(r.getX()*r.getX()*r.getX());
+		result.setX(a + b);
+		
+		double c = ((u*u)/Math.abs(r.getX()));
+//		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / Math.pow(r.getX(), 4);
+		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / (r.getX()*r.getX()*r.getX()*r.getX());
+		double e = (this.getX()*covariance)/Math.abs(r.getX()*r.getX()*r.getX());
+		result.setU(Math.sqrt(c + d - e));
+		
+		return result;
+	}
+	
+
+
 	/***
 	 * comparison operations
 	 * 	These operations, that return a boolean, have been superseded by the
@@ -251,6 +343,8 @@ public class UReal implements Cloneable,Comparable<UReal> {
 	public boolean equals(UReal number) {
 		// we compute the separation factor of the two distributions considered as a mixture
 		// see http://faculty.washington.edu/tamre/IsHumanHeightBimodal.pdf
+		if (this == number) return true;
+		
 		double s1 = this.getU();
 		double s2 = number.getU();
 		// non-UReal cases first

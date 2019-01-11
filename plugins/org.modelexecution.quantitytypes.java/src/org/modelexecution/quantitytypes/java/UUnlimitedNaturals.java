@@ -41,6 +41,22 @@ public class UUnlimitedNaturals {
 	public static UReal divideByR(UUnlimitedNatural r1, UUnlimitedNatural r2) {
 		return r1.divideByR(r2);
 	}
+	
+	public static UUnlimitedNatural add(UUnlimitedNatural r1, UUnlimitedNatural r2, double covariance) {
+		return r1.add(r2, covariance);
+	}
+	
+	public static UUnlimitedNatural mult(UUnlimitedNatural r1, UUnlimitedNatural r2, double covariance) {
+		return r1.mult(r2, covariance);
+	}
+	public static UUnlimitedNatural divideBy(UUnlimitedNatural r1, UUnlimitedNatural r2, double covariance) {
+		return r1.divideBy(r2, covariance);
+	}
+
+	public static UReal divideByR(UUnlimitedNatural r1, UUnlimitedNatural r2, double covariance) {
+		return r1.divideByR(r2, covariance);
+	}
+
 
 	/***
 	 * comparison operations

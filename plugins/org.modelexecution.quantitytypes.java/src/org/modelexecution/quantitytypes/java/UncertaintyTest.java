@@ -11,6 +11,15 @@ public class UncertaintyTest {
 
 	UBoolean res = b1.equivalent(b2);
 	System.out.println("res="+res);
+	
+	UReal x = new UReal(2.0,0.1);
+	UReal y = new UReal(2.0,0.0);
+	UReal y2 = new UReal(2.0,0.0001);
+	
+	System.out.println("z="+(x.ge(y)));
+	
+	System.out.println("z2="+(x.ge(y2)));
+	
 			
 	
 	}

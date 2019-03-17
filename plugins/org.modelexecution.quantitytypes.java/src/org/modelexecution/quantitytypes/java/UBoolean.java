@@ -163,7 +163,8 @@ public class UBoolean implements Cloneable, Comparable<UBoolean> {
 	}
 
 	public boolean toBoolean(){ //
-		return (c>=0.5)?b:!b; //this works because it is in canonical form
+//		return Double.compare(c, 0.5)>=0;
+		return (c>=0.5); //this works because it is in canonical form
 	}
 	
 	/**

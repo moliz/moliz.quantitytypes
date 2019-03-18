@@ -43,17 +43,40 @@
 !ms.name:=s.defaultName();
 !ms.symbol:=s.defaultSymbol();
 
-!new Quantity('m0Position')
-!new Quantity('m1Position')
-!new Quantity('m0Time')
-!new Quantity('m1Time')
-!new Quantity('m0Velocity')
-!new Quantity('m1Velocity')
+!new Quantity('m0PositionQ')
+!new Quantity('m1PositionQ')
+!new Quantity('m0TimeQ')
+!new Quantity('m1TimeQ')
+!new Quantity('m0VelocityQ')
+!new Quantity('m1VelocityQ')
 
-!new Quantity('distance')
-!new Quantity('duration')
-!new Quantity('avrgVelocity')
-!new Quantity('avrgAcceleration')
+!new Quantity('distanceQ')
+!new Quantity('durationQ')
+!new Quantity('avrgVelocityQ')
+!new Quantity('avrgAccelerationQ')
+
+!new QuantityValue('m0Position')
+!new QuantityValue('m1Position')
+!new QuantityValue('m0Time')
+!new QuantityValue('m1Time')
+!new QuantityValue('m0Velocity')
+!new QuantityValue('m1Velocity')
+
+!new QuantityValue('distance')
+!new QuantityValue('duration')
+!new QuantityValue('avrgVelocity')
+!new QuantityValue('avrgAcceleration')
+
+!m0PositionQ.quantityValue:=m0Position
+!m1PositionQ.quantityValue:=m1Position
+!m0TimeQ.quantityValue:=m0Time
+!m1TimeQ.quantityValue:=m1Time
+!m0VelocityQ.quantityValue:=m0Velocity
+!m1VelocityQ.quantityValue:=m1Velocity
+!distanceQ.quantityValue:=distance
+!durationQ.quantityValue:=duration
+!avrgVelocityQ.quantityValue:=avrgVelocity
+!avrgAccelerationQ.quantityValue:=avrgAcceleration
 
 !m0Position.value := p0
 !m0Position.unit := m

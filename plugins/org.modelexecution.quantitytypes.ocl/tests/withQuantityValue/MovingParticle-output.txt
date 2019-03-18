@@ -1,7 +1,5 @@
-nov 05, 2017 4:54:49 PM java.util.prefs.WindowsPreferences <init>
-WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
 USE version 4.2.0-487, Copyright (C) 1999-2016 University of Bremen
-use> open MovingParticle.soil 
+use> open MovingParticle.soil
 MovingParticle.soil> -- INITIAL VALUES
 MovingParticle.soil> --Observation M0
 MovingParticle.soil> !new UReal('p0')
@@ -47,17 +45,40 @@ MovingParticle.soil> !ms.offset := Sequence{0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,
 MovingParticle.soil> !ms.name:=s.defaultName();
 MovingParticle.soil> !ms.symbol:=s.defaultSymbol();
 MovingParticle.soil>
-MovingParticle.soil> !new Quantity('m0Position')
-MovingParticle.soil> !new Quantity('m1Position')
-MovingParticle.soil> !new Quantity('m0Time')
-MovingParticle.soil> !new Quantity('m1Time')
-MovingParticle.soil> !new Quantity('m0Velocity')
-MovingParticle.soil> !new Quantity('m1Velocity')
+MovingParticle.soil> !new Quantity('m0PositionQ')
+MovingParticle.soil> !new Quantity('m1PositionQ')
+MovingParticle.soil> !new Quantity('m0TimeQ')
+MovingParticle.soil> !new Quantity('m1TimeQ')
+MovingParticle.soil> !new Quantity('m0VelocityQ')
+MovingParticle.soil> !new Quantity('m1VelocityQ')
 MovingParticle.soil>
-MovingParticle.soil> !new Quantity('distance')
-MovingParticle.soil> !new Quantity('duration')
-MovingParticle.soil> !new Quantity('avrgVelocity')
-MovingParticle.soil> !new Quantity('avrgAcceleration')
+MovingParticle.soil> !new Quantity('distanceQ')
+MovingParticle.soil> !new Quantity('durationQ')
+MovingParticle.soil> !new Quantity('avrgVelocityQ')
+MovingParticle.soil> !new Quantity('avrgAccelerationQ')
+MovingParticle.soil>
+MovingParticle.soil> !new QuantityValue('m0Position')
+MovingParticle.soil> !new QuantityValue('m1Position')
+MovingParticle.soil> !new QuantityValue('m0Time')
+MovingParticle.soil> !new QuantityValue('m1Time')
+MovingParticle.soil> !new QuantityValue('m0Velocity')
+MovingParticle.soil> !new QuantityValue('m1Velocity')
+MovingParticle.soil>
+MovingParticle.soil> !new QuantityValue('distance')
+MovingParticle.soil> !new QuantityValue('duration')
+MovingParticle.soil> !new QuantityValue('avrgVelocity')
+MovingParticle.soil> !new QuantityValue('avrgAcceleration')
+MovingParticle.soil>
+MovingParticle.soil> !m0PositionQ.quantityValue:=m0Position
+MovingParticle.soil> !m1PositionQ.quantityValue:=m1Position
+MovingParticle.soil> !m0TimeQ.quantityValue:=m0Time
+MovingParticle.soil> !m1TimeQ.quantityValue:=m1Time
+MovingParticle.soil> !m0VelocityQ.quantityValue:=m0Velocity
+MovingParticle.soil> !m1VelocityQ.quantityValue:=m1Velocity
+MovingParticle.soil> !distanceQ.quantityValue:=distance
+MovingParticle.soil> !durationQ.quantityValue:=duration
+MovingParticle.soil> !avrgVelocityQ.quantityValue:=avrgVelocity
+MovingParticle.soil> !avrgAccelerationQ.quantityValue:=avrgAcceleration
 MovingParticle.soil>
 MovingParticle.soil> !m0Position.value := p0
 MovingParticle.soil> !m0Position.unit := m

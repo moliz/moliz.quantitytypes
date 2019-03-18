@@ -51,18 +51,18 @@
 !byte.symbol := 'B'
 !bytePerS.symbol := 'B/s'
 
-!new Quantity('q1')
-!new Quantity('q2')
-!new Quantity('q3')
-!new Quantity('q4')
-!new Quantity('q5')
-!new Quantity('q6')
-!new Quantity('q7')
-!new Quantity('q8')
-!new Quantity('q9')
-!new Quantity('qa')
-!new Quantity('qb')
-!new Quantity('qc')
+!new QuantityValue('q1')
+!new QuantityValue('q2')
+!new QuantityValue('q3')
+!new QuantityValue('q4')
+!new QuantityValue('q5')
+!new QuantityValue('q6')
+!new QuantityValue('q7')
+!new QuantityValue('q8')
+!new QuantityValue('q9')
+!new QuantityValue('qa')
+!new QuantityValue('qb')
+!new QuantityValue('qc')
 
 !q1.value := v1
 !q1.unit := bit

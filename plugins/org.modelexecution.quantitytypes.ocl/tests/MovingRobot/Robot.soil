@@ -96,82 +96,42 @@
 !angleTolerance.u:=0.0
 
 --- LENGTHS
-!new Length('Lx00')
-!new QuantityValue('x00')
-!Lx00.quantityValue:=x00
+
+!new Length('x00')
 !x00.value:=x00U
 !x00.unit:=m
-
-!new Length('Ly00')
-!new QuantityValue('y00')
-!Ly00.quantityValue:=y00
+!new Length('y00')
 !y00.value:=y00U
 !y00.unit:=m
-
-!new Length('Lx10')
-!new QuantityValue('x10')
-!Lx10.quantityValue:=x10
+!new Length('x10')
 !x10.value:=x10U
 !x10.unit:=m
-
-!new Length('Ly10')
-!new QuantityValue('y10')
-!Ly10.quantityValue:=y10
+!new Length('y10')
 !y10.value:=y10U
 !y10.unit:=m
-
-!new Length('Lx20')
-!new QuantityValue('x20')
-!Lx20.quantityValue:=x20
+!new Length('x20')
 !x20.value:=x20U
 !x20.unit:=m
-
-!new Length('Ly20')
-!new QuantityValue('y20')
-!Ly20.quantityValue:=y20
+!new Length('y20')
 !y20.value:=y20U
 !y20.unit:=m
-
-!new Length('Lx30')
-!new QuantityValue('x30')
-!Lx30.quantityValue:=x30
+!new Length('x30')
 !x30.value:=x30U
 !x30.unit:=m
-
-!new Length('Ly30')
-!new QuantityValue('y30')
-!Ly30.quantityValue:=y30
+!new Length('y30')
 !y30.value:=y30U
 !y30.unit:=m
-
-!new Length('Lxy1010')
-!new QuantityValue('xy1010')
-!Lxy1010.quantityValue:=xy1010
+!new Length('xy1010')
 !xy1010.value:=xy1010U
 !xy1010.unit:=ft
 
 -- ANGLES
-!new Angle('Ah0')
-!new QuantityValue('h0')
-!Ah0.quantityValue:=h0
-
-!new Angle('Ah90')
-!new QuantityValue('h90')
-!Ah90.quantityValue:=h90
-
-!new Angle('Ah180')
-!new QuantityValue('h180')
-!Ah180.quantityValue:=h180
-
-!new Angle('Ah270')
-!new QuantityValue('h270')
-!Ah270.quantityValue:=h270
-!new Angle('Ah45')
-!new QuantityValue('h45')
-!Ah45.quantityValue:=h45
-!new Angle('Ah225')
-!new QuantityValue('h225')
-!Ah225.quantityValue:=h225
+!new Angle('h0')
+!new Angle('h90')
+!new Angle('h180')
+!new Angle('h270')
+!new Angle('h45')
+!new Angle('h225')
 
 !h0.value :=h0U
 !h0.unit:=rad
@@ -187,32 +147,32 @@
 !h225.unit:=rad
 
 !new Coordinate('initial')
-!initial.x:=Lx00
-!initial.y:=Ly00
+!initial.x:=x00
+!initial.y:=y00
 !new Coordinate('target')
-!target.x:=Lx10
-!target.y:=Ly10
+!target.x:=x10
+!target.y:=y10
 
 !new Robot('robot')
 !robot.position:=initial
-!robot.headsTo:=Ah0
+!robot.headsTo:=h0
 
 !new Movement('m1')
-!m1.move:=Lx10
+!m1.move:=x10
 
 !new Movement('m2')
-!m2.rotate:=Ah90
+!m2.rotate:=h90
 
 !new Movement('m3')
-!m3.move:=Lx10
+!m3.move:=x10
 
 !new Movement('m4')
-!m4.move:=Lxy1010
-!m4.rotate:=Ah225
+!m4.move:=xy1010
+!m4.rotate:=h225
 
 !new Movement('m5')
-!m5.move:=Lxy1010
-!m5.rotate:=Ah45
+!m5.move:=xy1010
+!m5.rotate:=h45
 
 !insert(robot,m1) into Plan
 !insert(robot,m2) into Plan
@@ -229,5 +189,5 @@
 !b:=robot.position.coincide(target)
 ?b
 !r:=robot.position.uCoincide(target)
-?r.c
+?r
 

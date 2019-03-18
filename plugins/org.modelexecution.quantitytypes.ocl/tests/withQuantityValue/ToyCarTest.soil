@@ -43,27 +43,72 @@
 !s.name:=s.defaultName();
 !s.symbol:=s.defaultSymbol();
 
-!new Quantity('initialPosition1')
-!new Quantity('finalPosition1')
-!new Quantity('duration1')
-!new Quantity('initialVelocity1')
-!new Quantity('finalVelocity1')
-!new Quantity('distance1')
-!new Quantity('avrgVelocity1')
-!new Quantity('avrgAcceleration1')
+-----------------------------------------
+!new Quantity('initialPosition1Q')
+!new Quantity('finalPosition1Q')
+!new Quantity('duration1Q')
+!new Quantity('initialVelocity1Q')
+!new Quantity('finalVelocity1Q')
+!new Quantity('distance1Q')
+!new Quantity('avrgVelocity1Q')
+!new Quantity('avrgAcceleration1Q')
 
-!new Quantity('initialPosition2')
-!new Quantity('finalPosition2')
-!new Quantity('duration2')
-!new Quantity('initialVelocity2')
-!new Quantity('finalVelocity2')
-!new Quantity('distance2')
-!new Quantity('avrgVelocity2')
-!new Quantity('avrgAcceleration2')
+!new Quantity('initialPosition2Q')
+!new Quantity('finalPosition2Q')
+!new Quantity('duration2Q')
+!new Quantity('initialVelocity2Q')
+!new Quantity('finalVelocity2Q')
+!new Quantity('distance2Q')
+!new Quantity('avrgVelocity2Q')
+!new Quantity('avrgAcceleration2Q')
 
-!new Quantity('avrgVelocity')
-!new Quantity('avrgAcceleration')
+!new Quantity('avrgVelocityQ')
+!new Quantity('avrgAccelerationQ')
+-----------------------------------------
+!new QuantityValue('initialPosition1')
+!new QuantityValue('finalPosition1')
+!new QuantityValue('duration1')
+!new QuantityValue('initialVelocity1')
+!new QuantityValue('finalVelocity1')
+!new QuantityValue('distance1')
+!new QuantityValue('avrgVelocity1')
+!new QuantityValue('avrgAcceleration1')
 
+!new QuantityValue('initialPosition2')
+!new QuantityValue('finalPosition2')
+!new QuantityValue('duration2')
+!new QuantityValue('initialVelocity2')
+!new QuantityValue('finalVelocity2')
+!new QuantityValue('distance2')
+!new QuantityValue('avrgVelocity2')
+!new QuantityValue('avrgAcceleration2')
+
+!new QuantityValue('avrgVelocity')
+!new QuantityValue('avrgAcceleration')
+-----------------------------------------
+
+!initialPosition1Q.quantityValue:=initialPosition1
+!finalPosition1Q.quantityValue:=finalPosition1
+!duration1Q.quantityValue:=duration1
+!initialVelocity1Q.quantityValue:=initialVelocity1
+!finalVelocity1Q.quantityValue:=finalVelocity1
+!distance1Q.quantityValue:=distance1
+!avrgVelocity1Q.quantityValue:=avrgVelocity1
+!avrgAcceleration1Q.quantityValue:=avrgAcceleration1
+
+!initialPosition2Q.quantityValue:=initialPosition2
+!finalPosition2Q.quantityValue:=finalPosition2
+!duration2Q.quantityValue:=duration2
+!initialVelocity2Q.quantityValue:=initialVelocity2
+!finalVelocity2Q.quantityValue:=finalVelocity2
+!distance2Q.quantityValue:=distance2
+!avrgVelocity2Q.quantityValue:=avrgVelocity2
+!avrgAcceleration2Q.quantityValue:=avrgAcceleration2
+
+!avrgVelocityQ.quantityValue:=avrgVelocity
+!avrgAccelerationQ.quantityValue:=avrgAcceleration
+
+-----------------------------------------
 !initialPosition1.value := ip1
 !initialPosition1.unit := m
 !finalPosition1.value := fp1

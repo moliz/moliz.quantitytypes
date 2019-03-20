@@ -118,7 +118,7 @@ public class UReal implements Cloneable,Comparable<UReal> {
 		}
 		if (this.getU()==0.0) { // "this is a scalar, r is not
 			result.setX(this.getX() / r.getX());
-			result.setU(this.getU()/(this.getX()*this.getX()));
+			result.setU(r.getU()/(r.getX()*r.getX()));
 			return result;
 		}
 		// both variables have associated uncertainty

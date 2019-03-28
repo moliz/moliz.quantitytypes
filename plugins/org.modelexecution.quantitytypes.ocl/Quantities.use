@@ -1530,12 +1530,12 @@ power (s : Real) : UReal
      begin
         declare aux : UReal;
         aux := new UReal;
-        aux.x := self.x.power(s) + ((s*(s-1))/2)*self.x.power(s-2)*(self.u*self.u);
+        aux.x := self.x.power(s); -- + ((s*(s-1))/2)*self.x.power(s-2)*(self.u*self.u);
         aux.u := s*self.u*self.x.power(s-1);
         result := aux;
     end   
-post: result.x=self.x.power(s) +
-               ((s*(s-1))/2)*self.x.power(s-2)*(self.u*self.u) and
+post: result.x=self.x.power(s) 
+               -- + ((s*(s-1))/2)*self.x.power(s-2)*(self.u*self.u) and
       result.u=s*self.u*self.x.power(s-1) 
     
 sqrt() : UReal 

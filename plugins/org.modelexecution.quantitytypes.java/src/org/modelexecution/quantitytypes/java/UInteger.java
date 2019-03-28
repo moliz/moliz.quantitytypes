@@ -74,13 +74,9 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 		
 		result.setX(this.getX() * r.getX());
 		
-		if (this.getU()==0.0) { result.setU(r.getU()); }
-		else if (r.getU()==0.0) {result.setU(this.getU()); }
-			 else {
-				double a = r.getX()*r.getX()*this.getU()*this.getU();
-				double b = this.getX()*this.getX()*r.getU()*r.getU();
-				result.setU(Math.sqrt(a + b));
-			 }	
+		double a = r.getX()*r.getX()*this.getU()*this.getU();
+		double b = this.getX()*this.getX()*r.getU()*r.getU();
+		result.setU(Math.sqrt(a + b));
 		return result;
 	}
 	
@@ -95,7 +91,7 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 		}
 		if (r.getU()==0.0) { // r is a scalar
 			result.setX(this.getX() / r.getX());
-			result.setU(this.getU()); // "this" may be a scalar, too
+			result.setU(this.getU() / r.getX()); // "this" may be a scalar, too
 			return result;
 		}
 		if (this.getU()==0.0) { // "this is a scalar, r is not
@@ -128,7 +124,7 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 		}
 		if (r.getU()==0.0) { // r is a scalar
 			result.setX(this.getX() / r.getX());
-			result.setU(this.getU()); // "this" may be a scalar, too
+			result.setU(this.getU() / r.getX()); // "this" may be a scalar, too
 			return result;
 		}
 		if (this.getU()==0.0) { // "this is a scalar, r is not
@@ -177,14 +173,10 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 		
 		result.setX(this.getX() * r.getX());
 		
-		if (this.getU()==0.0) { result.setU(r.getU()); }
-		else if (r.getU()==0.0) {result.setU(this.getU()); }
-			 else {
-				double a = r.getX()*r.getX()*this.getU()*this.getU();
-				double b = this.getX()*this.getX()*r.getU()*r.getU();
-				double c = 2 * this.getX() * r.getX() * covariance;
-				result.setU(Math.sqrt(a + b + c));
-			 }	
+		double a = r.getX()*r.getX()*this.getU()*this.getU();
+		double b = this.getX()*this.getX()*r.getU()*r.getU();
+		double c = 2 * this.getX() * r.getX() * covariance;
+		result.setU(Math.sqrt(a + b + c));
 		return result;
 	}
 	
@@ -199,7 +191,7 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 		}
 		if (r.getU()==0.0) { // r is a scalar
 			result.setX(this.getX() / r.getX());
-			result.setU(this.getU()); // "this" may be a scalar, too
+			result.setU(this.getU() / r.getX()); // "this" may be a scalar, too
 			return result;
 		}
 		if (this.getU()==0.0) { // "this is a scalar, r is not
@@ -235,7 +227,7 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 		}
 		if (r.getU()==0.0) { // r is a scalar
 			result.setX(this.getX() / r.getX());
-			result.setU(this.getU()); // "this" may be a scalar, too
+			result.setU(this.getU() / r.getX()); // "this" may be a scalar, too
 			return result;
 		}
 		if (this.getU()==0.0) { // "this is a scalar, r is not

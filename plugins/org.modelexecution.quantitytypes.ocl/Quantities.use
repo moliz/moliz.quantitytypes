@@ -1269,15 +1269,11 @@ mult(r : UReal) : UReal
         declare aux : UReal;
         aux := new UReal;
         aux.x := self.x*r.x;
-        aux.u := if (self.u=0.0) then r.u -- self is a scalar
-		         else if (r.u=0.0) then self.u -- r is a scalar, self is not
-				 else (r.u*r.u*self.x*self.x + self.u*self.u*r.x*r.x).sqrt() endif endif;
+        aux.u := (r.u*r.u*self.x*self.x + self.u*self.u*r.x*r.x).sqrt(); 
         result := aux;
      end   
 post: result.x=(self.x*r.x) and
-      result.u=if (self.u=0.0) then r.u -- self is a scalar
-		       else if (r.u=0.0) then self.u -- r is a scalar, self is not
-			   else (r.u*r.u*self.x*self.x+self.u*self.u*r.x*r.x).sqrt() endif endif
+      result.u=(r.u*r.u*self.x*self.x+self.u*self.u*r.x*r.x).sqrt()
 			   
     
 divideBy(r : UReal) : UReal
@@ -1286,7 +1282,7 @@ divideBy(r : UReal) : UReal
         aux := new UReal;
 		-- special cases
 		if (r=self) then aux.x:=1.0; aux.u:=0.0; 
-		else if (r.u=0.0) then aux.x:=self.x/r.x; aux.u:=self.u; -- r is a scalar, self may be
+		else if (r.u=0.0) then aux.x:=self.x/r.x; aux.u:=self.u/r.x; -- r is a scalar, self may be
 			 else if (self.u=0.0) then -- self is a scalar, r is not
 					aux.x:=self.x/r.x; aux.u:=r.u/(r.x*r.x);
 				  else
@@ -1307,7 +1303,7 @@ post: result.x=if (r=self) then 1.0
 			   endif
 	  and
       result.u=if (r=self) then 0.0 
-               else if (r.u=0.0) then self.u -- r is a scalar, self may be
+               else if (r.u=0.0) then self.u/r.x -- r is a scalar, self may be
 			        else if (self.u=0.0) then r.u/(r.x*r.x) -- self is a scalar, r is not
 					     else ((self.u*self.u/r.x) + ((r.u*r.u*self.x*self.x)/(r.x*r.x*r.x*r.x))).sqrt() 
 						 endif
@@ -1352,15 +1348,11 @@ multc(r : UReal, cov:Real) : UReal
         declare aux : UReal;
         aux := new UReal;
         aux.x := self.x*r.x;
-        aux.u := if (self.u=0.0) then r.u -- self is a scalar
-		         else if (r.u=0.0) then self.u -- r is a scalar, self is not
-				 else (r.u*r.u*self.x*self.x + self.u*self.u*r.x*r.x + 2*self.x*r.x*cov).sqrt() endif endif;
+        aux.u := (r.u*r.u*self.x*self.x + self.u*self.u*r.x*r.x + 2*self.x*r.x*cov).sqrt();
         result := aux;
      end   
 post: result.x=(self.x*r.x) and
-      result.u=if (self.u=0.0) then r.u -- self is a scalar
-		       else if (r.u=0.0) then self.u -- r is a scalar, self is not
-			   else (r.u*r.u*self.x*self.x+self.u*self.u*r.x*r.x + 2*self.x*r.x*cov).sqrt() endif endif
+      result.u=(r.u*r.u*self.x*self.x+self.u*self.u*r.x*r.x + 2*self.x*r.x*cov).sqrt()
 			   
     
 divideByc(r : UReal, cov:Real) : UReal
@@ -1369,7 +1361,7 @@ divideByc(r : UReal, cov:Real) : UReal
         aux := new UReal;
 		-- special cases
 		if (r=self) then aux.x:=1.0; aux.u:=0.0; 
-		else if (r.u=0.0) then aux.x:=self.x/r.x; aux.u:=self.u; -- r is a scalar, self may be
+		else if (r.u=0.0) then aux.x:=self.x/r.x; aux.u:=self.u/r.x; -- r is a scalar, self may be
 			 else if (self.u=0.0) then -- self is a scalar, r is not
 					aux.x:=self.x/r.x; aux.u:=r.u/(r.x*r.x);
 				  else
@@ -1392,7 +1384,7 @@ post: result.x=if (r=self) then 1.0
 			   endif
 	  and
       result.u=if (r=self) then 0.0 
-               else if (r.u=0.0) then self.u -- r is a scalar, self may be
+               else if (r.u=0.0) then self.u/r.x -- r is a scalar, self may be
 			        else if (self.u=0.0) then r.u/(r.x*r.x) -- self is a scalar, r is not
 					     else ((self.u*self.u/r.x.abs()) + 
 							   ((r.u*r.u*self.x*self.x)/(r.x*r.x*r.x*r.x)) -

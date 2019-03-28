@@ -1,4 +1,4 @@
-package org.modelexecution.quantitytypes.java;
+package uDataTypes.java;
 
 public class UncertaintyTest {
 	
@@ -19,8 +19,6 @@ public class UncertaintyTest {
 	System.out.println("z="+(x.ge(y)));
 	
 	System.out.println("z2="+(x.ge(y2)));
-	
-			
 	
 	}
 		

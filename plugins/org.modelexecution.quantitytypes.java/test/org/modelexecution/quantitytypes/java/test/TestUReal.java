@@ -251,6 +251,9 @@ public class TestUReal {
 		b = new UReal(5.0,0.0);
 		//showCompare("", a, b);
 		
+		a = new UReal(-2.0,0.01);
+		b = new UReal(-2.0,0.01);
+		System.out.println(a.divideBy(b));
 
 
 //		showCompare("",a,b);

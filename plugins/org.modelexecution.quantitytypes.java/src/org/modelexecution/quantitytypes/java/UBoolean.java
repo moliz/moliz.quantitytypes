@@ -46,11 +46,13 @@ public class UBoolean implements Cloneable, Comparable<UBoolean> {
      * Setters and getters 
      */
     public boolean getB() {
-		return b; 
+    	setNormalForm();
+    	return b; 
 	}
 
     public double getC() {
-		return c;
+    	setNormalForm();
+    	return c;
 	}
 
    /*********
@@ -103,11 +105,17 @@ public class UBoolean implements Cloneable, Comparable<UBoolean> {
 	}
 
     public UBoolean equivalent(UBoolean b) {
-		return this.implies(b).and(b.implies(this));
+		// return this.implies(b).and(b.implies(this));
+		 return this.xor(b).not();
+ 	
 	}
 
 	public UBoolean xor(UBoolean b) {
-		return this.equivalent(b).not();
+		 UBoolean result = new UBoolean(
+				true,
+				java.lang.Math.abs(this.getC() - b.getC()) );
+		 return result;
+		//return this.equivalent(b).not();
 	}
 
     public UBoolean uEquals(UBoolean b) {
@@ -133,8 +141,9 @@ public class UBoolean implements Cloneable, Comparable<UBoolean> {
 	}
 
 	public boolean equalsC(UBoolean b, double confidence) {
-		UBoolean x = this.equivalent(b);
-		return x.c >= confidence;
+	//	UBoolean x = this.equivalent(b);
+	//	return x.c >= confidence;
+		return java.lang.Math.abs(this.getC()-b.getC()) <= (1-confidence);
 	}
 
 	@Override
@@ -155,7 +164,7 @@ public class UBoolean implements Cloneable, Comparable<UBoolean> {
 	public String toString() {
         boolean val = this.getB();
         double conf = this.getC();
-		if (c < 0.5) {
+		if (conf < 0.5) {
 		    val = !val;
 		    conf = 1 - conf;
         }

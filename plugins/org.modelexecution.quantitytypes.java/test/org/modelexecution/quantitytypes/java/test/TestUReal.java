@@ -255,6 +255,16 @@ public class TestUReal {
 		b = new UReal(-2.0,0.01);
 		System.out.println(a.divideBy(b));
 
+		a = new UReal(2.5,0.1);
+		b = new UReal(2.0,0.1);
+ //		showCompare("",a,b);
+        if (a.lt(b).toBoolean()) showCompare("less than",a,b);
+		if (a.equals(b)) showCompare("equals",a,b);
+		if (!a.gt(b).toBoolean())showCompare("gt",a,b);
+        if (a.lt(b).getC() > 0.001) showCompare("U less than",a,b);
+ 		if (a.uEquals(b).getC()> 0.2) showCompare("not equals",a,b);
+ 		if (a.gt(b).getC() < 0.001)showCompare("Ugt",a,b);
+		
 
 //		showCompare("",a,b);
 /**

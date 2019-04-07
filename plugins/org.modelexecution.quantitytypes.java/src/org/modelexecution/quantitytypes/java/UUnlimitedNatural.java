@@ -20,7 +20,7 @@ public class UUnlimitedNatural implements Cloneable,Comparable<UUnlimitedNatural
     public UUnlimitedNatural (int x, double u) {
 		if (x<-1) throw new RuntimeException("Unlimited Naturals should be either >=0, or -1"); 
 		if ((x==-1)&&(u!=0.0)) throw new RuntimeException("Uncertainty of -1 is 0.0"); 
-        this.x = x; this.u = u;
+        this.x = x; this.u = Math.abs(u);
     }
 	
     public UUnlimitedNatural(String x) { //creates an UReal from a string representing a real, with u=0.
@@ -32,7 +32,7 @@ public class UUnlimitedNatural implements Cloneable,Comparable<UUnlimitedNatural
     public UUnlimitedNatural(String x, String u) { //creates an UReal from two strings representing (x,u).
     	this.x = Integer.parseInt(x);
 		if (this.x<-1) throw new RuntimeException("Unlimited Naturals should be either >=0, or -1"); 
-    	this.u = Double.parseDouble(u);
+    	this.u = Math.abs(Double.parseDouble(u));
 		if ((this.x==-1)&&(this.u!=0.0)) throw new RuntimeException("Uncertainty of -1 is 0.0"); 
     }
    
@@ -50,7 +50,7 @@ public class UUnlimitedNatural implements Cloneable,Comparable<UUnlimitedNatural
 		return u;
 	}
 	public void setU(double u) {
-		this.u = u;
+		this.u = Math.abs(u);
 		if ((this.x==-1)&&(u!=0.0)) throw new RuntimeException("Uncertainty of -1 is 0.0"); 
 	}
 

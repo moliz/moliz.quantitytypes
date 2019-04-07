@@ -17,7 +17,7 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 	}
   
     public UInteger (int x, double u) {
-        this.x = x; this.u = u;
+        this.x = x; this.u = Math.abs(u);
     }
 	
     public UInteger(String x) { //creates an UReal from a string representing a real, with u=0.
@@ -27,7 +27,7 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
     
     public UInteger(String x, String u) { //creates an UReal from two strings representing (x,u).
     	this.x = Integer.parseInt(x);
-    	this.u = Double.parseDouble(u);
+    	this.u = Math.abs(Double.parseDouble(u));
     }
    
     /**
@@ -43,7 +43,7 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 		return u;
 	}
 	public void setU(double u) {
-		this.u = u;
+		this.u = Math.abs(u);
 	}
 
    /*********

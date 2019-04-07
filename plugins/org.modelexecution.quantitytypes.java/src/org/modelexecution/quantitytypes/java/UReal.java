@@ -39,7 +39,7 @@ public class UReal implements Cloneable,Comparable<UReal> {
 	}
   
     public UReal (double x, double u) {
-        this.x = x; this.u = u;
+        this.x = x; this.u = Math.abs(u);
     }
 	
     public UReal(String x) { //creates an UReal from a string representing a real, with u=0.
@@ -49,7 +49,7 @@ public class UReal implements Cloneable,Comparable<UReal> {
     
     public UReal(String x, String u) { //creates an UReal from two strings representing (x,u).
     	this.x = Double.parseDouble(x);
-    	this.u = Double.parseDouble(u);
+    	this.u = Math.abs(Double.parseDouble(u));
     }
    
     /**
@@ -511,16 +511,12 @@ public class UReal implements Cloneable,Comparable<UReal> {
 		// here none of the numbers are degenerated
 		if (s1==s2) {
 			double crossing = (m1 + m2)/2;
-			//if (m1==m2) { // both numbers are the same
-			//	r.lt = 0.5; r.gt = 0.5; r.eq = 0.0; 
-			//} else { //m1<m2
 //			System.out.println("crossing = "+crossing);
 			r.lt = CNDF(crossing,m1,s1)-CNDF(crossing,m2,s2);
 			r.gt = 1-CNDF(crossing,m1,s1)-(1-CNDF(crossing,m2,s2));
 			r.eq = CNDF(crossing,m2,s2)+1.0-CNDF(crossing,m1,s1);
 //			r.gt = 0; //1-CNDF(crossing,m1,s1)-(1-CNDF(crossing,m2,s2));
 //			r.eq = 1 - (r.gt + r.lt); //CNDF(crossing,m2,s2)+1.0-CNDF(crossing,m1,s1);
-			//}
 			return r.check(swap); 
 		}
 		else {

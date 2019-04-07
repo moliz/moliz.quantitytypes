@@ -1151,7 +1151,7 @@ uImplies(b : UBoolean) : UBoolean
 		else
             aux := new UBoolean;
             aux.b:=self.b implies b.b;
-            aux.c:= self.c + b.c - (self.c * b.c);
+            aux.c:= (1-self.c) + b.c - ((1-self.c) * b.c);
             -- return the UBoolean number in normal form:
             if (not aux.b) then aux.b:= true; aux.c:=1-aux.c; end;
 		end;
@@ -1172,24 +1172,45 @@ post: let C : Real = self.c + b.c - (self.c * b.c) in
 --            endif
 --        endif
 
-
 uEquivalent(b : UBoolean) : UBoolean
     begin
-        declare aux1 :UBoolean, aux2 : UBoolean;
-        aux1:=self.uImplies(b);
-        aux2:=b.uImplies(self);
-        result:= aux2.uAnd(aux1);
-    end
--- post: result = self.uImplies(b).uAnd(b.uImplies(self))
-      
+        declare aux : UBoolean;
+        aux:=self.uXor(b);
+        result:= aux.uNot();
+   end
+-- post: result = self.uXor(b).uNot()
 
 uXor(b : UBoolean) : UBoolean
     begin
-        declare aux : UBoolean;
-        aux:=self.uEquivalent(b);
-        result:= aux.uNot();
+        declare aux1 : UBoolean , selfc : Real, bc : Real;
+        selfc := if self.b then self.c else 1-self.c endif;
+         bc := if b.b then b.c else 1-b.c endif;
+         aux1 := new UBoolean;
+         aux1.b := true;
+         aux1.c := (selfc - bc).abs();
+         result := aux1 ;
     end
--- post: result = self.uEquivalent(b).uNot()
+ post: let selfc : Real = if self.b then self.c else 1-self.c endif in
+       let bc : Real = if b.b then b.c else 1-b.c endif in  
+	    (result.b) and (result.c=(selfc-bc).abs())
+
+-- Versiones anteriores, que estaban mal
+-- uEquivalent(b : UBoolean) : UBoolean
+--    begin
+--        declare aux1 :UBoolean, aux2 : UBoolean;
+--        aux1:=self.uImplies(b);
+--        aux2:=b.uImplies(self);
+--        result:= aux2.uAnd(aux1);
+--    end
+-- -- post: result = self.uImplies(b).uAnd(b.uImplies(self))
+--      
+-- uXor(b : UBoolean) : UBoolean
+--     begin
+--        declare aux : UBoolean;
+--        aux:=self.uEquivalent(b);
+--        result:= aux.uNot();
+--    end
+-- -- post: result = self.uEquivalent(b).uNot()
 
 equals(b : UBoolean) : Boolean = (self.b=b.b) and (self.c=b.c)
 

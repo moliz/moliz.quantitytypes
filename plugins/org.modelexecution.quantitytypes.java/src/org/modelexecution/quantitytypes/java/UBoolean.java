@@ -99,7 +99,7 @@ public class UBoolean implements Cloneable, Comparable<UBoolean> {
 
 		UBoolean result = new UBoolean(
 				(!this.b) | b.b,
-				this.c + b.c - (this.c*b.c) );
+				(1-this.c) + b.c - ((1-this.c)*b.c) );
 		return result;
 //		return this.uNot().uOr(b);
 	}

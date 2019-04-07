@@ -3,7 +3,7 @@ package org.modelexecution.quantitytypes.java.test;
 
 import java.util.Calendar;
 
-import org.modelexecution.quantitytypes.java.UReal;
+import org.modelexecution.quantitytypes.java.*;
 
 public class TestUReal {
 	
@@ -253,7 +253,7 @@ public class TestUReal {
 		
 		a = new UReal(-2.0,0.01);
 		b = new UReal(-2.0,0.01);
-		System.out.println(a.divideBy(b));
+//		System.out.println(a.divideBy(b));
 
 		a = new UReal(2.5,0.1);
 		b = new UReal(2.0,0.1);
@@ -264,7 +264,14 @@ public class TestUReal {
         if (a.lt(b).getC() > 0.001) showCompare("U less than",a,b);
  		if (a.uEquals(b).getC()> 0.2) showCompare("not equals",a,b);
  		if (a.gt(b).getC() < 0.001)showCompare("Ugt",a,b);
+	
+		UBoolean b1 = new UBoolean(true,0.4);
+		UBoolean b2 = new UBoolean(true,0.8);
+		System.out.println(b1.implies(b2));
+		System.out.println(b1.not().or(b2));
 		
+
+ 		
 
 //		showCompare("",a,b);
 /**

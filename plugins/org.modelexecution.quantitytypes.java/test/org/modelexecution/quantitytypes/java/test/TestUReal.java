@@ -255,8 +255,8 @@ public class TestUReal {
 		b = new UReal(-2.0,0.01);
 //		System.out.println(a.divideBy(b));
 
-		a = new UReal(2.5,0.1);
-		b = new UReal(2.0,0.1);
+		a = new UReal(4.0,0.1);
+		b = new UReal(3.0,0.1);
  //		showCompare("",a,b);
         if (a.lt(b).toBoolean()) showCompare("less than",a,b);
 		if (a.equals(b)) showCompare("equals",a,b);
@@ -267,8 +267,17 @@ public class TestUReal {
 	
 		UBoolean b1 = new UBoolean(true,0.4);
 		UBoolean b2 = new UBoolean(true,0.8);
-		System.out.println(b1.implies(b2));
-		System.out.println(b1.not().or(b2));
+//		System.out.println(b1.implies(b2));
+//		System.out.println(b1.not().or(b2));
+		
+		a=new UReal(5.0,2);
+		b=new UReal(0.0,2);
+		System.out.println(a.lt(b));
+		System.out.println(a.le(b));
+		System.out.println(a.uEquals(b));
+		System.out.println(a.ge(b));
+		System.out.println(a.gt(b));
+		
 		
 
  		

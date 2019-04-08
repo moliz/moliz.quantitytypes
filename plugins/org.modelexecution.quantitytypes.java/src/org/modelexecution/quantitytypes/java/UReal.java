@@ -513,10 +513,10 @@ public class UReal implements Cloneable,Comparable<UReal> {
 			double crossing = (m1 + m2)/2;
 //			System.out.println("crossing = "+crossing);
 			r.lt = CNDF(crossing,m1,s1)-CNDF(crossing,m2,s2);
-			r.gt = 1-CNDF(crossing,m1,s1)-(1-CNDF(crossing,m2,s2));
-			r.eq = CNDF(crossing,m2,s2)+1.0-CNDF(crossing,m1,s1);
-//			r.gt = 0; //1-CNDF(crossing,m1,s1)-(1-CNDF(crossing,m2,s2));
-//			r.eq = 1 - (r.gt + r.lt); //CNDF(crossing,m2,s2)+1.0-CNDF(crossing,m1,s1);
+//			r.gt = 1-CNDF(crossing,m1,s1)-(1-CNDF(crossing,m2,s2));
+//			r.eq = CNDF(crossing,m2,s2)+1.0-CNDF(crossing,m1,s1);
+			r.gt = 0.0; //1-CNDF(crossing,m1,s1)-(1-CNDF(crossing,m2,s2));
+			r.eq = 1.0 - (r.gt + r.lt); //CNDF(crossing,m2,s2)+1.0-CNDF(crossing,m1,s1); 
 			return r.check(swap); 
 		}
 		else {

@@ -96,17 +96,17 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 		}
 		if (this.getU()==0.0) { // "this is a scalar, r is not
 			result.setX(this.getX() / r.getX());
-			result.setU(this.getU()/(this.getX()*this.getX()));
+			result.setU(r.getU()/(r.getX()*r.getX()));
 			return result;
 		}
 		// both variables have associated uncertainty
 		
 		double a = this.getX() / r.getX();
-		double b = (this.getX()*r.getU()*r.getU())/(Math.pow(r.getX(), 3));
+		double b = (this.getX()*r.getU()*r.getU())/(r.getX()*r.getX()*r.getX());
 		result.setX((int)Math.floor(a + b));
 		
 		double c = ((u*u)/r.getX());
-		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / Math.pow(r.getX(), 4);
+		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / (r.getX()*r.getX()*r.getX()*r.getX());
 		result.setU(Math.sqrt(c + d));
 		
 		return result;
@@ -129,7 +129,7 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 		}
 		if (this.getU()==0.0) { // "this is a scalar, r is not
 			result.setX(this.getX() / r.getX());
-			result.setU(this.getU()/(this.getX()*this.getX()));
+			result.setU(r.getU()/(r.getX()*r.getX()));
 			return result;
 		}
 		// both variables have associated uncertainty
@@ -196,7 +196,7 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 		}
 		if (this.getU()==0.0) { // "this is a scalar, r is not
 			result.setX(this.getX() / r.getX());
-			result.setU(this.getU()/(this.getX()*this.getX()));
+			result.setU(this.getU()/(r.getX()*r.getX()));
 			return result;
 		}
 		// both variables have associated uncertainty
@@ -232,7 +232,7 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 		}
 		if (this.getU()==0.0) { // "this is a scalar, r is not
 			result.setX(this.getX() / r.getX());
-			result.setU(this.getU()/(this.getX()*this.getX()));
+			result.setU(this.getU()/(r.getX()*r.getX()));
 			return result;
 		}
 		// both variables have associated uncertainty

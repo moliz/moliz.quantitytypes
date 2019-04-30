@@ -270,13 +270,22 @@ public class TestUReal {
 //		System.out.println(b1.implies(b2));
 //		System.out.println(b1.not().or(b2));
 		
-		a=new UReal(5.0,2);
-		b=new UReal(0.0,2);
-		System.out.println(a.lt(b));
+		a=new UReal(6.1,Math.sqrt(2));
+		b=new UReal(6.0,1.0);
+//		System.out.println(a.lt(b));
 		System.out.println(a.le(b));
-		System.out.println(a.uEquals(b));
-		System.out.println(a.ge(b));
-		System.out.println(a.gt(b));
+//		System.out.println(a.uEquals(b));
+//		System.out.println(a.ge(b));
+//		System.out.println(a.gt(b));
+		
+		for (int j=-10;j<=10;j++) {
+			a=new UReal(1000.0-(float)j/5,Math.sqrt(2));
+			b=new UReal(1000.0,1.0);
+			System.out.println(1000.0-(float)j/5+"<="+1000.0+"="+a.le(b));
+	
+		}
+
+		
 		
 		
 

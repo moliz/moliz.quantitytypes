@@ -123,22 +123,22 @@ public class UInteger implements Cloneable,Comparable<UInteger> {
 			return result;
 		}
 		if (r.getU()==0.0) { // r is a scalar
-			result.setX(this.getX() / r.getX());
-			result.setU(this.getU() / r.getX()); // "this" may be a scalar, too
+			result.setX((double)this.getX() / (double)r.getX());
+			result.setU(this.getU() / (double)r.getX()); // "this" may be a scalar, too
 			return result;
 		}
 		if (this.getU()==0.0) { // "this is a scalar, r is not
-			result.setX(this.getX() / r.getX());
+			result.setX((double)this.getX() / (double)r.getX());
 			result.setU(r.getU()/(r.getX()*r.getX()));
 			return result;
 		}
 		// both variables have associated uncertainty
-		double a = this.getX() / r.getX();
+		double a = (double)this.getX() / (double)r.getX();
 //		double b = (this.getX()*r.getU()*r.getU())/(Math.pow(r.getX(), 3));
 		double b = (this.getX()*r.getU()*r.getU())/(r.getX()*r.getX()*r.getX());
-		result.setX((int)Math.floor(a + b));
+		result.setX(a + b);
 		
-		double c = ((u*u)/r.getX());
+		double c = ((this.getU()*this.getU())/r.getX());
 //		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / Math.pow(r.getX(), 4);
 		double d = (this.getX()*this.getX()*r.getU()*r.getU()) / (r.getX()*r.getX()*r.getX()*r.getX());
 		result.setU(Math.sqrt(c + d));

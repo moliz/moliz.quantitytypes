@@ -168,13 +168,15 @@ public class UReal implements Cloneable,Comparable<UReal> {
 	
 	public UReal sqrt() {
 		UReal result = new UReal();
-		
-		double a = Math.sqrt(this.getX());
-		double b = 0.0; //(this.getU()*this.getU()) / ((8)*Math.pow(this.getX(), 3/2));
-		result.setX(a - b);
-		if (this.getX()==0.0 && this.getU()==0.0) result.setU(0.0);
+		if (this.getX()==0.0 && this.getU()==0.0) {
+			result.setX(0.0);
+			result.setU(0.0);
+		}
 		else {
+			double a = Math.sqrt(this.getX());
+			double b = 0.0; //(this.getU()*this.getU()) / ((8)*Math.pow(this.getX(), 3/2));
 			double c = (this.getU()) / (2*Math.sqrt(this.getX()));
+			result.setX(a - b);
 			result.setU(c);
 		}
 		return result;

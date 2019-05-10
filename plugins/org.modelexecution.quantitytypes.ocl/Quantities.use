@@ -1307,7 +1307,7 @@ divideBy(r : UReal) : UReal
 			 else if (self.u=0.0) then -- self is a scalar, r is not
 					aux.x:=self.x/r.x; aux.u:=r.u/(r.x*r.x);
 				  else
-					aux.x := (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x));
+					aux.x := self.x/r.x; -- (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x));
 					aux.u := ((self.u*self.u/r.x) + 
 							 ((r.u*r.u*self.x*self.x)/(r.x*r.x*r.x*r.x))).sqrt();
 				  end;
@@ -1315,13 +1315,14 @@ divideBy(r : UReal) : UReal
 		end;
         result := aux;
     end   
-post: result.x=if (r=self) then 1.0 
-               else if (r.u=0.0) then self.x/r.x -- r is a scalar, self may be
-			        else if (self.u=0.0) then self.x/r.x -- self is a scalar, r is not
-					     else (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x)) 
-						 endif
-					endif 
-			   endif
+post: result.x=self.x/r.x 
+			-- if (r=self) then 1.0 
+            --   else if (r.u=0.0) then self.x/r.x -- r is a scalar, self may be
+			--        else if (self.u=0.0) then self.x/r.x -- self is a scalar, r is not
+			--		     else (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x)) 
+			--			 endif
+			--		endif 
+			--   endif
 	  and
       result.u=if (r=self) then 0.0 
                else if (r.u=0.0) then self.u/r.x -- r is a scalar, self may be
@@ -1386,7 +1387,7 @@ divideByc(r : UReal, cov:Real) : UReal
 			 else if (self.u=0.0) then -- self is a scalar, r is not
 					aux.x:=self.x/r.x; aux.u:=r.u/(r.x*r.x);
 				  else
-					aux.x := (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x));
+					aux.x := self.x/r.x; -- (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x));
 					aux.u := ((self.u*self.u/r.x.abs()) + 
 							   ((r.u*r.u*self.x*self.x)/(r.x*r.x*r.x*r.x)) -
 							   self.x*cov/((r.x*r.x*r.x).abs()) 
@@ -1396,13 +1397,14 @@ divideByc(r : UReal, cov:Real) : UReal
 		end;
         result := aux;
     end   
-post: result.x=if (r=self) then 1.0 
-               else if (r.u=0.0) then self.x/r.x -- r is a scalar, self may be
-			        else if (self.u=0.0) then self.x/r.x -- self is a scalar, r is not
-					     else (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x)) 
-						 endif
-					endif 
-			   endif
+post: result.x=self.x/r.x 
+				-- if (r=self) then 1.0 
+				-- else if (r.u=0.0) then self.x/r.x -- r is a scalar, self may be
+			    --    else if (self.u=0.0) then self.x/r.x -- self is a scalar, r is not
+				--	     else (self.x/r.x + (self.x*r.u*r.u)/(r.x*r.x*r.x)) 
+				--		 endif
+				--	endif 
+			   -- endif
 	  and
       result.u=if (r=self) then 0.0 
                else if (r.u=0.0) then self.u/r.x -- r is a scalar, self may be
